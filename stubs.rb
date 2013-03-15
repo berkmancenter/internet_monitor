@@ -29,7 +29,9 @@ end
 
 class Country
     has_many :country_categories
+    has_many :country_languages
     has_many :categories, :through => :country_categories
+    has_many :languages, :through => :country_languages
 
     def score(options = {})
         return read_attribute(:score) unless options
@@ -162,7 +164,7 @@ end
 # When it's a file, data gets updated when it gets added
 # When it's an API, update on an schedule in the background
 #
-# Want resque, resque-scheduler, paperclip
-# Things in refinery: countries, data sources, categories
+# Things in refinery: everything
+# Things for CMS: Countries, datum sources, languages, categories
 #
 # use roo
