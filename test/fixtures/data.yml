@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  datum_source: 
+  start_date: 2013-03-19 10:09:10
+  country: 
+  language: 
+  value: MyText
+  type: 
+
+two:
+  datum_source: 
+  start_date: 2013-03-19 10:09:10
+  country: 
+  language: 
+  value: MyText
+  type: 

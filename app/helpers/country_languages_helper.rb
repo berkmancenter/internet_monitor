@@ -1,0 +1,2 @@
+module CountryLanguagesHelper
+end

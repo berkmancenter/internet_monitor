@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  country: 
+  category: 
+  score: 1
+
+two:
+  country: 
+  category: 
+  score: 1

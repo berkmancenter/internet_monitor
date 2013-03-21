@@ -1,0 +1,2 @@
+class DatumSourcesController < ApplicationController
+end
