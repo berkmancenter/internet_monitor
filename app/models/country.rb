@@ -5,6 +5,9 @@ class Country < ActiveRecord::Base
     has_many :categories, :through => :country_categories
     has_many :languages, :through => :country_languages
     has_many :indicators
+    has_many :url_lists
+    has_many :html_blocks
+    has_many :images
 
     def score(options = {})
         return read_attribute(:score) unless !options.empty?

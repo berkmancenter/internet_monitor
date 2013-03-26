@@ -1,0 +1,6 @@
+<dt>Indicator Name</dt>
+<dd><%= indicator.name %></dd>
+<dt>Indicator Value</dt>
+<dd><%= indicator.original_value %></dd>
+<dt>Indicator Percentile<dt>
+<dd><%= 100 - ((indicator.max-indicator.min) / (indicator.original_value - indicator.min)) %>%</dd>
