@@ -3,7 +3,7 @@ class CreateCountryCategories < ActiveRecord::Migration
     create_table :country_categories do |t|
       t.references :country
       t.references :category
-      t.integer :score
+      t.float :score
 
       t.timestamps
     end

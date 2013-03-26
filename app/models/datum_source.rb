@@ -15,16 +15,16 @@ class DatumSource < ActiveRecord::Base
     end
 
     def recalc_min_max
+        # I should use duck-typing here
         if datum_type == 'Indicator'
             temp_data = data.most_recent.map{|d| d.original_value } 
-            puts admin_name
-            puts temp_data.inspect
             self.min, self.max = temp_data.min, temp_data.max
         end
     end
 
     def recalc_all_values
-        data.each{ |datum| datum.calc_value } if datum_type == 'Indicator'
+        # I should use duck-typing here
+        data.each{ |datum| datum.calc_percent } if datum_type == 'Indicator'
     end
 
     def ingest_data!(options = {})

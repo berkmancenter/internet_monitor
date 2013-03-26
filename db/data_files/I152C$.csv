@@ -1,215 +1,215 @@
-Series Code,Series Name,Country Code,Country Name,2007,2008,2009,2010,2011
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",AFG,Afghanistan,0,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",ALB,Albania,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",DZA,Algeria,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",ASM,American Samoa,0,..,..,..,..
+Series Code,Series Name,Country Code,Country Name,2007,2008,2009,07/02/05,07/03/05
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",AFG,Afghanistan,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",ALB,Albania,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",DZA,Algeria,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",ASM,American Samoa,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",AND,Andorra,..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",AGO,Angola,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",ATG,Antigua and Barbuda,0,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",ARG,Argentina,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",ARM,Armenia,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",ABW,Aruba,0,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",AUS,Australia,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",AUT,Austria,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",AZE,Azerbaijan,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",BHS,Bahamas,0,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",BHR,Bahrain,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",BGD,Bangladesh,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",BRB,Barbados,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",BLR,Belarus,0,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",BEL,Belgium,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",BLZ,Belize,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",BEN,Benin,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",BMU,Bermuda,0,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",BTN,Bhutan,0,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",BOL,Bolivia,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",BIH,Bosnia and Herzegovina,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",BWA,Botswana,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",BRA,Brazil,0,0,0,19.8976691302,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",BRN,Brunei Darussalam,0,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",BGR,Bulgaria,0,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",BFA,Burkina Faso,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",BDI,Burundi,0,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",KHM,Cambodia,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",CMR,Cameroon,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",CAN,Canada,0,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",CPV,Cape Verde,0,..,0,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",AGO,Angola,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",ATG,Antigua and Barbuda,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",ARG,Argentina,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",ARM,Armenia,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",ABW,Aruba,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",AUS,Australia,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",AUT,Austria,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",AZE,Azerbaijan,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",BHS,Bahamas,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",BHR,Bahrain,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",BGD,Bangladesh,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",BRB,Barbados,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",BLR,Belarus,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",BEL,Belgium,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",BLZ,Belize,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",BEN,Benin,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",BMU,Bermuda,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",BTN,Bhutan,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",BOL,Bolivia,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",BIH,Bosnia and Herzegovina,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",BWA,Botswana,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",BRA,Brazil,..,..,..,19.8976691302,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",BRN,Brunei Darussalam,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",BGR,Bulgaria,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",BFA,Burkina Faso,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",BDI,Burundi,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",KHM,Cambodia,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",CMR,Cameroon,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",CAN,Canada,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",CPV,Cape Verde,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",CYM,Cayman Islands,..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",CAF,Central African Rep.,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",TCD,Chad,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",CHL,Chile,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",CHN,China,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",COL,Colombia,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",COM,Comoros,0,0,0,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",CAF,Central African Rep.,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",TCD,Chad,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",CHL,Chile,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",CHN,China,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",COL,Colombia,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",COM,Comoros,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",COG,Congo,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",ZAR,Congo (Democratic Republic of the),..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",CRI,Costa Rica,5.6134428406,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",CIV,Cote d'Ivoire,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",HRV,Croatia,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",CUB,Cuba,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",CYP,Cyprus,0,0,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",CZE,Czech Republic,0,0,0,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",CRI,Costa Rica,5.6134428406,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",CIV,Cote d'Ivoire,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",HRV,Croatia,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",CUB,Cuba,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",CYP,Cyprus,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",CZE,Czech Republic,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",PRK,Dem. People's Rep. of Korea,..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",DNK,Denmark,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",DJI,Djibouti,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",DMA,Dominica,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",DOM,Dominican Rep.,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",ECU,Ecuador,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",EGY,Egypt,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",SLV,El Salvador,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",GNQ,Equatorial Guinea,0,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",ERI,Eritrea,0,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",EST,Estonia,0,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",ETH,Ethiopia,0,0,0,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",DNK,Denmark,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",DJI,Djibouti,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",DMA,Dominica,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",DOM,Dominican Rep.,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",ECU,Ecuador,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",EGY,Egypt,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",SLV,El Salvador,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",GNQ,Equatorial Guinea,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",ERI,Eritrea,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",EST,Estonia,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",ETH,Ethiopia,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",FRO,Faroe Islands,..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",FJI,Fiji,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",FIN,Finland,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",FRA,France,0,0,0,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",FJI,Fiji,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",FIN,Finland,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",FRA,France,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",GUF,French Guiana,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",PYF,French Polynesia,..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",GAB,Gabon,0,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",GMB,Gambia,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",GEO,Georgia,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",DEU,Germany,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",GHA,Ghana,0,0,0,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",GAB,Gabon,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",GMB,Gambia,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",GEO,Georgia,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",DEU,Germany,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",GHA,Ghana,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",GIB,Gibraltar,..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",GRC,Greece,0,0,0,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",GRC,Greece,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",GRL,Greenland,..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",GRD,Grenada,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",GUM,Guam,0,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",GTM,Guatemala,0,0,0,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",GRD,Grenada,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",GUM,Guam,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",GTM,Guatemala,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",AAA,Guernsey,..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",GIN,Guinea,0,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",GNB,Guinea-Bissau,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",GUY,Guyana,0,0,0,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",GIN,Guinea,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",GNB,Guinea-Bissau,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",GUY,Guyana,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",HTI,Haiti,..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",HND,Honduras,0,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",HKG,"Hong Kong, China",0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",HUN,Hungary,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",ISL,Iceland,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",IND,India,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",IDN,Indonesia,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",IRN,Iran (Islamic Rep. of),0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",IRQ,Iraq,0,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",IRL,Ireland,0,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",ISR,Israel,0,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",ITA,Italy,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",JAM,Jamaica,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",JPN,Japan,0,0,20.9468846853,22.3285486443,24.5592491887
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",HND,Honduras,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",HKG,"Hong Kong, China",..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",HUN,Hungary,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",ISL,Iceland,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",IND,India,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",IDN,Indonesia,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",IRN,Iran (Islamic Rep. of),..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",IRQ,Iraq,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",IRL,Ireland,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",ISR,Israel,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",ITA,Italy,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",JAM,Jamaica,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",JPN,Japan,..,..,20.9468846853,22.3285486443,24.5592491887
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",GBJ,Jersey,..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",JOR,Jordan,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",KAZ,Kazakhstan,1.4442613052,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",KEN,Kenya,..,0,0,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",JOR,Jordan,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",KAZ,Kazakhstan,1.4442613052,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",KEN,Kenya,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",KIR,Kiribati,..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",KOR,Korea (Rep. of),0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",KWT,Kuwait,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",KGZ,Kyrgyzstan,0,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",LAO,Lao P.D.R.,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",LVA,Latvia,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",LBN,Lebanon,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",LSO,Lesotho,0,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",LBR,Liberia,0,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",LBY,Libya,0,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",KOR,Korea (Rep. of),..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",KWT,Kuwait,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",KGZ,Kyrgyzstan,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",LAO,Lao P.D.R.,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",LVA,Latvia,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",LBN,Lebanon,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",LSO,Lesotho,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",LBR,Liberia,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",LBY,Libya,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",LIE,Liechtenstein,12.5,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",LTU,Lithuania,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",LUX,Luxembourg,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",MAC,"Macao, China",0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",MDG,Madagascar,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",MWI,Malawi,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",MYS,Malaysia,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",MDV,Maldives,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",MLI,Mali,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",MLT,Malta,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",MHL,Marshall Islands,0,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",MRT,Mauritania,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",MUS,Mauritius,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",MEX,Mexico,0,0,0,0,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",FSM,Micronesia (Fed. States of),..,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",MDA,Moldova,0,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",MCO,Monaco,0,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",MNG,Mongolia,0,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",MNE,Montenegro,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",MAR,Morocco,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",MOZ,Mozambique,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",MMR,Myanmar,0,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",NAM,Namibia,0,0,0,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",LTU,Lithuania,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",LUX,Luxembourg,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",MAC,"Macao, China",..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",MDG,Madagascar,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",MWI,Malawi,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",MYS,Malaysia,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",MDV,Maldives,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",MLI,Mali,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",MLT,Malta,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",MHL,Marshall Islands,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",MRT,Mauritania,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",MUS,Mauritius,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",MEX,Mexico,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",FSM,Micronesia (Fed. States of),..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",MDA,Moldova,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",MCO,Monaco,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",MNG,Mongolia,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",MNE,Montenegro,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",MAR,Morocco,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",MOZ,Mozambique,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",MMR,Myanmar,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",NAM,Namibia,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",NRU,Nauru,..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",NPL,Nepal,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",NLD,Netherlands,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",ANT,Netherlands Antilles,0,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",NPL,Nepal,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",NLD,Netherlands,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",ANT,Netherlands Antilles,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",NCL,New Caledonia,..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",NZL,New Zealand,..,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",NIC,Nicaragua,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",NER,Niger,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",NGA,Nigeria,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",MNP,Northern Marianas Islands,0,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",NOR,Norway,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",OMN,Oman,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",PAK,Pakistan,0,0,0,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",NZL,New Zealand,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",NIC,Nicaragua,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",NER,Niger,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",NGA,Nigeria,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",MNP,Northern Marianas Islands,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",NOR,Norway,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",OMN,Oman,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",PAK,Pakistan,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",PLW,Palau,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",WBG,Palestinian Authority,..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",PAN,Panama,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",PNG,Papua New Guinea,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",PRY,Paraguay,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",PER,Peru,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",PHL,Philippines,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",POL,Poland,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",PRT,Portugal,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",PRI,Puerto Rico,0,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",QAT,Qatar,0,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",ROM,Romania,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",RUS,Russia,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",RWA,Rwanda,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",KNA,Saint Kitts and Nevis,0,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",LCA,Saint Lucia,0,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",WSM,Samoa,..,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",SMR,San Marino,0,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",STP,Sao Tome and Principe,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",SAU,Saudi Arabia,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",SEN,Senegal,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",SRB,Serbia,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",SYC,Seychelles,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",SLE,Sierra Leone,0,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",SGP,Singapore,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",SVK,Slovak Republic,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",SVN,Slovenia,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",SLB,Solomon Islands,0,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",PAN,Panama,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",PNG,Papua New Guinea,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",PRY,Paraguay,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",PER,Peru,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",PHL,Philippines,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",POL,Poland,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",PRT,Portugal,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",PRI,Puerto Rico,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",QAT,Qatar,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",ROM,Romania,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",RUS,Russia,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",RWA,Rwanda,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",KNA,Saint Kitts and Nevis,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",LCA,Saint Lucia,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",WSM,Samoa,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",SMR,San Marino,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",STP,Sao Tome and Principe,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",SAU,Saudi Arabia,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",SEN,Senegal,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",SRB,Serbia,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",SYC,Seychelles,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",SLE,Sierra Leone,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",SGP,Singapore,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",SVK,Slovak Republic,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",SVN,Slovenia,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",SLB,Solomon Islands,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",SOM,Somalia,..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",ZAF,South Africa,0,0,0,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",ZAF,South Africa,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",SSD,South Sudan,..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",ESP,Spain,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",LKA,Sri Lanka,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",VCT,St. Vincent and the Grenadines,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",SDN,Sudan,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",SUR,Suriname,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",SWZ,Swaziland,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",SWE,Sweden,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",CHE,Switzerland,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",SYR,Syria,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",MKD,T.F.Y.R. Macedonia,0,0,0,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",ESP,Spain,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",LKA,Sri Lanka,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",VCT,St. Vincent and the Grenadines,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",SDN,Sudan,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",SUR,Suriname,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",SWZ,Swaziland,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",SWE,Sweden,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",CHE,Switzerland,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",SYR,Syria,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",MKD,T.F.Y.R. Macedonia,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",TWN,"Taiwan, China",..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",TJK,Tajikistan,0,..,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",TZA,Tanzania,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",THA,Thailand,0,0,0,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",TJK,Tajikistan,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",TZA,Tanzania,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",THA,Thailand,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",TLS,Timor-Leste,..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",TGO,Togo,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",TON,Tonga,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",TTO,Trinidad and Tobago,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",TUN,Tunisia,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",TUR,Turkey,0,0,0,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",TGO,Togo,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",TON,Tonga,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",TTO,Trinidad and Tobago,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",TUN,Tunisia,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",TUR,Turkey,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",TKM,Turkmenistan,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",TUV,Tuvalu,..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",UGA,Uganda,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",UKR,Ukraine,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",ARE,United Arab Emirates,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",GBR,United Kingdom,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",USA,United States,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",URY,Uruguay,0,0,0,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",UGA,Uganda,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",UKR,Ukraine,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",ARE,United Arab Emirates,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",GBR,United Kingdom,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",USA,United States,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",URY,Uruguay,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",UZB,Uzbekistan,..,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",VUT,Vanuatu,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",VEN,Venezuela,0,0,0,0,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",VNM,Viet Nam,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",VIR,Virgin Islands (U.S.),0,..,..,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",YEM,Yemen,0,0,0,..,..
-I152C$,"Mobile-cellular monthly subscription charge, in USD ",ZMB,Zambia,0,0,0,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",VUT,Vanuatu,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",VEN,Venezuela,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",VNM,Viet Nam,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",VIR,Virgin Islands (U.S.),..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",YEM,Yemen,..,..,..,..,..
+I152C$,"Mobile-cellular monthly subscription charge, in USD ",ZMB,Zambia,..,..,..,..,..
 I152C$,"Mobile-cellular monthly subscription charge, in USD ",ZWE,Zimbabwe,..,..,..,..,..

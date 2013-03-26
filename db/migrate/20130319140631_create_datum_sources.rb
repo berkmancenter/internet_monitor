@@ -6,7 +6,7 @@ class CreateDatumSources < ActiveRecord::Migration
       t.text :description
       t.string :datum_type
       t.references :category
-      t.float :default_weight, :default => 1.0
+      t.float :default_weight
       t.float :min
       t.float :max
       t.string :retriever_class

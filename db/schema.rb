@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(:version => 20130319140910) do
   create_table "country_categories", :force => true do |t|
     t.integer  "country_id"
     t.integer  "category_id"
-    t.integer  "score"
+    t.float    "score"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
@@ -72,15 +72,15 @@ ActiveRecord::Schema.define(:version => 20130319140910) do
     t.text     "description"
     t.string   "datum_type"
     t.integer  "category_id"
-    t.float    "default_weight",  :default => 1.0
+    t.float    "default_weight"
     t.float    "min"
     t.float    "max"
     t.string   "retriever_class"
     t.boolean  "is_api"
     t.boolean  "for_infobox"
     t.string   "link"
-    t.datetime "created_at",                       :null => false
-    t.datetime "updated_at",                       :null => false
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   add_index "datum_sources", ["category_id"], :name => "index_datum_sources_on_category_id"

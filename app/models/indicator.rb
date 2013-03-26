@@ -1,8 +1,8 @@
 class Indicator < Datum
-  # attr_accessible :title, :body
     delegate :min, :max, :to => :source
+    alias_attribute :percent, :value
 
-    def calc_value
-        self.value = (original_value-min) / (max-min) * 10.0
+    def calc_percent
+        self.percent = (original_value-min) / (max-min)
     end
 end
