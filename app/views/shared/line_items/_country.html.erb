@@ -1,1 +1,1 @@
-<span class="country-name"><%= link_to( "#{country.name} ( #{country.score.round( 2 )} )", country ) %></span>
+<span class="country-name"><%= link_to( "#{country.name} ( #{ country.score.round( 2 ) if country.score != nil } )", country ) %></span>
