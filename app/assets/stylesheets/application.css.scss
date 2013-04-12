@@ -1,0 +1,67 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+/* apply a natural box layout model to all elements */
+/* http://paulirish.com/2012/box-sizing-border-box-ftw/ */
+* { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+html {
+  font-family: Verdana, sans-serif;
+  color: #222;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  margin: 0;
+
+  h1 { 
+    margin-bottom: 0;
+    margin-top: 0;
+    text-align: center;
+  }
+
+  nav {
+    text-align: center;
+
+    ul {
+      display: inline-block;
+      margin: 0;
+
+      li {
+        color: #676767;
+        display: inline-block;
+        font-size: .8em;
+        font-weight: bold;
+        list-style-type: none;
+        margin: 0 1em;
+        text-transform: uppercase;
+
+        a, a:visited {
+          color: #676767;
+          text-decoration: none;
+        }
+
+        a:hover {
+          color: #F15C23;
+        }
+      }
+    }
+  }
+}
+
+
