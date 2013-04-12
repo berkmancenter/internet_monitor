@@ -1,8 +1,14 @@
 <% provide :title, @country.name %>
 
-<%= render( { partial: "shared/widgets/category_selector" } ) %>
+<%= render( {
+  partial: "shared/widgets/category_selector",
+  object: @country
+} ) %>
 
-<h1><%= render( { partial: "shared/line_items/country", object: @country } ) %></h1>
+<h1><%= render( {
+  partial: "shared/line_items/country",
+  object: @country
+} ) %></h1>
 
 <!-- <div class="country-score"><%= @country.score %></div>-->
 
@@ -11,11 +17,11 @@
 <h2>Categories</h2>
 <table class="categories">
   <% @country.country_categories.each do |cc| %>
-<tr>
-  <th><%= cc.category.name %></th>
-  <td><%= cc.score.round( 2 ) if cc.score != nil %></td>
-  <td><a href="javascript:void(0);">details</a></td>
-</tr>
+    <tr>
+      <th><%= cc.category.name %></th>
+      <td><%= cc.score.round( 2 ) if cc.score != nil %></td>
+      <td><a href="javascript:void(0);">details</a></td>
+    </tr>
   <% end %>
 </table>
 
