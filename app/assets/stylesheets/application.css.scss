@@ -17,8 +17,9 @@
 * { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
 
 html {
-  font-family: Verdana, sans-serif;
   color: #222;
+  font-family: Verdana, sans-serif;
+  font-size: 1em;
 }
 
 body {
@@ -61,6 +62,12 @@ header {
         }
       }
     }
+  }
+
+  .header-divider {
+    background: url("divider.png") repeat-x;
+    height: 4px;
+    margin-top: .2em;
   }
 }
 

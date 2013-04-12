@@ -1,17 +1,25 @@
 <% provide :title, @country.name %>
 
-<h2><%= @country.name %></h2>
+<div class="category-selector">
+  <ul>
+    <li>access</li>
+    <li>control</li>
+    <li>activity</li>
+  </ul>
+</div>
+
+<h1><%= @country.name %></h1>
 
 <div class="country-score"><%= @country.score %></div>
 
-<h3>Categories</h3>
+<h2>Categories</h2>
 <ul class="categories">
     <% @country.country_categories.each do |cc| %>
         <li><%= render :partial => 'shared/line_items/country_category', :object => cc %></li>
     <% end %>
 </ul>
 
-<h3>Indicators (<%= @country.indicators.most_recent.count %>)</h3>
+<h2>Indicators (<%= @country.indicators.most_recent.count %>)</h2>
 <ul class="indicators">
     <% @country.indicators.most_recent.each do |indicator| %>
         <li><%= render :partial => 'shared/line_items/indicator', :object => indicator %></li>

@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <title><%= yield :title %> - Internet Monitor</title>
+  <title><%= yield :title %> @ Internet Monitor</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
@@ -23,9 +23,12 @@
         <li>*</li>
       </ul>
     </nav>
+    <div class="header-divider"></div>
   </header>
 
-<%= yield %>
+  <section class="main-content">
+    <%= yield %>
+  <section>
 
 <%=
   if ( Rails.env.development? )
