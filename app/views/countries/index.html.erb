@@ -1,3 +1,5 @@
+<% provide :title, "Countries" %>
+
 <h2>Countries</h2>
 <ol>
     <% @countries.select{|c| !c.score.nil? }.sort_by{|c| c.score}.reverse.each do |country| %>

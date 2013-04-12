@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Imon</title>
+  <meta charset="utf-8" />
+  <title><%= yield :title %> - Internet Monitor</title>
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <h1>Internet Monitor</h1>
+
+  <header>
+    <h1><span style="display:none;">Internet Monitor</span> <%= image_tag("imon_logo.png") %> </h1>
+    <nav>
+
+    </nav>
+  </header>
 
 <%= yield %>
+
+<%=
+  if ( Rails.env.development? )
+      debug( params )
+  end
+%>
 
 </body>
 </html>
