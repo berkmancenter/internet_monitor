@@ -1,14 +1,8 @@
 <% provide :title, @country.name %>
 
-<div class="category-selector">
-  <ul>
-    <li>access</li>
-    <li>control</li>
-    <li>activity</li>
-  </ul>
-</div>
+<%= render( { partial: "shared/widgets/category_selector" } ) %>
 
-<h1><%= @country.name %></h1>
+<h1><%= render( { partial: "shared/line_items/country", object: @country } ) %></h1>
 
 <div class="country-score"><%= @country.score %></div>
 
