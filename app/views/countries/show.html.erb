@@ -4,18 +4,26 @@
 
 <h1><%= render( { partial: "shared/line_items/country", object: @country } ) %></h1>
 
-<div class="country-score"><%= @country.score %></div>
+<!-- <div class="country-score"><%= @country.score %></div>-->
+
+<div class="country-description">Bacon ipsum dolor sit amet cupidatat voluptate beef ribs ea, chuck esse anim meatloaf flank. Kielbasa pork eiusmod venison leberkas pig dolore incididunt shankle meatloaf est laboris salami ad. Capicola prosciutto chicken nostrud. Nulla sausage aute, veniam dolor deserunt cupidatat. Spare ribs ut eiusmod, tri-tip do veniam fatback sunt aute ullamco.</div>
 
 <h2>Categories</h2>
-<ul class="categories">
-    <% @country.country_categories.each do |cc| %>
-        <li><%= render :partial => 'shared/line_items/country_category', :object => cc %></li>
-    <% end %>
-</ul>
+<table class="categories">
+  <% @country.country_categories.each do |cc| %>
+<tr>
+  <th><%= cc.category.name %></th>
+  <td><%= cc.score.round( 2 ) if cc.score != nil %></td>
+  <td><a href="javascript:void(0);">details</a></td>
+</tr>
+  <% end %>
+</table>
 
+<!--
 <h2>Indicators (<%= @country.indicators.most_recent.count %>)</h2>
 <ul class="indicators">
     <% @country.indicators.most_recent.each do |indicator| %>
         <li><%= render :partial => 'shared/line_items/indicator', :object => indicator %></li>
     <% end %>
 </ul>
+-->
