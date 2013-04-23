@@ -1,6 +1,11 @@
 <% provide :title, @country.name %>
 
 <%= render( {
+  partial: "shared/widgets/country_data",
+  object: @country
+} ) %>
+
+<%= render( {
   partial: "shared/widgets/category_selector",
   object: @country
 } ) %>

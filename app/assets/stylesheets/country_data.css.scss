@@ -1,0 +1,56 @@
+﻿.country-data {
+  float: left;
+  margin: 0;
+  margin-right: .5em;
+
+  label>span {
+    display: none;
+  }
+
+  select {
+    -webkit-appearance: none;
+    background: transparent;
+    border: solid 1px #fff;
+    border-radius: 8px;
+    margin: 1px;
+    padding: .5em;
+    width: 100%;
+  }
+
+  select::-ms-expand {
+    background: transparent;
+    border: none;
+  }
+
+  select:hover {
+    border: solid 1px #dedede;
+    cursor: pointer;
+  }
+}
+
+.country-wikipedia {
+  font-size: .8em !important;
+  width: 320px;
+
+  .country-name { display: none; }
+
+  a, a:visited, a:hover {
+    color: black;
+    cursor: text;
+    text-decoration: none;
+  }
+
+  a img {
+    border: none;
+    cursor: default;
+  }
+
+  li {
+    list-style-type: none;
+  }
+}
+
+.infobox {
+    width: auto !important;
+}
+
