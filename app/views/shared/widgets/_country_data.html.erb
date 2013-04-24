@@ -4,7 +4,7 @@
   <span>Country</span>
   <select name="id">
     <% @country_names.each do |c| %>
-      <option value="<%= c.id %>" <%= 'selected="selected' if c == @country %> ><%= c.name %></option>
+      <option value="<%= country_path(c) %>" <%= 'selected="selected' if c == @country %> ><%= c.name %></option>
     <% end %>
   </select>
 </label>
