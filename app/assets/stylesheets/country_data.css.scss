@@ -1,7 +1,8 @@
 ﻿.country-data {
+  display: none;
   float: left;
   margin: 0;
-  margin-right: .5em;
+  margin-right: 2em;
 
   label>span {
     display: none;
@@ -52,5 +53,12 @@
 
 .infobox {
     width: auto !important;
+}
+
+@media only screen and (min-width: 45em) {
+  /* show .country-data on larger screens */
+  .country-data {
+    display: block;
+  }
 }
 
