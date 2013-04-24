@@ -30,8 +30,21 @@
 
   <section class="main-content">
     <%= yield %>
-  <section>
+  </section>
 
+  <footer>
+    <a href="http://cyber.law.harvard.edu" title="Berkman Center For Internet and Society" class="berkman-link"></a>
+    <nav>
+      <ul>
+        <li>about</li>
+        <li>contact</li>
+        <li>blog</li>
+        <li>mailing list</li>
+      </ul>
+    </nav>
+  </footer>
+    
+    
 <%=
   if ( Rails.env.development? )
       debug( params )

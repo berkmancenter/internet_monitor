@@ -106,3 +106,52 @@ h2 {
   font-size: 1.1em;
 }
 
+
+footer {
+  background: #676767;
+  clear: both;
+  margin: 0;
+  min-height: 40px;
+
+  a.berkman-link {
+    background: url("berkman_logo_small.png");
+    display: inline-block;
+    float: left;
+    height: 32px;
+    margin-top: 4px;
+    width: 64px;
+  }
+
+  nav {
+    text-align: center;
+
+    ul {
+      display: inline-block;
+      margin: .5em 0;
+
+      li {
+        color: #fefefe;
+        display: inline-block;
+        font-size: .8em;
+        font-weight: bold;
+        list-style-type: none;
+        margin: 0 1em;
+        text-transform: uppercase;
+
+        a, a:visited {
+          color: #fefefe;
+          text-decoration: none;
+        }
+
+        a:hover {
+          color: #F15C23;
+        }
+      }
+    }
+  }
+
+
+
+
+
+}
