@@ -1,5 +1,6 @@
 defaults: &DEFAULTS
   max_score: 10.0
+  min_indicators: 10
   gdp_data_file: "ny.gdp.pcap.cd_Indicator_MetaData_en_EXCEL.csv"
 
 development:

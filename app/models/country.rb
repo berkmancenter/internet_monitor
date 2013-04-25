@@ -9,6 +9,10 @@ class Country < ActiveRecord::Base
     has_many :html_blocks
     has_many :images
 
+    scope :with_enough_data,
+        where("indicator_count >= :min_indicators",
+              {:min_indicators => Rails.application.config.imon['min_indicators']})
+
     def score(options = {})
         return read_attribute(:score) unless !options.empty?
         options.assert_valid_keys(:for)
@@ -17,7 +21,9 @@ class Country < ActiveRecord::Base
     end
 
     def recalc_scores!
-        ws = weighted_score(indicators.most_recent)
+        most_recent = indicators.most_recent
+        self.indicator_count = most_recent.size
+        ws = weighted_score(most_recent)
         self.score = ws unless ws.nan?
         country_categories.each do |cc|
             ws = weighted_score(cc.indicators.most_recent)

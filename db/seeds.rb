@@ -24,33 +24,9 @@ CSV.open(Rails.root.join('db', 'countryInfo.txt'), {:headers => true, :col_sep =
     country.save!
 end
 
-type_map = {
-    'number' => 'quantitative',
-    'text' => 'html',
-    'multiple URLs' => 'url_list',
-    'URL' => 'url_list',
-    'XML' => 'html'
-}
-CSV.open(Rails.root.join('db', 'sources.csv'), :headers => true).each_with_index do |line, i|
-    next unless line['In IM Index?'] && line['In IM Index?'][0] == 'y'
-    ds = DatumSource.new(
-        :admin_name => line['Indicator'],
-        :public_name => line['Indicator'],
-        :datum_type => type_map[line['Data type']],
-        :is_api => !line['API available?'].nil?,
-        :retriever_class => line['Retriever Class'],
-        :default_weight => line['Default Weight'].to_f
-    )
-    ds.category = Category.find_by_name(line['Category'])
-    ds.save!
-    if line['Filename']
-        ds.ingest_data!(
-            :filename => Rails.root.join('db', 'data_files', line['Filename']).to_s,
-            :sheetname => line['Sheet Name'],
-            :column => line['Column Name'],
-            :divide_by_gdp => line['Divide by GDP/cap?'] == 'y'
-        )
-    end
+CSV.open(Rails.root.join('db', 'sources.csv'), :headers => true).each_with_index do |row, i|
+    next unless row['In IM Index?'] && row['In IM Index?'][0] == 'y'
+    Retriever.retrieve!(i + 1)
 end
 
 Country.all.each do |country|

@@ -6,6 +6,7 @@ class CreateCountries < ActiveRecord::Migration
       t.string :iso3_code
       t.float :score
       t.text :description
+      t.integer :indicator_count
 
       t.timestamps
     end

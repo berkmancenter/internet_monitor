@@ -25,8 +25,9 @@ ActiveRecord::Schema.define(:version => 20130319140910) do
     t.string   "iso3_code"
     t.float    "score"
     t.text     "description"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.integer  "indicator_count"
+    t.datetime "created_at",      :null => false
+    t.datetime "updated_at",      :null => false
   end
 
   create_table "country_categories", :force => true do |t|

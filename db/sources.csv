@@ -4,6 +4,7 @@ y,,"Average peak connection speeds (kbps) - ""outpeak""",Akamai,provided to us b
 y,,"High broadband adoption (% of connections to Akamai faster than 10 Mbps) - ""outhbb""",Akamai,provided to us by David Belson; http://www.akamai.com/stateoftheinternet/,n/a,Q3'07 to Q3'12,akamai.xlsx,,number,,1,Access,akamai.xlsx,outhbb,,AkamaiParser,
 y,,"Broadband adoption (% of connections to Akamai faster than 4 Mbps) - ""outbb""",Akamai,provided to us by David Belson; http://www.akamai.com/stateoftheinternet/,n/a,Q3'07 to Q3'12,akamai.xlsx,,number,,1,Access,akamai.xlsx,outbb,,AkamaiParser,
 ,,"Narrowband adoption (% slower than 256 kbps) - ""outnarrow""",Akamai,provided to us by David Belson; http://www.akamai.com/stateoftheinternet/,n/a,Q3'07 to Q3'12,akamai.xlsx,,number,,,,akamai.xlsx,outnarrow,,AkamaiParser,
+y,,Popular links,Bitly,http://bit.ly,,,,y,multiple URLs,,1,Activity,,,,BitlyFetcher,
 ,,Total inaccessible reports per country,Herdict,http://www.herdict.org/,n/a,2011-2012,,http://www.herdict.org/api/,number,,,,,,,,
 ,,Total accessible reports per country,Herdict,http://www.herdict.org/,n/a,2011-2012,,http://www.herdict.org/api/,number,,,,,,,,
 ,,Top reported sites: political,Herdict,http://www.herdict.org/,n/a,2011-2012,,http://www.herdict.org/api/,multiple URLs,,,,,,,,

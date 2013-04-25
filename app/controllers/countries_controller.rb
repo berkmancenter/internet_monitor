@@ -1,6 +1,6 @@
 class CountriesController < ApplicationController
     def index
-        @countries = Country.all
+        @countries = Country.with_enough_data
     end
 
     def show

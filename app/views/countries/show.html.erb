@@ -15,3 +15,10 @@
         <li><%= render :partial => 'shared/line_items/indicator', :object => indicator %></li>
     <% end %>
 </ul>
+
+<h3>Url Lists (<%= @country.url_lists.most_recent.count %>)</h3>
+<ul class="indicators">
+    <% @country.url_lists.most_recent.each do |list| %>
+        <li><%= render :partial => 'shared/url_list', :object => list %></li>
+    <% end %>
+</ul>
