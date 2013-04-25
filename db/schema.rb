@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130424195342) do
+ActiveRecord::Schema.define(:version => 20130425195327) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -91,6 +91,58 @@ ActiveRecord::Schema.define(:version => 20130424195342) do
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
+
+  create_table "refinery_blog_categories", :force => true do |t|
+    t.string   "title"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.string   "cached_slug"
+    t.string   "slug"
+  end
+
+  add_index "refinery_blog_categories", ["id"], :name => "index_refinery_blog_categories_on_id"
+  add_index "refinery_blog_categories", ["slug"], :name => "index_refinery_blog_categories_on_slug"
+
+  create_table "refinery_blog_categories_blog_posts", :force => true do |t|
+    t.integer "blog_category_id"
+    t.integer "blog_post_id"
+  end
+
+  add_index "refinery_blog_categories_blog_posts", ["blog_category_id", "blog_post_id"], :name => "index_blog_categories_blog_posts_on_bc_and_bp"
+
+  create_table "refinery_blog_comments", :force => true do |t|
+    t.integer  "blog_post_id"
+    t.boolean  "spam"
+    t.string   "name"
+    t.string   "email"
+    t.text     "body"
+    t.string   "state"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "refinery_blog_comments", ["id"], :name => "index_refinery_blog_comments_on_id"
+
+  create_table "refinery_blog_posts", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.boolean  "draft"
+    t.datetime "published_at"
+    t.datetime "created_at",                      :null => false
+    t.datetime "updated_at",                      :null => false
+    t.integer  "user_id"
+    t.string   "cached_slug"
+    t.string   "custom_url"
+    t.text     "custom_teaser"
+    t.string   "source_url"
+    t.string   "source_url_title"
+    t.integer  "access_count",     :default => 0
+    t.string   "slug"
+  end
+
+  add_index "refinery_blog_posts", ["access_count"], :name => "index_refinery_blog_posts_on_access_count"
+  add_index "refinery_blog_posts", ["id"], :name => "index_refinery_blog_posts_on_id"
+  add_index "refinery_blog_posts", ["slug"], :name => "index_refinery_blog_posts_on_slug"
 
   create_table "refinery_images", :force => true do |t|
     t.string   "image_mime_type"
@@ -188,6 +240,19 @@ ActiveRecord::Schema.define(:version => 20130424195342) do
   add_index "refinery_roles_users", ["role_id", "user_id"], :name => "index_refinery_roles_users_on_role_id_and_user_id"
   add_index "refinery_roles_users", ["user_id", "role_id"], :name => "index_refinery_roles_users_on_user_id_and_role_id"
 
+  create_table "refinery_settings", :force => true do |t|
+    t.string   "name"
+    t.text     "value"
+    t.boolean  "destroyable",     :default => true
+    t.string   "scoping"
+    t.boolean  "restricted",      :default => false
+    t.string   "form_value_type"
+    t.datetime "created_at",                         :null => false
+    t.datetime "updated_at",                         :null => false
+  end
+
+  add_index "refinery_settings", ["name"], :name => "index_refinery_settings_on_name"
+
   create_table "refinery_user_plugins", :force => true do |t|
     t.integer "user_id"
     t.string  "name"
@@ -227,5 +292,22 @@ ActiveRecord::Schema.define(:version => 20130424195342) do
 
   add_index "seo_meta", ["id"], :name => "index_seo_meta_on_id"
   add_index "seo_meta", ["seo_meta_id", "seo_meta_type"], :name => "index_seo_meta_on_seo_meta_id_and_seo_meta_type"
+
+  create_table "taggings", :force => true do |t|
+    t.integer  "tag_id"
+    t.integer  "taggable_id"
+    t.string   "taggable_type"
+    t.integer  "tagger_id"
+    t.string   "tagger_type"
+    t.string   "context"
+    t.datetime "created_at"
+  end
+
+  add_index "taggings", ["tag_id"], :name => "index_taggings_on_tag_id"
+  add_index "taggings", ["taggable_id", "taggable_type", "context"], :name => "index_taggings_on_taggable_id_and_taggable_type_and_context"
+
+  create_table "tags", :force => true do |t|
+    t.string "name"
+  end
 
 end
