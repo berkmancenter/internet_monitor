@@ -58,8 +58,15 @@ header {
     margin-top: 0;
     text-align: center;
 
-    img {
-      border: none;
+    .logo-image {
+      background: url("imon_logo.png");
+      display: inline-block;
+      height: 96px;
+      width: 160px;
+    }
+
+    .logo-image:hover {
+      background-position: 0 -96px;
     }
   }
 
