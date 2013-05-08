@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Imon</title>
+  <meta charset="utf-8" />
+  <title><%= raw get_title( yield(:title) , params ) %> @ Internet Monitor</title>
+  <meta name="viewport" content="width=device-width">
+
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-    <h1>Internet Monitor</h1>
 
-<%= yield %>
+  <header>
+    <h1><span style="display:none;">Internet Monitor</span> <%= link_to( raw( '<div class="logo-image"></div>' ), "/" ) %> </h1>
+    <nav>
+      <ul>
+        <li><%= link_to "about", "/about" %></li>
+        <li>map</li>
+        <li><%= link_to "countries", "/countries" %></li>
+        <li>research</li>
+        <li>data</li>
+        <li>contact</li>
+        <li><%= link_to "blog", "/blog" %></li>
+        <li>*</li>
+      </ul>
+    </nav>
+    <div class="header-divider"></div>
+  </header>
+
+  <section class="main-content">
+    <%= yield %>
+  </section>
+
+  <footer>
+    <a href="http://cyber.law.harvard.edu" title="Berkman Center For Internet and Society" class="berkman-link"></a>
+    <nav>
+      <ul>
+        <li><%= link_to "about", "/about" %></li>
+        <li>contact</li>
+        <li><%= link_to "blog", "/blog" %></li>
+        <li>mailing list</li>
+      </ul>
+    </nav>
+  </footer>
+    
+    
+<%=
+#  if ( Rails.env.development? )
+#      debug( params )
+#  end
+%>
 
 </body>
 </html>

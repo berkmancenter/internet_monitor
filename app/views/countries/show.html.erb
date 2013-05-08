@@ -1,13 +1,25 @@
-<h2><%= @country.name %></h2>
+<% provide :title, @country.name %>
 
-<div class="country-score"><%= @country.score %></div>
+<%= render( {
+  partial: "shared/widgets/country_data",
+  object: @country
+} ) %>
 
-<h3>Categories</h3>
-<ul class="categories">
-    <% @country.country_categories.each do |cc| %>
-        <li><%= render :partial => 'shared/line_items/country_category', :object => cc %></li>
-    <% end %>
-</ul>
+<%= render( {
+  partial: "shared/widgets/category_selector",
+  object: @country
+} ) %>
+
+<h1><%= render( {
+  partial: "shared/line_items/country",
+  object: @country
+} ) %></h1>
+
+<!-- <div class="country-score"><%= @country.score %></div>-->
+
+<div class="sub-content">
+
+  <p class="country-description">(Country.description)<br>Bacon ipsum dolor sit amet cupidatat voluptate beef ribs ea, chuck esse anim meatloaf flank. Kielbasa pork eiusmod venison leberkas pig dolore incididunt shankle meatloaf est laboris salami ad. Capicola prosciutto chicken nostrud. Nulla sausage aute, veniam dolor deserunt cupidatat. Spare ribs ut eiusmod, tri-tip do veniam fatback sunt aute ullamco.</p>
 
 <h3>Indicators (<%= @country.indicators.most_recent.count %>)</h3>
 <ul class="indicators">
@@ -22,3 +34,4 @@
         <li><%= render :partial => 'shared/url_list', :object => list %></li>
     <% end %>
 </ul>
+</div>

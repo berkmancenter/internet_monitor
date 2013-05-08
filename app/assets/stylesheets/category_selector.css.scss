@@ -1,0 +1,28 @@
+.category-selector {
+  float: right;
+
+  ul {
+    display: inline-block;
+    margin: 0;
+
+    li {
+      display: inline-block;
+      list-style-type: none;
+      margin: 0;
+      padding: .5em;
+
+      a, a:visited {
+        color: #676767;
+        font-weight: bold;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      a:hover {
+        color: #F15C23;
+      }
+    }
+  }
+}
+
+
