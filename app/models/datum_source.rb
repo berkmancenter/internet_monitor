@@ -29,6 +29,7 @@ class DatumSource < ActiveRecord::Base
 
     def ingest_data!(options = {})
         self.data = retriever_class.data(options)
+        save!
         unless data.empty?
             self.datum_type = data.first.type
             logger.info %Q|Ingesting #{data.count} data from "#{public_name}"|

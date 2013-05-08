@@ -3,6 +3,8 @@ class Indicator < Datum
     alias_attribute :percent, :value
 
     def calc_percent
-        self.percent = (original_value-min) / (max-min)
+        percent = (original_value-min) / (max-min)
+        percent = 1 - percent if source.default_weight < 0
+        self.percent = percent
     end
 end

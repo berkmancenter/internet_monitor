@@ -1,5 +1,4 @@
 class BitlyFetcher
-    require 'httparty'
 
     USER_SESSION = 'amRjYw==|1366827650|23d440c1c3f308194d845a3422bf96f4f8285b3d'
     ACCESS_TOKEN = '6144641409982b8ed17e102c2534c0e9a94e7ea5'
