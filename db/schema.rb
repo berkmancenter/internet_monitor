@@ -56,7 +56,7 @@ ActiveRecord::Schema.define(:version => 20130425195327) do
     t.datetime "start_date"
     t.integer  "country_id"
     t.integer  "language_id"
-    t.float    "original_value"
+    t.text     "original_value"
     t.text     "value"
     t.string   "type"
     t.datetime "created_at",      :null => false

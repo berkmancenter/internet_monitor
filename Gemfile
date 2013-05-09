@@ -24,6 +24,7 @@ gem 'jquery-rails', '~> 2.0.0'
 gem 'roo'
 gem 'httparty'
 gem 'nokogiri'
+gem 'rabl'
 
 gem 'refinerycms', '~> 2.0.10'
 gem 'refinerycms-blog', '~> 2.0.0'

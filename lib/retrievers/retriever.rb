@@ -3,11 +3,12 @@ class Retriever
     def self.retrieve!(row_number)
 
         type_map = {
-            'number' => 'quantitative',
-            'text' => 'html',
-            'multiple URLs' => 'url_list',
-            'URL' => 'url_list',
-            'XML' => 'html'
+            'number' => 'Indicator',
+            'text' => 'HtmlBlock',
+            'multiple URLs' => 'UrlList',
+            'URL' => 'UrlList',
+            'XML' => 'HtmlBlock',
+            'HTML' => 'HtmlBlock'
         }
 
         line = CSV.read(Rails.root.join('db', 'sources.csv'), :headers => true)[row_number.to_i - 1]

@@ -1,23 +1,11 @@
 Imon::Application.routes.draw do
-  resources :data
+  resources :datum_sources, :country_categories, :categories, :languages, :country_languages, :countries
 
-
-  resources :datum_sources
-
-
-  resources :country_categories
-
-
-  resources :categories
-
-
-  resources :languages
-
-
-  resources :country_languages
-
-
-  resources :countries
+  resources :data do 
+      member do 
+          get 'original'
+      end
+  end
 
 
   # This line mounts Refinery's routes at the root of your application.

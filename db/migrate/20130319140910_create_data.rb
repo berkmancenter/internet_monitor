@@ -5,7 +5,7 @@ class CreateData < ActiveRecord::Migration
       t.datetime :start_date
       t.references :country
       t.references :language
-      t.float :original_value
+      t.text :original_value
       t.text :value
       t.string :type
 

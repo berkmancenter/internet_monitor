@@ -120,3 +120,4 @@ y,,"Literacy rate, adult total (% of people ages 15 and above)",World Bank,http:
 ,,Users/Accounts Specified,Twitter Transparency Report,https://transparency.twitter.com/removal-requests-ttr2,n/a,"2012, Q3&Q4",twitter_transparency_removal_2012Q3-Q4.csv,no,number,,,,,,,,
 ,,Accounts Withheld,Twitter Transparency Report,https://transparency.twitter.com/removal-requests-ttr2,n/a,"2012, Q3&Q4",twitter_transparency_removal_2012Q3-Q4.csv,no,number,,,,,,,,
 ,,Tweets Withheld,Twitter Transparency Report,https://transparency.twitter.com/removal-requests-ttr2,n/a,"2012, Q3&Q4",twitter_transparency_removal_2012Q3-Q4.csv,no,number,,,,,,,,
+y,,Morningside Analysis,Morningside,http://ip5416.blogdns.com:8080/api,n/a,"2012, 2013",,y,html,,,Activity,,,,MorningsideFetcher,
