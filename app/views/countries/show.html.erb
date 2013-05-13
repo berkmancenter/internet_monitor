@@ -69,7 +69,7 @@
     <h3>HTML Blocks (<%= language.html_blocks.most_recent.count %>)</h3>
     <ul class="html">
         <% language.html_blocks.most_recent.each do |html_block| %>
-            <li><%= raw html_block %></li>
+          <li class="<%= html_block.source.retriever_class.class %>" data-datum-path="<%= Rails.application.routes.url_helpers.original_datum_path(html_block, :format => :json) %>"><%= raw html_block %></li>
         <% end %>
     </ul>
 
