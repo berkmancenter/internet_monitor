@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "countries requests" do
   let( :testCountry ) { Country.find(108) }
-  let( :testActivity ) { CountryCategory.where("country_id = #{testCountry.id} and category_id = 2").first }
+  let( :testCountryActivity ) { CountryCategory.where("country_id = #{testCountry.id} and category_id = 2").first }
 
   subject { page }
 
@@ -26,14 +26,13 @@ describe "countries requests" do
     }
   end
 
-#  describe( "get /country_categories/:id" ) do
-#    before { visit country_category( testActivity ) }
-#
-#    it {
-#      should( have_selector( "title", { text: "#{testCountry.name.downcase}  @ Internet Monitor" } ) )
-#    }
-#
-#  end
+  describe( "get /country_categories/:id" ) do
+    before { visit country_category_path( testCountryActivity ) }
+
+    it {
+      should( have_selector( "title", { text: "#{testCountry.name.downcase} activity @ Internet Monitor" } ) )
+    }
+  end
 
   #describe( "get /countries/:id/activity" ) do
     # /countries/:id/activity should route to country_categories/:id for country=id & category=2
