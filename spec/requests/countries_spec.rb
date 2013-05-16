@@ -1,7 +1,8 @@
 require 'spec_helper'
 
 describe "countries requests" do
-  let( :iran ) { Country.find(108) }
+  let( :testCountry ) { Country.find(108) }
+  let( :testActivity ) { CountryCategory.where("country_id = #{testCountry.id} and category_id = 2").first }
 
   subject { page }
 
@@ -14,15 +15,28 @@ describe "countries requests" do
   end
 
   describe( "get /countries/:id" ) do
-    before { visit country_path( iran ) }
+    before { visit country_path( testCountry ) }
 
     it {
-      should( have_selector( "title", { text: "iran @ Internet Monitor" } ) )
+      should( have_selector( "title", { text: "#{testCountry.name.downcase} @ Internet Monitor" } ) )
     }
 
     it {
-      should( have_selector( "h1 a", { text: "#{iran.name} ( #{iran.score.round(2)} )" } ) )
+      should( have_selector( "h1 a", { text: "#{testCountry.name} ( #{testCountry.score.round(2)} )" } ) )
     }
   end
+
+#  describe( "get /country_categories/:id" ) do
+#    before { visit country_category( testActivity ) }
+#
+#    it {
+#      should( have_selector( "title", { text: "#{testCountry.name.downcase}  @ Internet Monitor" } ) )
+#    }
+#
+#  end
+
+  #describe( "get /countries/:id/activity" ) do
+    # /countries/:id/activity should route to country_categories/:id for country=id & category=2
+  #end
 
 end
