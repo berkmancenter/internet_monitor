@@ -1,11 +1,28 @@
 require 'spec_helper'
 
-describe "Countries" do
-  describe "GET /countries" do
-    it "works! (now write some real specs)" do
-      # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      get countries_path
-      response.status.should be(200)
-    end
+describe "countries requests" do
+  let( :iran ) { Country.find(108) }
+
+  subject { page }
+
+  describe "get /countries" do
+    before { visit countries_path }
+
+    it {
+      should( have_selector( "title", { text: "countries @ Internet Monitor" } ) )
+    }
   end
+
+  describe( "get /countries/:id" ) do
+    before { visit country_path( iran ) }
+
+    it {
+      should( have_selector( "title", { text: "iran @ Internet Monitor" } ) )
+    }
+
+    it {
+      should( have_selector( "h1 a", { text: "#{iran.name} ( #{iran.score.round(2)} )" } ) )
+    }
+  end
+
 end
