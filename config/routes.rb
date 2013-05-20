@@ -7,6 +7,7 @@ Imon::Application.routes.draw do
       end
   end
 
+  match 'countries/:id/activity' => 'countries#activity', :as => 'activity'
 
   # This line mounts Refinery's routes at the root of your application.
   # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.

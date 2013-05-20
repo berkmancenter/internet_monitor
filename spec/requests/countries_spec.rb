@@ -7,7 +7,7 @@ describe "countries requests" do
   subject { page }
 
   describe "get /countries" do
-    before { visit countries_path }
+    before { visit countries_url }
 
     it {
       should( have_selector( "title", { text: "countries @ Internet Monitor" } ) )
@@ -15,7 +15,7 @@ describe "countries requests" do
   end
 
   describe( "get /countries/:id" ) do
-    before { visit country_path( testCountry ) }
+    before { visit country_url( testCountry ) }
 
     it {
       should( have_selector( "title", { text: "#{testCountry.name.downcase} @ Internet Monitor" } ) )
@@ -26,16 +26,12 @@ describe "countries requests" do
     }
   end
 
-  describe( "get /country_categories/:id" ) do
-    before { visit country_category_path( testCountryActivity ) }
+  describe( "get /countries/:id/activity" ) do
+    before { visit activity_url( testCountry ) }
 
     it {
       should( have_selector( "title", { text: "#{testCountry.name.downcase} activity @ Internet Monitor" } ) )
     }
   end
-
-  #describe( "get /countries/:id/activity" ) do
-    # /countries/:id/activity should route to country_categories/:id for country=id & category=2
-  #end
 
 end

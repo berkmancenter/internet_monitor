@@ -1,0 +1,20 @@
+<% provide :title, "#{@country.name} #{@category.name}" %>
+
+<%= render( {
+  partial: "shared/widgets/country_data",
+  object: @country
+} ) %>
+
+<%= render( {
+  partial: "shared/widgets/category_selector",
+  object: @country
+} ) %>
+
+<h1><%= render( {
+  partial: "shared/line_items/country",
+  object: @country
+} ) %></h1>
+
+<div class="sub-content">
+
+</div>
