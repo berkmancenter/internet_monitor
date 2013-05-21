@@ -10,16 +10,16 @@
   object: @country
 } ) %>
 
-<h1><%= render( {
-  partial: "shared/line_items/country",
-  object: @country
-} ) %></h1>
-
 <!-- <div class="country-score"><%= @country.score %></div>-->
 
-<div class="sub-content">
+<article class="countries sub-content">
+  <h1><%= render( {
+    partial: "shared/line_items/country",
+    object: @country
+  } ) %></h1>
 
-    <p class="country-description">(Country.description)<br>Bacon ipsum dolor sit amet cupidatat voluptate beef ribs ea, chuck esse anim meatloaf flank. Kielbasa pork eiusmod venison leberkas pig dolore incididunt shankle meatloaf est laboris salami ad. Capicola prosciutto chicken nostrud. Nulla sausage aute, veniam dolor deserunt cupidatat. Spare ribs ut eiusmod, tri-tip do veniam fatback sunt aute ullamco.</p>
+
+  <p class="country-description">(Country.description)<br>Bacon ipsum dolor sit amet cupidatat voluptate beef ribs ea, chuck esse anim meatloaf flank. Kielbasa pork eiusmod venison leberkas pig dolore incididunt shankle meatloaf est laboris salami ad. Capicola prosciutto chicken nostrud. Nulla sausage aute, veniam dolor deserunt cupidatat. Spare ribs ut eiusmod, tri-tip do veniam fatback sunt aute ullamco.</p>
 
     <h3>Indicators (<%= @country.indicators.most_recent.count %>)</h3>
     <ul class="indicators">
@@ -80,4 +80,4 @@
         <% end %>
     </ul>
     <% end %>
-</div>
+</article>

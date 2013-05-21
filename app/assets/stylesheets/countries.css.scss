@@ -42,3 +42,28 @@
     color: #F15C23;
   }
 }
+
+.countries {
+  padding-top: 2em;
+
+  h1 {
+    font-size: 1.4em;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  h3 {
+    font-size: 1em;
+    font-style: italic;
+  }
+
+  .indicators {
+    li {
+      list-style-type: none;
+    }
+  }
+}
