@@ -9,11 +9,8 @@ class CountriesController < ApplicationController
     end
 
     def activity
-      countryCategory = CountryCategory.find_by_country_id_and_category_id( params[:id], 2 )
-
       @country_names = Country.select("id, name, score").select{|c| !c.score.nil?}.sort_by{|c| c.name}
-
-      @country = countryCategory.country
-      @category = countryCategory.category
+      @country = Country.find(params[:id])
+      @category = Category.find_by_name( "Activity" )
     end
 end
