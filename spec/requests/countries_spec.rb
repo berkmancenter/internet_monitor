@@ -1,18 +1,6 @@
 require 'spec_helper'
 
 describe 'countries requests' do
-  let ( :country_attr ) { FactoryGirl.attributes_for( :country ) }
-  let ( :ds_access ) { FactoryGirl.attributes_for( :ds_access ) }
-
-  before {
-    # create all categories
-    Category.create!( { name: 'Access' } )
-    Category.create!( { name: 'Activity' } )
-    Category.create!( { name: 'Control' } )
-
-    Country.create!( country_attr )
-  }
-
   subject { page }
 
   describe 'get /countries' do
@@ -26,7 +14,7 @@ describe 'countries requests' do
   end
 
   describe( "get /countries/:id" ) do
-    let ( :country ) { Country.last }
+    let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
 
     before { visit country_url( country ) }
 
@@ -40,7 +28,7 @@ describe 'countries requests' do
   end
 
   describe( "get /countries/:id/activity" ) do
-    let ( :country ) { Country.last }
+    let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
 
     before {
       visit activity_url( country )

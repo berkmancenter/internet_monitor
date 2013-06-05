@@ -1,10 +1,10 @@
 require 'spec_helper'
 
 describe ( 'Category model' ) {
-  subject { category }
+  subject { access }
 
   describe ( 'with valid data' ) {
-    let ( :category ) { FactoryGirl.create( :cat_activity ) }
+    let ( :access ) { Category.find_by_name( 'Access' ) }
 
     it {
       should be_valid

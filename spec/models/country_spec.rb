@@ -1,10 +1,10 @@
 require 'spec_helper'
 
 describe ( 'Country model' ) {
-  subject { country }
+  subject { iran }
 
   describe ( 'with valid data' ) {
-    let ( :country ) { FactoryGirl.create( :country ) }
+    let ( :iran ) { Country.find_by_iso3_code( 'IRN' ) }
 
     it {
       should be_valid

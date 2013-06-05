@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe ( 'DatumSource model' ) {
   describe ( 'with valid data' ) {
-    let ( :ds_access ) { FactoryGirl.create( :ds_access ) }
+    let ( :ds_access ) { DatumSource.find_by_admin_name( 'ds_access' ) }
 
     subject { ds_access }
 
@@ -11,7 +11,7 @@ describe ( 'DatumSource model' ) {
     }
 
     describe ( 'with category' ) {
-      let ( :cat_access ) { FactoryGirl.create( :cat_access ) }
+      let ( :cat_access ) { Category.find_by_name( 'Access' ) }
 
       subject { ds_access.category }
 
