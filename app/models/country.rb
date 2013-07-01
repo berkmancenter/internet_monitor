@@ -44,4 +44,8 @@ class Country < ActiveRecord::Base
         end
         sum / indis.count.to_f * Rails.application.config.imon['max_score']
     end
+
+    def most_recent_indicators
+        indicators.most_recent.order(:start_date)
+    end
 end
