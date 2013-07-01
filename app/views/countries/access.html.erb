@@ -10,7 +10,7 @@
   object: @country
 } ) %>
 
-<article class="countries activity sub-content">
+<article class="countries access sub-content">
   <h1><%= render( {
     partial: "shared/line_items/country",
     object: @country
@@ -47,44 +47,4 @@
       <% end %>
     <% end %>
   </ul>
-
-  <h2>Language Reports</h2>
-  
-  <% @country.languages.each do |language| %>
-
-  <h3><%= language.name %></h3>
-
-  <ul class="indicators generic">
-    <% language.indicators.most_recent.each do |indicator| %>
-      <% if ( indicator.source.category_id == @category.id ) %>
-        <li><%= render :partial => 'shared/line_items/indicator', :object => indicator %></li>
-      <% end %>
-    <% end %>
-  </ul>
-
-  <ul class="indicators url-lists">
-    <% language.url_lists.most_recent.each do |list| %>
-      <% if ( list.source.category_id == @category.id ) %>
-        <li><%= render :partial => 'shared/url_list', :object => list %></li>
-      <% end %>
-    <% end %>
-  </ul>
-
-  <ul class="indicators html">
-    <% language.html_blocks.most_recent.each do |html_block| %>
-      <% if ( html_block.source.category_id == @category.id ) %>
-        <li class="<%= html_block.source.retriever_class.class %>" data-datum-path="<%= Rails.application.routes.url_helpers.original_datum_path(html_block, :format => :json) %>"><%= raw html_block %></li>
-      <% end %>
-    <% end %>
-  </ul>
-
-  <ul class="indicators images">
-    <% language.images.most_recent.each do |image| %>
-      <% if ( image.source.category_id == @category.id ) %>
-        <li><%= render :partial => 'shared/image', :object => image %></li>
-      <% end %>
-    <% end %>
-  </ul>
-
-  <% end %>
 </article>

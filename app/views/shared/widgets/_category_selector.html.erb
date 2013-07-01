@@ -1,7 +1,7 @@
 <nav class="category-selector">
   <ul>
-    <li><a href="javascript:void(0);">access</a></li>
-    <li><a href="javascript:void(0);">control</a></li>
+    <li><%= link_to( "access", access_path( @country ) ) %></li>
+    <li><%= link_to( "control", control_path( @country ) ) %></li>
     <li><%= link_to( "activity", activity_path( @country ) ) %></li>
   </ul>
 </nav>
