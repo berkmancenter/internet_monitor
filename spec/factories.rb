@@ -1,20 +1,25 @@
 FactoryGirl.define do
   factory :country do
-    name 'Iran'
-    iso_code 'IR'
-    iso3_code 'IRN'
-    score 3.45
-    description ''
+    # iran is a valid test country with a language and datum for: access
+    factory :iran do
+      name 'Iran'
+      iso_code 'IR'
+      iso3_code 'IRN'
+      score 3.45
+      description ''
+    end
   end
 
   factory :language do
-    name 'Persian'
-    iso_code 'fa'
+    factory :persian do
+      name 'Persian'
+      iso_code 'fa'
+    end
   end
 
   factory :datum_source do
-    factory :ds_access do
-      admin_name 'ds_access'
+    factory :ds_pct_inet do
+      admin_name 'Percentage of individuals using the Internet'
       public_name 'Percentage of individuals using the Internet'
       description nil
       datum_type 'Indicator'
@@ -26,6 +31,19 @@ FactoryGirl.define do
       for_infobox nil
       link nil
     end
+  end
+
+  factory :datum do
+    factory :d_pct_inet_iran do
+      #source ds_pct_inet
+      start_date '2011-01-01'
+      #country_id iran
+      language_id nil
+      original_value 21.0
+      value 0.22100610397810988
+      type 'Indicator'
+    end
+    
   end
 end
 
