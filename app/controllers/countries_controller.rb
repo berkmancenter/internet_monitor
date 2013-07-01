@@ -6,6 +6,10 @@ class CountriesController < ApplicationController
     def show
         @country_names = Country.select("id, name, score").select{|c| !c.score.nil?}.sort_by{|c| c.name}
         @country = Country.find(params[:id])
+        respond_to do |format|
+            format.html
+            format.any(:xml, :json)
+        end
     end
 
     def access
