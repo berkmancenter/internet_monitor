@@ -27,6 +27,30 @@ describe 'countries requests' do
     }
   end
 
+  describe( "get /countries/:id/access" ) do
+    let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
+
+    before {
+      visit access_url( country )
+    }
+
+    it {
+      should( have_selector( "title", { text: "#{country.name.downcase} access @ Internet Monitor" } ) )
+    }
+  end
+
+  describe( "get /countries/:id/control" ) do
+    let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
+
+    before {
+      visit control_url( country )
+    }
+
+    it {
+      should( have_selector( "title", { text: "#{country.name.downcase} control @ Internet Monitor" } ) )
+    }
+  end
+
   describe( "get /countries/:id/activity" ) do
     let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
 

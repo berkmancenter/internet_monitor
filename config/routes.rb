@@ -7,6 +7,8 @@ Imon::Application.routes.draw do
       end
   end
 
+  match 'countries/:id/access' => 'countries#access', :as => 'access'
+  match 'countries/:id/control' => 'countries#control', :as => 'control'
   match 'countries/:id/activity' => 'countries#activity', :as => 'activity'
 
   # This line mounts Refinery's routes at the root of your application.
