@@ -2,9 +2,9 @@ require 'spec_helper'
 
 describe ( 'DatumSource model' ) {
   describe ( 'with valid data' ) {
-    let ( :ds_access ) { DatumSource.find_by_admin_name( 'ds_access' ) }
+    let ( :ds_pct_inet ) { DatumSource.find_by_admin_name( 'Percentage of individuals using the Internet' ) }
 
-    subject { ds_access }
+    subject { ds_pct_inet }
 
     it {
       should be_valid
@@ -13,7 +13,7 @@ describe ( 'DatumSource model' ) {
     describe ( 'with category' ) {
       let ( :cat_access ) { Category.find_by_name( 'Access' ) }
 
-      subject { ds_access.category }
+      subject { ds_pct_inet.category }
 
       it {
         should = cat_access
