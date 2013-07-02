@@ -5,6 +5,9 @@ child :most_recent_indicators, :object_root => false do
     glue :source do
         attributes :id => :source_id
         attributes :default_weight
+        glue :category do
+            attributes :name => :category
+        end
     end
     attributes :name
     attributes :start_date => :date, :original_value => :value, :value => :normalized_value

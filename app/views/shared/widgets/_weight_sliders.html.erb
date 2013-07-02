@@ -1,0 +1,4 @@
+<% @indicator_sources.each do |indicator_source| %>
+    <label for="slider-<%= indicator_source.id %>"><%= indicator_source.public_name %></label>
+    <div data-default-weight="<%= indicator_source.default_weight %>" class="noUiSlider weight-slider" id="slider-<%= indicator_source.id %>"></div>
+<% end %>
