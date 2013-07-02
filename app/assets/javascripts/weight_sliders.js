@@ -42,6 +42,7 @@ var weightSliders = {
     scoreObjects     : [],
     countryData      : [],
     indicatorWeights : {},
+    directions       : {},
 
     init : function(countryId) {
         var data_path = (typeof countryId === 'undefined') ?
@@ -56,14 +57,15 @@ var weightSliders = {
         this.scoreObjects = $(this.SCORE_SELECTOR);
 
         this.sliderObjects.noUiSlider({
-            range   : [-1, 1],
+            range   : [0, 1],
             start   : 0,
             slide   : this.updateScores,
             handles : 1
         }).each(function() { 
             var weight = parseFloat($(this).data(weightSliders.WEIGHT_ATTRIBUTE));
-            weightSliders.indicatorWeights[$(this).attr('id')] = weight;
-            $(this).val(weight).noUiSlider('disabled', true); 
+            weightSliders.indicatorWeights[$(this).attr('id')] = Math.abs(weight);
+            weightSliders.directions[$(this).attr('id')] = weight;
+            $(this).val(Math.abs(weight)).noUiSlider('disabled', true); 
         });
     },
     updateScores : function() {
@@ -79,7 +81,7 @@ var weightSliders = {
                 country   = weightSliders.countryData.findFirst(function(c) { return c.country.id == countryId; }).country,
                 newScore  = weightSliders.calculateScore(country, category);
 
-            $(this).text(newScore.toPrecision(weightSliders.PRECISION));
+            $(this).text(newScore.toPrecision(weightSliders.PRECISION)).trigger('scorechange');
         });
         if (commonPrevSibling.length == 0) {
             commonParent.prepend(common);
@@ -96,9 +98,10 @@ var weightSliders = {
         }
         
         weights = weightSliders.weights(indicators.map(function(i) { return i.source_id }));
+        directions = weightSliders.directions(indicators.map(function(i) { return i.source_id }));
         var sum = indicators.reduce(function(sum, indi, i) {
-                var output = sum + indi.normalized_value * weights[i];
-                if (weights[i] < 0) output += 1;
+                var output = sum + indi.normalized_value * weights[i] * directions[i];
+                if (directions[i] < 0) output += 1;
                 return output;
             }, 0.0),
             average = sum / indicators.length,
@@ -110,6 +113,9 @@ var weightSliders = {
     },
     weights: function(indicatorIds) {
         return indicatorIds.map(function(i) { return weightSliders.indicatorWeights['slider-' + i]; })
+    },
+    directions: function(indicatorIds) {
+        return indicatorIds.map(function(i) { return weightSliders.directions['slider-' + i]; })
     },
     indicatorId: function(slider) { return $(slider).attr('id').match(/slider-(\d+)/)[1]; },
 };

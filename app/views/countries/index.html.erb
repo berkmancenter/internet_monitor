@@ -13,4 +13,4 @@
         <li><%= render :partial => 'shared/line_items/country', :object => country %></li>
     <% end %>
 </ol>
-<script>$(function() { weightSliders.init(); });</script>
+<script>$(function() { weightSliders.init(); }); $('.score').on('scorechange', function() { console.log('change') });</script>
