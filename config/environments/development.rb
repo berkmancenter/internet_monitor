@@ -34,4 +34,9 @@ Imon::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
+
+  # Keep Refinery from overriding defaults
+  config.after_initialize do |app|
+      app.config.assets.debug = true
+  end
 end

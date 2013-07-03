@@ -9,6 +9,7 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
+ *= require nouislider.fox
  *= require_tree .
  */
 
@@ -98,6 +99,31 @@ header {
     }
   }
 
+  .hidden {
+      display: none;
+  }
+
+  .toggle-weight-sliders {
+      position: absolute;
+      top: 1em;
+      right: 1em;
+  }
+
+  #weight-sliders {
+      position: absolute;
+      background: #FFF;
+      z-index: 2;
+      box-shadow: 3px 3px 10px #888;
+      border-radius: 0px 0px 9px 9px;
+      right: 1em;
+      padding: 1em 2em;
+      max-height: 600px;
+      overflow-y: auto;
+      
+      .weight-slider {
+          margin: 0.7em 1em 1.5em;
+      }
+  }
   .header-divider {
     background: url("divider.png") repeat-x;
     height: 4px;

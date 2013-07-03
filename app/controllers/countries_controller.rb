@@ -1,6 +1,10 @@
 class CountriesController < ApplicationController
     def index
         @countries = Country.with_enough_data
+        respond_to do |format|
+            format.html
+            format.any(:xml, :json)
+        end
     end
 
     def show
