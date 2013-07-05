@@ -32,7 +32,7 @@ describe 'countries requests' do
     }
 
     it {
-      should( have_selector( "h1 a", { text: "#{country.name} ( #{country.score.round(2)} )" } ) )
+      should( have_selector( "h1 a", { text: "#{country.name} #{country.score.round(2)}" } ) )
     }
 
     it_should_behave_like( 'category_selector' );

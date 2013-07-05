@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe ( 'DatumSource model' ) {
   describe ( 'with valid data' ) {
-    let ( :ds_pct_inet ) { DatumSource.find_by_admin_name( 'Percentage of individuals using the Internet' ) }
+    let ( :ds_pct_inet ) { DatumSource.find_by_admin_name( 'ds_pct_inet' ) }
 
     subject { ds_pct_inet }
 

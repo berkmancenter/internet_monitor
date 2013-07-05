@@ -51,6 +51,12 @@ body {
   padding: 0;
 }
 
+.gear:before {
+  content: "☸ ";
+  font-family: Arial Unicode MS;
+  font-size: 1em;
+}
+
 header {
   margin: 0;
 

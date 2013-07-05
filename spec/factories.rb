@@ -19,7 +19,8 @@ FactoryGirl.define do
 
   factory :datum_source do
     factory :ds_pct_inet do
-      admin_name 'Percentage of individuals using the Internet'
+      # category Access
+      admin_name 'ds_pct_inet'
       public_name 'Percentage of individuals using the Internet'
       description nil
       datum_type 'Indicator'
