@@ -39,6 +39,10 @@ describe 'countries requests' do
     it ( 'should not have any category' ) {
       should_not have_selector( ".category-selector a.selected" );
     }
+
+    it ( 'should not have indicators' ) {
+      should_not have_selector( '.indicators,.url-lists,.html-blocks,.images' );
+    }
   end
 
   describe( "get /countries/:id/access" ) do
