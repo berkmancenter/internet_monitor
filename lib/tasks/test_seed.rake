@@ -27,6 +27,18 @@ namespace :db do
       d_pct_inet_iran.country = iran;
       d_pct_inet_iran.save!
 
+
+      # control datum sources
+      ds_consistency = FactoryGirl.create( :ds_consistency );
+      ds_consistency.category = categories[ 2 ];
+      ds_consistency.save!
+
+      # control datum
+      d_consistency = FactoryGirl.create( :d_consistency );
+      d_consistency.source = ds_consistency;
+      d_consistency.country = iran;
+      d_consistency.save!
+
       # refinery
       Refinery::Pages::Engine.load_seed
       Refinery::Blog::Engine.load_seed

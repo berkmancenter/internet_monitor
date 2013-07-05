@@ -36,10 +36,14 @@ describe 'countries requests' do
     }
 
     it_should_behave_like( 'category_selector' );
+    it ( 'should not have any category' ) {
+      should_not have_selector( ".category-selector a.selected" );
+    }
   end
 
   describe( "get /countries/:id/access" ) do
     let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
+    let ( :category ) { Category.find_by_name( 'Access' ) }
 
     before {
       visit access_url( country )
@@ -50,10 +54,18 @@ describe 'countries requests' do
     }
 
     it_should_behave_like( 'category_selector' );
+    it ( 'should have category selected' ) {
+      should have_selector( ".category-selector a[href*='#{access_path( country )}'].selected" );
+    }
+
+    it {
+      should_not have_selector( 'h1', { text: 'Access' } );
+    }
   end
 
   describe( "get /countries/:id/control" ) do
     let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
+    let ( :category ) { Category.find_by_name( 'Control' ) }
 
     before {
       visit control_url( country )
@@ -64,10 +76,18 @@ describe 'countries requests' do
     }
 
     it_should_behave_like( 'category_selector' );
+    it ( 'should have category selected' ) {
+      should have_selector( ".category-selector a[href*='#{control_path( country )}'].selected" );
+    }
+
+    it {
+      should_not have_selector( 'h1', { text: 'Control' } );
+    }
   end
 
   describe( "get /countries/:id/activity" ) do
     let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
+    let ( :category ) { Category.find_by_name( 'Activity' ) }
 
     before {
       visit activity_url( country )
@@ -78,5 +98,12 @@ describe 'countries requests' do
     }
 
     it_should_behave_like( 'category_selector' );
+    it ( 'should have category selected' ) {
+      should have_selector( ".category-selector a[href*='#{activity_path( country )}'].selected" );
+    }
+
+    it {
+      should_not have_selector( 'h1', { text: 'Activity' } );
+    }
   end
 end
