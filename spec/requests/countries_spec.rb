@@ -8,6 +8,11 @@ describe 'countries requests' do
       should have_selector( 'a.toggle-weight-sliders' );
       should have_selector( '#weight-sliders.hidden' );
     }
+
+#    describe ( "click toggle-weight-sliders" ) {
+#      before {
+#      }
+#    }
   }
 
   describe 'get /countries' do
