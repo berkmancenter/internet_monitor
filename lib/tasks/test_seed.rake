@@ -21,12 +21,20 @@ namespace :db do
       ds_pct_inet.category = categories[ 0 ];
       ds_pct_inet.save!
 
+      ds_lit_rate = FactoryGirl.create( :ds_lit_rate );
+      ds_lit_rate.category = categories[ 0 ];
+      ds_lit_rate.save!
+
       # access datum
       d_pct_inet_iran = FactoryGirl.create( :d_pct_inet_iran );
       d_pct_inet_iran.source = ds_pct_inet;
       d_pct_inet_iran.country = iran;
       d_pct_inet_iran.save!
 
+      d_lit_rate = FactoryGirl.create( :d_lit_rate );
+      d_lit_rate.source = ds_lit_rate;
+      d_lit_rate.country = iran;
+      d_lit_rate.save!
 
       # control datum sources
       ds_consistency = FactoryGirl.create( :ds_consistency );

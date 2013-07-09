@@ -5,8 +5,9 @@ FactoryGirl.define do
       name 'Iran'
       iso_code 'IR'
       iso3_code 'IRN'
-      score 3.45
+      score 4.82
       description ''
+      indicator_count 3
     end
   end
 
@@ -18,6 +19,21 @@ FactoryGirl.define do
   end
 
   factory :datum_source do
+    factory :ds_lit_rate do
+      admin_name 'ds_lit_rate'
+      public_name 'Literacy rate, adult total (% of people ages 15 and...'
+      description nil
+      datum_type 'Indicator'
+      # category Access
+      default_weight 1
+      min 18.15768113
+      max 99.99826243
+      retriever_class 'WorldBankParser'
+      is_api false
+      for_infobox nil
+      link nil
+    end
+
     factory :ds_pct_inet do
       admin_name 'ds_pct_inet'
       public_name 'Percentage of individuals using the Internet'
@@ -57,6 +73,16 @@ FactoryGirl.define do
       language_id nil
       original_value 21.0
       value 0.22100610397810988
+      type 'Indicator'
+    end
+
+    factory :d_lit_rate do
+      #source ds_lit_rate
+      start_date '2011-01-01'
+      #country_id iran
+      language_id nil
+      original_value 36.51840027
+      value 0.224347369
       type 'Indicator'
     end
 
