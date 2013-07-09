@@ -16,7 +16,7 @@ describe 'countries requests' do
     }
 
     it {
-      should( have_selector( "title", { text: "countries @ Internet Monitor" } ) )
+      should have_title( 'countries @ Internet Monitor' )
     }
 
     it_should_behave_like( 'weight_slider' );
@@ -37,11 +37,11 @@ describe 'countries requests' do
     before { visit country_url( country ) }
 
     it {
-      should( have_selector( "title", { text: "#{country.name.downcase} @ Internet Monitor" } ) )
+      should have_title( "#{country.name.downcase} @ Internet Monitor" )
     }
 
     it {
-      should( have_selector( "h1 a", { text: "#{country.name} #{country.score.round(2)}" } ) )
+      should have_selector( "h1 a", { text: "#{country.name} #{country.score.round(2)}" } )
     }
 
     it_should_behave_like( 'category_selector' );
@@ -63,7 +63,7 @@ describe 'countries requests' do
     }
 
     it {
-      should( have_selector( "title", { text: "#{country.name.downcase} access @ Internet Monitor" } ) )
+      should have_title( "#{country.name.downcase} access @ Internet Monitor" )
     }
 
     it_should_behave_like( 'category_selector' );
@@ -85,7 +85,7 @@ describe 'countries requests' do
     }
 
     it {
-      should( have_selector( "title", { text: "#{country.name.downcase} control @ Internet Monitor" } ) )
+      should have_title( "#{country.name.downcase} control @ Internet Monitor" )
     }
 
     it_should_behave_like( 'category_selector' );
@@ -107,7 +107,7 @@ describe 'countries requests' do
     }
 
     it {
-      should( have_selector( "title", { text: "#{country.name.downcase} activity @ Internet Monitor" } ) )
+      should have_title( "#{country.name.downcase} activity @ Internet Monitor" )
     }
 
     it_should_behave_like( 'category_selector' );
