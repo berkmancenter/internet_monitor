@@ -22,10 +22,9 @@
         <li>data</li>
         <li>contact</li>
         <li><%= link_to "blog", "/blog" %></li>
-        <li><span class="gear">my score</span></li>
+        <li><a href="javascript:void(0);" class="toggle-weight-sliders"><span class="gear">my score</span></a></li>
       </ul>
     </nav>
-    <button class="toggle-weight-sliders">Slider Panel</button>
     <div id="weight-sliders" class="hidden">
         <h3>Indicator Weights</h3>
         <%= render :partial => 'shared/widgets/weight_sliders' %>

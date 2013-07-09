@@ -3,6 +3,13 @@ require 'spec_helper'
 describe 'countries requests' do
   subject { page }
 
+  shared_examples_for( 'weight_slider' ) {
+    it ( 'should have weight_slider link' ) {
+      should have_selector( 'a.toggle-weight-sliders' );
+      should have_selector( '#weight-sliders.hidden' );
+    }
+  }
+
   describe 'get /countries' do
     before {
       visit( countries_url )
@@ -11,6 +18,8 @@ describe 'countries requests' do
     it {
       should( have_selector( "title", { text: "countries @ Internet Monitor" } ) )
     }
+
+    it_should_behave_like( 'weight_slider' );
   end
 
   shared_examples_for( 'category_selector' ) {
