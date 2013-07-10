@@ -9,15 +9,20 @@ describe 'countries requests' do
       should have_selector( '#weight-sliders.hidden' );
     }
 
-#    describe ( "click toggle-weight-sliders" ) {
-#      before {
-#      }
-#    }
+    describe 'click toggle-weight-sliders', :js => true do
+      before {
+        page.execute_script( %q[$('.toggle-weight-sliders').click( )] );
+      }
+
+      it ( 'should show weight-sliders' ) {
+        find( '#weight-sliders' ).visible?.should be_true;
+      }
+    end
   }
 
   describe 'get /countries' do
     before {
-      visit( countries_url )
+      visit( countries_path )
     }
 
     it {
@@ -39,7 +44,7 @@ describe 'countries requests' do
   describe( "get /countries/:id" ) do
     let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
 
-    before { visit country_url( country ) }
+    before { visit country_path( country ) }
 
     it {
       should have_title( "#{country.name.downcase} @ Internet Monitor" )
@@ -48,6 +53,8 @@ describe 'countries requests' do
     it {
       should have_selector( "h1 a", { text: "#{country.name} #{country.score.round(2)}" } )
     }
+
+    it_should_behave_like( 'weight_slider' );
 
     it_should_behave_like( 'category_selector' );
     it ( 'should not have any category' ) {
@@ -64,12 +71,14 @@ describe 'countries requests' do
     let ( :category ) { Category.find_by_name( 'Access' ) }
 
     before {
-      visit access_url( country )
+      visit access_path( country )
     }
 
     it {
       should have_title( "#{country.name.downcase} access @ Internet Monitor" )
     }
+
+    it_should_behave_like( 'weight_slider' );
 
     it_should_behave_like( 'category_selector' );
     it ( 'should have category selected' ) {
@@ -81,17 +90,19 @@ describe 'countries requests' do
     }
   end
 
-  describe( "get /countries/:id/control" ) do
+  describe 'get /countries/:id/control' do
     let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
     let ( :category ) { Category.find_by_name( 'Control' ) }
 
     before {
-      visit control_url( country )
+      visit control_path( country )
     }
 
     it {
       should have_title( "#{country.name.downcase} control @ Internet Monitor" )
     }
+
+    it_should_behave_like( 'weight_slider' );
 
     it_should_behave_like( 'category_selector' );
     it ( 'should have category selected' ) {
@@ -108,12 +119,14 @@ describe 'countries requests' do
     let ( :category ) { Category.find_by_name( 'Activity' ) }
 
     before {
-      visit activity_url( country )
+      visit activity_path( country )
     }
 
     it {
       should have_title( "#{country.name.downcase} activity @ Internet Monitor" )
     }
+
+    it_should_behave_like( 'weight_slider' );
 
     it_should_behave_like( 'category_selector' );
     it ( 'should have category selected' ) {

@@ -118,5 +118,5 @@ var weightSliders = {
     directions: function(indicatorIds) {
         return indicatorIds.map(function(i) { return weightSliders.directions['slider-' + i]; })
     },
-    indicatorId: function(slider) { return $(slider).attr('id').match(/slider-(\d+)/)[1]; },
+    indicatorId: function(slider) { return $(slider).attr('id').match(/slider-(\d+)/)[1]; }
 };

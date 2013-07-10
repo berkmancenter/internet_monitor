@@ -14,3 +14,9 @@
 //= require jquery_ujs
 //= require jquery.nouislider
 //= require_tree .
+
+// weight_sliders are available on all pages via the menu
+
+$(function() {
+  weightSliders.init( );
+});
