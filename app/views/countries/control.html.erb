@@ -6,15 +6,14 @@
 } ) %>
 
 <%= render( {
-  partial: "shared/widgets/category_selector",
-  object: @country
+  partial: "shared/widgets/category_selector"
 } ) %>
 
 <article class="countries control sub-content">
   <h1><%= render( {
     partial: "shared/line_items/country",
     object: @country
-  } ) %> <%= @category.name %></h1>
+  } ) %></h1>
 
   <ul class="indicators generic">
     <% @country.indicators.most_recent.each do |indicator| %>

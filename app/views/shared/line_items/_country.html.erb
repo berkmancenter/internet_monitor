@@ -1,2 +1,3 @@
-<span class="country-name"><%= link_to( "#{country.name} ", country ) %></span>
-<span class="score" data-score-desc="total-for-<%= country.id %>"><%= country.score.round( 2 ) unless country.score.nil? %></span>
+<span class="country-name"><%= link_to( "#{country.name} #{ country.score.round( 2 ) if country.score != nil }", country ) %></span>
+
+<span class="gear score" data-score-desc="total-for-<%= country.id %>"><%= country.score.round( 2 ) unless country.score.nil? %></span>

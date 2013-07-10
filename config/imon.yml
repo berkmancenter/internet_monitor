@@ -8,6 +8,8 @@ development:
 
 test:
   <<: *DEFAULTS
+  max_score: 10.0
+  min_indicators: 3
 
 production:
   <<: *DEFAULTS

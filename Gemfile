@@ -12,7 +12,8 @@ group :development, :test do
 end
 
 group :test do
-  gem 'capybara', '1.1.2'
+  gem 'capybara'
+  gem 'capybara-webkit'
   gem 'factory_girl_rails'
 end
 
@@ -40,7 +41,7 @@ gem 'refinerycms', '~> 2.0.10'
 gem 'refinerycms-blog', '~> 2.0.0'
 
 # To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '3.0.1'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
