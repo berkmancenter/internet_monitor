@@ -57,9 +57,10 @@ var weightSliders = {
         this.scoreObjects = $(this.SCORE_SELECTOR);
 
         this.sliderObjects.noUiSlider({
-            range   : [0, 1],
+            range   : [0, 2],
             start   : 0,
             slide   : this.updateScores,
+            step    : 0.1,
             handles : 1
         }).each(function() { 
             var weight = parseFloat($(this).data(weightSliders.WEIGHT_ATTRIBUTE));
