@@ -51,7 +51,11 @@ var weightSliders = {
             weightSliders.countryData = (data instanceof Array) ? data : [data];
             weightSliders.sliderObjects.noUiSlider('disabled', false);
         });
-        $('.toggle-weight-sliders').on('click', function() { $('#weight-sliders').toggleClass('hidden'); });
+
+        $('.toggle-weight-sliders').click( function() {
+          $('#weight-sliders').toggleClass('hidden');
+          return false;
+        } );
 
         this.sliderObjects = $(this.SLIDER_SELECTOR);
         this.scoreObjects = $(this.SCORE_SELECTOR);
