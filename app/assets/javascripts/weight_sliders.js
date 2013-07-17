@@ -44,7 +44,8 @@ var weightSliders = {
     indicatorWeights : {},
     directions       : {},
 
-    init : function(countryId) {
+    init : function() {
+        var countryId = $('.country').first().data('country-id');
         var data_path = (typeof countryId === 'undefined') ?
             this.COUNTRIES_PATH : this.COUNTRY_PATH.replace('{id}', countryId);
         $.get(data_path, function(data) {
@@ -124,3 +125,24 @@ var weightSliders = {
     },
     indicatorId: function(slider) { return $(slider).attr('id').match(/slider-(\d+)/)[1]; }
 };
+
+$(function() {
+  // weight_sliders are available on all pages via the menu
+  weightSliders.init();
+
+  $( document ).on( 'click keyup', hideWeightSlidersOnEvent );
+
+  function hideWeightSlidersOnEvent( e ) {
+    // hide weight-sliders if:
+    // keyup ESC or
+    // click from outside slider panel
+    // make it to document
+    if ( ( e.type === 'keyup' && e.keyCode === 27 ) ||
+      ( e.type === 'click' && $( e.target ).closest( '#weight-sliders' ).length === 0 ) ) {
+      var weightSliders = $( '#weight-sliders' );
+      if ( !weightSliders.hasClass( 'hidden' ) ) {
+        weightSliders.addClass( 'hidden' );
+      }
+    }
+  }
+});

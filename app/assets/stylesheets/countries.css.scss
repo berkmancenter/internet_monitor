@@ -60,28 +60,27 @@
     font-size: 1em;
     font-style: italic;
   }
-
-  .indicators {
-      .indicator-bar-outer, .indicator-bar-inner {
-        height: 10px;
-        border-radius: 5px;
-      }
-    .indicator-bar-outer {
-        width: 300px;
-        background-color: #DDD;
-        display: inline-block;
+}
+.indicators {
+    .indicator-bar-outer, .indicator-bar-inner {
+      height: 10px;
+      border-radius: 5px;
     }
-    li {
-      list-style-type: none;
-    }
-    li:nth-child(3n+1) .indicator-bar-inner {
-        background-color: #5ec1a5;
-    }
-    li:nth-child(3n+2) .indicator-bar-inner {
-        background-color: #f15c23;
-    }
-    li:nth-child(3n+3) .indicator-bar-inner {
-        background-color: #aaa04e;
-    }
+  .indicator-bar-outer {
+      width: 300px;
+      background-color: #DDD;
+      display: inline-block;
+  }
+  li {
+    list-style-type: none;
+  }
+  li:nth-child(3n+1) .indicator-bar-inner {
+      background-color: #5ec1a5;
+  }
+  li:nth-child(3n+2) .indicator-bar-inner {
+      background-color: #f15c23;
+  }
+  li:nth-child(3n+3) .indicator-bar-inner {
+      background-color: #aaa04e;
   }
 }

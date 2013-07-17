@@ -1,0 +1,9 @@
+<dt>Indicator Name</dt>
+<dd><%= datum.name %></dd>
+<dt>Indicator Value</dt>
+<dd><%= number_with_precision(datum.original_value) %></dd>
+<dt>Indicator Percentile<dt>
+<dd><%= number_to_percentage(datum.percent * 100, :precision => 2) %></dd>
+<div class="indicator-bar-outer">
+    <div data-value="<%= datum.percent %>" title="<%= number_to_percentage(datum.percent * 100, :precision => 2) %>" style="width: <%= datum.percent * 100 %>%" class="indicator-bar-inner"></div>
+</div>

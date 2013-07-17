@@ -1,0 +1,2 @@
+class JsonObject < Datum
+end

@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 20130425195327) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
+    t.string   "slug"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
@@ -78,7 +79,8 @@ ActiveRecord::Schema.define(:version => 20130425195327) do
     t.float    "max"
     t.string   "retriever_class"
     t.boolean  "is_api"
-    t.boolean  "for_infobox"
+    t.boolean  "in_sidebar"
+    t.boolean  "affects_score"
     t.string   "link"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false

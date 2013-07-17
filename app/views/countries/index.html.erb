@@ -2,14 +2,14 @@
 
 <h2>Countries</h2>
 <ol>
-    <% @countries.select{|c| !c.score.nil? }.sort_by{|c| c.score}.reverse.each do |country| %>
-        <li><%= render :partial => 'shared/line_items/country', :object => country %></li>
+    <% @scored_countries.each do |country| %>
+        <li><%= render partial: 'countries/list_item', locals: {country: country} %></li>
     <% end %>
 </ol>
 
 <h2>Countries Without Scores</h2>
 <ol>
-    <% @countries.select{|c| c.score.nil? }.each do |country| %>
-        <li><%= render :partial => 'shared/line_items/country', :object => country %></li>
+    <% @unscored_countries.each do |country| %>
+        <li><%= link_to "#{country.name}", country %></li>
     <% end %>
 </ol>

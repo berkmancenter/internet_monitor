@@ -36,6 +36,7 @@ gem 'httparty'
 gem 'nokogiri'
 gem "rabl", "~> 0.8.6"
 gem 'oj'
+gem 'friendly_id', '~> 4.0.1'
 
 gem 'refinerycms', '~> 2.0.10'
 gem 'refinerycms-blog', '~> 2.0.0'

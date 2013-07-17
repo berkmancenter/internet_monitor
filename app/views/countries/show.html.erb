@@ -1,23 +1,10 @@
 <% provide :title, @country.name %>
 
-<%= render( {
-  partial: "shared/widgets/country_data",
-  object: @country
-} ) %>
+<%= render partial: "countries/sidebar" %>
+<%= render partial: "shared/widgets/category_selector" %>
 
-<%= render( {
-  partial: "shared/widgets/category_selector",
-  object: @country
-} ) %>
+<article class="country sub-content" data-country-id="<%= @country.id %>">
+  <h1><%= render partial: "countries/list_item", locals: {country: @country} %></h1>
 
-<!-- <div class="country-score"><%= @country.score %></div>-->
-
-<article class="countries sub-content">
-  <h1><%= render( {
-    partial: "shared/line_items/country",
-    object: @country
-  } ) %></h1>
-
-
-  <p class="country-description">(Country.description)<br>Bacon ipsum dolor sit amet cupidatat voluptate beef ribs ea, chuck esse anim meatloaf flank. Kielbasa pork eiusmod venison leberkas pig dolore incididunt shankle meatloaf est laboris salami ad. Capicola prosciutto chicken nostrud. Nulla sausage aute, veniam dolor deserunt cupidatat. Spare ribs ut eiusmod, tri-tip do veniam fatback sunt aute ullamco.</p>
+  <p class="country-description"><%= @country.description %></p>
 </article>

@@ -14,25 +14,3 @@
 //= require jquery_ujs
 //= require jquery.nouislider
 //= require_tree .
-
-// weight_sliders are available on all pages via the menu
-
-$(function() {
-  weightSliders.init( );
-
-  $( document ).on( 'click keyup', hideWeightSlidersOnEvent );
-
-  function hideWeightSlidersOnEvent( e ) {
-    // hide weight-sliders if:
-    // keyup ESC or
-    // click from outside slider panel
-    // make it to document
-    if ( ( e.type === 'keyup' && e.keyCode === 27 ) ||
-      ( e.type === 'click' && $( e.target ).closest( '#weight-sliders' ).length === 0 ) ) {
-      var weightSliders = $( '#weight-sliders' );
-      if ( !weightSliders.hasClass( 'hidden' ) ) {
-        weightSliders.addClass( 'hidden' );
-      }
-    }
-  }
-});

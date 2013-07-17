@@ -11,7 +11,8 @@ class CreateDatumSources < ActiveRecord::Migration
       t.float :max
       t.string :retriever_class
       t.boolean :is_api
-      t.boolean :for_infobox
+      t.boolean :in_sidebar
+      t.boolean :affects_score
       t.string :link
 
       t.timestamps

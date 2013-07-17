@@ -1,0 +1,7 @@
+<% data.group_by{|d| d.type}.each do |type, data| %>
+    <ul class="<%= type.pluralize.underscore.dasherize %>">
+        <% data.each do |datum| %>
+            <li><%= render partial: "data/#{datum.type.underscore}", locals: {datum: datum} %></li>
+        <% end %>
+    </ul>
+<% end %>

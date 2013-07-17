@@ -8,4 +8,8 @@ child :language => :language do
     attributes :id, :name
 end
 
-attributes :start_date, :value
+attributes :start_date
+
+node :value do |datum|
+    JSON.parse(datum.value)
+end

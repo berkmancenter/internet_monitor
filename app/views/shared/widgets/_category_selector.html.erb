@@ -1,8 +1,8 @@
 <nav class="category-selector">
-  <ul>
-    <li><%= link_to( "access", access_path( @country ), @category != nil && @category.name == 'Access' ? { class: 'selected' } : nil ) %></li>
-    <li><%= link_to( "control", control_path( @country ), @category != nil && @category.name == 'Control' ? { class: 'selected' } : nil ) %></li>
-    <li><%= link_to( "activity", activity_path( @country ), @category != nil && @category.name == 'Activity' ? { class: 'selected' } : nil ) %></li>
-  </ul>
+    <ul>
+        <% @country.categories.each do |category| %>
+            <li><%= link_to category.name, category_country_path(@country, :category_slug => category.slug) %></li>
+        <% end %>
+    </ul>
 </nav>
 

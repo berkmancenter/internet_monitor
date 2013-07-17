@@ -3,6 +3,6 @@ class ApplicationController < ActionController::Base
     before_filter :load_indicator_sources
 
     def load_indicator_sources
-        @indicator_sources = DatumSource.where(:datum_type => 'Indicator')
+        @indicator_sources = DatumSource.where(:datum_type => 'Indicator', :affects_score => true)
     end
 end

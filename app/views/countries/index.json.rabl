@@ -1,7 +1,7 @@
-collection @countries
-cache @countries
+collection @scored_countries
+cache @scored_countries
 attributes :id, :name, :score
-child :most_recent_indicators, :object_root => false do 
+child :indicators_affecting_score, :object_root => false do 
     glue :source do
         attributes :id => :source_id
         glue :category do

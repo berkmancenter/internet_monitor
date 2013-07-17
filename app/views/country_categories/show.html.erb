@@ -1,2 +1,17 @@
 <% provide :title, "#{@country.name} #{@category.name}" %>
 
+<%= render partial: "countries/sidebar" %>
+<%= render partial: "shared/widgets/category_selector" %>
+
+<article class="countries access sub-content">
+    <h1><%= render partial: "countries/list_item", locals: {country: @country} %></h1>
+    <%= render partial: "data/grouped", locals: {data: @category.data.most_recent.for(@country)} %>
+
+    <% @country.languages.each do |language|
+        data = @category.data.most_recent.for(language)
+        unless data.empty? %>
+            <h3><%= language.name %></h3>
+            <%= render partial: "data/grouped", locals: {data: data} %>
+        <% end %>
+    <% end %>
+</article>

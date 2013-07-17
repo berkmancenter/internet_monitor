@@ -1,15 +1,11 @@
 Imon::Application.routes.draw do
-  resources :datum_sources, :country_categories, :categories, :languages, :country_languages, :countries
+  resources :datum_sources, :country_categories, :categories, :languages, :country_languages, :data
 
-  resources :data do 
-      member do 
-          get 'original'
+  resources :countries do
+      member do
+          match ':category_slug' => 'countries#show', :as => :category
       end
   end
-
-  match 'countries/:id/access' => 'countries#access', :as => 'access'
-  match 'countries/:id/control' => 'countries#control', :as => 'control'
-  match 'countries/:id/activity' => 'countries#activity', :as => 'activity'
 
   # This line mounts Refinery's routes at the root of your application.
   # This means, any requests to the root URL of your application will go to Refinery::PagesController#home.

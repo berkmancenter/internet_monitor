@@ -1,23 +1,25 @@
 require 'csv'
 class Retriever
+    TYPE_MAP = {
+        'number' => 'Indicator',
+        'text' => 'HtmlBlock',
+        'multiple URLs' => 'UrlList',
+        'URL' => 'UrlList',
+        'XML' => 'HtmlBlock',
+        'HTML' => 'HtmlBlock',
+        'JSON' => 'JsonObject'
+    }
+
     def self.retrieve!(row_number)
-
-        type_map = {
-            'number' => 'Indicator',
-            'text' => 'HtmlBlock',
-            'multiple URLs' => 'UrlList',
-            'URL' => 'UrlList',
-            'XML' => 'HtmlBlock',
-            'HTML' => 'HtmlBlock'
-        }
-
         line = CSV.read(Rails.root.join('db', 'sources.csv'), :headers => true)[row_number.to_i - 1]
         ds = DatumSource.new(
             :admin_name => line['Indicator'],
             :public_name => line['Indicator'],
-            :datum_type => type_map[line['Data type']],
+            :datum_type => TYPE_MAP[line['Data type']],
             :is_api => !line['API available?'].nil?,
             :retriever_class => line['Retriever Class'],
+            :affects_score => line['Affects Score?'] == 'y',
+            :in_sidebar => line['Include in Sidebar?'] == 'y',
             :default_weight => line['Default Weight'].to_f
         )
         ds.category = Category.find_by_name(line['Category'])

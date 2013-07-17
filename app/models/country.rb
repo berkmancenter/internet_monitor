@@ -4,6 +4,7 @@ class Country < ActiveRecord::Base
     has_many :country_languages
     has_many :categories, :through => :country_categories
     has_many :languages, :through => :country_languages
+    has_many :data
     has_many :indicators
     has_many :url_lists
     has_many :html_blocks
@@ -12,6 +13,10 @@ class Country < ActiveRecord::Base
     scope :with_enough_data,
         where("indicator_count >= :min_indicators",
               {:min_indicators => Rails.application.config.imon['min_indicators']})
+    scope :without_enough_data,
+        where("indicator_count < :min_indicators",
+              {:min_indicators => Rails.application.config.imon['min_indicators']})
+    scope :desc_score, order('score DESC')
 
     def score(options = {})
         return read_attribute(:score) unless !options.empty?
@@ -21,12 +26,12 @@ class Country < ActiveRecord::Base
     end
 
     def recalc_scores!
-        most_recent = indicators.most_recent
+        most_recent = indicators.most_recent.affecting_score
         self.indicator_count = most_recent.size
         ws = weighted_score(most_recent)
         self.score = ws unless ws.nan?
         country_categories.each do |cc|
-            ws = weighted_score(cc.indicators.most_recent)
+            ws = weighted_score(cc.indicators.most_recent.affecting_score)
             cc.score = ws unless ws.nan?
             cc.save!
         end
@@ -45,7 +50,7 @@ class Country < ActiveRecord::Base
         sum / indis.count.to_f * Rails.application.config.imon['max_score']
     end
 
-    def most_recent_indicators
-        indicators.most_recent.order(:start_date)
+    def indicators_affecting_score
+        indicators.most_recent.affecting_score.order(:start_date)
     end
 end
