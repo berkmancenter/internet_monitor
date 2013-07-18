@@ -39,9 +39,9 @@ describe 'countries requests' do
 
   shared_examples_for( 'category_selector' ) {
     it ( 'should have category selector links' ) {
-      should have_selector( ".category-selector a[href*='#{access_path( country )}']" );
-      should have_selector( ".category-selector a[href*='#{control_path( country )}']" );
-      should have_selector( ".category-selector a[href*='#{activity_path( country )}']" );
+      should have_selector( ".category-selector a[href*='#{category_country_path(country, :category_slug => "access")}']" );
+      should have_selector( ".category-selector a[href*='#{category_country_path(country, :category_slug => "control")}']" );
+      should have_selector( ".category-selector a[href*='#{category_country_path(country, :category_slug => "activity")}']" );
     }
   }
 
@@ -67,7 +67,7 @@ describe 'countries requests' do
     }
 
     it ( 'should not have indicators' ) {
-      should_not have_selector( '.indicators,.url-lists,.html-blocks,.images' );
+      should_not have_selector( '.country .indicators,.country .url-lists,.country .html-blocks,.country .images' );
     }
   end
 
@@ -76,7 +76,7 @@ describe 'countries requests' do
     let ( :category ) { Category.find_by_name( 'Access' ) }
 
     before {
-      visit access_path( country )
+      visit category_country_path(country, :category_slug => 'access')
     }
 
     it {
@@ -87,7 +87,7 @@ describe 'countries requests' do
 
     it_should_behave_like( 'category_selector' );
     it ( 'should have category selected' ) {
-      should have_selector( ".category-selector a[href*='#{access_path( country )}'].selected" );
+      should have_selector( ".category-selector a[href*='#{category_country_path(country, :category_slug => "access")}'].selected" );
     }
 
     it {
@@ -100,7 +100,7 @@ describe 'countries requests' do
     let ( :category ) { Category.find_by_name( 'Control' ) }
 
     before {
-      visit control_path( country )
+      visit category_country_path( country, :category_slug => 'control' )
     }
 
     it {
@@ -111,7 +111,7 @@ describe 'countries requests' do
 
     it_should_behave_like( 'category_selector' );
     it ( 'should have category selected' ) {
-      should have_selector( ".category-selector a[href*='#{control_path( country )}'].selected" );
+      should have_selector( ".category-selector a[href*='#{category_country_path(country, :category_slug => "control")}'].selected" );
     }
 
     it {
@@ -124,7 +124,7 @@ describe 'countries requests' do
     let ( :category ) { Category.find_by_name( 'Activity' ) }
 
     before {
-      visit activity_path( country )
+      visit category_country_path( country, :category_slug => 'activity' )
     }
 
     it {
@@ -135,7 +135,7 @@ describe 'countries requests' do
 
     it_should_behave_like( 'category_selector' );
     it ( 'should have category selected' ) {
-      should have_selector( ".category-selector a[href*='#{activity_path( country )}'].selected" );
+      should have_selector( ".category-selector a[href*='#{category_country_path(country, :category_slug => "activity")}'].selected" );
     }
 
     it {
