@@ -16,11 +16,12 @@ describe 'countries requests' do
 
       it ( 'should show weight-sliders' ) {
         find( '#weight-sliders' ).visible?.should be_true;
+        should have_css( '#weight-sliders .weight-slider', count: 3 );
       }
 
       it ( 'should hide weight-sliders' ) {
         page.execute_script( %q[$('.toggle-weight-sliders').click( )] );
-        page.should have_css( '#weight-sliders', count: 0 );
+        should have_css( '#weight-sliders', count: 0 );
       }
     end
   }

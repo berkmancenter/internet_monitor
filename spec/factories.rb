@@ -31,6 +31,7 @@ FactoryGirl.define do
       retriever_class 'WorldBankParser'
       is_api false
       in_sidebar true
+      affects_score true
       link nil
     end
 
@@ -46,6 +47,7 @@ FactoryGirl.define do
       retriever_class 'ITUParser'
       is_api false
       in_sidebar true
+      affects_score true
       link nil
     end
 
@@ -61,6 +63,7 @@ FactoryGirl.define do
       retriever_class 'ONIParser'
       is_api false
       in_sidebar false
+      affects_score true
       link nil
     end
   end
