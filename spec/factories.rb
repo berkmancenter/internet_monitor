@@ -30,7 +30,7 @@ FactoryGirl.define do
       max 99.99826243
       retriever_class 'WorldBankParser'
       is_api false
-      for_infobox nil
+      in_sidebar true
       link nil
     end
 
@@ -45,7 +45,7 @@ FactoryGirl.define do
       max 95.02
       retriever_class 'ITUParser'
       is_api false
-      for_infobox nil
+      in_sidebar true
       link nil
     end
 
@@ -60,7 +60,7 @@ FactoryGirl.define do
       max 10
       retriever_class 'ONIParser'
       is_api false
-      for_infobox nil
+      in_sidebar false
       link nil
     end
   end
