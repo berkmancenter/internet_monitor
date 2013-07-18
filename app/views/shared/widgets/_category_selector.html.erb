@@ -1,7 +1,7 @@
 <nav class="category-selector">
     <ul>
         <% @country.categories.each do |category| %>
-            <li><%= link_to category.name, category_country_path(@country, :category_slug => category.slug) %></li>
+          <li><%= link_to category.name, category_country_path(@country, :category_slug => category.slug), @category != nil && @category.name == category.name ? { class: 'selected' } : nil %></li>
         <% end %>
     </ul>
 </nav>
