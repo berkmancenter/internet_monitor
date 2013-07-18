@@ -15,13 +15,13 @@
     <h1><span style="display:none;">Internet Monitor</span> <%= link_to( raw( '<div class="logo-image"></div>' ), "/" ) %> </h1>
     <nav>
       <ul>
-        <li><%= link_to "about", "/about" %></li>
+        <li><%= link_to "about", refinery::marketable_page_path('about') %></li>
         <li>map</li>
-        <li><%= link_to "countries", "/countries" %></li>
+        <li><%= link_to "countries", Imon::Application.routes.url_helpers.countries_path %></li>
         <li>research</li>
         <li>data</li>
         <li>contact</li>
-        <li><%= link_to "blog", "/blog" %></li>
+        <li><%= link_to "blog", refinery::blog_root_path %></li>
         <li><a href="javascript:void(0);" class="toggle-weight-sliders"><span class="gear">my score</span></a></li>
       </ul>
     </nav>
@@ -40,9 +40,9 @@
     <a href="http://cyber.law.harvard.edu" title="Berkman Center For Internet and Society" class="berkman-link"></a>
     <nav>
       <ul>
-        <li><%= link_to "about", "/about" %></li>
+        <li><%= link_to "about", refinery::marketable_page_path('about') %></li>
         <li>contact</li>
-        <li><%= link_to "blog", "/blog" %></li>
+        <li><%= link_to "blog", refinery::blog_root_path %></li>
         <li>mailing list</li>
       </ul>
     </nav>

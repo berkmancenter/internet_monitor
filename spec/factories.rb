@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :country do
-    # iran is a valid test country with a language and datum for: access
+    # iran is a valid test country with a language and datum for: access, & control
     factory :iran do
       name 'Iran'
       iso_code 'IR'
@@ -9,12 +9,28 @@ FactoryGirl.define do
       description ''
       indicator_count 3
     end
+
+    # usa only has one indicator: access
+    # therefore it appears as 'without scores'
+    factory :usa do
+      name 'United States'
+      iso_code 'US'
+      iso3_code 'USA'
+      score 3.528
+      description nil
+      indicator_count 1
+    end
   end
 
   factory :language do
     factory :persian do
       name 'Persian'
       iso_code 'fa'
+    end
+
+    factory :english do
+      name 'English'
+      iso_code 'en'
     end
   end
 
@@ -24,7 +40,7 @@ FactoryGirl.define do
       public_name 'Literacy rate, adult total (% of people ages 15 and...'
       description nil
       datum_type 'Indicator'
-      # category Access
+      # category access
       default_weight 1
       min 18.15768113
       max 99.99826243
@@ -40,7 +56,7 @@ FactoryGirl.define do
       public_name 'Percentage of individuals using the Internet'
       description nil
       datum_type 'Indicator'
-      # category Access
+      # category access
       default_weight 1
       min 0.0
       max 95.02
@@ -56,7 +72,7 @@ FactoryGirl.define do
       public_name 'consistency'
       description nil
       datum_type 'Indicator'
-      # category Control
+      # category control
       default_weight 1
       min 1.0
       max 10
@@ -69,6 +85,7 @@ FactoryGirl.define do
   end
 
   factory :datum do
+    # iran
     factory :d_pct_inet_iran do
       #source ds_pct_inet
       start_date '2011-01-01'
@@ -96,6 +113,17 @@ FactoryGirl.define do
       language_id nil
       original_value 10.0
       value 1
+      type 'Indicator'
+    end
+
+    # usa
+    factory :d_pct_inet_usa do
+      #source ds_pct_inet
+      start_date '2011-01-01'
+      #country_id usa
+      language_id nil
+      original_value 77.863
+      value 0.8194
       type 'Indicator'
     end
   end

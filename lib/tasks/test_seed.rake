@@ -10,11 +10,19 @@ namespace :db do
       persian = FactoryGirl.create( :persian );
       persian.save!
 
+      english = FactoryGirl.create( :english );
+      english.save!
+
       # countries
       iran = FactoryGirl.create( :iran );
       iran.categories = categories;
       iran.languages << persian;
       iran.save!
+
+      usa = FactoryGirl.create( :usa );
+      usa.categories = categories;
+      usa.languages << english;
+      usa.save!
 
       # access datum sources
       ds_pct_inet = FactoryGirl.create( :ds_pct_inet );
@@ -35,6 +43,11 @@ namespace :db do
       d_lit_rate.source = ds_lit_rate;
       d_lit_rate.country = iran;
       d_lit_rate.save!
+
+      d_pct_inet_usa = FactoryGirl.create( :d_pct_inet_usa );
+      d_pct_inet_usa.source = ds_pct_inet;
+      d_pct_inet_usa.country = usa;
+      d_pct_inet_usa.save!
 
       # control datum sources
       ds_consistency = FactoryGirl.create( :ds_consistency );
