@@ -20,4 +20,9 @@ class CountriesController < ApplicationController
             end
         end
     end
+
+    def map
+        @scored_countries = Country.with_enough_data
+        @unscored_countries = Country.without_enough_data
+    end
 end

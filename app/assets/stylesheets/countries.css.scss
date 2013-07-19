@@ -84,3 +84,43 @@
       background-color: #aaa04e;
   }
 }
+
+
+.countries.map {
+  $sectionTop: 158px;
+  $sectionBreak: 256px;
+
+  min-width: 800px;
+  
+  header {
+    height: 128px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .geomap {
+    background: #dedede;
+    bottom: 40px;
+    left: 0;
+    position: fixed;
+    right: $sectionBreak;
+    top: $sectionTop;
+  }
+
+  .map-index {
+    bottom: 24px;
+    font-size: .8em;
+    position: fixed;
+    right: 0;
+    top: $sectionTop;
+    width: $sectionBreak;
+  }
+
+  footer {
+    bottom: 0;
+    height: 40px;
+    left: 0;
+    position: fixed;
+    right: 0;
+  }
+}

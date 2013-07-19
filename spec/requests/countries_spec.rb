@@ -38,6 +38,7 @@ describe 'countries requests' do
     it_should_behave_like( 'weight_slider' );
   end
 
+
   shared_examples_for( 'category_selector' ) {
     it ( 'should have category selector links' ) {
       should have_selector( ".category-selector a[href*='#{category_country_path(country, :category_slug => "access")}']" );
@@ -45,7 +46,6 @@ describe 'countries requests' do
       should have_selector( ".category-selector a[href*='#{category_country_path(country, :category_slug => "activity")}']" );
     }
   }
-
 
   describe( "get /countries/:id" ) do
     let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
@@ -143,4 +143,5 @@ describe 'countries requests' do
       should_not have_selector( 'h1', { text: 'Activity' } );
     }
   end
+
 end
