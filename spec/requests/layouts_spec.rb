@@ -12,6 +12,7 @@ describe 'layout requests' do
         should have_selector( 'header nav' );
 
         should have_selector( "header a[href*='#{refinery::marketable_page_path('about')}']" );
+        should have_selector( "header a[href*='#{map_path}']" );
         should have_selector( "header a[href*='#{countries_path}']" );
         should have_selector( "header a[href*='#{refinery::blog_root_path}']" );
       }

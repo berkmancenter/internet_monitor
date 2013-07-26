@@ -12,6 +12,11 @@ describe ( 'map requests' ) {
       should have_selector( '.geomap' );
     }
 
+    it {
+      max_score = Country.order( 'score desc' ).first.score
+      should have_selector( ".geomap[data-max-score='#{max_score}']" )
+    }
+
     it ( 'should initialize a map' ) {
       should have_selector( '.geomap.geo-map' );
     }

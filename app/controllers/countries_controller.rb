@@ -22,6 +22,7 @@ class CountriesController < ApplicationController
     end
 
     def map
+        @map_countries = Country.with_enough_data.select( 'iso3_code,score' )
         @scored_countries = Country.with_enough_data
         @unscored_countries = Country.without_enough_data
     end

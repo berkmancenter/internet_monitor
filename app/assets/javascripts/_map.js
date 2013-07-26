@@ -2,6 +2,7 @@ $( function( ) {
   if ( $( '.map.partial' ).length ) {
     var map = $( '.geomap' ).geomap( {
       services: [ ],
+      center: [ 0, 20 ],
       zoom: 2,
       cursors: {
         click: 'pointer'
@@ -21,11 +22,22 @@ $( function( ) {
       }
     } );
 
+    // map countries from server
+    var mapCountries = { };
+    $.each( map.data( 'mapCountries' ), function( ) {
+      mapCountries[ this.iso3_code ] = this.score;
+    } );
+
+    var maxScore = map.data( 'maxScore' );
+
     // grab the world countires file
     $.getJSON('/world-countries.json', function (result) {
       // append them to the map
       $.each( result.features, function( ) {
-        var r = Math.round( (0x36 + ( (0xff - 0x36) * Math.random() ) ) ).toString(16);
+        var r = '36';
+        if ( mapCountries[ this.id ] ) {
+          r = Math.round( (0x36 + ( (0xff - 0x36) * ( mapCountries[ this.id ] / maxScore ) ) ) ).toString(16);
+        }
         map.geomap('append', this, {
           color: '#' + r + '484a'
         }, false);
