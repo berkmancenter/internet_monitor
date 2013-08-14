@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+
+<link href="../src/nv.d3.css" rel="stylesheet" type="text/css">
+
+<style>
+
+h2
+{
+position:absolute;
+left:400px;
+top:100px;
+font-family: helvetica;
+font-size: 14px;
+}
+
+body {
+  overflow-y:scroll;
+}
+
+text {
+  font: 12px sans-serif;
+}
+
+#chart1 {
+  margin: 10px;
+  min-width: 100px;
+  min-height: 100px;
+/*
+  Minimum height and width is a good idea to prevent negative SVG dimensions...
+  For example width should be =< margin.left + margin.right + 1,
+  of course 1 pixel for the entire chart would not be very useful, BUT should not have errors
+*/
+}
+
+#chart1 svg {
+  height: 500px;
+}
+
+</style>
+<body>
+
+  <div id="chart1">
+    <svg></svg>
+  </div>
+
+<script src="../lib/d3.v3.js"></script>
+<script src="../nv.d3.js"></script>
+<script src="../src/utils.js"></script>
+<script src="../src/tooltip.js"></script>
+<script src="../src/models/legend.js"></script>
+<script src="../src/models/axis.js"></script>
+<script src="../src/models/multiBarHorizontal.js"></script>
+<script src="../src/models/multiBarHorizontalChart.js"></script>
+<script src="stream_layers.js"></script>
+<script>
+
+
+
+long_short_data = [ 
+  {
+    key: 'Follow local news closely',
+    color: '#cccccc',
+    values: [
+      { 
+        "label" : "Bahrain" ,
+        "value" : 80.0,
+        "color" : "#cccccc",
+        
+      } , 
+      { 
+        "label" : "Egypt" ,
+        "value" : 67.0,
+        "color" : "#cccccc",
+
+      } , 
+      { 
+        "label" : "Jordan" ,
+        "value" : 83.0,
+        "color" : "#cccccc",
+
+      } , 
+      { 
+        "label" : "KSA" ,
+        "value" : 77.0,
+        "color" : "#cccccc",
+
+      } , 
+      {
+        "label" : "Lebanon" ,
+        "value" : 66.0,
+        "color" : "#cccccc",
+
+      } , 
+      { 
+        "label" : "Qatar" ,
+        "value" : 63.0,
+        "color" : "#cccccc",
+
+      } , 
+      { 
+        "label" : "Tunisia" ,
+        "value" : 56.0,
+        "color" : "#cccccc",
+
+      } , 
+      {
+        "label" : "UAE" ,
+        "value" : 67.0,
+        "color" : "#cccccc",
+
+      } , 
+    
+    { 
+        "label" : "United States" ,
+        "value" : 71.25,
+        "color" : "#cccccc",
+
+      } , 
+     ]
+  },
+  
+  {
+
+    key: 'Follow national news closely',
+    color: '#777777',
+    values: [
+      { 
+        "label" : "Bahrain" ,
+        "value" : 81.0,
+        "color" : "#777777",
+      } , 
+      { 
+        "label" : "Egypt" ,
+        "value" : 75.0,
+        "color" : "#777777",
+      } , 
+      { 
+        "label" : "Jordan" ,
+        "value" : 78.0,
+        "color" : "#777777",
+      } , 
+      { 
+        "label" : "KSA" ,
+        "value" : 80.0,
+        "color" : "#777777",
+      } , 
+      {
+        "label" : "Lebanon" ,
+        "value" : 72.0,
+        "color" : "#777777",
+      } , 
+      { 
+        "label" : "Qatar" ,
+        "value" : 70.0,
+        "color" : "#777777",
+      } , 
+      { 
+        "label" : "Tunisia" ,
+        "value" : 63.0,
+        "color" : "#777777",
+      } , 
+      { 
+        "label" : "UAE" ,
+        "value" : 67.0,
+        "color" : "#777777",
+      } , 
+      
+       { 
+        "label" : "United States" ,
+        "value" : 68.75,
+        "color" : "#777777",
+      } , 
+     
+    ]
+  },
+  
+  {
+    key: 'Follow international news closely',
+    color: '#454545',
+    values: [
+      { 
+        "label" : "Bahrain" ,
+        "value" : 51.0,
+        "color" : "#454545",
+
+      } , 
+      { 
+        "label" : "Egypt" ,
+        "value" : 17.0,
+        "color" : "#454545",
+      } , 
+      { 
+        "label" : "Jordan" ,
+        "value" : 37.0,
+        "color" : "#454545",
+      } , 
+      { 
+        "label" : "KSA" ,
+        "value" : 63.0,
+        "color" : "#454545",
+      } , 
+      {
+        "label" : "Lebanon" ,
+        "value" : 34.0,
+        "color" : "#454545",
+      } , 
+      { 
+        "label" : "Qatar" ,
+        "value" : 57.0,
+        "color" : "#454545",
+      } , 
+      { 
+        "label" : "Tunisia" ,
+        "value" : 32.0,
+        "color" : "#454545",
+      } , 
+      { 
+        "label" : "UAE" ,
+        "value" : 52.0,
+        "color" : "#454545",
+      } , 
+      
+       { 
+        "label" : "United States" ,
+        "value" : 56.0,
+        "color" : "#454545",
+      } , 
+      
+  
+    ]
+  }
+];
+
+
+
+
+
+var chart;
+nv.addGraph(function() {
+  chart = nv.models.multiBarHorizontalChart()
+      .x(function(d) { return d.label })
+      .y(function(d) { return d.value })
+      .margin({top: 30, right: 20, bottom: 50, left: 175})
+      //.showValues(true)
+      //.tooltips(false)
+      .barColor(d3.scale.category20().range())
+      .showControls(false);
+
+  chart.yAxis
+      .tickFormat(d3.format(',.2f'));
+
+  d3.select('#chart1 svg')
+      .datum(long_short_data)
+    .transition().duration(500)
+      .call(chart);
+
+  nv.utils.windowResize(chart.update);
+
+  chart.dispatch.on('stateChange', function(e) { nv.log('New State:', JSON.stringify(e)); });
+
+  return chart;
+});
+
+
+
+</script>

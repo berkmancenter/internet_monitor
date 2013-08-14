@@ -59,62 +59,62 @@ text {
 
 long_short_data = [ 
   {
-    key: 'Follow Local News Closely',
-    color: '#ffffff',
+    key: 'Follow local news closely',
+    color: '#cccccc',
     values: [
       { 
         "label" : "Bahrain" ,
         "value" : 80.0,
-        "color" : "#14A697",
+        "color" : "#cccccc",
         
       } , 
       { 
         "label" : "Egypt" ,
         "value" : 67.0,
-                "color" : "#14A697",
+        "color" : "#cccccc",
 
       } , 
       { 
         "label" : "Jordan" ,
         "value" : 83.0,
-        "color" : "#14A697",
+        "color" : "#cccccc",
 
       } , 
       { 
         "label" : "KSA" ,
         "value" : 77.0,
-        "color" : "#14A697",
+        "color" : "#cccccc",
 
       } , 
       {
         "label" : "Lebanon" ,
         "value" : 66.0,
-        "color" : "#14A697",
+        "color" : "#cccccc",
 
       } , 
       { 
         "label" : "Qatar" ,
         "value" : 63.0,
-        "color" : "#14A697",
+        "color" : "#cccccc",
 
       } , 
       { 
         "label" : "Tunisia" ,
         "value" : 56.0,
-        "color" : "#14A697",
+        "color" : "#cccccc",
 
       } , 
       {
         "label" : "UAE" ,
         "value" : 67.0,
-        "color" : "#14A697",
+        "color" : "#cccccc",
 
       } , 
     
     { 
         "label" : "United States" ,
         "value" : 71.25,
-        "color" : "#14A697",
+        "color" : "#cccccc",
 
       } , 
      ]
@@ -122,109 +122,109 @@ long_short_data = [
   
   {
 
-    key: 'Follow National News Closely',
-    color: '#1f77b4',
+    key: 'Follow national news closely',
+    color: '#777777',
     values: [
       { 
         "label" : "Bahrain" ,
         "value" : 81.0,
-        "color" : "#F20B00",
+        "color" : "#777777",
       } , 
       { 
         "label" : "Egypt" ,
         "value" : 75.0,
-        "color" : "#F20B00",
+        "color" : "#777777",
       } , 
       { 
         "label" : "Jordan" ,
         "value" : 78.0,
-        "color" : "#F20B00",
+        "color" : "#777777",
       } , 
       { 
         "label" : "KSA" ,
         "value" : 80.0,
-        "color" : "#F20B00",
+        "color" : "#777777",
       } , 
       {
         "label" : "Lebanon" ,
         "value" : 72.0,
-        "color" : "#F20B00",
+        "color" : "#777777",
       } , 
       { 
         "label" : "Qatar" ,
         "value" : 70.0,
-        "color" : "#F20B00",
+        "color" : "#777777",
       } , 
       { 
         "label" : "Tunisia" ,
-        "value" : 72.0,
-        "color" : "#F20B00",
+        "value" : 63.0,
+        "color" : "#777777",
       } , 
       { 
         "label" : "UAE" ,
         "value" : 67.0,
-        "color" : "#F20B00",
+        "color" : "#777777",
       } , 
       
        { 
         "label" : "United States" ,
         "value" : 68.75,
-        "color" : "#F20B00",
+        "color" : "#777777",
       } , 
      
     ]
   },
   
   {
-    key: 'Follow International News Closely',
-    color: '#1f77b4',
+    key: 'Follow international news closely',
+    color: '#454545',
     values: [
       { 
         "label" : "Bahrain" ,
         "value" : 51.0,
-        "color" : "#F200B7",
+        "color" : "#454545",
 
       } , 
       { 
         "label" : "Egypt" ,
         "value" : 17.0,
-        "color" : "#F200B7",
+        "color" : "#454545",
       } , 
       { 
         "label" : "Jordan" ,
         "value" : 37.0,
-        "color" : "#F200B7",
+        "color" : "#454545",
       } , 
       { 
         "label" : "KSA" ,
         "value" : 63.0,
-        "color" : "#F200B7",
+        "color" : "#454545",
       } , 
       {
         "label" : "Lebanon" ,
         "value" : 34.0,
-        "color" : "#F200B7",
+        "color" : "#454545",
       } , 
       { 
         "label" : "Qatar" ,
         "value" : 57.0,
-        "color" : "#F200B7",
+        "color" : "#454545",
       } , 
       { 
         "label" : "Tunisia" ,
         "value" : 32.0,
-        "color" : "#F200B7",
+        "color" : "#454545",
       } , 
       { 
         "label" : "UAE" ,
         "value" : 52.0,
-        "color" : "#F200B7",
+        "color" : "#454545",
       } , 
       
        { 
         "label" : "United States" ,
         "value" : 56.0,
-        "color" : "#F200B7",
+        "color" : "#454545",
       } , 
       
   
@@ -245,7 +245,7 @@ nv.addGraph(function() {
       //.showValues(true)
       //.tooltips(false)
       .barColor(d3.scale.category20().range())
-      .showControls(true);
+      .showControls(false);
 
   chart.yAxis
       .tickFormat(d3.format(',.2f'));
