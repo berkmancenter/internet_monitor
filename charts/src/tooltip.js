@@ -98,7 +98,10 @@
     }
 
 
-    container.style.left = left+'px';
+    //container.style.left = left+'px';
+    container.style.left = 'auto';
+    container.style.right = '6px';
+    container.style.width = '240px';
     container.style.top = top+'px';
     container.style.opacity = 1;
     container.style.position = 'absolute'; //fix scroll bar issue
