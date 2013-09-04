@@ -11,9 +11,9 @@
 <body class="<%= "#{ params[ :controller ] } #{ params[ :action ] }" %>">
 
   <header>
-    <h1><span style="display:none;">Internet Monitor</span> <%= link_to( raw( '<div class="logo-image"></div>' ), "/" ) %> </h1>
     <nav>
       <ul>
+        <li><%= link_to 'home', '/' %></li>
         <li><%= link_to 'about', refinery::marketable_page_path('about') %></li>
         <li><%= link_to 'map', Imon::Application.routes.url_helpers.map_path %></li>
         <li><%= link_to 'countries', Imon::Application.routes.url_helpers.countries_path %></li>
@@ -24,6 +24,7 @@
         <li><a href="javascript:void(0);" class="toggle-weight-sliders"><span class="gear">my score</span></a></li>
       </ul>
     </nav>
+    <h1><span style="display:none;">Internet Monitor</span> <%= link_to( raw( '<div class="logo-image"></div>' ), "/" ) %> </h1>
     <div id="weight-sliders" class="hidden">
         <h3>Indicator Weights</h3>
         <%= render :partial => 'shared/widgets/weight_sliders' %>
