@@ -1,10 +1,11 @@
 <% provide :title, "#{@country.name} #{@category.name}" %>
 
 <%= render partial: "countries/sidebar" %>
-<%= render partial: "shared/widgets/category_selector" %>
 
-<article class="countries access sub-content">
-    <h1><%= render partial: "countries/list_item", locals: {country: @country} %></h1>
+<article class="countries sub-content">
+  <h1 <%= "class='#{@category.name}'" %>>
+    <%= @category.name %> in <%= render partial: "countries/list_item", locals: {country: @country} %>
+  </h1>
     <%= render partial: "data/grouped", locals: {data: @category.data.most_recent.for(@country)} %>
 
     <% @country.languages.each do |language|

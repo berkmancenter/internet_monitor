@@ -1,7 +1,6 @@
 <% provide :title, @country.name %>
 
 <%= render partial: "countries/sidebar" %>
-<%= render partial: "shared/widgets/category_selector" %>
 
 <article class="country sub-content" data-country-id="<%= @country.id %>">
   <h1><%= render partial: "countries/list_item", locals: {country: @country} %></h1>

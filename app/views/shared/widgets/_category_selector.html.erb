@@ -1,8 +1,16 @@
 <nav class="category-selector">
-    <ul>
-        <% @country.categories.each do |category| %>
-          <li><%= link_to category.name, category_country_path(@country, :category_slug => category.slug), @category != nil && @category.name == category.name ? { class: 'selected' } : nil %></li>
-        <% end %>
-    </ul>
+  <ul>
+    <% if @country.present? %>
+      <% @country.categories.each do |category| %>
+        <li><%= link_to category.name, category_country_path(@country, :category_slug => category.slug), @category != nil && @category.name == category.name ? { class: "#{category.slug} selected" } : { class: category.slug } %></li>
+      <% end %>
+
+    <% elsif %>
+      <% Category.all.each do |category| %>
+        <%# TODO: use refinery path to category pages %>
+        <li><%= link_to category.name, "/#{category.slug}", { class: category.slug } %></li>
+      <% end %>
+    <% end %>
+  </ul>
 </nav>
 

@@ -1,8 +1,12 @@
-﻿.country-data {
+﻿@import "colors";
+
+.country-data {
+  background: $white;
   display: none;
-  float: left;
+  float: right;
+  font-size: .8em;
   margin: 0;
-  margin-right: 2em;
+  margin-right: 2px;
 
   label>span {
     display: none;

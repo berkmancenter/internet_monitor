@@ -14,3 +14,8 @@
 //= require jquery_ujs
 //= require jquery.nouislider
 //= require_tree .
+
+$( '.data-nav-categories' ).click( function( ) {
+  $( '.category-selector' ).toggle( );
+  return false;
+} );

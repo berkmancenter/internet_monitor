@@ -1,3 +1,5 @@
+@import "colors";
+
 .category-select {
   left: 0;
   position: absolute;
@@ -10,31 +12,42 @@
 
 
 .category-selector {
-  float: right;
+  display: none;
+  position: absolute;
+  right: 32px + 42px + 3px;
+  top: 82px;
 
   ul {
-    display: inline-block;
+    display: block;
     margin: 0;
 
     li {
-      display: inline-block;
+      display: block;
       list-style-type: none;
       margin: 0;
-      padding: .5em;
+      padding: 0;
 
       a, a:visited {
-        color: #676767;
-        font-weight: bold;
+        color: $white;
+        display: block;
+        height: 34px;
+        font-size: .8em;
+        padding: .6em .8em;
         text-decoration: none;
         text-transform: uppercase;
+        width: 128px;
       }
 
-      a.selected {
-        color: #F15C23;
+      a.access {
+        background: $orange;
       }
 
-      a:hover {
-        color: #F15C23;
+      a.control {
+        background: $cyan;
+      }
+
+      a.activity {
+        background: $gold;
       }
     }
   }
