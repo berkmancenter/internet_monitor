@@ -1,13 +1,4 @@
 <aside class="country-data">
-    <label class="country-data-select">
-        <span>Country</span>
-        <select name="id">
-            <% Country.order(:name).all.each do |c| %>
-                <option value="<%= country_path(c) %>" <%= 'selected="selected' if c == @country %> ><%= c.name %></option>
-            <% end %>
-        </select>
-    </label>
-
-    <%= render partial: 'countries/map', locals: {country: @country} %>
-    <%= render partial: "data/grouped", locals: {data: @country.data.in_sidebar.most_recent} %>
+  <%= render partial: 'countries/map', locals: {country: @country} %>
+  <%= render partial: "data/grouped", locals: {data: @country.data.in_sidebar.most_recent} %>
 </aside>
