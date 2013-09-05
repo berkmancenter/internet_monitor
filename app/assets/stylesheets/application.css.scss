@@ -102,6 +102,7 @@ header {
       height: 34px;
       margin: 0 1px;
       padding: .6em .8em;
+      position: relative;
       text-decoration: none;
       text-transform: uppercase;
 
@@ -179,9 +180,9 @@ header {
 
 .main-content {
   background: $white;
+  padding-bottom: 4em;
 
   h1 {
-    background: blue;
     margin: 0;
     padding: 2.5em 2em 1em 2em;
   }
@@ -194,7 +195,6 @@ header {
 h2 {
   font-size: 1.1em;
 }
-
 
 footer {
   clear: both;
@@ -237,9 +237,4 @@ footer {
       }
     }
   }
-
-
-
-
-
 }

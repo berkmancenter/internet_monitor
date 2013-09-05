@@ -8,7 +8,7 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
-<body class="<%= "#{ params[ :controller ] } #{ params[ :action ] }" %>">
+<body class="<%= "#{ params[ :controller ].sub( '/', '-' ) } #{ params[ :action ] }" %>">
 
   <header>
     <nav>
@@ -24,7 +24,8 @@
     <div class="data-nav">
       <%= link_to raw( '&nbsp;' ), Imon::Application.routes.url_helpers.map_path, class: 'map-link', title: 'MAP' %>
       <%= link_to 'countries ▶', Imon::Application.routes.url_helpers.countries_path %>
-      <a href="#">categories ▶</a>
+      <a href="#"><span>categories ▶</span></a>
+  
       <a href="javascript:void(0);" class="toggle-weight-sliders" title="MY SCORE">&nbsp;</a>
     </div>
 
