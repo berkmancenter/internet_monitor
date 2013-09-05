@@ -2,6 +2,8 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import "colors";
+
 .country-name {
   color: #676767;
   white-space: nowrap;
@@ -44,8 +46,6 @@
 }
 
 .countries {
-  padding-top: 2em;
-
   h1 {
     font-size: 1.4em;
     font-weight: bold;
@@ -75,13 +75,13 @@
     list-style-type: none;
   }
   li:nth-child(3n+1) .indicator-bar-inner {
-      background-color: #5ec1a5;
+      background-color: $orange;
   }
   li:nth-child(3n+2) .indicator-bar-inner {
-      background-color: #f15c23;
+      background-color: $cyan;
   }
   li:nth-child(3n+3) .indicator-bar-inner {
-      background-color: #aaa04e;
+      background-color: $gold;
   }
 }
 

@@ -49,17 +49,13 @@ html {
 }
 
 body {
+  background: $dark-gray;
   margin: 0;
   padding: 0;
 }
 
-.gear:before {
-  content: "☸ ";
-  font-family: Arial Unicode MS;
-  font-size: 1em;
-}
-
 header {
+  background: $white;
   margin: 0;
 
   nav {
@@ -67,8 +63,8 @@ header {
 
     ul {
       display: inline-block;
-      margin: 0;
-      padding: .5em 0 .5em 2em;
+      margin: 0 0 0 2em;
+      padding: .5em 0;
 
       li {
         color: $white;
@@ -91,6 +87,37 @@ header {
     }
   }
 
+  .data-nav {
+    display: inline-block;
+    float: right;
+    margin: 1em 2em 0 0;
+
+    a, a:visited {
+      background: $violet;
+      color: $white;
+      display: inline-block;
+      font-size: .8em;
+      margin: 0 1px;
+      padding: .5em .8em;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .map-link, .toggle-weight-sliders {
+      width: 3em;
+    }
+
+    .map-link {
+      background: $violet url('world-icon.png') no-repeat;
+      border-radius: .25em 0 0 .25em;
+    }
+
+    .toggle-weight-sliders {
+      background: $bright-gold url('gear.png') no-repeat .5em 2px;
+      border-radius: 0 .25em .25em 0;
+    }
+  }
+
   h1 { 
     display: inline-block;
     margin: 0 0 0 1em;
@@ -100,12 +127,12 @@ header {
     .logo-image {
       background: url("imon_logo.png");
       display: inline-block;
-      height: 96px;
-      width: 160px;
+      height: 64px;
+      width: 240px;
     }
 
     .logo-image:hover {
-      background-position: 0 -96px;
+      background-position: 0 -64px;
     }
   }
 
@@ -131,15 +158,16 @@ header {
           margin: 0.7em 1em 1.5em;
       }
   }
-  .header-divider {
-    background: url("divider.png") repeat-x;
-    height: 4px;
-    margin-top: .2em;
-  }
 }
 
 .main-content {
-  margin: .5em;
+  background: $white;
+
+  h1 {
+    background: blue;
+    margin: 0;
+    padding: 2.5em 2em 1em 2em;
+  }
 }
 
 .sub-content {
@@ -152,7 +180,6 @@ h2 {
 
 
 footer {
-  background: #676767;
   clear: both;
   margin: 0;
   height: 40px;
@@ -176,7 +203,7 @@ footer {
       li {
         color: #fefefe;
         display: inline-block;
-        font-size: .8em;
+        font-size: .6em;
         font-weight: bold;
         list-style-type: none;
         margin: 0 1em;
