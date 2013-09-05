@@ -1,14 +1,15 @@
 @import "colors";
 
 @mixin transition {
-  -moz-transition: height 1s;
-  -webkit-transition: height 1s;
-  -o-transition: height 1s;
-  -ms-transition: height 1s;
-  transition: height 1s;
+  -moz-transition: height .5s;
+  -webkit-transition: height .5s;
+  -o-transition: height .5s;
+  -ms-transition: height .5s;
+  transition: height .5s;
 }
 
 .countries-nav-list {
+  background: $violet;
   height: 0;
   overflow: auto;
   position: absolute;
@@ -25,7 +26,6 @@
   }
 
   a, a:visited {
-    background: $violet;
     border-top: solid 2px $white;
     color: $white;
     display: block;
