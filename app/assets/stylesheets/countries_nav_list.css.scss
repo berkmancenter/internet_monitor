@@ -11,7 +11,7 @@
 .countries-nav-list {
   background: $violet;
   height: 0;
-  overflow: auto;
+  overflow: hidden;
   position: absolute;
   right: 32px + 42px + 128px - 16px + 5px;
   text-align: right;

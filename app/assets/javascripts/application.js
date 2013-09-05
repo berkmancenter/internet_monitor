@@ -19,9 +19,9 @@ $( '.data-nav-countries' ).click( function( ) {
   var countriesNavList = $( '.countries-nav-list' );
 
   if ( countriesNavList.height( ) ) {
-    countriesNavList.height( 0 );
+    countriesNavList.css( 'overflow', 'hidden' ).height( 0 );
   } else {
-    countriesNavList.height( '60%' );
+    countriesNavList.height( '60%' ).css( 'overflow', 'auto' );
   }
   return false;
 } );
