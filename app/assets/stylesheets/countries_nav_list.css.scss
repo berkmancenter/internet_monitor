@@ -12,9 +12,11 @@
   height: 0;
   overflow: auto;
   position: absolute;
-  right: 32px + 42px + 128px + 5px;
+  right: 32px + 42px + 128px - 16px + 5px;
+  text-align: right;
   top: 82px;
   @include transition;
+  width: 256px + 16px;
 
   ul {
     list-style: none;
@@ -24,11 +26,12 @@
 
   a, a:visited {
     background: $violet;
+    border-top: solid 2px $white;
     color: $white;
     display: block;
     font-size: .8em;
     height: 34px;
-    margin: 1px 0;
+    margin: 0;
     padding: .6em .8em;
     text-align: right;
     text-decoration: none;
