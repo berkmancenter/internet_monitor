@@ -23,7 +23,7 @@
 
     <div class="data-nav">
       <%= link_to raw( '&nbsp;' ), Imon::Application.routes.url_helpers.map_path, class: 'map-link', title: 'MAP' %>
-      <%= link_to raw('countries &#9654;'), Imon::Application.routes.url_helpers.countries_path %>
+      <%= link_to raw('countries &#9654;'), Imon::Application.routes.url_helpers.countries_path, { class: 'data-nav-countries' } %>
       <a href="#" class="data-nav-categories"><span>categories &#9654;</span></a>
       <a href="javascript:void(0);" class="toggle-weight-sliders" title="MY SCORE">&nbsp;</a>
     </div>
@@ -37,7 +37,8 @@
   </header>
 
   <section class="main-content">
-    <%= render partial: "shared/widgets/category_selector" %>
+    <%= render partial: 'countries/nav_list' %>
+    <%= render partial: 'shared/widgets/category_selector' %>
     <%= yield %>
   </section>
 

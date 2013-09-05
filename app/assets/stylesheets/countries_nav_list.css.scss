@@ -1,0 +1,43 @@
+@import "colors";
+
+@mixin transition {
+  -moz-transition: height 1s;
+  -webkit-transition: height 1s;
+  -o-transition: height 1s;
+  -ms-transition: height 1s;
+  transition: height 1s;
+}
+
+.countries-nav-list {
+  height: 0;
+  overflow: auto;
+  position: absolute;
+  right: 32px + 42px + 128px + 5px;
+  top: 82px;
+  @include transition;
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  a, a:visited {
+    background: $violet;
+    color: $white;
+    display: block;
+    font-size: .8em;
+    height: 34px;
+    margin: 1px 0;
+    padding: .6em .8em;
+    text-align: right;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 256px;
+
+    &:hover {
+      background: $light-blue;
+      color: $black;
+    }
+  }
+}

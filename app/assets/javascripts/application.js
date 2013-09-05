@@ -15,6 +15,17 @@
 //= require jquery.nouislider
 //= require_tree .
 
+$( '.data-nav-countries' ).click( function( ) {
+  var countriesNavList = $( '.countries-nav-list' );
+
+  if ( countriesNavList.height( ) ) {
+    countriesNavList.height( 0 );
+  } else {
+    countriesNavList.height( '60%' );
+  }
+  return false;
+} );
+
 $( '.data-nav-categories' ).click( function( ) {
   $( '.category-selector' ).toggle( );
   return false;
