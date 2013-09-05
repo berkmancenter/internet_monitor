@@ -22,10 +22,14 @@
     </nav>
 
     <div class="data-nav">
-      <%= link_to raw( '&nbsp;' ), Imon::Application.routes.url_helpers.map_path, class: 'map-link' %><%= link_to 'countries ▶', Imon::Application.routes.url_helpers.countries_path %><a href="#">categories ▶</a><a href="javascript:void(0);" class="toggle-weight-sliders">&nbsp;</a>
+      <%= link_to raw( '&nbsp;' ), Imon::Application.routes.url_helpers.map_path, class: 'map-link', title: 'MAP' %>
+      <%= link_to 'countries ▶', Imon::Application.routes.url_helpers.countries_path %>
+      <a href="#">categories ▶</a>
+      <a href="javascript:void(0);" class="toggle-weight-sliders" title="MY SCORE">&nbsp;</a>
     </div>
 
     <h1><span style="display:none;">Internet Monitor</span> <%= link_to( raw( '<div class="logo-image"></div>' ), "/" ) %> </h1>
+
     <div id="weight-sliders" class="hidden">
         <h3>Indicator Weights</h3>
         <%= render :partial => 'shared/widgets/weight_sliders' %>

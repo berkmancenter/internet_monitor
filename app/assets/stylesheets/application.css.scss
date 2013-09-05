@@ -87,34 +87,51 @@ header {
     }
   }
 
+  $data-nav-right: 32px;
+
   .data-nav {
-    display: inline-block;
     float: right;
-    margin: 1em 2em 0 0;
+    margin: 1em $data-nav-right 0 0;
 
     a, a:visited {
       background: $violet;
       color: $white;
-      display: inline-block;
+      display: block;
+      float: left;
       font-size: .8em;
+      height: 34px;
       margin: 0 1px;
-      padding: .5em .8em;
+      padding: .6em .8em;
       text-decoration: none;
       text-transform: uppercase;
+
+      &:hover {
+        background: $light-blue;
+        color: $black;
+      }
     }
 
     .map-link, .toggle-weight-sliders {
-      width: 3em;
+      width: 42px;
     }
 
     .map-link {
       background: $violet url('world-icon.png') no-repeat;
       border-radius: .25em 0 0 .25em;
+
+      &:hover {
+        background: $light-blue url('world-icon.png') no-repeat -42px 0;
+      }
     }
 
     .toggle-weight-sliders {
-      background: $bright-gold url('gear.png') no-repeat .5em 2px;
+      background: $bright-gold url('gear.png') no-repeat;
       border-radius: 0 .25em .25em 0;
+      box-shadow: 3px 3px 10px #888;
+
+      &:hover {
+        background: $light-blue url('gear.png') no-repeat -42px 0;
+      }
     }
   }
 
@@ -141,23 +158,23 @@ header {
   }
 
   #weight-sliders {
-      background: #FFF;
-      border-radius: 0px 0px 9px 9px;
-      box-shadow: 3px 3px 10px #888;
-      font-size: .8em;
-      margin-top: 8px;
-      max-height: 600px;
-      overflow-x: hidden;
-      overflow-y: auto;
-      padding: 1em 2em;
-      position: absolute;
-      right: 1em;
-      z-index: 2;
-      
-      .weight-slider {
-          margin: 0.7em 1em 1.5em;
-      }
-  }
+    background: $light-blue;
+    border-radius: 0px 0px 8px 8px;
+    box-shadow: 3px 3px 10px #888;
+    font-size: .8em;
+    margin-top: -20px;
+    max-height: 600px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 1em 2em;
+    position: absolute;
+    right: $data-nav-right + 1;
+    z-index: 2;
+
+    .weight-slider {
+      margin: 0.7em 1em 1.5em;
+    }
+}
 }
 
 .main-content {
