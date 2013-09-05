@@ -90,10 +90,6 @@ describe 'countries requests' do
     it ( 'should have category selected' ) {
       should have_selector( ".category-selector a[href*='#{category_country_path(country, :category_slug => "access")}'].selected" );
     }
-
-    it {
-      should_not have_selector( 'h1', { text: 'Access' } );
-    }
   end
 
   describe 'get /countries/:id/control' do
@@ -114,10 +110,6 @@ describe 'countries requests' do
     it ( 'should have category selected' ) {
       should have_selector( ".category-selector a[href*='#{category_country_path(country, :category_slug => "control")}'].selected" );
     }
-
-    it {
-      should_not have_selector( 'h1', { text: 'Control' } );
-    }
   end
 
   describe( "get /countries/:id/activity" ) do
@@ -137,10 +129,6 @@ describe 'countries requests' do
     it_should_behave_like( 'category_selector' );
     it ( 'should have category selected' ) {
       should have_selector( ".category-selector a[href*='#{category_country_path(country, :category_slug => "activity")}'].selected" );
-    }
-
-    it {
-      should_not have_selector( 'h1', { text: 'Activity' } );
     }
   end
 
