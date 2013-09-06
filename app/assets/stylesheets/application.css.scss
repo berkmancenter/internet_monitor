@@ -115,13 +115,16 @@ header {
       }
     }
 
+    .data-nav-countries {
+      border-radius: .25em 0 0 .25em;
+    }
+
     .map-link, .toggle-weight-sliders {
       width: 42px;
     }
 
     .map-link {
       background: $violet url('world-icon.png') no-repeat;
-      border-radius: .25em 0 0 .25em;
 
       &:hover {
         background: $light-blue url('world-icon.png') no-repeat -42px 0;
@@ -178,7 +181,7 @@ header {
     .weight-slider {
       margin: 0.7em 1em 1.5em;
     }
-}
+  }
 }
 
 .main-content {
