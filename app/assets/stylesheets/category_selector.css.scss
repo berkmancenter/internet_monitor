@@ -1,4 +1,5 @@
 @import "colors";
+@import "mixins";
 
 .category-select {
   left: 0;
@@ -12,10 +13,16 @@
 
 
 .category-selector {
-  display: none;
+  height: 0;
+  overflow: hidden;
   position: absolute;
   right: 32px + 42px + 3px;
   top: 82px;
+  @include transition-height;
+
+  &.expanded {
+    height: auto;
+  }
 
   ul {
     display: block;

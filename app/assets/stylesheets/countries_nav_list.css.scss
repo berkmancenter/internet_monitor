@@ -1,12 +1,5 @@
 @import "colors";
-
-@mixin transition {
-  -moz-transition: height .5s;
-  -webkit-transition: height .5s;
-  -o-transition: height .5s;
-  -ms-transition: height .5s;
-  transition: height .5s;
-}
+@import "mixins";
 
 .countries-nav-list {
   background: $violet;
@@ -16,8 +9,13 @@
   right: 32px + 42px + 128px - 16px + 5px;
   text-align: right;
   top: 82px;
-  @include transition;
+  @include transition-height;
   width: 256px + 16px;
+
+  &.expanded {
+    overflow: auto;
+    height: 60%;
+  }
 
   ul {
     list-style: none;

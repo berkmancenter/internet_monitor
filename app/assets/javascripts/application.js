@@ -15,18 +15,20 @@
 //= require jquery.nouislider
 //= require_tree .
 
-$( '.data-nav-countries' ).click( function( ) {
-  var countriesNavList = $( '.countries-nav-list' );
-
-  if ( countriesNavList.height( ) ) {
-    countriesNavList.css( 'overflow', 'hidden' ).height( 0 );
-  } else {
-    countriesNavList.height( '60%' ).css( 'overflow', 'auto' );
+(function() {
+  function hideAllBut( s ) {
+    $( '.countries-nav-list,.category-selector' ).not( s ).removeClass( 'expanded' );
   }
-  return false;
-} );
 
-$( '.data-nav-categories' ).click( function( ) {
-  $( '.category-selector' ).toggle( );
-  return false;
-} );
+  $( '.data-nav-countries' ).click( function( ) {
+    hideAllBut( '.countries-nav-list' );
+    $( '.countries-nav-list' ).toggleClass( 'expanded' );
+    return false;
+  } );
+
+  $( '.data-nav-categories' ).click( function( ) {
+    hideAllBut( '.category-selector' );
+    $( '.category-selector' ).toggleClass( 'expanded' );
+    return false;
+  } );
+} ());
