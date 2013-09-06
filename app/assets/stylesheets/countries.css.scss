@@ -47,9 +47,9 @@
 
 .countries {
   h1 {
+    color: $white;
     font-size: 1.4em;
     font-weight: bold;
-    white-space: nowrap;
   }
 
   h2 {
@@ -61,6 +61,7 @@
     font-style: italic;
   }
 }
+
 .indicators {
     .indicator-bar-outer, .indicator-bar-inner {
       height: 10px;

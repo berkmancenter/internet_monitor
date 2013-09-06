@@ -1,9 +1,12 @@
 <% provide :title, @country.name %>
 
-<%= render partial: "countries/sidebar" %>
 
-<article class="country sub-content" data-country-id="<%= @country.id %>">
-  <h1><%= render partial: "countries/list_item", locals: {country: @country} %></h1>
+<article class="view" data-country-id="<%= @country.id %>">
+  <h1 class="country-1-bg"><%= @country.name %></h1>
 
-  <p class="country-description"><%= @country.description %></p>
+  <div class="sub-content country-6-bg">
+    <p class="country-description"><%= @country.description %></p>
+
+    <%= render partial: "countries/sidebar" %>
+  </div>
 </article>
