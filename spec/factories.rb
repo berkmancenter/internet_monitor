@@ -82,6 +82,23 @@ FactoryGirl.define do
       affects_score true
       link nil
     end
+
+    factory :ds_population do
+      # indicators like Population don't have a category
+      admin_name 'ds_population'
+      public_name 'Population, total'
+      description nil
+      datum_type 'Indicator'
+      # category nil
+      default_weight 0
+      min 9847
+      max 1344130000
+      retriever_class 'WorldBankParser'
+      is_api true
+      in_sidebar true
+      affects_score false
+      link nil
+    end
   end
 
   factory :datum do
@@ -116,6 +133,16 @@ FactoryGirl.define do
       type 'Indicator'
     end
 
+    factory :d_population do
+      #source ds_population
+      start_date '2011-01-01'
+      #country_id iran
+      language_id nil
+      original_value 74798599
+      value 0.05564141853916538
+      type 'Indicator'
+    end
+
     # usa
     factory :d_pct_inet_usa do
       #source ds_pct_inet
@@ -126,6 +153,14 @@ FactoryGirl.define do
       value 0.8194
       type 'Indicator'
     end
+  end
+
+
+  # refinery
+  factory :tadmin, class: Refinery::User do |u|
+    u.username 'tadmin'
+    u.email 'tadmin@cyber.law.harvard.edu'
+    u.password 'tp4ssw0rd'
   end
 end
 

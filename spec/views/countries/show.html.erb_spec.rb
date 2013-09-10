@@ -35,5 +35,9 @@ describe ( 'countries/show' ) {
     it ( 'should not have generic indicators' ) {
       should_not have_css '.sidebar .indicators'
     }
+
+    it ( 'should have sidebar data' ) {
+      should have_css '.sidebar dt', text: 'Population'
+    }
   }
 }

@@ -60,9 +60,22 @@ namespace :db do
       d_consistency.country = iran;
       d_consistency.save!
 
+      # other datum source
+      ds_population = FactoryGirl.create( :ds_population );
+      ds_population.save!
+
+      # control datum
+      d_population = FactoryGirl.create( :d_population );
+      d_population.source = ds_population;
+      d_population.country = iran;
+      d_population.save!
+
       # refinery
       Refinery::Pages::Engine.load_seed
       Refinery::Blog::Engine.load_seed
+
+      u = FactoryGirl.create( :tadmin )
+      u.create_first
     end
   end
 end

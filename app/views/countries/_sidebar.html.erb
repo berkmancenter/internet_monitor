@@ -1,4 +1,13 @@
 <aside class="countries sidebar">
-  <%#= render partial: 'countries/map', locals: {country: @country} %>
-  <%#= render partial: "data/grouped", locals: {data: @country.data.in_sidebar.most_recent} %>
+<%#= render partial: 'countries/map', locals: {country: @country} %>
+
+<%# specialized sidebar display no longer using the grouped partial %>
+<dl>
+  <% @country.data.in_sidebar.most_recent.each do |datum| %>
+    <dt><%= datum.name %></dt>
+    <dd><%= number_with_precision(datum.original_value) %></dd>
+  <% end %>
+</dl>
+
+<%#= render partial: "data/grouped", locals: {data: @country.data.in_sidebar.most_recent} %>
 </aside>
