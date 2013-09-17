@@ -3,14 +3,18 @@ ENV["RAILS_ENV"] ||= 'test'
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec/rails'
 require 'rspec/autorun'
-require 'capybara/webkit'
+require 'capybara/poltergeist'
+
+def snap
+  save_screenshot("tmp/screenshots/#{(Time.now.to_f * 1000).floor}.png")
+end
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
 
-Capybara.javascript_driver = :webkit
-Capybara.current_driver = :webkit
+Capybara.javascript_driver = :poltergeist
+Capybara.current_driver = :poltergeist
 
 RSpec.configure do |config|
   # Capybara 
