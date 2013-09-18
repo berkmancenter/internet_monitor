@@ -24,12 +24,18 @@ describe ( 'countries/show' ) {
       should have_css 'h1~.sub-content'
     }
 
-    it ( 'no more country dropdown in sidebar' ) {
-      should_not have_css '.sub-content .country-data'
+    it ( 'should have main & sidebar columns' ) {
+      should have_css '.sub-content .main-column'
+      should have_css '.sub-content .sidebar-column'
     }
 
-    it ( 'sidebar now in sub-content' ) {
-      should have_css '.sub-content .sidebar'
+    it ( 'should have at least a country update & sidebar' ) {
+      should have_css '.main-column .update.block'
+      should have_css '.sidebar-column .sidebar.block'
+    }
+
+    it ( 'no more country dropdown in sidebar' ) {
+      should_not have_css '.sub-content .country-data'
     }
 
     it ( 'should not have generic indicators' ) {
