@@ -15,6 +15,10 @@ describe ( 'countries/show' ) {
       should have_css '.view h1'
     }
 
+    it {
+      should have_css 'h1 .score-pill'
+    }
+
     it ( 'h1 no longer has score' ) {
       should have_css 'h1', text: country.name
       should_not have_css 'h1', text: country.score

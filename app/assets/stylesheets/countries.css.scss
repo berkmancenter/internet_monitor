@@ -45,11 +45,19 @@
   }
 }
 
-.countries {
+/* countries#show & country_categories#show */
+.country-data-view {
   h1 {
     color: $white;
     font-size: 1.4em;
     font-weight: bold;
+    position: relative;
+
+    .score-pill {
+      bottom: 1em;
+      left: 50%;
+      position: absolute;
+    }
   }
 
   h2 {
@@ -60,79 +68,77 @@
     font-size: 1em;
     font-style: italic;
   }
-}
 
-/* .countries.show & .country_categories.show */
-
-.main-column {
-  display: inline-block;
-  vertical-align: top;
-  width: 65%;
-}
-
-.sidebar-column {
-  display: inline-block;
-  margin-left: 2%;
-  vertical-align: top;
-  width: 32%;
-}
-
-.block {
-  background: $white;
-  border-radius: .5em;
-  margin: .5em 0;
-  min-height: 12em;
-  padding: .5em;
-}
-
-/* specific datum block styles */
-
-.sidebar {
-  dl {
-    font-size: .7em;
-    margin: -.5em 0 0 0;
+  .main-column {
+    display: inline-block;
+    vertical-align: top;
+    width: 65%;
   }
 
-  dt, dd {
-    display: inline;
+  .sidebar-column {
+    display: inline-block;
+    margin-left: 2%;
+    vertical-align: top;
+    width: 32%;
   }
 
-  dt {
-    font-weight: bold;
+  .block {
+    background: $white;
+    border-radius: .5em;
+    margin: .5em 0;
+    min-height: 12em;
+    padding: .5em;
   }
 
-  dt:before {
-    content: "";
-    display: block;
-    margin-bottom: .5em;
-  }
+  /* specific datum block styles */
 
-  dd {
-    margin: 0;
-  }
-}
-
-.indicators {
-    .indicator-bar-outer, .indicator-bar-inner {
-      height: 10px;
-      border-radius: 5px;
+  .sidebar {
+    dl {
+      font-size: .7em;
+      margin: -.5em 0 0 0;
     }
-  .indicator-bar-outer {
-      width: 300px;
-      background-color: #DDD;
-      display: inline-block;
+
+    dt, dd {
+      display: inline;
+    }
+
+    dt {
+      font-weight: bold;
+    }
+
+    dt:before {
+      content: "";
+      display: block;
+      margin-bottom: .5em;
+    }
+
+    dd {
+      margin: 0;
+    }
   }
-  li {
-    list-style-type: none;
-  }
-  li:nth-child(3n+1) .indicator-bar-inner {
-      background-color: $orange;
-  }
-  li:nth-child(3n+2) .indicator-bar-inner {
-      background-color: $cyan;
-  }
-  li:nth-child(3n+3) .indicator-bar-inner {
-      background-color: $gold;
+
+  .indicators {
+      .indicator-bar-outer, .indicator-bar-inner {
+        height: 10px;
+        border-radius: 5px;
+      }
+    .indicator-bar-outer {
+        width: 300px;
+        background-color: #DDD;
+        display: inline-block;
+    }
+    li {
+      list-style-type: none;
+    }
+    li:nth-child(3n+1) .indicator-bar-inner {
+        background-color: $orange;
+    }
+    li:nth-child(3n+2) .indicator-bar-inner {
+        background-color: $cyan;
+    }
+    li:nth-child(3n+3) .indicator-bar-inner {
+        background-color: $gold;
+    }
   }
 }
 
