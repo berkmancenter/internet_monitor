@@ -1,0 +1,32 @@
+@import "colors";
+
+.score-pill {
+  font-size: 10px;
+
+  .header {
+    margin-right: 8px;
+    text-transform: uppercase;
+  }
+
+  .imon-score, .user-score {
+    display: inline-block;
+    height: 34px;
+    padding-top: 9px;
+    text-align: center;
+    vertical-align: middle;
+    width: 42px;
+  }
+
+  .imon-score {
+    border-radius: 4px 0 0 4px;
+  }
+
+  .user-score {
+    background: $bright-gold url('gear.png') no-repeat;
+    border-radius: 0 4px 4px 0;
+
+    &:hover {
+      background: $light-blue url('gear.png') no-repeat -42px 0;
+    }
+  }
+}

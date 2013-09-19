@@ -16,7 +16,15 @@ describe ( 'countries/_score_pill' ) {
     }
 
     it {
-      should have_css 'span', text: 'score'
+      should have_css 'span.header', text: 'score'
+    }
+
+    it {
+      should have_css 'span.imon-score', text: country.score
+    }
+
+    it {
+      should have_css 'a.user-score'
     }
   }
 }
