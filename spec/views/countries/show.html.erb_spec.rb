@@ -19,9 +19,9 @@ describe ( 'countries/show' ) {
       should have_css 'h1 .score-pill'
     }
 
-    it ( 'h1 no longer has score' ) {
+    it ( 'h1 has country name score (inside pill)' ) {
       should have_css 'h1', text: country.name
-      should_not have_css 'h1', text: country.score
+      should have_css 'h1', text: country.score
     }
 
     it ( 'h1 & .sub-content are siblings' ) {

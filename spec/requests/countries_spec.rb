@@ -70,6 +70,22 @@ describe 'countries requests' do
     it ( 'should not have indicators' ) {
       should_not have_selector( '.country .indicators,.country .url-lists,.country .html-blocks,.country .images' );
     }
+
+    it {
+      should have_css '.score-pill'
+    }
+
+    describe 'click user score in pill', :js => true do
+      before {
+        page.execute_script( %q[$('a.user-score').click( )] );
+        #click_link 'a.user-score'
+      }
+
+      it {
+        find( '#weight-sliders' ).visible?.should be_true;
+      }
+
+    end
   end
 
   describe( "get /countries/:id/access" ) do
