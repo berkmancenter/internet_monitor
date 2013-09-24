@@ -5,7 +5,6 @@
   left: 0;
   position: absolute;
   top: 0;
-  z-index: 1;
 
   ul {
     list-style: none;
@@ -20,6 +19,7 @@
   right: 32px + 42px + 42px + 5px;
   top: 82px;
   @include transition-height;
+  z-index: 1;
 
   &.expanded {
     height: auto;
