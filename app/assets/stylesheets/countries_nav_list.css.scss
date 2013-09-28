@@ -11,6 +11,7 @@
   top: 82px;
   @include transition-height;
   width: 256px + 16px;
+  z-index: 1;
 
   &.expanded {
     overflow: auto;

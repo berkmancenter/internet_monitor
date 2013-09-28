@@ -49,8 +49,10 @@
 .country-data-view {
   h1 {
     color: $white;
-    font-size: 1.4em;
-    font-weight: bold;
+    font-size: 1.6em;
+    font-weight: normal;
+    margin: 0;
+    padding: 2.5em 2em 1em 2em;
     position: relative;
 
     .score-pill {

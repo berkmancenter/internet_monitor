@@ -44,7 +44,7 @@ summary {
 
 html {
   color: $black;
-  font-family: Verdana, sans-serif;
+  font-family: Sans-Serif;
   font-size: 1em;
 }
 
@@ -187,11 +187,6 @@ header {
 .main-content {
   background: $white;
   padding: 0;
-
-  h1 {
-    margin: 0;
-    padding: 2.5em 2em 1em 2em;
-  }
 }
 
 .sub-content {
