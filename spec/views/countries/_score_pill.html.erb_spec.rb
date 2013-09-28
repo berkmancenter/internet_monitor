@@ -20,7 +20,7 @@ describe ( 'countries/_score_pill' ) {
     }
 
     it {
-      should have_css 'span.imon-score', text: country.score
+      should have_css 'span.imon-score', text: country.score.round(2), exact: true
     }
 
     it {
