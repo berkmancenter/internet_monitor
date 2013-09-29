@@ -12,7 +12,11 @@ describe ( 'countries/show' ) {
     }
 
     it {
-      should have_css '.view h1'
+      should have_css '.view.country-data-view'
+    }
+
+    it {
+      should have_css '.view h1', text: country.name
     }
 
     it {
@@ -21,7 +25,7 @@ describe ( 'countries/show' ) {
 
     it ( 'h1 has country name score (inside pill)' ) {
       should have_css 'h1', text: country.name
-      should have_css 'h1', text: country.score
+      should have_css 'h1', text: country.score.round(2), exact: true
     }
 
     it ( 'h1 & .sub-content are siblings' ) {
@@ -42,7 +46,7 @@ describe ( 'countries/show' ) {
       should_not have_css '.sub-content .country-data'
     }
 
-    it ( 'should not have generic indicators' ) {
+    it ( 'should not have generic indicators in sidebar' ) {
       should_not have_css '.sidebar .indicators'
     }
 

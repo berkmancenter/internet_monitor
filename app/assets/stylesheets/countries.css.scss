@@ -55,8 +55,12 @@
     padding: 2.5em 2em 1em 2em;
     position: relative;
 
+    .category-name {
+      font-weight: bold;
+    }
+
     .score-pill {
-      bottom: 1em;
+      bottom: 2.5em;
       left: 50%;
       position: absolute;
     }

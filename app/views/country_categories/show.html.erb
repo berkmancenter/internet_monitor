@@ -1,18 +1,24 @@
 <% provide :title, "#{@country.name} #{@category.name}" %>
 
-<%= render partial: "countries/sidebar" %>
-
-<article class="countries sub-content">
-  <h1 <%= "class='#{@category.name}'" %>>
-    <%= @category.name %> in <%= render partial: "countries/list_item", locals: {country: @country} %>
+<article class="view country-data-view">
+  <h1 class="<%= "#{@category.slug}-1-bg" %>">
+    <span class="category-name"><%= @category.name %></span> in <%= @country.name %>
+    <%= render partial: 'countries/score_pill', locals: { country: @country } %>
   </h1>
-    <%= render partial: "data/grouped", locals: {data: @category.data.most_recent.for(@country)} %>
 
-    <% @country.languages.each do |language|
+  <div class="sub-content country-6-bg">
+    <div class="main-column">
+      <% @country.languages.each do |language|
         data = @category.data.most_recent.for(language)
         unless data.empty? %>
-            <h3><%= language.name %></h3>
-            <%= render partial: "data/grouped", locals: {data: data} %>
-        <% end %>
-    <% end %>
+          <h3><%= language.name %></h3>
+          <%= render partial: "data/grouped", locals: {data: data} %>
+      <% end %>
+      <% end %>
+    </div>
+
+    <div class="sidebar-column">
+      <%= render partial: "countries/sidebar" %>
+    </div>
+  </div>
 </article>
