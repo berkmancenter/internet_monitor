@@ -5,6 +5,9 @@ describe ( 'map requests' ) {
 
   describe 'get /map', :js => true do
     before { visit map_path }
+    it {
+      should have_title 'map @ Internet Monitor'
+    }
 
     # map
     it {
