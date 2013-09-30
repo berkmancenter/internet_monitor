@@ -8,12 +8,15 @@
 
   <div class="sub-content country-6-bg">
     <div class="main-column">
+      <%= render partial: 'data/indicators', object: @category.data.most_recent.for( @country ) %>
+      <%#= render partial: "data/grouped", locals: {data: @category.data.most_recent.for(@country)} %>
+      
       <% @country.languages.each do |language|
         data = @category.data.most_recent.for(language)
         unless data.empty? %>
           <h3><%= language.name %></h3>
           <%= render partial: "data/grouped", locals: {data: data} %>
-      <% end %>
+        <% end %>
       <% end %>
     </div>
 
