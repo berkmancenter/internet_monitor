@@ -1,5 +1,7 @@
 $( function( ) {
   if ( $( '.map.partial' ).length ) {
+    var hover = null;
+
     var map = $( '.geomap' ).geomap( {
       services: [ ],
       center: [ 0, 20 ],
@@ -14,8 +16,22 @@ $( function( ) {
         strokeWidth: '1px'
       },
       move: function( e, geo ) {
-        if ( map.geomap( 'find', geo, 1 ).length ) {
+        var countries = map.geomap( 'find', geo, 1 );
+        if ( countries.length > 0 ) {
           map.geomap( 'option', 'mode', 'click' );
+
+          if ( countries[ 0 ] !== hover ) {
+            if ( hover ) {
+              map.geomap( 'remove', hover );
+            }
+
+            hover = $.extend( true, { }, countries[ 0 ] );
+            map.geomap( 'append', hover, {
+              stroke: '#222222',
+              strokeWidth: '4px'
+            } );
+          }
+
         } else {
           map.geomap( 'option', 'mode', 'pan' );
         }
