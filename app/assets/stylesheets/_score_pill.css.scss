@@ -4,21 +4,33 @@
   font-size: 10px;
 
   .header {
+    display: none;
     margin-right: 8px;
     text-transform: uppercase;
   }
 
-  .imon-score, .user-score {
+  .country-name, .imon-score, .user-score {
     display: inline-block;
     height: 34px;
     padding-top: 9px;
-    text-align: center;
     vertical-align: middle;
+  }
+
+  .country-name {
+    background-color: $light-blue;
+    border-radius: 4px 0 0 4px;
+    padding-right: 2em;
+    text-align: left;
+  }
+
+  .imon-score, .user-score {
+    text-align: center;
     width: 42px;
   }
 
   .imon-score {
-    border-radius: 4px 0 0 4px;
+    background-color: $light-blue;
+    border-radius: 0;
   }
 
   .user-score {
@@ -28,5 +40,20 @@
     &:hover {
       background: $light-blue url('gear.png') no-repeat -42px 0;
     }
+  }
+}
+
+h1 .score-pill {
+  .header {
+    display: inline;
+  }
+
+  .country-name {
+    display: none;
+  }
+
+  .imon-score {
+    background-color: darken( $violet, 10% );
+    border-radius: 4px 0 0 4px;
   }
 }

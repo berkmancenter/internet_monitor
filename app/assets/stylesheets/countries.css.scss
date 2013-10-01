@@ -173,8 +173,8 @@
 /* end */
 
 .countries.map {
-  $sectionTop: 158px;
-  $sectionBreak: 256px;
+  $sectionTop: 128px;
+  $sectionBreak: 320px;
 
   min-width: 800px;
   
@@ -189,7 +189,7 @@
   }
 
   .geomap {
-    background: #addfe6;
+    background: $light-blue;
     bottom: 40px;
     left: 0;
     position: fixed;
@@ -198,6 +198,7 @@
   }
 
   .map-index {
+    background: $white;
     bottom: 24px;
     font-size: .8em;
     position: fixed;

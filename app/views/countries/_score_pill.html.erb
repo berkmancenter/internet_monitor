@@ -1,4 +1,5 @@
 <div class="score-pill">
+  <%= link_to country.name, country, class: 'country-name' %>
   <span class="header">score</span>
-  <span class="imon-score country-0-bg"><%= country.score.round(2) %></span><a href="javascript:void(0);" class="user-score"></a>
+  <span class="imon-score"><%= country.score.round(2) %></span><a href="javascript:void(0);" class="user-score"></a>
 </div>

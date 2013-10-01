@@ -10,15 +10,15 @@
 
     <h2>Countries</h2>
 
-    <ol>
+    <ol class="scored-countries">
       <% @scored_countries.each do |country| %>
-        <li><%= render partial: 'countries/list_item', locals: { country: country } %></li>
+        <li><%= render partial: 'countries/score_pill', locals: { country: country } %></li>
       <% end %>
     </ol>
 
     <h2>Countries Without Scores</h2>
 
-    <ol>
+    <ol class="unscored-countries">
       <% @unscored_countries.each do |country| %>
         <li><%= link_to "#{country.name}", country %></li>
       <% end %>
