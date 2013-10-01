@@ -17,6 +17,7 @@ describe ( 'countries/_score_pill' ) {
 
     it {
       should have_css "a[href*='#{country_path(country)}'].country-name", text: country.name
+      should have_css "a[title='#{country.name}']"
     }
 
     it {

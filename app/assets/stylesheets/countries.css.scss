@@ -199,17 +199,36 @@
 
   .map-index {
     background: $white;
-    bottom: 24px;
+    bottom: 40px;
     font-size: .8em;
+    overflow: auto;
+    padding-left: .5em;
     position: fixed;
     right: 0;
     top: $sectionTop;
     width: $sectionBreak;
+
+    h2 {
+      text-transform: uppercase;
+    }
+
+    ol, ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        margin: .25em 0;
+      }
+    }
+
+    .score-pill .country-name {
+      width: $sectionBreak - 160px;
+    }
   }
 
   footer {
     bottom: 0;
-    height: 40px;
     left: 0;
     position: fixed;
     right: 0;

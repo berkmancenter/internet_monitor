@@ -24,6 +24,11 @@ namespace :db do
       usa.languages << english;
       usa.save!
 
+      country_nil_score = FactoryGirl.create( :country_nil_score );
+      country_nil_score.categories = categories;
+      country_nil_score.languages << english;
+      country_nil_score.save!
+
       # access datum sources
       ds_pct_inet = FactoryGirl.create( :ds_pct_inet );
       ds_pct_inet.category = categories[ 0 ];

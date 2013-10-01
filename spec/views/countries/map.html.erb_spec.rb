@@ -14,16 +14,22 @@ describe ( 'countries/map' ) {
 
     it {
       should have_css '.geomap'
+      should have_css '.geomap[data-max-score="4.82843928"]'
     }
 
     it {
       should have_css '.map-index'
-      should have_css '.map-index ol.scored-countries'
-      should have_css '.map-index ol.unscored-countries'
+
+      should have_css '.map-index h2', text: 'Countries', exact: true
+      should have_css '.map-index ol.scored-countries' #ordered
+
+      should have_css '.map-index h2', text: 'Countries Without Scores'
+      should have_css '.map-index ul.unscored-countries' #unordered
     }
 
     it {
-      should have_css '.map-index .score-pill'
+      should have_css '.map-index ol .score-pill'
+      should have_css '.map-index ul .score-pill'
     }
   }
 }

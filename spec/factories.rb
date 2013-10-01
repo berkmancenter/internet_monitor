@@ -20,6 +20,15 @@ FactoryGirl.define do
       description nil
       indicator_count 1
     end
+
+    factory :country_nil_score do
+      name 'nil_score'
+      iso_code 'NS'
+      iso3_code 'CNS'
+      score nil
+      description 'nil_score'
+      indicator_count 0
+    end
   end
 
   factory :language do

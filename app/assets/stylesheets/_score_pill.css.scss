@@ -10,17 +10,28 @@
   }
 
   .country-name, .imon-score, .user-score {
+    color: $violet;
     display: inline-block;
     height: 34px;
     padding-top: 9px;
     vertical-align: middle;
   }
 
+  /* width of .country-name should be set by containing view */
   .country-name {
     background-color: $light-blue;
     border-radius: 4px 0 0 4px;
+    overflow: hidden;
+    padding-left: 1em;
     padding-right: 2em;
     text-align: left;
+    text-decoration: none;
+    text-overflow: ellipsis;
+
+    &:hover {
+      background: $violet;
+      color: $white;
+    }
   }
 
   .imon-score, .user-score {
@@ -55,5 +66,6 @@ h1 .score-pill {
   .imon-score {
     background-color: darken( $violet, 10% );
     border-radius: 4px 0 0 4px;
+    color: $white;
   }
 }

@@ -1,4 +1,4 @@
 <section class="map partial">
-  <div class="geomap" data-max-score="<%= Country.order('score desc').first.score %>" data-map-countries="<%= @map_countries.to_json %>"></div>
+  <div class="geomap" data-max-score="<%= @map_countries.order('score desc').first.score %>" data-map-countries="<%= @map_countries.to_json %>"></div>
 </section>
 

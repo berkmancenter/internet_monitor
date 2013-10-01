@@ -1,5 +1,7 @@
 <div class="score-pill">
-  <%= link_to country.name, country, class: 'country-name' %>
-  <span class="header">score</span>
-  <span class="imon-score"><%= country.score.round(2) %></span><a href="javascript:void(0);" class="user-score"></a>
+  <%= link_to country.name, country, class: 'country-name', title: country.name %>
+  <% if country.score.present? %>
+    <span class="header">score</span>
+    <span class="imon-score"><%= country.score.round(2) %></span><a href="javascript:void(0);" class="user-score"></a>
+  <% end %>
 </div>
