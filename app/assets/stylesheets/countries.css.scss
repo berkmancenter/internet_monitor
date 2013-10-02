@@ -195,6 +195,13 @@
     position: fixed;
     right: $sectionBreak;
     top: $sectionTop;
+
+    .geo-label {
+      background: $white;
+      border: solid 2px $violet;
+      border-radius: .25em;
+      padding: .5em;
+    }
   }
 
   .map-index {

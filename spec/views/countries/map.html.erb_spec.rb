@@ -18,6 +18,15 @@ describe ( 'countries/map' ) {
     }
 
     it {
+      should have_css 'script#popup-tmpl', visible: false
+
+      # info shown in the popup
+      should have_css '#popup-tmpl', text: 'name', visible: false
+      should have_css '#popup-tmpl', text: 'score', visible: false
+      should have_css '#popup-tmpl', text: country_path, visible: false
+    }
+
+    it {
       should have_css '.map-index'
 
       should have_css '.map-index h2', text: 'Countries', exact: true
