@@ -23,10 +23,8 @@ $( function( ) {
         click: 'pointer'
       },
       shapeStyle: {
-        color: '#36484a',
-        fillOpacity: 1,
-        stroke: '#addfe6',
-        strokeWidth: '1px'
+        height: 0,
+        width: 0
       },
       move: function( e, geo ) {
         var countries = map.geomap( 'find', geo, 1 );
@@ -38,7 +36,7 @@ $( function( ) {
               mapHighlightService.geomap( 'remove', hover, false );
             }
 
-            hover = $.extend( true, { }, countries[ 0 ] );
+            hover = countries[ 0 ];
             mapHighlightService.geomap( 'append', hover );
           }
 
@@ -60,8 +58,8 @@ $( function( ) {
         var countries = map.geomap( 'find', geo, 1 );
         if ( countries.length > 0 ) {
           if ( countries[ 0 ].properties.country_id ) {
-            popup = $.geo.centroid( countries[ 0 ].geometry );
-            map.geomap( 'append', popup, popupTmpl.render( countries[ 0 ].properties ), { width: 0, height: 0 } );
+            popup = geo;
+            map.geomap( 'append', geo, popupTmpl.render( countries[ 0 ].properties ) );
           }
         }
       }
