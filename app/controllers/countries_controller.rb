@@ -9,6 +9,7 @@ class CountriesController < ApplicationController
     end
 
     def show
+        @map_countries = Country.with_enough_data.select( 'id,iso3_code,score' )
         @country = Country.find(params[:id])
         if params[:category_slug]
             @category = Category.find(params[:category_slug])

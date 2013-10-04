@@ -20,7 +20,8 @@ describe ( 'map requests' ) {
     }
 
     it ( 'should not have a default basemap' ) {
-      should_not have_selector( '.geo-service' );
+      should have_selector( '#map-countries-service.geo-service' );
+      should have_selector( '#map-highlight-service.geo-service' );
     }
 
     # index

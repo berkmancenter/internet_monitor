@@ -99,6 +99,11 @@
   /* specific datum block styles */
 
   .sidebar {
+    .geomap {
+      height: 16em;
+      position: relative;
+    }
+
     dl {
       font-size: .7em;
       margin: -.5em 0 0 0;

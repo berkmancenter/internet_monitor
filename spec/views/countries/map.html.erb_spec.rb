@@ -23,7 +23,7 @@ describe ( 'countries/map' ) {
       # info shown in the popup
       should have_css '#popup-tmpl', text: 'name', visible: false
       should have_css '#popup-tmpl', text: 'score', visible: false
-      should have_css '#popup-tmpl', text: country_path, visible: false
+      should have_css '#popup-tmpl', text: '/countries/', visible: false
     }
 
     it {

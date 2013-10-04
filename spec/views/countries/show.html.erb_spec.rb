@@ -7,6 +7,7 @@ describe ( 'countries/show' ) {
     let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
 
     before {
+      assign( :map_countries, Country.with_enough_data.select( 'iso3_code,score' ) )
       assign( :country, country )
       render
     }
@@ -40,6 +41,12 @@ describe ( 'countries/show' ) {
     it ( 'should have at least a country update & sidebar' ) {
       should have_css '.main-column .update.block'
       should have_css '.sidebar-column .sidebar.block'
+    }
+
+    it ( 'should have a map' ) {
+      should have_css '.sidebar .geomap'
+      should have_css '.sidebar .geomap[data-max-score]'
+      should have_css '.sidebar .geomap[data-max-score][data-country-iso3="IRN"]'
     }
 
     it ( 'no more country dropdown in sidebar' ) {

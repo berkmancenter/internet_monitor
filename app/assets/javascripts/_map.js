@@ -4,6 +4,7 @@ $( function( ) {
     var popup = null;
     var popupTmpl = $.templates( '#popup-tmpl' );
 
+
     var map = $( '.geomap' ).geomap( {
       services: [
         {
@@ -86,8 +87,12 @@ $( function( ) {
     var maxScore = map.data( 'maxScore' );
     //var countriesPath = map.data( 'countriesPath' );
 
+    var zoomCountry = $( '.geomap' ).data( 'countryIso3' );
+    var zoomBbox = null;
+    
     // grab the world countries file
     $.getJSON('/world-countries.json', function (result) {
+
       // append them to the map
       $.each( result.features, function( ) {
         var r = '36';
@@ -99,10 +104,18 @@ $( function( ) {
         mapCountriesService.geomap('append', this, {
           color: '#' + r + '484a'
         }, false);
+
+        if ( this.properties.iso_a3 === zoomCountry ) {
+          zoomBbox = $.geo.bbox( this );
+        }
       });
 
       // show them
-      map.geomap('refresh');
+      if ( zoomBbox ) {
+        map.geomap( 'option', 'bbox', zoomBbox );
+      } else {
+        map.geomap('refresh');
+      }
     });
   }
 } );
