@@ -76,6 +76,7 @@ describe ( 'country_categories/show' ) {
     let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
 
     before {
+      assign( :map_countries, Country.with_enough_data.select( 'iso3_code,score' ) )
       assign( :country, country )
     }
 
