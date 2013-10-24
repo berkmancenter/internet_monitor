@@ -31,6 +31,7 @@ group :assets do
 end
 
 gem 'jquery-rails', '~> 2.0.0'
+gem 'rubyzip', '< 1.0.0'
 gem 'roo'
 gem 'httparty'
 gem 'nokogiri'

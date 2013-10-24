@@ -49,7 +49,7 @@ FactoryGirl.define do
       public_name 'Literacy rate, adult total (% of people ages 15 and...'
       description nil
       datum_type 'Indicator'
-      # category access
+      #category access
       default_weight 1
       min 18.15768113
       max 99.99826243
@@ -65,7 +65,7 @@ FactoryGirl.define do
       public_name 'Percentage of individuals using the Internet'
       description nil
       datum_type 'Indicator'
-      # category access
+      #category access
       default_weight 1
       min 0.0
       max 95.02
@@ -81,7 +81,7 @@ FactoryGirl.define do
       public_name 'consistency'
       description nil
       datum_type 'Indicator'
-      # category control
+      #category control
       default_weight 1
       min 1.0
       max 10
@@ -98,7 +98,7 @@ FactoryGirl.define do
       public_name 'Population, total'
       description nil
       datum_type 'Indicator'
-      # category nil
+      #category nil
       default_weight 0
       min 9847
       max 1344130000
@@ -108,15 +108,30 @@ FactoryGirl.define do
       affects_score false
       link nil
     end
+
+    factory :ds_morningside do
+      admin_name 'ds_morningside'
+      public_name 'Morningside Analytics'
+      description nil
+      datum_type 'JsonObject'
+      #category activity
+      default_weight 0
+      min nil
+      max nil
+      retriever_class 'MorningsideFetcher'
+      is_api true
+      in_sidebar false
+      affects_score false
+    end
   end
 
-  factory :datum do
+  factory :indicator do
     # iran
     factory :d_pct_inet_iran do
       #source ds_pct_inet
       start_date '2011-01-01'
-      #country_id iran
-      language_id nil
+      #country iran
+      #language nil
       original_value 21.0
       value 0.22100610397810988
       type 'Indicator'
@@ -125,8 +140,8 @@ FactoryGirl.define do
     factory :d_lit_rate do
       #source ds_lit_rate
       start_date '2011-01-01'
-      #country_id iran
-      language_id nil
+      #country iran
+      #language nil
       original_value 36.51840027
       value 0.224347369
       type 'Indicator'
@@ -135,8 +150,8 @@ FactoryGirl.define do
     factory :d_consistency do
       #source ds_consistency
       start_date '2011-01-01'
-      #country_id iran
-      language_id nil
+      #country iran
+      #language nil
       original_value 10.0
       value 1
       type 'Indicator'
@@ -145,8 +160,8 @@ FactoryGirl.define do
     factory :d_population do
       #source ds_population
       start_date '2011-01-01'
-      #country_id iran
-      language_id nil
+      #country iran
+      #language nil
       original_value 74798599
       value 0.05564141853916538
       type 'Indicator'
@@ -156,14 +171,25 @@ FactoryGirl.define do
     factory :d_pct_inet_usa do
       #source ds_pct_inet
       start_date '2011-01-01'
-      #country_id usa
-      language_id nil
+      #country usa
+      #language nil
       original_value 77.863
       value 0.8194
       type 'Indicator'
     end
   end
 
+  factory :json_object do
+    factory :d_morningside do
+      #source ds_morningside
+      start_date '2013-10-24'
+      #country nil
+      #language persian
+      original_value nil
+      #value [morningside.json]
+      type 'JsonObject'
+    end
+  end
 
   # refinery
   factory :tadmin, class: Refinery::User do |u|

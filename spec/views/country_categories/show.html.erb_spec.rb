@@ -121,6 +121,16 @@ describe ( 'country_categories/show' ) {
       it_should_behave_like 'country_category layout'
 
       it_should_behave_like 'country sidebar'
+
+      it {
+        should_not have_css 'section.indicators'
+      }
+
+      it {
+        # activity sample has a morningside widget
+        should have_css 'div.json-objects'
+        should have_css '.json-objects .morningside-fetcher'
+      }
     }
   }
 }

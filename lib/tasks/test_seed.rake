@@ -65,11 +65,23 @@ namespace :db do
       d_consistency.country = iran;
       d_consistency.save!
 
+      # access datum sources
+      ds_morningside = FactoryGirl.create :ds_morningside
+      ds_morningside.category = categories[ 1 ]
+      ds_morningside.save
+
+      # access datum
+      d_morningside = FactoryGirl.create :d_morningside
+      d_morningside.source = ds_morningside
+      d_morningside.language = persian
+      d_morningside.value = IO.read 'db/test_data/morningside.json'
+      d_morningside.save
+
       # other datum source
       ds_population = FactoryGirl.create( :ds_population );
       ds_population.save!
 
-      # control datum
+      # other datum
       d_population = FactoryGirl.create( :d_population );
       d_population.source = ds_population;
       d_population.country = iran;

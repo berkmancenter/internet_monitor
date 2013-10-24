@@ -32,6 +32,7 @@ class MorningsideFetcher
     def data(options = {})
         data = []
         clustermaps.each do |map|
+            puts map.inspect
             language_iso_code = LANGUAGE_MAP[map['name']]
             next unless language_iso_code
             language = Language.find_by_iso_code(language_iso_code)
