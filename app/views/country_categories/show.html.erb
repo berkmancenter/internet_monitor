@@ -8,7 +8,9 @@
 
   <div class="sub-content country-6-bg">
     <div class="main-column">
-      <p class="update block <%= @category.slug %>">UPDATE:</p>
+      <% if @update.present? %>
+        <div class="update block <%= @category.slug %>"><%= raw @update %></div>
+      <% end %>
       <%= render partial: 'data/indicators', object: @category.data.most_recent.for( @country ) %>
       <%#= render partial: "data/grouped", locals: {data: @category.data.most_recent.for(@country)} %>
       

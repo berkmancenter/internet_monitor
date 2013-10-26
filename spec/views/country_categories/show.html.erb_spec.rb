@@ -52,6 +52,10 @@ describe ( 'country_categories/show' ) {
     it ( 'should have a country category update block' ) {
       should have_css ".main-column .update.#{category.slug}.block"
     }
+
+    it ( 'should pull the category update text from a refinery page' ) {
+      should have_css '.update', text: update
+    }
   }
 
   shared_examples_for ( 'country sidebar' ) {
@@ -82,9 +86,11 @@ describe ( 'country_categories/show' ) {
 
     context ( 'access' ) {
       let ( :category ) { Category.find_by_slug( 'access' ) }
+      let ( :update ) { strip_tags( Refinery::Page.by_slug( country.iso3_code.downcase ).first.content_for( :access ) ) }
 
       before {
         assign( :category, category )
+        assign( :update, update )
         render
       }
 
@@ -97,9 +103,11 @@ describe ( 'country_categories/show' ) {
 
     context ( 'control' ) {
       let ( :category ) { Category.find_by_slug( 'control' ) }
+      let ( :update ) { strip_tags( Refinery::Page.by_slug( country.iso3_code.downcase ).first.content_for( :control ) ) }
 
       before {
         assign( :category, category )
+        assign( :update, update )
         render
       }
 
@@ -112,9 +120,11 @@ describe ( 'country_categories/show' ) {
 
     context ( 'activity' ) {
       let ( :category ) { Category.find_by_slug( 'activity' ) }
+      let ( :update ) { strip_tags( Refinery::Page.by_slug( country.iso3_code.downcase ).first.content_for( :activity ) ) }
 
       before {
         assign( :category, category )
+        assign( :update, update )
         render
       }
 

@@ -99,6 +99,15 @@ namespace :db do
       iran_page_body = FactoryGirl.create :iran_page_body
       iran_page_body.page = iran_page
       iran_page_body.save
+      iran_page_access = FactoryGirl.create :iran_page_access
+      iran_page_access.page = iran_page
+      iran_page_access.save
+      iran_page_control = FactoryGirl.create :iran_page_control
+      iran_page_control.page = iran_page
+      iran_page_control.save
+      iran_page_activity = FactoryGirl.create :iran_page_activity
+      iran_page_activity.page = iran_page
+      iran_page_activity.save
     end
   end
 end

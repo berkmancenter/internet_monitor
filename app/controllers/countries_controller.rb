@@ -17,6 +17,7 @@ class CountriesController < ApplicationController
 
     if params[:category_slug]
       @category = Category.find(params[:category_slug])
+      @update = page.first.content_for( @category.slug ) unless page.empty?
       render "country_categories/show"
     else
       @update = page.first.content_for( :body ) unless page.empty?

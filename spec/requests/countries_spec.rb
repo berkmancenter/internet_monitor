@@ -48,63 +48,80 @@ describe 'countries requests' do
   }
 
   describe( "get /countries/:id" ) do
-    let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
+    context ( 'with normal country' ) {
+      let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
 
-    before { visit country_path( country ) }
+      before { visit country_path( country ) }
 
-    it {
-      should have_title( "#{country.name.downcase} @ Internet Monitor" )
-    }
-
-    it {
-      should have_selector 'h1', text: country.name
-    }
-
-    it_should_behave_like( 'weight_slider' );
-
-    it_should_behave_like( 'category_selector' );
-    it ( 'should not have any category' ) {
-      should_not have_selector( ".category-selector a.selected" );
-    }
-
-    it ( 'should not have indicators' ) {
-      should_not have_selector( '.country .indicators,.country .url-lists,.country .html-blocks,.country .images' );
-    }
-
-    it {
-      should have_css '.score-pill'
-    }
-
-    describe 'click user score in pill', :js => true do
-      before {
-        page.execute_script( %q[$('a.user-score').click( )] );
-        #click_link 'a.user-score'
+      it {
+        should have_title( "#{country.name.downcase} @ Internet Monitor" )
       }
 
       it {
-        find( '#weight-sliders' ).visible?.should be_true;
+        should have_selector 'h1', text: country.name
       }
 
-    end
+      it_should_behave_like( 'weight_slider' );
+
+      it_should_behave_like( 'category_selector' );
+      it ( 'should not have any category' ) {
+        should_not have_selector( ".category-selector a.selected" );
+      }
+
+      it ( 'should not have indicators' ) {
+        should_not have_selector( '.country .indicators,.country .url-lists,.country .html-blocks,.country .images' );
+      }
+
+      it {
+        should have_css '.score-pill'
+      }
+
+      describe 'click user score in pill', :js => true do
+        before {
+          page.execute_script( %q[$('a.user-score').click( )] );
+          #click_link 'a.user-score'
+        }
+
+        it {
+          find( '#weight-sliders' ).visible?.should be_true;
+        }
+
+      end
+    }
   end
 
   describe( "get /countries/:id/access" ) do
-    let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
-    let ( :category ) { Category.find_by_name( 'Access' ) }
+    context ( 'with normal country' ) {
+      let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
+      let ( :category ) { Category.find_by_name( 'Access' ) }
 
-    before {
-      visit category_country_path(country, :category_slug => 'access')
+      before {
+        visit category_country_path(country, :category_slug => 'access')
+      }
+
+      it {
+        should have_title( "#{country.name.downcase} access @ Internet Monitor" )
+      }
+
+      it_should_behave_like( 'weight_slider' );
+
+      it_should_behave_like( 'category_selector' );
+      it ( 'should have category selected' ) {
+        should have_selector( ".category-selector a[href*='#{category_country_path(country, :category_slug => "access")}'].selected" );
+      }
     }
 
-    it {
-      should have_title( "#{country.name.downcase} access @ Internet Monitor" )
-    }
+    context ( 'with country missing access CMS page' ) {
+      let ( :country ) { Country.find_by_iso3_code( 'USA' ) }
+      let ( :category ) { Category.find_by_name( 'Access' ) }
 
-    it_should_behave_like( 'weight_slider' );
+      before {
+        visit category_country_path( country, category_slug: 'access' )
+      }
 
-    it_should_behave_like( 'category_selector' );
-    it ( 'should have category selected' ) {
-      should have_selector( ".category-selector a[href*='#{category_country_path(country, :category_slug => "access")}'].selected" );
+      it {
+        should have_title( "#{country.name.downcase} access @ Internet Monitor" )
+      }
     }
   end
 

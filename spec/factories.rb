@@ -213,6 +213,27 @@ FactoryGirl.define do
     body 'Iran, also formerly known as Persia, and officially the Islamic Republic of Iran since 1980, is a country in Western Asia.'
     position 0
   end
+
+  factory :iran_page_access, class: Refinery::PagePart do |pp|
+    #pp.page iran_page
+    title 'Access'
+    body 'Iran has low internet access.'
+    position 2
+  end
+
+  factory :iran_page_control, class: Refinery::PagePart do |pp|
+    #pp.page iran_page
+    title 'Control'
+    body 'Iran does not control the Internet.'
+    position 3
+  end
+
+  factory :iran_page_activity, class: Refinery::PagePart do |pp|
+    #pp.page iran_page
+    title 'Activity'
+    body 'Iran is mildly active on Twitter.'
+    position 4
+  end
 end
 
 
