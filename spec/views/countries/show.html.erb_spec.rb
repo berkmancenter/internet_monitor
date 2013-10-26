@@ -9,6 +9,7 @@ describe ( 'countries/show' ) {
     before {
       assign( :map_countries, Country.with_enough_data.select( 'iso3_code,score' ) )
       assign( :country, country )
+      assign( :update, Refinery::Page.by_slug( country.iso3_code.downcase ).first.content_for( :body ) )
       render
     }
 
@@ -41,6 +42,10 @@ describe ( 'countries/show' ) {
     it ( 'should have at least a country update & sidebar' ) {
       should have_css '.main-column .update.block'
       should have_css '.sidebar-column .sidebar.block'
+    }
+
+    it ( 'should pull the update text from a refinery page' ) {
+      should have_css '.update', text: 'Iran, also formerly known as Persia, and officially the Islamic Republic of Iran since 1980, is a country in Western Asia.'
     }
 
     it ( 'should have a map' ) {

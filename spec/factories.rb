@@ -197,6 +197,22 @@ FactoryGirl.define do
     u.email 'tadmin@cyber.law.harvard.edu'
     u.password 'tp4ssw0rd'
   end
+
+  factory :iran_page, class: Refinery::Page do |p|
+    p.title 'IRN'
+    p.slug 'irn'
+    p.show_in_menu false
+    p.link_url ''
+    p.deletable true
+    p.draft false
+  end
+
+  factory :iran_page_body, class: Refinery::PagePart do |pp|
+    #pp.page iran_page
+    title 'Body'
+    body 'Iran, also formerly known as Persia, and officially the Islamic Republic of Iran since 1980, is a country in Western Asia.'
+    position 0
+  end
 end
 
 

@@ -93,6 +93,12 @@ namespace :db do
 
       u = FactoryGirl.create( :tadmin )
       u.create_first
+
+      # IRN page
+      iran_page = FactoryGirl.create :iran_page
+      iran_page_body = FactoryGirl.create :iran_page_body
+      iran_page_body.page = iran_page
+      iran_page_body.save
     end
   end
 end

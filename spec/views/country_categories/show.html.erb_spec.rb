@@ -49,8 +49,8 @@ describe ( 'country_categories/show' ) {
       should have_css '.sub-content .sidebar-column'
     }
 
-    it ( 'should not have a country update block' ) {
-      should_not have_css '.main-column .update.block'
+    it ( 'should have a country category update block' ) {
+      should have_css ".main-column .update.#{category.slug}.block"
     }
   }
 

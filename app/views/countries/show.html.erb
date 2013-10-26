@@ -9,7 +9,9 @@
 
   <div class="sub-content country-6-bg">
     <div class="main-column">
-      <p class="update block">UPDATE:</p>
+      <% if @update.present? %>
+        <div class="update block"><%= raw @update %></div>
+      <% end %>
     </div>
 
     <div class="sidebar-column">
