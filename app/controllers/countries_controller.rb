@@ -1,10 +1,13 @@
 class CountriesController < ApplicationController
   def index
-    @scored_countries = Country.with_enough_data.desc_score
-    @unscored_countries = Country.without_enough_data
-    respond_to do |format|
-      format.html
-      format.any(:xml, :json)
+    last_indicator = Indicator.last
+    if stale?( etag: last_indicator, last_modified: last_indicator.updated_at )
+      @scored_countries = Country.with_enough_data.desc_score
+      @unscored_countries = Country.without_enough_data
+      respond_to do |format|
+        format.html
+        format.any(:xml, :json)
+      end
     end
   end
 
