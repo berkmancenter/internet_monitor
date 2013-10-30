@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.nouislider
+//= require jquery.magnific-popup
 //= require_tree .
 
 (function() {
@@ -31,4 +32,7 @@
     $( '.category-selector' ).toggleClass( 'expanded' );
     return false;
   } );
+
+  // initialize score keeper (download data)
+  $.scoreKeeper.init( );
 } ());

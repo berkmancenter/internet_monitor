@@ -48,10 +48,12 @@ var weightSliders = {
         var countryId = $('.country').first().data('country-id');
         var data_path = (typeof countryId === 'undefined') ?
             this.COUNTRIES_PATH : this.COUNTRY_PATH.replace('{id}', countryId);
+        /*
         $.get(data_path, function(data) {
             weightSliders.countryData = (data instanceof Array) ? data : [data];
             weightSliders.sliderObjects.noUiSlider('disabled', false);
         });
+        */
 
         $('.toggle-weight-sliders').click( function() {
           $('#weight-sliders').toggleClass('hidden');
@@ -71,7 +73,7 @@ var weightSliders = {
             var weight = parseFloat($(this).data(weightSliders.WEIGHT_ATTRIBUTE));
             weightSliders.indicatorWeights[$(this).attr('id')] = Math.abs(weight);
             weightSliders.directions[$(this).attr('id')] = weight;
-            $(this).val(Math.abs(weight)).noUiSlider('disabled', true); 
+            $(this).val(Math.abs(weight)).noUiSlider('disabled', false); 
         });
     },
     updateScores : function() {

@@ -26,6 +26,18 @@ describe 'countries requests' do
     end
   }
 
+  describe 'get /', :js => true do
+    before { visit refinery::root_path }
+
+    describe ( 'load countries data' ) {
+      it {
+        sleep 1.5.seconds
+        snap
+        should have_css '.score-keeper-loader'
+      }
+    }
+  end
+
   describe 'get /countries' do
     before {
       visit( countries_path )

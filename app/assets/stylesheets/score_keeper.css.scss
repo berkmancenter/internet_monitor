@@ -1,0 +1,15 @@
+@import "colors";
+
+.score-keeper-loader {
+  position: relative;
+  background: $white;
+  padding: 2em;
+  width: auto;
+  max-width: 40em;
+  margin: 2em auto;
+
+  img {
+    vertical-align: middle;
+  }
+}
+

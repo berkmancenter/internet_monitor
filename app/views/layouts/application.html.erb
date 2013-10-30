@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width">
 
   <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "magnific-popup", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= "#{ params[ :controller ].sub( '/', '-' ) } #{ params[ :action ] }" %>">
@@ -40,6 +41,10 @@
     <%= render partial: 'countries/nav_list' %>
     <%= render partial: 'shared/widgets/category_selector' %>
     <%= yield %>
+
+    <div class="score-keeper-loader mfp-hide">
+      <%= image_tag 'ajax-loader.gif', alt: '' %> <span>Please wait while we load updated score calculation data.</span>
+    </div>
   </section>
 
   <footer>
