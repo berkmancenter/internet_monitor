@@ -1,15 +1,20 @@
 require 'spec_helper'
 
-describe 'countries requests' do
+describe 'countries requests', :js => true do
   subject { page }
 
   shared_examples_for( 'weight_slider' ) {
-    it ( 'should have weight_slider link' ) {
-      should have_selector( 'a.toggle-weight-sliders' );
-      should have_selector( '#weight-sliders.hidden' );
+    it ( 'should have country data loading screen' ) {
+      should have_css '.score-keeper-loader', visible: false
     }
 
-    describe 'click toggle-weight-sliders', :js => true do
+    it ( 'should have weight_slider link' ) {
+      snap
+      should have_selector( 'a.toggle-weight-sliders' );
+      should have_css '#weight-sliders.hidden', visible: false
+    }
+
+    describe 'click toggle-weight-sliders' do
       before {
         page.execute_script( %q[$('.toggle-weight-sliders').click( )] );
       }
@@ -25,18 +30,6 @@ describe 'countries requests' do
       }
     end
   }
-
-  describe 'get /', :js => true do
-    before { visit refinery::root_path }
-
-    describe ( 'load countries data' ) {
-      it {
-        sleep 1.5.seconds
-        snap
-        should have_css '.score-keeper-loader'
-      }
-    }
-  end
 
   describe 'get /countries' do
     before {
@@ -88,7 +81,7 @@ describe 'countries requests' do
         should have_css '.score-pill'
       }
 
-      describe 'click user score in pill', :js => true do
+      describe 'click user score in pill' do
         before {
           page.execute_script( %q[$('a.user-score').click( )] );
           #click_link 'a.user-score'
