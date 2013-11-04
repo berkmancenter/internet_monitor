@@ -1,15 +1,21 @@
 <% provide :title, "Countries" %>
 
-<h2>Countries</h2>
-<ol>
-    <% @scored_countries.each do |country| %>
-        <li><%= render partial: 'countries/list_item', locals: {country: country} %></li>
-    <% end %>
-</ol>
+<article class="view">
 
-<h2>Countries Without Scores</h2>
-<ol>
-    <% @unscored_countries.each do |country| %>
-        <li><%= link_to "#{country.name}", country %></li>
+  <h1>Country Index</h1>
+
+  <h2>Countries</h2>
+  <ol class="scored-countries">
+    <% @scored_countries.each do |country| %>
+      <li><%= render partial: 'countries/score_pill', locals: {country: country} %></li>
     <% end %>
-</ol>
+  </ol>
+
+  <h2>Countries Without Scores</h2>
+  <ul class="unscored-countries">
+    <% @unscored_countries.each do |country| %>
+      <li><%= render partial: 'countries/score_pill', locals: {country: country} %></li>
+    <% end %>
+  </ul>
+
+</article>

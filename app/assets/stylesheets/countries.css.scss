@@ -45,6 +45,20 @@
   }
 }
 
+.countries.index .view {
+  padding: 0 1em 1em 1em;
+
+  ol, ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: .25em 0;
+    }
+  }
+}
+
 /* countries#show & country_categories#show */
 .country-data-view {
   h1 {
