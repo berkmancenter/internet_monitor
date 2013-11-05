@@ -9,29 +9,40 @@ describe 'countries requests', :js => true do
     }
 
     it ( 'should have weight_slider link' ) {
-      snap
       should have_selector( 'a.toggle-weight-sliders' );
       should have_css '#weight-sliders.hidden', visible: false
     }
 
-    describe 'click toggle-weight-sliders' do
+    describe ( 'click toggle-weight-sliders' ) {
       before {
         page.execute_script( %q[$('.toggle-weight-sliders').click( )] );
       }
 
       it ( 'should show weight-sliders' ) {
-        find( '#weight-sliders' ).visible?.should be_true;
-        should have_css( '#weight-sliders .weight-slider', count: 3 );
+        snap
+        find( '#weight-sliders' ).visible?.should be_true
+        should have_css( '#weight-sliders .weight-slider', count: 3 )
+      }
+
+      describe ( 'slide slider' ) {
+        before {
+          page.execute_script( %q[$('#slider-1').val( 0.5, true )] )
+        }
+
+        it {
+          snap
+          current_url.should match 'ds_pct_inet=0.5'
+        }
       }
 
       it ( 'should hide weight-sliders' ) {
         page.execute_script( %q[$('.toggle-weight-sliders').click( )] );
         should have_css( '#weight-sliders', count: 0 );
       }
-    end
+    }
   }
 
-  describe 'get /countries' do
+  describe 'get /countries index' do
     before {
       visit( countries_path )
     }

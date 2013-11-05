@@ -51,7 +51,12 @@
           mfp = $.magnificPopup.open( { items: { src: _options.loaderCss, modal: true }, showCloseBtn: false } );
         }, 1000 );
       }
+    },
+
+    setWeight: function( adminName, value ) {
+      window.location.href = window.location.href + '#' + adminName + '=' + value;
     }
+
 
 
   };

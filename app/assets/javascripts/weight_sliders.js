@@ -66,7 +66,14 @@ var weightSliders = {
         this.sliderObjects.noUiSlider({
             range   : [0, 2],
             start   : 0,
-            slide   : this.updateScores,
+            slide: function() {
+              console.log( this[0].id + ': ' + this.val( ) );
+              $.scoreKeeper.setWeight( this[0].id, this.val( ) );
+            },
+            set: function() {
+              console.log( this[0].id + ': ' + this.val( ) );
+              $.scoreKeeper.setWeight( this[0].id, this.val( ) );
+            },
             step    : 0.1,
             handles : 1
         }).each(function() { 
