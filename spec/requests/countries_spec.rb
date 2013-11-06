@@ -19,7 +19,6 @@ describe 'countries requests', :js => true do
       }
 
       it ( 'should show weight-sliders' ) {
-        snap
         find( '#weight-sliders' ).visible?.should be_true
         should have_css( '#weight-sliders .weight-slider', count: 3 )
       }
@@ -31,7 +30,7 @@ describe 'countries requests', :js => true do
 
         it {
           snap
-          current_url.should match 'ds_pct_inet=0.5'
+          current_url.should match 'slider-1=0.5'
         }
       }
 

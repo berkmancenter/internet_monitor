@@ -54,7 +54,7 @@
     },
 
     setWeight: function( adminName, value ) {
-      window.location.href = window.location.href + '#' + adminName + '=' + value;
+      window.location.hash = adminName + '=' + value;
     }
 
 
