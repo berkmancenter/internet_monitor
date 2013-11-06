@@ -13,6 +13,7 @@ describe ( 'countries/_score_pill' ) {
 
     it {
       should have_css '.score-pill'
+      should have_css ".score-pill[data-country-id='#{country.id}']"
     }
 
     it {

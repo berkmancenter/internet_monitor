@@ -1,4 +1,4 @@
-<div class="score-pill">
+<div class="score-pill" data-country-id="<%= country.id %>">
   <%= link_to country.name, country, class: 'country-name', title: country.name %>
   <% if country.score.present? %>
     <span class="header">score</span>

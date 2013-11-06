@@ -8,6 +8,10 @@ describe 'countries requests', :js => true do
       should have_css '.score-keeper-loader', visible: false
     }
 
+    it ( 'should have a score pill for our test country' ) {
+      should have_css ".score-pill[data-country-id='#{country.id}']"
+    }
+
     it ( 'should have weight_slider link' ) {
       should have_selector( 'a.toggle-weight-sliders' );
       should have_css '#weight-sliders.hidden', visible: false
@@ -30,6 +34,8 @@ describe 'countries requests', :js => true do
 
         it {
           current_url.should match 'ds_pct_inet=0.5'
+
+          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '3.5'
         }
       }
 
@@ -41,12 +47,14 @@ describe 'countries requests', :js => true do
   }
 
   describe 'get /countries index' do
+    let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
+
     before {
       visit( countries_path )
     }
 
     it {
-      should have_title( 'countries @ Internet Monitor' )
+      should have_title 'countries @ Internet Monitor'
     }
 
     it_should_behave_like( 'weight_slider' );
