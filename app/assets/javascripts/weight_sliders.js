@@ -67,10 +67,10 @@ var weightSliders = {
             range   : [0, 2],
             start   : 0,
             slide: function() {
-              $.scoreKeeper.setWeight( this[0].id, this.val( ) );
+              $.scoreKeeper.setWeight( this.data( 'adminName' ), this.val( ) );
             },
             set: function() {
-              $.scoreKeeper.setWeight( this[0].id, this.val( ) );
+              $.scoreKeeper.setWeight( this.data( 'adminName' ), this.val( ) );
             },
             step    : 0.1,
             handles : 1

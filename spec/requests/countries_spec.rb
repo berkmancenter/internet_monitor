@@ -25,12 +25,11 @@ describe 'countries requests', :js => true do
 
       describe ( 'slide slider' ) {
         before {
-          page.execute_script( %q[$('#slider-1').val( 0.5, true )] )
+          page.execute_script( %q[$('[data-admin-name="ds_pct_inet"]').val( 0.5, true )] )
         }
 
         it {
-          snap
-          current_url.should match 'slider-1=0.5'
+          current_url.should match 'ds_pct_inet=0.5'
         }
       }
 
