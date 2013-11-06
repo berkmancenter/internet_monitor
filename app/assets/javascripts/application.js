@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.ba-bbq
 //= require jquery.nouislider
 //= require jquery.magnific-popup
 //= require_tree .

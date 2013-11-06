@@ -18,6 +18,7 @@
   var _options = { };
 
   var _countryData = null;
+  var _weights = [ ];
 
   $.scoreKeeper = {
     init: function( options ) {
@@ -54,10 +55,10 @@
     },
 
     setWeight: function( adminName, value ) {
-      window.location.hash = adminName + '=' + value;
+      var state = { };
+      state[ adminName ] = value;
+      $.bbq.pushState( state );
     }
-
-
 
   };
 
