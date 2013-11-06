@@ -80,7 +80,7 @@ var weightSliders = {
             var weight = parseFloat($(this).data(weightSliders.WEIGHT_ATTRIBUTE));
             weightSliders.indicatorWeights[$(this).attr('id')] = Math.abs(weight);
             weightSliders.directions[$(this).attr('id')] = weight;
-            $(this).val(Math.abs(weight)).noUiSlider('disabled', false); 
+            $(this).val(Math.abs(weight));
         });
     },
     updateScores : function() {
