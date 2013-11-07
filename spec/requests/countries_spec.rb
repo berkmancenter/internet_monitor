@@ -27,18 +27,6 @@ describe 'countries requests', :js => true do
         should have_css( '#weight-sliders .weight-slider', count: 3 )
       }
 
-      describe ( 'slide slider' ) {
-        before {
-          page.execute_script( %q[$('[data-admin-name="ds_pct_inet"]').val( 0.5, true )] )
-        }
-
-        it {
-          current_url.should match 'ds_pct_inet=0.5'
-
-          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '3.5'
-        }
-      }
-
       it ( 'should hide weight-sliders' ) {
         page.execute_script( %q[$('.toggle-weight-sliders').click( )] );
         should have_css( '#weight-sliders', count: 0 );
@@ -48,6 +36,7 @@ describe 'countries requests', :js => true do
 
   describe 'get /countries index' do
     let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
+    let ( :country_no_score ) { Country.find_by_iso3_code( 'USA' ) }
 
     before {
       visit( countries_path )
@@ -58,6 +47,28 @@ describe 'countries requests', :js => true do
     }
 
     it_should_behave_like( 'weight_slider' );
+
+    # full tests for weight slider/scoreKeeper on countries page with multiple score pills
+
+    describe( 'scoreKeeper' ) {
+      before {
+        page.execute_script( %q[$('.toggle-weight-sliders').click( )] );
+        page.execute_script( %q[$('[data-admin-name="ds_pct_inet"]').val( 0.5, true )] )
+      }
+
+      it {
+        current_url.should match 'ds_pct_inet=0.5'
+      }
+
+      it {
+        should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
+        should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '3.5'
+      }
+
+      it ( 'should not updated score pills for countries without enough data' ) {
+        should_not have_css ".score-pill[data-country-id='#{country_no_score.id}'] .user-score.updated"
+      }
+    }
   end
 
 

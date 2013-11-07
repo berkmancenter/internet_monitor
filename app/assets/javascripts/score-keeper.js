@@ -18,7 +18,8 @@
 
   var _options = { };
 
-  var _countryData = null;
+  var _countryData = null; //< raw data
+  var _countries = []; //< by countryId
   var _weights = [ ];
 
   function _hashchange( e ) {
@@ -47,6 +48,12 @@
 
             _countryData = result;
 
+            $.each( _countryData, function( ) {
+              if ( this.country && $.isNumeric( this.country.id ) ) {
+                _countries[ this.country.id ] = this.country;
+              }
+            } );
+
             $.magnificPopup.close( );
 
           },
@@ -72,7 +79,14 @@
 
   $.fn.updateScore = function( options ) {
     return this.each( function( ) {
-      $( this ).find( '.user-score' ).html( '3.5' );
+      var scorePill = $( this ).filter( '.score-pill' );
+      if ( scorePill.length > 0 ) {
+        var countryId = scorePill.data( 'countryId' );
+
+        if ( _countries[ countryId ] ) {
+          scorePill.find( '.user-score' ).html( '3.5' ).addClass( 'updated' );
+        }
+      }
     } );
 
   };
