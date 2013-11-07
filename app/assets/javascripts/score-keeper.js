@@ -7,6 +7,7 @@
  *
  * Current dependencies:
  * jquery.magnific-popup
+ * jquery.ba-bbq
  */
 
 ;( function ( $, undefined ) {
@@ -19,6 +20,12 @@
 
   var _countryData = null;
   var _weights = [ ];
+
+  function _hashchange( e ) {
+    //var weight = $.bbq.getState( 'ds_pct_inet', 1.0 );
+
+    $( '.score-pill' ).updateScore( );
+  }
 
   $.scoreKeeper = {
     init: function( options ) {
@@ -52,13 +59,21 @@
           mfp = $.magnificPopup.open( { items: { src: _options.loaderCss, modal: true }, showCloseBtn: false } );
         }, 1000 );
       }
+
+      $( window ).on( 'hashchange', _hashchange );
     },
 
     setWeight: function( adminName, value ) {
       var state = { };
       state[ adminName ] = value;
       $.bbq.pushState( state );
-    }
+    },
+  };
+
+  $.fn.updateScore = function( options ) {
+    return this.each( function( ) {
+      $( this ).find( '.user-score' ).html( '3.5' );
+    } );
 
   };
 
