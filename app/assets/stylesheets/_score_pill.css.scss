@@ -47,9 +47,17 @@
   .user-score {
     background: $bright-gold url('gear.png') no-repeat;
     border-radius: 0 4px 4px 0;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    
+    &.updated {
+      background: $bright-gold;
+    }
 
     &:hover {
       background: $light-blue url('gear.png') no-repeat -42px 0;
+      color: transparent;
     }
   }
 }
