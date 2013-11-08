@@ -29,8 +29,6 @@
   var _indicators = []; //< by sourceId
 
   function _hashchange( e ) {
-    //var weight = $.bbq.getState( 'ds_pct_inet', 1.0 );
-
     $( '.score-pill' ).updateScore( );
   }
 
@@ -70,7 +68,7 @@
             } );
 
             $.magnificPopup.close( );
-
+            $( window ).trigger( "hashchange" );
           },
           error: function( xhr ) {
           }
@@ -82,7 +80,8 @@
         }, 1000 );
       }
 
-      $( window ).on( 'hashchange', _hashchange );
+      $( window ).on( 'hashchange', _hashchange ); 
+      
     },
 
     setWeight: function( adminName, value ) {

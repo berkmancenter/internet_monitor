@@ -34,7 +34,7 @@ describe 'countries requests', :js => true do
     }
   }
 
-  describe 'get /countries index' do
+  describe ( 'get /countries index' ) {
     let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
     let ( :country_no_score ) { Country.find_by_iso3_code( 'USA' ) }
 
@@ -51,26 +51,51 @@ describe 'countries requests', :js => true do
     # full tests for weight slider/scoreKeeper on countries page with multiple score pills
 
     describe( 'scoreKeeper' ) {
-      before {
-        page.execute_script( %q[$('.toggle-weight-sliders').click( )] );
-        page.execute_script( %q[$('[data-admin-name="ds_pct_inet"]').val( 0.5, true )] )
-      }
+      context ( 'with sliding a slider' ) {
+        before {
+          page.execute_script( %q[$('.toggle-weight-sliders').click( )] );
+          page.execute_script( %q[$('[data-admin-name="ds_pct_inet"]').val( 0.5, true )] )
+        }
 
-      it {
-        current_url.should match 'ds_pct_inet=0.5'
-      }
+        it {
+          current_url.should match 'ds_pct_inet=0.5'
+        }
 
-      it {
-        should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-        should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '4.45'
-      }
+        it {
+          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
+          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '4.45'
+        }
 
-      it ( 'should not updated score pills for countries without enough data' ) {
-        should_not have_css ".score-pill[data-country-id='#{country_no_score.id}'] .user-score.updated"
+        it ( 'should not updated score pills for countries without enough data' ) {
+          should_not have_css ".score-pill[data-country-id='#{country_no_score.id}'] .user-score.updated"
+        }
+
+        describe ( 'refresh' ) {
+          before {
+            visit current_url
+          }
+
+          it ( 'should maintain state' ) {
+            should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
+            should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '4.45'
+          }
+        }
       }
     }
-  end
+  }
 
+  context ( 'scoreKeeper with state in url' ) {
+    let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
+
+    before {
+      visit "#{countries_path}#ds_pct_inet=1.50"
+    }
+
+    it {
+      should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
+      should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '5.19'
+    }
+  }
 
   shared_examples_for( 'category_selector' ) {
     it ( 'should have category selector links' ) {
