@@ -84,7 +84,7 @@ describe 'countries requests', :js => true do
     }
   }
 
-  context ( 'scoreKeeper with state in url' ) {
+  context ( 'with scoreKeeper state in url' ) {
     let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
 
     before {
@@ -93,7 +93,6 @@ describe 'countries requests', :js => true do
     }
 
     it {
-      snap
       should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
       should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '5.19'
     }
@@ -101,6 +100,18 @@ describe 'countries requests', :js => true do
     it {
       slider_val = page.evaluate_script %q[$('[data-admin-name="ds_pct_inet"]').val( )]
       slider_val.should eq( '1.50' )
+    }
+
+    describe ( 'move to another page' ) {
+      before {
+        visit country_path( country )
+      }
+
+      it ( 'should maintain state' ) {
+        snap
+        should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
+        should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '5.19'
+      }
     }
   }
 

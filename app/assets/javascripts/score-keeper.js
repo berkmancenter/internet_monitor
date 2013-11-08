@@ -10,6 +10,7 @@
  * jquery.ba-bbq
  *
  * Implementation notes:
+ * - must be initialzied *before* weightSliders
  * - indicator info (id, adminName, etc.) is extracted from the slider elements
  * - the authority on current weight values is the bbq state, not the sliders themselves
  */
@@ -34,13 +35,20 @@
 
   $.scoreKeeper = {
     init: function( options ) {
-      // load country data
-      // show a modal popup indicator if
-      // it's taking too long
       _options = $.extend( { }, _defaults, options );
+      
+      // extract previous state from sessionStorage, extend with url state
+      if ( window.sessionStorage && window.JSON ) {
+        var state = $.bbq.getState( );
+        var sessionState = window.sessionStorage.getItem( 'bbqState' );
+        if ( sessionState ) {
+          state = $.extend( JSON.parse( sessionState ), state );
+          $.bbq.pushState( state );
+        }
+        window.sessionStorage.setItem( 'bbqState', JSON.stringify( state ) );
+      }
 
-      var timeoutPopup = null;
-
+      // build an indexed list of indicators
       $( '.weight-slider' ).each( function( ) {
         var weightSlider = $( this );
         var sourceId = parseInt( weightSlider.data( 'sourceId' ) );
@@ -49,6 +57,10 @@
           defaultWeight: parseFloat( weightSlider.data( 'defaultWeight' ) )
         };
       } );
+
+      // load country data
+      // show a modal popup indicator if it's taking too long
+      var timeoutPopup = null;
 
       if ( !_countryData ) {
         $.ajax( {
@@ -61,6 +73,7 @@
 
             _countryData = result;
 
+            // build an indexed list of countries
             $.each( _countryData, function( ) {
               if ( this.country && $.isNumeric( this.country.id ) ) {
                 _countries[ this.country.id ] = this.country;
@@ -88,6 +101,9 @@
       var state = { };
       state[ adminName ] = value;
       $.bbq.pushState( state );
+      if ( window.sessionStorage && window.JSON ) {
+        window.sessionStorage.setItem( 'bbqState', JSON.stringify( $.bbq.getState( ) ) );
+      }
     },
 
     calculateScore: function( country ) {
