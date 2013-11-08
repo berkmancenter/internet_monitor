@@ -53,7 +53,7 @@ describe 'countries requests', :js => true do
     describe( 'scoreKeeper' ) {
       context ( 'with sliding a slider' ) {
         before {
-          page.execute_script( %q[$('.toggle-weight-sliders').click( )] );
+          page.execute_script( %q[$('.toggle-weight-sliders').click( )] )
           page.execute_script( %q[$('[data-admin-name="ds_pct_inet"]').val( 0.5, true )] )
         }
 
@@ -89,11 +89,18 @@ describe 'countries requests', :js => true do
 
     before {
       visit "#{countries_path}#ds_pct_inet=1.50"
+      page.execute_script %q[$('.toggle-weight-sliders').click( )]
     }
 
     it {
+      snap
       should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
       should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '5.19'
+    }
+
+    it {
+      slider_val = page.evaluate_script %q[$('[data-admin-name="ds_pct_inet"]').val( )]
+      slider_val.should eq( '1.50' )
     }
   }
 

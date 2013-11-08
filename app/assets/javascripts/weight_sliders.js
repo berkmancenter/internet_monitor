@@ -75,10 +75,9 @@ var weightSliders = {
             step    : 0.1,
             handles : 1
         }).each(function() { 
-            var weight = parseFloat($(this).data(weightSliders.WEIGHT_ATTRIBUTE));
-            weightSliders.indicatorWeights[$(this).attr('id')] = Math.abs(weight);
-            weightSliders.directions[$(this).attr('id')] = weight;
-            $(this).val(Math.abs(weight));
+          var weightSlider = $( this );
+          var weight = $.bbq.getState( weightSlider.data( 'adminName' ), true );
+          weightSlider.val( weight || weightSlider.data( 'defaultWeight' ) );
         });
     },
     updateScores : function() {
