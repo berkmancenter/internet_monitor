@@ -8,19 +8,25 @@
  * Current dependencies:
  * jquery.magnific-popup
  * jquery.ba-bbq
+ *
+ * Implementation notes:
+ * - indicator info (id, adminName, etc.) is extracted from the slider elements
+ * - the authority on current weight values is the bbq state, not the sliders themselves
  */
 
 ;( function ( $, undefined ) {
   var _defaults = {
     loaderCss: '.score-keeper-loader',
-    dataPath: '/countries.json'
+    dataPath: '/countries.json',
+    maxScore: 10
   };
 
   var _options = { };
 
   var _countryData = null; //< raw data
   var _countries = []; //< by countryId
-  var _weights = [ ];
+
+  var _indicators = []; //< by sourceId
 
   function _hashchange( e ) {
     //var weight = $.bbq.getState( 'ds_pct_inet', 1.0 );
@@ -36,6 +42,15 @@
       _options = $.extend( { }, _defaults, options );
 
       var timeoutPopup = null;
+
+      $( '.weight-slider' ).each( function( ) {
+        var weightSlider = $( this );
+        var sourceId = parseInt( weightSlider.data( 'sourceId' ) );
+        _indicators[ sourceId ] = {
+          adminName: weightSlider.data( 'adminName' ),
+          defaultWeight: parseFloat( weightSlider.data( 'defaultWeight' ) )
+        };
+      } );
 
       if ( !_countryData ) {
         $.ajax( {
@@ -75,6 +90,22 @@
       state[ adminName ] = value;
       $.bbq.pushState( state );
     },
+
+    calculateScore: function( country ) {
+      var indicators = country.indicators;
+
+      var sum = indicators.reduce( function( sum, indi, i ) {
+        var indicator = _indicators[ indi.source_id ];
+        var weight = $.bbq.getState( indicator.adminName, true );
+
+        var output = sum + indi.normalized_value * ( weight || indicator.defaultWeight );
+        return output;
+      }, 0.0);
+
+      var average = sum / indicators.length;
+      var score = average * _options.maxScore;
+      return score;
+    }
   };
 
   $.fn.updateScore = function( options ) {
@@ -82,9 +113,10 @@
       var scorePill = $( this ).filter( '.score-pill' );
       if ( scorePill.length > 0 ) {
         var countryId = scorePill.data( 'countryId' );
+        var country = _countries[ countryId ];
 
-        if ( _countries[ countryId ] ) {
-          scorePill.find( '.user-score' ).html( '3.5' ).addClass( 'updated' );
+        if ( country ) {
+          scorePill.find( '.user-score' ).html( $.scoreKeeper.calculateScore( country ).toFixed( 2 ) ).addClass( 'updated' );
         }
       }
     } );
