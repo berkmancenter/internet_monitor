@@ -76,6 +76,24 @@ FactoryGirl.define do
       link nil
     end
 
+    factory :ds_fixed_monthly do
+      # ds_fixed_monthly has a negative direction because a higher
+      # value for monthly charge will decrease a country's score
+      admin_name 'ds_fixed_monthly'
+      public_name 'Fixed (wired) broadband monthly subscription charge (in USD)'
+      description nil
+      datum_type 'Indicator'
+      #category access
+      default_weight -1 
+      min 0.000129379915752054
+      max 1.81461147685752
+      retriever_class 'ITUParser'
+      is_api false
+      in_sidebar false
+      affects_score true
+      link nil
+    end
+
     factory :ds_consistency do
       admin_name 'ds_consistency'
       public_name 'consistency'
@@ -134,6 +152,16 @@ FactoryGirl.define do
       #language nil
       original_value 21.0
       value 0.22100610397810988
+      type 'Indicator'
+    end
+
+    factory :d_fixed_monthly_iran do
+      #source ds_fixed_monthly
+      start_date '2011-01-01'
+      #country iran
+      #language nil
+      original_value 0.0036604822758688677
+      value 0.9980539337554951
       type 'Indicator'
     end
 

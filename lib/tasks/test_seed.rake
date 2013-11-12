@@ -34,6 +34,10 @@ namespace :db do
       ds_pct_inet.category = categories[ 0 ];
       ds_pct_inet.save!
 
+      ds_fixed_monthly = FactoryGirl.create( :ds_fixed_monthly );
+      ds_fixed_monthly.category = categories[ 0 ];
+      ds_fixed_monthly.save!
+
       ds_lit_rate = FactoryGirl.create( :ds_lit_rate );
       ds_lit_rate.category = categories[ 0 ];
       ds_lit_rate.save!
@@ -43,6 +47,11 @@ namespace :db do
       d_pct_inet_iran.source = ds_pct_inet;
       d_pct_inet_iran.country = iran;
       d_pct_inet_iran.save!
+
+      d_fixed_monthly_iran = FactoryGirl.create( :d_fixed_monthly_iran );
+      d_fixed_monthly_iran.source = ds_fixed_monthly;
+      d_fixed_monthly_iran.country = iran;
+      d_fixed_monthly_iran.save!
 
       d_lit_rate = FactoryGirl.create( :d_lit_rate );
       d_lit_rate.source = ds_lit_rate;
