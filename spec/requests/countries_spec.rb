@@ -52,6 +52,12 @@ describe 'countries requests', :js => true do
     # full tests for weight slider/scoreKeeper on countries page with multiple score pills
 
     describe( 'scoreKeeper' ) {
+      context ( 'without user score' ) {
+        it {
+          should_not have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
+        }
+      }
+
       context ( 'with sliding a slider' ) {
         before {
           page.execute_script( %q[$('.toggle-weight-sliders').click( )] )
@@ -120,7 +126,6 @@ describe 'countries requests', :js => true do
       }
 
       it ( 'should maintain state' ) {
-        snap
         should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
         should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '1.39'
       }

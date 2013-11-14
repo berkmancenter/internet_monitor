@@ -84,7 +84,9 @@
             } );
 
             $.magnificPopup.close( );
-            $( window ).trigger( "hashchange" );
+            if ( window.location.hash ) {
+              $( window ).trigger( "hashchange" );
+            }
           },
           error: function( xhr ) {
           }
