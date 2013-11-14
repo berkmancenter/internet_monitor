@@ -7,7 +7,7 @@ FactoryGirl.define do
       iso3_code 'IRN'
       score 4.82843928
       description ''
-      indicator_count 3
+      indicator_count 4
     end
 
     # usa only has one indicator: access

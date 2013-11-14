@@ -52,9 +52,12 @@
       $( '.weight-slider' ).each( function( ) {
         var weightSlider = $( this );
         var sourceId = parseInt( weightSlider.data( 'sourceId' ) );
+        var defaultWeight = parseFloat( weightSlider.data( 'defaultWeight' ) );
+
         _indicators[ sourceId ] = {
           adminName: weightSlider.data( 'adminName' ),
-          defaultWeight: parseFloat( weightSlider.data( 'defaultWeight' ) )
+          defaultWeight: Math.abs( defaultWeight ),
+          direction: defaultWeight
         };
       } );
 
@@ -113,7 +116,7 @@
         var indicator = _indicators[ indi.source_id ];
         var weight = $.bbq.getState( indicator.adminName, true );
 
-        var output = sum + indi.normalized_value * ( weight || indicator.defaultWeight );
+        var output = sum + indi.normalized_value * ( weight || indicator.defaultWeight ) * indicator.direction;
         return output;
       }, 0.0);
 

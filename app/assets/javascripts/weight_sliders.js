@@ -77,7 +77,7 @@ var weightSliders = {
         }).each(function() { 
           var weightSlider = $( this );
           var weight = $.bbq.getState( weightSlider.data( 'adminName' ), true );
-          weightSlider.val( weight || weightSlider.data( 'defaultWeight' ) );
+          weightSlider.val( weight || Math.abs( weightSlider.data( 'defaultWeight' ) ) );
         });
     },
     updateScores : function() {

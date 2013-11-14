@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe 'countries requests', :js => true do
+  let ( :indicator_count ) { DatumSource.where( { affects_score: true } ).count }
   subject { page }
 
   shared_examples_for( 'weight_slider' ) {
@@ -24,12 +25,12 @@ describe 'countries requests', :js => true do
 
       it ( 'should show weight-sliders' ) {
         find( '#weight-sliders' ).visible?.should be_true
-        should have_css( '#weight-sliders .weight-slider', count: 3 )
+        should have_css '#weight-sliders .weight-slider', count: indicator_count
       }
 
       it ( 'should hide weight-sliders' ) {
         page.execute_script( %q[$('.toggle-weight-sliders').click( )] );
-        should have_css( '#weight-sliders', count: 0 );
+        should have_css '#weight-sliders', count: 0
       }
     }
   }
@@ -63,7 +64,7 @@ describe 'countries requests', :js => true do
 
         it {
           should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '4.45'
+          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '0.84'
         }
 
         it ( 'should not updated score pills for countries without enough data' ) {
@@ -77,8 +78,19 @@ describe 'countries requests', :js => true do
 
           it ( 'should maintain state' ) {
             should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-            should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '4.45'
+            should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '0.84'
           }
+        }
+      }
+
+      context ( 'with negative default weight' ) {
+        before {
+          page.execute_script( %q[$('.toggle-weight-sliders').click( )] )
+        }
+
+        it {
+          slider_val = page.evaluate_script %q[$('[data-admin-name="ds_fixed_monthly"]').val( )]
+          slider_val.should eq( '1.00' )
         }
       }
     }
@@ -94,7 +106,7 @@ describe 'countries requests', :js => true do
 
     it {
       should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-      should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '5.19'
+      should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '1.39'
     }
 
     it {
@@ -110,7 +122,7 @@ describe 'countries requests', :js => true do
       it ( 'should maintain state' ) {
         snap
         should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-        should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '5.19'
+        should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '1.39'
       }
     }
   }
