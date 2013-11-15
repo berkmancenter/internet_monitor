@@ -11,11 +11,4 @@
     <% end %>
   </ol>
 
-  <h2>Countries Without Scores</h2>
-  <ul class="unscored-countries">
-    <% @unscored_countries.each do |country| %>
-      <li><%= render partial: 'countries/score_pill', locals: {country: country} %></li>
-    <% end %>
-  </ul>
-
 </article>

@@ -14,14 +14,16 @@ describe ( 'countries/index' ) {
     it {
       should have_css 'h2', text: 'Countries', exact: true
       should have_css 'ol.scored-countries' #ordered
+    }
 
-      should have_css 'h2', text: 'Countries Without Scores'
-      should have_css 'ul.unscored-countries' #unordered
+    it {
+      should_not have_css 'h2', text: 'Countries Without Scores'
+      should_not have_css 'ul.unscored-countries' #unordered
     }
 
     it {
       should have_css 'ol .score-pill'
-      should have_css 'ul .score-pill'
+      should_not have_css 'ul .score-pill'
     }
   }
 }

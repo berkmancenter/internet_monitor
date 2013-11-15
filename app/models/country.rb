@@ -18,6 +18,10 @@ class Country < ActiveRecord::Base
               {:min_indicators => Rails.application.config.imon['min_indicators']})
     scope :desc_score, order('score DESC')
 
+    def enough_data?
+      indicator_count >= Rails.application.config.imon[ 'min_indicators' ]
+    end
+
     def score(options = {})
         return read_attribute(:score) unless !options.empty?
         options.assert_valid_keys(:for)

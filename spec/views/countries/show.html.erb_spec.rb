@@ -67,4 +67,24 @@ describe ( 'countries/show' ) {
       should have_css '.sidebar dt', text: 'Population'
     }
   }
+
+  context ( 'with country having not enough indicators' ) {
+    let ( :country ) { Country.find_by_iso3_code( 'USA' ) }
+
+    before {
+      assign( :map_countries, Country.with_enough_data.select( 'iso3_code,score' ) )
+      assign( :country, country )
+      render
+    }
+
+    it {
+      should have_css '.view h1', text: country.name
+    }
+
+    it {
+      should have_css 'h1 .score-pill'
+      should_not have_css 'h1 .score-pill .imon-score'
+    }
+
+  }
 }
