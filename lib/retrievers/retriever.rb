@@ -13,8 +13,8 @@ class Retriever
     def self.retrieve!(row_number)
         line = CSV.read(Rails.root.join('db', 'sources.csv'), :headers => true)[row_number.to_i - 1]
         ds = DatumSource.new(
-            :admin_name => line['Indicator'],
-            :public_name => line['Indicator'],
+            :admin_name => line['Short name'],
+            :public_name => line['Public name'],
             :datum_type => TYPE_MAP[line['Data type']],
             :is_api => !line['API available?'].nil?,
             :retriever_class => line['Retriever Class'],
