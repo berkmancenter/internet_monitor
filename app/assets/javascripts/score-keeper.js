@@ -55,7 +55,7 @@
         var defaultWeight = parseFloat( weightSlider.data( 'defaultWeight' ) );
 
         _indicators[ sourceId ] = {
-          adminName: weightSlider.data( 'adminName' ),
+          adminName: weightSlider.attr( 'name' ),
           defaultWeight: Math.abs( defaultWeight ),
           direction: defaultWeight
         };

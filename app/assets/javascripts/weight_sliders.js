@@ -63,20 +63,12 @@ var weightSliders = {
         this.sliderObjects = $(this.SLIDER_SELECTOR);
         this.scoreObjects = $(this.SCORE_SELECTOR);
 
-        this.sliderObjects.noUiSlider({
-            range   : [0, 2],
-            start   : 0,
-            slide: function() {
-              $.scoreKeeper.setWeight( this.data( 'adminName' ), this.val( ) );
-            },
-            set: function() {
-              $.scoreKeeper.setWeight( this.data( 'adminName' ), this.val( ) );
-            },
-            step    : 0.1,
-            handles : 1
-        }).each(function() { 
+        this.sliderObjects.on( 'input', function() {
           var weightSlider = $( this );
-          var weight = $.bbq.getState( weightSlider.data( 'adminName' ), true );
+          $.scoreKeeper.setWeight( weightSlider.attr( 'name' ), weightSlider.val( ) );
+        } ).each(function() { 
+          var weightSlider = $( this );
+          var weight = $.bbq.getState( weightSlider.attr( 'name' ), true );
           weightSlider.val( weight || Math.abs( weightSlider.data( 'defaultWeight' ) ) );
         });
     },

@@ -61,7 +61,7 @@ describe 'countries requests', :js => true do
       context ( 'with sliding a slider' ) {
         before {
           page.execute_script( %q[$('.toggle-weight-sliders').click( )] )
-          page.execute_script( %q[$('[data-admin-name="ds_pct_inet"]').val( 0.5, true )] )
+          page.execute_script( %q[$('[name="ds_pct_inet"]').val( 0.5 ).trigger('input')] )
         }
 
         it {
@@ -95,8 +95,8 @@ describe 'countries requests', :js => true do
         }
 
         it {
-          slider_val = page.evaluate_script %q[$('[data-admin-name="ds_fixed_monthly"]').val( )]
-          slider_val.should eq( '1.00' )
+          slider_val = page.evaluate_script %q[$('[name="ds_fixed_monthly"]').val( )]
+          slider_val.should eq( '1' )
         }
       }
     }
@@ -106,7 +106,7 @@ describe 'countries requests', :js => true do
     let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
 
     before {
-      visit "#{countries_path}#ds_pct_inet=1.50"
+      visit "#{countries_path}#ds_pct_inet=1.5"
       page.execute_script %q[$('.toggle-weight-sliders').click( )]
     }
 
@@ -116,8 +116,8 @@ describe 'countries requests', :js => true do
     }
 
     it {
-      slider_val = page.evaluate_script %q[$('[data-admin-name="ds_pct_inet"]').val( )]
-      slider_val.should eq( '1.50' )
+      slider_val = page.evaluate_script %q[$('[name="ds_pct_inet"]').val( )]
+      slider_val.should eq( '1.5' )
     }
 
     describe ( 'move to another page' ) {
