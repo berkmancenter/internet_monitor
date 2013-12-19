@@ -75,7 +75,8 @@ var weightSliders = {
         } ).each(function() { 
           var weightSlider = $( this );
           var weight = $.bbq.getState( weightSlider.attr( 'name' ), true );
-          weightSlider.val( weight || Math.abs( weightSlider.data( 'defaultWeight' ) ) ).trigger( 'input' );
+          weightSlider.val( weight || Math.abs( weightSlider.data( 'defaultWeight' ) ) );
+          setGradient( this );
         });
     },
     updateScores : function() {
@@ -159,12 +160,16 @@ $('head').append( '<style type="text/css">' + ieStyle + '</style>' );
 
 // firefox & chrome update the gradient in different ways on the input event
 $( 'input[type="range"]' ).on( 'input', function( ) {
-  var $this = $( this );
+  setGradient( this );
+} );
+
+function setGradient( input ) {
+  var $this = $( input );
 
   var rangeMin = $this.attr( 'min' ) ? parseFloat( $this.attr( 'min' ) ) : 0.0;
   var rangeMax = $this.attr( 'max' ) ? parseFloat( $this.attr( 'max' ) ) : 100.0;
   var rangeSize = rangeMax - rangeMin;
-  var valuePct = Math.min( ( this.value / rangeSize * 100 ) + 10, 100 );
+  var valuePct = Math.min( ( input.value / rangeSize * 100 ) + 10, 100 );
   
   var rangerSheet = $this.data('rangerSheet');
   if ( rangerSheet ) {
@@ -173,14 +178,14 @@ $( 'input[type="range"]' ).on( 'input', function( ) {
       rangerSheet.deleteRule( 0 );
     }
     
-    rangerSheet.insertRule('input[name="' + this.name + '"]::-moz-range-track { background: linear-gradient(to right, ' + $this.data('backgroundMin') + ', #454545 ' + valuePct + '%, ' + $this.data('backgroundMax') + ') }', 0 );
+    rangerSheet.insertRule('input[name="' + input.name + '"]::-moz-range-track { background: linear-gradient(to right, ' + $this.data('backgroundMin') + ', #454545 ' + valuePct + '%, ' + $this.data('backgroundMax') + ') }', 0 );
   } else if ( $this.hasClass( 'webkit-track' ) ) {
     // webkit / chrome
     $this.css( 'background', 'linear-gradient(to right, ' + $this.data('backgroundMin') + ', #454545 ' + valuePct + '%, ' + $this.data('backgroundMax') + ')' );
   }
-} );
+}
 
-$( 'input[type="range"]' ).trigger( 'input' );
+//$( 'input[type="range"]' ).trigger( 'input' );
 
 
 
