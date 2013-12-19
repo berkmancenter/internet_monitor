@@ -1,15 +1,66 @@
-.noUi-base {
-  background-image: linear-gradient(to bottom, #aaa, #ddd);
-  border: solid 1px #888;
-  border-radius: 4px;
-  /* box-shadow: inset 0px 0px 2px 0px #666;*/
-  height: .8em;
+@mixin range-track( $border, $border-radius, $width, $height ) {
+  /* color the track
+   * firefox/webkit gradient done in JavaScript */
+  &::-moz-range-track {
+    border: $border;
+    border-radius: $border-radius;
+  }  
+  &::-ms-fill-upper, &::-ms-fill-lower {
+    border: $border;
+    border-radius: $border-radius;
+  }
+  &::-ms-track {
+    border: none;
+    color: transparent;
+  }
+  &.webkit-track {
+    border: $border;
+    border-radius: $border-radius;
+    -webkit-appearance: none;
+  }
+
+  /* size the slider */
+  &::-moz-range-track {
+    height: $height;
+  }
+  &::-ms-track {
+    height: $height;
+  }
+
+  box-sizing: content-box;
+  height: $height;
+  width: $width;    
 }
 
-.noUi-handle {
-  border-radius: .25em;
-  height: 1.5em;
-  margin-top: -0.4em;
-  width: 1.5em;
+@mixin range-thumb( $background, $border, $border-radius, $width, $height ) {
+  /* style the thumb
+   * can all be same but must be on seperate lines
+   * or browsers won't accept them */
+  &::-moz-range-thumb {
+    background: $background;
+    border: $border;
+    border-radius: $border-radius;
+    height: $height;
+    width: $width;
+  }
+  &::-ms-thumb {
+    background: $background;
+    border: $border;
+    border-radius: $border-radius;
+    height: $height;
+    width: $width;
+  }
+  &::-webkit-slider-thumb {
+    background: $background;
+    border: $border;
+    border-radius: $border-radius;
+    height: $height;
+    width: $width;
+    -webkit-appearance: none;
+  }  
 }
 
+input[type="range"] {
+  @include range-track( 2px solid #444, 8px, 256px, 12px );
+  @include range-thumb( #469948, 2px solid #dedede, 0, 16px, 16px );
+}

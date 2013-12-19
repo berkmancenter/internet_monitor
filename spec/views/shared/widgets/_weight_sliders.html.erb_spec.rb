@@ -28,5 +28,9 @@ describe ( 'shared/widgets/_weight_sliders' ) {
     it {
       should have_css "input[type='range'][min='0'][max='2'][step='0.1']"
     }
+
+    it {
+      should have_css "input[data-background-min][data-background-max]"
+    }
   }
 }
