@@ -75,7 +75,7 @@ var weightSliders = {
         } ).each(function() { 
           var weightSlider = $( this );
           var weight = $.bbq.getState( weightSlider.attr( 'name' ), true );
-          weightSlider.val( weight || Math.abs( weightSlider.data( 'defaultWeight' ) ) );
+          weightSlider.val( weight || Math.abs( weightSlider.data( 'defaultWeight' ) ) ).trigger( 'input' );
         });
     },
     updateScores : function() {
@@ -164,7 +164,7 @@ $( 'input[type="range"]' ).on( 'input', function( ) {
   var rangeMin = $this.attr( 'min' ) ? parseFloat( $this.attr( 'min' ) ) : 0.0;
   var rangeMax = $this.attr( 'max' ) ? parseFloat( $this.attr( 'max' ) ) : 100.0;
   var rangeSize = rangeMax - rangeMin;
-  var valuePct = this.value / rangeSize * 100;
+  var valuePct = Math.min( ( this.value / rangeSize * 100 ) + 10, 100 );
   
   var rangerSheet = $this.data('rangerSheet');
   if ( rangerSheet ) {

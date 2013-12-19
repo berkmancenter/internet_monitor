@@ -1,3 +1,5 @@
+@import "colors";
+
 @mixin range-track( $border, $border-radius, $width, $height ) {
   /* color the track
    * firefox/webkit gradient done in JavaScript */
@@ -24,7 +26,7 @@
     height: $height;
   }
   &::-ms-track {
-    height: $height;
+    height: $height * 2;
   }
 
   box-sizing: content-box;
@@ -48,7 +50,7 @@
     border: $border;
     border-radius: $border-radius;
     height: $height;
-    width: $width;
+    width: $width * 2/3;
   }
   &::-webkit-slider-thumb {
     background: $background;
@@ -60,7 +62,26 @@
   }  
 }
 
-input[type="range"] {
-  @include range-track( 2px solid #444, 8px, 256px, 12px );
-  @include range-thumb( #469948, 2px solid #dedede, 0, 16px, 16px );
+ul.weight-sliders-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 4px;
+    padding: 0;
+  }
+
+  label {
+    display: inline-block;
+    width: 320px;
+  }
+
+  .weight-slider {
+    @include range-track( 2px solid #444, 8px, 128px, 8px );
+    @include range-thumb( $gold, 2px solid #dedede, 0, 16px, 16px );
+
+    margin: 0;
+    padding: 0;
+  }
 }

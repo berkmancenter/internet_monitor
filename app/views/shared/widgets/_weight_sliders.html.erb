@@ -1,8 +1,8 @@
-<ul>
+<ul class="weight-sliders-list">
 <% @indicator_sources.each do |indicator_source| %>
   <li>
     <label for="range-<%= indicator_source.admin_name %>"><%= indicator_source.public_name %></label>
-    <input type="range" id="range-<%= indicator_source.admin_name %>" name="<%= indicator_source.admin_name %>" data-background-min="green" data-background-max="blue" min="0" max="2" step="0.1" data-source-id="<%= indicator_source.id %>" data-default-weight="<%= indicator_source.default_weight %>" class="weight-slider" />
+    <input type="range" id="range-<%= indicator_source.admin_name %>" name="<%= indicator_source.admin_name %>" data-background-min="#5ec1a5" data-background-max="#617085" min="0" max="2" step="0.1" data-source-id="<%= indicator_source.id %>" data-default-weight="<%= indicator_source.default_weight %>" class="weight-slider" />
   </li>
 <% end %>
 </ul>
