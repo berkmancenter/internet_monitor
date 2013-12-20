@@ -32,19 +32,30 @@ describe 'layout requests', :js => true do
     }
 
     describe ( 'click countries' ) {
-      it {
+      before {
         click_link 'countries'
+        sleep 1
+      }
+
+      it {
         should have_css '.countries-nav-list.expanded'
+      }
+
+      it {
+        should_not have_css '.countries-nav-list a', text: 'UNITED STATES'
+      }
+
+      describe ( 'click countries twice' ) {
+        before {
+          click_link 'countries'
+        }
+
+        it ( 'should hide country list' ) {
+          should_not have_css '.countries-nav-list.expanded'
+        }
       }
     }
 
-    describe ( 'click countries twice' ) {
-      it ( 'should hide country list' ) {
-        click_link 'countries'
-        click_link 'countries'
-        should_not have_css '.countries-nav-list.expanded'
-      }
-    }
 
     it {
       should have_css '.data-nav-categories'

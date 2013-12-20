@@ -13,7 +13,7 @@ describe ( 'refinery/pages/home' ) {
     }
     
     it {
-      should have_css 'div.carousel div.carousel-map'
+      should have_css 'div.carousel span.carousel-map'
       should have_css 'span.carousel-map #explore-map'
     }
 
