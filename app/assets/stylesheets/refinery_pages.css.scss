@@ -3,6 +3,17 @@
 .refinery-pages.show .main-content, .refinery-blog-posts .main-content {
   background: lighten( $violet, 40% );
 
+  a {
+    color: $violet;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      color: $orange;
+      text-decoration: underline;
+    }
+  }
+
   h1#body_content_title {
     color: $white;
     background: $violet;
@@ -24,7 +35,7 @@
     width: 65%;
   }
 
-  #side_body {
+  #side_body, #sidebar {
     display: inline-block;
     background: $white;
     border-radius: .5em;
@@ -34,4 +45,24 @@
     vertical-align: top;
     width: 32%;
   }
+
+  header {
+    h1 {
+      color: $orange;
+      font-size: 1em;
+      margin-bottom: .5em;
+      text-transform: uppercase;
+    }
+
+    .details {
+      color: $orange;
+      font-size: .8em;
+
+      .blog_author {
+        font-weight: bold;
+      }
+    }
+  }
 }
+
+
