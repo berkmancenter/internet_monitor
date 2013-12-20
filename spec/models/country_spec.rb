@@ -13,6 +13,16 @@ describe ( 'Country model' ) {
     it { should respond_to :enough_data? }
 
     it { country.enough_data?.should be_true }
+
+    describe ( 'recalc_scores' ) {
+      before {
+        country.recalc_scores!
+      }
+
+      it ( 'should have recalculated score & still be valid' ) {
+        should be_valid
+      }
+    }
   }
 
   context ( 'without enough data for a score' ) {

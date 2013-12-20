@@ -96,6 +96,11 @@ namespace :db do
       d_population.country = iran;
       d_population.save!
 
+
+      Country.all.each do |country|
+        country.recalc_scores!
+      end
+
       # refinery
       Refinery::Pages::Engine.load_seed
       Refinery::Blog::Engine.load_seed

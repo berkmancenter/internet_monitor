@@ -3,10 +3,13 @@ require 'spec_helper'
 describe ( 'countries/map' ) {
   subject { rendered }
 
+  let ( :scored_countries ) { Country.with_enough_data }
+  let ( :max_score )  { scored_countries.order('score desc').first.score }
+
   context ( 'default view' ) {
     before {
-      assign( :map_countries, Country.with_enough_data.select( 'iso3_code,score' ) )
-      assign( :scored_countries, Country.with_enough_data )
+      assign( :scored_countries, scored_countries )
+      assign( :map_countries, scored_countries )
       assign( :unscored_countries, Country.without_enough_data )
     
       render
@@ -14,7 +17,7 @@ describe ( 'countries/map' ) {
 
     it {
       should have_css '.geomap'
-      should have_css '.geomap[data-max-score="4.82843928"]'
+      should have_css ".geomap[data-max-score='#{max_score}']"
     }
 
     it {

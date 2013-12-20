@@ -5,7 +5,6 @@ FactoryGirl.define do
       name 'Iran'
       iso_code 'IR'
       iso3_code 'IRN'
-      score 4.82843928
       description ''
       indicator_count 4
     end
@@ -16,7 +15,6 @@ FactoryGirl.define do
       name 'United States'
       iso_code 'US'
       iso3_code 'USA'
-      score 3.528
       description nil
       indicator_count 1
     end
@@ -25,7 +23,6 @@ FactoryGirl.define do
       name 'nil_score'
       iso_code 'NS'
       iso3_code 'CNS'
-      score nil
       description 'nil_score'
       indicator_count 0
     end
@@ -181,7 +178,7 @@ FactoryGirl.define do
       #country iran
       #language nil
       original_value 10.0
-      value 1
+      value 1.0
       type 'Indicator'
     end
 
