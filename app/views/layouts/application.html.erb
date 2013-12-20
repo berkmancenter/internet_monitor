@@ -9,7 +9,7 @@
   <%= stylesheet_link_tag    "magnific-popup", :media => "all" %>
   <%= csrf_meta_tags %>
 </head>
-<body class="<%= "#{ params[ :controller ].sub( '/', '-' ) } #{ params[ :action ] }" %>">
+<body class="<%= "#{ params[ :controller ].gsub( '/', '-' ) } #{ params[ :action ] }" %>">
 
   <header>
     <nav>
