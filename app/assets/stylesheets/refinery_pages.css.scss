@@ -3,7 +3,7 @@
 .refinery-pages.show .main-content, .refinery-blog-posts .main-content {
   background: lighten( $violet, 40% );
 
-  a {
+  #body_content a {
     color: $violet;
     font-weight: bold;
     text-decoration: none;
