@@ -62,6 +62,7 @@ describe 'countries requests', :js => true do
         before {
           page.execute_script( %q[$('.toggle-weight-sliders').click( )] )
           page.execute_script( %q[$('[name="ds_pct_inet"]').val( 0.5 ).trigger('input')] )
+          sleep 1
         }
 
         it {
