@@ -116,9 +116,12 @@
 
       var sum = indicators.reduce( function( sum, indi, i ) {
         var indicator = _indicators[ indi.source_id ];
-        var weight = $.bbq.getState( indicator.adminName, true );
+        var weight = $.bbq.getState( indicator.adminName, true ) || 1.0;
 
-        var output = sum + indi.normalized_value * ( weight || indicator.defaultWeight ) * indicator.direction;
+        var output = sum + indi.normalized_value * weight * indicator.direction;
+        if ( indicator.direction < 0 ) {
+          output += 1;
+        }
         return output;
       }, 0.0);
 

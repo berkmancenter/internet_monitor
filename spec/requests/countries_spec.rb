@@ -106,30 +106,44 @@ describe 'countries requests', :js => true do
   context ( 'with scoreKeeper state in url' ) {
     let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
 
-    before {
-      visit "#{countries_path}#ds_pct_inet=1.5"
-      page.execute_script %q[$('.toggle-weight-sliders').click( )]
-    }
-
-    it {
-      should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-      should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '1.39'
-    }
-
-    it {
-      slider_val = page.evaluate_script %q[$('[name="ds_pct_inet"]').val( )]
-      slider_val.should eq( '1.5' )
-    }
-
-    describe ( 'move to another page' ) {
+    context ( 'with user weight' ) {
       before {
-        visit country_path( country )
+        visit "#{countries_path}#ds_pct_inet=1.5"
+        page.execute_script %q[$('.toggle-weight-sliders').click( )]
       }
 
-      it ( 'should maintain state' ) {
+      it {
         should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
         should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '1.39'
       }
+
+      it {
+        slider_val = page.evaluate_script %q[$('[name="ds_pct_inet"]').val( )]
+        slider_val.should eq( '1.5' )
+      }
+
+      describe ( 'move to another page' ) {
+        before {
+          visit country_path( country )
+        }
+
+        it ( 'should maintain state' ) {
+          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
+          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '1.39'
+        }
+      }
+    }
+
+    context ( 'with default weight' ) {
+      before {
+        visit "#{countries_path}#ds_pct_inet=1"
+      }
+
+      it {
+        should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
+        should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: country.score.round( 2 )
+      }
+
     }
   }
 
