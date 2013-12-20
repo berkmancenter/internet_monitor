@@ -89,6 +89,17 @@
     font-style: italic;
   }
 
+  a {
+    color: $violet;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      color: $orange;
+      text-decoration: underline;
+    }
+  }
+
   .main-column {
     display: inline-block;
     vertical-align: top;

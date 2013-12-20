@@ -14,6 +14,14 @@
       <%= render partial: 'data/indicators', object: @category.data.most_recent.for( @country ) %>
       <%#= render partial: "data/grouped", locals: {data: @category.data.most_recent.for(@country)} %>
       
+      <% if @category.name == 'Control' %>
+        <div class="block">
+          <h3>HERDICT</h3>
+          <p>Interested in helping Herdict test for blocked websites in your country?</p>
+          <a href="http://www.herdict.org/participate/reporter" target="_blank"><span style="display: block;">Click here to open the Herdict reporter!</span> <%= image_tag 'herdict_logo.png' %></a>
+        </div>
+      <% end %>
+
       <% @country.languages.each do |language|
         data = @category.data.most_recent.for(language)
         unless data.empty? %>
