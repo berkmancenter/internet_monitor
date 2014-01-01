@@ -71,7 +71,7 @@ describe 'countries requests', :js => true do
 
         it {
           should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '0.84'
+          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '3.34'
         }
 
         it ( 'should not updated score pills for countries without enough data' ) {
@@ -85,7 +85,7 @@ describe 'countries requests', :js => true do
 
           it ( 'should maintain state' ) {
             should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-            should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '0.84'
+            should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '3.34'
           }
         }
       }
@@ -114,7 +114,7 @@ describe 'countries requests', :js => true do
 
       it {
         should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-        should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '1.39'
+        should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '3.89'
       }
 
       it {
@@ -129,7 +129,7 @@ describe 'countries requests', :js => true do
 
         it ( 'should maintain state' ) {
           should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '1.39'
+          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '3.89'
         }
       }
     }
