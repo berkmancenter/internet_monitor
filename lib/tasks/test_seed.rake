@@ -109,10 +109,21 @@ namespace :db do
       u.create_first
 
       # Data page
-      data_page = FactoryGirl.create :data_page
-      data_page_body = FactoryGirl.create :data_page_body
-      data_page_body.page = data_page
-      data_page_body.save
+      sources_page = FactoryGirl.create :sources_page
+
+      sources_page_body = FactoryGirl.create :sources_page_body
+      sources_page_body.page = sources_page
+      sources_page_body.save
+
+      sources_page_side_body = FactoryGirl.create :sources_page_side_body
+      sources_page_side_body.page = sources_page
+      sources_page_side_body.save
+
+      ## mock custom slug/title
+      sources_page_translation = sources_page.translation
+      sources_page_translation.title = 'Data'
+      sources_page_translation.custom_slug = 'sources'
+      sources_page_translation.save
 
       # IRN page
       iran_page = FactoryGirl.create :iran_page

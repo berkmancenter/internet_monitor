@@ -20,8 +20,8 @@ describe ( 'pages requests' ) {
     }
   }
 
-  describe ( 'get /data' ) {
-    before { visit refinery::marketable_page_path('data') }
+  describe ( 'get /sources' ) {
+    before { visit refinery::marketable_page_path('sources') }
 
     it {
       should have_css 'h1', text: 'Data'

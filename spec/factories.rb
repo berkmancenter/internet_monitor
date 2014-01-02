@@ -223,20 +223,27 @@ FactoryGirl.define do
     u.password 'tp4ssw0rd'
   end
 
-  factory :data_page, class: Refinery::Page do |p|
-    p.title 'Data'
-    p.slug 'data'
+  factory :sources_page, class: Refinery::Page do |p|
+    p.title 'Sources'
+    p.slug 'sources'
     p.show_in_menu true
     p.link_url ''
     p.deletable true
     p.draft false
   end
 
-  factory :data_page_body, class: Refinery::PagePart do |pp|
-    #pp.page data_page
+  factory :sources_page_body, class: Refinery::PagePart do |pp|
+    #pp.page sources_page
     title 'Body'
     body 'Data! We have some! We analyze it!'
     position 0
+  end
+
+  factory :sources_page_side_body, class: Refinery::PagePart do |pp|
+    #pp.page sources_page
+    title 'Side Body'
+    body 'Analyze!'
+    position 1
   end
 
   factory :iran_page, class: Refinery::Page do |p|

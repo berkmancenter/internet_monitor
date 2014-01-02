@@ -12,7 +12,7 @@ describe 'layout requests', :js => true do
 
       should have_css "header a[href*='#{refinery::marketable_page_path('about')}']"
       should have_css "header a[href*='#{refinery::marketable_page_path('research')}']"
-      should have_css "header a[href*='#{refinery::marketable_page_path('data')}']"
+      should have_css "header a[href*='#{refinery::marketable_page_path('sources')}']"
       should have_css "header a[href*='#{map_path}']"
       should have_css "header a[href*='#{countries_path}']"
       should have_css "header a[href*='#{refinery::blog_root_path}']"
