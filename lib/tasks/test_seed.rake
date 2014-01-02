@@ -108,6 +108,12 @@ namespace :db do
       u = FactoryGirl.create( :tadmin )
       u.create_first
 
+      # Data page
+      data_page = FactoryGirl.create :data_page
+      data_page_body = FactoryGirl.create :data_page_body
+      data_page_body.page = data_page
+      data_page_body.save
+
       # IRN page
       iran_page = FactoryGirl.create :iran_page
       iran_page_body = FactoryGirl.create :iran_page_body
