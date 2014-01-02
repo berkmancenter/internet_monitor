@@ -34,11 +34,12 @@ describe ( 'countries/map' ) {
     }
 
     it {
-      should have_css '.map-index h2', text: 'Countries', exact: true
+      should have_css '.map-index h2', text: 'Country Scores', exact: true
       should have_css '.map-index ol.scored-countries' #ordered
     }
 
     it {
+      # removed
       should_not have_css '.map-index h2', text: 'Countries Without Scores'
       should_not have_css '.map-index ul.unscored-countries' #unordered
     }
