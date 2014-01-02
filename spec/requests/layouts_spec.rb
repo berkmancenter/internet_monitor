@@ -21,6 +21,7 @@ describe 'layout requests', :js => true do
       should have_css( 'footer nav' );
 
       should have_css "footer a[href*='#{refinery::marketable_page_path('about')}']"
+      should have_css "footer a[href*='#{refinery::marketable_page_path('terms-of-service')}']", text: 'TERMS & PRIVACY'
       should have_css "footer a[href*='#{refinery::blog_root_path}']"
 
       should_not have_css 'footer li', text: 'MAILING LIST'
