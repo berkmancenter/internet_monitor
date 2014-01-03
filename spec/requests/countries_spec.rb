@@ -44,7 +44,7 @@ describe 'countries requests', :js => true do
     }
 
     it {
-      should have_title 'countries @ Internet Monitor'
+      should have_title 'Countries | Internet Monitor'
     }
 
     it_should_behave_like( 'weight_slider' );
@@ -162,7 +162,7 @@ describe 'countries requests', :js => true do
       before { visit country_path( country ) }
 
       it {
-        should have_title( "#{country.name.downcase} @ Internet Monitor" )
+        should have_title( "#{country.name.titleize} | Internet Monitor" )
       }
 
       it {
@@ -208,7 +208,7 @@ describe 'countries requests', :js => true do
       }
 
       it {
-        should have_title( "#{country.name.downcase} access @ Internet Monitor" )
+        should have_title( "#{country.name.titleize} Access | Internet Monitor" )
       }
 
       it_should_behave_like( 'weight_slider' );
@@ -228,7 +228,7 @@ describe 'countries requests', :js => true do
       }
 
       it {
-        should have_title( "#{country.name.downcase} access @ Internet Monitor" )
+        should have_title( "#{country.name.titleize} Access | Internet Monitor" )
       }
     }
   end
@@ -242,7 +242,7 @@ describe 'countries requests', :js => true do
     }
 
     it {
-      should have_title( "#{country.name.downcase} control @ Internet Monitor" )
+      should have_title( "#{country.name.titleize} Control | Internet Monitor" )
     }
 
     it_should_behave_like( 'weight_slider' );
@@ -262,7 +262,7 @@ describe 'countries requests', :js => true do
     }
 
     it {
-      should have_title( "#{country.name.downcase} activity @ Internet Monitor" )
+      should have_title( "#{country.name.titleize} Activity | Internet Monitor" )
     }
 
     it_should_behave_like( 'weight_slider' );

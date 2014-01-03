@@ -4,8 +4,20 @@ require 'spec_helper'
 describe ( 'pages requests' ) {
   subject { page }
 
+  describe ( 'get /home' ) {
+    before { visit refinery::root_path }
+
+    it {
+      should have_title 'Home | Internet Monitor'
+    }
+  }
+
   describe ( 'get /about' ) {
     before { visit refinery::marketable_page_path('about') }
+
+    it {
+      should have_title 'About | Internet Monitor'
+    }
 
     it {
       should have_css 'h1', text: 'About'
