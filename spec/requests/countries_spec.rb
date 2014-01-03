@@ -155,7 +155,7 @@ describe 'countries requests', :js => true do
     }
   }
 
-  describe( "get /countries/:id" ) do
+  describe ( 'get /countries/:id' ) {
     context ( 'with normal country' ) {
       let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
 
@@ -184,7 +184,16 @@ describe 'countries requests', :js => true do
         should have_css '.score-pill'
       }
 
-      describe 'click user score in pill' do
+      it ( 'should have a map' ) {
+        should have_css '.sidebar .geomap'
+      }
+
+      it ( 'map should be static' ) {
+        mode = page.evaluate_script( %q[$('.sidebar .geomap').geomap('option', 'mode')] )
+        mode.should eq( 'static' )
+      }
+
+      describe ( 'click user score in pill' ) {
         before {
           page.execute_script( %q[$('a.user-score').click( )] );
           #click_link 'a.user-score'
@@ -193,10 +202,9 @@ describe 'countries requests', :js => true do
         it {
           find( '#weight-sliders' ).visible?.should be_true;
         }
-
-      end
+      }
     }
-  end
+  }
 
   describe( "get /countries/:id/access" ) do
     context ( 'with normal country' ) {

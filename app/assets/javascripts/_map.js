@@ -3,6 +3,7 @@ $( function( ) {
     var hover = null;
     var popup = null;
     var popupTmpl = $.templates( '#popup-tmpl' );
+    var defaultMapMode = $( 'body.map' ).length > 0 ? 'pan' : 'static';
 
 
     var map = $( '.geomap' ).geomap( {
@@ -20,6 +21,7 @@ $( function( ) {
       ],
       center: [ 0, 20 ],
       zoom: 2,
+      mode: defaultMapMode,
       cursors: {
         click: 'pointer'
       },
