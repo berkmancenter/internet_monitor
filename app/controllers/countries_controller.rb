@@ -12,7 +12,7 @@ class CountriesController < ApplicationController
   end
 
   def show
-    @map_countries = Country.with_enough_data.select( 'id,iso3_code,score' )
+    @map_countries = Country.with_enough_data.where( { id: params[ :id ] } ).select( 'id,iso3_code,score' )
     @country = Country.find(params[:id])
 
     @update = nil

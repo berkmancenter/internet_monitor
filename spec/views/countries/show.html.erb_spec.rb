@@ -8,7 +8,7 @@ describe ( 'countries/show' ) {
     let ( :update ) { strip_tags( Refinery::Page.by_slug( country.iso3_code.downcase ).first.content_for( :body ) ) }
 
     before {
-      assign( :map_countries, Country.with_enough_data.select( 'iso3_code,score' ) )
+      assign( :map_countries, Country.with_enough_data.where( { id: country.id } ).select( 'iso3_code,score' ) )
       assign( :country, country )
       assign( :update, update )
       render
@@ -72,7 +72,7 @@ describe ( 'countries/show' ) {
     let ( :country ) { Country.find_by_iso3_code( 'USA' ) }
 
     before {
-      assign( :map_countries, Country.with_enough_data.select( 'iso3_code,score' ) )
+      assign( :map_countries, Country.with_enough_data.where( { id: country.id } ).select( 'iso3_code,score' ) )
       assign( :country, country )
       render
     }

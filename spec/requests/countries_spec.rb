@@ -162,7 +162,7 @@ describe 'countries requests', :js => true do
       before { visit country_path( country ) }
 
       it {
-        should have_title( "#{country.name.titleize} | Internet Monitor" )
+        should have_title "#{country.name.titleize} | Internet Monitor"
       }
 
       it {
@@ -173,11 +173,11 @@ describe 'countries requests', :js => true do
 
       it_should_behave_like( 'category_selector' );
       it ( 'should not have any category' ) {
-        should_not have_selector( ".category-selector a.selected" );
+        should_not have_selector '.category-selector a.selected' 
       }
 
       it ( 'should not have indicators' ) {
-        should_not have_selector( '.country .indicators,.country .url-lists,.country .html-blocks,.country .images' );
+        should_not have_selector '.country .indicators,.country .url-lists,.country .html-blocks,.country .images'
       }
 
       it {
@@ -191,6 +191,11 @@ describe 'countries requests', :js => true do
       it ( 'map should be static' ) {
         mode = page.evaluate_script( %q[$('.sidebar .geomap').geomap('option', 'mode')] )
         mode.should eq( 'static' )
+      }
+
+      it ( 'map only needs to color target country' ) {
+        map_countries_count = page.evaluate_script( %q[$('.sidebar .geomap').data('mapCountries').length] )
+        map_countries_count.should eq( 1 )
       }
 
       describe ( 'click user score in pill' ) {

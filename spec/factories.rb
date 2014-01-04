@@ -9,6 +9,15 @@ FactoryGirl.define do
       indicator_count 4
     end
 
+    # china is also a country with enough data to be on the map & in the index
+    factory :china do
+      name 'China'
+      iso_code 'CN'
+      iso3_code 'CHN'
+      description nil
+      indicator_count 4
+    end
+
     # usa only has one indicator: access
     # therefore it appears as 'without scores'
     factory :usa do
@@ -37,6 +46,11 @@ FactoryGirl.define do
     factory :english do
       name 'English'
       iso_code 'en'
+    end
+
+    factory :chinese do
+      name 'Chinese'
+      iso_code 'zh'
     end
   end
 
@@ -162,7 +176,7 @@ FactoryGirl.define do
       type 'Indicator'
     end
 
-    factory :d_lit_rate do
+    factory :d_lit_rate_iran do
       #source ds_lit_rate
       start_date '2011-01-01'
       #country iran
@@ -172,7 +186,7 @@ FactoryGirl.define do
       type 'Indicator'
     end
 
-    factory :d_consistency do
+    factory :d_consistency_iran do
       #source ds_consistency
       start_date '2011-01-01'
       #country iran
@@ -182,13 +196,64 @@ FactoryGirl.define do
       type 'Indicator'
     end
 
-    factory :d_population do
+    factory :d_population_iran do
       #source ds_population
       start_date '2011-01-01'
       #country iran
       #language nil
       original_value 74798599
       value 0.05564141853916538
+      type 'Indicator'
+    end
+
+    # china
+    factory :d_pct_inet_china do
+      #source ds_pct_inet
+      start_date '2011-01-01'
+      #country china
+      #language nil
+      original_value 30.8539009094
+      value 0.31033161028482326
+      type 'Indicator'
+    end
+
+    factory :d_fixed_monthly_china do
+      #source ds_fixed_monthly
+      start_date '2011-01-01'
+      #country china
+      #language nil
+      original_value 0.0034111494365314304
+      value 0.9981913464308573
+      type 'Indicator'
+    end
+
+    factory :d_lit_rate_china do
+      #source ds_lit_rate
+      start_date '2011-01-01'
+      #country china
+      #language nil
+      original_value 94.2722
+      value 0.9300339472295512
+      type 'Indicator'
+    end
+
+    factory :d_consistency_china do
+      #source ds_consistency
+      start_date '2011-01-01'
+      #country china
+      #language nil
+      original_value 10.0
+      value 1.0
+      type 'Indicator'
+    end
+
+    factory :d_population_china do
+      #source ds_population
+      start_date '2011-01-01'
+      #country china
+      #language nil
+      original_value 1344130000
+      value 1.0
       type 'Indicator'
     end
 

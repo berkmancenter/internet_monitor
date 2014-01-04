@@ -13,11 +13,19 @@ namespace :db do
       english = FactoryGirl.create( :english );
       english.save!
 
+      chinese = FactoryGirl.create( :chinese );
+      chinese.save!
+
       # countries
       iran = FactoryGirl.create( :iran );
       iran.categories = categories;
       iran.languages << persian;
       iran.save!
+
+      china = FactoryGirl.create( :china );
+      china.categories = categories;
+      china.languages << chinese;
+      china.save!
 
       usa = FactoryGirl.create( :usa );
       usa.categories = categories;
@@ -53,10 +61,25 @@ namespace :db do
       d_fixed_monthly_iran.country = iran;
       d_fixed_monthly_iran.save!
 
-      d_lit_rate = FactoryGirl.create( :d_lit_rate );
-      d_lit_rate.source = ds_lit_rate;
-      d_lit_rate.country = iran;
-      d_lit_rate.save!
+      d_lit_rate_iran = FactoryGirl.create( :d_lit_rate_iran );
+      d_lit_rate_iran.source = ds_lit_rate;
+      d_lit_rate_iran.country = iran;
+      d_lit_rate_iran.save!
+
+      d_pct_inet_china = FactoryGirl.create( :d_pct_inet_china );
+      d_pct_inet_china.source = ds_pct_inet;
+      d_pct_inet_china.country = china;
+      d_pct_inet_china.save!
+
+      d_fixed_monthly_china = FactoryGirl.create( :d_fixed_monthly_china );
+      d_fixed_monthly_china.source = ds_fixed_monthly;
+      d_fixed_monthly_china.country = china;
+      d_fixed_monthly_china.save!
+
+      d_lit_rate_china = FactoryGirl.create( :d_lit_rate_china );
+      d_lit_rate_china.source = ds_lit_rate;
+      d_lit_rate_china.country = china;
+      d_lit_rate_china.save!
 
       d_pct_inet_usa = FactoryGirl.create( :d_pct_inet_usa );
       d_pct_inet_usa.source = ds_pct_inet;
@@ -69,10 +92,15 @@ namespace :db do
       ds_consistency.save!
 
       # control datum
-      d_consistency = FactoryGirl.create( :d_consistency );
-      d_consistency.source = ds_consistency;
-      d_consistency.country = iran;
-      d_consistency.save!
+      d_consistency_iran = FactoryGirl.create( :d_consistency_iran );
+      d_consistency_iran.source = ds_consistency;
+      d_consistency_iran.country = iran;
+      d_consistency_iran.save!
+
+      d_consistency_china = FactoryGirl.create( :d_consistency_china );
+      d_consistency_china.source = ds_consistency;
+      d_consistency_china.country = china;
+      d_consistency_china.save!
 
       # access datum sources
       ds_morningside = FactoryGirl.create :ds_morningside
@@ -91,10 +119,15 @@ namespace :db do
       ds_population.save!
 
       # other datum
-      d_population = FactoryGirl.create( :d_population );
-      d_population.source = ds_population;
-      d_population.country = iran;
-      d_population.save!
+      d_population_iran = FactoryGirl.create( :d_population_iran );
+      d_population_iran.source = ds_population;
+      d_population_iran.country = iran;
+      d_population_iran.save!
+
+      d_population_china = FactoryGirl.create( :d_population_china );
+      d_population_china.source = ds_population;
+      d_population_china.country = china;
+      d_population_china.save!
 
 
       Country.all.each do |country|
