@@ -22,7 +22,8 @@ function renderMorningside(node, path) {
 }
 
 $(function() {
-    $('.morningside-fetcher').each(function() {
-        renderMorningside(this, $(this).data('datum-path'));
-    });
+  $('.morningside-fetcher').each(function() {
+    $this = $( this );
+    renderMorningside( $this.find( '.render' )[ 0 ] , $this.data( 'datum-path' ) );
+  });
 });

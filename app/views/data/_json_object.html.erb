@@ -1,2 +1,8 @@
-<div class="<%= retriever_class_name(datum) %> block" data-datum-path="<%= datum_path(datum, format: :json) %>">
-</div>
+<section class="<%= retriever_class_name( datum ) %> block" data-datum-path="<%= datum_path(datum, format: :json) %>">
+  <% if ( rp = refinery_page( datum ) ).any? %>
+    <h1><%= rp.first.title %></h1>
+  <% end %>
+  
+  <div class="render">
+  </div>
+</section>

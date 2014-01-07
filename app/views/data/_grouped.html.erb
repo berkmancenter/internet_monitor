@@ -1,7 +1,7 @@
 <% data.group_by{|d| d.type}.each do |type, data| %>
   <% data.each do |datum| %>
     <div class="<%= type.pluralize.underscore.dasherize %>">
-      <%= render partial: "data/#{datum.type.underscore}", locals: {datum: datum} %>
+      <%= render( partial: "data/#{datum.type.underscore}", locals: {datum: datum} ) unless datum.source.requires_page && refinery_page( datum ).empty? %>
     </div>
   <% end %>
 <% end %>

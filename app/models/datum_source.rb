@@ -1,5 +1,5 @@
 class DatumSource < ActiveRecord::Base
-    attr_accessible :admin_name, :default_weight, :description, :in_sidebar, :is_api, :link, :max, :min, :public_name, :retriever_class, :datum_type, :affects_score
+    attr_accessible :admin_name, :default_weight, :description, :in_sidebar, :requires_page, :is_api, :link, :max, :min, :public_name, :retriever_class, :datum_type, :affects_score
 
     belongs_to :category
     has_many :data, :autosave => true

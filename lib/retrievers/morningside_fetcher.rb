@@ -36,7 +36,7 @@ class MorningsideFetcher
             language_iso_code = LANGUAGE_MAP[map['name']]
             next unless language_iso_code
             language = Language.find_by_iso_code(language_iso_code)
-            datum = JsonObject.new(:start_date => Date.today, :value => clustermap(map['id']))
+            datum = JsonObject.new(:start_date => Date.today, :value_id => map['id'], :value => clustermap(map['id']))
             datum.language = language
             datum.save!
             data << datum

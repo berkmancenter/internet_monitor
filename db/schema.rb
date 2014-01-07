@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130425195327) do
+ActiveRecord::Schema.define(:version => 20140107203219) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -62,6 +62,7 @@ ActiveRecord::Schema.define(:version => 20130425195327) do
     t.string   "type"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.string   "value_id"
   end
 
   add_index "data", ["country_id"], :name => "index_data_on_country_id"
@@ -84,6 +85,7 @@ ActiveRecord::Schema.define(:version => 20130425195327) do
     t.string   "link"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.boolean  "requires_page"
   end
 
   add_index "datum_sources", ["category_id"], :name => "index_datum_sources_on_category_id"

@@ -136,10 +136,16 @@ describe ( 'country_categories/show' ) {
         should_not have_css 'section.indicators'
       }
 
-      it {
-        # activity sample has a morningside widget
+      it ( 'should have a morningside widget' ) {
+        # activity sample has one
         should have_css 'div.json-objects'
-        should have_css '.json-objects .morningside-fetcher'
+        should have_css '.json-objects section.morningside-fetcher'
+        should have_css '.morningside-fetcher .render'
+      }
+
+      it ( 'should have morningside header' ) {
+        # headers come from cms page
+        should have_css 'section.morningside-fetcher h1', text: 'ds_morningside_1'
       }
     }
   }

@@ -150,6 +150,7 @@ FactoryGirl.define do
       retriever_class 'MorningsideFetcher'
       is_api true
       in_sidebar false
+      requires_page true
       affects_score false
     end
   end
@@ -346,6 +347,21 @@ FactoryGirl.define do
     title 'Activity'
     body 'Iran is mildly active on Twitter.'
     position 4
+  end
+
+  factory :ds_morningside_1_page, class: Refinery::Page do |p|
+    p.title 'ds_morningside_1'
+    p.show_in_menu true
+    p.link_url ''
+    p.deletable true
+    p.draft false
+  end
+
+  factory :ds_morningside_1_page_body, class: Refinery::PagePart do |pp|
+    #pp.page ds_morningside_1_page
+    title 'ds_morningside_1'
+    body 'Researchers at Berkman are currently working to analyze this data.'
+    position 0
   end
 end
 

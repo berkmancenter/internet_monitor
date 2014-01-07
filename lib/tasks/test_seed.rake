@@ -112,6 +112,7 @@ namespace :db do
       d_morningside.source = ds_morningside
       d_morningside.language = persian
       d_morningside.value = IO.read 'db/test_data/morningside.json'
+      d_morningside.value_id = 1
       d_morningside.save
 
       # other datum source
@@ -172,6 +173,13 @@ namespace :db do
       iran_page_activity = FactoryGirl.create :iran_page_activity
       iran_page_activity.page = iran_page
       iran_page_activity.save
+
+      # Data page
+      ds_morningside_1_page = FactoryGirl.create :ds_morningside_1_page
+
+      ds_morningside_1_page_body = FactoryGirl.create :ds_morningside_1_page_body
+      ds_morningside_1_page_body.page = ds_morningside_1_page
+      ds_morningside_1_page_body.save
     end
   end
 end

@@ -20,6 +20,7 @@ class Retriever
             :retriever_class => line['Retriever Class'],
             :affects_score => line['Affects Score?'] == 'y',
             :in_sidebar => line['Include in Sidebar?'] == 'y',
+            :requires_page => line['Requires Page?'] == 'y',
             :default_weight => line['Default Weight'].to_f
         )
         ds.category = Category.find_by_name(line['Category'])
