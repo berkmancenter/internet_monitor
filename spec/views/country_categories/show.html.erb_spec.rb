@@ -144,8 +144,18 @@ describe ( 'country_categories/show' ) {
       }
 
       it ( 'should have morningside header' ) {
-        # headers come from cms page
+        # headers come from cms page title
         should have_css 'section.morningside-fetcher h1', text: 'ds_morningside_1'
+      }
+
+      it ( 'should have morningside description' ) {
+        # description comes from cms page body
+        should have_css 'section.morningside-fetcher .body', text: 'Researchers at Berkman are currently working to analyze this data.'
+      }
+
+      it ( 'should have a note under the blogosphere' ) {
+        # description comes from cms page side_body
+        should have_css 'section.morningside-fetcher .sidebar', text: 'For an earlier report on the Arabic blogosphere using similar research methods, see "Mapping the Arabic Blogosphere: Politics, Culture and Dissent" (2009).'
       }
     }
   }

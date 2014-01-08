@@ -180,6 +180,10 @@ namespace :db do
       ds_morningside_1_page_body = FactoryGirl.create :ds_morningside_1_page_body
       ds_morningside_1_page_body.page = ds_morningside_1_page
       ds_morningside_1_page_body.save
+
+      ds_morningside_1_page_side_body = FactoryGirl.create :ds_morningside_1_page_side_body
+      ds_morningside_1_page_side_body.page = ds_morningside_1_page
+      ds_morningside_1_page_side_body.save
     end
   end
 end
