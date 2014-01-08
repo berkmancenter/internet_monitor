@@ -155,7 +155,7 @@ describe ( 'country_categories/show' ) {
 
       it ( 'should have a note under the blogosphere' ) {
         # description comes from cms page side_body
-        should have_css 'section.morningside-fetcher .sidebar', text: 'For an earlier report on the Arabic blogosphere using similar research methods, see "Mapping the Arabic Blogosphere: Politics, Culture and Dissent" (2009).'
+        should have_css 'section.morningside-fetcher .side_body', text: 'For an earlier report on the Arabic blogosphere using similar research methods, see "Mapping the Arabic Blogosphere: Politics, Culture and Dissent" (2009).'
       }
     }
   }

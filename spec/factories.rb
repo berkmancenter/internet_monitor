@@ -307,7 +307,7 @@ FactoryGirl.define do
 
   factory :sources_page_side_body, class: Refinery::PagePart do |pp|
     #pp.page sources_page
-    title 'Sidebar'
+    title 'Side Body'
     body 'Analyze!'
     position 1
   end
@@ -366,7 +366,7 @@ FactoryGirl.define do
 
   factory :ds_morningside_1_page_side_body, class: Refinery::PagePart do |pp|
     #pp.page ds_morningside_1_page
-    title 'Sidebar'
+    title 'Side Body'
     body 'For an earlier report on the Arabic blogosphere using similar research methods, see "Mapping the Arabic Blogosphere: Politics, Culture and Dissent" (2009).'
     position 1
   end
