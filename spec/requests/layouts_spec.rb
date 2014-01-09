@@ -49,6 +49,7 @@ describe 'layout requests', :js => true do
       }
 
       it {
+        # countries without enough data should not show in this list
         should_not have_css '.countries-nav-list a', text: 'UNITED STATES'
       }
 
