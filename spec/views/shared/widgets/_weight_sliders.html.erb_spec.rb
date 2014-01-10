@@ -13,15 +13,7 @@ describe ( 'shared/widgets/_weight_sliders' ) {
     }
 
     it {
-      should have_css 'h4', text: 'ACCESS'
-    }
-
-    it {
-      should have_css 'h4', text: 'CONTROL'
-    }
-
-    it {
-      should have_css 'ul.weight-sliders-list', count: 2
+      should have_css 'ul.weight-sliders-list'
     }
 
     it {

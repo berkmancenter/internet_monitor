@@ -34,7 +34,12 @@
 
     <div id="weight-sliders" class="hidden">
         <h3>Configuration</h3>
-        <%= render :partial => 'shared/widgets/weight_sliders' %>
+
+        <h4 class="access-1-fg">Access</h4>
+        <%= render :partial => 'shared/widgets/weight_sliders', locals: { indicator_sources: @indicator_sources.where( { category_id: Category.find_by_slug( 'access' ).id } ) } %>
+
+        <h4 class="control-1-fg">Control</h4>
+        <%= render :partial => 'shared/widgets/weight_sliders', locals: { indicator_sources: @indicator_sources.where( { category_id: Category.find_by_slug( 'control' ).id } ) } %>
     </div>
   </header>
 

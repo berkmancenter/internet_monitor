@@ -25,7 +25,22 @@ describe 'countries requests', :js => true do
 
       it ( 'should show weight-sliders' ) {
         find( '#weight-sliders' ).visible?.should be_true
+      }
+
+      it {
         should have_css '#weight-sliders .weight-slider', count: indicator_count
+      }
+
+      it {
+        should have_css '#weight-sliders h4', text: 'ACCESS'
+      }
+
+      it {
+        should have_css '#weight-sliders h4', text: 'CONTROL'
+      }
+
+      it {
+        should have_css 'ul.weight-sliders-list', count: 2
       }
 
       it ( 'should hide weight-sliders' ) {
