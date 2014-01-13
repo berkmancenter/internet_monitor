@@ -8,8 +8,7 @@ describe ( 'shared/widgets/_weight_sliders' ) {
     let ( :ds_pct_inet ) { indicator_sources.first }
 
     before {
-      assign( :indicator_sources, indicator_sources )
-      render 'shared/widgets/weight_sliders', indicator_sources: indicator_sources
+      render 'shared/widgets/weight_sliders', indicator_sources: indicator_sources, background_color: '#ff0000'
     }
 
     it {

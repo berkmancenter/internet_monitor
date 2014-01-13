@@ -4,7 +4,7 @@ namespace :db do
   namespace :test do
     task :prepare => :environment do
       # categories
-      categories = ['Access', 'Activity', 'Control'].map{|n| Category.find_or_create_by_name(n)}
+      categories = ['Access', 'Control', 'Activity'].map{|n| Category.find_or_create_by_name(n)}
        
       # language
       persian = FactoryGirl.create( :persian );

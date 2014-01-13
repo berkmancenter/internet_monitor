@@ -6,15 +6,17 @@ require 'csv'
 namespace :imon do
   desc 'Delete non-CMS data and re-import (does not rebuild Language)'
   task :rebuild => [:environment] do |task|
-    # Delete old Country, CountryCategory, CountryLanugage, DatumSource, & Indicator data
+    # Delete old Category, Country, CountryCategory, CountryLanugage, DatumSource, & Indicator data
 
     Indicator.delete_all
     DatumSource.delete_all
     CountryCategory.delete_all
     CountryLanguage.delete_all
     Country.delete_all
+    Category.delete_all
 
-    categories = Category.all
+    categories = ['Access', 'Control', 'Activity'].map{|n| Category.find_or_create_by_name(n)}
+       
 
     # Create countries and connect to languages
     CSV.open(Rails.root.join('db', 'countryInfo.txt'), {:headers => true, :col_sep => "\t"}).each do |line|

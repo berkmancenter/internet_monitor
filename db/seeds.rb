@@ -8,7 +8,7 @@
 require 'csv'
 
 # Create categories
-categories = ['Access', 'Activity', 'Control'].map{|n| Category.find_or_create_by_name(n)}
+categories = ['Access', 'Control', 'Activity'].map{|n| Category.find_or_create_by_name(n)}
 
 # Create Lanuages
 CSV.open(Rails.root.join('db','iso-639-3_20130123.tab'), {:col_sep => "\t", :headers => true}).each do |line|
