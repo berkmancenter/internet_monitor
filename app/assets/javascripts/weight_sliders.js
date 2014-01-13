@@ -178,10 +178,10 @@ function setGradient( input ) {
       rangerSheet.deleteRule( 0 );
     }
     
-    rangerSheet.insertRule('input[name="' + input.name + '"]::-moz-range-track { background: linear-gradient(to right, ' + $this.data('backgroundMin') + ', #454545 ' + valuePct + '%, ' + $this.data('backgroundMax') + ') }', 0 );
+    rangerSheet.insertRule('input[name="' + input.name + '"]::-moz-range-track { background: linear-gradient(to right, ' + $this.data('backgroundMin') + ', #bababa ' + valuePct + '%, ' + $this.data('backgroundMax') + ') }', 0 );
   } else if ( $this.hasClass( 'webkit-track' ) ) {
     // webkit / chrome
-    $this.css( 'background', 'linear-gradient(to right, ' + $this.data('backgroundMin') + ', #454545 ' + valuePct + '%, ' + $this.data('backgroundMax') + ')' );
+    $this.css( 'background', 'linear-gradient(to right, ' + $this.data('backgroundMin') + ', #bababa ' + valuePct + '%, ' + $this.data('backgroundMax') + ')' );
   }
 }
 

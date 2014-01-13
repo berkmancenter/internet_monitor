@@ -33,13 +33,15 @@
     <h1><span style="display:none;">Internet Monitor</span> <%= link_to( raw( '<div class="logo-image"></div>' ), "/" ) %> </h1>
 
     <div id="weight-sliders" class="hidden">
-        <h3>Configuration</h3>
+        <h3>Configure</h3>
+
+        <p>By default, Internet Monitor weights all indicators equally when calculating each country's score. By adjusting the weights of individual indicators using the sliders below, you can create your own score. <%= link_to 'Learn more >>', refinery::marketable_page_path( 'faq' ) %></p>
 
         <h4 class="access-1-fg">Access</h4>
-        <%= render :partial => 'shared/widgets/weight_sliders', locals: { indicator_sources: @indicator_sources.where( { category_id: Category.find_by_slug( 'access' ).id } ) } %>
+        <%= render :partial => 'shared/widgets/weight_sliders', locals: { indicator_sources: @indicator_sources.where( { category_id: Category.find_by_slug( 'access' ).id } ), background_color: '#f15c23' } %>
 
         <h4 class="control-1-fg">Control</h4>
-        <%= render :partial => 'shared/widgets/weight_sliders', locals: { indicator_sources: @indicator_sources.where( { category_id: Category.find_by_slug( 'control' ).id } ) } %>
+        <%= render :partial => 'shared/widgets/weight_sliders', locals: { indicator_sources: @indicator_sources.where( { category_id: Category.find_by_slug( 'control' ).id } ), background_color: '#5ec1a5' } %>
     </div>
   </header>
 
