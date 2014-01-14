@@ -197,6 +197,11 @@ footer {
   margin: 0;
   height: 40px;
 
+  .footer-logo {
+    float: left;
+    margin-top: 4px;
+  }
+
   a.berkman-link {
     background: url("berkman_logo_small.png");
     display: inline-block;
