@@ -47,19 +47,32 @@
         text-decoration: none;
         text-transform: uppercase;
         width: 128px;
+
+        &:hover {
+          color: $black;
+        }
       }
 
       a.access {
         background: $orange;
+        &:hover {
+          background: saturate( lighten( $orange, 20% ), 20% );
+        }
       }
 
       a.control {
         background: $cyan;
+        &:hover {
+          background: saturate( lighten( $cyan, 20% ), 20% );
+        }
       }
 
       a.activity {
         background: $gold;
         border-bottom: solid 2px $white;
+        &:hover {
+          background: saturate( lighten( $gold, 20% ), 20% );
+        }
       }
     }
   }
