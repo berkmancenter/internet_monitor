@@ -3,6 +3,8 @@
 
 .countries-nav-list {
   background: $violet;
+  border: solid 2px $white;
+  border-top: none;
   height: 0;
   overflow: hidden;
   position: absolute;
@@ -10,7 +12,7 @@
   text-align: right;
   top: 82px;
   @include transition-height;
-  width: 256px + 16px;
+  width: 256px + 22px;
   z-index: 1;
 
   &.expanded {

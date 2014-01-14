@@ -36,11 +36,14 @@
       padding: 0;
 
       a, a:visited {
+        border: solid 2px $white;
+        border-bottom: none;
         color: $white;
         display: block;
-        height: 34px;
         font-size: .8em;
+        height: 34px;
         padding: .6em .8em;
+        position: relative;
         text-decoration: none;
         text-transform: uppercase;
         width: 128px;
@@ -56,6 +59,7 @@
 
       a.activity {
         background: $gold;
+        border-bottom: solid 2px $white;
       }
     }
   }
