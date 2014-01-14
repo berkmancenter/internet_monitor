@@ -124,6 +124,8 @@
   /* specific datum block styles */
 
   .sidebar {
+    padding: 1em .5em;
+
     .geomap {
       height: 16em;
       position: relative;
@@ -131,7 +133,7 @@
 
     dl {
       font-size: .7em;
-      margin: -.5em 0 0 0;
+      margin: 1em 0 0 0;
     }
 
     dt, dd {
@@ -149,6 +151,7 @@
     }
 
     dd {
+      float: right;
       margin: 0;
     }
   }
