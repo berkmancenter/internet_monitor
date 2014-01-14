@@ -88,7 +88,7 @@ namespace :db do
 
       # control datum sources
       ds_consistency = FactoryGirl.create( :ds_consistency );
-      ds_consistency.category = categories[ 2 ];
+      ds_consistency.category = categories[ 1 ];
       ds_consistency.save!
 
       # control datum
@@ -102,9 +102,9 @@ namespace :db do
       d_consistency_china.country = china;
       d_consistency_china.save!
 
-      # access datum sources
+      # activity datum sources
       ds_morningside = FactoryGirl.create :ds_morningside
-      ds_morningside.category = categories[ 1 ]
+      ds_morningside.category = categories[ 2 ]
       ds_morningside.save
 
       # access datum
