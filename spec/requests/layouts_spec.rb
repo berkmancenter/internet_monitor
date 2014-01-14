@@ -27,6 +27,10 @@ describe 'layout requests', :js => true do
       should_not have_css 'footer li', text: 'MAILING LIST'
     }
 
+    it ( 'should have cc link' ) {
+      should have_css "footer span.cc a[href='http://creativecommons.org/licenses/by/3.0/']", text: 'Creative Commons'
+    }
+
     it {
       should have_css "header a[href*='#{countries_path}']"
       should have_css "header a[href*='#{map_path}']"

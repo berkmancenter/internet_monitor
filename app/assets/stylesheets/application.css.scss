@@ -233,4 +233,20 @@ footer {
       }
     }
   }
+
+  .cc {
+    color: $white;
+    display: block;
+    font-size: .8em;
+    text-align: center;
+
+    a, a:visited {
+      color: $white;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #F15C23;
+    }
+  }
 }
