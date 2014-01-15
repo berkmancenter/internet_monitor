@@ -117,13 +117,21 @@ namespace :db do
 
       # other datum source
       ds_population = FactoryGirl.create( :ds_population );
-      ds_population.save!
+      ds_population.save
+
+      ds_gdp = FactoryGirl.create( :ds_gdp );
+      ds_gdp.save
 
       # other datum
-      d_population_iran = FactoryGirl.create( :d_population_iran );
-      d_population_iran.source = ds_population;
-      d_population_iran.country = iran;
-      d_population_iran.save!
+      d_population_iran = FactoryGirl.create( :d_population_iran )
+      d_population_iran.source = ds_population
+      d_population_iran.country = iran
+      d_population_iran.save
+
+      d_gdp_iran = FactoryGirl.create( :d_gdp_iran )
+      d_gdp_iran.source = ds_gdp
+      d_gdp_iran.country = iran
+      d_gdp_iran.save
 
       d_population_china = FactoryGirl.create( :d_population_china );
       d_population_china.source = ds_population;

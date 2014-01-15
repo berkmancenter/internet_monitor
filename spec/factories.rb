@@ -138,6 +138,23 @@ FactoryGirl.define do
       link nil
     end
 
+    factory :ds_gdp do
+      # indicators like gdp don't have a category
+      admin_name 'ds_gdp'
+      public_name 'GDP per capita'
+      description nil
+      datum_type 'Indicator'
+      #category nil
+      default_weight 0.0
+      min 138.9619112705
+      max 172676.340724526
+      retriever_class 'WorldBankParser'
+      is_api true
+      in_sidebar true
+      affects_score false
+      link nil
+    end
+
     factory :ds_morningside do
       admin_name 'ds_morningside'
       public_name 'Morningside Analytics'
@@ -204,6 +221,16 @@ FactoryGirl.define do
       #language nil
       original_value 74798599
       value 0.05564141853916538
+      type 'Indicator'
+    end
+
+    factory :d_gdp_iran do
+      #source ds_gdp
+      start_date '2009-01-01'
+      #country iran
+      #language nil
+      original_value 4525.9486080335
+      value 0.02542629734459581
       type 'Indicator'
     end
 

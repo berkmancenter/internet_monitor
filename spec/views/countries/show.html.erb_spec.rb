@@ -65,6 +65,7 @@ describe ( 'countries/show' ) {
 
     it ( 'should have sidebar data' ) {
       should have_css '.sidebar dt', text: 'Population'
+      should have_css '.sidebar dd', text: '74,798,599'
     }
   }
 
