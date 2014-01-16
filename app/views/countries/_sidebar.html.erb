@@ -5,7 +5,7 @@
 <dl>
   <% @country.data.in_sidebar.most_recent.each do |datum| %>
     <dt><%= datum.name %></dt>
-    <dd><%= number_with_precision(datum.original_value, { precision: 0, delimiter: ',' } ) %></dd>
+    <dd><%= format_sidebar_value( datum ) %></dd>
   <% end %>
 </dl>
 

@@ -63,9 +63,16 @@ describe ( 'countries/show' ) {
       should_not have_css '.sidebar .indicators'
     }
 
-    it ( 'should have sidebar data' ) {
-      should have_css '.sidebar dt', text: 'Population'
-      should have_css '.sidebar dd', text: '74,798,599'
+    context ( 'formatted sidebar data' ) {
+      it ( 'Population' ) {
+        should have_css '.sidebar dt', text: 'Population'
+        should have_css '.sidebar dd', text: '74,798,599'
+      }
+
+      it ( 'GDP' ) {
+        should have_css '.sidebar dt', text: 'GDP'
+        should have_css '.sidebar dd', text: '$4,526'
+      }
     }
   }
 
