@@ -5,10 +5,6 @@ describe 'countries requests', :js => true do
   subject { page }
 
   shared_examples_for( 'weight_slider' ) {
-    it ( 'should have country data loading screen' ) {
-      should have_css '.score-keeper-loader', visible: false
-    }
-
     it ( 'should have a score pill for our test country' ) {
       should have_css ".score-pill[data-country-id='#{country.id}']"
     }

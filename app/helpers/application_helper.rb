@@ -5,7 +5,7 @@ module ApplicationHelper
 
     if ( title.present? && title != '' )
       title.titleize
-    else controller.present?
+    elsif controller.present?
       if ( controller.match( /^refinery/ ) != nil )
         parts = controller.split( "/" )
 
@@ -17,6 +17,8 @@ module ApplicationHelper
       else
         controller.titleize
       end
+    else
+        ''
     end
   end
 end
