@@ -5,7 +5,7 @@ describe ( 'countries/show' ) {
 
   context ( 'normal country' ) {
     let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
-    let ( :update ) { strip_tags( Refinery::Page.by_slug( country.iso3_code.downcase ).first.content_for( :body ) ) }
+    let ( :update ) { Refinery::Page.by_slug( country.iso3_code.downcase ).first.content_for( :body ) }
 
     before {
       assign( :map_countries, Country.with_enough_data.where( { id: country.id } ).select( 'iso3_code,score' ) )
@@ -18,8 +18,10 @@ describe ( 'countries/show' ) {
       should have_css '.view.country-data-view'
     }
 
-    it {
-      should have_css '.view h1', text: country.name
+    describe ( 'header test' ) {
+      it {
+        should have_css '.view h1', text: country.name
+      }
     }
 
     it {
