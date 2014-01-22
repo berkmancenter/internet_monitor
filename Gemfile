@@ -40,6 +40,8 @@ gem 'oj'
 gem 'amatch'
 gem 'friendly_id', '~> 4.0.1'
 
+gem 'globalize3', '0.3.0'
+
 gem 'refinerycms', '~> 2.0.10'
 gem 'refinerycms-blog', '~> 2.0.0'
 
