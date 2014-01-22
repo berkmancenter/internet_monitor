@@ -316,6 +316,13 @@ FactoryGirl.define do
     u.password 'tp4ssw0rd'
   end
 
+  factory :home_page_access, class: Refinery::PagePart do |pp|
+    #pp.page home_page
+    title 'Access'
+    body 'Who has Internet access and at what price?'
+    position 2
+  end
+
   factory :sources_page, class: Refinery::Page do |p|
     p.title 'Sources'
     p.slug 'sources'

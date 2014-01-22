@@ -15,15 +15,12 @@ class CountriesController < ApplicationController
     @map_countries = Country.with_enough_data.where( { id: params[ :id ] } ).select( 'id,iso3_code,score' )
     @country = Country.find(params[:id])
 
-    @update = nil
-    page = Refinery::Page.by_slug @country.iso3_code.downcase
+    slug = @country.iso3_code.downcase
 
     if params[:category_slug]
       @category = Category.find(params[:category_slug])
-      @update = page.first.content_for( @category.slug ) unless page.empty?
       render "country_categories/show"
     else
-      @update = page.first.content_for( :body ) unless page.empty?
       respond_to do |format|
         format.html
         format.any(:xml, :json)

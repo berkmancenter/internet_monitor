@@ -27,18 +27,22 @@ describe ( 'refinery/pages/home' ) {
 
     it {
       should have_css 'li.category-block a[href*="/access"]'
-      should have_css 'li.category-block a[href*="/control"]'
-      should have_css 'li.category-block a[href*="/activity"]'
+      should have_css 'li.category-block h3', text: 'access'
+      should have_css 'p', text: 'Who has Internet access'
     }
 
     it {
-      should have_css 'li.category-block h3', text: 'access'
+      should have_css 'li.category-block a[href*="/control"]'
       should have_css 'li.category-block h3', text: 'control'
+    }
+
+    it {
+      should have_css 'li.category-block a[href*="/activity"]'
       should have_css 'li.category-block h3', text: 'activity'
     }
 
     it {
-      should have_css 'li.category-block p', count: 3
+      should have_css 'li.category-block span', count: 3
     }
   }
 }

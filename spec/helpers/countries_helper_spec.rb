@@ -7,11 +7,13 @@ describe( CountriesHelper ) {
 
   subject { helper }
 
-  it ( 'should add $ & ,s to gdp' ){
-    format_sidebar_value( gdp ).should eq( '$4,526' )
-  }
+  describe ( 'format_sidebar_value' ) {
+    it ( 'should add $ & ,s to gdp' ){
+      format_sidebar_value( gdp ).should eq( '$4,526' )
+    }
 
-  it ( 'should add ,s to everything else' ) {
-    format_sidebar_value( pop ).should eq( '74,798,599' )
+    it ( 'should add ,s to everything else' ) {
+      format_sidebar_value( pop ).should eq( '74,798,599' )
+    }
   }
 }

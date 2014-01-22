@@ -9,8 +9,8 @@
 
   <div class="sub-content country-6-bg">
     <div class="main-column">
-      <% if @update.present? %>
-        <div class="update block"><%= raw @update %></div>
+      <% if part_content( @country.iso3_code.downcase, :body ).present? %>
+        <div class="update block"><%= raw part_content( @country.iso3_code.downcase, :body ) %></div>
       <% end %>
     </div>
 

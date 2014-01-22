@@ -150,6 +150,12 @@ namespace :db do
       u = FactoryGirl.create( :tadmin )
       u.create_first
 
+      # Home page
+      home_page = Refinery::Page.by_slug( 'home' ).first
+      home_page_access = FactoryGirl.create :home_page_access
+      home_page_access.page = home_page
+      home_page_access.save
+
       # Data page
       sources_page = FactoryGirl.create :sources_page
 
