@@ -48,7 +48,7 @@ describe ( 'countries/show' ) {
     }
 
     it ( 'should pull the update text from a refinery page' ) {
-      should have_css '.update', text: update
+      should have_css '.update', text: strip_tags( update )
     }
 
     it ( 'should have a map' ) {
