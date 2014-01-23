@@ -26,15 +26,25 @@
     <a href="/activity"><h3 class="activity-4-bg">activity</h3><span class="activity-1-bg"><%= raw part_content( 'home', 'Activity' ) %></span></a>
     </li>
   </ul>
+
+  <div class="trending">
+    <h2>Trending Countries</h2>
+    <ul>
+    <% Nokogiri::HTML( part_content( 'trending', :body ) ).xpath( '//li' ).each_with_index do |li, i| %>
+      <% country = Country.find_by_iso3_code( li.text.upcase ) %>
+      <li><%= render partial: 'countries/score_pill', locals: { country: country } unless country.nil? %></li>
+    <% end %>
+    </ul>
+  </div>
+
 </div>
 
-<div class="trending">
-  <h2>Trending Countries</h2>
-  <ul>
-  <% Nokogiri::HTML( part_content( 'trending', :body ) ).xpath( '//li' ).each_with_index do |li, i| %>
-    <% country = Country.find_by_iso3_code( li.text.upcase ) %>
-    <li><%= render partial: 'countries/score_pill', locals: { country: country } unless country.nil? %></li>
-  <% end %>
+<section class="twitter">
+  <h1>Recent Tweets</h1>
+  <ul class="tweets">
+    <% imon_tweets.each do |tweet| %>
+      <li><%= raw auto_link( tweet.text ) %></li>
+    <% end %>
   </ul>
-</div>
-
+  <div class="follow"><span>Follow</span> <a href="https://twitter.com/thenetmonitor">@thenetmonitor</a>
+</section>

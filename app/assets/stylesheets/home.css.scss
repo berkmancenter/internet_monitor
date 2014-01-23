@@ -38,8 +38,11 @@ body.home {
   }
 
   .what-we-do {
-    margin: 2em;
+    display: inline-block;
+    margin: 0 2em;
     padding-bottom: 5em;
+    vertical-align: top;
+    width: 15em * 3;
 
     ul {
       margin: 0;
@@ -82,8 +85,9 @@ body.home {
   }
 
   .trending {
-    margin: 2em;
+    margin-top: 2em;
     padding-bottom: 2em;
+    height: 16em;
 
     ul {
       margin: 0;
@@ -94,6 +98,61 @@ body.home {
       display: inline-block;
       list-style-type: none;
       margin: 0 2em;
+    }
+  }
+
+  section.twitter {
+    background: $dark-gray;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    display: inline-block;
+    font-size: .8em;
+    margin-top: 1em;
+    padding: 1em;
+    vertical-align: bottom;
+    width: 15em * 2;
+
+    h1 {
+      color: $gray;
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      color: darken( $white, 20% );
+      font-size: .9em;
+      line-height: 1.5em;
+      margin: 1.5em 0;
+    }
+
+    a, a:visited {
+      color: $violet;
+      text-decoration: none;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+
+    .follow {
+      background: url("imon_logo_twitter.png") no-repeat right;
+      display: inline-block;
+      float: right;
+      height: 32px;
+      padding-right: 40px;
+      padding-top: 8px;
+
+      span {
+        color: $gray;
+        font-weight: bold;
+        margin-right: .5em;
+      }
     }
   }
 }

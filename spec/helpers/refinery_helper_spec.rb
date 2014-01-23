@@ -22,4 +22,10 @@ describe( RefineryHelper ) {
       }
     }
   }
+
+  describe ( 'imon_tweets' ) {
+    it ( 'should return last five thenetmonitor tweets' ) {
+      imon_tweets.count.should eq( 7 )
+    }
+  }
 }

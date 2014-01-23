@@ -4,4 +4,18 @@ module RefineryHelper
     page = Refinery::Page.by_slug slug
     content = page.first.content_for( part_name ) unless page.empty?
   end
+
+  # return last five tweets
+  def imon_tweets
+    client = Twitter::REST::Client.new do |config|
+      config.consumer_key        = Imon::Application.config.imon['twitter_consumer_key']
+      config.consumer_secret     = Imon::Application.config.imon['twitter_consumer_secret']
+      config.access_token        = Imon::Application.config.imon['twitter_access_token']
+      config.access_token_secret = Imon::Application.config.imon['twitter_access_token_secret']
+    end
+
+    silence_warnings do
+      client.user_timeline 'thenetmonitor', count: 7
+    end
+  end
 end

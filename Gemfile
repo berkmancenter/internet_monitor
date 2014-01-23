@@ -39,6 +39,7 @@ gem "rabl", "~> 0.8.6"
 gem 'oj'
 gem 'amatch'
 gem 'friendly_id', '~> 4.0.1'
+gem 'twitter'
 
 gem 'globalize3', '0.3.0'
 

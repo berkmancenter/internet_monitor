@@ -48,6 +48,16 @@ describe ( 'refinery/pages/home' ) {
     }
 
     it {
+      should have_css 'section.twitter'
+      should have_css 'section.twitter h1', text: 'Recent Tweets'
+    }
+
+    it {
+      should have_css '.twitter ul.tweets'
+      should have_css 'ul.tweets li', count: 7
+    }
+
+    it {
       should have_css '.trending h2', text: 'Trending Countries'
     }
 
