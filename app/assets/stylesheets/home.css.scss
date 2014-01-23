@@ -1,37 +1,34 @@
 @import "colors";
 
-.carousel {
-  background: darken( $violet, 10% );
-  height: 400px;
-  overflow: hidden;
-  position: relative;
-
-  .carousel-map {
-    background: url("home_map.png") no-repeat center;
-    display: block;
+body.home {
+  .carousel {
+    background: darken( $violet, 10% );
     height: 400px;
-    margin: 0 auto;
+    overflow: hidden;
     position: relative;
-    width: 960px;
 
-    #explore-map {
-      background: $orange;
-      border-radius: .5em;
-      bottom: 2em;
-      color: $white;
+    .carousel-map {
+      background: url("home_map.png") no-repeat center;
       display: block;
-      font-weight: bold;
-      padding: .5em 1em;
-      position: absolute;
-      right: 2em;
-      text-transform: uppercase;
+      height: 400px;
+      margin: 0 auto;
+      position: relative;
+      width: 960px;
+
+      #explore-map {
+        background: $orange;
+        border-radius: .5em;
+        bottom: 2em;
+        color: $white;
+        display: block;
+        font-weight: bold;
+        padding: .5em 1em;
+        position: absolute;
+        right: 2em;
+        text-transform: uppercase;
+      }
     }
   }
-}
-
-.what-we-do {
-  margin: 2em;
-  padding-bottom: 5em;
 
   h2 {
     color: lighten( $gray, 10% );
@@ -40,39 +37,64 @@
     font-weight: normal;
   }
 
-  ul {
-    margin: 0;
-    padding: 0;
+  .what-we-do {
+    margin: 2em;
+    padding-bottom: 5em;
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      display: inline-block;
+      margin: 0;
+      padding: 0;
+      vertical-align: top;
+      width: 14em;
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    a > span {
+      display: block;
+    }
+
+    h3 {
+      color: darken( $gray, 20% );
+      font-weight: normal;
+      height: 2em;
+      margin: 0;
+      padding: .6em;
+      text-transform: uppercase;
+    }
+
+    p {
+      color: darken( $gray, 20% );
+      font-size: 1em;
+      font-weight: bold;
+      height: 6em;
+      margin: 0;
+      padding: .6em;
+    }
   }
 
-  li {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-    vertical-align: top;
-    width: 14em;
-  }
+  .trending {
+    margin: 2em;
+    padding-bottom: 2em;
 
-  a {
-    text-decoration: none;
-  }
+    ul {
+      margin: 0;
+      padding: 0;
+    }
 
-  h3 {
-    color: darken( $gray, 20% );
-    font-weight: normal;
-    height: 2em;
-    margin: 0;
-    padding: .6em;
-    text-transform: uppercase;
+    li {
+      display: inline-block;
+      list-style-type: none;
+      margin: 0 2em;
+    }
   }
-
-  p {
-    color: darken( $gray, 20% );
-    font-size: 1em;
-    font-weight: bold;
-    height: 6em;
-    margin: 0;
-    padding: .6em;
-  }
-
 }
+

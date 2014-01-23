@@ -323,6 +323,22 @@ FactoryGirl.define do
     position 2
   end
 
+  factory :trending_page, class: Refinery::Page do |p|
+    p.title 'trending'
+    p.slug 'trending'
+    p.show_in_menu true
+    p.link_url ''
+    p.deletable true
+    p.draft false
+  end
+
+  factory :trending_page_body, class: Refinery::PagePart do |pp|
+    #pp.page trending_page
+    title 'Body'
+    body '<ul><li>irn</li></ul>'
+    position 0
+  end
+
   factory :sources_page, class: Refinery::Page do |p|
     p.title 'Sources'
     p.slug 'sources'

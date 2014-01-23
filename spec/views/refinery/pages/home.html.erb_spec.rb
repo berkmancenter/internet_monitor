@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe ( 'refinery/pages/home' ) {
+  let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
+
   subject { rendered }
 
   context ( 'default view' ) {
@@ -43,6 +45,15 @@ describe ( 'refinery/pages/home' ) {
 
     it {
       should have_css 'li.category-block span', count: 3
+    }
+
+    it {
+      should have_css '.trending h2', text: 'Trending Countries'
+    }
+
+    it { 
+      should have_css '.trending li .score-pill'
+      should have_css ".trending .score-pill[data-country-id='#{country.id}']"
     }
   }
 }

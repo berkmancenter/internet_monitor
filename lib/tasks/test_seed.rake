@@ -156,6 +156,13 @@ namespace :db do
       home_page_access.page = home_page
       home_page_access.save
 
+      # Trending page
+      trending_page = FactoryGirl.create :trending_page
+
+      trending_page_body = FactoryGirl.create :trending_page_body
+      trending_page_body.page = trending_page
+      trending_page_body.save
+
       # Data page
       sources_page = FactoryGirl.create :sources_page
 
