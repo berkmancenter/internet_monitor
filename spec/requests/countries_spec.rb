@@ -159,10 +159,14 @@ describe 'countries requests', :js => true do
   }
 
   shared_examples_for( 'category_selector' ) {
+    it ( 'should link to the country overview' ) {
+      should have_css ".category-selector a[href*='#{country_path country}']", text: 'OVERVIEW'
+    }
+
     it ( 'should have category selector links' ) {
-      should have_selector( ".category-selector a[href*='#{category_country_path(country, :category_slug => "access")}']" );
-      should have_selector( ".category-selector a[href*='#{category_country_path(country, :category_slug => "control")}']" );
-      should have_selector( ".category-selector a[href*='#{category_country_path(country, :category_slug => "activity")}']" );
+      should have_css ".category-selector a[href*='#{category_country_path country, category_slug: 'access'}']"
+      should have_css ".category-selector a[href*='#{category_country_path country, category_slug: 'control'}']"
+      should have_css ".category-selector a[href*='#{category_country_path country, category_slug: 'activity'}']"
     }
   }
 
@@ -235,11 +239,12 @@ describe 'countries requests', :js => true do
         should have_title( "#{country.name.titleize} Access | Internet Monitor" )
       }
 
-      it_should_behave_like( 'weight_slider' );
+      it_should_behave_like( 'weight_slider' )
 
-      it_should_behave_like( 'category_selector' );
+      it_should_behave_like( 'category_selector' )
+
       it ( 'should have category selected' ) {
-        should have_selector( ".category-selector a[href*='#{category_country_path(country, :category_slug => "access")}'].selected" );
+        should have_selector( ".category-selector a[href*='#{category_country_path(country, :category_slug => "access")}'].selected" )
       }
     }
 

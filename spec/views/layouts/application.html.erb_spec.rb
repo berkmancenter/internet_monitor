@@ -33,9 +33,13 @@ describe ( 'layouts/application' ) {
     }
 
     it {
-      should have_css '.data-nav-categories'
+      # categories now always visible, don't need a toggle
+      should_not have_css '.data-nav-categories'
+    }
+
+    it {
       should have_css '.category-selector'
-      should_not have_css '.category-selector.expanded'
+      should have_css '.category-selector.expanded'
     }
 
     it ( 'should have country data loading screen' ) {

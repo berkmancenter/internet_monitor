@@ -1,6 +1,8 @@
-<nav class="category-selector">
+<nav class="category-selector expanded">
   <ul>
     <% if @country.present? %>
+      <li><%= link_to 'Overview', country_path( @country ), { class: 'country-1-bg' } %></li>
+
       <% @country.categories.each do |category| %>
         <li><%= link_to category.name, category_country_path(@country, :category_slug => category.slug), @category != nil && @category.name == category.name ? { class: "#{category.slug} selected" } : { class: category.slug } %></li>
       <% end %>

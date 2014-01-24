@@ -16,9 +16,8 @@
   height: 0;
   overflow: hidden;
   position: absolute;
-  right: 32px + 42px + 42px + 5px;
-  top: 82px;
-  @include transition-height;
+  right: 32px;
+  top: 120px;
   z-index: 1;
 
   &.expanded {
@@ -30,14 +29,14 @@
     margin: 0;
 
     li {
-      display: block;
+      display: inline-block;
       list-style-type: none;
       margin: 0;
       padding: 0;
+      text-align: center;
 
       a, a:visited {
         border: solid 2px $white;
-        border-bottom: none;
         color: $white;
         display: block;
         font-size: .8em;
@@ -46,7 +45,7 @@
         position: relative;
         text-decoration: none;
         text-transform: uppercase;
-        width: 128px;
+        width: 96px;
 
         &:hover {
           color: $black;
@@ -69,7 +68,6 @@
 
       a.activity {
         background: $gold;
-        border-bottom: solid 2px $white;
         &:hover {
           background: saturate( lighten( $gold, 20% ), 20% );
         }

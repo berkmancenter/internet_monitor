@@ -19,18 +19,12 @@
 
 (function() {
   function hideAllBut( s ) {
-    $( '.countries-nav-list,.category-selector' ).not( s ).removeClass( 'expanded' );
+    $( '.countries-nav-list' ).not( s ).removeClass( 'expanded' );
   }
 
   $( '.data-nav-countries' ).click( function( ) {
     hideAllBut( '.countries-nav-list' );
     $( '.countries-nav-list' ).toggleClass( 'expanded' );
-    return false;
-  } );
-
-  $( '.data-nav-categories' ).click( function( ) {
-    hideAllBut( '.category-selector' );
-    $( '.category-selector' ).toggleClass( 'expanded' );
     return false;
   } );
 
