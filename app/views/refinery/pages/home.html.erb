@@ -3,11 +3,9 @@
 <%#= render '/refinery/content_page' %>
 
 <div class="carousel">
-  <a href="<%= Imon::Application.routes.url_helpers.map_path %>">
-    <span class="carousel-map">
-      <span id="explore-map">Explore map</span>
-    </span>
-  </a>
+  <% home_carousel.each do |item| %>
+    <div><a href="<%= item[ :link_url ] %>" class="carousel-item"><%= raw item[ :body ] %></a></div>
+  <% end %>
 </div>
 
 <div class="what-we-do">

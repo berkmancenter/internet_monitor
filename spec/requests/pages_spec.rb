@@ -4,13 +4,17 @@ require 'spec_helper'
 describe ( 'pages requests' ) {
   subject { page }
 
-  describe ( 'get /home' ) {
+  describe 'get /home', :js => true do
     before { visit refinery::root_path }
 
     it {
       should have_title 'Home | Internet Monitor'
     }
-  }
+
+    it ( 'should have FilmRoll' ) {
+      should have_css '.carousel .film_roll_wrapper'
+    }
+  end
 
   describe ( 'get /about' ) {
     before { visit refinery::marketable_page_path('about') }

@@ -156,6 +156,25 @@ namespace :db do
       home_page_access.page = home_page
       home_page_access.save
 
+      # Carousel page
+      carousel_page = FactoryGirl.create :carousel_page
+
+      carousel_about_page = FactoryGirl.create :carousel_about_page
+      carousel_about_page.parent = carousel_page
+      carousel_about_page.save
+
+      carousel_about_page_body = FactoryGirl.create :carousel_about_page_body
+      carousel_about_page_body.page = carousel_about_page
+      carousel_about_page_body.save
+
+      carousel_map_page = FactoryGirl.create :carousel_map_page
+      carousel_map_page.parent = carousel_page
+      carousel_map_page.save
+
+      carousel_map_page_body = FactoryGirl.create :carousel_map_page_body
+      carousel_map_page_body.page = carousel_map_page
+      carousel_map_page_body.save
+
       # Trending page
       trending_page = FactoryGirl.create :trending_page
 

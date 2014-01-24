@@ -7,26 +7,23 @@ body.home {
     overflow: hidden;
     position: relative;
 
-    .carousel-map {
-      background: url("home_map.png") no-repeat center;
-      display: block;
+    a.carousel-item {
+      display: inline-block;
       height: 400px;
-      margin: 0 auto;
-      position: relative;
-      width: 960px;
+      overflow: hidden;
+      width: 800px;
 
-      #explore-map {
-        background: $orange;
-        border-radius: .5em;
-        bottom: 2em;
-        color: $white;
-        display: block;
-        font-weight: bold;
-        padding: .5em 1em;
-        position: absolute;
-        right: 2em;
-        text-transform: uppercase;
+      h1, p {
+        text-align: center;
       }
+    }
+
+    a.carousel-item, a.carousel-item:visited {
+      color: $light-gray;
+    }
+
+    a, a:visited {
+      text-decoration: none;
     }
   }
 

@@ -28,4 +28,22 @@ describe( RefineryHelper ) {
       imon_tweets.count.should eq( 7 )
     }
   }
+
+  describe ( 'home_carousel' ) {
+    let ( :carousel_data ) { home_carousel }
+
+    it ( 'should have carousel content' ) {
+      carousel_data.count.should eq( 2 )
+    }
+
+    it ( 'should link to about first' ) {
+      carousel_data.first[ :link_url ].should eq( '/about' )
+      carousel_data.first[ :body ].match( /Lorem ipsum/ ).should_not eq( nil )
+    }
+
+    it ( 'should link to map last' ) {
+      carousel_data.last[ :link_url ].should eq( '/map' )
+      carousel_data.last[ :body ].match( /Explore map/ ).should_not eq( nil )
+    }
+  }
 }

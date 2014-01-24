@@ -10,17 +10,18 @@ describe ( 'refinery/pages/home' ) {
       render
     }
 
-    it {
-      should have_css 'div.carousel'
-    }
-    
-    it {
-      should have_css 'div.carousel span.carousel-map'
-      should have_css 'span.carousel-map #explore-map'
-    }
+    describe ( 'carousel' ) {
+      it {
+        should have_css 'div.carousel'
+      }
+      
+      it {
+        should have_css 'div.carousel > div a[href*="/about"]'
+      }
 
-    it {
-      should have_css 'div.carousel a[href*="/map"]'
+      it {
+        should have_css 'div.carousel > div a[href*="/map"]'
+      }
     }
 
     it {

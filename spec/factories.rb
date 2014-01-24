@@ -316,6 +316,47 @@ FactoryGirl.define do
     u.password 'tp4ssw0rd'
   end
 
+  factory :carousel_page, class: Refinery::Page do |p|
+    p.title 'carousel'
+    p.slug 'carousel'
+    p.show_in_menu true
+    p.link_url ''
+    p.deletable true
+    p.draft false
+  end
+
+  factory :carousel_about_page, class: Refinery::Page do |p|
+    #p.parent carousel_page
+    p.title 'c_about'
+    p.show_in_menu true
+    p.link_url '/about'
+    p.deletable true
+    p.draft false
+  end
+
+  factory :carousel_about_page_body, class: Refinery::PagePart do |pp|
+    #pp.page carousel_about_page
+    title 'Body'
+    body 'Lorem ipsum'
+    position 0
+  end
+
+  factory :carousel_map_page, class: Refinery::Page do |p|
+    #p.parent carousel_page
+    p.title 'c_map'
+    p.show_in_menu true
+    p.link_url '/map'
+    p.deletable true
+    p.draft false
+  end
+
+  factory :carousel_map_page_body, class: Refinery::PagePart do |pp|
+    #pp.page carousel_map_page
+    title 'Body'
+    body '<h1>Explore map</h1>'
+    position 0
+  end
+
   factory :home_page_access, class: Refinery::PagePart do |pp|
     #pp.page home_page
     title 'Access'
