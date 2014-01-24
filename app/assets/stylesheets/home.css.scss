@@ -13,8 +13,20 @@ body.home {
       overflow: hidden;
       width: 800px;
 
-      h1, p {
+      .font-size-large {
+        font-size: large;
+      }
+
+      .font-size-small {
+        font-size: small;
+      }
+
+      .text-align-center {
         text-align: center;
+      }
+
+      .text-align-right {
+        text-align: right;
       }
     }
 
