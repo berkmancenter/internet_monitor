@@ -40,6 +40,12 @@ describe ( 'country_categories/show' ) {
       should have_css 'h1', text: country.score.round(2), exact: true
     }
 
+    it ( 'should have category selector' ) {
+      # moved from layout
+      should have_css '.category-selector'
+      should have_css '.category-selector.expanded'
+    }
+
     it ( 'h1 & .sub-content are siblings' ) {
       should have_css 'h1~.sub-content'
     }

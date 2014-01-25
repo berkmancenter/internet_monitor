@@ -37,11 +37,6 @@ describe ( 'layouts/application' ) {
       should_not have_css '.data-nav-categories'
     }
 
-    it {
-      should have_css '.category-selector'
-      should have_css '.category-selector.expanded'
-    }
-
     it ( 'should have country data loading screen' ) {
       should have_css '.score-keeper-loader', visible: false
     }

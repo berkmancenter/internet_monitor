@@ -37,23 +37,24 @@ describe 'layout requests', :js => true do
 
     describe ( 'category selector' ) {
       it {
-        should have_css '.category-selector.expanded'
+        # moved to country views only
+        should_not have_css '.category-selector'
       }
 
       describe ( 'click categories' ) {
         it {
           # there is no longer a link named categories
-          #click_link 'categories'
-          should have_css '.category-selector.expanded'
+          should_not have_css 'a', text: 'categories'
         }
       }
 
       context ( 'with countries expended, click categories' ) {
         it ( 'should close countries' ) {
           click_link 'countries'
+          # there is no longer a link named categories
           #click_link 'categories'
           should have_css '.countries-nav-list.expanded'
-          should have_css '.category-selector.expanded'
+          should_not have_css '.category-selector.expanded'
         }
       }
     }
