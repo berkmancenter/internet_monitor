@@ -1,5 +1,5 @@
 <div class="score-pill" data-country-id="<%= country.id %>">
-  <%= link_to country.name, Imon::Application.routes.url_helpers.country_path( country ), class: 'country-name', title: country.name %>
+  <%= link_to country.name, Imon::Application.routes.url_helpers.category_country_path( country, category_slug: 'access' ), class: 'country-name', title: country.name %>
   <% if country.enough_data? %>
     <span class="header">score</span>
     <span class="imon-score"><%= country.score.round(2) %></span><a href="javascript:void(0);" class="user-score"></a>
