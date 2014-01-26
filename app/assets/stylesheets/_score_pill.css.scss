@@ -9,7 +9,7 @@
     text-transform: uppercase;
   }
 
-  .country-name, .imon-score, .user-score {
+  .country-name, .imon-score, .user-score, .user-rank {
     color: $violet;
     display: inline-block;
     height: 34px;
@@ -34,7 +34,7 @@
     }
   }
 
-  .imon-score, .user-score {
+  .imon-score, .user-score, .user-rank {
     text-align: center;
     width: 42px;
   }
@@ -44,7 +44,7 @@
     border-radius: 0;
   }
 
-  .user-score {
+  .user-score, .user-rank {
     background: $bright-gold url('gear.png') no-repeat;
     border-radius: 0 4px 4px 0;
     color: white;
@@ -58,6 +58,19 @@
     &:hover {
       background: $light-blue url('gear.png') no-repeat -42px 0;
       color: transparent;
+    }
+  }
+
+  .user-score.updated {
+    border-radius: 0;
+  }
+
+  .user-rank {
+    border-radius: 0 4px 4px 0;
+    display: none;
+    
+    &.updated {
+      display: block;
     }
   }
 }

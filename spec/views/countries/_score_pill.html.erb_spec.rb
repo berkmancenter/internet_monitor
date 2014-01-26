@@ -26,11 +26,19 @@ describe ( 'countries/_score_pill' ) {
     }
 
     it {
+      should have_css 'span.imon-rank', text: country.rank
+    }
+
+    it {
       should have_css 'span.imon-score', text: country.score.round(2), exact: true
     }
 
     it {
       should have_css 'a.user-score'
+    }
+
+    it {
+      should have_css 'a.user-rank'
     }
   }
 }
