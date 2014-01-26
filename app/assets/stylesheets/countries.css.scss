@@ -184,6 +184,15 @@
       margin-bottom: .25em;
     }
 
+    dd.indicators-label {
+      color: $gray;
+      font-size: .8em;
+
+      & span:last-child {
+        float: right;
+      }
+    }
+
     .indicator-bar-outer, .indicator-bar-inner {
       border-radius: 5px;
       height: 1.5em;
