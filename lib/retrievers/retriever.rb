@@ -17,6 +17,8 @@ class Retriever
             :public_name => line['Public name'],
             :datum_type => TYPE_MAP[line['Data type']],
             :is_api => !line['API available?'].nil?,
+            :source_name => line['Source (organization/study)'],
+            :source_link => line['URL/source'],
             :retriever_class => line['Retriever Class'],
             :affects_score => line['Affects Score?'] == 'y',
             :in_sidebar => line['Include in Sidebar?'] == 'y',

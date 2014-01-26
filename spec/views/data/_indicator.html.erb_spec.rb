@@ -20,7 +20,11 @@ describe ( 'data/_indicator' ) {
     }
 
     it {
-      should have_css "dt[title='#{ ds.source_name }']"
+      should have_css "dt a[title='Source: #{ ds.source_name }']"
+    }
+
+    it ( 'should link to the sources cms page' ) {
+      should have_css 'dt a[href*="/sources"]'
     }
 
     it {

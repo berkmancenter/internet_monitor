@@ -68,7 +68,8 @@ FactoryGirl.define do
       is_api false
       in_sidebar true
       affects_score true
-      link nil
+      source_name 'World Bank'
+      source_link 'http://data.worldbank.org/indicator/SE.ADT.LITR.ZS'
     end
 
     factory :ds_pct_inet do
@@ -84,7 +85,8 @@ FactoryGirl.define do
       is_api false
       in_sidebar true
       affects_score true
-      link nil
+      source_name 'ITU database'
+      source_link 'I99H'
     end
 
     factory :ds_fixed_monthly do
@@ -102,7 +104,8 @@ FactoryGirl.define do
       is_api false
       in_sidebar false
       affects_score true
-      link nil
+      source_name 'ITU database'
+      source_link 'I993'
     end
 
     factory :ds_consistency do
@@ -118,7 +121,8 @@ FactoryGirl.define do
       is_api false
       in_sidebar false
       affects_score true
-      link nil
+      source_name 'Open Net Initiative'
+      source_link 'http://opennet.net/research/data'
     end
 
     factory :ds_population do
@@ -135,7 +139,8 @@ FactoryGirl.define do
       is_api true
       in_sidebar true
       affects_score false
-      link nil
+      source_name 'World Bank'
+      source_link 'http://data.worldbank.org/indicator/SP.POP.TOTL'
     end
 
     factory :ds_gdp do
@@ -152,7 +157,8 @@ FactoryGirl.define do
       is_api true
       in_sidebar true
       affects_score false
-      link nil
+      source_name 'World Bank'
+      source_link 'http://data.worldbank.org/indicator/NY.GDP.PCAP.CD'
     end
 
     factory :ds_morningside do
@@ -169,6 +175,8 @@ FactoryGirl.define do
       in_sidebar false
       requires_page true
       affects_score false
+      source_name 'Morningside Analytics'
+      source_link ''
     end
   end
 
