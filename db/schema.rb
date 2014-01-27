@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140126212908) do
+ActiveRecord::Schema.define(:version => 20140127151216) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(:version => 20140126212908) do
     t.integer  "indicator_count"
     t.datetime "created_at",      :null => false
     t.datetime "updated_at",      :null => false
+    t.integer  "rank"
   end
 
   create_table "country_categories", :force => true do |t|

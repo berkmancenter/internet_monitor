@@ -18,6 +18,17 @@ class Country < ActiveRecord::Base
               {:min_indicators => Rails.application.config.imon['min_indicators']})
     scope :desc_score, order('score DESC')
 
+    def self.calculate_scores_and_rank!
+      Country.all.each do |country|
+        country.recalc_scores!
+      end
+
+      Country.order( 'score DESC' ).with_enough_data.each_with_index { | country, i |
+        country.rank = i + 1
+        country.save
+      }
+    end
+
     def enough_data?
       indicator_count >= Rails.application.config.imon[ 'min_indicators' ]
     end
