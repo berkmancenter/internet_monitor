@@ -138,10 +138,7 @@ namespace :db do
       d_population_china.country = china;
       d_population_china.save!
 
-
-      Country.all.each do |country|
-        country.recalc_scores!
-      end
+      Country.calculate_scores_and_rank!
 
       # refinery
       Refinery::Pages::Engine.load_seed

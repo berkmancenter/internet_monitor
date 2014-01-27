@@ -14,13 +14,14 @@ describe ( 'Country model' ) {
 
     it { country.enough_data?.should be_true }
 
-    describe ( 'recalc_scores' ) {
+    describe ( 'calculate_score!' ) {
       before {
-        country.recalc_scores!
+        country.calculate_score!
       }
 
       it ( 'should have recalculated score & still be valid' ) {
         should be_valid
+        country.score.should > 3
       }
     }
   }

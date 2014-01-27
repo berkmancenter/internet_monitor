@@ -6,7 +6,6 @@ FactoryGirl.define do
       iso_code 'IR'
       iso3_code 'IRN'
       description ''
-      indicator_count 4
     end
 
     # china is also a country with enough data to be on the map & in the index
@@ -15,7 +14,6 @@ FactoryGirl.define do
       iso_code 'CN'
       iso3_code 'CHN'
       description nil
-      indicator_count 4
     end
 
     # usa only has one indicator: access
@@ -25,7 +23,6 @@ FactoryGirl.define do
       iso_code 'US'
       iso3_code 'USA'
       description nil
-      indicator_count 1
     end
 
     factory :country_nil_score do
@@ -33,7 +30,6 @@ FactoryGirl.define do
       iso_code 'NS'
       iso3_code 'CNS'
       description 'nil_score'
-      indicator_count 0
     end
   end
 
