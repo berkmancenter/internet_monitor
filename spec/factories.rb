@@ -83,6 +83,7 @@ FactoryGirl.define do
       affects_score true
       source_name 'ITU database'
       source_link 'I99H'
+      display_suffix '%'
     end
 
     factory :ds_fixed_monthly do
@@ -155,6 +156,7 @@ FactoryGirl.define do
       affects_score false
       source_name 'World Bank'
       source_link 'http://data.worldbank.org/indicator/NY.GDP.PCAP.CD'
+      display_prefix '$'
     end
 
     factory :ds_morningside do

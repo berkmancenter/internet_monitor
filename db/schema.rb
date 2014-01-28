@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140127151216) do
+ActiveRecord::Schema.define(:version => 20140128180641) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -83,11 +83,15 @@ ActiveRecord::Schema.define(:version => 20140127151216) do
     t.boolean  "is_api"
     t.boolean  "in_sidebar"
     t.boolean  "affects_score"
-    t.datetime "created_at",      :null => false
-    t.datetime "updated_at",      :null => false
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
     t.boolean  "requires_page"
     t.string   "source_name"
     t.string   "source_link"
+    t.boolean  "in_category_page"
+    t.string   "display_prefix"
+    t.string   "display_suffix"
+    t.integer  "precision"
   end
 
   add_index "datum_sources", ["category_id"], :name => "index_datum_sources_on_category_id"
