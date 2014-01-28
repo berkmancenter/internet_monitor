@@ -106,7 +106,12 @@ body.home {
     li {
       display: inline-block;
       list-style-type: none;
-      margin: 0 2em;
+      margin: 0 .5em 1em .5em;
+      width: auto;
+
+      .score-pill {
+        width: auto;
+      }
     }
   }
 
