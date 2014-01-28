@@ -2,11 +2,11 @@
 
 
 <article class="view country-data-view" data-country-id="<%= @country.id %>">
-  <%= render partial: 'shared/widgets/category_selector' %>
   <h1 class="country-1-bg">
     <%= @country.name %>
     <%= render partial: 'countries/score_pill', locals: { country: @country } %>
   </h1>
+  <%= render partial: 'shared/widgets/category_selector' %>
 
   <div class="sub-content country-6-bg">
     <div class="main-column">
