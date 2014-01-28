@@ -66,6 +66,7 @@ FactoryGirl.define do
       affects_score true
       source_name 'World Bank'
       source_link 'http://data.worldbank.org/indicator/SE.ADT.LITR.ZS'
+      display_suffix '%'
     end
 
     factory :ds_pct_inet do
@@ -79,6 +80,7 @@ FactoryGirl.define do
       max 95.02
       retriever_class 'ITUParser'
       is_api false
+      in_category_page true
       in_sidebar true
       affects_score true
       source_name 'ITU database'
@@ -95,14 +97,37 @@ FactoryGirl.define do
       datum_type 'Indicator'
       #category access
       default_weight -1 
+      min 5.5374666486
+      max 1760.4492925802
+      retriever_class 'ITUParser'
+      is_api false
+      in_category_page true
+      in_sidebar false
+      affects_score false
+      source_name 'ITU database'
+      source_link 'I993'
+      display_prefix '$'
+    end
+
+    factory :ds_fixed_monthly_gdp do
+      # even though the above actual USD value is shown on category page,
+      # this one (value / GDP) affects score
+      admin_name 'ds_fixed_monthly_gdp'
+      public_name 'Fixed (wired) broadband monthly subscription charge (in USD/GDP)'
+      description nil
+      datum_type 'Indicator'
+      #category access
+      default_weight -1 
       min 0.000129379915752054
       max 1.81461147685752
       retriever_class 'ITUParser'
       is_api false
+      in_category_page false
       in_sidebar false
       affects_score true
       source_name 'ITU database'
       source_link 'I993'
+      display_prefix '$'
     end
 
     factory :ds_consistency do
@@ -116,6 +141,7 @@ FactoryGirl.define do
       max 10
       retriever_class 'ONIParser'
       is_api false
+      in_category_page true
       in_sidebar false
       affects_score true
       source_name 'Open Net Initiative'
@@ -134,6 +160,7 @@ FactoryGirl.define do
       max 1344130000
       retriever_class 'WorldBankParser'
       is_api true
+      in_category_page true
       in_sidebar true
       affects_score false
       source_name 'World Bank'
@@ -152,6 +179,7 @@ FactoryGirl.define do
       max 172676.340724526
       retriever_class 'WorldBankParser'
       is_api true
+      in_category_page true
       in_sidebar true
       affects_score false
       source_name 'World Bank'
@@ -170,6 +198,7 @@ FactoryGirl.define do
       max nil
       retriever_class 'MorningsideFetcher'
       is_api true
+      in_category_page true
       in_sidebar false
       requires_page true
       affects_score false
@@ -192,6 +221,16 @@ FactoryGirl.define do
 
     factory :d_fixed_monthly_iran do
       #source ds_fixed_monthly
+      start_date '2011-01-01'
+      #country iran
+      #language nil
+      original_value 16.5671546612
+      value 0.9937149617151022
+      type 'Indicator'
+    end
+
+    factory :d_fixed_monthly_gdp_iran do
+      #source ds_fixed_monthly_gdp
       start_date '2011-01-01'
       #country iran
       #language nil
@@ -253,6 +292,16 @@ FactoryGirl.define do
 
     factory :d_fixed_monthly_china do
       #source ds_fixed_monthly
+      start_date '2011-01-01'
+      #country china
+      #language nil
+      original_value 18.5729763195
+      value 0.9925719859663148
+      type 'Indicator'
+    end
+
+    factory :d_fixed_monthly_gdp_china do
+      #source ds_fixed_monthly_gdp
       start_date '2011-01-01'
       #country china
       #language nil

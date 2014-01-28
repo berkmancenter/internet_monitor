@@ -93,6 +93,7 @@ describe ( 'country_categories/show' ) {
     context ( 'access' ) {
       let ( :category ) { Category.find_by_slug( 'access' ) }
       let ( :update ) { strip_tags( Refinery::Page.by_slug( country.iso3_code.downcase ).first.content_for( :access ) ) }
+      let ( :ds_fixed_monthly_gdp ) { DatumSource.find_by_admin_name( 'ds_fixed_monthly_gdp' ) }
 
       before {
         assign( :category, category )
@@ -105,6 +106,11 @@ describe ( 'country_categories/show' ) {
       it_should_behave_like 'country sidebar'
 
       it_should_behave_like 'indicators'
+
+      it ( 'should not show bar for indicator not in_category_page' ) {
+        should_not have_css 'dt', text: ds_fixed_monthly_gdp.public_name
+      }
+
     }
 
     context ( 'control' ) {

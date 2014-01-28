@@ -13,7 +13,7 @@
         <div class="update block <%= @category.slug %>"><%= raw part_content( @country.iso3_code.downcase, @category.slug ) %></div>
       <% end %>
 
-      <%= render partial: 'data/indicators', object: @category.data.most_recent.for( @country ) %>
+      <%= render partial: 'data/indicators', object: @category.data.in_category_page.most_recent.for( @country ) %>
       
       <% if @category.name == 'Control' %>
         <div class="block">
