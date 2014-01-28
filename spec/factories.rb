@@ -107,6 +107,7 @@ FactoryGirl.define do
       source_name 'ITU database'
       source_link 'I993'
       display_prefix '$'
+      precision 2
     end
 
     factory :ds_fixed_monthly_gdp do
