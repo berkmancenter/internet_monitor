@@ -26,7 +26,7 @@ describe ( 'countries/_score_pill' ) {
     }
 
     it {
-      should have_css 'span.imon-rank', text: '2'
+      should have_css 'span.imon-rank', text: '#2'
     }
 
     it {

@@ -132,6 +132,27 @@
   };
 
   $.fn.updateScore = function( options ) {
+    this.each( function( ) {
+      var scorePill = $( this ).filter( '.score-pill' );
+      if ( scorePill.length > 0 ) {
+        var countryId = scorePill.data( 'countryId' );
+        var country = _countries[ countryId ];
+
+        if ( country ) {
+          country.score = $.scoreKeeper.calculateScore( country );
+          scorePill.find( '.user-score' ).html( country.score.toFixed( 2 ) ).addClass( 'updated' );
+        }
+      }
+    } );
+
+    var countriesSorted = _countries.slice().sort( function( a, b ) {
+      return a.score < b.score ? 1 : -1;
+    } );
+
+    $.each( countriesSorted, function( i ) {
+      this.rank = i + 1;
+    } );
+
     return this.each( function( ) {
       var scorePill = $( this ).filter( '.score-pill' );
       if ( scorePill.length > 0 ) {
@@ -139,11 +160,10 @@
         var country = _countries[ countryId ];
 
         if ( country ) {
-          scorePill.find( '.user-score' ).html( $.scoreKeeper.calculateScore( country ).toFixed( 2 ) ).addClass( 'updated' );
+          scorePill.find( '.user-rank' ).html( '#' + country.rank ).addClass( 'updated' );
         }
       }
     } );
-
   };
 
 } ) ( window.jQuery );
