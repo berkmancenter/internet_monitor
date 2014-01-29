@@ -82,30 +82,80 @@ $( function( ) {
     } );
 
     // map countries from server
-    var mapCountries = { };
+    var mapCountries = {
+      length: 0
+    };
+
     $.each( map.data( 'mapCountries' ), function( ) {
       mapCountries[ this.iso3_code ] = this;
+      mapCountries.length++;
     } );
 
+    var minScore = map.data( 'minScore' );
     var maxScore = map.data( 'maxScore' );
     //var countriesPath = map.data( 'countriesPath' );
 
     var zoomCountry = $( '.geomap' ).data( 'countryIso3' );
     var zoomBbox = null;
+
+    var colorClasses = [
+    { color: '#fefefe' }, // $light-blue, the water, not used
+    { color: '#dee7f0' },
+    { color: '#c5cedd' },
+    { color: '#a3afc7' },
+    { color: '#8393ad' },
+    { color: '#576c81' },
+    { color: '#505c74' },
+    { color: '#3e4452' }
+    ];
     
+    var scoreRange = maxScore - minScore;
+    var maxScoreBreak = scoreRange / ( colorClasses.length - 1 );
+
+    var legendHtml = '<dl>';
+
+    $.each( colorClasses, function( i ) {
+      if ( i === 0 ) {
+        this.minValue = 0;
+        this.label = 'Not enough data';
+      } else {
+        this.minValue = minScore + ( maxScoreBreak * ( i - 1 ) );
+        this.label = this.minValue.toFixed( 2 ) + ' - ' + ( minScore + ( maxScoreBreak * ( i ) ) ).toFixed( 2 );
+      }
+      legendHtml += '<dt><span style="background: ' + this.color + ';"></span></dt><dd>' + this.label + '</dd>';
+    } );
+
+    legendHtml += '</dl>';
+
+    $( '.map-legend' ).html( legendHtml ).show();
+
+
+
     // grab the world countries file
     $.getJSON('/world-countries.json', function (result) {
 
       // append them to the map
       $.each( result.features, function( ) {
-        var r = '36';
+        var r = colorClasses[ 0 ].color;
+
         if ( mapCountries[ this.properties.iso_a3 ] ) {
-          this.properties.country_id = mapCountries[ this.properties.iso_a3 ].id;
-          this.properties.score = mapCountries[ this.properties.iso_a3 ].score;
-          r = Math.round( (0x36 + ( (0xff - 0x36) * ( mapCountries[ this.properties.iso_a3 ].score / maxScore ) ) ) ).toString(16);
+          if ( mapCountries.length === 1 ) {
+            r = colorClasses[ colorClasses.length - 1 ].color;
+          } else {
+            this.properties.country_id = mapCountries[ this.properties.iso_a3 ].id;
+            this.properties.score = mapCountries[ this.properties.iso_a3 ].score;
+
+            for ( var i = 0; i < colorClasses.length; i++ ) {
+              if ( this.properties.score < colorClasses[ i ].minValue ) {
+                r = colorClasses[ i - 1 ].color;
+                break;
+              }
+            }
+          }
         }
+
         mapCountriesService.geomap('append', this, {
-          color: '#' + r + '484a'
+          color: r
         }, false);
 
         if ( this.properties.iso_a3 === zoomCountry ) {

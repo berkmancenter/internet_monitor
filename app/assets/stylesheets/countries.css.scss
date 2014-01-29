@@ -263,6 +263,36 @@
     }
   }
 
+  .map-legend {
+    background: $white;
+    border: solid 2px $gold;
+    bottom: 48px + 32px;
+    font-size: .7em;
+    left: 32px;
+    padding: 0 .5em .25em .5em;
+    position: fixed;
+    /* top: $sectionTop + 128px; */
+
+    dt, dd {
+      float: left;
+    }
+
+    dt {
+      clear: left;
+    }
+
+    dd {
+      margin-left: .25em;
+    }
+
+    span {
+      border: solid 1px #addfe6;
+      display: inline-block;
+      height: 16px;
+      width: 24px;
+    }
+  }
+
   .map-index {
     background: $white;
     bottom: 48px;
