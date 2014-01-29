@@ -110,7 +110,7 @@ describe 'countries requests', :js => true do
         }
 
         it {
-          slider_val = page.evaluate_script %q[$('[name="ds_fixed_monthly"]').val( )]
+          slider_val = page.evaluate_script %q[$('[name="ds_fixed_monthly_gdp"]').val( )]
           slider_val.should eq( '1' )
         }
       }
