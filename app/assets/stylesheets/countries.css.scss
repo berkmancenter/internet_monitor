@@ -232,7 +232,7 @@
 
   .geomap {
     background: $light-blue;
-    bottom: 40px;
+    bottom: 48px;
     left: 0;
     position: fixed;
     right: $sectionBreak;
@@ -246,9 +246,26 @@
     }
   }
 
+  .map-controls {
+    left: 32px;
+    position: fixed;
+    top: $sectionTop + 32px;
+
+    .zoom-in, .zoom-out {
+      background: url('map_zoom.png');
+      display: block;
+      height: 32px;
+      width: 32px;
+    }
+
+    .zoom-out {
+      background-position: 0 32px;
+    }
+  }
+
   .map-index {
     background: $white;
-    bottom: 40px;
+    bottom: 48px;
     font-size: .8em;
     overflow: auto;
     padding-left: .5em;
@@ -261,13 +278,18 @@
       text-transform: uppercase;
     }
 
+    .map-pills-container {
+      position: relative;
+    }
+
     ol, ul {
       list-style: none;
       margin: 0;
       padding: 0;
 
       li {
-        margin: .25em 0;
+        position: absolute;
+        transition: top 1s ease-in-out .5s;
       }
     }
 
@@ -278,6 +300,7 @@
 
   footer {
     bottom: 0;
+    height: 48px;
     left: 0;
     position: fixed;
     right: 0;

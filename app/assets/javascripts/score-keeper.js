@@ -153,6 +153,8 @@
       this.rank = i + 1;
     } );
 
+    var isMapIndex = $( 'body.countries.map' ).length > 0;
+
     return this.each( function( ) {
       var scorePill = $( this ).filter( '.score-pill' );
       if ( scorePill.length > 0 ) {
@@ -161,6 +163,10 @@
 
         if ( country ) {
           scorePill.find( '.user-rank' ).html( '#' + country.rank ).addClass( 'updated' );
+
+          if ( isMapIndex ) {
+            scorePill.closest( 'li' ).css( 'top', (country.rank - 1) * 36 );
+          }
         }
       }
     } );

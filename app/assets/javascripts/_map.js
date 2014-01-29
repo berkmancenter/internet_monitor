@@ -21,6 +21,7 @@ $( function( ) {
       ],
       center: [ 0, 20 ],
       zoom: 2,
+      zoomMin: 2,
       mode: defaultMapMode,
       cursors: {
         click: 'pointer'
@@ -119,5 +120,13 @@ $( function( ) {
         map.geomap('refresh');
       }
     });
+
+    $( '.zoom-in' ).click( function( ) {
+      map.geomap('zoom', +1);
+    } );
+
+    $( '.zoom-out' ).click( function( ) {
+      map.geomap('zoom', -1);
+    } );
   }
 } );
