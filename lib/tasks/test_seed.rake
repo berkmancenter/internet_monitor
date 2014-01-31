@@ -101,9 +101,13 @@ namespace :db do
       d_pct_inet_usa.save!
 
       # control datum sources
-      ds_consistency = FactoryGirl.create( :ds_consistency );
-      ds_consistency.category = categories[ 1 ];
+      ds_consistency = FactoryGirl.create :ds_consistency
+      ds_consistency.category = categories[ 1 ]
       ds_consistency.save!
+
+      ds_herdict = FactoryGirl.create :ds_herdict
+      ds_herdict.category = categories[ 1 ]
+      ds_herdict.save!
 
       # control datum
       d_consistency_iran = FactoryGirl.create( :d_consistency_iran );
@@ -116,17 +120,21 @@ namespace :db do
       d_consistency_china.country = china;
       d_consistency_china.save!
 
+      d_herdict_iran = FactoryGirl.create :d_herdict_iran
+      d_herdict_iran.source = ds_herdict
+      d_herdict_iran.country = iran
+      d_herdict_iran.save!
+
       # activity datum sources
       ds_morningside = FactoryGirl.create :ds_morningside
       ds_morningside.category = categories[ 2 ]
-      ds_morningside.save
+      ds_morningside.save!
 
       # access datum
       d_morningside = FactoryGirl.create :d_morningside
       d_morningside.source = ds_morningside
       d_morningside.language = persian
       d_morningside.value = IO.read 'db/test_data/morningside.json'
-      d_morningside.value_id = 1
       d_morningside.save
 
       # other datum source

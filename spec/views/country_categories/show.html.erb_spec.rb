@@ -12,7 +12,7 @@ describe ( 'country_categories/show' ) {
 
     context ( 'with some indicators' ) {
       let ( :data ) {
-        category.data.most_recent.for( country );
+        category.data.most_recent.affecting_score.for( country );
       }
 
       it {
@@ -128,6 +128,12 @@ describe ( 'country_categories/show' ) {
       it_should_behave_like 'country sidebar'
 
       it_should_behave_like 'indicators'
+
+      it ( 'should have a herdict report' ) {
+        # control sample has one
+        should have_css 'section.herdict-fetcher.html-block'
+        should have_css '.herdict-fetcher .quickstats'
+      }
     }
 
     context ( 'activity' ) {
@@ -150,8 +156,7 @@ describe ( 'country_categories/show' ) {
 
       it ( 'should have a morningside widget' ) {
         # activity sample has one
-        should have_css 'div.json-objects'
-        should have_css '.json-objects section.morningside-fetcher'
+        should have_css 'section.morningside-fetcher.json-object'
         should have_css '.morningside-fetcher .render'
       }
 
