@@ -17,7 +17,7 @@ describe 'country_categories requests', :js => true do
       }
 
       it ( 'should have a morningside blogosphere with content' ) {
-        should have_css 'div.json-objects section.morningside-fetcher .render svg'
+        should have_css 'section.morningside-fetcher.json-object .render svg'
       }
     }
   }

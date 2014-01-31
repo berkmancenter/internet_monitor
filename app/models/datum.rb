@@ -14,7 +14,7 @@ class Datum < ActiveRecord::Base
         end
     }
 
-    scope :indicators, where( { type: Indicator } )
+    scope :indicators, joins( :source ).where( "datum_sources.datum_type = 'Indicator'" )
     scope :non_indicators, joins( :source ).where( "not datum_sources.datum_type = 'Indicator'" )
 
     scope :affecting_score, joins(:source).where(datum_sources: {affects_score: true})

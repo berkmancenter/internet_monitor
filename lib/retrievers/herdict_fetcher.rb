@@ -11,7 +11,7 @@ class HerdictFetcher
     data = []
     Country.all.each { |country|
       sites = top_sites_by_country(country.iso_code, 2013)
-      d = HtmlBlock.new :start_date => Date.today - 365, :value => sites)
+      d = HtmlBlock.new start_date: '2013-01-01', value: sites
       d.country = country
       data << u
     }

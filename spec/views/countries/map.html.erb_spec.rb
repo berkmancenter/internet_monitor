@@ -29,7 +29,7 @@ describe ( 'countries/map' ) {
 
     it ( 'should have legend' ) {
       # just a placeholder, values are added on calculation
-      should have_css '.map-legend'
+      should have_css '.map-legend', visible: false
     }
 
     it {
