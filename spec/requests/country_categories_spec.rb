@@ -19,6 +19,10 @@ describe 'country_categories requests', :js => true do
       it ( 'should have herdict content' ) {
         should have_css 'section.herdict-fetcher.html-block h2', text: 'TOP REPORTED SITES'
       }
+
+      it ( 'should have herdict widget' ) {
+        should have_css '.sidebar-column section.block .herdict-widget'
+      }
     }
 
     context ( 'activity' ) {

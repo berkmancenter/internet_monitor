@@ -20,16 +20,6 @@
         <%= render partial: "data/#{datum.type.underscore}", locals: { datum: datum } %>
       <% end %>
 
-      <!--
-      <% if @category.name == 'Control' %>
-        <div class="block">
-          <h3>HERDICT</h3>
-          <p>Interested in helping Herdict test for blocked websites in your country?</p>
-          <a href="http://www.herdict.org/participate/reporter" target="_blank"><span style="display: block;">Click here to open the Herdict reporter!</span> <%= image_tag 'herdict_logo.png' %></a>
-        </div>
-      <% end %>
-      -->
-
       <%# language-based non-indicators for this category %>
       <% @country.languages.each do |language| %>
         <% @category.data.non_indicators.most_recent.for( language ).each do |datum| %>
@@ -40,6 +30,12 @@
 
     <div class="sidebar-column">
       <%= render partial: "countries/sidebar" %>
+
+      <% if @category.name == 'Control' %>
+        <section class="block">
+          <script src="//herdict.org/widgets/country.load.js"></script>
+        </section>
+      <% end %>
     </div>
   </div>
 </article>
