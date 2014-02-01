@@ -7,6 +7,20 @@ describe 'country_categories requests', :js => true do
 
     subject { page }
 
+    context ( 'control' ) {
+      before {
+        visit category_country_path( country, :category_slug => 'control' )
+      }
+
+      it {
+        should have_title "#{country.name} Control | Internet Monitor"
+      }
+
+      it ( 'should have herdict content' ) {
+        should have_css 'section.herdict-fetcher.html-block h2', text: 'TOP REPORTED SITES'
+      }
+    }
+
     context ( 'activity' ) {
       before {
         visit category_country_path( country, :category_slug => 'activity' )

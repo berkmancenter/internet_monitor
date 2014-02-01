@@ -123,6 +123,7 @@ namespace :db do
       d_herdict_iran = FactoryGirl.create :d_herdict_iran
       d_herdict_iran.source = ds_herdict
       d_herdict_iran.country = iran
+      d_herdict_iran.value = IO.read 'db/test_data/herd_irn.html'
       d_herdict_iran.save!
 
       # activity datum sources

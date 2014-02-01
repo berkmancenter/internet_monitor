@@ -379,8 +379,8 @@ FactoryGirl.define do
       #country iran
       #language nil
       original_value nil
-      value_id 'IR'
-      value '<div class="explore-module-content quickstats"> <h2>Quick Stats</h2> <ul class="quickstats-list"> <li> <em class="highlight">Iran</em> has <em class="inaccessible">5,207 inaccessible reports</em> on 1,082 sites </li> <li> <em class="highlight">Iran</em> has <em class="accessible">8,291 accessible reports</em> on 1,408 sites </li> <li class="new-section"> Iran is ranked 6 in number of reports </li> </ul> </div>'
+      value_id 'IRN'
+      #value [herd_irn.html]
       type 'HtmlBlock'
     end
   end

@@ -15,7 +15,7 @@
 
       <%= render partial: 'data/indicators', object: @category.data.indicators.in_category_page.most_recent.for( @country ) %>
       
-      <%# country-based non-indicators %>
+      <%# country-based non-indicators for this category %>
       <% @category.data.non_indicators.most_recent.for( @country ).each do |datum| %>
         <%= render partial: "data/#{datum.type.underscore}", locals: { datum: datum } %>
       <% end %>
@@ -30,6 +30,7 @@
       <% end %>
       -->
 
+      <%# language-based non-indicators for this category %>
       <% @country.languages.each do |language| %>
         <% @category.data.non_indicators.most_recent.for( language ).each do |datum| %>
           <%= render partial: "data/#{datum.type.underscore}", locals: { datum: datum } %>
