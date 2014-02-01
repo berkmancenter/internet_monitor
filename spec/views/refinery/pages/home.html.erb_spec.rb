@@ -10,6 +10,10 @@ describe ( 'refinery/pages/home' ) {
       render
     }
 
+    it {
+      should_not have_css '.category-selector'
+    }
+
     describe ( 'carousel' ) {
       it {
         should have_css 'div.carousel'
