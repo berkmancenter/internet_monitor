@@ -184,6 +184,15 @@
       margin-bottom: .25em;
     }
 
+    dd.indicators-label {
+      color: $gray;
+      font-size: .8em;
+
+      & span:last-child {
+        float: right;
+      }
+    }
+
     .indicator-bar-outer, .indicator-bar-inner {
       border-radius: 5px;
       height: 1.5em;
@@ -223,7 +232,7 @@
 
   .geomap {
     background: $light-blue;
-    bottom: 40px;
+    bottom: 48px;
     left: 0;
     position: fixed;
     right: $sectionBreak;
@@ -237,9 +246,56 @@
     }
   }
 
+  .map-controls {
+    left: 32px;
+    position: fixed;
+    top: $sectionTop + 32px;
+
+    .zoom-in, .zoom-out {
+      background: url('map_zoom.png');
+      display: block;
+      height: 32px;
+      width: 32px;
+    }
+
+    .zoom-out {
+      background-position: 0 32px;
+    }
+  }
+
+  .map-legend {
+    background: $white;
+    border: solid 2px $gold;
+    bottom: 48px + 32px;
+    font-size: .7em;
+    left: 32px;
+    padding: 0 .5em .25em .5em;
+    position: fixed;
+    /* top: $sectionTop + 128px; */
+
+    dt, dd {
+      float: left;
+    }
+
+    dt {
+      clear: left;
+    }
+
+    dd {
+      margin-left: .25em;
+    }
+
+    span {
+      border: solid 1px #addfe6;
+      display: inline-block;
+      height: 16px;
+      width: 24px;
+    }
+  }
+
   .map-index {
     background: $white;
-    bottom: 40px;
+    bottom: 48px;
     font-size: .8em;
     overflow: auto;
     padding-left: .5em;
@@ -252,23 +308,29 @@
       text-transform: uppercase;
     }
 
+    .map-pills-container {
+      position: relative;
+    }
+
     ol, ul {
       list-style: none;
       margin: 0;
       padding: 0;
 
       li {
-        margin: .25em 0;
+        position: absolute;
+        transition: top 1s ease-in-out .5s;
       }
     }
 
     .score-pill .country-name {
-      width: $sectionBreak - 160px;
+      width: $sectionBreak - 224px;
     }
   }
 
   footer {
     bottom: 0;
+    height: 48px;
     left: 0;
     position: fixed;
     right: 0;

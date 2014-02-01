@@ -28,6 +28,12 @@ describe ( 'countries/show' ) {
       should have_css 'h1 .score-pill'
     }
 
+    it ( 'should have category selector' ) {
+      # moved from layout
+      should have_css '.category-selector'
+      should have_css '.category-selector.expanded'
+    }
+
     it ( 'h1 has country name score (inside pill)' ) {
       should have_css 'h1', text: country.name
       should have_css 'h1', text: country.score.round(2), exact: true

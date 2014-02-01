@@ -9,7 +9,7 @@
     text-transform: uppercase;
   }
 
-  .country-name, .imon-score, .user-score {
+  .country-name, .imon-rank, .imon-score, .user-score, .user-rank {
     color: $violet;
     display: inline-block;
     height: 34px;
@@ -34,21 +34,25 @@
     }
   }
 
-  .imon-score, .user-score {
+  .imon-rank, .imon-score, .user-score, .user-rank {
     text-align: center;
     width: 42px;
   }
 
-  .imon-score {
+  .imon-rank, .imon-score {
     background-color: $light-blue;
     border-radius: 0;
   }
 
-  .user-score {
+  .imon-rank {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+
+  .user-score, .user-rank {
     background: $bright-gold url('gear.png') no-repeat;
     border-radius: 0 4px 4px 0;
     color: white;
-    font-weight: bold;
     text-decoration: none;
     
     &.updated {
@@ -58,6 +62,21 @@
     &:hover {
       background: $light-blue url('gear.png') no-repeat -42px 0;
       color: transparent;
+    }
+  }
+
+  .user-score.updated {
+    border-radius: 0;
+  }
+
+  .user-rank {
+    border-radius: 0 4px 4px 0;
+    display: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    
+    &.updated {
+      display: inline-block;
     }
   }
 }
@@ -71,9 +90,12 @@ h1 .score-pill {
     display: none;
   }
 
-  .imon-score {
+  .imon-rank, .imon-score {
     background-color: darken( $violet, 10% );
-    border-radius: 4px 0 0 4px;
     color: $white;
+  }
+
+  .imon-rank {
+    border-radius: 4px 0 0 4px;
   }
 }

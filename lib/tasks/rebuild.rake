@@ -36,8 +36,6 @@ namespace :imon do
         Retriever.retrieve!(i + 1)
     end
 
-    Country.all.each do |country|
-        country.recalc_scores!
-    end
+    Country.calculate_scores_and_rank!
   end
 end

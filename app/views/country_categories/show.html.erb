@@ -5,14 +5,15 @@
     <span class="category-name"><%= @category.name %></span> in <%= @country.name %>
     <%= render partial: 'countries/score_pill', locals: { country: @country } %>
   </h1>
+  <%= render partial: 'shared/widgets/category_selector' %>
 
   <div class="sub-content country-6-bg">
     <div class="main-column">
       <% if part_content( @country.iso3_code.downcase, @category.slug ).present? %>
         <div class="update block <%= @category.slug %>"><%= raw part_content( @country.iso3_code.downcase, @category.slug ) %></div>
       <% end %>
-      <%= render partial: 'data/indicators', object: @category.data.most_recent.for( @country ) %>
-      <%#= render partial: "data/grouped", locals: {data: @category.data.most_recent.for(@country)} %>
+
+      <%= render partial: 'data/indicators', object: @category.data.in_category_page.most_recent.for( @country ) %>
       
       <% if @category.name == 'Control' %>
         <div class="block">

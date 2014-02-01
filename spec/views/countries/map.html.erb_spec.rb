@@ -4,6 +4,7 @@ describe ( 'countries/map' ) {
   subject { rendered }
 
   let ( :scored_countries ) { Country.with_enough_data }
+  let ( :min_score )  { scored_countries.order('score').first.score }
   let ( :max_score )  { scored_countries.order('score desc').first.score }
 
   context ( 'default view' ) {
@@ -17,7 +18,18 @@ describe ( 'countries/map' ) {
 
     it {
       should have_css '.geomap'
+      should have_css ".geomap[data-min-score='#{min_score}']"
       should have_css ".geomap[data-max-score='#{max_score}']"
+    }
+
+    it ( 'should have zoom buttons' ) {
+      should have_css '.zoom-in'
+      should have_css '.zoom-out'
+    }
+
+    it ( 'should have legend' ) {
+      # just a placeholder, values are added on calculation
+      should have_css '.map-legend'
     }
 
     it {
@@ -31,6 +43,10 @@ describe ( 'countries/map' ) {
 
     it {
       should have_css '.map-index'
+    }
+
+    it {
+      should have_css '.map-index .map-pills-container'
     }
 
     it {
@@ -48,5 +64,6 @@ describe ( 'countries/map' ) {
       should have_css '.map-index ol .score-pill'
       should_not have_css '.map-index ul .score-pill'
     }
+
   }
 }

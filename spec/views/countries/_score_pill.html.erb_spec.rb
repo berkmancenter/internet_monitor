@@ -17,7 +17,7 @@ describe ( 'countries/_score_pill' ) {
     }
 
     it {
-      should have_css "a[href*='#{country_path(country)}'].country-name", text: country.name
+      should have_css "a[href*='#{category_country_path country, category_slug: 'access'}'].country-name", text: country.name
       should have_css "a[title='#{country.name}']"
     }
 
@@ -26,11 +26,19 @@ describe ( 'countries/_score_pill' ) {
     }
 
     it {
+      should have_css 'span.imon-rank', text: '#2'
+    }
+
+    it {
       should have_css 'span.imon-score', text: country.score.round(2), exact: true
     }
 
     it {
       should have_css 'a.user-score'
+    }
+
+    it {
+      should have_css 'a.user-rank'
     }
   }
 }

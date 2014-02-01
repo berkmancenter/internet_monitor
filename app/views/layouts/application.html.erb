@@ -19,7 +19,7 @@
         <li><%= link_to 'research', refinery::marketable_page_path('research') %></li>
         <li><%= link_to 'data', refinery::marketable_page_path('sources') %></li>
         <li><%= link_to 'faq', refinery::marketable_page_path('faq') %></li>
-        <li><%= link_to 'blog', refinery::blog_root_path %></li>
+        <li><%= link_to 'blog', 'https://blogs.law.harvard.edu/internetmonitor/' %></li>
       </ul>
     </nav>
 
@@ -46,7 +46,6 @@
 
   <section class="main-content">
     <%= render partial: 'countries/nav_list' %>
-    <%= render partial: 'shared/widgets/category_selector' %>
     <%= yield %>
 
     <div class="score-keeper-loader mfp-hide">
@@ -61,7 +60,7 @@
       <ul>
         <li><%= link_to 'about', refinery::marketable_page_path('about') %></li>
         <li>contact</li>
-        <li><%= link_to 'blog', refinery::blog_root_path %></li>
+        <li><%= link_to 'blog', 'https://blogs.law.harvard.edu/internetmonitor/' %><%#= link_to 'blog', refinery::blog_root_path %></li>
         <li><%= link_to 'terms & privacy', refinery::marketable_page_path('terms-of-service') %></li>
       </ul>
     </nav>

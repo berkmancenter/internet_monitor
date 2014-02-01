@@ -14,8 +14,12 @@ module RefineryHelper
       config.access_token_secret = Imon::Application.config.imon['twitter_access_token_secret']
     end
 
-    silence_warnings do
-      client.user_timeline 'thenetmonitor', count: 7
+    begin
+      silence_warnings do
+        client.user_timeline 'thenetmonitor', count: 7
+      end
+    rescue Twitter::Error::InternalServerError => e
+      [ Twitter::Tweet.new( { id: 1, text: 'Error getting tweets from Twitter' } ) ]
     end
   end
 

@@ -1,5 +1,5 @@
 class Country < ActiveRecord::Base
-    attr_accessible :description, :iso3_code, :iso_code, :name, :score
+    attr_accessible :description, :iso3_code, :iso_code, :name, :indicator_count, :score, :rank
     has_many :country_categories
     has_many :country_languages
     has_many :categories, :through => :country_categories
@@ -18,6 +18,17 @@ class Country < ActiveRecord::Base
               {:min_indicators => Rails.application.config.imon['min_indicators']})
     scope :desc_score, order('score DESC')
 
+    def self.calculate_scores_and_rank!
+      all.each { |country|
+        country.calculate_score!
+      }
+
+      with_enough_data.desc_score.each_with_index { | country, i |
+        country.rank = i + 1
+        country.save!
+      }
+    end
+
     def enough_data?
       indicator_count >= Rails.application.config.imon[ 'min_indicators' ]
     end
@@ -29,30 +40,15 @@ class Country < ActiveRecord::Base
         country_categories.where(:category_id => options[:for].id).first.score
     end
 
-    def recalc_scores!
-        most_recent = indicators.most_recent.affecting_score
-        self.indicator_count = most_recent.size
-        ws = weighted_score(most_recent)
-        self.score = ws unless ws.nan?
-        country_categories.each do |cc|
-            ws = weighted_score(cc.indicators.most_recent.affecting_score)
-            cc.score = ws unless ws.nan?
-            cc.save!
-        end
-        save!
+    def calculate_score!
+      most_recent = indicators.most_recent.affecting_score
+      self.indicator_count = most_recent.size
+      ws = Indicator.weighted_score( most_recent )
+      self.score = ws unless ws.nan?
+      save!
     end
 
     private
-
-    def weighted_score(indis)
-        indis.reject!{|i| i.percent.nan?}
-        sum = indis.reduce(0.0) do |sum, i|
-            increment = i.percent * i.source.default_weight
-            increment += 1.0 if i.source.default_weight < 0
-            sum + increment
-        end
-        sum / indis.count.to_f * Rails.application.config.imon['max_score']
-    end
 
     def indicators_affecting_score
         indicators.most_recent.affecting_score.order(:start_date)

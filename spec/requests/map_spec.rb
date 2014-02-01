@@ -11,22 +11,17 @@ describe ( 'map requests' ) {
 
     # map
     it {
-      should have_selector( 'section.map.partial' );
-      should have_selector( '.geomap' );
+      should have_css 'section.map.partial'
+      should have_css '.geomap'
     }
 
     it ( 'should initialize a map' ) {
-      should have_selector( '.geomap.geo-map' );
+      should have_css '.geomap.geo-map'
     }
 
     it ( 'should not have a default basemap' ) {
-      should have_selector( '#map-countries-service.geo-service' );
-      should have_selector( '#map-highlight-service.geo-service' );
-    }
-
-    # index
-    it {
-      should have_selector( '.map-index' );
+      should have_css '#map-countries-service.geo-service'
+      should have_css '#map-highlight-service.geo-service'
     }
   end
 }

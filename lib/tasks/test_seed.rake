@@ -46,6 +46,10 @@ namespace :db do
       ds_fixed_monthly.category = categories[ 0 ];
       ds_fixed_monthly.save!
 
+      ds_fixed_monthly_gdp = FactoryGirl.create( :ds_fixed_monthly_gdp );
+      ds_fixed_monthly_gdp.category = categories[ 0 ];
+      ds_fixed_monthly_gdp.save!
+
       ds_lit_rate = FactoryGirl.create( :ds_lit_rate );
       ds_lit_rate.category = categories[ 0 ];
       ds_lit_rate.save!
@@ -61,6 +65,11 @@ namespace :db do
       d_fixed_monthly_iran.country = iran;
       d_fixed_monthly_iran.save!
 
+      d_fixed_monthly_gdp_iran = FactoryGirl.create( :d_fixed_monthly_gdp_iran );
+      d_fixed_monthly_gdp_iran.source = ds_fixed_monthly_gdp;
+      d_fixed_monthly_gdp_iran.country = iran;
+      d_fixed_monthly_gdp_iran.save!
+
       d_lit_rate_iran = FactoryGirl.create( :d_lit_rate_iran );
       d_lit_rate_iran.source = ds_lit_rate;
       d_lit_rate_iran.country = iran;
@@ -75,6 +84,11 @@ namespace :db do
       d_fixed_monthly_china.source = ds_fixed_monthly;
       d_fixed_monthly_china.country = china;
       d_fixed_monthly_china.save!
+
+      d_fixed_monthly_gdp_china = FactoryGirl.create( :d_fixed_monthly_gdp_china );
+      d_fixed_monthly_gdp_china.source = ds_fixed_monthly_gdp;
+      d_fixed_monthly_gdp_china.country = china;
+      d_fixed_monthly_gdp_china.save!
 
       d_lit_rate_china = FactoryGirl.create( :d_lit_rate_china );
       d_lit_rate_china.source = ds_lit_rate;
@@ -138,10 +152,7 @@ namespace :db do
       d_population_china.country = china;
       d_population_china.save!
 
-
-      Country.all.each do |country|
-        country.recalc_scores!
-      end
+      Country.calculate_scores_and_rank!
 
       # refinery
       Refinery::Pages::Engine.load_seed

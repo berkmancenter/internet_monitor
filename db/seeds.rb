@@ -33,9 +33,7 @@ CSV.open(Rails.root.join('db', 'sources.csv'), :headers => true).each_with_index
     Retriever.retrieve!(i + 1)
 end
 
-Country.all.each do |country|
-    country.recalc_scores!
-end
+Country.calculate_scores_and_rank!
 
 # Added by Refinery CMS Pages extension
 Refinery::Pages::Engine.load_seed

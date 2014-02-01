@@ -10,6 +10,13 @@ describe ( 'DatumSource model' ) {
       should be_valid
     }
 
+    it {
+      should respond_to :admin_name
+      should respond_to :public_name
+      should respond_to :in_category_page
+      should respond_to :in_sidebar
+    }
+
     describe ( 'with category' ) {
       let ( :cat_access ) { Category.find_by_name( 'Access' ) }
 

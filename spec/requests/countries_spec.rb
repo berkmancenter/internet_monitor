@@ -66,6 +66,8 @@ describe 'countries requests', :js => true do
       context ( 'without user score' ) {
         it {
           should_not have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
+          should have_css ".score-pill[data-country-id='#{country.id}'] .user-rank", visible: false
+          should_not have_css ".score-pill[data-country-id='#{country.id}'] .user-rank.updated", visible: false
         }
       }
 
@@ -83,6 +85,7 @@ describe 'countries requests', :js => true do
         it {
           should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
           should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '3.34'
+          should have_css ".score-pill[data-country-id='#{country.id}'] .user-rank", text: '2'
         }
 
         it ( 'should not updated score pills for countries without enough data' ) {
@@ -107,7 +110,7 @@ describe 'countries requests', :js => true do
         }
 
         it {
-          slider_val = page.evaluate_script %q[$('[name="ds_fixed_monthly"]').val( )]
+          slider_val = page.evaluate_script %q[$('[name="ds_fixed_monthly_gdp"]').val( )]
           slider_val.should eq( '1' )
         }
       }
@@ -216,7 +219,16 @@ describe 'countries requests', :js => true do
       describe ( 'click user score in pill' ) {
         before {
           page.execute_script( %q[$('a.user-score').click( )] );
-          #click_link 'a.user-score'
+        }
+
+        it {
+          find( '#weight-sliders' ).visible?.should be_true;
+        }
+      }
+
+      describe ( 'click user rank in pill' ) {
+        before {
+          page.execute_script( %q[$('a.user-rank').click( )] );
         }
 
         it {
