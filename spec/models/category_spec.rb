@@ -15,19 +15,6 @@ describe ( 'Category model' ) {
       it {
         should respond_to :data
       }
-
-      it {
-        pending 'Category.indicators does not pass through to data'
-        should respond_to :indicators
-      }
-
-      it ( 'should have indicators' ) {
-        # currently causes database exception
-        # should be shortcut for 
-        # category.data.where { type: Indicator }
-        pending 'category.indicators.count.should > 0'
-        category.indicators.count.should > 0
-      }
     }
   }
 }
