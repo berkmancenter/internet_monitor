@@ -53,4 +53,8 @@ class Country < ActiveRecord::Base
     def indicators_affecting_score
         indicators.most_recent.affecting_score.order(:start_date)
     end
+
+    def cache_key
+      "c#{self.id}"
+    end
 end
