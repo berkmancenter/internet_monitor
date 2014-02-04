@@ -199,12 +199,50 @@ FactoryGirl.define do
       max nil
       retriever_class 'MorningsideFetcher'
       is_api true
-      in_category_page true
+      in_category_page false
       in_sidebar false
       requires_page true
       affects_score false
       source_name 'Morningside Analytics'
       source_link ''
+    end
+
+    factory :ds_herdict_quickstats do
+      admin_name 'ds_herdict_quickstats'
+      public_name 'Herdict Quick Stats'
+      description nil
+      datum_type 'HtmlBlock'
+      #category control
+      default_weight 0
+      min nil
+      max nil
+      retriever_class 'HerdictQuickstatsFetcher'
+      is_api true
+      in_category_page false
+      in_sidebar false
+      requires_page false
+      affects_score false
+      source_name 'Herdict'
+      source_link 'http://www.herdict.org'
+    end
+
+    factory :ds_herdict do
+      admin_name 'ds_herdict'
+      public_name 'Herdict'
+      description nil
+      datum_type 'HtmlBlock'
+      #category control
+      default_weight 0
+      min nil
+      max nil
+      retriever_class 'HerdictFetcher'
+      is_api true
+      in_category_page false
+      in_sidebar false
+      requires_page false
+      affects_score false
+      source_name 'Herdict'
+      source_link 'http://www.herdict.org'
     end
   end
 
@@ -353,6 +391,30 @@ FactoryGirl.define do
     end
   end
 
+  factory :html_block do
+    factory :d_herdict_quickstats_iran do
+      #source ds_herdict_quickstats
+      start_date '2013-01-01'
+      #country iran
+      #language nil
+      original_value nil
+      value_id 'IRN'
+      value '<div class="explore-module-content quickstats"> <h2>Quick Stats</h2> <ul class="quickstats-list"> <li> <em class="highlight">Iran</em> has <em class="inaccessible">5,207 inaccessible reports</em> on 1,082 sites </li> <li> <em class="highlight">Iran</em> has <em class="accessible">8,291 accessible reports</em> on 1,408 sites </li> <li class="new-section"> Iran is ranked 6 in number of reports </li> </ul> </div>'
+      type 'HtmlBlock'
+    end
+
+    factory :d_herdict_iran do
+      #source ds_herdict
+      start_date '2013-01-01'
+      #country iran
+      #language nil
+      original_value nil
+      value_id 'IRN'
+      #value [herd_irn.html]
+      type 'HtmlBlock'
+    end
+  end
+
   factory :json_object do
     factory :d_morningside do
       #source ds_morningside
@@ -360,6 +422,7 @@ FactoryGirl.define do
       #country nil
       #language persian
       original_value nil
+      value_id 1
       #value [morningside.json]
       type 'JsonObject'
     end

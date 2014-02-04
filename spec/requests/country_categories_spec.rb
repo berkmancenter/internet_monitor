@@ -7,6 +7,24 @@ describe 'country_categories requests', :js => true do
 
     subject { page }
 
+    context ( 'control' ) {
+      before {
+        visit category_country_path( country, :category_slug => 'control' )
+      }
+
+      it {
+        should have_title "#{country.name} Control | Internet Monitor"
+      }
+
+      it ( 'should have herdict content' ) {
+        should have_css 'section.herdict-fetcher.html-block h2', text: 'TOP REPORTED SITES'
+      }
+
+      it ( 'should have herdict widget' ) {
+        should have_css '.sidebar-column section.block .herdict-widget'
+      }
+    }
+
     context ( 'activity' ) {
       before {
         visit category_country_path( country, :category_slug => 'activity' )
@@ -17,7 +35,7 @@ describe 'country_categories requests', :js => true do
       }
 
       it ( 'should have a morningside blogosphere with content' ) {
-        should have_css 'div.json-objects section.morningside-fetcher .render svg'
+        should have_css 'section.morningside-fetcher.json-object .render svg'
       }
     }
   }

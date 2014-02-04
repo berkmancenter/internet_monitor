@@ -13,27 +13,29 @@
         <div class="update block <%= @category.slug %>"><%= raw part_content( @country.iso3_code.downcase, @category.slug ) %></div>
       <% end %>
 
-      <%= render partial: 'data/indicators', object: @category.data.in_category_page.most_recent.for( @country ) %>
+      <%= render partial: 'data/indicators', object: @category.data.indicators.in_category_page.most_recent.for( @country ) %>
       
-      <% if @category.name == 'Control' %>
-        <div class="block">
-          <h3>HERDICT</h3>
-          <p>Interested in helping Herdict test for blocked websites in your country?</p>
-          <a href="http://www.herdict.org/participate/reporter" target="_blank"><span style="display: block;">Click here to open the Herdict reporter!</span> <%= image_tag 'herdict_logo.png' %></a>
-        </div>
+      <%# country-based non-indicators for this category %>
+      <% @category.data.non_indicators.most_recent.for( @country ).each do |datum| %>
+        <%= render partial: "data/#{datum.type.underscore}", locals: { datum: datum } %>
       <% end %>
 
-      <% @country.languages.each do |language|
-        data = @category.data.most_recent.for(language)
-        unless data.empty? %>
-          <h3><%= language.name %></h3>
-          <%= render partial: "data/grouped", locals: {data: data} %>
+      <%# language-based non-indicators for this category %>
+      <% @country.languages.each do |language| %>
+        <% @category.data.non_indicators.most_recent.for( language ).each do |datum| %>
+          <%= render partial: "data/#{datum.type.underscore}", locals: { datum: datum } %>
         <% end %>
       <% end %>
     </div>
 
     <div class="sidebar-column">
       <%= render partial: "countries/sidebar" %>
+
+      <% if @category.name == 'Control' %>
+        <section class="block">
+          <script src="//herdict.org/widgets/country.load.js"></script>
+        </section>
+      <% end %>
     </div>
   </div>
 </article>

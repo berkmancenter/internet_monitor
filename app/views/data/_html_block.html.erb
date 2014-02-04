@@ -1,13 +1,12 @@
 <% rp = refinery_page( datum ) %>
 
-<section class="<%= retriever_class_name( datum ) %> json-object block" data-datum-path="<%= datum_path(datum, format: :json) %>">
+<section class="<%= retriever_class_name( datum ) %> html-block block">
   <% if rp.any? %>
     <h1><%= rp.first.title %></h1>
     <div class="body"><%= raw rp.first.content_for( :body ) %></div>
   <% end %>
   
-  <div class="render">
-  </div>
+  <%= raw datum.value %>
 
   <% if rp.any? %>
     <div class="side_body"><%= raw rp.first.content_for( :side_body ) %></div>

@@ -4,6 +4,22 @@
 require 'csv'
 
 namespace :imon do
+  desc 'Import Herdict Quick Stats data'
+  task :herdictqs => [:environment] do |task|
+    CSV.open(Rails.root.join('db', 'sources.csv'), :headers => true).each_with_index do |row, i|
+        next unless row['Indicator'] == 'Herdict Quick Stats'
+        Retriever.retrieve!(i + 1)
+    end
+  end
+
+  desc 'Import Herdict data'
+  task :herdict => [:environment] do |task|
+    CSV.open(Rails.root.join('db', 'sources.csv'), :headers => true).each_with_index do |row, i|
+        next unless row['Indicator'] == 'Herdict'
+        Retriever.retrieve!(i + 1)
+    end
+  end
+
   desc 'Delete non-CMS data and re-import (does not rebuild Language)'
   task :rebuild => [:environment] do |task|
     # Delete old Category, Country, CountryCategory, CountryLanugage, DatumSource, & Indicator data

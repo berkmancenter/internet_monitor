@@ -1,13 +1,20 @@
 require 'spec_helper'
 
 describe ( 'Category model' ) {
-  subject { access }
+  subject { category }
 
-  describe ( 'with valid data' ) {
-    let ( :access ) { Category.find_by_name( 'Access' ) }
+  context ( 'access' ) {
+    let ( :category ) { Category.find_by_slug 'access' }
 
-    it {
-      should be_valid
+    describe ( 'with valid data' ) {
+
+      it {
+        should be_valid
+      }
+
+      it {
+        should respond_to :data
+      }
     }
   }
 }
