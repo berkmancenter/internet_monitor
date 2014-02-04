@@ -285,7 +285,7 @@
 
   .geomap {
     background: $light-blue;
-    bottom: 48px;
+    bottom: 56px;
     left: 0;
     position: fixed;
     right: $sectionBreak;
@@ -319,7 +319,7 @@
   .map-legend {
     background: $white;
     border: solid 2px $gold;
-    bottom: 48px + 32px;
+    bottom: 56px + 32px;
     font-size: .7em;
     left: 32px;
     padding: 0 .5em .25em .5em;
@@ -348,7 +348,7 @@
 
   .map-index {
     background: $white;
-    bottom: 48px;
+    bottom: 56px;
     font-size: .8em;
     overflow: auto;
     padding-left: .5em;
@@ -383,9 +383,13 @@
 
   footer {
     bottom: 0;
-    height: 48px;
+    height: 56px;
     left: 0;
     position: fixed;
     right: 0;
+
+    .footer-logo, .berkman-link {
+      bottom: 16px;
+    }
   }
 }

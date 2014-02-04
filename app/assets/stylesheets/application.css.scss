@@ -194,20 +194,25 @@ h2 {
 
 footer {
   clear: both;
-  margin: 0;
   height: 40px;
+  margin: 0;
+  position: relative;
 
   .footer-logo {
-    float: left;
+    bottom: 0;
+    left: 8px;
     margin-top: 4px;
+    position: absolute;
   }
 
   a.berkman-link {
     background: url("berkman_logo_small.png");
+    bottom: 0;
     display: inline-block;
-    float: left;
     height: 32px;
+    left: 56px;
     margin-top: 4px;
+    position: absolute;
     width: 64px;
   }
 
@@ -224,7 +229,7 @@ footer {
         font-size: .6em;
         font-weight: bold;
         list-style-type: none;
-        margin: 0 1em;
+        margin: 0 2em 0 0;
         text-transform: uppercase;
 
         a, a:visited {
@@ -242,7 +247,8 @@ footer {
   .cc {
     color: $white;
     display: block;
-    font-size: .8em;
+    font-size: .7em;
+    padding: .25em 0;
     text-align: center;
 
     a, a:visited {
