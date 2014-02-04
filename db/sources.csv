@@ -121,4 +121,5 @@ y,y,,y,,,Literacy rate,lit,"Literacy rate, adult total (% of people ages 15 and 
 ,,,,,,Accounts withheld,rraw,Accounts Withheld,Twitter Transparency Report,https://transparency.twitter.com/removal-requests-ttr2,n/a,"2012, Q3&Q4",twitter_transparency_removal_2012Q3-Q4.csv,no,number,,,,,,,,,,,
 ,,,,,,Tweets withheld,rrtw,Tweets Withheld,Twitter Transparency Report,https://transparency.twitter.com/removal-requests-ttr2,n/a,"2012, Q3&Q4",twitter_transparency_removal_2012Q3-Q4.csv,no,number,,,,,,,,,,,
 y,,,,y,,Morningside Analytics,msa,Morningside Analytics,Morningside Analytics,http://ip5416.blogdns.com:8080/api,n/a,"2012, 2013",,yes,JSON,,,Activity,,,,MorningsideFetcher,,,,
-y,,,,,,Herdict,herd,Herdict,Berkman Center for Internet and Society,http://www.herdict.org/,,,,,HTML,,,Control,,,,HerdictFetcher,,,,
+y,,,,,,Herdict Quick Stats,herdqs,Herdict Quick Stats,Berkman Center for Internet and Society,http://www.herdict.org/,,2013,,,HTML,,,Control,,,,HerdictQuickstatsFetcher,,,,
+y,,,,,,Herdict,herd,Herdict,Berkman Center for Internet and Society,http://www.herdict.org/,,2013,,,HTML,,,Control,,,,HerdictFetcher,,,,

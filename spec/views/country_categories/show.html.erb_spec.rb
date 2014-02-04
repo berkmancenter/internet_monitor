@@ -129,10 +129,16 @@ describe ( 'country_categories/show' ) {
 
       it_should_behave_like 'indicators'
 
-      it ( 'should have a herdict report' ) {
+      it ( 'should have a herdict quickstats report' ) {
+        # control sample has one
+        should have_css 'section.herdict-quickstats-fetcher.html-block'
+        should have_css '.herdict-quickstats-fetcher .quickstats'
+      }
+
+      it ( 'should have a herdict topitems report' ) {
         # control sample has one
         should have_css 'section.herdict-fetcher.html-block'
-        should have_css '.herdict-fetcher .quickstats'
+        should have_css '.herdict-fetcher .topitems'
       }
     }
 
