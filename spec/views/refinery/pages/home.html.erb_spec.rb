@@ -59,7 +59,7 @@ describe ( 'refinery/pages/home' ) {
 
     it {
       should have_css '.twitter ul.tweets'
-      should have_css 'ul.tweets li', count: 7
+      should have_css 'ul.tweets li', count: 3
     }
 
     it {

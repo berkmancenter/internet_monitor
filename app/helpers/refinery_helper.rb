@@ -5,7 +5,7 @@ module RefineryHelper
     content = page.first.content_for( part_name ) unless page.empty?
   end
 
-  # return last five tweets
+  # return last three tweets
   def imon_tweets
     client = Twitter::REST::Client.new do |config|
       config.consumer_key        = Imon::Application.config.imon['twitter_consumer_key']
@@ -16,7 +16,7 @@ module RefineryHelper
 
     begin
       silence_warnings do
-        client.user_timeline 'thenetmonitor', count: 7
+        client.user_timeline 'thenetmonitor', count: 3
       end
     rescue Twitter::Error::InternalServerError => e
       [ Twitter::Tweet.new( { id: 1, text: 'Error getting tweets from Twitter' } ) ]
