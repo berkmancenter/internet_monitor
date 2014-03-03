@@ -136,6 +136,7 @@ $( function( ) {
 
       // append them to the map
       $.each( result.features, function( ) {
+        // 'this' is world-countries shape
         var r = colorClasses[ 0 ].color;
 
         if ( mapCountries[ this.properties.iso_a3 ] ) {
@@ -149,6 +150,8 @@ $( function( ) {
               if ( this.properties.score < colorClasses[ i ].minValue ) {
                 r = colorClasses[ i - 1 ].color;
                 break;
+              } else {
+                r = colorClasses[ i ].color;
               }
             }
           }
