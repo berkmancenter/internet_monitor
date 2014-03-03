@@ -63,7 +63,7 @@ describe ( 'refinery/pages/home' ) {
     }
 
     it {
-      should have_css '.trending h2', text: 'Trending Countries'
+      should have_css '.trending h2', text: 'Featured Countries'
     }
 
     it { 
