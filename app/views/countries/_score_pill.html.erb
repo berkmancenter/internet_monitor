@@ -1,7 +1,8 @@
-<span class="score-pill" data-country-id="<%= country.id %>">
+<% suser = defined?( show_user ) ? show_user : true %>
+<span class="score-pill <%= 'no-user' unless suser %>" data-country-id="<%= country.id %>">
   <%= link_to country.name, Imon::Application.routes.url_helpers.category_country_path( country, category_slug: 'access' ), class: 'country-name', title: country.name %>
   <% if country.enough_data? %>
     <span class="header">score</span>
-    <span class="imon-rank">#<%= country.rank %></span><span class="imon-score"><%= country.score.round(2) %></span><a href="javascript:void(0);" class="user-score"></a><a href="javascript:void(0);" class="user-rank"></a>
+    <span class="imon-rank">#<%= country.rank %></span><span class="imon-score"><%= country.score.round(2) %></span><% if suser %> <a href="javascript:void(0);" class="user-score"></a><a href="javascript:void(0);" class="user-rank"></a><% end %>
   <% end %>
 </span>

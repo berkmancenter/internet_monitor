@@ -70,5 +70,10 @@ describe ( 'refinery/pages/home' ) {
       should have_css '.trending li .score-pill'
       should have_css ".trending .score-pill[data-country-id='#{country.id}']"
     }
+
+    it {
+      should_not have_css '.trending li .score-pill .user-score'
+      should_not have_css '.trending li .score-pill .user-rank'
+    }
   }
 }

@@ -100,3 +100,9 @@ h1 .score-pill {
     border-radius: 4px 0 0 4px;
   }
 }
+
+.score-pill.no-user {
+  .imon-score {
+    border-radius: 0 4px 4px 0;
+  }
+}
