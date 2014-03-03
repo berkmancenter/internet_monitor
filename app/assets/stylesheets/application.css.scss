@@ -179,9 +179,12 @@ header {
   }
 }
 
+h1 {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
 h1.head-banner, h1#body_content_title {
   color: $white;
-  font-family: 'Roboto Condensed', sans-serif;
   font-size: 1.6em;
   font-weight: normal;
   margin: 0;
