@@ -1,7 +1,7 @@
 <% provide :title, "#{@country.name} #{@category.name}" %>
 
 <article class="view country-data-view">
-  <h1 class="<%= "#{@category.slug}-1-bg" %>">
+  <h1 class="<%= "#{@category.slug}-1-bg" %> head-banner">
     <span class="category-name"><%= @category.name %></span> in <%= @country.name %>
     <%= render partial: 'countries/score_pill', locals: { country: @country } %>
   </h1>

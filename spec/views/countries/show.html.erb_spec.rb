@@ -18,9 +18,13 @@ describe ( 'countries/show' ) {
       should have_css '.view.country-data-view'
     }
 
-    describe ( 'header test' ) {
+    describe ( 'header text' ) {
       it {
         should have_css '.view h1', text: country.name
+      }
+
+      it {
+        should have_css '.view h1.head-banner'
       }
     }
 

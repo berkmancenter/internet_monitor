@@ -5,8 +5,13 @@
   <title><%= raw get_title( yield(:title) , params ) %> | Internet Monitor</title>
   <meta name="viewport" content="width=device-width">
 
+  <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
+  
+
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= stylesheet_link_tag    "magnific-popup", :media => "all" %>
+
   <%= csrf_meta_tags %>
 </head>
 <body class="<%= "#{ params[ :controller ].gsub( '/', '-' ) unless params[ :controller ].nil? } #{ params[ :action ] }" %>">

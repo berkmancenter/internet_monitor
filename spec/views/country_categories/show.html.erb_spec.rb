@@ -26,9 +26,15 @@ describe ( 'country_categories/show' ) {
       should have_css '.view.country-data-view'
     }
 
-    it {
-      should have_css '.view h1', text: country.name
-      should have_css '.view h1', text: category.name
+    describe ( 'header text' ) {
+      it {
+        should have_css '.view h1', text: country.name
+        should have_css '.view h1', text: category.name
+      }
+
+      it {
+        should have_css '.view h1.head-banner'
+      }
     }
 
     it {

@@ -44,7 +44,7 @@ summary {
 
 html {
   color: $black;
-  font-family: Sans-Serif;
+  font-family: 'Open Sans', sans-serif;
   font-size: 1em;
 }
 
@@ -168,7 +168,7 @@ header {
     border-radius: 0px 0px 8px 8px;
     box-shadow: 3px 3px 10px #888;
     font-size: .8em;
-    margin-top: -20px;
+    margin-top: -28px;
     max-height: 600px;
     overflow-x: hidden;
     overflow-y: auto;
@@ -177,6 +177,16 @@ header {
     right: $data-nav-right + 1;
     z-index: 2;
   }
+}
+
+h1.head-banner, h1#body_content_title {
+  color: $white;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 1.6em;
+  font-weight: normal;
+  margin: 0;
+  padding: 2.5em 2em 1em 2em;
+  position: relative;
 }
 
 .main-content {

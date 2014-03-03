@@ -28,6 +28,18 @@ describe ( 'pages requests' ) {
     }
 
     it {
+      should have_css 'body.refinery-pages'
+    }
+
+    it {
+      should have_css '.refinery-pages #body_content'
+    }
+
+    it {
+      should have_css '#body_content #body_content_title'
+    }
+
+    it {
       should have_css 'section#body'
     }
 
