@@ -7,6 +7,8 @@ $( function( ) {
 
 
     var map = $( '.geomap' ).geomap( {
+      tilingScheme: null,
+      bboxMax: [-180, -85, 180, 85],
       services: [
         {
           id: 'map-countries-service',
@@ -162,7 +164,7 @@ $( function( ) {
         }, false);
 
         if ( this.properties.iso_a3 === zoomCountry ) {
-          zoomBbox = $.geo.bbox( this );
+          zoomBbox = $.geo.scaleBy( $.geo.bbox( this ), 1.5 );
         }
       });
 
