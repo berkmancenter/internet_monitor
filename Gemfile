@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.0.0'
 
 gem 'rails', '3.2.13'
 
@@ -47,7 +48,7 @@ gem 'refinerycms', '~> 2.0.10'
 gem 'refinerycms-blog', '~> 2.0.0'
 
 # To use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '3.0.1'
+gem 'bcrypt-ruby', '3.1.2'
 
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
