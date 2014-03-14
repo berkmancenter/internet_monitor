@@ -32,11 +32,11 @@ describe 'countries requests', :js => true do
       }
 
       it {
-        should have_css '#weight-sliders h4', text: 'CONTROL'
+        should_not have_css '#weight-sliders h4', text: 'CONTROL'
       }
 
       it {
-        should have_css 'ul.weight-sliders-list', count: 2
+        should have_css 'ul.weight-sliders-list', count: 1
       }
 
       it ( 'should hide weight-sliders' ) {
@@ -84,7 +84,7 @@ describe 'countries requests', :js => true do
 
         it {
           should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '3.34'
+          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '1.12'
           should have_css ".score-pill[data-country-id='#{country.id}'] .user-rank", text: '2'
         }
 
@@ -99,7 +99,7 @@ describe 'countries requests', :js => true do
 
           it ( 'should maintain state' ) {
             should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-            should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '3.34'
+            should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '1.12'
           }
         }
       }
@@ -128,7 +128,7 @@ describe 'countries requests', :js => true do
 
       it {
         should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-        should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '3.89'
+        should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '1.86'
       }
 
       it {
@@ -143,7 +143,7 @@ describe 'countries requests', :js => true do
 
         it ( 'should maintain state' ) {
           should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '3.89'
+          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '1.86'
         }
       }
     }

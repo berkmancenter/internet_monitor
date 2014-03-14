@@ -12,7 +12,7 @@ describe ( 'country_categories/show' ) {
 
     context ( 'with some indicators' ) {
       let ( :data ) {
-        category.data.most_recent.affecting_score.for( country );
+        category.data.indicators.in_category_page.most_recent.for( country );
       }
 
       it {

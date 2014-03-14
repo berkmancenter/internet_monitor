@@ -7,8 +7,8 @@ describe ( 'Indicator model' ) {
       let ( :indicators ) { country.indicators.most_recent.affecting_score }
 
       it {
-        # score for test country > 3
-        Indicator.weighted_score( indicators ).should > 3
+        # score for test country > 1.49
+        Indicator.weighted_score( indicators ).should > 1.49
       }
     }
   }

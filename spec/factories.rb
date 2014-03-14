@@ -144,7 +144,7 @@ FactoryGirl.define do
       is_api false
       in_category_page true
       in_sidebar false
-      affects_score true
+      affects_score false
       source_name 'Open Net Initiative'
       source_link 'http://opennet.net/research/data'
     end

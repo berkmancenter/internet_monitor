@@ -43,9 +43,6 @@
 
         <h4 class="access-1-fg">Access</h4>
         <%= render :partial => 'shared/widgets/weight_sliders', locals: { indicator_sources: @indicator_sources.where( { category_id: Category.find_by_slug( 'access' ).id } ), background_color: '#f15c23' } %>
-
-        <h4 class="control-1-fg">Control</h4>
-        <%= render :partial => 'shared/widgets/weight_sliders', locals: { indicator_sources: @indicator_sources.where( { category_id: Category.find_by_slug( 'control' ).id } ), background_color: '#5ec1a5' } %>
     </div>
   </header>
 
