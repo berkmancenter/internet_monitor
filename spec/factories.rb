@@ -58,8 +58,6 @@ FactoryGirl.define do
       datum_type 'Indicator'
       #category access
       default_weight 1
-      min 18.15768113
-      max 99.99826243
       retriever_class 'WorldBankParser'
       is_api false
       in_sidebar true
@@ -76,8 +74,6 @@ FactoryGirl.define do
       datum_type 'Indicator'
       #category access
       default_weight 1
-      min 0.0
-      max 95.02
       retriever_class 'ITUParser'
       is_api false
       in_category_page true
@@ -97,8 +93,6 @@ FactoryGirl.define do
       datum_type 'Indicator'
       #category access
       default_weight -1 
-      min 5.5374666486
-      max 1760.4492925802
       retriever_class 'ITUParser'
       is_api false
       in_category_page true
@@ -119,8 +113,6 @@ FactoryGirl.define do
       datum_type 'Indicator'
       #category access
       default_weight -1 
-      min 0.000129379915752054
-      max 1.81461147685752
       retriever_class 'ITUParser'
       is_api false
       in_category_page false
@@ -138,8 +130,6 @@ FactoryGirl.define do
       datum_type 'Indicator'
       #category control
       default_weight 1
-      min 1.0
-      max 10
       retriever_class 'ONIParser'
       is_api false
       in_category_page true
@@ -157,8 +147,6 @@ FactoryGirl.define do
       datum_type 'Indicator'
       #category nil
       default_weight 0
-      min 9847
-      max 1344130000
       retriever_class 'WorldBankParser'
       is_api true
       in_category_page true
@@ -176,8 +164,6 @@ FactoryGirl.define do
       datum_type 'Indicator'
       #category nil
       default_weight 0.0
-      min 138.9619112705
-      max 172676.340724526
       retriever_class 'WorldBankParser'
       is_api true
       in_category_page true
@@ -195,8 +181,6 @@ FactoryGirl.define do
       datum_type 'JsonObject'
       #category activity
       default_weight 0
-      min nil
-      max nil
       retriever_class 'MorningsideFetcher'
       is_api true
       in_category_page false
@@ -214,8 +198,6 @@ FactoryGirl.define do
       datum_type 'HtmlBlock'
       #category control
       default_weight 0
-      min nil
-      max nil
       retriever_class 'HerdictQuickstatsFetcher'
       is_api true
       in_category_page false
@@ -233,8 +215,6 @@ FactoryGirl.define do
       datum_type 'HtmlBlock'
       #category control
       default_weight 0
-      min nil
-      max nil
       retriever_class 'HerdictFetcher'
       is_api true
       in_category_page false
@@ -254,7 +234,6 @@ FactoryGirl.define do
       #country iran
       #language nil
       original_value 21.0
-      value 0.22100610397810988
       type 'Indicator'
     end
 
@@ -264,7 +243,6 @@ FactoryGirl.define do
       #country iran
       #language nil
       original_value 16.5671546612
-      value 0.9937149617151022
       type 'Indicator'
     end
 
@@ -273,8 +251,7 @@ FactoryGirl.define do
       start_date '2011-01-01'
       #country iran
       #language nil
-      original_value 0.0036604822758688677
-      value 0.9980539337554951
+      original_value 0.00366048227586886
       type 'Indicator'
     end
 
@@ -284,7 +261,6 @@ FactoryGirl.define do
       #country iran
       #language nil
       original_value 36.51840027
-      value 0.224347369
       type 'Indicator'
     end
 
@@ -294,7 +270,6 @@ FactoryGirl.define do
       #country iran
       #language nil
       original_value 10.0
-      value 1.0
       type 'Indicator'
     end
 
@@ -304,7 +279,6 @@ FactoryGirl.define do
       #country iran
       #language nil
       original_value 74798599
-      value 0.05564141853916538
       type 'Indicator'
     end
 
@@ -314,7 +288,6 @@ FactoryGirl.define do
       #country iran
       #language nil
       original_value 4525.9486080335
-      value 0.02542629734459581
       type 'Indicator'
     end
 
@@ -325,7 +298,6 @@ FactoryGirl.define do
       #country china
       #language nil
       original_value 30.8539009094
-      value 0.31033161028482326
       type 'Indicator'
     end
 
@@ -335,7 +307,6 @@ FactoryGirl.define do
       #country china
       #language nil
       original_value 18.5729763195
-      value 0.9925719859663148
       type 'Indicator'
     end
 
@@ -344,8 +315,7 @@ FactoryGirl.define do
       start_date '2011-01-01'
       #country china
       #language nil
-      original_value 0.0034111494365314304
-      value 0.9981913464308573
+      original_value 0.00341114943653143
       type 'Indicator'
     end
 
@@ -355,7 +325,6 @@ FactoryGirl.define do
       #country china
       #language nil
       original_value 94.2722
-      value 0.9300339472295512
       type 'Indicator'
     end
 
@@ -365,7 +334,6 @@ FactoryGirl.define do
       #country china
       #language nil
       original_value 10.0
-      value 1.0
       type 'Indicator'
     end
 
@@ -375,7 +343,6 @@ FactoryGirl.define do
       #country china
       #language nil
       original_value 1344130000
-      value 1.0
       type 'Indicator'
     end
 
@@ -386,7 +353,6 @@ FactoryGirl.define do
       #country usa
       #language nil
       original_value 77.863
-      value 0.8194
       type 'Indicator'
     end
   end

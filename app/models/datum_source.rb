@@ -24,7 +24,10 @@ class DatumSource < ActiveRecord::Base
     def recalc_all_values
         # I should use duck-typing here
         return unless datum_type == 'Indicator'
-        data.each{ |datum| datum.calc_percent }
+        data.each { |datum|
+          datum.calc_percent
+          datum.save
+        }
     end
 
     def ingest_data!(options = {})

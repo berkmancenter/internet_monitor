@@ -1,14 +1,38 @@
 require 'spec_helper'
 
 describe ( 'Datum model' ) {
-  subject { datum }
+  let ( :ds_pct_inet ) { DatumSource.find_by_admin_name( 'ds_pct_inet' ) }
+  let ( :iran ) { Country.find_by_iso3_code( 'IRN' ) }
+  let ( :china ) { Country.find_by_iso3_code( 'CHN' ) }
+  let ( :usa ) { Country.find_by_iso3_code( 'USA' ) }
+
+  let ( :d_pct_inet_iran ) {
+    Datum.where( {
+      datum_source_id: ds_pct_inet.id,
+      country_id: iran.id
+    } ).first
+  }
+
+  let ( :d_pct_inet_usa ) {
+    Datum.where( {
+      datum_source_id: ds_pct_inet.id,
+      country_id: usa.id
+    } ).first
+  }
 
   context ( 'with valid data' ) {
-    let ( :ds_pct_inet ) { DatumSource.find_by_admin_name( 'ds_pct_inet' ) }
-    let ( :datum ) { Datum.where( { datum_source_id: ds_pct_inet.id } ).first }
-
     it {
-      should be_valid
+      d_pct_inet_iran.should be_valid
+    }
+
+    describe ( 'value' ) {
+      it {
+        d_pct_inet_iran.value.should eq( 0.0 )
+      }
+
+      it {
+        d_pct_inet_usa.value.should eq( 1.0 )
+      }
     }
   }
 
