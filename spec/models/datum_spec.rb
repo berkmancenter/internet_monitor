@@ -13,10 +13,10 @@ describe ( 'Datum model' ) {
     } ).first
   }
 
-  let ( :d_pct_inet_usa ) {
+  let ( :d_pct_inet_china ) {
     Datum.where( {
       datum_source_id: ds_pct_inet.id,
-      country_id: usa.id
+      country_id: china.id
     } ).first
   }
 
@@ -31,7 +31,7 @@ describe ( 'Datum model' ) {
       }
 
       it {
-        d_pct_inet_usa.value.should eq( 1.0 )
+        d_pct_inet_china.value.should eq( 1.0 )
       }
     }
   }

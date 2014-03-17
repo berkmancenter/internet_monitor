@@ -100,23 +100,6 @@ namespace :db do
       d_pct_inet_usa.country = usa;
       d_pct_inet_usa.save!
 
-      # access min_max
-      ds_pct_inet.recalc_min_max
-      ds_pct_inet.save!
-      ds_pct_inet.recalc_all_values
-
-      ds_fixed_monthly.recalc_min_max
-      ds_fixed_monthly.save!
-      ds_fixed_monthly.recalc_all_values
-
-      ds_fixed_monthly_gdp.recalc_min_max
-      ds_fixed_monthly_gdp.save!
-      ds_fixed_monthly_gdp.recalc_all_values
-
-      ds_lit_rate.recalc_min_max
-      ds_lit_rate.save!
-      ds_lit_rate.recalc_all_values
-
       # control datum sources
       ds_consistency = FactoryGirl.create :ds_consistency
       ds_consistency.category = categories[ 1 ]
@@ -152,11 +135,6 @@ namespace :db do
       d_herdict_iran.value = IO.read 'db/test_data/herd_irn.html'
       d_herdict_iran.save!
 
-      # control min_max
-      ds_consistency.recalc_min_max
-      ds_consistency.save!
-      ds_consistency.recalc_all_values
-
       # activity datum sources
       ds_morningside = FactoryGirl.create :ds_morningside
       ds_morningside.category = categories[ 2 ]
@@ -191,6 +169,31 @@ namespace :db do
       d_population_china.source = ds_population;
       d_population_china.country = china;
       d_population_china.save!
+
+      # count all valid indicators
+      Country.count_indicators!
+
+      # access min_max
+      ds_pct_inet.recalc_min_max
+      ds_pct_inet.save!
+      ds_pct_inet.recalc_all_values
+
+      ds_fixed_monthly.recalc_min_max
+      ds_fixed_monthly.save!
+      ds_fixed_monthly.recalc_all_values
+
+      ds_fixed_monthly_gdp.recalc_min_max
+      ds_fixed_monthly_gdp.save!
+      ds_fixed_monthly_gdp.recalc_all_values
+
+      ds_lit_rate.recalc_min_max
+      ds_lit_rate.save!
+      ds_lit_rate.recalc_all_values
+
+      # control min_max
+      ds_consistency.recalc_min_max
+      ds_consistency.save!
+      ds_consistency.recalc_all_values
 
       # other min_max
       ds_population.recalc_min_max

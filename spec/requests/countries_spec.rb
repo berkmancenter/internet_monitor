@@ -62,6 +62,8 @@ describe 'countries requests', :js => true do
 
     # full tests for weight slider/scoreKeeper on countries page with multiple score pills
 
+    # todo: test china because it's the only test country to actually change when you slide pct_inet
+
     describe( 'scoreKeeper' ) {
       context ( 'without user score' ) {
         it {
@@ -84,7 +86,7 @@ describe 'countries requests', :js => true do
 
         it {
           should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '1.12'
+          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '3.33'
           should have_css ".score-pill[data-country-id='#{country.id}'] .user-rank", text: '2'
         }
 
@@ -99,7 +101,7 @@ describe 'countries requests', :js => true do
 
           it ( 'should maintain state' ) {
             should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-            should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '1.12'
+            should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '3.33'
           }
         }
       }
@@ -128,7 +130,7 @@ describe 'countries requests', :js => true do
 
       it {
         should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-        should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '1.86'
+        should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '3.33'
       }
 
       it {
@@ -143,7 +145,7 @@ describe 'countries requests', :js => true do
 
         it ( 'should maintain state' ) {
           should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '1.86'
+          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '3.33'
         }
       }
     }

@@ -41,7 +41,7 @@ describe ( 'DatumSource model' ) {
 
       it {
         ds_pct_inet.min.should eq( 21.0 )
-        ds_pct_inet.max.should eq( 77.863 )
+        ds_pct_inet.max.should eq( 30.8539009094 )
       }
 
       it {

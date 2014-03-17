@@ -17,13 +17,15 @@ class DatumSource < ActiveRecord::Base
     def recalc_min_max
         # I should use duck-typing here
         return unless datum_type == 'Indicator'
-        temp_data = data.most_recent.map{|d| d.original_value } 
+        country_ids = Country.with_enough_data.map { |c| c.id }
+        most_recent = data.most_recent.where( { country_id: country_ids } )
+        temp_data = most_recent.map{|d| d.original_value } 
         self.min, self.max = temp_data.min, temp_data.max
     end
 
     def recalc_all_values
         # I should use duck-typing here
-        return unless datum_type == 'Indicator'
+        return unless datum_type == 'Indicator' && min.present? && max.present?
         data.each { |datum|
           datum.calc_percent
           datum.save

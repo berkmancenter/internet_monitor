@@ -18,6 +18,16 @@ class Country < ActiveRecord::Base
               {:min_indicators => Rails.application.config.imon['min_indicators']})
     scope :desc_score, order('score DESC')
 
+    def self.count_indicators!
+      # moved from calculate_score because
+      # we now need it beforehand to calc indicator min/max
+      all.each { |country|
+        most_recent = country.indicators.most_recent.affecting_score
+        country.indicator_count = most_recent.size
+        country.save!
+      }
+    end
+
     def self.calculate_scores_and_rank!
       all.each { |country|
         country.calculate_score!
@@ -41,8 +51,8 @@ class Country < ActiveRecord::Base
     end
 
     def calculate_score!
+      return unless self.enough_data?
       most_recent = indicators.most_recent.affecting_score
-      self.indicator_count = most_recent.size
       ws = Indicator.weighted_score( most_recent )
       self.score = ws unless ws.nan?
       save!
