@@ -6,6 +6,16 @@ class DatumSource < ActiveRecord::Base
     has_one :ingester
     delegate :ingest_data!, :to => :ingester
 
+    def self.recalc_min_max_and_values!
+      all.each { |ds|
+        if ds.datum_type == 'Indicator'
+          ds.recalc_min_max
+          ds.save!
+          ds.recalc_all_values
+        end
+      }
+    end
+
     def retriever_class
         read_attribute(:retriever_class).constantize.new
     end
@@ -37,12 +47,7 @@ class DatumSource < ActiveRecord::Base
         save!
         unless data.empty?
             self.datum_type = data.first.type
-            logger.info %Q|Ingesting #{data.count} data from "#{public_name}"|
-            if datum_type == 'Indicator'
-                recalc_min_max
-                save!
-                recalc_all_values
-            end
+            logger.info %Q|Ingested #{data.count} data from "#{public_name}"|
             save!
         end
     end

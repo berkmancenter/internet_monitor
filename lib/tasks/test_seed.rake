@@ -173,36 +173,8 @@ namespace :db do
       # count all valid indicators
       Country.count_indicators!
 
-      # access min_max
-      ds_pct_inet.recalc_min_max
-      ds_pct_inet.save!
-      ds_pct_inet.recalc_all_values
-
-      ds_fixed_monthly.recalc_min_max
-      ds_fixed_monthly.save!
-      ds_fixed_monthly.recalc_all_values
-
-      ds_fixed_monthly_gdp.recalc_min_max
-      ds_fixed_monthly_gdp.save!
-      ds_fixed_monthly_gdp.recalc_all_values
-
-      ds_lit_rate.recalc_min_max
-      ds_lit_rate.save!
-      ds_lit_rate.recalc_all_values
-
-      # control min_max
-      ds_consistency.recalc_min_max
-      ds_consistency.save!
-      ds_consistency.recalc_all_values
-
-      # other min_max
-      ds_population.recalc_min_max
-      ds_population.save
-      ds_population.recalc_all_values
-
-      ds_gdp.recalc_min_max
-      ds_gdp.save
-      ds_gdp.recalc_all_values
+      # recalc indicator min_max & values
+      DatumSource.recalc_min_max_and_values!
 
       # calculate all scores
       Country.calculate_scores_and_rank!

@@ -52,6 +52,10 @@ namespace :imon do
         Retriever.retrieve!(i + 1)
     end
 
+    Country.count_indicators!
+
+    DatumSource.recalc_min_max_and_values!
+
     Country.calculate_scores_and_rank!
   end
 end

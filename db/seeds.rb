@@ -33,6 +33,10 @@ CSV.open(Rails.root.join('db', 'sources.csv'), :headers => true).each_with_index
     Retriever.retrieve!(i + 1)
 end
 
+Country.count_indicators!
+
+DatumSource.recalc_min_max_and_values!
+
 Country.calculate_scores_and_rank!
 
 # Added by Refinery CMS Pages extension
