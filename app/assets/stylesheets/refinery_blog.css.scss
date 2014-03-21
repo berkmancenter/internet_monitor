@@ -2,14 +2,39 @@
 
 .refinery-blog-posts {
   .main-content {
+    strong {
+      display: block;
+    }
+
     header {
       h1 {
         font-size: 1.6em !important;
         margin-left: 0 !important;
+        text-transform: none !important;
       }
 
       .details {
         color: $black !important;
+      }
+    }
+
+    #show_blog_post .flash_notice {
+      display: none;
+    }
+
+    #comments {
+      .avatar {
+        float: left;
+        margin: 0 .4em;
+      }
+
+      .field {
+        margin: .2em 0;
+      }
+
+      label {
+        display: inline-block;
+        width: 6em;
       }
     }
   }

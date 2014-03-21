@@ -2,10 +2,16 @@
 # See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
 
 en:
-  hello: "Hello world"
-
   refinery:
     blog:
       posts:
+        comments:
+          thank_you_moderated: 'Thank you for commenting. Your comment is in the moderation queue and will appear shortly.'
         show:
+          by: 'by'
           filed_in: 'Filed under:'
+
+          comments:
+            add: 'Post a Comment'
+            message: 'Comment'
+            submit: 'Post comment'

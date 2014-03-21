@@ -1,0 +1,35 @@
+<% comments = @post.comments.approved %>
+<aside id="comments">
+  <h2><%= t('title', :scope => 'refinery.blog.posts.show.comments') if comments.any? %></h2>
+  <%= render( :partial => "comment", :collection => comments ) if comments.any? %>
+
+  <% flash.each do |key, value| %>
+    <div id='flash' class="flash flash_<%= key %>">
+      <%= value %>
+    </div>
+  <% end %>
+
+  <h2><%= t('add', :scope => 'refinery.blog.posts.show.comments') %></h2>
+  <%= form_for [refinery, :blog, @comment] do |f| %>
+    <%= render :partial => "/refinery/admin/error_messages",
+               :locals => {
+                 :object => f.object,
+                 :include_object_name => true
+               } %>
+    <div class='field'>
+      <%= f.label :name %>
+      <%= f.text_field :name %>
+    </div>
+    <div class='field'>
+      <%= f.label :email %>
+      <%= f.email_field :email %>
+    </div>
+    <div class='field message_field'>
+      <%= f.label :message, t('message', :scope => 'refinery.blog.posts.show.comments') %>
+      <%= f.text_area :message, :rows => 6 %>
+    </div>
+    <div class='field form-actions'>
+      <%= f.submit t('submit', :scope => 'refinery.blog.posts.show.comments') %>
+    </div>
+  <% end %>
+</aside>
