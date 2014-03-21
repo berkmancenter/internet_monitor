@@ -3,3 +3,9 @@
 
 en:
   hello: "Hello world"
+
+  refinery:
+    blog:
+      posts:
+        show:
+          filed_in: 'Filed under:'

@@ -1,0 +1,27 @@
+@import "colors";
+
+.refinery-blog-posts {
+  .main-content {
+    header {
+      h1 {
+        font-size: 1.6em !important;
+        margin-left: 0 !important;
+      }
+
+      .details {
+        color: $black !important;
+      }
+    }
+  }
+
+  ul#blog_posts, #blog_archive_widget ul {
+    font-size: .8em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      padding: .2em 0;
+    }
+  }
+}
