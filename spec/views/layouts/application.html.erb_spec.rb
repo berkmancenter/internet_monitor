@@ -18,8 +18,7 @@ describe ( 'layouts/application' ) {
       should have_css "header a[href*='#{refinery::marketable_page_path('research')}']"
       should have_css "header a[href*='#{refinery::marketable_page_path('sources')}']"
       should have_css "header a[href*='#{refinery::marketable_page_path('faq')}']"
-      #should have_css "header a[href*='#{refinery::blog_root_path}']"
-      should have_css "header a[href='https://blogs.law.harvard.edu/internetmonitor/']"
+      should have_css "header a[href$='#{refinery::blog_root_path}']"
     }
 
     it {
@@ -48,7 +47,7 @@ describe ( 'layouts/application' ) {
       should have_css "footer a[href*='#{refinery::marketable_page_path('about')}']"
       should have_css "footer a[href*='#{refinery::marketable_page_path('terms-of-service')}']", text: 'terms & privacy'
       should have_css "footer a[href*='#{refinery::marketable_page_path('contact')}']", text: 'contact'
-      should have_css "footer a[href='https://blogs.law.harvard.edu/internetmonitor/']"
+      should have_css "footer a[href$='#{refinery::blog_root_path}']"
       should_not have_css 'footer li', text: 'MAILING LIST'
     }
 

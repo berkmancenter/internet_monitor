@@ -45,7 +45,8 @@ gem 'twitter'
 gem 'globalize3', '0.3.0'
 
 gem 'refinerycms', '~> 2.0.10'
-gem 'refinerycms-blog', '~> 2.0.0'
+gem 'refinerycms-blog', '~> 2.0.5'
+gem 'refinerycms-wordpress-import', :git => 'git://github.com/ryanttb/refinerycms-wordpress-import.git'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.2'
