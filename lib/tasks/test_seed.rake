@@ -260,6 +260,11 @@ namespace :db do
       ds_morningside_1_page_side_body = FactoryGirl.create :ds_morningside_1_page_side_body
       ds_morningside_1_page_side_body.page = ds_morningside_1_page
       ds_morningside_1_page_side_body.save
+
+      # Blog
+      blog_post = FactoryGirl.create :blog_post
+      blog_post.user_id = u.id
+      blog_post.save
     end
   end
 end

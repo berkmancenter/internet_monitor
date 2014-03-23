@@ -546,6 +546,14 @@ FactoryGirl.define do
     body 'For an earlier report on the Arabic blogosphere using similar research methods, see "Mapping the Arabic Blogosphere: Politics, Culture and Dissent" (2009).'
     position 1
   end
+
+  factory :blog_post, class: Refinery::Blog::Post do |p|
+    title '#IMWeekly: March 23, 2014'
+    body '<p>This is a blog post.</p>'
+    draft false
+    published_at '2014-03-23'
+    slug 'imweekly-march-23-2014'
+  end
 end
 
 
