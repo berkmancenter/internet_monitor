@@ -203,59 +203,6 @@
       display: inline-block;
     }
   }
-
-  /* herdict */
-
-  .herdict-fetcher {
-    font-size: .7em;
-
-    .accessible {
-      color: #693;
-    }
-
-    .inaccessible {
-      color: #f60;
-    }
-
-    .topitems {
-      h2, h4 {
-        text-transform: uppercase;
-      }
-
-      h2 {
-        color: $gray;
-      }
-
-      h4 {
-        color: $light-gray;
-        margin-bottom: 0;
-      }
-
-      ul {
-        list-style-type: none;
-        margin-top: 0;
-        padding-left: 1em;
-      }
-
-      ul.view-toggle {
-        display: none;
-      }
-
-      ul.topitems-list:last-child {
-        display: none;
-      }
-
-      li {
-        margin: .25em 0;
-      }
-
-      .explore-navigation-link, .explore-navigation-link:hover, .explore-navigation-link:active {
-        color: $violet;
-        cursor: default;
-        text-decoration: none;
-      }
-    }
-  }
 }
 
 /* end */
