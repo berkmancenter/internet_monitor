@@ -3,7 +3,7 @@
 <article class="view country-data-view">
   <h1 class="<%= "#{@category.slug}-1-bg" %> head-banner">
     <span class="category-name"><%= @category.name %></span> in <%= @country.name %>
-    <%= render partial: 'countries/score_pill', locals: { country: @country } %>
+    <%= render( partial: 'countries/score_pill', locals: { country: @country } ) if @category.slug == 'access' %>
   </h1>
   <%= render partial: 'shared/widgets/category_selector' %>
 

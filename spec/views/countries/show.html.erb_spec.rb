@@ -29,7 +29,7 @@ describe ( 'countries/show' ) {
     }
 
     it {
-      should have_css 'h1 .score-pill'
+      should_not have_css 'h1 .score-pill'
     }
 
     it ( 'should have category selector' ) {
@@ -40,7 +40,7 @@ describe ( 'countries/show' ) {
 
     it ( 'h1 has country name score (inside pill)' ) {
       should have_css 'h1', text: country.name
-      should have_css 'h1', text: country.score.round(2), exact: true
+      should_not have_css 'h1', text: country.score.round(2), exact: true
     }
 
     it ( 'h1 & .sub-content are siblings' ) {
@@ -102,7 +102,7 @@ describe ( 'countries/show' ) {
     }
 
     it {
-      should have_css 'h1 .score-pill'
+      should_not have_css 'h1 .score-pill'
       should_not have_css 'h1 .score-pill .imon-score'
     }
 

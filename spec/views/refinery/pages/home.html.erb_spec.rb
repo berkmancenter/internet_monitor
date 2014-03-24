@@ -67,8 +67,13 @@ describe ( 'refinery/pages/home' ) {
     }
 
     it { 
-      should have_css '.trending li .score-pill'
-      should have_css ".trending .score-pill[data-country-id='#{country.id}']"
+      should have_css ".trending li a[data-country-id='#{country.id}']", text: country.name
+    }
+
+    it { 
+      # score pills removed from home
+      should_not have_css '.trending li .score-pill'
+      should_not have_css ".trending .score-pill[data-country-id='#{country.id}']"
     }
 
     it {

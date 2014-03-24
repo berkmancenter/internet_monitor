@@ -26,6 +26,10 @@ describe ( 'country_categories/show' ) {
       should have_css '.view.country-data-view'
     }
 
+    it {
+      should have_css 'h1', text: country.name
+    }
+
     describe ( 'header text' ) {
       it {
         should have_css '.view h1', text: country.name
@@ -35,15 +39,6 @@ describe ( 'country_categories/show' ) {
       it {
         should have_css '.view h1.head-banner'
       }
-    }
-
-    it {
-      should have_css 'h1 .score-pill'
-    }
-
-    it ( 'h1 has country name score (inside pill)' ) {
-      should have_css 'h1', text: country.name
-      should have_css 'h1', text: country.score.round(2), exact: true
     }
 
     it ( 'should have category selector' ) {
@@ -109,6 +104,14 @@ describe ( 'country_categories/show' ) {
 
       it_should_behave_like 'country_category layout'
 
+      it {
+        should have_css 'h1 .score-pill'
+      }
+
+      it ( 'h1 has country score (inside pill)' ) {
+        should have_css 'h1', text: country.score.round(2), exact: true
+      }
+
       it_should_behave_like 'country sidebar'
 
       it_should_behave_like 'indicators'
@@ -130,6 +133,10 @@ describe ( 'country_categories/show' ) {
       }
 
       it_should_behave_like 'country_category layout'
+
+      it {
+        should_not have_css 'h1 .score-pill'
+      }
 
       it_should_behave_like 'country sidebar'
 
@@ -159,6 +166,10 @@ describe ( 'country_categories/show' ) {
       }
 
       it_should_behave_like 'country_category layout'
+
+      it {
+        should_not have_css 'h1 .score-pill'
+      }
 
       it_should_behave_like 'country sidebar'
 
