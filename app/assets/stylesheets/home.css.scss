@@ -107,8 +107,14 @@ body.home {
       margin: 0 .5em 1em .5em;
       width: auto;
 
-      .score-pill {
-        width: auto;
+      a, a:visited {
+        color: $violet;
+        font-weight: bold;
+        text-decoration: none;
+
+        &:hover {
+          color: $orange;
+        }
       }
     }
   }
