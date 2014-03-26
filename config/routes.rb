@@ -1,4 +1,7 @@
 Imon::Application.routes.draw do
+  resources :groups
+
+
   resources :datum_sources, :country_categories, :categories, :languages, :country_languages, :data
 
   resources :countries do

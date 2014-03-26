@@ -13,6 +13,14 @@ describe ( 'Category model' ) {
       }
 
       it {
+        category.slug.should eq( 'access' )
+      }
+
+      it {
+        category.name.should eq( 'Access' )
+      }
+
+      it {
         should respond_to :data
       }
     }

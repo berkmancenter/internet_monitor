@@ -1,0 +1,17 @@
+<h1>Listing groups</h1>
+
+<table>
+  <tr>
+    <th>Admin name</th>
+    <th>Public name</th>
+    <th></th>
+  </tr>
+
+<% @groups.each do |group| %>
+  <tr>
+    <td><%= group.admin_name %></td>
+    <td><%= group.public_name %></td>
+    <td><%= link_to 'Show', group %></td>
+  </tr>
+<% end %>
+</table>

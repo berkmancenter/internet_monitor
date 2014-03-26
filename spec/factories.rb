@@ -57,6 +57,7 @@ FactoryGirl.define do
       description nil
       datum_type 'Indicator'
       #category access
+      #group human
       default_weight 1
       retriever_class 'WorldBankParser'
       is_api false
@@ -73,6 +74,7 @@ FactoryGirl.define do
       description nil
       datum_type 'Indicator'
       #category access
+      #group adoption
       default_weight 1
       retriever_class 'ITUParser'
       is_api false
@@ -92,6 +94,7 @@ FactoryGirl.define do
       description nil
       datum_type 'Indicator'
       #category access
+      #group price
       default_weight -1 
       retriever_class 'ITUParser'
       is_api false
@@ -112,6 +115,7 @@ FactoryGirl.define do
       description nil
       datum_type 'Indicator'
       #category access
+      #group price
       default_weight -1 
       retriever_class 'ITUParser'
       is_api false

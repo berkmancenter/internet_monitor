@@ -2,6 +2,8 @@ class DatumSource < ActiveRecord::Base
     attr_accessible :admin_name, :default_weight, :description, :in_category_page, :in_sidebar, :requires_page, :is_api, :source_name, :source_link, :max, :min, :public_name, :retriever_class, :datum_type, :affects_score, :display_prefix, :display_suffix, :precision
 
     belongs_to :category
+    belongs_to :group
+
     has_many :data, :autosave => true
     has_one :ingester
     delegate :ingest_data!, :to => :ingester

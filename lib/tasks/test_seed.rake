@@ -6,6 +6,12 @@ namespace :db do
       # categories
       categories = ['Access', 'Control', 'Activity'].map{|n| Category.find_or_create_by_name(n)}
        
+      # categories
+      grp_adoption = Group.create! admin_name: 'adoption', public_name: 'Adoption'
+      grp_speed = Group.create! admin_name: 'speed', public_name: 'Speed and Quality'
+      grp_price = Group.create! admin_name: 'price', public_name: 'Price'
+      grp_human = Group.create! admin_name: 'human', public_name: 'Literacy and Gender Equality'
+
       # language
       persian = FactoryGirl.create( :persian );
       persian.save!
@@ -38,20 +44,24 @@ namespace :db do
       country_nil_score.save!
 
       # access datum sources
-      ds_pct_inet = FactoryGirl.create( :ds_pct_inet );
-      ds_pct_inet.category = categories[ 0 ];
+      ds_pct_inet = FactoryGirl.create :ds_pct_inet
+      ds_pct_inet.category = categories[ 0 ]
+      ds_pct_inet.group = grp_adoption
       ds_pct_inet.save!
 
-      ds_fixed_monthly = FactoryGirl.create( :ds_fixed_monthly );
-      ds_fixed_monthly.category = categories[ 0 ];
+      ds_fixed_monthly = FactoryGirl.create :ds_fixed_monthly
+      ds_fixed_monthly.category = categories[ 0 ]
+      ds_fixed_monthly.group = grp_price
       ds_fixed_monthly.save!
 
-      ds_fixed_monthly_gdp = FactoryGirl.create( :ds_fixed_monthly_gdp );
-      ds_fixed_monthly_gdp.category = categories[ 0 ];
+      ds_fixed_monthly_gdp = FactoryGirl.create :ds_fixed_monthly_gdp
+      ds_fixed_monthly_gdp.category = categories[ 0 ]
+      ds_fixed_monthly_gdp.group = grp_price
       ds_fixed_monthly_gdp.save!
 
-      ds_lit_rate = FactoryGirl.create( :ds_lit_rate );
-      ds_lit_rate.category = categories[ 0 ];
+      ds_lit_rate = FactoryGirl.create :ds_lit_rate
+      ds_lit_rate.category = categories[ 0 ]
+      ds_lit_rate.group = grp_human
       ds_lit_rate.save!
 
       # access datum

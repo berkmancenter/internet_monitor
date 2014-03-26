@@ -29,7 +29,15 @@ describe ( 'DatumSource model' ) {
       let ( :cat_access ) { Category.find_by_name( 'Access' ) }
 
       it {
-        ds_pct_inet.category = cat_access
+        ds_pct_inet.category.should eq( cat_access )
+      }
+    }
+
+    describe ( 'with group' ) {
+      let ( :grp_adoption ) { Group.find_by_admin_name( 'adoption' ) }
+
+      it {
+        ds_pct_inet.group.should eq( grp_adoption )
       }
     }
 
