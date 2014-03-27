@@ -92,9 +92,11 @@ ActiveRecord::Schema.define(:version => 20140326201040) do
     t.string   "display_prefix"
     t.string   "display_suffix"
     t.integer  "precision"
+    t.integer  "group_id"
   end
 
   add_index "datum_sources", ["category_id"], :name => "index_datum_sources_on_category_id"
+  add_index "datum_sources", ["group_id"], :name => "index_datum_sources_on_group_id"
 
   create_table "groups", :force => true do |t|
     t.string   "admin_name"
