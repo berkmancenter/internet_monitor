@@ -6,7 +6,7 @@ namespace :db do
       # categories
       categories = ['Access', 'Control', 'Activity'].map{|n| Category.find_or_create_by_name(n)}
        
-      # categories
+      # groups
       grp_adoption = Group.create! admin_name: 'adoption', public_name: 'Adoption'
       grp_speed = Group.create! admin_name: 'speed', public_name: 'Speed and Quality'
       grp_price = Group.create! admin_name: 'price', public_name: 'Price'

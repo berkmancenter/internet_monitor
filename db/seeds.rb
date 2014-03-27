@@ -10,6 +10,12 @@ require 'csv'
 # Create categories
 categories = ['Access', 'Control', 'Activity'].map{|n| Category.find_or_create_by_name(n)}
 
+# groups
+Group.create! admin_name: 'adoption', public_name: 'Adoption'
+Group.create! admin_name: 'speed', public_name: 'Speed and Quality'
+Group.create! admin_name: 'price', public_name: 'Price'
+Group.create! admin_name: 'human', public_name: 'Literacy and Gender Equality'
+
 # Create Lanuages
 CSV.open(Rails.root.join('db','iso-639-3_20130123.tab'), {:col_sep => "\t", :headers => true}).each do |line|
     Language.create(:name => line['Ref_Name'], :iso_code => (line['Part1'] || line['Id']))

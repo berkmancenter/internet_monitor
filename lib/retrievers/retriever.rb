@@ -30,6 +30,7 @@ class Retriever
             :default_weight => line['Default Weight'].to_f
         )
         ds.category = Category.find_by_name(line['Category'])
+        ds.group = Group.find_by_admin_name(line['Group'])
         ds.save!
         if line['Retriever Class']
             options = {}
