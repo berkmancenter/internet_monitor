@@ -5,10 +5,6 @@ describe 'countries requests', :js => true do
   subject { page }
 
   shared_examples_for( 'weight_slider' ) {
-    it ( 'should have a score pill for our test country' ) {
-      should have_css ".score-pill[data-country-id='#{country.id}']"
-    }
-
     it ( 'should have weight_slider link' ) {
       should have_selector( 'a.toggle-weight-sliders' );
       should have_css '#weight-sliders.hidden', visible: false
@@ -60,6 +56,10 @@ describe 'countries requests', :js => true do
 
     it_should_behave_like( 'weight_slider' );
 
+    it {
+      should have_css ".score-pill", count: 2
+    }
+
     # full tests for weight slider/scoreKeeper on countries page with multiple score pills
 
     # todo: test china because it's the only test country to actually change when you slide pct_inet
@@ -86,7 +86,7 @@ describe 'countries requests', :js => true do
 
         it {
           should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '3.33'
+          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '2.50'
           should have_css ".score-pill[data-country-id='#{country.id}'] .user-rank", text: '2'
         }
 
@@ -101,7 +101,7 @@ describe 'countries requests', :js => true do
 
           it ( 'should maintain state' ) {
             should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-            should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '3.33'
+            should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '2.50'
           }
         }
       }
@@ -122,15 +122,17 @@ describe 'countries requests', :js => true do
   context ( 'with scoreKeeper state in url' ) {
     let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
 
+    let ( :category ) { Category.find_by_name( 'Access' ) }
+
     context ( 'with user weight' ) {
       before {
-        visit "#{countries_path}#ds_pct_inet=1.5"
+        visit "#{category_country_path(country, :category_slug => 'access')}#ds_pct_inet=1.5"
         page.execute_script %q[$('.toggle-weight-sliders').click( )]
       }
 
       it {
         should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-        should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '3.33'
+        should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '2.50'
       }
 
       it {
@@ -140,12 +142,12 @@ describe 'countries requests', :js => true do
 
       describe ( 'move to another page' ) {
         before {
-          visit country_path( country )
+          visit countries_path
         }
 
         it ( 'should maintain state' ) {
           should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '3.33'
+          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '2.50'
         }
       }
     }
@@ -191,6 +193,10 @@ describe 'countries requests', :js => true do
 
       it_should_behave_like( 'weight_slider' );
 
+      it {
+        should_not have_css ".score-pill[data-country-id='#{country.id}']"
+      }
+
       it_should_behave_like( 'category_selector' );
       it ( 'should not have any category' ) {
         should_not have_selector '.category-selector a.selected' 
@@ -198,10 +204,6 @@ describe 'countries requests', :js => true do
 
       it ( 'should not have indicators' ) {
         should_not have_selector '.country .indicators,.country .url-lists,.country .html-blocks,.country .images'
-      }
-
-      it {
-        should have_css '.score-pill'
       }
 
       it ( 'should have a map' ) {
@@ -216,6 +218,27 @@ describe 'countries requests', :js => true do
       it ( 'map only needs to color target country' ) {
         map_countries_count = page.evaluate_script( %q[$('.sidebar .geomap').data('mapCountries').length] )
         map_countries_count.should eq( 1 )
+      }
+    }
+  }
+
+  describe( "get /countries/:id/access" ) do
+    context ( 'with normal country' ) {
+      let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
+      let ( :category ) { Category.find_by_name( 'Access' ) }
+
+      before {
+        visit category_country_path(country, :category_slug => 'access')
+      }
+
+      it {
+        should have_title( "#{country.name.titleize} Access | Internet Monitor" )
+      }
+
+      it_should_behave_like( 'weight_slider' )
+
+      it {
+        should have_css ".score-pill[data-country-id='#{country.id}']"
       }
 
       describe ( 'click user score in pill' ) {
@@ -237,23 +260,6 @@ describe 'countries requests', :js => true do
           find( '#weight-sliders' ).visible?.should be_true;
         }
       }
-    }
-  }
-
-  describe( "get /countries/:id/access" ) do
-    context ( 'with normal country' ) {
-      let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
-      let ( :category ) { Category.find_by_name( 'Access' ) }
-
-      before {
-        visit category_country_path(country, :category_slug => 'access')
-      }
-
-      it {
-        should have_title( "#{country.name.titleize} Access | Internet Monitor" )
-      }
-
-      it_should_behave_like( 'weight_slider' )
 
       it_should_behave_like( 'category_selector' )
 
@@ -263,7 +269,7 @@ describe 'countries requests', :js => true do
     }
 
     context ( 'with country missing access CMS page' ) {
-      let ( :country ) { Country.find_by_iso3_code( 'USA' ) }
+      let ( :country ) { Country.find_by_iso3_code( 'CHN' ) }
       let ( :category ) { Category.find_by_name( 'Access' ) }
 
       before {
@@ -290,6 +296,10 @@ describe 'countries requests', :js => true do
 
     it_should_behave_like( 'weight_slider' );
 
+    it {
+      should_not have_css ".score-pill[data-country-id='#{country.id}']"
+    }
+
     it_should_behave_like( 'category_selector' );
     it ( 'should have category selected' ) {
       should have_selector( ".category-selector a[href*='#{category_country_path(country, :category_slug => "control")}'].selected" );
@@ -309,6 +319,10 @@ describe 'countries requests', :js => true do
     }
 
     it_should_behave_like( 'weight_slider' );
+
+    it {
+      should_not have_css ".score-pill[data-country-id='#{country.id}']"
+    }
 
     it_should_behave_like( 'category_selector' );
     it ( 'should have category selected' ) {

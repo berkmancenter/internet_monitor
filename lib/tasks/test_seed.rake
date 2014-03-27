@@ -49,6 +49,11 @@ namespace :db do
       ds_pct_inet.group = grp_adoption
       ds_pct_inet.save!
 
+      ds_mob_scr = FactoryGirl.create :ds_mob_scr
+      ds_mob_scr.category = categories[ 0 ]
+      ds_mob_scr.group = grp_adoption
+      ds_mob_scr.save!
+
       ds_fixed_monthly = FactoryGirl.create :ds_fixed_monthly
       ds_fixed_monthly.category = categories[ 0 ]
       ds_fixed_monthly.group = grp_price
@@ -59,56 +64,76 @@ namespace :db do
       ds_fixed_monthly_gdp.group = grp_price
       ds_fixed_monthly_gdp.save!
 
+      ds_download = FactoryGirl.create :ds_download
+      ds_download.category = categories[ 0 ]
+      ds_download.group = grp_speed
+      ds_download.save!
+
       ds_lit_rate = FactoryGirl.create :ds_lit_rate
       ds_lit_rate.category = categories[ 0 ]
       ds_lit_rate.group = grp_human
       ds_lit_rate.save!
 
       # access datum
-      d_pct_inet_iran = FactoryGirl.create( :d_pct_inet_iran );
-      d_pct_inet_iran.source = ds_pct_inet;
-      d_pct_inet_iran.country = iran;
+      d_pct_inet_iran = FactoryGirl.create :d_pct_inet_iran
+      d_pct_inet_iran.source = ds_pct_inet
+      d_pct_inet_iran.country = iran
       d_pct_inet_iran.save!
 
-      d_fixed_monthly_iran = FactoryGirl.create( :d_fixed_monthly_iran );
-      d_fixed_monthly_iran.source = ds_fixed_monthly;
-      d_fixed_monthly_iran.country = iran;
+      d_fixed_monthly_iran = FactoryGirl.create :d_fixed_monthly_iran
+      d_fixed_monthly_iran.source = ds_fixed_monthly
+      d_fixed_monthly_iran.country = iran
       d_fixed_monthly_iran.save!
 
-      d_fixed_monthly_gdp_iran = FactoryGirl.create( :d_fixed_monthly_gdp_iran );
-      d_fixed_monthly_gdp_iran.source = ds_fixed_monthly_gdp;
-      d_fixed_monthly_gdp_iran.country = iran;
+      d_fixed_monthly_gdp_iran = FactoryGirl.create :d_fixed_monthly_gdp_iran
+      d_fixed_monthly_gdp_iran.source = ds_fixed_monthly_gdp
+      d_fixed_monthly_gdp_iran.country = iran
       d_fixed_monthly_gdp_iran.save!
 
-      d_lit_rate_iran = FactoryGirl.create( :d_lit_rate_iran );
-      d_lit_rate_iran.source = ds_lit_rate;
-      d_lit_rate_iran.country = iran;
+      d_download_iran = FactoryGirl.create :d_download_iran
+      d_download_iran.source = ds_download
+      d_download_iran.country = iran
+      d_download_iran.save!
+
+      d_lit_rate_iran = FactoryGirl.create :d_lit_rate_iran
+      d_lit_rate_iran.source = ds_lit_rate
+      d_lit_rate_iran.country = iran
       d_lit_rate_iran.save!
 
-      d_pct_inet_china = FactoryGirl.create( :d_pct_inet_china );
-      d_pct_inet_china.source = ds_pct_inet;
-      d_pct_inet_china.country = china;
+      d_pct_inet_china = FactoryGirl.create :d_pct_inet_china
+      d_pct_inet_china.source = ds_pct_inet
+      d_pct_inet_china.country = china
       d_pct_inet_china.save!
 
-      d_fixed_monthly_china = FactoryGirl.create( :d_fixed_monthly_china );
-      d_fixed_monthly_china.source = ds_fixed_monthly;
-      d_fixed_monthly_china.country = china;
+      d_fixed_monthly_china = FactoryGirl.create :d_fixed_monthly_china
+      d_fixed_monthly_china.source = ds_fixed_monthly
+      d_fixed_monthly_china.country = china
       d_fixed_monthly_china.save!
 
-      d_fixed_monthly_gdp_china = FactoryGirl.create( :d_fixed_monthly_gdp_china );
-      d_fixed_monthly_gdp_china.source = ds_fixed_monthly_gdp;
-      d_fixed_monthly_gdp_china.country = china;
+      d_fixed_monthly_gdp_china = FactoryGirl.create :d_fixed_monthly_gdp_china
+      d_fixed_monthly_gdp_china.source = ds_fixed_monthly_gdp
+      d_fixed_monthly_gdp_china.country = china
       d_fixed_monthly_gdp_china.save!
 
-      d_lit_rate_china = FactoryGirl.create( :d_lit_rate_china );
-      d_lit_rate_china.source = ds_lit_rate;
-      d_lit_rate_china.country = china;
+      d_download_china = FactoryGirl.create :d_download_china
+      d_download_china.source = ds_download
+      d_download_china.country = china
+      d_download_china.save!
+
+      d_lit_rate_china = FactoryGirl.create :d_lit_rate_china
+      d_lit_rate_china.source = ds_lit_rate
+      d_lit_rate_china.country = china
       d_lit_rate_china.save!
 
-      d_pct_inet_usa = FactoryGirl.create( :d_pct_inet_usa );
-      d_pct_inet_usa.source = ds_pct_inet;
-      d_pct_inet_usa.country = usa;
+      d_pct_inet_usa = FactoryGirl.create :d_pct_inet_usa
+      d_pct_inet_usa.source = ds_pct_inet
+      d_pct_inet_usa.country = usa
       d_pct_inet_usa.save!
+
+      d_mob_scr_usa = FactoryGirl.create :d_mob_scr_usa
+      d_mob_scr_usa.source = ds_mob_scr
+      d_mob_scr_usa.country = usa
+      d_mob_scr_usa.save!
 
       # control datum sources
       ds_consistency = FactoryGirl.create :ds_consistency

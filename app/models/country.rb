@@ -11,11 +11,11 @@ class Country < ActiveRecord::Base
     has_many :images
 
     scope :with_enough_data,
-        where("indicator_count >= :min_indicators",
-              {:min_indicators => Rails.application.config.imon['min_indicators']})
+        where("access_group_count >= :min_access_groups",
+              {:min_access_groups => Rails.application.config.imon['min_access_groups']})
     scope :without_enough_data,
-        where("indicator_count < :min_indicators",
-              {:min_indicators => Rails.application.config.imon['min_indicators']})
+        where("access_group_count < :min_access_groups",
+              {:min_access_groups => Rails.application.config.imon['min_access_groups']})
     scope :desc_score, order('score DESC')
 
     def self.count_indicators!
@@ -24,6 +24,15 @@ class Country < ActiveRecord::Base
       all.each { |country|
         most_recent = country.indicators.most_recent.affecting_score
         country.indicator_count = most_recent.size
+
+        country.access_group_count = 0
+        groups = []
+        most_recent.each { |i|
+          if groups.index( i.source.group ).nil?
+            country.access_group_count += 1
+            groups << i.source.group
+          end
+        }
         country.save!
       }
     end
@@ -40,7 +49,7 @@ class Country < ActiveRecord::Base
     end
 
     def enough_data?
-      indicator_count >= Rails.application.config.imon[ 'min_indicators' ]
+      access_group_count >= Rails.application.config.imon[ 'min_access_groups' ]
     end
 
     def score(options = {})

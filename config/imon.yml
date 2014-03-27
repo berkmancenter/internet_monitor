@@ -1,6 +1,6 @@
 defaults: &DEFAULTS
   max_score: 10.0
-  min_indicators: 10
+  min_access_groups: 4
   gdp_data_file: "ny.gdp.pcap.cd_Indicator_MetaData_en_EXCEL.csv"
   twitter_consumer_key: "XPTwGgP12RqGpf3csNUZgA"
   twitter_consumer_secret: "KDL1fxgc1VYgOswj2r01R0RGbjlV0YeVcGZhI7EIA9o"
@@ -12,8 +12,6 @@ development:
 
 test:
   <<: *DEFAULTS
-  max_score: 10.0
-  min_indicators: 3
 
 production:
   <<: *DEFAULTS

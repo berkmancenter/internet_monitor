@@ -10,9 +10,13 @@ describe ( 'Country model' ) {
 
     it { should respond_to :indicator_count }
 
+    it { should respond_to :access_group_count }
+
     it { should respond_to :enough_data? }
 
     it { country.enough_data?.should be_true }
+
+    it { country.access_group_count.should eq( 4 ) }
 
     describe ( 'calculate_score!' ) {
       before {

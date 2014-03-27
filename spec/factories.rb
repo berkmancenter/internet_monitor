@@ -86,6 +86,23 @@ FactoryGirl.define do
       display_suffix '%'
     end
 
+    factory :ds_mob_scr do
+      admin_name 'ds_mob_scr'
+      public_name 'Active mobile broadband subscription rate'
+      description nil
+      datum_type 'Indicator'
+      #category access
+      #group adoption
+      default_weight 1
+      retriever_class 'ITUParser'
+      is_api false
+      in_category_page true
+      in_sidebar false
+      affects_score true
+      source_name 'ITU'
+      source_link 'ITU database'
+    end
+
     factory :ds_fixed_monthly do
       # ds_fixed_monthly has a negative direction because a higher
       # value for monthly charge will decrease a country's score
@@ -125,6 +142,24 @@ FactoryGirl.define do
       source_name 'ITU database'
       source_link 'I993'
       display_prefix '$'
+    end
+
+    factory :ds_download do
+      admin_name 'ds_download'
+      public_name 'Average download speed (kbps)'
+      description nil
+      datum_type 'Indicator'
+      #category access
+      #group speed
+      default_weight 1
+      retriever_class 'NetIndexParser'
+      is_api false
+      in_category_page true
+      in_sidebar false
+      affects_score true
+      source_name 'NetIndex'
+      source_link 'http://netindex.com/source-data/'
+      display_suffix 'kbps'
     end
 
     factory :ds_consistency do
@@ -232,6 +267,47 @@ FactoryGirl.define do
 
   factory :indicator do
     # iran
+    # access
+    #   adoption
+    #     ds_pct_inet
+    #   speed
+    #     ds_download
+    #   price
+    #     ds_fixed_monthly
+    #     ds_fixed_monthly_gdp
+    #   human
+    #     ds_lit_rate
+    # control
+    #   ds_consistency
+    #   ds_herdict_quickstats
+    #   ds_herdict
+    # (no category)
+    #   ds_population
+    #   ds_gdp
+    #
+    # china
+    # access
+    #   adoption
+    #     ds_pct_inet
+    #   speed
+    #     ds_download
+    #   price
+    #     ds_fixed_monthly
+    #     ds_fixed_monthly_gdp
+    #   human
+    #     ds_lit_rate
+    # control
+    #   ds_consistency
+    # (no category)
+    #   ds_population
+    #   
+    # usa
+    # access datum_source
+    #   adoption
+    #     ds_pct_inet
+    #     ds_mob_scr
+
+    # iran
     factory :d_pct_inet_iran do
       #source ds_pct_inet
       start_date '2011-01-01'
@@ -256,6 +332,15 @@ FactoryGirl.define do
       #country iran
       #language nil
       original_value 0.00366048227586886
+      type 'Indicator'
+    end
+
+    factory :d_download_iran do
+      #source ds_download
+      start_date '2013-01-21'
+      #country iran
+      #language nil
+      original_value 1800.1006666666667
       type 'Indicator'
     end
 
@@ -323,6 +408,15 @@ FactoryGirl.define do
       type 'Indicator'
     end
 
+    factory :d_download_china do
+      #source ds_download
+      start_date '2013-01-21'
+      #country china
+      #language nil
+      original_value 8802.511333333334
+      type 'Indicator'
+    end
+
     factory :d_lit_rate_china do
       #source ds_lit_rate
       start_date '2011-01-01'
@@ -357,6 +451,15 @@ FactoryGirl.define do
       #country usa
       #language nil
       original_value 77.863
+      type 'Indicator'
+    end
+
+    factory :d_mob_scr_usa do
+      #source ds_mob_scr
+      start_date '2011-01-01'
+      #country usa
+      #language nil
+      original_value 65.4773467864
       type 'Indicator'
     end
   end
