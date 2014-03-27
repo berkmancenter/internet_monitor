@@ -20,6 +20,13 @@ describe ( 'DatumSource model' ) {
       it {
         should respond_to :admin_name
         should respond_to :public_name
+      }
+
+      it {
+        should respond_to :default_weight
+      }
+
+      it {
         should respond_to :in_category_page
         should respond_to :in_sidebar
       }

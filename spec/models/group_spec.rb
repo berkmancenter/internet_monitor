@@ -16,7 +16,15 @@ describe ( 'Group model' ) {
     }
 
     it {
+      should respond_to :default_weight
+    }
+
+    it {
       group.public_name.should eq( 'Adoption' )
+    }
+
+    it {
+      group.default_weight.should eq( 1.0 )
     }
   }
 }
