@@ -7,6 +7,9 @@ child :indicators_affecting_score, :object_root => false do
         glue :category do
             attributes :name => :category
         end
+        glue :group do
+            attributes :admin_name => :group
+        end
     end
     attributes :original_value => :value, :value => :normalized_value
 end

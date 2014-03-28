@@ -1,8 +1,8 @@
 class ApplicationController < ActionController::Base
-    protect_from_forgery
-    before_filter :load_indicator_sources
+  protect_from_forgery
+  before_filter :load_groups
 
-    def load_indicator_sources
-        @indicator_sources = DatumSource.where(:datum_type => 'Indicator', :affects_score => true)
-    end
+  def load_groups
+    @groups = Group.all
+  end
 end

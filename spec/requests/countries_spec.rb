@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'countries requests', :js => true do
-  let ( :indicator_count ) { DatumSource.where( { affects_score: true } ).count }
+  let ( :group_count ) { Group.count }
   subject { page }
 
   shared_examples_for( 'weight_slider' ) {
@@ -20,11 +20,11 @@ describe 'countries requests', :js => true do
       }
 
       it {
-        should have_css '#weight-sliders .weight-slider', count: indicator_count
+        should have_css '#weight-sliders .weight-slider', count: group_count
       }
 
       it {
-        should have_css '#weight-sliders h4', text: 'ACCESS'
+        should_not have_css '#weight-sliders h4', text: 'ACCESS'
       }
 
       it {
@@ -76,12 +76,12 @@ describe 'countries requests', :js => true do
       context ( 'with sliding a slider' ) {
         before {
           page.execute_script( %q[$('.toggle-weight-sliders').click( )] )
-          page.execute_script( %q[$('[name="ds_pct_inet"]').val( 0.5 ).trigger('input')] )
+          page.execute_script( %q[$('[name="adoption"]').val( 0.5 ).trigger('input')] )
           sleep 1
         }
 
         it {
-          current_url.should match 'ds_pct_inet=0.5'
+          current_url.should match 'adoption=0.5'
         }
 
         it {
@@ -126,7 +126,7 @@ describe 'countries requests', :js => true do
 
     context ( 'with user weight' ) {
       before {
-        visit "#{category_country_path(country, :category_slug => 'access')}#ds_pct_inet=1.5"
+        visit "#{category_country_path(country, :category_slug => 'access')}#adoption=1.5"
         page.execute_script %q[$('.toggle-weight-sliders').click( )]
       }
 
@@ -136,7 +136,7 @@ describe 'countries requests', :js => true do
       }
 
       it {
-        slider_val = page.evaluate_script %q[$('[name="ds_pct_inet"]').val( )]
+        slider_val = page.evaluate_script %q[$('[name="adoption"]').val( )]
         slider_val.should eq( '1.5' )
       }
 
@@ -154,7 +154,7 @@ describe 'countries requests', :js => true do
 
     context ( 'with default weight' ) {
       before {
-        visit "#{countries_path}#ds_pct_inet=1"
+        visit "#{countries_path}#adoption=1"
       }
 
       it {

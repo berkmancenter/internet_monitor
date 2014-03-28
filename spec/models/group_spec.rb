@@ -20,6 +20,10 @@ describe ( 'Group model' ) {
     }
 
     it {
+      should respond_to :datum_sources
+    }
+
+    it {
       group.public_name.should eq( 'Adoption' )
     }
 

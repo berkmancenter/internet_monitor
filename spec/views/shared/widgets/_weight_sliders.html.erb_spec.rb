@@ -4,11 +4,11 @@ describe ( 'shared/widgets/_weight_sliders' ) {
   subject { rendered }
 
   context ( 'normal indicator' ) {
-    let ( :indicator_sources  ) { DatumSource.where( { admin_name: 'ds_pct_inet' } ) }
-    let ( :ds_pct_inet ) { indicator_sources.first }
+    let ( :groups ) { Group.all }
+    let ( :adoption ) { groups.first }
 
     before {
-      render 'shared/widgets/weight_sliders', indicator_sources: indicator_sources, background_color: '#ff0000'
+      render 'shared/widgets/weight_sliders', groups: groups, background_color: '#ff0000'
     }
 
     it {
@@ -16,12 +16,24 @@ describe ( 'shared/widgets/_weight_sliders' ) {
     }
 
     it {
-      should have_css 'label', text: ds_pct_inet.public_name
-      should have_css "label[for='range-#{ds_pct_inet.admin_name}']"
+      should have_css 'label', text: adoption.public_name
+      should have_css "label[for='range-#{adoption.admin_name}']"
     }
 
     it {
-      should have_css "input[id='range-#{ds_pct_inet.admin_name}'][name='#{ds_pct_inet.admin_name}']"
+      should have_css "input[id='range-#{adoption.admin_name}'][name='#{adoption.admin_name}']"
+    }
+
+    it {
+      should_not have_css 'input[data-source-id]'
+    }
+
+    it {
+      should have_css 'input[data-source-ids]'
+    }
+
+    it {
+      should have_css 'input[data-default-weight]'
     }
 
     it {

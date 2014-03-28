@@ -13,8 +13,11 @@ class Indicator < Datum
   end
 
   def calc_percent
-    percent = (original_value-min) / (max-min)
-    percent = 1 - percent if source.default_weight < 0
-    self.percent = percent
+    self.percent = 1.0
+    unless (max-min) == 0
+      percent = (original_value-min) / (max-min)
+      percent = 1 - percent if source.default_weight < 0
+      self.percent = percent
+    end
   end
 end

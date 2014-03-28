@@ -41,8 +41,7 @@
 
         <p>By default, Internet Monitor weights all indicators equally when calculating each country's score. By adjusting the weights of individual indicators using the sliders below, you can create your own score. <%= link_to 'Learn more >>', refinery::marketable_page_path( 'faq' ) %></p>
 
-        <h4 class="access-1-fg">Access</h4>
-        <%= render :partial => 'shared/widgets/weight_sliders', locals: { indicator_sources: @indicator_sources.where( { category_id: Category.find_by_slug( 'access' ).id } ), background_color: '#f15c23' } %>
+        <%= render :partial => 'shared/widgets/weight_sliders', locals: { groups: @groups, background_color: '#f15c23' } %>
     </div>
   </header>
 

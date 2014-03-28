@@ -4,10 +4,10 @@ describe ( 'layouts/application' ) {
   subject { rendered }
 
   context ( 'default layout' ) {
-    let ( :indicator_sources  ) { DatumSource.where( { admin_name: 'ds_pct_inet' } ) }
+    let ( :groups  ) { Group.all }
 
     before {
-      assign( :indicator_sources, indicator_sources )
+      assign( :groups, groups )
       render 
     }
 

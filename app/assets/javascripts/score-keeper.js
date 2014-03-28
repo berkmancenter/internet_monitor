@@ -51,11 +51,11 @@
       // build an indexed list of indicators
       $( '.weight-slider' ).each( function( ) {
         var weightSlider = $( this );
-        var sourceId = parseInt( weightSlider.data( 'sourceId' ) );
+        var sourceIds = weightSlider.data( 'sourceIds' );
         var defaultWeight = parseFloat( weightSlider.data( 'defaultWeight' ) );
 
-        _indicators[ sourceId ] = {
-          adminName: weightSlider.attr( 'name' ),
+        _indicators[ weightSlider.attr( 'name' ) ] = {
+          sourceIds: sourceIds,
           defaultWeight: Math.abs( defaultWeight ),
           direction: defaultWeight
         };
@@ -115,8 +115,8 @@
       var indicators = country.indicators;
 
       var sum = indicators.reduce( function( sum, indi, i ) {
-        var indicator = _indicators[ indi.source_id ];
-        var weight = $.bbq.getState( indicator.adminName, true ) || 1.0;
+        var indicator = _indicators[ indi.group ];
+        var weight = $.bbq.getState( indi.group, true ) || 1.0;
 
         var output = sum + indi.normalized_value * weight * indicator.direction;
         if ( indicator.direction < 0 ) {
