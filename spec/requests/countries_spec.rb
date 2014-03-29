@@ -43,7 +43,7 @@ describe 'countries requests', :js => true do
   }
 
   describe ( 'get /countries index' ) {
-    let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
+    let ( :country ) { Country.find_by_iso3_code( 'CHN' ) }
     let ( :country_no_score ) { Country.find_by_iso3_code( 'USA' ) }
 
     before {
@@ -61,8 +61,6 @@ describe 'countries requests', :js => true do
     }
 
     # full tests for weight slider/scoreKeeper on countries page with multiple score pills
-
-    # todo: test china because it's the only test country to actually change when you slide pct_inet
 
     describe( 'scoreKeeper' ) {
       context ( 'without user score' ) {
@@ -86,8 +84,8 @@ describe 'countries requests', :js => true do
 
         it {
           should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '2.50'
-          should have_css ".score-pill[data-country-id='#{country.id}'] .user-rank", text: '2'
+          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '6.25'
+          should have_css ".score-pill[data-country-id='#{country.id}'] .user-rank", text: '1'
         }
 
         it ( 'should not updated score pills for countries without enough data' ) {
@@ -101,7 +99,7 @@ describe 'countries requests', :js => true do
 
           it ( 'should maintain state' ) {
             should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-            should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '2.50'
+            should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '6.25'
           }
         }
       }
@@ -120,7 +118,7 @@ describe 'countries requests', :js => true do
   }
 
   context ( 'with scoreKeeper state in url' ) {
-    let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
+    let ( :country ) { Country.find_by_iso3_code( 'CHN' ) }
 
     let ( :category ) { Category.find_by_name( 'Access' ) }
 
@@ -132,7 +130,7 @@ describe 'countries requests', :js => true do
 
       it {
         should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-        should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '2.50'
+        should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '8.75'
       }
 
       it {
@@ -147,7 +145,7 @@ describe 'countries requests', :js => true do
 
         it ( 'should maintain state' ) {
           should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
-          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '2.50'
+          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '8.75'
         }
       }
     }
