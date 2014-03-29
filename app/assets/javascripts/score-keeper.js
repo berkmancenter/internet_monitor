@@ -56,8 +56,9 @@
 
         _indicators[ weightSlider.attr( 'name' ) ] = {
           sourceIds: sourceIds,
-          defaultWeight: Math.abs( defaultWeight ),
-          direction: defaultWeight
+          groupDefaultWeight: Math.abs( defaultWeight )
+          //defaultWeight: Math.abs( defaultWeight ),
+          //direction: defaultWeight
         };
       } );
 
@@ -116,10 +117,11 @@
 
       var sum = indicators.reduce( function( sum, indi, i ) {
         var indicator = _indicators[ indi.group ];
-        var weight = $.bbq.getState( indi.group, true ) || 1.0;
+        var groupWeight = $.bbq.getState( indi.group, true ) || 1.0;
 
-        var output = sum + indi.normalized_value * weight * indicator.direction;
-        if ( indicator.direction < 0 ) {
+        var direction = indi.default_weight;
+        var output = sum + indi.normalized_value * Math.abs(indi.default_weight) * direction * groupWeight;
+        if ( direction < 0 ) {
           output += 1;
         }
         return output;

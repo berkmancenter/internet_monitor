@@ -40,6 +40,7 @@ describe ( 'countries.json requests' ) {
             indicator[ 'value' ].should_not eq( nil )
             indicator[ 'normalized_value' ].should_not eq( nil )
             indicator[ 'source_id' ].should_not eq( nil )
+            indicator[ 'default_weight' ].should_not eq( nil )
             indicator[ 'category' ].should eq( 'Access' )
             indicator[ 'group' ].should_not eq( nil )
           }

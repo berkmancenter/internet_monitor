@@ -106,13 +106,13 @@ describe 'countries requests', :js => true do
         }
       }
 
-      context ( 'with negative default weight' ) {
+      context ( 'check default weight' ) {
         before {
           page.execute_script( %q[$('.toggle-weight-sliders').click( )] )
         }
 
         it {
-          slider_val = page.evaluate_script %q[$('[name="ds_fixed_monthly_gdp"]').val( )]
+          slider_val = page.evaluate_script %q[$('[name="adoption"]').val( )]
           slider_val.should eq( '1' )
         }
       }
