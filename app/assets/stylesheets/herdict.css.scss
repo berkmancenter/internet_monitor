@@ -1,8 +1,6 @@
 @import "colors";
 
 .herdict-quickstats-fetcher, .herdict-fetcher {
-  font-size: .7em;
-
   .accessible {
     color: #693;
   }
@@ -11,20 +9,8 @@
     color: #f60;
   }
 
-  h2, h4 {
-    text-transform: uppercase;
-  }
-
-  h2 {
-    color: $gray;
-  }
-
-  h4 {
-    color: $light-gray;
-    margin-bottom: 0;
-  }
-
   ul {
+    font-size: .8em;
     list-style-type: none;
     margin-top: 0;
     padding-left: 1em;

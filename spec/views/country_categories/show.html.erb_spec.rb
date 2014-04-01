@@ -154,6 +154,15 @@ describe ( 'country_categories/show' ) {
 
       it_should_behave_like 'indicators'
 
+      it ( 'should have indicators grouped' ) {
+        should have_css '.indicators h2', text: 'Internet Control'
+        should have_css '.indicators h2', text: 'Internet Filtering'
+      }
+
+      it {
+        should have_css '.indicators dl', count: 2
+      }
+
       it ( 'should have a herdict quickstats report' ) {
         # control sample has one
         should have_css 'section.herdict-quickstats-fetcher.html-block'

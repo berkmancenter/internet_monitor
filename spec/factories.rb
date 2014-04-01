@@ -163,12 +163,30 @@ FactoryGirl.define do
       display_suffix 'kbps'
     end
 
-    factory :ds_consistency do
-      admin_name 'ds_consistency'
-      public_name 'consistency'
+    factory :ds_ippoc do
+      admin_name 'ds_ippoc'
+      public_name 'IP addresses per point of control'
       description nil
       datum_type 'Indicator'
       #category control
+      #group filtering
+      default_weight 1
+      retriever_class 'ASNParser'
+      is_api false
+      in_category_page true
+      in_sidebar false
+      affects_score false
+      source_name 'Mapping Local Internet Control'
+      source_link 'http://cyber.law.harvard.edu/netmaps/raw_data.php'
+    end
+
+    factory :ds_consistency do
+      admin_name 'ds_consistency'
+      public_name 'Filtering (consistency)'
+      description nil
+      datum_type 'Indicator'
+      #category control
+      #group control
       default_weight 1
       retriever_class 'ONIParser'
       is_api false
@@ -240,7 +258,7 @@ FactoryGirl.define do
       default_weight 0
       retriever_class 'HerdictQuickstatsFetcher'
       is_api true
-      in_category_page false
+      in_category_page true
       in_sidebar false
       requires_page false
       affects_score false
@@ -257,7 +275,7 @@ FactoryGirl.define do
       default_weight 0
       retriever_class 'HerdictFetcher'
       is_api true
-      in_category_page false
+      in_category_page true
       in_sidebar false
       requires_page false
       affects_score false
@@ -279,6 +297,7 @@ FactoryGirl.define do
     #   human
     #     ds_lit_rate
     # control
+    #   ds_ippoc
     #   ds_consistency
     #   ds_herdict_quickstats
     #   ds_herdict
@@ -298,6 +317,7 @@ FactoryGirl.define do
     #   human
     #     ds_lit_rate
     # control
+    #   ds_ippoc
     #   ds_consistency
     # (no category)
     #   ds_population
@@ -351,6 +371,15 @@ FactoryGirl.define do
       #country iran
       #language nil
       original_value 36.51840027
+      type 'Indicator'
+    end
+
+    factory :d_ippoc_iran do
+      #source ds_ippoc
+      start_date '2011-01-01'
+      #country iran
+      #language nil
+      original_value 4073728.0
       type 'Indicator'
     end
 
@@ -424,6 +453,15 @@ FactoryGirl.define do
       #country china
       #language nil
       original_value 94.2722
+      type 'Indicator'
+    end
+
+    factory :d_ippoc_china do
+      #source ds_ippoc
+      start_date '2011-01-01'
+      #country china
+      #language nil
+      original_value 80186035.0
       type 'Indicator'
     end
 
