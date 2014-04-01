@@ -74,7 +74,7 @@ var weightSliders = {
           weightSlider.data( 'slideTimeout', slideTimeout );
         } ).each(function() { 
           var weightSlider = $( this );
-          var weight = $.bbq.getState( weightSlider.attr( 'name' ), true );
+          var weight = $.scoreKeeper.getWeight( weightSlider.attr( 'name' ) );
           weightSlider.val( weight || Math.abs( weightSlider.data( 'defaultWeight' ) ) );
           setGradient( this );
         });

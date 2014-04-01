@@ -19,7 +19,8 @@
   var _defaults = {
     loaderCss: '.score-keeper-loader',
     dataPath: '/countries.json',
-    maxScore: 10
+    maxScore: 10,
+    hasScorePill: false // only pushState if page has scorePill
   };
 
   var _options = { };
@@ -36,6 +37,8 @@
   $.scoreKeeper = {
     init: function( options ) {
       _options = $.extend( { }, _defaults, options );
+
+      _options.hasScorePill = $( '.score-pill' ).length > 0;
       
       // extract previous state from sessionStorage, extend with url state
       if ( window.sessionStorage && window.JSON ) {
@@ -43,7 +46,10 @@
         var sessionState = window.sessionStorage.getItem( 'bbqState' );
         if ( sessionState ) {
           state = $.extend( JSON.parse( sessionState ), state );
-          $.bbq.pushState( state );
+
+          if ( _options.hasScorePill ) {
+            $.bbq.pushState( state );
+          }
         }
         window.sessionStorage.setItem( 'bbqState', JSON.stringify( state ) );
       }
@@ -103,12 +109,43 @@
       
     },
 
+    getWeight: function( adminName ) {
+      var state = { };
+      
+      // extract previous state from sessionStorage,
+      // extend with url state
+      if ( window.sessionStorage && window.JSON ) {
+        state = $.bbq.getState( );
+        var sessionState = window.sessionStorage.getItem( 'bbqState' );
+        if ( sessionState ) {
+          state = $.extend( JSON.parse( sessionState ), state );
+        }
+      }
+
+      return state[ adminName ];
+    },
+
     setWeight: function( adminName, value ) {
       var state = { };
-      state[ adminName ] = value;
-      $.bbq.pushState( state );
+      
+      // extract previous state from sessionStorage,
+      // extend with url state
       if ( window.sessionStorage && window.JSON ) {
-        window.sessionStorage.setItem( 'bbqState', JSON.stringify( $.bbq.getState( ) ) );
+        state = $.bbq.getState( );
+        var sessionState = window.sessionStorage.getItem( 'bbqState' );
+        if ( sessionState ) {
+          state = $.extend( JSON.parse( sessionState ), state );
+        }
+      }
+
+      state[ adminName ] = value;
+
+      if ( _options.hasScorePill ) {
+        $.bbq.pushState( state );
+      }
+
+      if ( window.sessionStorage && window.JSON ) {
+        window.sessionStorage.setItem( 'bbqState', JSON.stringify( state ) );
       }
     },
 
