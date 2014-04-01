@@ -1,6 +1,6 @@
-<dt><span><%= link_to indicator.name, refinery::marketable_page_path('sources'), title: "Source: #{indicator.source.source_name}" %></span></dt>
-<dd title="<%= number_with_precision( indicator.original_value, { precision: 0, delimiter: ',' } ) %>">
-<span class="indicator-bar-outer">
-  <span data-value="<%= indicator.percent %>" style="width: <%= indicator.percent * 100 %>%" class="indicator-bar-inner <%= "#{@category.slug}-1-bg" %>"></span>
-</span>
-</dd>
+  <dt><span><%= link_to indicator.name, refinery::marketable_page_path('sources'), title: "Source: #{indicator.source.source_name}" %></span></dt>
+  <dd title="<%= number_with_precision( indicator.original_value, { precision: 0, delimiter: ',' } ) %>">
+  <span class="indicator-bar-outer">
+    <span data-value="<%= indicator.percent %>" style="width: <%= indicator.percent * 100 %>%" class="indicator-bar-inner <%= "#{@category.slug}-1-bg" %>"></span>
+  </span>
+  </dd>

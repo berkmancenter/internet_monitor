@@ -61,6 +61,7 @@ FactoryGirl.define do
       default_weight 1
       retriever_class 'WorldBankParser'
       is_api false
+      in_category_page true
       in_sidebar true
       affects_score true
       source_name 'World Bank'

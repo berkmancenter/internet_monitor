@@ -116,6 +116,18 @@ describe ( 'country_categories/show' ) {
 
       it_should_behave_like 'indicators'
 
+      it ( 'should have indicators grouped' ) {
+        should have_css '.indicators h2', text: 'Adoption'
+        should have_css '.indicators h2', text: 'Speed and Quality'
+        should have_css '.indicators h2', text: 'Price'
+        should have_css '.indicators h2', text: 'Literacy and Gender Equality'
+      }
+
+      it {
+        # literacy rate is not shown on page (it's in sidebar)
+        should have_css '.indicators dl', count: 4
+      }
+
       it ( 'should not show bar for indicator not in_category_page' ) {
         should_not have_css 'dt', text: ds_fixed_monthly_gdp.public_name
       }

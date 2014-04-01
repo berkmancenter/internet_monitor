@@ -19,7 +19,7 @@ y,y,,,,,Active mobile broadband subscription rate,mbsr,ITU,ITU database,I911MW,2
 y,y,,,,,Wired Internet subscription rate,wisr,ITU,ITU database,I993,2007-2011,projects->IM->final data->ITUdata->,,number,,1,Access,adoption,I993.csv,,,ITUParser,,,,
 ,,,,,,Wired broadband monthly subscription charge (in local currency),wbbsc,ITU,ITU database,I4213BS,2007-2011,projects->IM->final data->ITUdata->,,number,,,,,,,,,,,,
 y,y,n,,,y,Wired broadband monthly subscription charge (in USD/GDP),wbbscUSDGDP,ITU,ITU database,I4213BS$,2007-2011,projects->IM->final data->ITUdata->,,number,,-1,Access,price,I4213BS$.csv,,,ITUParser,,,,
-y,,,,,,Wired broadband monthly subscription charge (in USD),wbbscUSD,ITU,ITU database,I4213BS$,2007-2011,projects->IM->final data->ITUdata->,,number,,-1,Access,,I4213BS$.csv,,,ITUParser,$,,2,
+y,,,,,,Wired broadband monthly subscription charge (in USD),wbbscUSD,ITU,ITU database,I4213BS$,2007-2011,projects->IM->final data->ITUdata->,,number,,-1,Access,price,I4213BS$.csv,,,ITUParser,$,,2,
 ,,,,,,Wired broadband speed (Mbit/s),wbsp,ITU,ITU database,I4213BS_S,2007-2011,projects->IM->final data->ITUdata->,,number,,,,,,,,,,,,
 ,,,,,,Wired broadband subscriptions,wbs,ITU,ITU database,I4213TFB,2007-2011,projects->IM->final data->ITUdata->,,number,,,,,,,,,,,,
 ,,,,,,Wired broadband subscription rate,wbsr,ITU,ITU database,I993,2007-2011,projects->IM->final data->ITUdata->,,number,,,,,,,,,,,,
