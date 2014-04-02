@@ -3,6 +3,8 @@ class ApplicationController < ActionController::Base
   before_filter :load_groups
 
   def load_groups
-    @groups = Group.all
+    access = Category.find_by_slug 'access'
+    @groups = DatumSource.where( { category_id: access.id } ).map { |ds| ds.group }.uniq
+    
   end
 end

@@ -1,7 +1,9 @@
 require 'spec_helper'
 
 describe 'countries requests', :js => true do
-  let ( :group_count ) { Group.count }
+  let ( :access ) { Category.find_by_slug 'access' }
+  let ( :groups ) {  DatumSource.where( { category_id: access.id } ).map { |ds| ds.group }.uniq }
+  let ( :group_count ) { groups.count }
   subject { page }
 
   shared_examples_for( 'weight_slider' ) {

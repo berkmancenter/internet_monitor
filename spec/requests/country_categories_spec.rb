@@ -9,6 +9,16 @@ describe 'country_categories requests', :js => true do
 
     context ( 'control' ) {
       before {
+        visit category_country_path( country, :category_slug => 'access' )
+      }
+
+      it {
+        should have_title "#{country.name} Access | Internet Monitor"
+      }
+    }
+
+    context ( 'control' ) {
+      before {
         visit category_country_path( country, :category_slug => 'control' )
       }
 

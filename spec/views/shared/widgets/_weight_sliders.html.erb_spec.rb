@@ -4,7 +4,8 @@ describe ( 'shared/widgets/_weight_sliders' ) {
   subject { rendered }
 
   context ( 'normal indicator' ) {
-    let ( :groups ) { Group.all }
+    let ( :access ) { Category.find_by_slug 'access' }
+    let ( :groups ) {  DatumSource.where( { category_id: access.id } ).map { |ds| ds.group }.uniq }
     let ( :adoption ) { groups.first }
 
     before {
@@ -34,6 +35,11 @@ describe ( 'shared/widgets/_weight_sliders' ) {
 
     it {
       should have_css 'input[data-default-weight]'
+    }
+
+    it {
+      # sliders for only the four access groups
+      should have_css "input[type='range']", count: 4
     }
 
     it {
