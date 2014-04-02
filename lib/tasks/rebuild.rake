@@ -39,6 +39,9 @@ namespace :imon do
     Group.find_or_create_by_admin_name_and_public_name 'price', 'Price'
     Group.find_or_create_by_admin_name_and_public_name 'human', 'Literacy and Gender Equality'
 
+    Group.find_or_create_by_admin_name_and_public_name 'control', 'Internet Control'
+    Group.find_or_create_by_admin_name_and_public_name 'filtering', 'Internet Filtering'
+
     # Create countries and connect to languages
     CSV.open(Rails.root.join('db', 'countryInfo.txt'), {:headers => true, :col_sep => "\t"}).each do |line|
         country = Country.find_or_initialize_by_iso_code(:iso_code => line['ISO'], :name => line['Country'], :iso3_code => line['ISO3'])
