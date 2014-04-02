@@ -63,4 +63,22 @@ describe ( 'pages requests' ) {
       should have_css 'section#side_body'
     }
   }
+
+  context ( 'from user weight' ) {
+    let ( :country ) { Country.find_by_iso3_code( 'CHN' ) }
+
+    let ( :category ) { Category.find_by_name( 'Access' ) }
+
+    before {
+      visit "#{category_country_path(country, :category_slug => 'access')}#adoption=1.5"
+    }
+
+    describe ( 'move to page' ) {
+      before { visit refinery::marketable_page_path('about') }
+
+      it {
+        current_url.should_not match 'adoption'
+      }
+    }
+  }
 }

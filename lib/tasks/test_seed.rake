@@ -6,11 +6,15 @@ namespace :db do
       # categories
       categories = ['Access', 'Control', 'Activity'].map{|n| Category.find_or_create_by_name(n)}
        
-      # groups
+      # access groups
       grp_adoption = Group.create! admin_name: 'adoption', public_name: 'Adoption'
       grp_speed = Group.create! admin_name: 'speed', public_name: 'Speed and Quality'
       grp_price = Group.create! admin_name: 'price', public_name: 'Price'
       grp_human = Group.create! admin_name: 'human', public_name: 'Literacy and Gender Equality'
+
+      # control groups
+      grp_control = Group.create! admin_name: 'control', public_name: 'Internet Control'
+      grp_filtering = Group.create! admin_name: 'filtering', public_name: 'Internet Filtering'
 
       # language
       persian = FactoryGirl.create( :persian );
@@ -136,8 +140,14 @@ namespace :db do
       d_mob_scr_usa.save!
 
       # control datum sources
+      ds_ippoc = FactoryGirl.create :ds_ippoc
+      ds_ippoc.category = categories[ 1 ]
+      ds_ippoc.group = grp_control
+      ds_ippoc.save!
+
       ds_consistency = FactoryGirl.create :ds_consistency
       ds_consistency.category = categories[ 1 ]
+      ds_consistency.group = grp_filtering
       ds_consistency.save!
 
       ds_herdict_quickstats = FactoryGirl.create :ds_herdict_quickstats
@@ -149,14 +159,24 @@ namespace :db do
       ds_herdict.save!
 
       # control datum
-      d_consistency_iran = FactoryGirl.create( :d_consistency_iran );
-      d_consistency_iran.source = ds_consistency;
-      d_consistency_iran.country = iran;
+      d_ippoc_iran = FactoryGirl.create :d_ippoc_iran
+      d_ippoc_iran.source = ds_ippoc
+      d_ippoc_iran.country = iran
+      d_ippoc_iran.save!
+
+      d_consistency_iran = FactoryGirl.create :d_consistency_iran
+      d_consistency_iran.source = ds_consistency
+      d_consistency_iran.country = iran
       d_consistency_iran.save!
 
-      d_consistency_china = FactoryGirl.create( :d_consistency_china );
-      d_consistency_china.source = ds_consistency;
-      d_consistency_china.country = china;
+      d_ippoc_china = FactoryGirl.create :d_ippoc_china
+      d_ippoc_china.source = ds_ippoc
+      d_ippoc_china.country = china
+      d_ippoc_china.save!
+
+      d_consistency_china = FactoryGirl.create :d_consistency_china
+      d_consistency_china.source = ds_consistency
+      d_consistency_china.country = china
       d_consistency_china.save!
 
       d_herdict_quickstats_iran = FactoryGirl.create :d_herdict_quickstats_iran

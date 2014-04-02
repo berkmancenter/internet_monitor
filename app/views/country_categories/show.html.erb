@@ -13,8 +13,14 @@
         <div class="update block <%= @category.slug %>"><%= raw part_content( @country.iso3_code.downcase, @category.slug ) %></div>
       <% end %>
 
-      <%= render partial: 'data/indicators', object: @category.data.indicators.in_category_page.most_recent.for( @country ) %>
-      
+      <section class="indicators block">
+      <% grouped = @category.data.indicators.in_category_page.most_recent.for( @country ).group_by { |i| i.source.group } %>
+
+      <% grouped.each { |g| %>
+        <%= render partial: 'data/indicators', object: g[ 1 ], locals: { group: g[ 0 ] } %>
+      <% } %>
+      </section>
+
       <%# country-based non-indicators for this category %>
       <% @category.data.non_indicators.most_recent.for( @country ).each do |datum| %>
         <%= render partial: "data/#{datum.type.underscore}", locals: { datum: datum } %>
