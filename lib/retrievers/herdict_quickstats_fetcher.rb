@@ -5,7 +5,7 @@ class HerdictQuickstatsFetcher
 
   def response( country_code, start_date, end_date )
     r = HTTParty.get("http://www.herdict.org/explore/module/quickstats?fc=#{country_code}&fsd=#{URI.encode(start_date)}&fed=#{URI.encode( end_date )}")
-    puts "Herdict Quick Stats #{country_code}: #{r.code}"
+    #puts "Herdict Quick Stats #{country_code}: #{r.code}"
     r.body
   end
 

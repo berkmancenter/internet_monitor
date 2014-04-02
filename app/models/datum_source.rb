@@ -8,13 +8,24 @@ class DatumSource < ActiveRecord::Base
     has_one :ingester
     delegate :ingest_data!, :to => :ingester
 
+    def self.recalc_ds!( id )
+      ds = find id
+      puts "Recalculating #{ ds.admin_name }"
+
+      ds.recalc_min_max
+      ds.save!
+      ds.recalc_all_values
+    end
+
     def self.recalc_min_max_and_values!
-      all.each { |ds|
-        if ds.datum_type == 'Indicator'
-          ds.recalc_min_max
-          ds.save!
-          ds.recalc_all_values
-        end
+      ds_ids = select :id
+
+      ds_ids.each { |ds|
+        t = Thread.new { recalc_ds! ds.id }
+        t.join
+
+        GC.start
+        #puts "heap: #{GC.stat[ :heap_live_num ]}"
       }
     end
 

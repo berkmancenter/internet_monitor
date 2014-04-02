@@ -33,6 +33,11 @@ namespace :imon do
 
     categories = ['Access', 'Control', 'Activity'].map{|n| Category.find_or_create_by_name(n)}
        
+    # groups
+    Group.find_or_create_by_admin_name_and_public_name 'adoption', 'Adoption'
+    Group.find_or_create_by_admin_name_and_public_name 'speed', 'Speed and Quality'
+    Group.find_or_create_by_admin_name_and_public_name 'price', 'Price'
+    Group.find_or_create_by_admin_name_and_public_name 'human', 'Literacy and Gender Equality'
 
     # Create countries and connect to languages
     CSV.open(Rails.root.join('db', 'countryInfo.txt'), {:headers => true, :col_sep => "\t"}).each do |line|
@@ -52,10 +57,13 @@ namespace :imon do
         Retriever.retrieve!(i + 1)
     end
 
+    puts 'Country.count_indicators'
     Country.count_indicators!
 
+    puts 'DatumSource.recalc_min_max_and_values!'
     DatumSource.recalc_min_max_and_values!
 
+    puts 'Country.calculate_scores_and_rank!'
     Country.calculate_scores_and_rank!
   end
 end

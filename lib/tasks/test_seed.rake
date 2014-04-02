@@ -206,12 +206,15 @@ namespace :db do
       d_population_china.save!
 
       # count all valid indicators
+      puts 'Country.count_indicators'
       Country.count_indicators!
 
       # recalc indicator min_max & values
+      puts 'DatumSource.recalc_min_max_and_values!'
       DatumSource.recalc_min_max_and_values!
 
       # calculate all scores
+      puts 'Country.calculate_scores_and_rank!'
       Country.calculate_scores_and_rank!
 
       # refinery

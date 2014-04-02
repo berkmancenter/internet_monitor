@@ -12,6 +12,7 @@ class Retriever
 
     def self.retrieve!(row_number)
         line = CSV.read(Rails.root.join('db', 'sources.csv'), :headers => true)[row_number.to_i - 1]
+        puts "Retrieving #{line['Public name']}"
         ds = DatumSource.new(
             :admin_name => line['Short name'],
             :public_name => line['Public name'],
@@ -44,5 +45,8 @@ class Retriever
             end
             ds.ingest_data!(options)
         end
+
+        GC.start
+        puts "heap: #{GC.stat[ :heap_live_num ]}"
     end
 end

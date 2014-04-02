@@ -11,10 +11,10 @@ require 'csv'
 categories = ['Access', 'Control', 'Activity'].map{|n| Category.find_or_create_by_name(n)}
 
 # groups
-Group.create! admin_name: 'adoption', public_name: 'Adoption'
-Group.create! admin_name: 'speed', public_name: 'Speed and Quality'
-Group.create! admin_name: 'price', public_name: 'Price'
-Group.create! admin_name: 'human', public_name: 'Literacy and Gender Equality'
+Group.find_or_create_by_admin_name_and_public_name 'adoption', 'Adoption'
+Group.find_or_create_by_admin_name_and_public_name 'speed', 'Speed and Quality'
+Group.find_or_create_by_admin_name_and_public_name 'price', 'Price'
+Group.find_or_create_by_admin_name_and_public_name 'human', 'Literacy and Gender Equality'
 
 # Create Lanuages
 CSV.open(Rails.root.join('db','iso-639-3_20130123.tab'), {:col_sep => "\t", :headers => true}).each do |line|
@@ -39,10 +39,13 @@ CSV.open(Rails.root.join('db', 'sources.csv'), :headers => true).each_with_index
     Retriever.retrieve!(i + 1)
 end
 
+puts 'Country.count_indicators'
 Country.count_indicators!
 
+puts 'DatumSource.recalc_min_max_and_values!'
 DatumSource.recalc_min_max_and_values!
 
+puts 'Country.calculate_scores_and_rank!'
 Country.calculate_scores_and_rank!
 
 # Added by Refinery CMS Pages extension
