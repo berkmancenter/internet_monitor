@@ -49,5 +49,9 @@ describe ( 'shared/widgets/_weight_sliders' ) {
     it {
       should have_css "input[data-background-min][data-background-max]"
     }
+
+    it { 
+      should have_css 'button[type="reset"]'
+    }
   }
 }

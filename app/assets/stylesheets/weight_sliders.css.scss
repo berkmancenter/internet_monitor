@@ -114,6 +114,16 @@
       width: 3em;
     }
   }
+
+  button {
+    background-color: $gold;
+    border: solid 2px $white;
+    border-radius: .4em;
+    color: white;
+    float: right;
+    padding: .4em;
+    text-transform: uppercase;
+  }
 }
 
 ul.weight-sliders-list {

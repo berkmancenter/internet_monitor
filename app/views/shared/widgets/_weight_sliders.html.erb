@@ -1,14 +1,18 @@
-<div class="importance-label">
-  <span class="less">less</span>
-  <span class="importance">(importance)</span>
-  <span class="more">more</span>
-</div>
+<form>
+  <div class="importance-label">
+    <span class="less">less</span>
+    <span class="importance">(importance)</span>
+    <span class="more">more</span>
+  </div>
 
-<ul class="weight-sliders-list">
-<% groups.each do |g| %>
-  <li>
-    <label for="range-<%= g.admin_name %>"><%= g.public_name %></label>
-    <input type="range" id="range-<%= g.admin_name %>" name="<%= g.admin_name %>" data-background-min="<%= background_color %>" data-background-max="#fff" min="0" max="2" step="0.1" data-source-ids="<%= g.datum_sources.map { |ds| ds.id } %>" data-default-weight="<%= g.default_weight %>" class="weight-slider" />
-  </li>
-<% end %>
-</ul>
+  <ul class="weight-sliders-list">
+  <% groups.each do |g| %>
+    <li>
+      <label for="range-<%= g.admin_name %>"><%= g.public_name %></label>
+      <input type="range" id="range-<%= g.admin_name %>" name="<%= g.admin_name %>" data-background-min="<%= background_color %>" data-background-max="#fff" min="0" max="2" step="0.1" data-source-ids="<%= g.datum_sources.map { |ds| ds.id } %>" data-default-weight="<%= g.default_weight %>" class="weight-slider" />
+    </li>
+  <% end %>
+  </ul>
+
+  <button type="reset"><%= t 'shared.widgets.weight_sliders.reset' %></button>
+</form>
