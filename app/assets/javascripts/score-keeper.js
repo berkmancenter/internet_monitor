@@ -149,6 +149,16 @@
       }
     },
 
+    reset: function( ) {
+      if ( window.sessionStorage && window.JSON ) {
+        window.sessionStorage.removeItem( 'bbqState' );
+      }
+
+      if ( _options.hasScorePill ) {
+        $.bbq.removeState( );
+      }
+    },
+
     calculateScore: function( country ) {
       var indicators = country.indicators;
 

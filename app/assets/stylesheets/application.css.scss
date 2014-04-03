@@ -163,7 +163,7 @@ header {
       display: none;
   }
 
-  #weight-sliders {
+  #configure-panel {
     background: $light-blue;
     border-radius: 0px 0px 8px 8px;
     box-shadow: 3px 3px 10px #888;
@@ -175,7 +175,37 @@ header {
     padding: 1em 2em;
     position: absolute;
     right: $data-nav-right + 1;
+    width: 36em;
     z-index: 2;
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  h3, h4 {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  h4 {
+    text-align: right;
+  }
+
+  p {
+    margin: 0;
+    padding: 0;
+  }
+
+  a, a:visited {
+    color: $violet;
+    font-weight: bold;
+    text-decoration: none;
+
+    &:hover {
+      color: $orange;
+      text-decoration: underline;
+    }
   }
 }
 

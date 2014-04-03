@@ -13,6 +13,10 @@ describe ( 'shared/widgets/_weight_sliders' ) {
     }
 
     it {
+      should have_css 'form#weight-sliders'
+    }
+
+    it {
       should have_css 'ul.weight-sliders-list'
     }
 

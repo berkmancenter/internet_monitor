@@ -62,8 +62,10 @@
   }  
 }
 
-/* placement & color of this panel is in application.css.scss */
-#weight-sliders {
+form#weight-sliders {
+  display: inline-block;
+  float: right;
+
   h3 {
     font-size: 1.2em;
   }
@@ -141,7 +143,7 @@ ul.weight-sliders-list {
     display: inline-block;
     margin-right: 1em;
     text-align: right;
-    width: 320px;
+    width: 24em;
   }
 
   .weight-slider {

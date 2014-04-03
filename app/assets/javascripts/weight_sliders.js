@@ -56,7 +56,7 @@ var weightSliders = {
         */
 
         $('.toggle-weight-sliders').click( function() {
-          $('#weight-sliders').toggleClass('hidden');
+          $('#configure-panel').toggleClass('hidden');
           return false;
         } );
 
@@ -78,6 +78,12 @@ var weightSliders = {
           weightSlider.val( weight || Math.abs( weightSlider.data( 'defaultWeight' ) ) );
           setGradient( this );
         });
+
+        $( '#weight-sliders button' ).click( function( ) {
+          setTimeout( function() {
+            $.scoreKeeper.reset();
+          }, 30 );
+        } );
     },
     updateScores : function() {
         weightSliders.indicatorWeights[$(this).attr('id')] = $(this).val();
@@ -202,10 +208,10 @@ $(function() {
     // click from outside slider panel
     // make it to document
     if ( ( e.type === 'keyup' && e.keyCode === 27 ) ||
-      ( e.type === 'click' && $( e.target ).closest( '#weight-sliders' ).length === 0 ) ) {
-      var weightSliders = $( '#weight-sliders' );
-      if ( !weightSliders.hasClass( 'hidden' ) ) {
-        weightSliders.addClass( 'hidden' );
+        (e.type === 'click' && $(e.target).closest('#configure-panel').length === 0)) {
+      var configurePanel = $('#configure-panel');
+      if ( !configurePanel.hasClass( 'hidden' ) ) {
+        configurePanel.addClass( 'hidden' );
       }
     }
   }

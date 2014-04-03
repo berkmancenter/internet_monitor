@@ -9,7 +9,7 @@ describe 'countries requests', :js => true do
   shared_examples_for( 'weight_slider' ) {
     it ( 'should have weight_slider link' ) {
       should have_selector( 'a.toggle-weight-sliders' );
-      should have_css '#weight-sliders.hidden', visible: false
+      should have_css '#configure-panel.hidden', visible: false
     }
 
     describe ( 'click toggle-weight-sliders' ) {
@@ -17,8 +17,12 @@ describe 'countries requests', :js => true do
         page.execute_script( %q[$('.toggle-weight-sliders').click( )] );
       }
 
-      it ( 'should show weight-sliders' ) {
-        find( '#weight-sliders' ).visible?.should be_true
+      it ( 'should show configure panel' ) {
+        find( '#configure-panel' ).visible?.should be_true
+      }
+
+      it ( 'should have weight sliders' ) {
+        should have_css '#configure-panel #weight-sliders'
       }
 
       it {
@@ -39,7 +43,7 @@ describe 'countries requests', :js => true do
 
       it ( 'should hide weight-sliders' ) {
         page.execute_script( %q[$('.toggle-weight-sliders').click( )] );
-        should have_css '#weight-sliders', count: 0
+        should have_css '#configure-panel', count: 0
       }
     }
   }
@@ -138,6 +142,16 @@ describe 'countries requests', :js => true do
       it {
         slider_val = page.evaluate_script %q[$('[name="adoption"]').val( )]
         slider_val.should eq( '1.5' )
+      }
+
+      describe ( 'reset' ) {
+        before {
+          click_button 'Reset'
+        }
+
+        it {
+          should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '7.5'
+        }
       }
 
       describe ( 'move to another page' ) {
@@ -247,7 +261,7 @@ describe 'countries requests', :js => true do
         }
 
         it {
-          find( '#weight-sliders' ).visible?.should be_true;
+          find( '#configure-panel' ).visible?.should be_true;
         }
       }
 
@@ -257,7 +271,7 @@ describe 'countries requests', :js => true do
         }
 
         it {
-          find( '#weight-sliders' ).visible?.should be_true;
+          find( '#configure-panel' ).visible?.should be_true;
         }
       }
 
