@@ -1,6 +1,6 @@
 @import "colors";
 
-.refinery-blog-posts {
+.refinery-blog-posts, .refinery-blog-categories {
   .main-content {
     strong {
       display: block;
@@ -39,7 +39,7 @@
     }
   }
 
-  ul#blog_posts, #blog_archive_widget ul {
+  ul#blog_posts, #blog_archive_widget ul, ul#categories {
     font-size: .8em;
     list-style: none;
     margin: 0;
