@@ -96,24 +96,22 @@ form#weight-sliders {
       text-decoration: underline;
     }
   }
+
   .importance-label {
     font-size: .8em;
-    margin-right: -1.25em;
+    font-weight: bold;
     text-align: right;
 
     span {
       display: inline-block;
-      text-align: center;
-    }
-
-    .importance {
-      font-size: .8em;
-      width: 8em;
     }
 
     .less, .more {
-      font-weight: bold;
-      width: 3em;
+      width: 82px;
+    }
+
+    .less {
+      text-align: left;
     }
   }
 
@@ -122,6 +120,7 @@ form#weight-sliders {
     border: solid 2px $white;
     border-radius: .4em;
     color: white;
+    cursor: pointer;
     float: right;
     padding: .4em;
     text-transform: uppercase;
@@ -147,7 +146,7 @@ ul.weight-sliders-list {
   }
 
   .weight-slider {
-    @include range-track( none, 8px, 128px, 8px );
+    @include range-track( none, 8px, 160px, 8px );
     @include range-thumb( $gold, 2px solid #dedede, 8px, 16px, 16px );
 
     margin: 0;
