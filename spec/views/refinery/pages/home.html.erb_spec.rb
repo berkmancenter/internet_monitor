@@ -30,6 +30,9 @@ describe ( 'refinery/pages/home' ) {
 
     it {
       should have_css 'h2', text: 'We monitor and score...'
+
+    it ( 'should have tagline' ) {
+      should have_css 'p.tagline', text: 'Evaluating'
     }
 
     it {

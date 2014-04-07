@@ -39,6 +39,11 @@ body.home {
     }
   }
 
+  p.tagline {
+    font-size: 1.3em;
+    margin: 2em 2em 0 2em;
+  }
+
   h2 {
     color: lighten( $gray, 10% );
     font-size: 1.8em;
