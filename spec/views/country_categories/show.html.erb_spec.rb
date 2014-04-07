@@ -94,7 +94,11 @@ describe ( 'country_categories/show' ) {
     context ( 'access' ) {
       let ( :category ) { Category.find_by_slug( 'access' ) }
       let ( :update ) { strip_tags( Refinery::Page.by_slug( country.iso3_code.downcase ).first.content_for( :access ) ) }
+      let ( :ds_fixed_monthly ) { DatumSource.find_by_admin_name( 'ds_fixed_monthly' ) }
+      let ( :d_fixed_monthly_country ) { category.data.indicators.most_recent.for( country ).find_by_datum_source_id ds_fixed_monthly.id }
       let ( :ds_fixed_monthly_gdp ) { DatumSource.find_by_admin_name( 'ds_fixed_monthly_gdp' ) }
+      let ( :ds_lit_rate ) { DatumSource.find_by_admin_name( 'ds_lit_rate' ) }
+      let ( :d_lit_rate_country ) { category.data.indicators.most_recent.for( country ).find_by_datum_source_id ds_lit_rate.id }
 
       before {
         assign( :category, category )
@@ -124,12 +128,23 @@ describe ( 'country_categories/show' ) {
       }
 
       it {
-        # literacy rate is not shown on page (it's in sidebar)
         should have_css '.indicators dl', count: 4
       }
 
       it ( 'should not show bar for indicator not in_category_page' ) {
         should_not have_css 'dt', text: ds_fixed_monthly_gdp.public_name
+      }
+
+      it ( 'should show Literacy rate' ) {
+        should have_css 'dt', text: ds_lit_rate.public_name
+      }
+
+      it ( 'should show prefix for monthly price in title' ) {
+        should have_css "dd[title='#{ds_fixed_monthly.display_prefix}#{number_with_precision( d_fixed_monthly_country.original_value, { precision: 0, delimiter: ',' } ) }']"
+      }
+
+      it ( 'should show suffix for Literacy rate in title' ) {
+        should have_css "dd[title='#{number_with_precision( d_lit_rate_country.original_value, { precision: 0, delimiter: ',' } ) }#{ds_lit_rate.display_suffix}']"
       }
 
     }
