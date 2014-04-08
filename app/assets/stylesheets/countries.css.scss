@@ -216,8 +216,22 @@
       background-color: #DDD;
       display: inline-block;
       margin-left: 1%;
+      position: relative;
       vertical-align: top;
       width: 51%;
+    }
+
+    .original-value {
+      cursor: default;
+      display: inline-block;
+      font-size: .8em;
+      padding: .2em .5em;
+      position: absolute;
+      vertical-align: top;
+
+      &.over {
+        color: $white;
+      }
     }
 
     .indicator-bar-inner {

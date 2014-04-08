@@ -1,6 +1,11 @@
-  <dt><span><%= link_to indicator.name, refinery::marketable_page_path('sources'), title: "Source: #{indicator.source.source_name}" %></span></dt>
-  <dd title="<%= indicator.source.display_prefix %><%= number_with_precision( indicator.original_value, { precision: 0, delimiter: ',' } ) %><%= indicator.source.display_suffix %>">
+<% under = indicator.percent < 0.6 %>
+<dt>
+  <span><%= link_to indicator.name, refinery::marketable_page_path('sources'), title: "Source: #{indicator.source.source_name}" %></span>
+</dt>
+
+<dd>
   <span class="indicator-bar-outer">
     <span data-value="<%= indicator.percent %>" style="width: <%= indicator.percent * 100 %>%" class="indicator-bar-inner <%= "#{@category.slug}-1-bg" %>"></span>
+    <span class="original-value <%= 'over' unless under %>" style="<%= under ? "left: #{indicator.percent * 100.0}%" : "right: #{(1.0 - indicator.percent) * 100.0}%" %>;"><%= indicator.source.display_prefix %><%= number_with_precision( indicator.original_value, { precision: 0, delimiter: ',' } ) %><%= indicator.source.display_suffix %></span>
   </span>
-  </dd>
+</dd>
