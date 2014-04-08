@@ -46,11 +46,6 @@
     border-radius: 0;
   }
 
-  .imon-rank {
-    font-size: 1.2em;
-    font-weight: bold;
-  }
-
   .user-score, .user-rank {
     background: $bright-gold url('gear.png') no-repeat;
     border-radius: 0 4px 4px 0;
@@ -74,8 +69,6 @@
   .user-rank {
     border-radius: 0 4px 4px 0;
     display: none;
-    font-size: 1.2em;
-    font-weight: bold;
     
     &.updated {
       display: inline-block;
