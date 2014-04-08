@@ -1,11 +1,14 @@
 @import "colors";
 
 body.home {
+  white-space: nowrap;
+
   .carousel {
     background: darken( $violet, 10% );
     height: 400px;
     overflow: hidden;
     position: relative;
+    white-space: normal;
 
     a.carousel-item {
       display: inline-block;
@@ -42,6 +45,7 @@ body.home {
   p.tagline {
     font-size: 1.3em;
     margin: 2em 2em 0 2em;
+    white-space: normal;
   }
 
   h2 {
@@ -56,6 +60,7 @@ body.home {
     margin: 0 2em;
     padding-bottom: 5em;
     vertical-align: top;
+    white-space: normal;
     width: 15em * 3;
 
     ul {
@@ -100,6 +105,7 @@ body.home {
 
   .trending {
     margin-top: 2em;
+    white-space: normal;
 
     ul {
       margin: 0;
@@ -125,14 +131,14 @@ body.home {
   }
 
   section.twitter {
-    background: $dark-gray;
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
+    background: darken( $white, 5% );
+    border-radius: 1em;
     display: inline-block;
     font-size: .8em;
-    margin-top: 1em;
+    margin: 1em;
     padding: 1em 1em 2em 1em;
     vertical-align: bottom;
+    white-space: normal;
     width: 15em * 2;
 
     h1 {
@@ -148,7 +154,7 @@ body.home {
     }
 
     li {
-      color: darken( $white, 20% );
+      color: $black;
       font-size: .9em;
       line-height: 1.5em;
       margin: 1.5em 0;

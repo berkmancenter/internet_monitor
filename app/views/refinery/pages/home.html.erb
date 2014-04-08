@@ -36,15 +36,14 @@
     <% end %>
     </ul>
   </div>
-
 </div>
 
 <section class="twitter">
-  <h1>Recent Tweets</h1>
+  <h1>Latest Tweets from @thenetmonitor</h1>
   <ul class="tweets">
     <% imon_tweets.each do |tweet| %>
       <li><%= raw auto_link( tweet.text ) %></li>
     <% end %>
   </ul>
-  <div class="follow"><span>Follow</span> <a href="https://twitter.com/thenetmonitor">@thenetmonitor</a></div>
+  <div class="follow"><span>Follow</span> <a href="https://twitter.com/thenetmonitor">@thenetmonitor</a><br><span>on Twitter</div>
 </section>
