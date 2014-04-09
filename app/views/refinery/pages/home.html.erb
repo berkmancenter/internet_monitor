@@ -11,6 +11,16 @@
 <p class="tagline">Evaluating and analyzing the means, mechanisms, and extent of Internet content controls and online activity around the world.</p>
 
 <div class="what-we-do">
+  <div class="trending">
+    <h2>Featured Countries</h2>
+    <ul>
+    <% Nokogiri::HTML( part_content( 'trending', :body ) ).xpath( '//li' ).each_with_index do |li, i| %>
+      <% country = Country.find_by_iso3_code( li.text.upcase ) %>
+      <li><%= link_to( country.name, Imon::Application.routes.url_helpers.category_country_path( country, category_slug: 'access' ), :data => { :'country-id' => country.id } ) unless country.nil? %></li>
+    <% end %>
+    </ul>
+  </div>
+
   <h2>We monitor and report on...</h2>
 
   <ul>
@@ -26,16 +36,6 @@
     <a href="/activity"><h3 class="activity-4-bg">activity</h3><span class="activity-1-bg"><%= raw part_content( 'home', 'Activity' ) %></span></a>
     </li>
   </ul>
-
-  <div class="trending">
-    <h2>Featured Countries</h2>
-    <ul>
-    <% Nokogiri::HTML( part_content( 'trending', :body ) ).xpath( '//li' ).each_with_index do |li, i| %>
-      <% country = Country.find_by_iso3_code( li.text.upcase ) %>
-      <li><%= link_to( country.name, Imon::Application.routes.url_helpers.category_country_path( country, category_slug: 'access' ), :data => { :'country-id' => country.id } ) unless country.nil? %></li>
-    <% end %>
-    </ul>
-  </div>
 </div>
 
 <section class="twitter">
