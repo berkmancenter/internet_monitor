@@ -634,6 +634,22 @@ FactoryGirl.define do
     position 1
   end
 
+  factory :access_page, class: Refinery::Page do |p|
+    p.title 'Access'
+    p.slug 'access'
+    p.show_in_menu true
+    p.link_url ''
+    p.deletable true
+    p.draft false
+  end
+
+  factory :access_page_body, class: Refinery::PagePart do |pp|
+    #pp.page access_page
+    title 'Body'
+    body 'Access for all!'
+    position 0
+  end
+
   factory :iran_page, class: Refinery::Page do |p|
     p.title 'IRN'
     p.slug 'irn'

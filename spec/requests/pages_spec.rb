@@ -64,6 +64,18 @@ describe ( 'pages requests' ) {
     }
   }
 
+  describe ( 'get /access' ) {
+    before { visit refinery::marketable_page_path('access') }
+
+    it ( 'should have page-specific class' ) {
+      should have_css 'body.show-access'
+    }
+
+    it {
+      should have_css 'h1', text: 'Access'
+    }
+  }
+
   context ( 'from user weight' ) {
     let ( :country ) { Country.find_by_iso3_code( 'CHN' ) }
 

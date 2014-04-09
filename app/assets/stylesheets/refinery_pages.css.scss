@@ -59,4 +59,16 @@
   }
 }
 
+.refinery-pages.show-access .main-content h1#body_content_title {
+  background: $orange;
+}
+
+.refinery-pages.show-control .main-content h1#body_content_title {
+  background: $cyan;
+}
+
+.refinery-pages.show-activity .main-content h1#body_content_title {
+  background: $gold;
+}
+
 

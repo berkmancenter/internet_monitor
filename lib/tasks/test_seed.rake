@@ -293,6 +293,13 @@ namespace :db do
       sources_page_translation.custom_slug = 'sources'
       sources_page_translation.save
 
+      # Access page
+      access_page = FactoryGirl.create :access_page
+
+      access_page_body = FactoryGirl.create :access_page_body
+      access_page_body.page = access_page
+      access_page_body.save
+
       # IRN page
       iran_page = FactoryGirl.create :iran_page
       iran_page_body = FactoryGirl.create :iran_page_body

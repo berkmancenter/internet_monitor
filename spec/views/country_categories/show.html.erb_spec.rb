@@ -109,6 +109,10 @@ describe ( 'country_categories/show' ) {
       it_should_behave_like 'country_category layout'
 
       it {
+        should have_css '.view h1.access-1-bg'
+      }
+
+      it {
         should have_css 'h1 .score-pill'
       }
 
@@ -139,14 +143,9 @@ describe ( 'country_categories/show' ) {
         should have_css 'dt', text: ds_lit_rate.public_name
       }
 
-      it ( 'should show prefix for monthly price in title' ) {
-        should have_css "dd[title='#{ds_fixed_monthly.display_prefix}#{number_with_precision( d_fixed_monthly_country.original_value, { precision: 0, delimiter: ',' } ) }']"
+      it ( 'should no longer have original value in title' ) {
+        should_not have_css "dd[title]"
       }
-
-      it ( 'should show suffix for Literacy rate in title' ) {
-        should have_css "dd[title='#{number_with_precision( d_lit_rate_country.original_value, { precision: 0, delimiter: ',' } ) }#{ds_lit_rate.display_suffix}']"
-      }
-
     }
 
     context ( 'control' ) {

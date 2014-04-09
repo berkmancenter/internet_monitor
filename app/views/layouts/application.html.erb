@@ -14,7 +14,7 @@
 
   <%= csrf_meta_tags %>
 </head>
-<body class="<%= "#{ params[ :controller ].gsub( '/', '-' ) unless params[ :controller ].nil? } #{ params[ :action ] }" %>">
+<body class="<%= "#{ params[ :controller ].gsub( '/', '-' ) unless params[ :controller ].nil? } #{ params[ :action ] } #{ ('show-' + params[ :path ]) if params[ :controller ] == 'refinery/pages' && params[ :action ] == 'show'}" %>">
 
   <header>
     <nav>
