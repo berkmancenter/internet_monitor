@@ -1,4 +1,6 @@
 module ApplicationHelper
+  include Twitter::Autolink
+
   # return supplied title, base refinery controller name (e.g., blog from /refinery/blog/posts)
   def get_title( title, params )
     controller = params[:controller]

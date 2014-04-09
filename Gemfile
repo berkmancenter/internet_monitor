@@ -51,6 +51,9 @@ gem 'refinerycms-wordpress-import', :git => 'git://github.com/ryanttb/refinerycm
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.2'
 
+# tweet parsing
+gem 'twitter-text'
+
 # To use Jbuilder templates for JSON
 # gem 'jbuilder'
 
