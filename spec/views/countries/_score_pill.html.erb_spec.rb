@@ -31,7 +31,7 @@ describe ( 'countries/_score_pill' ) {
       }
 
       it {
-        should have_css 'span.imon-score', text: country.score.round(2), exact: true
+        should have_css 'span.imon-score', text: number_with_precision( country.score, { precision: 2 } ), exact: true
       }
 
       it {
