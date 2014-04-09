@@ -39,7 +39,7 @@
     <div id="configure-panel" class="hidden">
         <h3>Configure</h3>
 
-        <p>Internet Monitor's Access Index is calculated based on data within four groups. By default, we weight each of these groups of data equally. You can use the sliders below to adjust the weights of these groups and create your own index. <%= link_to 'Learn more >>', refinery::marketable_page_path( 'faq' ) %></p>
+        <p>Internet Monitor's Access Index is calculated based on data within four groups. By default, we weight each of these groups of data equally. You can use the sliders below to adjust the weights of these groups and create your own index. <%= link_to 'Learn more »', refinery::marketable_page_path( 'faq' ), class: 'learn-more' %></p>
 
         <%= render :partial => 'shared/widgets/weight_sliders', locals: { groups: @groups, background_color: '#f15c23' } %>
     </div>

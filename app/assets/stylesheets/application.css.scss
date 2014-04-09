@@ -177,6 +177,21 @@ header {
     right: $data-nav-right + 1;
     width: 36em;
     z-index: 2;
+
+    a, a:visited {
+      color: $violet;
+      font-weight: bold;
+      text-decoration: none;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+
+    .learn-more {
+      position: relative;
+      margin-left: 1em;
+    }
   }
 }
 
