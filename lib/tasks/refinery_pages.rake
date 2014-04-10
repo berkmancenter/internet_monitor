@@ -1,6 +1,10 @@
 # Export/import refinery pages
 
 namespace :refinery_pages do
+  desc 'Reset refinerycms pages, leaves only Home, About, & Blog'
+  task :reset => [:environment] do |task|
+    Refinery::Page.delete_all 'not id in (1,2,3,4)'
+  end
 
   desc 'Export refinerycms pages as JSON'
   task :export, [ :path ] => [:environment] do |task, args|
