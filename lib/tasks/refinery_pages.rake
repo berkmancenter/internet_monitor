@@ -58,18 +58,27 @@ namespace :refinery_pages do
 
     puts "importing #{pages.count} page(s)"
 
+    id_map = {}
+
     pages.each { |page|
       puts "importing #{page[ 'title' ]} (slug: #{page[ 'slug' ]}) & #{page[ 'parts' ].count} part(s)"
 
-      page_rec = Refinery::Page.find_or_create_by_title page[ 'title' ]
+      page_rec = Refinery::Page.find_by_title page[ 'title' ]
 
-      if page_rec.new_record?
+      if page_rec.nil?
+        page_rec = Refinery::Page.create title: page[ 'title' ]
+
+        if page[ 'parent_id' ].present?
+          page_rec.parent_id = id_map[ page[ 'parent_id' ] ]
+        end
+
+        page_rec.show_in_menu = page[ 'show_in_menu' ]
         page_rec.deletable = page[ 'deletable' ]
         page_rec.draft = page[ 'draft' ]
         page_rec.save
+
+        id_map[ page[ 'id' ] ] = page_rec.id
         puts "  #{page_rec.slug} is a new page (id: #{page_rec.id}, prev_id: #{page[ 'id' ]})"
-      else
-        puts "  #{page_rec.slug} already exists (id: #{page_rec.id})"
       end
 
       page[ 'parts' ].each_with_index { |part, i|
