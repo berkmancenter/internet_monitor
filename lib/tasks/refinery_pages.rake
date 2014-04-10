@@ -64,6 +64,8 @@ namespace :refinery_pages do
       page_rec = Refinery::Page.find_or_create_by_title page[ 'title' ]
 
       if page_rec.new_record?
+        page_rec.deletable = page[ 'deletable' ]
+        page_rec.draft = page[ 'draft' ]
         page_rec.save
         puts "  #{page_rec.slug} is a new page (id: #{page_rec.id}, prev_id: #{page[ 'id' ]})"
       else
