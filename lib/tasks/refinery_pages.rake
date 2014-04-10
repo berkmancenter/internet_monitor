@@ -72,6 +72,7 @@ namespace :refinery_pages do
           page_rec.parent_id = id_map[ page[ 'parent_id' ] ]
         end
 
+        page_rec.slug = page[ 'slug' ]
         page_rec.show_in_menu = page[ 'show_in_menu' ]
         page_rec.deletable = page[ 'deletable' ]
         page_rec.draft = page[ 'draft' ]
