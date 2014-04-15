@@ -9,13 +9,17 @@
 
   <div class="sub-content country-6-bg">
     <div class="main-column">
+      <% showing_data = false %>
+
       <% if part_content( @country.iso3_code.downcase, @category.slug ).present? %>
+        <% showing_data = true %>
         <div class="update block <%= @category.slug %>"><%= raw part_content( @country.iso3_code.downcase, @category.slug ) %></div>
       <% end %>
 
       <% grouped = @category.data.indicators.in_category_page.most_recent.for( @country ).group_by { |i| i.source.group } %>
 
       <% if grouped.count > 0 %>
+        <% showing_data = true %>
         <section class="indicators block">
         <% grouped.each { |g| %>
           <%= render partial: 'data/indicators', object: g[ 1 ], locals: { group: g[ 0 ] } %>
@@ -25,15 +29,22 @@
 
       <%# country-based non-indicators for this category %>
       <% @category.data.non_indicators.most_recent.for( @country ).each do |datum| %>
+        <% showing_data = true %>
         <%= render partial: "data/#{datum.type.underscore}", locals: { datum: datum } %>
       <% end %>
 
       <%# language-based non-indicators for this category %>
       <% @country.languages.each do |language| %>
         <% @category.data.non_indicators.most_recent.for( language ).each do |datum| %>
+          <% showing_data = true %>
           <%= render partial: "data/#{datum.type.underscore}", locals: { datum: datum } %>
         <% end %>
       <% end %>
+
+      <% if !showing_data %>
+        <div class="block no-data" %><%= t 'country_categories.show.no_data', category: @category.slug, country: @country.name %></div>
+      <% end %>
+
     </div>
 
     <div class="sidebar-column">

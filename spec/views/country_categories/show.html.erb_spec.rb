@@ -83,7 +83,7 @@ describe ( 'country_categories/show' ) {
     }
   }
 
-  context ( 'normal country' ) {
+  context ( 'full country' ) {
     let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
 
     before {
@@ -231,6 +231,32 @@ describe ( 'country_categories/show' ) {
       it ( 'should have a note under the blogosphere' ) {
         # description comes from cms page side_body
         should have_css 'section.morningside-fetcher .side_body', text: 'For an earlier report on the Arabic blogosphere using similar research methods, see "Mapping the Arabic Blogosphere: Politics, Culture and Dissent" (2009).'
+      }
+
+      it {
+        should_not have_css '.block.no-data'
+      }
+    }
+  }
+
+  context ( 'country without activity' ) {
+    let ( :country ) { Country.find_by_iso3_code( 'CHN' ) }
+
+    before {
+      assign( :map_countries, Country.with_enough_data.where( { id: country.id } ).select( 'iso3_code,score' ) )
+      assign( :country, country )
+    }
+
+    context ( 'activity' ) {
+      let ( :category ) { Category.find_by_slug( 'activity' ) }
+
+      before {
+        assign( :category, category )
+        render
+      }
+
+      it {
+        should have_css '.block.no-data', text: 'We do not currently have activity data to display for China.'
       }
     }
   }
