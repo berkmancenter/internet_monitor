@@ -59,5 +59,8 @@ module Imon
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
+
+    # Required (in production) for Refinery to compile assets on `rake assets:precompile`
+    config.assets.initialize_on_precompile = true
   end
 end
