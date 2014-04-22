@@ -1,9 +1,18 @@
 require 'csv'
 
 namespace :imon do
-  desc 'Ingest data from individual source'
+  desc 'Ingest data from individual source, recalculate all'
   task :ingest, [:row_number] => [:environment] do |task, args|
     Retriever.retrieve!(args[:row_number])
+
+#    puts 'Country.count_indicators'
+#    Country.count_indicators!
+#
+#    puts 'DatumSource.recalc_min_max_and_values!'
+#    DatumSource.recalc_min_max_and_values!
+#
+#    puts 'Country.calculate_scores_and_rank!'
+#    Country.calculate_scores_and_rank!
   end
 
   desc 'Export most recent data for all countries'
