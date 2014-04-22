@@ -13,26 +13,33 @@ class Retriever
     def self.retrieve!(row_number)
         line = CSV.read(Rails.root.join('db', 'sources.csv'), :headers => true)[row_number.to_i - 1]
         puts "Retrieving #{line['Public name']}"
-        ds = DatumSource.new(
-            :admin_name => line['Short name'],
-            :public_name => line['Public name'],
-            :datum_type => TYPE_MAP[line['Data type']],
-            :is_api => !line['API available?'].nil?,
-            :source_name => line['Source (organization/study)'],
-            :source_link => line['URL/source'],
-            :retriever_class => line['Retriever Class'],
-            :affects_score => line['Affects Score?'] == 'y',
-            :in_category_page => line['Include in Category Page?'] != 'n', # default to true unless specifically 'n'
-            :in_sidebar => line['Include in Sidebar?'] == 'y',
-            :display_prefix => line['Prefix'],
-            :display_suffix => line['Suffix'],
-            :precision => line['Precision'] || 0,
-            :requires_page => line['Requires Page?'] == 'y',
-            :default_weight => line['Default Weight'].to_f
-        )
-        ds.category = Category.find_by_name(line['Category'])
-        ds.group = Group.find_by_admin_name(line['Group'])
-        ds.save!
+
+        ds = DatumSource.find_by_admin_name line['Short name']
+
+        if ds.nil?
+          puts "  creating DatumSource"
+          ds = DatumSource.new(
+              :admin_name => line['Short name'],
+              :public_name => line['Public name'],
+              :datum_type => TYPE_MAP[line['Data type']],
+              :is_api => !line['API available?'].nil?,
+              :source_name => line['Source (organization/study)'],
+              :source_link => line['URL/source'],
+              :retriever_class => line['Retriever Class'],
+              :affects_score => line['Affects Score?'] == 'y',
+              :in_category_page => line['Include in Category Page?'] != 'n', # default to true unless specifically 'n'
+              :in_sidebar => line['Include in Sidebar?'] == 'y',
+              :display_prefix => line['Prefix'],
+              :display_suffix => line['Suffix'],
+              :precision => line['Precision'] || 0,
+              :requires_page => line['Requires Page?'] == 'y',
+              :default_weight => line['Default Weight'].to_f
+          )
+          ds.category = Category.find_by_name(line['Category'])
+          ds.group = Group.find_by_admin_name(line['Group'])
+          ds.save!
+        end
+
         if line['Retriever Class']
             options = {}
             if line['Filename']
@@ -43,6 +50,7 @@ class Retriever
                     :divide_by_gdp => line['Divide by GDP/cap?'] == 'y'
                 }
             end
+            options[ :retriever_class ] = line['Retriever Class']
             ds.ingest_data!(options)
         end
 

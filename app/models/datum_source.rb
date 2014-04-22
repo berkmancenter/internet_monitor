@@ -29,8 +29,14 @@ class DatumSource < ActiveRecord::Base
       }
     end
 
-    def retriever_class
-        read_attribute(:retriever_class).constantize.new
+    def retriever_class( option_class = nil )
+      rc = read_attribute(:retriever_class)
+
+      if option_class.present?
+        rc = option_class
+      end
+
+      rc.constantize.new
     end
 
     def retreiver_class=(klass)
@@ -56,7 +62,7 @@ class DatumSource < ActiveRecord::Base
     end
 
     def ingest_data!(options = {})
-        self.data = retriever_class.data(options)
+        self.data = retriever_class( options[ :retriever_class ] ).data(options)
         save!
         unless data.empty?
             self.datum_type = data.first.type
