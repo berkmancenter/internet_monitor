@@ -50,6 +50,10 @@ class Retriever
                     :divide_by_gdp => line['Divide by GDP/cap?'] == 'y'
                 }
             end
+            if line['Multiplier']
+              puts "  multiply by #{line['Multiplier']}"
+              options[ :multiplier ] = line['Multiplier'].to_f
+            end
             options[ :retriever_class ] = line['Retriever Class']
             ds.ingest_data!(options)
         end

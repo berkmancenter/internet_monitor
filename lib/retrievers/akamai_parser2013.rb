@@ -31,8 +31,13 @@ class AkamaiParser2013
             #row.select{|h,v| h.match(/Q\d \d{4}/)}.each do |header, value|
             quarter, year = *sheetname.split(' ')
             start_date = Date.new(year.to_i, QUARTER_MAP[quarter][0], QUARTER_MAP[quarter][1])
-            value = row[ column ]
-            i = Indicator.new(:start_date => start_date, :original_value => value.to_f)
+
+            value = row[ column ].to_f
+            if options[ :multiplier ].present?
+              value *= options[ :multiplier ]
+            end
+
+            i = Indicator.new( :start_date => start_date, :original_value => value )
             i.country = country
             data << i
             #end
