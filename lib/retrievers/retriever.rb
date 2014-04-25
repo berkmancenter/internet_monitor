@@ -47,7 +47,8 @@ class Retriever
                     :filename => Rails.root.join('db', 'data_files', line['Filename']).to_s,
                     :sheetname => line['Sheet Name'],
                     :column => line['Column Name'],
-                    :divide_by_gdp => line['Divide by GDP/cap?'] == 'y'
+                    :divide_by_gdp => line['Divide by GDP/cap?'] == 'y',
+                    :append => line['Append'] == 'y'
                 }
             end
             if line['Multiplier']

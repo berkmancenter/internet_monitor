@@ -62,7 +62,11 @@ class DatumSource < ActiveRecord::Base
     end
 
     def ingest_data!(options = {})
+      if options[ :append ]
+        self.data << retriever_class( options[ :retriever_class ] ).data(options)
+      else
         self.data = retriever_class( options[ :retriever_class ] ).data(options)
+      end
         save!
         unless data.empty?
             self.datum_type = data.first.type
