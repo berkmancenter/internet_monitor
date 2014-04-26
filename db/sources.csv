@@ -17,7 +17,8 @@ y,y,,,,,,y,Broadband adoption rate,bbar,Akamai,provided to us by David Belson; h
 ,,,,,,,,Country,c,ISO,http://www.iso.org/iso/country_names_and_code_elements,n/a,n/a,projects->IM->final data->ISO.csv,,text,,,,,,,,,,,,Actually got this from here: http://download.geonames.org/export/dump/countryInfo.txt
 ,,,,,,,,ISO country code,cc,ISO,http://www.iso.org/iso/country_names_and_code_elements,n/a,n/a,projects->IM->final data->ISO.csv,,text,,,,,,,,,,,,
 ,,,,,,,,Active mobile broadband subscriptions (total),mbs,ITU,ITU database,I271MW,2007-2011,projects->IM->final data->ITUdata->,,number,,,,,,,,,,,,
-y,y,,,,,,,Active mobile broadband subscription rate,mbsr,ITU,ITU database,I911MW,2007-2011,projects->IM->final data->ITUdata->,,number,,1,Access,adoption,1911MW.csv,,,ITUParser,,,,
+y,y,,,,,,,Active mobile broadband subscription rate,mbsr,ITU,ITU database,I911MW,2007-2010,projects->IM->final data->ITUdata->,,number,,1,Access,adoption,1911MW.csv,,,ITUParser,,,,
+y,y,,,,,,y,Active mobile broadband subscription rate,mbsr,ITU,ITU database,I911MW,2011-2012,projects->IM->final data->ITUdata->,,number,,1,Access,adoption,ITU_2013.csv,,,ITUParser2013,,,,
 ,,,,,,,,Fibre-to-the-home/building Internet subscriptions,fis,ITU,ITU database,I4213FTTH/B,2007-2011,projects->IM->final data->ITUdata->,,number,,,,,,,,,,,,
 ,,,,,,,,Wired Internet subscriptions,wis,ITU,ITU database,I4213,2007-2011,projects->IM->final data->ITUdata->,,number,,,,,,,,,,,,
 y,y,,,,,,,Wired Internet subscription rate,wisr,ITU,ITU database,I993,2007-2011,projects->IM->final data->ITUdata->,,number,,1,Access,adoption,I993.csv,,,ITUParser,,,,
