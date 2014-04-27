@@ -2,7 +2,7 @@ class ITUParser2013
     require 'csv'
 
     def data(options = {})
-        admin_name = options[:admin_name]
+        sheetname = options[:sheetname]
         filename = options[:filename]
         data = []
         divide_by_gdp = options[:divide_by_gdp]
@@ -22,7 +22,7 @@ class ITUParser2013
                 country_gdp_per_cap = gdps.reverse.first[1]
             end
             # Get all quarterly cells
-            if row[0] == admin_name
+            if row[0] == sheetname
               row.select{|h,v| h.match(/\d{4}/) && !v.nil? && v != ''}.each do |header, value|
                   start_date = Date.new(header.to_i, 1, 1)
                   value = value.to_f / country_gdp_per_cap.to_f if divide_by_gdp
