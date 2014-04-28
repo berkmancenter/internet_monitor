@@ -107,6 +107,7 @@ y,,,,,,,,Filtering (consistency),ONIco,Open Net Initiative,http://opennet.net/re
 ,,,,,,,,"Facebook penetration rate, past 6 months",fbpr,SocialBakers,http://www.socialbakers.com/facebook-statistics/,n/a,past 6 months,FBusers_6mo_2013-02-15.csv,,number,,,,,,,,,,,,
 y,y,,,,,,,Gender Inequality Index,GII,United Nations,http://hdr.undp.org/en/statistics/gii/,n/a,"1995, 2000, 2005, 2008, 2011",projects->IM->final data->Gender_Inequality_Index.csv,,number,,-1,Access,human,UN_Gender_Inequality_Index.csv,,,GenderInequalityParser,,,2,
 y,,,,,,,,Human Development Index,HDI,United Nations,http://hdr.undp.org/en/statistics/hdi/,n/a,"1960, 1980, 2000, 2005, 2009, 2010, 2011",projects->IM->final data->HDI.csv,,number,,,,,HDI.csv,,,HDIParser,,,,
+y,,,,,,,y,Human Development Index,HDI,United Nations,http://hdr.undp.org/en/statistics/hdi/,n/a,2012,projects->IM->final data->HDI.csv,,number,,,,,HDI_2013.csv,,,HDIParser2013,,,,
 y,,,y,,,,,"Human Development Index (rank, of 187)",HDIr,United Nations,http://hdr.undp.org/en/statistics/hdi/,n/a,2011,projects->IM->final data->HDI.csv,,number,,,,,HDI.csv,,,HDIRankParser,,,,
 ,,,,,,,,Level of human development,lhd,United Nations,http://hdr.undp.org/en/statistics/hdi/,n/a,2011,projects->IM->final data->HDI.csv,,text,,,,,HDI.csv,,,HDIParser,,,,
 ,,,,,,,,Life expectancy at birth,leb,United Nations,http://hdrstats.undp.org/en/indicators/69206.html,n/a,"1980, 1990, 2000, 2005-2011",projects->IM->final data->UN->life_exp.xls,,number,,,,,,,,,,,,
