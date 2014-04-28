@@ -17,11 +17,11 @@ y,y,,,,,,y,Broadband adoption rate,bbar,Akamai,provided to us by David Belson; h
 ,,,,,,,,Country,c,ISO,http://www.iso.org/iso/country_names_and_code_elements,n/a,n/a,projects->IM->final data->ISO.csv,,text,,,,,,,,,,,,Actually got this from here: http://download.geonames.org/export/dump/countryInfo.txt
 ,,,,,,,,ISO country code,cc,ISO,http://www.iso.org/iso/country_names_and_code_elements,n/a,n/a,projects->IM->final data->ISO.csv,,text,,,,,,,,,,,,
 ,,,,,,,,Active mobile broadband subscriptions (total),mbs,ITU,ITU database,I271MW,2007-2011,projects->IM->final data->ITUdata->,,number,,,,,,,,,,,,
-y,y,,,,,,,Active mobile broadband subscription rate,mbsr,ITU,ITU database,I911MW,2007-2010,projects->IM->final data->ITUdata->,,number,,1,Access,adoption,1911MW.csv,,,ITUParser,,,,
-y,y,,,,,,y,Active mobile broadband subscription rate,mbsr,ITU,ITU database,I911MW,2011-2012,projects->IM->final data->ITUdata->,,number,,1,Access,adoption,ITU_2013.csv,mbsr,,ITUParser2013,,,,
+y,y,,,,,,,Active mobile broadband subscription rate,mbsr,ITU,ITU database,I911MW,2007-2010,projects->IM->final data->ITUdata->,,number,,1,Access,adoption,1911MW.csv,,,ITUParser,%,,,
+y,y,,,,,,y,Active mobile broadband subscription rate,mbsr,ITU,ITU database,I911MW,2011-2012,projects->IM->final data->ITUdata->,,number,,1,Access,adoption,ITU_2013.csv,mbsr,,ITUParser2013,%,,,
 ,,,,,,,,Fibre-to-the-home/building Internet subscriptions,fis,ITU,ITU database,I4213FTTH/B,2007-2011,projects->IM->final data->ITUdata->,,number,,,,,,,,,,,,
 ,,,,,,,,Wired Internet subscriptions,wis,ITU,ITU database,I4213,2007-2011,projects->IM->final data->ITUdata->,,number,,,,,,,,,,,,
-y,y,,,,,,,Wired Internet subscription rate,wisr,ITU,ITU database,I993,2007-2011,projects->IM->final data->ITUdata->,,number,,1,Access,adoption,I993.csv,,,ITUParser,,,,
+y,y,,,,,,,Wired Internet subscription rate,wisr,ITU,ITU database,I993,2007-2011,projects->IM->final data->ITUdata->,,number,,1,Access,adoption,I993.csv,,,ITUParser,%,,,
 ,,,,,,,,Wired broadband monthly subscription charge (in local currency),wbbsc,ITU,ITU database,I4213BS,2007-2011,projects->IM->final data->ITUdata->,,number,,,,,,,,,,,,
 y,y,n,,,y,,,Wired broadband monthly subscription charge (in USD/GDP),wbbscUSDGDP,ITU,ITU database,I4213BS$,2007-2010,projects->IM->final data->ITUdata->,,number,,-1,Access,price,I4213BS$.csv,,,ITUParser,,,,
 y,y,n,,,y,,y,Wired broadband monthly subscription charge (in USD/GDP),wbbscUSDGDP,ITU,ITU database,I4213BS$,2011-2012,projects->IM->final data->ITUdata->,,number,,-1,Access,price,ITU_2013.csv,wbbscUSD,,ITUParser2013,,,,
@@ -105,7 +105,7 @@ y,,,,,,,,Filtering (consistency),ONIco,Open Net Initiative,http://opennet.net/re
 ,,,,,,,,ONI country profile,ONIcp,Open Net Initiative,http://opennet.net/research/data,n/a,"2007-2012, depending on country",projects->IM->final data->oni_2012-10-29.csv,,URL,,,,,oni_2012-10-29.csv,,,,,,,
 ,,,,,,,,"Facebook users, past 6 months",fb,SocialBakers,http://www.socialbakers.com/facebook-statistics/,n/a,past 6 months,FBusers_6mo_2013-02-15.csv,,number,,,,,,,,,,,,
 ,,,,,,,,"Facebook penetration rate, past 6 months",fbpr,SocialBakers,http://www.socialbakers.com/facebook-statistics/,n/a,past 6 months,FBusers_6mo_2013-02-15.csv,,number,,,,,,,,,,,,
-y,y,,,,,,,Gender Inequality Index,GII,United Nations,http://hdr.undp.org/en/statistics/gii/,n/a,"1995, 2000, 2005, 2008, 2011",projects->IM->final data->Gender_Inequality_Index.csv,,number,,-1,Access,human,UN_Gender_Inequality_Index.csv,,,GenderInequalityParser,,,2,
+,y,,,,,,,Gender Inequality Index,GII,United Nations,http://hdr.undp.org/en/statistics/gii/,n/a,"1995, 2000, 2005, 2008, 2011",projects->IM->final data->Gender_Inequality_Index.csv,,number,,-1,Access,human,UN_Gender_Inequality_Index.csv,,,GenderInequalityParser,,,2,Removed in #7242
 y,,,,,,,,Human Development Index,HDI,United Nations,http://hdr.undp.org/en/statistics/hdi/,n/a,"1960, 1980, 2000, 2005, 2009, 2010, 2011",projects->IM->final data->HDI.csv,,number,,,,,HDI.csv,,,HDIParser,,,,
 y,,,,,,,y,Human Development Index,HDI,United Nations,http://hdr.undp.org/en/statistics/hdi/,n/a,2012,projects->IM->final data->HDI.csv,,number,,,,,HDI_2013.csv,,,HDIParser2013,,,,
 y,,,y,,,,,"Human Development Index (rank, of 186)",HDIr,United Nations,http://hdr.undp.org/en/statistics/hdi/,n/a,2012,projects->IM->final data->HDI.csv,,number,,,,,HDI_2013.csv,,,HDIRankParser,,,,
