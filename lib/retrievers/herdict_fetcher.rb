@@ -13,6 +13,10 @@ class HerdictFetcher
     data = []
     Country.all.each { |country|
       sites = top_sites_by_country(country.iso_code, 2013)
+
+      # remove script content
+      sites = sites.gsub( /script.*script/, 'div></div' )
+
       d = HtmlBlock.new start_date: '2013-01-01', value: sites, value_id: country.iso3_code
       d.country = country
       data << d

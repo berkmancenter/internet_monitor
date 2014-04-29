@@ -188,6 +188,10 @@ namespace :db do
       d_herdict_iran.source = ds_herdict
       d_herdict_iran.country = iran
       d_herdict_iran.value = IO.read 'db/test_data/herd_irn.html'
+
+      # remove script content (duplicated from HerdictFetcher for testing)
+      d_herdict_iran.value = d_herdict_iran.value.gsub( /script.*script/, 'div></div' )
+
       d_herdict_iran.save!
 
       # activity datum sources
