@@ -169,7 +169,7 @@ FactoryGirl.define do
       description nil
       datum_type 'Indicator'
       #category control
-      #group filtering
+      #group control
       default_weight 1
       retriever_class 'ASNParser'
       is_api false
@@ -180,13 +180,33 @@ FactoryGirl.define do
       source_link 'http://cyber.law.harvard.edu/netmaps/raw_data.php'
     end
 
+    factory :ds_social do
+      admin_name 'ds_social'
+      public_name 'social'
+      description nil
+      datum_type 'Indicator'
+      #category control
+      #group control
+      default_weight 1
+      min 0.0
+      max 4.0
+      normalized false
+      retriever_class 'ONIParser'
+      is_api false
+      in_category_page true
+      in_sidebar false
+      affects_score false
+      source_name 'Open Net Initiative'
+      source_link 'http://opennet.net/research/data'
+    end
+
     factory :ds_consistency do
       admin_name 'ds_consistency'
       public_name 'Filtering (consistency)'
       description nil
       datum_type 'Indicator'
       #category control
-      #group control
+      #group filtering
       default_weight 1
       retriever_class 'ONIParser'
       is_api false
@@ -298,6 +318,7 @@ FactoryGirl.define do
     #     ds_lit_rate
     # control
     #   ds_ippoc
+    #   ds_social
     #   ds_consistency
     #   ds_herdict_quickstats
     #   ds_herdict
@@ -318,6 +339,7 @@ FactoryGirl.define do
     #     ds_lit_rate
     # control
     #   ds_ippoc
+    #   ds_social
     #   ds_consistency
     # (no category)
     #   ds_population
@@ -380,6 +402,15 @@ FactoryGirl.define do
       #country iran
       #language nil
       original_value 4073728.0
+      type 'Indicator'
+    end
+
+    factory :d_social_iran do
+      #source ds_social
+      start_date '2011-01-01'
+      #country iran
+      #language nil
+      original_value 4.0
       type 'Indicator'
     end
 
@@ -462,6 +493,15 @@ FactoryGirl.define do
       #country china
       #language nil
       original_value 80186035.0
+      type 'Indicator'
+    end
+
+    factory :d_social_china do
+      #source ds_social
+      start_date '2011-01-01'
+      #country china
+      #language nil
+      original_value 3.0
       type 'Indicator'
     end
 

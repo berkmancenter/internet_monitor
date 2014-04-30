@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe ( 'Datum model' ) {
   let ( :ds_pct_inet ) { DatumSource.find_by_admin_name( 'ds_pct_inet' ) }
+  let ( :ds_social ) { DatumSource.find_by_admin_name( 'ds_social' ) }
   let ( :iran ) { Country.find_by_iso3_code( 'IRN' ) }
   let ( :china ) { Country.find_by_iso3_code( 'CHN' ) }
   let ( :usa ) { Country.find_by_iso3_code( 'USA' ) }
@@ -16,6 +17,13 @@ describe ( 'Datum model' ) {
   let ( :d_pct_inet_china ) {
     Datum.where( {
       datum_source_id: ds_pct_inet.id,
+      country_id: china.id
+    } ).first
+  }
+
+  let ( :d_social_china ) {
+    Datum.where( {
+      datum_source_id: ds_social.id,
       country_id: china.id
     } ).first
   }
@@ -46,6 +54,14 @@ describe ( 'Datum model' ) {
     it {
       # there are some like herdict & morningide
       Datum.non_indicators.count.should eq( 3 )
+    }
+  }
+
+  context ( 'with non-normalized DatumSource' ) {
+    it {
+      # non-normalized datum have a fraction of their source's min_max
+      # unrelated to other countries
+      d_social_china.value.should eq( 0.75 )
     }
   }
 }

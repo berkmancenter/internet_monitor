@@ -46,6 +46,8 @@ class DatumSource < ActiveRecord::Base
     def recalc_min_max
         # I should use duck-typing here
         return unless datum_type == 'Indicator'
+        # non-normalized DatumSources do not get their min/max calculated
+        return unless normalized
         country_ids = Country.with_enough_data.map { |c| c.id }
         most_recent = data.most_recent.where( { country_id: country_ids } )
         temp_data = most_recent.map{|d| d.original_value } 

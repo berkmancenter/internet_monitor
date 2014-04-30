@@ -145,6 +145,11 @@ namespace :db do
       ds_ippoc.group = grp_control
       ds_ippoc.save!
 
+      ds_social = FactoryGirl.create :ds_social
+      ds_social.category = categories[ 1 ]
+      ds_social.group = grp_filtering
+      ds_social.save!
+
       ds_consistency = FactoryGirl.create :ds_consistency
       ds_consistency.category = categories[ 1 ]
       ds_consistency.group = grp_filtering
@@ -164,6 +169,11 @@ namespace :db do
       d_ippoc_iran.country = iran
       d_ippoc_iran.save!
 
+      d_social_iran = FactoryGirl.create :d_social_iran
+      d_social_iran.source = ds_social
+      d_social_iran.country = iran
+      d_social_iran.save!
+
       d_consistency_iran = FactoryGirl.create :d_consistency_iran
       d_consistency_iran.source = ds_consistency
       d_consistency_iran.country = iran
@@ -173,6 +183,11 @@ namespace :db do
       d_ippoc_china.source = ds_ippoc
       d_ippoc_china.country = china
       d_ippoc_china.save!
+
+      d_social_china = FactoryGirl.create :d_social_china
+      d_social_china.source = ds_social
+      d_social_china.country = china
+      d_social_china.save!
 
       d_consistency_china = FactoryGirl.create :d_consistency_china
       d_consistency_china.source = ds_consistency

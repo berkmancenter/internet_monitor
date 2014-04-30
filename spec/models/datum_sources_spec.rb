@@ -6,6 +6,7 @@ describe ( 'DatumSource model' ) {
     let ( :ds_pct_inet ) { DatumSource.find_by_admin_name( 'ds_pct_inet' ) }
     let ( :ds_fixed_monthly ) { DatumSource.find_by_admin_name( 'ds_fixed_monthly' ) }
     let ( :ds_fixed_monthly_gdp ) { DatumSource.find_by_admin_name( 'ds_fixed_monthly_gdp' ) }
+    let ( :ds_social ) { DatumSource.find_by_admin_name( 'ds_social' ) }
     let ( :ds_consistency ) { DatumSource.find_by_admin_name( 'ds_consistency' ) }
     let ( :ds_population ) { DatumSource.find_by_admin_name( 'ds_population' ) }
     let ( :ds_gdp ) { DatumSource.find_by_admin_name( 'ds_gdp' ) }
@@ -24,6 +25,10 @@ describe ( 'DatumSource model' ) {
 
       it {
         should respond_to :default_weight
+      }
+
+      it {
+        should respond_to :normalized
       }
 
       it {
@@ -70,6 +75,12 @@ describe ( 'DatumSource model' ) {
       }
 
       it {
+        # non-normalized min_max are pre-set
+        ds_social.min.should eq( 0.0 )
+        ds_social.max.should eq( 4.0 )
+      }
+
+      it {
         ds_consistency.min.should eq( 10.0 )
         ds_consistency.max.should eq( 10.0 )
       }
@@ -82,6 +93,18 @@ describe ( 'DatumSource model' ) {
       it {
         ds_gdp.min.should eq( 4525.9486080335 )
         ds_gdp.max.should eq( 4525.9486080335 )
+      }
+    }
+
+    describe ( 'normalized' ) {
+      it {
+        # most values are normalized
+        ds_pct_inet.normalized.should be_true
+      }
+
+      it {
+        # some filtering ones are not
+        ds_social.normalized.should be_false
       }
     }
   }
