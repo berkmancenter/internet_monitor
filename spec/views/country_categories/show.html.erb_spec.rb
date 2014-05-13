@@ -188,6 +188,11 @@ describe ( 'country_categories/show' ) {
         should have_css 'section.herdict-fetcher.html-block'
         should have_css '.herdict-fetcher .topitems'
       }
+
+      it ( 'should not allow script tags in the herdict topitems report' ) {
+        should_not have_css '.herdict-fetcher script', visible: false
+        should_not have_css '.herdict-fetcher div', text: 'topsitescategory'
+      }
     }
 
     context ( 'activity' ) {

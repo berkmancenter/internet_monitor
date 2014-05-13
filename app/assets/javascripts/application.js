@@ -22,7 +22,8 @@
     $( '.countries-nav-list' ).not( s ).removeClass( 'expanded' );
   }
 
-  $( '.data-nav-countries' ).click( function( ) {
+  $( '.data-nav-countries' ).click( function( e ) {
+    e.preventDefault( );
     hideAllBut( '.countries-nav-list' );
     $( '.countries-nav-list' ).toggleClass( 'expanded' );
     return false;

@@ -21,8 +21,12 @@ describe ( 'layouts/application' ) {
       should have_css "header a[href$='#{refinery::blog_root_path}']"
     }
 
+    it ( 'should have countries dropdown' ) {
+      should_not have_css "header a[href*='#{countries_path}']"
+      should have_css 'header a.data-nav-countries', text: 'countries'
+    }
+
     it {
-      should have_css "header a[href*='#{countries_path}']"
       should have_css "header a[href*='#{map_path}']"
     }
 

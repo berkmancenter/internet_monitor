@@ -29,7 +29,7 @@
     </nav>
 
     <div class="data-nav">
-      <%= link_to raw('countries &#9654;'), Imon::Application.routes.url_helpers.countries_path, { class: 'data-nav-countries' } %>
+      <%= link_to raw('countries &#9654;'), 'javascript:void(0);', { class: 'data-nav-countries' } %>
       <%= link_to raw( '&nbsp;' ), Imon::Application.routes.url_helpers.map_path, class: 'map-link', title: 'MAP' %>
       <a href="javascript:void(0);" class="toggle-weight-sliders" title="MY SCORE">&nbsp;</a>
     </div>

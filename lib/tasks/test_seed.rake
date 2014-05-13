@@ -202,7 +202,14 @@ namespace :db do
       d_herdict_iran = FactoryGirl.create :d_herdict_iran
       d_herdict_iran.source = ds_herdict
       d_herdict_iran.country = iran
-      d_herdict_iran.value = IO.read 'db/test_data/herd_irn.html'
+
+      # remove script content (duplicated from HerdictFetcher for testing)
+      value = IO.read 'db/test_data/herd_irn.html'
+      value = Nokogiri::HTML.fragment( value )
+      value.css( 'script' ).remove
+      d_herdict_iran.value = value.to_s
+       
+
       d_herdict_iran.save!
 
       # activity datum sources
