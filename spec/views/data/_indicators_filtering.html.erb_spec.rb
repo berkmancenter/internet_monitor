@@ -24,6 +24,10 @@ describe ( 'data/_indicators_filtering' ) {
   }
 
   it {
+    should have_css 'dl.indicators-filtering'
+  }
+
+  it {
     should have_css '.indicators-label span', text: 'no evidence'
   }
 }

@@ -24,6 +24,10 @@ describe ( 'data/_indicators' ) {
     }
 
     it {
+      should have_css "dl.indicators-#{group[0].admin_name}"
+    }
+
+    it {
       should have_css '.indicators-label span', text: 'worst'
     }
   }

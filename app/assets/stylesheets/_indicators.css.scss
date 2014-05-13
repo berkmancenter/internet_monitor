@@ -1,0 +1,131 @@
+// Place all the styles related to the Countries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "colors";
+
+/* countries#show & country_categories#show */
+.country-data-view {
+
+  /* specific datum block styles */
+
+  .indicators {
+    dl {
+      margin: -.25em 0 0 0;
+    }
+
+    dt, dd {
+      display: inline;
+      margin: 0;
+    }
+
+    dt {
+
+    }
+
+    dt span {
+      color: $gray;
+      display: inline-block;
+      font-size: .7em;
+      text-align: right;
+      width: 46%;
+    }
+
+    dt:before {
+      content: "";
+      display: block;
+      margin-bottom: .25em;
+    }
+
+    dd.indicators-label {
+      color: $gray;
+      font-size: .8em;
+
+      span:last-child {
+        float: right;
+      }
+    }
+
+    .indicator-bar-outer, .indicator-bar-inner {
+      border-radius: 5px;
+      height: 1.5em;
+    }
+
+    .indicator-bar-outer {
+      background-color: #DDD;
+      display: inline-block;
+      margin-left: 1%;
+      position: relative;
+      vertical-align: top;
+      width: 51%;
+    }
+
+    .original-value {
+      cursor: default;
+      display: inline-block;
+      font-size: .8em;
+      padding: .2em .5em;
+      position: absolute;
+      top: 0;
+      vertical-align: top;
+
+      &.over {
+        color: $white;
+      }
+    }
+
+    .indicator-bar-inner {
+      display: inline-block;
+    }
+
+    .indicators-filtering {
+      margin-top: 4em;
+
+      dd.indicators-label {
+        display: inline-block;
+        padding-bottom: 1em;
+        position: relative;
+        width: 51%;
+
+        span:last-child {
+          float: none;
+        }
+
+        span {
+          display: inline-block;
+          position: absolute;
+          font-size: .8em;
+          text-align: right;
+          -webkit-transform: rotate(40deg);
+          transform: rotate(40deg);
+          -webkit-transform-origin: 100% 0%;
+          transform-origin: 100% 0%;
+          white-space: nowrap;
+          width: 10em;
+        }
+
+        .ilf0 {
+          right: 100%;
+        }
+
+        .ilf1 {
+          right: 75%;
+        }
+
+        .ilf2 {
+          right: 50%;
+        }
+
+        .ilf3 {
+          right: 25%;
+        }
+
+        .ilf4 {
+          right: 0%;
+        }
+      }
+    }
+
+  }
+}
+

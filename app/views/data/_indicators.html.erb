@@ -1,10 +1,10 @@
 <% if indicators.any? %>
-  <h2><%= group.public_name unless group.nil? %></h2>
-<dl>
-  <dt><span>&nbsp;</span></dt>
-  <dd class="indicators-label"><span>worst</span> <span>best</span></dd>
+  <h2><%= group.public_name %></h2>
+  <dl class="indicators-<%= group.admin_name %>">
+    <dt><span>&nbsp;</span></dt>
+    <dd class="indicators-label"><span>worst</span> <span>best</span></dd>
 
-  <%= render partial: 'data/indicator', collection: indicators %>
+    <%= render partial: 'data/indicator', collection: indicators %>
 
-</dl>
+  </dl>
 <% end %>
