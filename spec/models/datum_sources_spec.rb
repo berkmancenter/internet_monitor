@@ -75,8 +75,7 @@ describe ( 'DatumSource model' ) {
       }
 
       it {
-        # non-normalized min_max are pre-set
-        ds_social.min.should eq( 0.0 )
+        ds_social.min.should eq( 3.0 )
         ds_social.max.should eq( 4.0 )
       }
 

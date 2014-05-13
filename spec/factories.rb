@@ -188,8 +188,6 @@ FactoryGirl.define do
       #category control
       #group control
       default_weight 1
-      min 0.0
-      max 4.0
       normalized false
       retriever_class 'ONIParser'
       is_api false

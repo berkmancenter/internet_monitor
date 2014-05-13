@@ -59,9 +59,9 @@ describe ( 'Datum model' ) {
 
   context ( 'with non-normalized DatumSource' ) {
     it {
-      # non-normalized datum have a fraction of their source's min_max
+      # non-normalized datum values equal their original_value
       # unrelated to other countries
-      d_social_china.value.should eq( 0.75 )
+      d_social_china.value.should eq( 3.0 )
     }
   }
 }
