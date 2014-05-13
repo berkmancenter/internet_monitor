@@ -5,8 +5,8 @@ describe ( 'data/_indicators' ) {
 
   subject { rendered }
 
-  context ( 'control indicators' ) {
-    let ( :category ) { Category.find_by_slug( 'control' ) }
+  context ( 'access indicators' ) {
+    let ( :category ) { Category.find_by_slug( 'access' ) }
     let ( :grouped ) {
       category.data.indicators.in_category_page.most_recent.for( country ).group_by { |i|
         i.source.group

@@ -22,7 +22,11 @@
         <% showing_data = true %>
         <section class="indicators block">
         <% grouped.each { |g| %>
-          <%= render partial: 'data/indicators', object: g[ 1 ], locals: { group: g[ 0 ] } %>
+          <% if g[0].admin_name == 'filtering' %>
+            <%= render partial: 'data/indicators_filtering', object: g[ 1 ], locals: { group: g[ 0 ] } %>
+          <% else %>
+            <%= render partial: 'data/indicators', object: g[ 1 ], locals: { group: g[ 0 ] } %>
+          <% end %>
         <% } %>
         </section>
       <% end %>

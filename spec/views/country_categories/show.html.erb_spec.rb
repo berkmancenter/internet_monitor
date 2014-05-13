@@ -173,6 +173,10 @@ describe ( 'country_categories/show' ) {
         should have_css '.indicators h2', text: 'Internet Filtering'
       }
 
+      it ( 'should have filtering specific indicators view' ) {
+        should have_css '.indicators-label span', text: 'no evidence'
+      }
+
       it {
         should have_css '.indicators dl', count: 2
       }
