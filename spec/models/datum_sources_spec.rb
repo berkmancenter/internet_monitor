@@ -80,8 +80,8 @@ describe ( 'DatumSource model' ) {
       }
 
       it {
-        ds_consistency.min.should eq( 10.0 )
-        ds_consistency.max.should eq( 10.0 )
+        ds_consistency.min.should eq( 1.0 )
+        ds_consistency.max.should eq( 2.0 )
       }
 
       it {
@@ -104,6 +104,7 @@ describe ( 'DatumSource model' ) {
       it {
         # some filtering ones are not
         ds_social.normalized.should be_false
+        ds_consistency.normalized.should be_false
       }
     }
   }

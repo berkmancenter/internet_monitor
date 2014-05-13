@@ -3,6 +3,7 @@ require 'spec_helper'
 describe ( 'Datum model' ) {
   let ( :ds_pct_inet ) { DatumSource.find_by_admin_name( 'ds_pct_inet' ) }
   let ( :ds_social ) { DatumSource.find_by_admin_name( 'ds_social' ) }
+  let ( :ds_consistency ) { DatumSource.find_by_admin_name( 'ds_consistency' ) }
   let ( :iran ) { Country.find_by_iso3_code( 'IRN' ) }
   let ( :china ) { Country.find_by_iso3_code( 'CHN' ) }
   let ( :usa ) { Country.find_by_iso3_code( 'USA' ) }
@@ -25,6 +26,13 @@ describe ( 'Datum model' ) {
     Datum.where( {
       datum_source_id: ds_social.id,
       country_id: china.id
+    } ).first
+  }
+
+  let ( :d_consistency_iran ) {
+    Datum.where( {
+      datum_source_id: ds_consistency.id,
+      country_id: iran.id
     } ).first
   }
 
@@ -58,10 +66,15 @@ describe ( 'Datum model' ) {
   }
 
   context ( 'with non-normalized DatumSource' ) {
+    # non-normalized datum values equal their original_value
+    # unrelated to other countries
+
     it {
-      # non-normalized datum values equal their original_value
-      # unrelated to other countries
       d_social_china.value.should eq( 3.0 )
+    }
+
+    it {
+      d_consistency_iran.value.should eq( 1.0 )
     }
   }
 }

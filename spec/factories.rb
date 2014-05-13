@@ -206,6 +206,7 @@ FactoryGirl.define do
       #category control
       #group filtering
       default_weight 1
+      normalized false
       retriever_class 'ONIParser'
       is_api false
       in_category_page true
@@ -417,7 +418,7 @@ FactoryGirl.define do
       start_date '2011-01-01'
       #country iran
       #language nil
-      original_value 10.0
+      original_value 1.0
       type 'Indicator'
     end
 
@@ -508,7 +509,7 @@ FactoryGirl.define do
       start_date '2011-01-01'
       #country china
       #language nil
-      original_value 10.0
+      original_value 2.0
       type 'Indicator'
     end
 
