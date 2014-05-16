@@ -15,6 +15,7 @@ namespace :db do
       # control groups
       grp_control = Group.create! admin_name: 'control', public_name: 'Internet Control'
       grp_filtering = Group.create! admin_name: 'filtering', public_name: 'Internet Filtering'
+      grp_filtering_mo = Group.create! admin_name: 'filtering_mo', public_name: 'Internet Filtering MO'
 
       # language
       persian = FactoryGirl.create( :persian );
@@ -152,7 +153,7 @@ namespace :db do
 
       ds_consistency = FactoryGirl.create :ds_consistency
       ds_consistency.category = categories[ 1 ]
-      ds_consistency.group = grp_filtering
+      ds_consistency.group = grp_filtering_mo
       ds_consistency.save!
 
       ds_herdict_quickstats = FactoryGirl.create :ds_herdict_quickstats

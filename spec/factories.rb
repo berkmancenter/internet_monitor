@@ -182,7 +182,7 @@ FactoryGirl.define do
 
     factory :ds_social do
       admin_name 'ds_social'
-      public_name 'social'
+      public_name 'Filtering: social'
       description nil
       datum_type 'Indicator'
       #category control
@@ -204,7 +204,7 @@ FactoryGirl.define do
       description nil
       datum_type 'Indicator'
       #category control
-      #group filtering
+      #group filtering_mo
       default_weight 1
       normalized false
       retriever_class 'ONIParser'

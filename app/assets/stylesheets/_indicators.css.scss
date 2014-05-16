@@ -40,10 +40,6 @@
     dd.indicators-label {
       color: $gray;
       font-size: .8em;
-
-      span:last-child {
-        float: right;
-      }
     }
 
     .indicator-bar-outer, .indicator-bar-inner {
@@ -78,54 +74,83 @@
       display: inline-block;
     }
 
-    .indicators-filtering {
-      margin-top: 4em;
+    dd.indicators-label {
+      display: inline-block;
+      padding-bottom: 1em;
+      position: relative;
+      width: 51%;
 
-      dd.indicators-label {
+      span {
         display: inline-block;
-        padding-bottom: 1em;
-        position: relative;
-        width: 51%;
+        position: absolute;
+        font-size: .8em;
+        text-align: right;
+        -webkit-transform: rotate(40deg);
+        transform: rotate(40deg);
+        -webkit-transform-origin: 100% 0%;
+        transform-origin: 100% 0%;
+        white-space: nowrap;
+        width: 10em;
+      }
+    }
+  }
 
-        span:last-child {
-          float: none;
-        }
+    .indicators {
+      .il0 {
+        right: 98%;
+      }
 
-        span {
-          display: inline-block;
-          position: absolute;
-          font-size: .8em;
-          text-align: right;
-          -webkit-transform: rotate(40deg);
-          transform: rotate(40deg);
-          -webkit-transform-origin: 100% 0%;
-          transform-origin: 100% 0%;
-          white-space: nowrap;
-          width: 10em;
-        }
-
-        .ilf0 {
-          right: 100%;
-        }
-
-        .ilf1 {
-          right: 75%;
-        }
-
-        .ilf2 {
-          right: 50%;
-        }
-
-        .ilf3 {
-          right: 25%;
-        }
-
-        .ilf4 {
-          right: 0%;
-        }
+      .il1 {
+        right: -2%;
       }
     }
 
-  }
+    .indicators-filtering {
+      dl {
+        margin-top: 4em;
+      }
+
+      .il0 {
+        right: 98%;
+      }
+
+      .il1 {
+        right: 73%;
+      }
+
+      .il2 {
+        right: 48%;
+      }
+
+      .il3 {
+        right: 23%;
+      }
+
+      .il4 {
+        right: -2%;
+      }
+    }
+
+    .indicators-filtering_mo {
+      dl {
+        margin-top: 2em;
+      }
+
+      h2 {
+        display: none;
+      }
+
+      .il0 {
+        right: 98%;
+      }
+
+      .il1 {
+        right: 48%;
+      }
+
+      .il2 {
+        right: -2%;
+      }
+    }
 }
 

@@ -171,14 +171,19 @@ describe ( 'country_categories/show' ) {
       it ( 'should have indicators grouped' ) {
         should have_css '.indicators h2', text: 'Internet Control'
         should have_css '.indicators h2', text: 'Internet Filtering'
+        should have_css '.indicators h2', text: 'Internet Filtering MO'
       }
 
       it ( 'should have filtering specific indicators view' ) {
-        should have_css '.indicators-label span', text: 'no evidence'
+        should have_css '.indicators-label span', text: 'No evidence of filtering'
+      }
+
+      it ( 'should have filtering specific indicators view' ) {
+        should have_css '.indicators-label span', text: 'Low'
       }
 
       it {
-        should have_css '.indicators dl', count: 2
+        should have_css '.indicators dl', count: 3
       }
 
       it ( 'should have a herdict quickstats report' ) {

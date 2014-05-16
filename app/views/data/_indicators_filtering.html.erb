@@ -1,16 +1,18 @@
 <% if indicators_filtering.any? %>
+<div class="indicators indicators-<%= group.admin_name %>">
   <h2><%= group.public_name %></h2>
-  <dl class="indicators-<%= group.admin_name %>">
+  <dl>
     <dt><span>&nbsp;</span></dt>
     <dd class="indicators-label">
-    <span class="ilf0">No evidence of filtering</span>
-    <span class="ilf1">Suspected filtering</span>
-    <span class="ilf2">Selective filtering</span>
-    <span class="ilf3">Substantial filtering</span>
-    <span class="ilf4">Pervasive filtering</span>
+    <span class="il0">No evidence of filtering</span>
+    <span class="il1">Suspected filtering</span>
+    <span class="il2">Selective filtering</span>
+    <span class="il3">Substantial filtering</span>
+    <span class="il4">Pervasive filtering</span>
     </dd>
 
     <%= render partial: 'data/indicator_filtering', collection: indicators_filtering %>
 
   </dl>
+</div>
 <% end %>

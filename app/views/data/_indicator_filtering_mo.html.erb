@@ -1,0 +1,10 @@
+<% under = indicator_filtering_mo.percent < 0.6 %>
+<dt>
+  <span><%= link_to indicator_filtering_mo.name, refinery::marketable_page_path('sources'), title: "Source: #{indicator_filtering_mo.source.source_name}" %></span>
+</dt>
+
+<dd>
+  <span class="indicator-bar-outer">
+    <span data-value="<%= indicator_filtering_mo.percent %>" style="width: <%= indicator_filtering_mo.value * 1/2 * 100 %>%" class="indicator-bar-inner <%= "#{@category.slug}-1-bg" %>"></span>
+  </span>
+</dd>

@@ -20,11 +20,15 @@ describe ( 'data/_indicators' ) {
     }
 
     it {
+      should have_css "div.indicators.indicators-#{group[0].admin_name}"
+    }
+
+    it {
       should have_css 'h2', text: group[0].public_name
     }
 
     it {
-      should have_css "dl.indicators-#{group[0].admin_name}"
+      should have_css 'dl'
     }
 
     it {

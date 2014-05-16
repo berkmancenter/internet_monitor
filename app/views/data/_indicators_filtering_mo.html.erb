@@ -1,0 +1,15 @@
+<% if indicators_filtering_mo.any? %>
+<div class="indicators indicators-<%= group.admin_name %>">
+  <h2><%= group.public_name %></h2>
+  <dl>
+    <dt><span>&nbsp;</span></dt>
+    <dd class="indicators-label">
+    <span class="il0">Low</span>
+    <span class="il1">Medium</span>
+    <span class="il2">High</span>
+    </dd>
+
+    <%= render partial: 'data/indicator_filtering_mo', collection: indicators_filtering_mo %>
+  </dl>
+</div>
+<% end %>

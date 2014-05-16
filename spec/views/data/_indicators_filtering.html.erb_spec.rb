@@ -20,15 +20,19 @@ describe ( 'data/_indicators_filtering' ) {
   }
 
   it {
+    should have_css 'div.indicators.indicators-filtering'
+  }
+
+  it {
     should have_css 'h2', text: group.public_name
   }
 
   it {
-    should have_css 'dl.indicators-filtering'
+    should have_css 'dl'
   }
 
   it {
-    should have_css '.indicators-label span', text: 'no evidence'
+    should have_css '.indicators-label span', text: 'No evidence of filtering'
   }
 }
 

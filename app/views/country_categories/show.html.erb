@@ -20,13 +20,9 @@
 
       <% if grouped.count > 0 %>
         <% showing_data = true %>
-        <section class="indicators block">
+        <section class="block">
         <% grouped.each { |g| %>
-          <% if g[0].admin_name == 'filtering' %>
-            <%= render partial: 'data/indicators_filtering', object: g[ 1 ], locals: { group: g[ 0 ] } %>
-          <% else %>
-            <%= render partial: 'data/indicators', object: g[ 1 ], locals: { group: g[ 0 ] } %>
-          <% end %>
+          <%= render partial: indicators_partial( g[ 0 ] ), object: g[ 1 ], locals: { group: g[ 0 ] } %>
         <% } %>
         </section>
       <% end %>

@@ -1,10 +1,15 @@
 <% if indicators.any? %>
+<div class="indicators indicators-<%= group.admin_name %>">
   <h2><%= group.public_name %></h2>
-  <dl class="indicators-<%= group.admin_name %>">
+  <dl>
     <dt><span>&nbsp;</span></dt>
-    <dd class="indicators-label"><span>worst</span> <span>best</span></dd>
+    <dd class="indicators-label">
+    <span class="il0">worst</span>
+    <span class="il1">best</span>
+    </dd>
 
     <%= render partial: 'data/indicator', collection: indicators %>
 
   </dl>
+</div>
 <% end %>
