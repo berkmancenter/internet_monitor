@@ -29,6 +29,7 @@ class Retriever
               :affects_score => line['Affects Score?'] == 'y',
               :in_category_page => line['Include in Category Page?'] != 'n', # default to true unless specifically 'n'
               :in_sidebar => line['Include in Sidebar?'] == 'y',
+              :normalized => line['Normalized?'] != 'n', # default to true unless specifically 'n'
               :display_prefix => line['Prefix'],
               :display_suffix => line['Suffix'],
               :precision => line['Precision'] || 0,

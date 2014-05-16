@@ -18,6 +18,7 @@ Group.find_or_create_by_admin_name_and_public_name 'human', 'Literacy and Gender
 
 Group.find_or_create_by_admin_name_and_public_name 'control', 'Internet Control'
 Group.find_or_create_by_admin_name_and_public_name 'filtering', 'Internet Filtering'
+Group.find_or_create_by_admin_name_and_public_name 'filtering_mo', 'Internet Filtering MO'
 
 # Create Lanuages
 CSV.open(Rails.root.join('db','iso-639-3_20130123.tab'), {:col_sep => "\t", :headers => true}).each do |line|

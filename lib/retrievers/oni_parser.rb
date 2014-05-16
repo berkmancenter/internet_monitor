@@ -1,9 +1,9 @@
 class ONIParser
     require 'csv'
     RATING_MAP = {
-        'Low' => 1.0,
-        'Medium' => 5.0,
-        'High' => 10.0
+        'Low' => 0.0,
+        'Medium' => 1.0,
+        'High' => 2.0
     }
 
     def data(options = {})

@@ -22,37 +22,12 @@ namespace :imon do
 
   desc 'Delete non-CMS data and re-import (does not rebuild Language)'
   task :rebuild => [:environment] do |task|
-    # Delete old Category, Country, CountryCategory, CountryLanugage, DatumSource, & Indicator data
-
+    # Delete old DatumSource, & Indicator data
     Indicator.delete_all
     DatumSource.delete_all
-    CountryCategory.delete_all
-    CountryLanguage.delete_all
-    Country.delete_all
-    Category.delete_all
 
-    categories = ['Access', 'Control', 'Activity'].map{|n| Category.find_or_create_by_name(n)}
-       
-    # groups
-    Group.find_or_create_by_admin_name_and_public_name 'adoption', 'Adoption'
-    Group.find_or_create_by_admin_name_and_public_name 'speed', 'Speed and Quality'
-    Group.find_or_create_by_admin_name_and_public_name 'price', 'Price'
-    Group.find_or_create_by_admin_name_and_public_name 'human', 'Literacy and Gender Equality'
-
-    Group.find_or_create_by_admin_name_and_public_name 'control', 'Internet Control'
-    Group.find_or_create_by_admin_name_and_public_name 'filtering', 'Internet Filtering'
-
-    # Create countries and connect to languages
-    CSV.open(Rails.root.join('db', 'countryInfo.txt'), {:headers => true, :col_sep => "\t"}).each do |line|
-        country = Country.find_or_initialize_by_iso_code(:iso_code => line['ISO'], :name => line['Country'], :iso3_code => line['ISO3'])
-        country.categories = categories
-        unless line['Languages'].nil?
-            line['Languages'].split(',').each do |language|
-                country.languages << Language.find_by_iso_code(language.split('-')[0])
-            end
-        end
-        country.save!
-    end
+    # new groups (since last rebuild)
+    Group.find_or_create_by_admin_name_and_public_name 'filtering_mo', 'Internet Filtering MO'
 
     # Import all the data
     CSV.open(Rails.root.join('db', 'sources.csv'), :headers => true).each_with_index do |row, i|

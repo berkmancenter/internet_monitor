@@ -5,7 +5,7 @@ describe ( 'country_categories/show' ) {
 
   shared_examples_for ( 'indicators' ) {
     it ( 'should have indicators section in main column' ) {
-      should have_css '.main-column section.indicators'
+      should have_css '.main-column div.indicators'
 
       should have_css '.indicators dl'
     }
