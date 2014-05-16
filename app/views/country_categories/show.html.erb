@@ -28,16 +28,20 @@
       <% end %>
 
       <%# country-based non-indicators for this category %>
-      <% @category.data.non_indicators.most_recent.for( @country ).each do |datum| %>
-        <% showing_data = true %>
-        <%= render partial: "data/#{datum.type.underscore}", locals: { datum: datum } %>
+      <% @category.data.non_indicators.for( @country ).each do |datum| %>
+        <% if !datum.source.requires_page || refinery_page( datum ).any? %>
+          <% showing_data = true %>
+          <%= render partial: "data/#{datum.type.underscore}", locals: { datum: datum } %>
+        <% end %>
       <% end %>
 
       <%# language-based non-indicators for this category %>
       <% @country.languages.each do |language| %>
-        <% @category.data.non_indicators.most_recent.for( language ).each do |datum| %>
-          <% showing_data = true %>
-          <%= render partial: "data/#{datum.type.underscore}", locals: { datum: datum } %>
+        <% @category.data.non_indicators.for( language ).each do |datum| %>
+          <% if !datum.source.requires_page || refinery_page( datum ).any? %>
+            <% showing_data = true %>
+            <%= render partial: "data/#{datum.type.underscore}", locals: { datum: datum } %>
+          <% end %>
         <% end %>
       <% end %>
 

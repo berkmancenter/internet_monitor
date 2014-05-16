@@ -232,6 +232,11 @@ describe ( 'country_categories/show' ) {
         should have_css '.morningside-fetcher .render'
       }
 
+      it ( 'should only have *one* morningside widget' ) {
+        # because the second one does not have a page in refinery & is ignored
+        should have_css 'section.morningside-fetcher.json-object', count: 2
+      }
+
       it ( 'should have morningside header' ) {
         # headers come from cms page title
         should have_css 'section.morningside-fetcher h1', text: 'ds_morningside_1'

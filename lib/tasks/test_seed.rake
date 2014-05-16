@@ -225,6 +225,18 @@ namespace :db do
       d_morningside.value = IO.read 'db/test_data/morningside.json'
       d_morningside.save
 
+      d_morningside_no_page = FactoryGirl.create :d_morningside_no_page
+      d_morningside_no_page.source = ds_morningside
+      d_morningside_no_page.language = persian
+      d_morningside_no_page.value = IO.read 'db/test_data/morningside.json'
+      d_morningside_no_page.save
+
+      d_morningside_iran = FactoryGirl.create :d_morningside_iran
+      d_morningside_iran.source = ds_morningside
+      d_morningside_iran.country = iran
+      d_morningside_iran.value = IO.read 'db/test_data/morningside.json'
+      d_morningside_iran.save
+
       # other datum source
       ds_population = FactoryGirl.create( :ds_population );
       ds_population.save
@@ -348,6 +360,16 @@ namespace :db do
       ds_morningside_1_page_side_body = FactoryGirl.create :ds_morningside_1_page_side_body
       ds_morningside_1_page_side_body.page = ds_morningside_1_page
       ds_morningside_1_page_side_body.save
+
+      ds_morningside_3_page = FactoryGirl.create :ds_morningside_3_page
+
+      ds_morningside_3_page_body = FactoryGirl.create :ds_morningside_3_page_body
+      ds_morningside_3_page_body.page = ds_morningside_3_page
+      ds_morningside_3_page_body.save
+
+      ds_morningside_3_page_side_body = FactoryGirl.create :ds_morningside_3_page_side_body
+      ds_morningside_3_page_side_body.page = ds_morningside_3_page
+      ds_morningside_3_page_side_body.save
 
       # Blog
       blog_post = FactoryGirl.create :blog_post

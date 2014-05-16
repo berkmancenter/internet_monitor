@@ -577,6 +577,28 @@ FactoryGirl.define do
       #value [morningside.json]
       type 'JsonObject'
     end
+
+    factory :d_morningside_no_page do
+      #source ds_morningside
+      start_date '2012-10-24'
+      #country nil
+      #language persian
+      original_value nil
+      value_id 2
+      #value [morningside.json]
+      type 'JsonObject'
+    end
+
+    factory :d_morningside_iran do
+      #source ds_morningside
+      start_date '2014-05-16'
+      #country iran
+      #language nil
+      original_value nil
+      value_id 3
+      #value [morningside.json]
+      type 'JsonObject'
+    end
   end
 
   # refinery
@@ -745,6 +767,28 @@ FactoryGirl.define do
     #pp.page ds_morningside_1_page
     title 'Side Body'
     body 'For an earlier report on the Arabic blogosphere using similar research methods, see "Mapping the Arabic Blogosphere: Politics, Culture and Dissent" (2009).'
+    position 1
+  end
+
+  factory :ds_morningside_3_page, class: Refinery::Page do |p|
+    p.title 'ds_morningside_3'
+    p.show_in_menu true
+    p.link_url ''
+    p.deletable true
+    p.draft false
+  end
+
+  factory :ds_morningside_3_page_body, class: Refinery::PagePart do |pp|
+    #pp.page ds_morningside_3_page
+    title 'Body'
+    body 'Researchers at Berkman are currently working to analyze this data.'
+    position 0
+  end
+
+  factory :ds_morningside_3_page_side_body, class: Refinery::PagePart do |pp|
+    #pp.page ds_morningside_3_page
+    title 'Side Body'
+    body 'Iran Twittersphere.'
     position 1
   end
 
