@@ -117,7 +117,7 @@ body.home {
     li {
       display: inline-block;
       list-style-type: none;
-      margin: 0 .5em 1em .5em;
+      margin: 0;
       width: auto;
 
       a, a:visited {
@@ -129,6 +129,13 @@ body.home {
           color: $orange;
         }
       }
+    }
+
+    .map {
+      background: $light-blue;
+      display: inline-block;
+      height: 14em;
+      width: 14em;
     }
   }
 

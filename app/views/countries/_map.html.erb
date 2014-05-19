@@ -1,9 +1,9 @@
 <section class="map partial">
-  <div class="geomap" data-min-score="<%= @map_countries.any? ? @map_countries.order('score').first.score : 0 %>" data-max-score="<%= @map_countries.any? ? @map_countries.order('score desc').first.score : 0 %>" data-countries-path="<%= countries_path %>" data-map-countries="<%= @map_countries.to_json %>" <%= "data-country-iso3=#{country.iso3_code}" unless !defined? country %>></div>
+  <div class="geomap" data-min-score="<%= @map_countries.any? ? @map_countries.order('score').first.score : 0 %>" data-max-score="<%= @map_countries.any? ? @map_countries.order('score desc').first.score : 0 %>" data-countries-path="<%= Imon::Application.routes.url_helpers.countries_path %>" data-map-countries="<%= @map_countries.to_json %>" <%= "data-country-iso3=#{country.iso3_code}" unless !defined? country %>></div>
 
   <script id="popup-tmpl" type="text/x-jsrender">
     <div class="score-pill">
-      <a href="<%= countries_path %>/{{:country_id}}" class="country-name">{{:name}}</a>
+      <a href="<%= Imon::Application.routes.url_helpers.countries_path %>/{{:country_id}}" class="country-name">{{:name}}</a>
       <span class="imon-score">{{:score.toFixed(2)}}</span>
     </div>
   </script>

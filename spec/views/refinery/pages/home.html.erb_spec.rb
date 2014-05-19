@@ -7,6 +7,7 @@ describe ( 'refinery/pages/home' ) {
 
   context ( 'default view' ) {
     before {
+      assign( :map_countries, Country.with_enough_data.where( { id: country.id } ).select( 'iso3_code,score' ) )
       render
     }
 
@@ -70,23 +71,34 @@ describe ( 'refinery/pages/home' ) {
       should have_css '.twitter span', text: 'on Twitter'
     }
 
-    it {
-      should have_css '.trending h2', text: 'Featured Countries'
-    }
+    describe ( 'trending' ) {
+      it {
+        should have_css '.trending h2', text: 'Featured Countries'
+      }
 
-    it { 
-      should have_css ".trending li a[data-country-id='#{country.id}']", text: country.name
-    }
+      it { 
+        # link still exists but text no longer country name
+        should have_css ".trending li a[data-country-id='#{country.id}']"
+        should_not have_css ".trending li a[data-country-id='#{country.id}']", text: country.name
+      }
 
-    it { 
-      # score pills removed from home
-      should_not have_css '.trending li .score-pill'
-      should_not have_css ".trending .score-pill[data-country-id='#{country.id}']"
-    }
+      it { 
+        # score pills removed from home
+        should_not have_css '.trending li .score-pill'
+        should_not have_css ".trending .score-pill[data-country-id='#{country.id}']"
+      }
 
-    it {
-      should_not have_css '.trending li .score-pill .user-score'
-      should_not have_css '.trending li .score-pill .user-rank'
+      it {
+        should_not have_css '.trending li .score-pill .user-score'
+        should_not have_css '.trending li .score-pill .user-rank'
+      }
+
+      it {
+        # replace with a static map
+        should have_css '.trending li a .geomap'
+        should have_css '.trending li a .geomap[data-max-score]'
+        should have_css '.trending li a .geomap[data-max-score][data-country-iso3="IRN"]'
+      }
     }
   }
 }

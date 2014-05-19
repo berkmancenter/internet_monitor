@@ -12,7 +12,6 @@ class CountriesController < ApplicationController
   end
 
   def show
-    @map_countries = Country.with_enough_data.where( { id: params[ :id ] } ).select( 'id,iso3_code,score' )
     @country = Country.find(params[:id])
 
     slug = @country.iso3_code.downcase
@@ -29,7 +28,6 @@ class CountriesController < ApplicationController
   end
 
   def map
-    @map_countries = Country.with_enough_data.select( 'id,iso3_code,score' )
     @scored_countries = Country.order( 'score desc' ).with_enough_data
     @unscored_countries = Country.without_enough_data
   end

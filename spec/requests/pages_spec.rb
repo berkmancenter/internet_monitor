@@ -14,6 +14,17 @@ describe ( 'pages requests' ) {
     it ( 'should have FilmRoll' ) {
       should have_css '.carousel .film_roll_wrapper'
     }
+
+    describe ( 'trending' ) {
+      it ( 'should have a map' ) {
+        should have_css '.trending li a .geomap'
+      }
+
+      it ( 'map should be static' ) {
+        mode = page.evaluate_script( %q[$('.trending li a .geomap').geomap('option', 'mode')] )
+        mode.should eq( 'static' )
+      }
+    }
   end
 
   describe ( 'get /about' ) {
