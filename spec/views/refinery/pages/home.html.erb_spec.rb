@@ -77,12 +77,10 @@ describe ( 'refinery/pages/home' ) {
       }
 
       it { 
-        # link still exists but text no longer country name
         should have_css ".trending li a[data-country-id='#{country.id}']"
-        should_not have_css ".trending li a[data-country-id='#{country.id}']", text: country.name
       }
 
-      it { 
+      it ( 'should no longer have score pills' ) { 
         # score pills removed from home
         should_not have_css '.trending li .score-pill'
         should_not have_css ".trending .score-pill[data-country-id='#{country.id}']"
@@ -93,11 +91,19 @@ describe ( 'refinery/pages/home' ) {
         should_not have_css '.trending li .score-pill .user-rank'
       }
 
-      it {
-        # replace with a static map
-        should have_css '.trending li a .geomap'
-        should have_css '.trending li a .geomap[data-max-score]'
-        should have_css '.trending li a .geomap[data-max-score][data-country-iso3="IRN"]'
+      it ( 'should have map data at top level' ) {
+        should have_css '.trending[data-map-countries]'
+        should have_css '.trending[data-min-score]'
+        should have_css '.trending[data-max-score]'
+      }
+
+      it ( 'should have static map of country' ) {
+        should have_css '.trending li a .trending-map'
+        should have_css '.trending li a .trending-map[data-country-iso3="IRN"]'
+      }
+
+      it ( 'map should show country name' ) {
+        should have_css '.trending li a .trending-map span', text: country.name
       }
     }
   }

@@ -26,7 +26,8 @@ $( function( ) {
       zoomMin: 2,
       mode: defaultMapMode,
       cursors: {
-        click: 'pointer'
+        click: 'pointer',
+        "static": $( 'body.home' ).length > 0 ? 'pointer' : 'default'
       },
       shapeStyle: {
         height: 0,
@@ -95,9 +96,9 @@ $( function( ) {
 
     var minScore = map.data( 'minScore' );
     var maxScore = map.data( 'maxScore' );
-    //var countriesPath = map.data( 'countriesPath' );
 
     var zoomCountry = $( '.geomap' ).data( 'countryIso3' );
+    var zoomCountryLabel = null;
     var zoomBbox = null;
 
     var colorClasses = [
@@ -159,13 +160,13 @@ $( function( ) {
           }
         }
 
-        mapCountriesService.geomap('append', this, {
-          color: r
-        }, false);
-
         if ( this.properties.iso_a3 === zoomCountry ) {
           zoomBbox = $.geo.scaleBy( $.geo.bbox( this ), 1.5 );
         }
+
+        mapCountriesService.geomap('append', this, {
+          color: r
+        }, false);
       });
 
       // show them

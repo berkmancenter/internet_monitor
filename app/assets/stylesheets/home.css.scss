@@ -131,11 +131,23 @@ body.home {
       }
     }
 
-    .map {
+    .trending-map {
       background: $light-blue;
       display: inline-block;
       height: 14em;
       width: 14em;
+
+      .country-label {
+        margin-top: 40%;
+        text-align: center;
+
+        span {
+          background: $white;
+          border-radius: .5em;
+          display: inline-block;
+          padding: .2em .5em;
+        }
+      }
     }
   }
 
