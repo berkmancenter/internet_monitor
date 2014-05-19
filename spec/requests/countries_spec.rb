@@ -229,9 +229,10 @@ describe 'countries requests', :js => true do
         mode.should eq( 'static' )
       }
 
-      it ( 'map only needs to color target country' ) {
+      it ( 'should color all known countries' ) {
+        # this is a side-effect of #7241 & may need to be undone
         map_countries_count = page.evaluate_script( %q[$('.sidebar .geomap').data('mapCountries').length] )
-        map_countries_count.should eq( 1 )
+        map_countries_count.should eq( 2 )
       }
     }
   }
