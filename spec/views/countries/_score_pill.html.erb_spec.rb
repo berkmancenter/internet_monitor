@@ -41,6 +41,10 @@ describe ( 'countries/_score_pill' ) {
       it {
         should have_css 'a.user-rank'
       }
+
+      it {
+        should have_css 'span.help', text: '?'
+      }
     }
 
     context ( 'trending display' ) {

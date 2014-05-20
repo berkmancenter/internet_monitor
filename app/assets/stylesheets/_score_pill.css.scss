@@ -11,7 +11,7 @@
     text-transform: uppercase;
   }
 
-  .country-name, .imon-rank, .imon-score, .user-score, .user-rank {
+  .country-name, .imon-rank, .imon-score, .user-score, .user-rank, .help {
     color: $violet;
     display: inline-block;
     height: 34px;
@@ -74,6 +74,10 @@
       display: inline-block;
     }
   }
+
+  .help {
+    display: none;
+  }
 }
 
 h1 .score-pill {
@@ -92,6 +96,39 @@ h1 .score-pill {
 
   .imon-rank {
     border-radius: 4px 0 0 4px;
+  }
+
+  .help {
+    border: solid 2px $white;
+    border-radius: 12px;
+    color: $white;
+    cursor: default;
+    display: inline-block;
+    height: 24px;
+    margin: 10px;
+    padding: 3px 8px;
+    position: relative;
+    user-select: none;
+    width: 24px;
+
+    .popup {
+      background: $white;
+      border: solid 3px $light-blue;
+      border-radius: 6px;
+      color: $black;
+      display: none;
+      left: 12px;
+      padding: .5em;
+      position: absolute;
+      width: 24em;
+      top: 10px;
+    }
+
+    &:hover {
+      .popup {
+        display: block;
+      }
+    }
   }
 }
 
