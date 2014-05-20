@@ -656,6 +656,13 @@ FactoryGirl.define do
     position 2
   end
 
+  factory :home_page_activity, class: Refinery::PagePart do |pp|
+    #pp.page home_page
+    title 'Activity'
+    body 'What do people do online? What information do they access? What channels do they use to communicate?'
+    position 4
+  end
+
   factory :trending_page, class: Refinery::Page do |p|
     p.title 'trending'
     p.slug 'trending'

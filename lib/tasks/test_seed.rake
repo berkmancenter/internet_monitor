@@ -281,9 +281,14 @@ namespace :db do
 
       # Home page
       home_page = Refinery::Page.by_slug( 'home' ).first
+
       home_page_access = FactoryGirl.create :home_page_access
       home_page_access.page = home_page
       home_page_access.save
+
+      home_page_activity = FactoryGirl.create :home_page_activity
+      home_page_activity.page = home_page
+      home_page_activity.save
 
       # Carousel page
       carousel_page = FactoryGirl.create :carousel_page
