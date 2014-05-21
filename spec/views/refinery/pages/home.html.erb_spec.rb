@@ -15,6 +15,10 @@ describe ( 'refinery/pages/home' ) {
       should_not have_css '.category-selector'
     }
 
+    it ( 'should have tagline' ) {
+      should have_css 'p.tagline', text: 'Evaluating'
+    }
+
     describe ( 'carousel' ) {
       it {
         should have_css 'div.carousel'
@@ -31,10 +35,6 @@ describe ( 'refinery/pages/home' ) {
 
     it {
       should have_css 'h2', text: 'We monitor and report on...'
-    }
-
-    it ( 'should have tagline' ) {
-      should have_css 'p.tagline', text: 'Evaluating'
     }
 
     it {

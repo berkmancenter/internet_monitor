@@ -2,13 +2,13 @@
 
 <%#= render '/refinery/content_page' %>
 
+<p class="tagline">Evaluating Internet content controls &amp; online activity around the world.</p>
+
 <div class="carousel">
   <% home_carousel.each do |item| %>
     <div><a href="<%= item[ :link_url ] %>" class="carousel-item"><%= raw item[ :body ] %></a></div>
   <% end %>
 </div>
-
-<p class="tagline">Evaluating and analyzing the means, mechanisms, and extent of Internet content controls and online activity around the world.</p>
 
 <div class="what-we-do">
   <div class="trending" data-min-score="<%= @map_countries.any? ? @map_countries.order('score').first.score : 0 %>" data-max-score="<%= @map_countries.any? ? @map_countries.order('score desc').first.score : 0 %>" data-map-countries="<%= @map_countries.to_json %>">

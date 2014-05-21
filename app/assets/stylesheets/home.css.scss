@@ -9,6 +9,11 @@ body.home {
     }
   }
 
+  p.tagline {
+    font-size: 1.3em;
+    margin: 0 2em 1em 2em;
+  }
+
   .carousel {
     background: darken( $violet, 10% );
     height: 400px;
@@ -45,11 +50,6 @@ body.home {
     a, a:visited {
       text-decoration: none;
     }
-  }
-
-  p.tagline {
-    font-size: 1.3em;
-    margin: 2em 2em 0 2em;
   }
 
   h2 {
