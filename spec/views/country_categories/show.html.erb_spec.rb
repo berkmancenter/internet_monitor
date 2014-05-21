@@ -186,21 +186,29 @@ describe ( 'country_categories/show' ) {
         should have_css '.indicators dl', count: 3
       }
 
-      it ( 'should have a herdict quickstats report' ) {
-        # control sample has one
-        should have_css 'section.herdict-quickstats-fetcher.html-block'
-        should have_css '.herdict-quickstats-fetcher .quickstats'
-      }
+      describe ( 'herdict' ) {
+        it ( 'should have one herdict block' ) {
+          # quickstats merged into main block
+          should have_css 'section.herdict-fetcher.html-block'
+          should_not have_css 'section.herdict-quickstats-fetcher.html-block'
+        }
 
-      it ( 'should have a herdict topitems report' ) {
-        # control sample has one
-        should have_css 'section.herdict-fetcher.html-block'
-        should have_css '.herdict-fetcher .topitems'
-      }
+        it {
+          should have_css '.herdict-fetcher h1', text: 'Herdict'
+        }
 
-      it ( 'should not allow script tags in the herdict topitems report' ) {
-        should_not have_css '.herdict-fetcher script', visible: false
-        should_not have_css '.herdict-fetcher div', text: 'topsitescategory'
+        it ( 'should have a herdict quickstats report' ) {
+          should have_css '.herdict-fetcher .quickstats'
+        }
+
+        it ( 'should have a herdict topitems report' ) {
+          should have_css '.herdict-fetcher .topitems'
+        }
+
+        it ( 'should not allow script tags in the herdict topitems report' ) {
+          should_not have_css '.herdict-fetcher script', visible: false
+          should_not have_css '.herdict-fetcher div', text: 'topsitescategory'
+        }
       }
     }
 

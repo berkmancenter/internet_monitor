@@ -268,23 +268,6 @@ FactoryGirl.define do
       source_link ''
     end
 
-    factory :ds_herdict_quickstats do
-      admin_name 'ds_herdict_quickstats'
-      public_name 'Herdict Quick Stats'
-      description nil
-      datum_type 'HtmlBlock'
-      #category control
-      default_weight 0
-      retriever_class 'HerdictQuickstatsFetcher'
-      is_api true
-      in_category_page true
-      in_sidebar false
-      requires_page false
-      affects_score false
-      source_name 'Herdict'
-      source_link 'http://www.herdict.org'
-    end
-
     factory :ds_herdict do
       admin_name 'ds_herdict'
       public_name 'Herdict'
@@ -319,7 +302,6 @@ FactoryGirl.define do
     #   ds_ippoc
     #   ds_social
     #   ds_consistency
-    #   ds_herdict_quickstats
     #   ds_herdict
     # (no category)
     #   ds_population
@@ -543,17 +525,6 @@ FactoryGirl.define do
   end
 
   factory :html_block do
-    factory :d_herdict_quickstats_iran do
-      #source ds_herdict_quickstats
-      start_date '2013-01-01'
-      #country iran
-      #language nil
-      original_value nil
-      value_id 'IRN'
-      value '<div class="explore-module-content quickstats"> <h2>Quick Stats</h2> <ul class="quickstats-list"> <li> <em class="highlight">Iran</em> has <em class="inaccessible">5,207 inaccessible reports</em> on 1,082 sites </li> <li> <em class="highlight">Iran</em> has <em class="accessible">8,291 accessible reports</em> on 1,408 sites </li> <li class="new-section"> Iran is ranked 6 in number of reports </li> </ul> </div>'
-      type 'HtmlBlock'
-    end
-
     factory :d_herdict_iran do
       #source ds_herdict
       start_date '2013-01-01'

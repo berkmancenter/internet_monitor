@@ -156,10 +156,6 @@ namespace :db do
       ds_consistency.group = grp_filtering_mo
       ds_consistency.save!
 
-      ds_herdict_quickstats = FactoryGirl.create :ds_herdict_quickstats
-      ds_herdict_quickstats.category = categories[ 1 ]
-      ds_herdict_quickstats.save!
-
       ds_herdict = FactoryGirl.create :ds_herdict
       ds_herdict.category = categories[ 1 ]
       ds_herdict.save!
@@ -195,11 +191,6 @@ namespace :db do
       d_consistency_china.country = china
       d_consistency_china.save!
 
-      d_herdict_quickstats_iran = FactoryGirl.create :d_herdict_quickstats_iran
-      d_herdict_quickstats_iran.source = ds_herdict_quickstats
-      d_herdict_quickstats_iran.country = iran
-      d_herdict_quickstats_iran.save!
-
       d_herdict_iran = FactoryGirl.create :d_herdict_iran
       d_herdict_iran.source = ds_herdict
       d_herdict_iran.country = iran
@@ -209,8 +200,6 @@ namespace :db do
       value = Nokogiri::HTML.fragment( value )
       value.css( 'script' ).remove
       d_herdict_iran.value = value.to_s
-       
-
       d_herdict_iran.save!
 
       # activity datum sources
