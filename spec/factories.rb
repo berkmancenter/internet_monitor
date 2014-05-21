@@ -718,6 +718,22 @@ FactoryGirl.define do
     position 0
   end
 
+  factory :zzz_countries_page, class: Refinery::Page do |p|
+    p.title 'ZZZ Countries'
+    p.slug 'zzz-countries'
+    p.show_in_menu false
+    p.link_url ''
+    p.deletable true
+    p.draft false
+  end
+
+  factory :zzz_countries_page_body, class: Refinery::PagePart do |pp|
+    #pp.page zzz_countries_page
+    title 'Body'
+    body 'A profile is not yet available for this country.'
+    position 0
+  end
+
   factory :iran_page, class: Refinery::Page do |p|
     p.title 'IRN'
     p.slug 'irn'

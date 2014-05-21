@@ -341,7 +341,16 @@ namespace :db do
       access_page_body.save
 
       # IRN page
+      zzz_countries_page = FactoryGirl.create :zzz_countries_page
+      zzz_countries_page_body = FactoryGirl.create :zzz_countries_page_body
+      zzz_countries_page_body.page = zzz_countries_page
+      zzz_countries_page_body.save
+
+      # IRN page
       iran_page = FactoryGirl.create :iran_page
+      iran_page.parent = zzz_countries_page
+      iran_page.save
+
       iran_page_body = FactoryGirl.create :iran_page_body
       iran_page_body.page = iran_page
       iran_page_body.save

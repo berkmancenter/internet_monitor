@@ -1,13 +1,14 @@
 require 'spec_helper'
 
 describe( RefineryHelper ) {
+  let ( :iran_page_body ) { FactoryGirl.attributes_for :iran_page_body }
   let ( :iran_page_access ) { FactoryGirl.attributes_for :iran_page_access }
   let ( :iran_page_control ) { FactoryGirl.attributes_for :iran_page_control }
 
   subject { helper }
 
   describe ( 'part_content' ) {
-    context ( 'valid slug and part' ) {
+    context ( 'with valid slug and part' ) {
       it ( 'should return content for page part by name' ) {
         part_content( 'irn', 'Access' ).should eq( "<p>#{iran_page_access[ :body ]}</p>" )
       }
@@ -15,10 +16,19 @@ describe( RefineryHelper ) {
       it ( 'should return content for page part by label' ) {
         part_content( 'irn', :control ).should eq( "<p>#{iran_page_control[ :body ]}</p>" )
       }
+
+      it {
+        part_content( 'irn', :body ).should eq( "<p>#{iran_page_body[ :body ]}</p>" )
+      }
     }
-    context ( 'missing part' ) {
+    context ( 'with missing part' ) {
       it ( 'should return nil' ) {
         part_content( 'irn', 'Foo' ).should eq( nil )
+      }
+    }
+    context ( 'with missing page' ) {
+      it ( 'should return nil' ) {
+        part_content( 'foo', 'Body' ).should eq( nil )
       }
     }
   }

@@ -10,7 +10,6 @@ describe ( 'countries/show' ) {
     before {
       assign( :map_countries, Country.with_enough_data.where( { id: country.id } ).select( 'iso3_code,score' ) )
       assign( :country, country )
-      assign( :update, update )
       render
     }
 
@@ -85,6 +84,21 @@ describe ( 'countries/show' ) {
         should have_css '.sidebar dt', text: 'GDP'
         should have_css '.sidebar dd', text: '$4,526'
       }
+    }
+  }
+
+  context ( 'without update' ) {
+    let ( :country ) { Country.find_by_iso3_code( 'CHN' ) }
+    let ( :update ) { Refinery::Page.by_slug( 'zzz-countries' ).first.content_for( :body ) }
+
+    before {
+      assign( :map_countries, Country.with_enough_data.where( { id: country.id } ).select( 'iso3_code,score' ) )
+      assign( :country, country )
+      render
+    }
+
+    it ( 'should have the generic country update' ) {
+      should have_css '.update', text: strip_tags( update )
     }
   }
 
