@@ -10,8 +10,8 @@ body.home {
   }
 
   p.tagline {
-    font-size: 1.3em;
-    margin: 0 2em 1em 2em;
+    font-size: 1em;
+    margin: -0.5em 0 .5em 4em;
   }
 
   .carousel {
@@ -49,6 +49,11 @@ body.home {
 
     a, a:visited {
       text-decoration: none;
+    }
+
+    .film_roll_prev, .film_roll_next {
+      font-size: 50px !important;
+      line-height: 28px !important;
     }
   }
 
