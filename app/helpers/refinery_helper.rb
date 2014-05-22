@@ -26,7 +26,7 @@ module RefineryHelper
   def home_carousel
     carousel = Refinery::Page.by_slug 'carousel'
     if carousel.any?
-      Refinery::Page.where( { parent_id: carousel.first.id } ).reverse_each.map { |page|
+      carousel.first.children.map { |page|
         {
           link_url: page.link_url,
           body: page.content_for( :body )
