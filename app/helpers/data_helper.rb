@@ -4,6 +4,8 @@ module DataHelper
   end
 
   def refinery_page( datum )
-    Refinery::Page.by_slug( "#{datum.source.admin_name}_#{datum.value_id}" )
+    page = Refinery::Page.by_slug( "#{datum.source.admin_name}_#{datum.value_id}" )
+    page = Refinery::Page.by_slug( "#{datum.source.admin_name}" ) unless page.present?
+    page
   end
 end

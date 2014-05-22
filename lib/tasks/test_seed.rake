@@ -354,6 +354,18 @@ namespace :db do
       iran_page_activity.save
 
       # Data page
+      ds_herdict_page = FactoryGirl.create :ds_herdict_page
+
+      ds_herdict_page_body = FactoryGirl.create :ds_herdict_page_body
+      ds_herdict_page_body.page = ds_herdict_page
+      ds_herdict_page_body.save
+
+      ## mock custom slug/title
+      ds_herdict_page_translation = ds_herdict_page.translation
+      ds_herdict_page_translation.title = 'Herdict: Crowdsourcing Reports of Web Blockages'
+      ds_herdict_page_translation.custom_slug = ds_herdict_page.slug
+      ds_herdict_page_translation.save
+
       ds_morningside_1_page = FactoryGirl.create :ds_morningside_1_page
 
       ds_morningside_1_page_body = FactoryGirl.create :ds_morningside_1_page_body

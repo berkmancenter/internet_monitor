@@ -61,7 +61,7 @@ describe ( 'Datum model' ) {
   context ( 'only non-indicators' ) {
     it {
       # there are some like herdict & morningide
-      Datum.non_indicators.count.should eq( 5 )
+      Datum.non_indicators.count.should eq( 4 )
     }
   }
 

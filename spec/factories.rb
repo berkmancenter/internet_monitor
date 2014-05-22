@@ -742,6 +742,22 @@ FactoryGirl.define do
     position 4
   end
 
+  factory :ds_herdict_page, class: Refinery::Page do |p|
+    p.title 'ds_herdict'
+    p.slug 'ds_herdict'
+    p.show_in_menu false
+    p.link_url ''
+    p.deletable true
+    p.draft false
+  end
+
+  factory :ds_herdict_page_body, class: Refinery::PagePart do |pp|
+    #pp.page ds_herdict_page
+    title 'Body'
+    body ''
+    position 0
+  end
+
   factory :ds_morningside_1_page, class: Refinery::Page do |p|
     p.title 'ds_morningside_1'
     p.show_in_menu true
