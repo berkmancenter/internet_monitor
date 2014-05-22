@@ -16,7 +16,12 @@ class HerdictFetcher
     # remove script content
     doc = Nokogiri::HTML.fragment sites
     doc.css( 'script' ).remove
-    doc.to_s
+    doc_s = doc.to_s
+    if doc_s.size > 8000
+      doc_s
+    else
+      ''
+    end
   end
 
   def data(options = {})
