@@ -1,24 +1,31 @@
 class HerdictFetcher
-  def top_sites_by_country( country_code, year )
-    response country_code, "1/1/#{year}", "12/31/#{year}"
+  def quickstats_by_country( country_code, year )
+    start_date = "1/1/#{year}"
+    end_date = "12/31/#{year}"
+    r = HTTParty.get("http://www.herdict.org/explore/module/quickstats?fc=#{country_code}&fsd=#{URI.encode(start_date)}&fed=#{URI.encode( end_date )}")
+    r.body
   end
 
-  def response( country_code, start_date, end_date )
+  def top_sites_by_country( country_code, year )
+    start_date = "1/1/#{year}"
+    end_date = "12/31/#{year}"
     r = HTTParty.get("http://www.herdict.org/explore/module/topsitescategory?fc=#{country_code}&fsd=#{URI.encode(start_date)}&fed=#{URI.encode( end_date )}")
-    #puts "Herdict #{country_code}: #{r.code}"
-    r.body
+
+    sites = r.body
+
+    # remove script content
+    doc = Nokogiri::HTML.fragment sites
+    doc.css( 'script' ).remove
+    doc.to_s
   end
 
   def data(options = {})
     data = []
     Country.all.each { |country|
-      sites = top_sites_by_country(country.iso_code, 2013)
+      sites = quickstats_by_country(country.iso_code, 2013)
+      sites = sites + top_sites_by_country(country.iso_code, 2013)
 
-      # remove script content
-      doc = Nokogiri::HTML.fragment sites
-      doc.css( 'script' ).remove
-
-      d = HtmlBlock.new start_date: '2013-01-01', value: doc.to_s, value_id: country.iso3_code
+      d = HtmlBlock.new start_date: '2013-01-01', value: sites, value_id: country.iso3_code
       d.country = country
       data << d
     }

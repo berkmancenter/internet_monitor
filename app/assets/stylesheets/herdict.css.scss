@@ -1,6 +1,6 @@
 @import "colors";
 
-.herdict-quickstats-fetcher, .herdict-fetcher {
+.herdict-fetcher {
   .accessible {
     color: #693;
   }
@@ -15,15 +15,11 @@
     margin-top: 0;
     padding-left: 1em;
   }
-}
 
-.herdict-quickstats-fetcher {
   .test-site {
     display: none;
   }
-}
 
-.herdict-fetcher {
   .topitems {
     ul.view-toggle {
       display: none;
