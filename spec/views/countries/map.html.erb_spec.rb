@@ -49,8 +49,16 @@ describe ( 'countries/map' ) {
       should have_css '.map-index .map-pills-container'
     }
 
+    it ( 'should have headers' ) {
+      should have_css '.map-index h2 span', text: 'country'
+      should have_css '.map-index h2 span', text: "rank (of #{scored_countries.count})"
+      should have_css '.map-index h2 span', text: 'score (of 10)'
+      should have_css '.map-index h2 span', text: 'user score'
+      should have_css '.map-index h2 span', text: 'user rank'
+    }
+
     it {
-      should have_css '.map-index h2', text: 'Country Scores', exact: true
+      should_not have_css '.map-index h2', text: 'Country Scores', exact: true
       should have_css '.map-index ol.scored-countries' #ordered
     }
 

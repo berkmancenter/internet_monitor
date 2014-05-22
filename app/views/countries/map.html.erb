@@ -16,7 +16,13 @@
   <section class="map-index">
     <h1>Country Index</h1>
 
-    <h2 class="country-1-fg">Country Scores</h2>
+    <h2 class="country-1-fg">
+      <span>country</span>
+      <span>rank (of <%= @map_countries.count %>)</span>
+      <span>score (of 10)</span>
+      <span>user score</span>
+      <span>user rank</span>
+    </h2>
 
     <div class="map-pills-container" style="height: <%= @scored_countries.count * 36 %>px;">
       <ol class="scored-countries">
