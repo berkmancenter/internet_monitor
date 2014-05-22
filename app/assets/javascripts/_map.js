@@ -115,7 +115,7 @@ $( function( ) {
     var scoreRange = maxScore - minScore;
     var maxScoreBreak = scoreRange / ( colorClasses.length - 1 );
 
-    var legendHtml = '<dl>';
+    var legendHtml = '<h2>Internet Monitor<br>Access Score (of 10)</h2><dl>';
 
     $.each( colorClasses, function( i ) {
       if ( i === 0 ) {
