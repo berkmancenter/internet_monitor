@@ -16,7 +16,8 @@
         <div class="update block <%= @category.slug %>"><%= raw part_content( @country.iso3_code.downcase, @category.slug ) %></div>
       <% end %>
 
-      <% grouped = @category.data.indicators.in_category_page.most_recent.for( @country ).group_by { |i| i.source.group } %>
+      <% sorted = @category.data.indicators.in_category_page.most_recent.for( @country ).sort_by { |i| i.source.group.id } %>
+      <% grouped = sorted.group_by { |i| i.source.group } %>
 
       <% if grouped.count > 0 %>
         <% showing_data = true %>
