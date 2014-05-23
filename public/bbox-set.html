@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="description" content="jQuery Geo Template" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1">
+  <title>jQuery Geo Template</title>
+
+
+
+  <style type="text/css">
+    /* example style */
+
+    /* template style */
+
+    html {
+      font-family: sans-serif;
+      font-size: 100%;
+    }
+
+    #map {
+      position: absolute;
+      top: 192px;
+      right: 0;
+      bottom: 0;
+      left: 0;
+    }
+
+    #info {
+      background: #fafafa;
+      border-radius: .5em;
+      box-shadow: .2em .2em .4em #222;
+      font-size: .8em;
+      height: 176px;
+      padding: .25em .5em;
+      position: absolute;
+      left: 1em;
+      right: 1em;
+      top: 0;
+    }
+
+    textarea {
+      height: 80%;
+      width: 98%;
+    }
+  </style>
+</head>
+  
+<body>
+    <div id="info">
+      <textarea id="output"></textarea>
+      <div>
+        <button id="save" type="button" disabled="disabled">Save</button>
+        <button id="cancel" type="button" disabled="disabled">Cancel</button>
+        <span id="current"></span>
+      </div>
+    </div>
+  <div id="map">
+  </div>
+  
+  <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <script src="http://code.jquerygeo.com/jquery.geo-1.0.0-b2.min.js"></script>  
+
+  <script>
+    $(function() {
+      $.geo.proj = null;
+
+      var allCountries = null;
+      var bboxen = null;
+
+      var currentCountry = null;
+
+      // create a map
+      var map = $("#map").geomap({
+        bboxMax: [ -20037508.342787, -20037508.342787, 20037508.342787, 20037508.342787 ],
+        center: [ 0, 0 ],
+        mode: 'click',
+        tilingScheme: null,
+        services: [ {
+          type: 'shingled',
+          src: ''
+        } ],
+        zoom: 1,
+        click: function( e, geo ) {
+          if ( !currentCountry ) {
+            var countries = map.geomap('find', geo, 1);
+            if (countries.length) {
+              setCurrent( countries[0] );
+            } else {
+              var moved = false;
+              for ( var code in bboxen ) {
+                if ( geo.coordinates[0] >= bboxen[code][0] &&
+                     geo.coordinates[1] >= bboxen[code][1] &&
+                     geo.coordinates[0] <= bboxen[code][2] &&
+                     geo.coordinates[1] <= bboxen[code][3] ) {
+                  setCurrent( findByIso( code ) );
+                  moved = true;
+                  return false;
+                }
+              }
+
+              if ( !moved ) {
+                console.log('no country found');
+              }
+            }
+          }
+        }
+      });
+
+      $.getJSON( 'world-countries.json', function( featureCol )  {
+        allCountries = featureCol;
+        map.geomap('append', allCountries);
+
+      });
+      
+      $.getJSON( 'country_bbox.json', function( result ) {
+        bboxen = result;
+        $('#output').val(JSON.stringify(bboxen));
+      } );
+
+      function findByIso( iso ) {
+        for ( var i = 0; i < allCountries.features.length; i++ ) {
+          if (allCountries.features[i].properties.iso_a3 === iso) {
+            return allCountries.features[i];
+          }
+        }
+        return null;
+      }
+
+      function setCurrent( country ) {
+        currentCountry = country;
+        $('#current').text('');
+        $('button').attr('disabled', 'disabled');
+        map.geomap('option', 'mode', 'click');
+
+        if (currentCountry) {
+          map.geomap('option', 'bbox', bboxen[ currentCountry.properties.iso_a3 ] );
+          $('#current').text(currentCountry.properties.iso_a3);
+          $('button').removeAttr('disabled');
+          map.geomap('option', 'mode', 'pan');
+        }
+      }
+
+      $('#save').click(function() {
+        var bbox = map.geomap('option', 'bbox');
+        bboxen[currentCountry.properties.iso_a3] = bbox;
+        $('#output').val(JSON.stringify(bboxen));
+        setCurrent( null );
+      });
+
+      $('#cancel').click(function() {
+        setCurrent( null );
+      });
+    });
+
+  </script>
+
+</body>
+</html>
+  
+
