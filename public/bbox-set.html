@@ -20,7 +20,7 @@
 
     #map {
       position: absolute;
-      top: 192px;
+      top: 108px;
       right: 0;
       bottom: 0;
       left: 0;
@@ -31,7 +31,7 @@
       border-radius: .5em;
       box-shadow: .2em .2em .4em #222;
       font-size: .8em;
-      height: 176px;
+      height: 96px;
       padding: .25em .5em;
       position: absolute;
       left: 1em;
@@ -40,7 +40,7 @@
     }
 
     textarea {
-      height: 80%;
+      height: 60px;
       width: 98%;
     }
   </style>
@@ -50,6 +50,8 @@
     <div id="info">
       <textarea id="output"></textarea>
       <div>
+        <input type="text" id="zoom_name" /><button type="button" id="zoom_name_go">Zoom</button>
+        <button type="button" id="zoom_full">Full</button>
         <button id="save" type="button" disabled="disabled">Save</button>
         <button id="cancel" type="button" disabled="disabled">Cancel</button>
         <span id="current"></span>
@@ -93,7 +95,7 @@
                      geo.coordinates[1] >= bboxen[code][1] &&
                      geo.coordinates[0] <= bboxen[code][2] &&
                      geo.coordinates[1] <= bboxen[code][3] ) {
-                  setCurrent( findByIso( code ) );
+                  setCurrent( findBy( code ) );
                   moved = true;
                   return false;
                 }
@@ -118,9 +120,10 @@
         $('#output').val(JSON.stringify(bboxen));
       } );
 
-      function findByIso( iso ) {
+      function findBy( nameOrIso ) {
         for ( var i = 0; i < allCountries.features.length; i++ ) {
-          if (allCountries.features[i].properties.iso_a3 === iso) {
+          if (allCountries.features[i].properties.iso_a3.toUpperCase() === nameOrIso.toUpperCase() ||
+              allCountries.features[i].properties.admin.toUpperCase() === nameOrIso.toUpperCase()) {
             return allCountries.features[i];
           }
         }
@@ -130,14 +133,18 @@
       function setCurrent( country ) {
         currentCountry = country;
         $('#current').text('');
-        $('button').attr('disabled', 'disabled');
+        $('#save,#cancel').attr('disabled', 'disabled');
         map.geomap('option', 'mode', 'click');
 
         if (currentCountry) {
           map.geomap('option', 'bbox', bboxen[ currentCountry.properties.iso_a3 ] );
-          $('#current').text(currentCountry.properties.iso_a3);
-          $('button').removeAttr('disabled');
+          $('#current').text(currentCountry.properties.admin + ' (' + currentCountry.properties.iso_a3 + ')');
+          $('#save,#cancel').removeAttr('disabled');
           map.geomap('option', 'mode', 'pan');
+
+          //if ( currentCountry.properties.iso_a3 === 'BHR' ) {
+            //$('#output').val(JSON.stringify($.geo.proj.fromGeodetic(currentCountry.geometry.coordinates)));
+          //}
         }
       }
 
@@ -150,6 +157,22 @@
 
       $('#cancel').click(function() {
         setCurrent( null );
+      });
+
+      $('#zoom_name_go').click(function() {
+        if ( !currentCountry ) {
+          var country = findBy( $('#zoom_name').val() );
+          if ( country ) {
+            setCurrent( country );
+          }
+        }
+      });
+
+      $('#zoom_full').click(function() {
+        map.geomap('option', {
+          center: [0, 0],
+          zoom: 1
+        });
       });
     });
 
