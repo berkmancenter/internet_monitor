@@ -17,11 +17,7 @@
     <h1>Country Index</h1>
 
     <h2 class="country-1-fg">
-      <span>country</span>
-      <span>rank (of <%= @map_countries.count %>)</span>
-      <span>score (of 10)</span>
-      <span>user score</span>
-      <span>user rank</span>
+      <span class="label-country">country</span><span class="label-im-rank">rank<br><span class="of">(of <%= @map_countries.count %>)</span></span><span class="label-im-score">score<br><span class="of">(of 10)</span></span><span class="label-user-score">user<br>score</span><span class="label-user-rank">user<br>rank</span>
     </h2>
 
     <div class="map-pills-container" style="height: <%= @scored_countries.count * 36 %>px;">

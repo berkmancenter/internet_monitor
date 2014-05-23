@@ -269,9 +269,21 @@
     top: $sectionTop;
     width: $sectionBreak;
 
-    h2 {
-      font-size: .8em;
+    h2>span {
+      display: inline-block;
+      font-size: .7em;
+      text-align: center;
       text-transform: uppercase;
+      width: 42px;
+
+      &.label-country {
+        font-size: .8em;
+        width: 99px;
+      }
+
+      & span.of {
+        font-size: .8em;
+      }
     }
 
     .map-pills-container {

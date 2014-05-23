@@ -50,11 +50,13 @@ describe ( 'countries/map' ) {
     }
 
     it ( 'should have headers' ) {
-      should have_css '.map-index h2 span', text: 'country'
-      should have_css '.map-index h2 span', text: "rank (of #{scored_countries.count})"
-      should have_css '.map-index h2 span', text: 'score (of 10)'
-      should have_css '.map-index h2 span', text: 'user score'
-      should have_css '.map-index h2 span', text: 'user rank'
+      should have_css '.map-index h2 span.label-country', text: 'country'
+      should have_css '.map-index h2 span.label-im-rank', text: "rank"
+      should have_css '.map-index h2 span.label-im-rank span.of', text: "(of #{scored_countries.count})"
+      should have_css '.map-index h2 span.label-im-score', text: 'score'
+      should have_css '.map-index h2 span.label-im-score span.of', text: '(of 10)'
+      should have_css '.map-index h2 span.label-user-score', text: 'userscore'
+      should have_css '.map-index h2 span.label-user-rank', text: 'userrank'
     }
 
     it {
