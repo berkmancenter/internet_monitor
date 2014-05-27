@@ -37,6 +37,10 @@ CSV.open(Rails.root.join('db', 'countryInfo.txt'), {:headers => true, :col_sep =
     country.save!
 end
 
+# Import country bboxen
+
+import_country_bboxes 'db/data_files/country_bbox.json'
+
 # Import all the data
 CSV.open(Rails.root.join('db', 'sources.csv'), :headers => true).each_with_index do |row, i|
     next unless row['Include in Internet Monitor?'] == 'y'
