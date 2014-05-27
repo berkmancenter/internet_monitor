@@ -123,7 +123,7 @@
       function findBy( nameOrIso ) {
         for ( var i = 0; i < allCountries.features.length; i++ ) {
           if (allCountries.features[i].properties.iso_a3.toUpperCase() === nameOrIso.toUpperCase() ||
-              allCountries.features[i].properties.admin.toUpperCase() === nameOrIso.toUpperCase()) {
+              allCountries.features[i].properties.name.toUpperCase() === nameOrIso.toUpperCase()) {
             return allCountries.features[i];
           }
         }
@@ -138,7 +138,7 @@
 
         if (currentCountry) {
           map.geomap('option', 'bbox', bboxen[ currentCountry.properties.iso_a3 ] );
-          $('#current').text(currentCountry.properties.admin + ' (' + currentCountry.properties.iso_a3 + ')');
+          $('#current').text(currentCountry.properties.name + ' (' + currentCountry.properties.iso_a3 + ')');
           $('#save,#cancel').removeAttr('disabled');
           map.geomap('option', 'mode', 'pan');
 
