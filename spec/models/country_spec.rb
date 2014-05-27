@@ -8,6 +8,10 @@ describe ( 'Country model' ) {
 
     it { should be_valid }
 
+    it { should respond_to :bbox }
+
+    it { country.bbox.should_not eq( nil ) }
+
     it { should respond_to :indicator_count }
 
     it { should respond_to :access_group_count }
@@ -36,6 +40,11 @@ describe ( 'Country model' ) {
     it { should be_valid }
 
     it { country.enough_data?.should be_false }
+
+    it {
+      # even countries without enough_data data should have a bbox
+      country.bbox.should_not eq( nil )
+    }
   }
 
   describe ( 'Country.calculate_scores_and_rank!' ) {

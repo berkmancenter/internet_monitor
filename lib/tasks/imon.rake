@@ -19,6 +19,11 @@ namespace :imon do
   task :export_most_recent, [:filename] => [:environment] do |task, args|
     export_most_recent args[:filename]
   end
+
+  desc 'Import country bboxes'
+  task :import_country_bboxes, [:filename] => [:environment] do |task, args|
+    import_country_bboxes args[:filename]
+  end
 end
 
 def export_most_recent( filename )
@@ -53,3 +58,39 @@ def export_most_recent( filename )
   }
 end
 
+def import_country_bboxes( filename )
+  if filename.to_s == ''
+    puts "Usage: rake imon:import_country_bboxes['db/data_files/country_bbox.json']"
+    return
+  end
+
+  if !File.exists? filename
+    puts "cannot find #{filename}"
+    return
+  end
+
+  bbox_json = IO.read filename
+
+  if bbox_json.nil?
+    puts "error reading #{filename}"
+    return
+  end
+
+  bboxen = JSON.parse bbox_json
+
+  if bboxen.nil?
+    puts "error parsing JSON from #{filename}"
+    return
+  end
+
+  bboxen.each { |bbox|
+    puts "setting #{bbox[0]} to #{bbox[1]}"
+    country = Country.find_by_iso3_code bbox[0]
+    if country.present?
+      country.bbox = bbox[1].to_s
+      country.save
+    end
+  }
+
+
+end

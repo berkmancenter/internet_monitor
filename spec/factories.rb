@@ -6,6 +6,7 @@ FactoryGirl.define do
       iso_code 'IR'
       iso3_code 'IRN'
       description ''
+      bbox '[4910216.499100952,2885357.3414382352,7048375.200437453,4824323.83207971]'
     end
 
     # china is also a country with enough data to be on the map & in the index
@@ -14,6 +15,7 @@ FactoryGirl.define do
       iso_code 'CN'
       iso3_code 'CHN'
       description nil
+      bbox '[8201505.703920796,2060702.1163055873,15031060.237289852,7068319.378110475]'
     end
 
     # usa only has one indicator: access
@@ -23,6 +25,7 @@ FactoryGirl.define do
       iso_code 'US'
       iso3_code 'USA'
       description nil
+      bbox '[-19123698.955124788,2145071.1262370786,-7454471.852344696,11525723.60535639]'
     end
 
     factory :country_nil_score do

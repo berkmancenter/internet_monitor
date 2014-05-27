@@ -98,8 +98,8 @@ $( function( ) {
     var maxScore = map.data( 'maxScore' );
 
     var zoomCountry = $( '.geomap' ).data( 'countryIso3' );
+    var zoomBbox = $( '.geomap' ).data( 'bbox' ) || null;
     var zoomCountryLabel = null;
-    var zoomBbox = null;
 
     var colorClasses = [
     { color: '#fefefe' }, // $light-blue, the water, not used
@@ -161,7 +161,11 @@ $( function( ) {
         }
 
         if ( this.properties.iso_a3 === zoomCountry ) {
-          zoomBbox = $.geo.scaleBy( $.geo.bbox( this ), 1.5 );
+          if ( zoomBbox != null ) {
+            zoomBbox = $.geo.scaleBy( zoomBbox, 1.5 );
+          } else {
+            zoomBbox = $.geo.scaleBy( $.geo.bbox( this ), 1.5 );
+          }
         }
 
         mapCountriesService.geomap('append', this, {

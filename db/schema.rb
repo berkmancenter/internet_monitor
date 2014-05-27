@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140430014608) do
+ActiveRecord::Schema.define(:version => 20140527154540) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20140430014608) do
     t.datetime "updated_at",         :null => false
     t.integer  "rank"
     t.integer  "access_group_count"
+    t.string   "bbox"
   end
 
   create_table "country_categories", :force => true do |t|
