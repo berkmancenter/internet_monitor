@@ -1,4 +1,7 @@
 class Country < ActiveRecord::Base
+    extend FriendlyId
+    friendly_id :iso3_code, :use => :slugged
+
     attr_accessible :description, :iso3_code, :iso_code, :name, :indicator_count, :score, :rank
     has_many :country_categories
     has_many :country_languages

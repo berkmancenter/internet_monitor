@@ -8,6 +8,10 @@ describe ( 'Country model' ) {
 
     it { should be_valid }
 
+    it { should respond_to :friendly_id }
+
+    it { country.friendly_id.should eq( 'irn' ) }
+
     it { should respond_to :bbox }
 
     it { country.bbox.should_not eq( nil ) }

@@ -237,6 +237,18 @@ describe 'countries requests', :js => true do
     }
   }
 
+  describe ( 'get /countries/:friendly_id' ) {
+    context ( 'with normal country' ) {
+      let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
+
+      before { visit country_path( country ) }
+
+      it {
+        current_url.should match country.friendly_id
+      }
+    }
+  }
+
   describe( "get /countries/:id/access" ) do
     context ( 'with normal country' ) {
       let ( :country ) { Country.find_by_iso3_code( 'IRN' ) }
