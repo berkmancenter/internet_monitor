@@ -61,36 +61,56 @@ namespace :refinery_pages do
     id_map = {}
 
     pages.each { |page|
-      puts "importing #{page[ 'title' ]} (slug: #{page[ 'slug' ]}) & #{page[ 'parts' ].count} part(s)"
+      # grab all top-level pages first to get their ids
+      next unless page[ 'parent_id' ].nil?
+      page_id = import_page page, id_map
+      id_map[ page[ 'id' ] ] = page_id
+    }
 
-      page_rec = Refinery::Page.find_by_title page[ 'title' ]
+    pages.each { |page|
+      # grab the rest (child pages)
+      next unless page[ 'parent_id' ].present?
+      page_id = import_page page, id_map
+      id_map[ page[ 'id' ] ] = page_id
+    }
 
-      if page_rec.nil?
-        page_rec = Refinery::Page.create title: page[ 'title' ]
+    # known issue: this script will not import pages three levels deep
+  end
 
-        if page[ 'parent_id' ].present?
-          page_rec.parent_id = id_map[ page[ 'parent_id' ] ]
-        end
+  def import_page( page, id_map )
+    # imports a page, returns its new id
+    puts "importing #{page[ 'title' ]} (slug: #{page[ 'slug' ]}) & #{page[ 'parts' ].count} part(s)"
 
-        page_rec.slug = page[ 'slug' ]
-        page_rec.show_in_menu = page[ 'show_in_menu' ]
-        page_rec.deletable = page[ 'deletable' ]
-        page_rec.draft = page[ 'draft' ]
+    page_rec = Refinery::Page.find_by_title page[ 'title' ]
+
+    if page_rec.nil?
+      page_rec = Refinery::Page.create title: page[ 'title' ]
+
+      if page[ 'parent_id' ].present?
+        puts "  child page of (id: #{id_map[ page[ 'parent_id' ] ]}, prev_id: #{page[ 'parent_id' ]})"
+        page_rec.parent_id = id_map[ page[ 'parent_id' ] ]
         page_rec.save
-
-        id_map[ page[ 'id' ] ] = page_rec.id
-        puts "  #{page_rec.slug} is a new page (id: #{page_rec.id}, prev_id: #{page[ 'id' ]})"
       end
 
-      page[ 'parts' ].each_with_index { |part, i|
-        puts "  importing part #{i} #{part[ 'title' ]}"
+      page_rec.slug = page[ 'slug' ]
+      page_rec.show_in_menu = page[ 'show_in_menu' ]
+      page_rec.deletable = page[ 'deletable' ]
+      page_rec.draft = page[ 'draft' ]
+      page_rec.save
 
-        part_rec = page_rec.parts.find_or_create_by_title part[ 'title' ]
-        part_rec.body = part[ 'body' ]
-        part_rec.position = part[ 'position' ]
-        part_rec.save
-      }
+      puts "  #{page_rec.slug} is a new page (id: #{page_rec.id}, prev_id: #{page[ 'id' ]})"
+    end
+
+    page[ 'parts' ].each_with_index { |part, i|
+      puts "  importing part #{i} #{part[ 'title' ]}"
+
+      part_rec = page_rec.parts.find_or_create_by_title part[ 'title' ]
+      part_rec.body = part[ 'body' ]
+      part_rec.position = part[ 'position' ]
+      part_rec.save
     }
+
+    page_rec.id
   end
 
 end
