@@ -9,7 +9,6 @@ capybara-*.html
 /log/*
 /tmp/*
 /db/*.sqlite3
-/db/dump
 ~$*.xlsx
 /config/database.yml
 /public/system/*
