@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/3.4.1" created="2014-03-24 19:22" -->
+<!-- generator="WordPress/3.9.1" created="2014-05-29 16:18" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,34 +29,33 @@
 	<title>Internet Monitor</title>
 	<link>http://blogs.law.harvard.edu/internetmonitor</link>
 	<description></description>
-	<pubDate>Mon, 24 Mar 2014 19:22:20 +0000</pubDate>
+	<pubDate>Thu, 29 May 2014 16:18:18 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://blogs.law.harvard.edu/</wp:base_site_url>
 	<wp:base_blog_url>http://blogs.law.harvard.edu/internetmonitor</wp:base_blog_url>
 
-	<wp:author><wp:author_id>1907</wp:author_id><wp:author_login>epopko</wp:author_login><wp:author_email>epopko@cyber.law.harvard.edu</wp:author_email><wp:author_display_name><![CDATA[Edward]]></wp:author_display_name><wp:author_first_name><![CDATA[Edward]]></wp:author_first_name><wp:author_last_name><![CDATA[Popko]]></wp:author_last_name></wp:author>
 	<wp:author><wp:author_id>2444</wp:author_id><wp:author_login>rebekah</wp:author_login><wp:author_email>rheacock@cyber.law.harvard.edu</wp:author_email><wp:author_display_name><![CDATA[Rebekah Heacock]]></wp:author_display_name><wp:author_first_name><![CDATA[Rebekah]]></wp:author_first_name><wp:author_last_name><![CDATA[Heacock]]></wp:author_last_name></wp:author>
-	<wp:author><wp:author_id>2620</wp:author_id><wp:author_login>jdcc</wp:author_login><wp:author_email>jclark@cyber.law.harvard.edu</wp:author_email><wp:author_display_name><![CDATA[jdcc]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
-	<wp:author><wp:author_id>4481</wp:author_id><wp:author_login>rbudish</wp:author_login><wp:author_email>rbudish@cyber.law.harvard.edu</wp:author_email><wp:author_display_name><![CDATA[Ryan Budish]]></wp:author_display_name><wp:author_first_name><![CDATA[Ryan]]></wp:author_first_name><wp:author_last_name><![CDATA[Budish]]></wp:author_last_name></wp:author>
 	<wp:author><wp:author_id>5342</wp:author_id><wp:author_login>joshstein</wp:author_login><wp:author_email>jstein@cyber.law.harvard.edu</wp:author_email><wp:author_display_name><![CDATA[Josh Stein]]></wp:author_display_name><wp:author_first_name><![CDATA[Josh]]></wp:author_first_name><wp:author_last_name><![CDATA[Stein]]></wp:author_last_name></wp:author>
-	<wp:author><wp:author_id>5420</wp:author_id><wp:author_login>ryanttb</wp:author_login><wp:author_email>rwestphal@cyber.law.harvard.edu</wp:author_email><wp:author_display_name><![CDATA[ryanttb]]></wp:author_display_name><wp:author_first_name><![CDATA[Ryan]]></wp:author_first_name><wp:author_last_name><![CDATA[Westphal]]></wp:author_last_name></wp:author>
-	<wp:author><wp:author_id>5506</wp:author_id><wp:author_login>rtroumbley</wp:author_login><wp:author_email>rextroumbley@gmail.com</wp:author_email><wp:author_display_name><![CDATA[Rex Troumbley]]></wp:author_display_name><wp:author_first_name><![CDATA[Rex]]></wp:author_first_name><wp:author_last_name><![CDATA[Troumbley]]></wp:author_last_name></wp:author>
 	<wp:author><wp:author_id>5507</wp:author_id><wp:author_login>pkumar</wp:author_login><wp:author_email>pkumar@cyber.law.harvard.edu</wp:author_email><wp:author_display_name><![CDATA[Priya Kumar]]></wp:author_display_name><wp:author_first_name><![CDATA[Priya]]></wp:author_first_name><wp:author_last_name><![CDATA[Kumar]]></wp:author_last_name></wp:author>
-	<wp:author><wp:author_id>5508</wp:author_id><wp:author_login>lgraham</wp:author_login><wp:author_email>lgraham@cyber.law.harvard.edu</wp:author_email><wp:author_display_name><![CDATA[Leigh Llewellyn Graham]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
 	<wp:author><wp:author_id>5509</wp:author_id><wp:author_login>myoungman</wp:author_login><wp:author_email>myoungman@cyber.law.harvard.edu</wp:author_email><wp:author_display_name><![CDATA[Maura Youngman]]></wp:author_display_name><wp:author_first_name><![CDATA[Maura]]></wp:author_first_name><wp:author_last_name><![CDATA[Youngman]]></wp:author_last_name></wp:author>
+	<wp:author><wp:author_id>5506</wp:author_id><wp:author_login>rtroumbley</wp:author_login><wp:author_email>rextroumbley@gmail.com</wp:author_email><wp:author_display_name><![CDATA[Rex Troumbley]]></wp:author_display_name><wp:author_first_name><![CDATA[Rex]]></wp:author_first_name><wp:author_last_name><![CDATA[Troumbley]]></wp:author_last_name></wp:author>
+	<wp:author><wp:author_id>4481</wp:author_id><wp:author_login>rbudish</wp:author_login><wp:author_email>rbudish@cyber.law.harvard.edu</wp:author_email><wp:author_display_name><![CDATA[Ryan Budish]]></wp:author_display_name><wp:author_first_name><![CDATA[Ryan]]></wp:author_first_name><wp:author_last_name><![CDATA[Budish]]></wp:author_last_name></wp:author>
 	<wp:author><wp:author_id>6197</wp:author_id><wp:author_login>internetmonitor</wp:author_login><wp:author_email>info@thenetmonitor.org</wp:author_email><wp:author_display_name><![CDATA[Internet Monitor]]></wp:author_display_name><wp:author_first_name><![CDATA[Internet Monitor]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
+	<wp:author><wp:author_id>5508</wp:author_id><wp:author_login>lgraham</wp:author_login><wp:author_email>lgraham@cyber.law.harvard.edu</wp:author_email><wp:author_display_name><![CDATA[Leigh Llewellyn Graham]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
 	<wp:author><wp:author_id>6209</wp:author_id><wp:author_login>adamlewis</wp:author_login><wp:author_email>alewis@cyber.law.harvard.edu</wp:author_email><wp:author_display_name><![CDATA[Adam Lewis]]></wp:author_display_name><wp:author_first_name><![CDATA[Adam]]></wp:author_first_name><wp:author_last_name><![CDATA[Lewis]]></wp:author_last_name></wp:author>
+	<wp:author><wp:author_id>1907</wp:author_id><wp:author_login>epopko</wp:author_login><wp:author_email>epopko@cyber.law.harvard.edu</wp:author_email><wp:author_display_name><![CDATA[Edward]]></wp:author_display_name><wp:author_first_name><![CDATA[Edward]]></wp:author_first_name><wp:author_last_name><![CDATA[Popko]]></wp:author_last_name></wp:author>
+	<wp:author><wp:author_id>2620</wp:author_id><wp:author_login>jdcc</wp:author_login><wp:author_email>jclark@cyber.law.harvard.edu</wp:author_email><wp:author_display_name><![CDATA[jdcc]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
 
 
-	<generator>http://wordpress.org/?v=3.4.1</generator>
-<creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/3.0/</creativeCommons:license>
+	<generator>http://wordpress.org/?v=3.9.1</generator>
+	<creativeCommons:license>http://creativecommons.org/licenses/by-nc-sa/3.0/</creativeCommons:license>
 
 	<item>
-		<title>Sex, Drugs, and Political Speech in Russia</title>
+				<title>Sex, Drugs, and Political Speech in Russia</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2012/11/15/sex-drugs-and-political-speech-in-russia/</link>
 		<pubDate>Thu, 15 Nov 2012 04:14:26 +0000</pubDate>
-		<dc:creator>joshstein</dc:creator>
+		<dc:creator><![CDATA[joshstein]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=11</guid>
 		<description></description>
 		<content:encoded><![CDATA[Earlier this month, Russia’s new Internet censorship bill (available in English <a href="http://bit.ly/IM_Russia">here</a>, translated by Google machine translation) – designed to block content “containing [child] pornography or extremist ideas, or promoting suicide or use of drugs” – went into effect. <a href="http://en.wikipedia.org/wiki/Roskomnadzor">Roskomnadzor</a>, the Russian government’s media and communication monitoring ministry, will be responsible for enforcing the blacklist, which will be generated by submissions from individual users as well as three government agencies: the Interior Ministry, the Federal Antidrug Agency and the Federal Service for the Supervision of Consumer Rights and Public Welfare.
@@ -97,10 +96,10 @@ Russia’s new law runs parallel to efforts in a number of countries around the 
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#imweekly: May 21, 2013</title>
+				<title>#imweekly: May 21, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/05/21/imweekly-may-21-2013/</link>
 		<pubDate>Tue, 21 May 2013 18:49:30 +0000</pubDate>
-		<dc:creator>rebekah</dc:creator>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=37</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Australia</strong>
@@ -144,10 +143,10 @@ Syria's Internet has experienced multiple <a href="http://www.reuters.com/articl
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Protests in Inner Mongolia vs. Disney theme parks: social media censorship in China</title>
+				<title>Protests in Inner Mongolia vs. Disney theme parks: social media censorship in China</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/05/11/protests-in-inner-mongolia-vs-disney-theme-parks-social-media-censorship-in-china/</link>
 		<pubDate>Sat, 11 May 2013 19:13:08 +0000</pubDate>
-		<dc:creator>rebekah</dc:creator>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=48</guid>
 		<description></description>
 		<content:encoded><![CDATA[A recent <a href="http://gking.harvard.edu/files/gking/files/censored.pdf">paper</a> from Harvard University researchers Gary King, Jennifer Pan, and Margaret E. Roberts contains a neat "censorship magnitude" graph showing which types of social media posts are most and least likely to be taken down by Chinese censors:
@@ -181,10 +180,10 @@ Read the full paper: <strong><a href="http://gking.harvard.edu/files/gking/files
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#imweekly: May 29, 2013</title>
+				<title>#imweekly: May 29, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/05/29/imweekly-may-29-2013/</link>
 		<pubDate>Wed, 29 May 2013 15:17:13 +0000</pubDate>
-		<dc:creator>rebekah</dc:creator>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=57</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Cuba</strong>
@@ -226,10 +225,10 @@ Russia's most popular social network, VKontakte, <a href="http://blogs.blouinnew
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>US lifts sanctions on technology exports to Iran</title>
+				<title>US lifts sanctions on technology exports to Iran</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/06/03/us-lifts-sanctions-on-technology-exports-to-iran/</link>
 		<pubDate>Mon, 03 Jun 2013 17:33:54 +0000</pubDate>
-		<dc:creator>rebekah</dc:creator>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=63</guid>
 		<description></description>
 		<content:encoded><![CDATA[The US Department of the Treasury announced last week that it is <a href="http://www.treasury.gov/press-center/press-releases/Pages/jl1961.aspx">lifting sanctions</a> against Iran that have prevented the export and provision of software, hardware, and communications services to the country.  The Treasury has issued a <a href="http://www.treasury.gov/resource-center/sanctions/Programs/Documents/iran_gld.pdf">General License</a> (PDF) that permits US companies and citizens to provide:
@@ -267,10 +266,10 @@ Iranian activist groups have been receptive, saying that the sanctions were ulti
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Tiananmen Square Anniversary: China Experiments with Subtle Censorship and Netizens Fight Back with Images</title>
+				<title>Tiananmen Square Anniversary: China Experiments with Subtle Censorship and Netizens Fight Back with Images</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/06/04/tiananmen-square-anniversary-china-experiments-with-subtle-censorship-and-netizens-fight-back-with-images/</link>
 		<pubDate>Tue, 04 Jun 2013 21:02:25 +0000</pubDate>
-		<dc:creator>pkumar</dc:creator>
+		<dc:creator><![CDATA[pkumar]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=76</guid>
 		<description></description>
 		<content:encoded><![CDATA[<p id="docs-internal-guid--142210a-10dd-01d5-e299-f98559479379" dir="ltr">To ensure its country’s Internet remains in good working order, the Chinese government has used June 4 as an unofficial "Internet maintenance" day. In 2009,<a href="http://www.techinasia.com/june-4-china-unofficial-orwellian-internet-maintenance-day/"> more than 300 sites went down</a>. In 2010, a slew of blocked sites (many pornographic)<a href="https://opennet.net/blog/2010/06/china-blocks-foursquare-unblocks-porn"> became accessible</a>. Last year, the Shanghai Stock Exchange Composite Index dropped 64.89 points, leading the popular Chinese microblogging service Sina Weibo to<a href="https://opennet.net/blog/2012/06/china-blocks-references-stock-exchange-tiananmen-anniversary"> ban searches</a> of related terms. Why such erratic behavior? June 4 also marks the day when, in 1989, tanks entered Tiananmen Square to violently quash pro-democracy protests.</p>
@@ -301,10 +300,10 @@ On May 31, the Chinese government also <a href="http://thenextweb.com/asia/2013/
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Singapore Media License Requirement &quot;Casts a Chill&quot; on Free Expression</title>
+				<title>Singapore Media License Requirement &quot;Casts a Chill&quot; on Free Expression</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/06/07/singapore-media-license-requirement-casts-a-chill-on-free-expression/</link>
 		<pubDate>Fri, 07 Jun 2013 18:44:04 +0000</pubDate>
-		<dc:creator>pkumar</dc:creator>
+		<dc:creator><![CDATA[pkumar]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=93</guid>
 		<description></description>
 		<content:encoded><![CDATA[<p dir="ltr">The Straits Times <a href="http://www.straitstimes.com/breaking-news/singapore/story/over-150-singapore-websites-and-blogs-hold-24-hour-blackout-protest-20">reported</a> that more than 150 websites and blogs in Singapore went black yesterday to protest a new government-imposed licensing requirement that, “casts a chill over the city-state’s robust and free-wheeling online communities,” said Cynthia Wong, Human Rights Watch’s senior Internet researcher, <a href="http://www.hrw.org/news/2013/06/07/singapore-licensing-regime-chills-news-climate">in a statement</a>.</p>
@@ -332,10 +331,10 @@ The government also said the measure does not apply to blogs, though it <a href=
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#imweekly: June 10, 2013</title>
+				<title>#imweekly: June 10, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/06/10/imweekly-june-10-2013/</link>
 		<pubDate>Mon, 10 Jun 2013 13:09:55 +0000</pubDate>
-		<dc:creator>myoungman</dc:creator>
+		<dc:creator><![CDATA[myoungman]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=129</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Jordan</strong>
@@ -373,10 +372,10 @@ As protests swell in Turkey, Internet users are <a href="http://www.guardian.co.
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Culture Memes as Creative Resistance on Tiananmen Square Anniversary</title>
+				<title>Culture Memes as Creative Resistance on Tiananmen Square Anniversary</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/06/11/culture-memes-as-creative-resistance-on-tiananmen-square-anniversary/</link>
 		<pubDate>Tue, 11 Jun 2013 20:25:56 +0000</pubDate>
-		<dc:creator>internetmonitor</dc:creator>
+		<dc:creator><![CDATA[internetmonitor]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=144</guid>
 		<description></description>
 		<content:encoded><![CDATA[<em>This is a guest post.</em>
@@ -428,10 +427,10 @@ While censors continue to add new words to the <a href="https://chinadigitaltime
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Social Network Alternatives</title>
+				<title>Social Network Alternatives</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/06/14/social-network-alternatives/</link>
 		<pubDate>Fri, 14 Jun 2013 15:16:54 +0000</pubDate>
-		<dc:creator>rtroumbley</dc:creator>
+		<dc:creator><![CDATA[rtroumbley]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=167</guid>
 		<description></description>
 		<content:encoded><![CDATA[[caption id="attachment_199" align="alignright" width="192"]<img class=" wp-image-199   " style="border-color: #dddddd;background-color: #ffffff" src="http://blogs.law.harvard.edu/internetmonitor/files/2013/06/6259972117_c851b7166c_b-300x249.jpg" alt="" width="192" height="159" /> Courtesy of AJ Cann/Flickr[/caption]
@@ -477,6 +476,32 @@ For those not ready to completely abandon Facebook, Twitter, or Google+ there ar
 			<wp:meta_value><![CDATA[240]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:comment>
+			<wp:comment_id>6158</wp:comment_id>
+			<wp:comment_author><![CDATA[Jottar]]></wp:comment_author>
+			<wp:comment_author_email>jottarweb@gmail.com</wp:comment_author_email>
+			<wp:comment_author_url>http://www.jottar.com</wp:comment_author_url>
+			<wp:comment_author_IP>121.214.213.202</wp:comment_author_IP>
+			<wp:comment_date>2014-05-17 11:40:17</wp:comment_date>
+			<wp:comment_date_gmt>2014-05-17 15:40:17</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Facebook has really lost its appeal to me now, these days you can't choose what you want to see on your newsfeed 'Facebook decides for you', even if you like pages and want to see their content it depends now how much the page owners pay Facebook to reach a percentage of their fans. Another social networking alternative I have found with a bit of a difference is http://www.jottar.com check it out.]]></wp:comment_content>
+			<wp:comment_approved>0</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_result</wp:meta_key>
+				<wp:meta_value><![CDATA[false]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1400341217.1696679592132568359375;s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_as_submitted</wp:meta_key>
+				<wp:meta_value><![CDATA[a:66:{s:15:"comment_post_ID";i:167;s:14:"comment_author";s:6:"Jottar";s:20:"comment_author_email";s:19:"jottarweb@gmail.com";s:18:"comment_author_url";s:21:"http://www.jottar.com";s:15:"comment_content";s:400:"Facebook has really lost its appeal to me now, these days you can't choose what you want to see on your newsfeed 'Facebook decides for you', even if you like pages and want to see their content it depends now how much the page owners pay Facebook to reach a percentage of their fans. Another social networking alternative I have found with a bit of a difference is http://www.jottar.com check it out.";s:12:"comment_type";s:0:"";s:14:"comment_parent";i:0;s:7:"user_ID";i:0;s:7:"user_ip";s:15:"121.214.213.202";s:10:"user_agent";s:109:"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/537.36";s:8:"referrer";s:85:"https://blogs.law.harvard.edu/internetmonitor/2013/06/14/social-network-alternatives/";s:4:"blog";s:44:"http://blogs.law.harvard.edu/internetmonitor";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:85:"https://blogs.law.harvard.edu/internetmonitor/2013/06/14/social-network-alternatives/";s:21:"akismet_comment_nonce";s:6:"passed";s:11:"POST_author";s:6:"Jottar";s:10:"POST_email";s:19:"jottarweb@gmail.com";s:8:"POST_url";s:21:"http://www.jottar.com";s:12:"POST_comment";s:400:"Facebook has really lost its appeal to me now, these days you can't choose what you want to see on your newsfeed 'Facebook decides for you', even if you like pages and want to see their content it depends now how much the page owners pay Facebook to reach a percentage of their fans. Another social networking alternative I have found with a bit of a difference is http://www.jottar.com check it out.";s:11:"POST_submit";s:12:"Post Comment";s:20:"POST_comment_post_ID";s:3:"167";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"4d2bfc7e10";s:10:"POST_ak_js";s:13:"1400341177947";s:18:"POST_bb2_screener_";s:26:"1400341175 121.214.213.202";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:37:"/internetmonitor/wp-comments-post.php";s:14:"REDIRECT_HTTPS";s:2:"on";s:20:"REDIRECT_SSL_TLS_SNI";s:21:"blogs.law.harvard.edu";s:15:"REDIRECT_STATUS";s:3:"200";s:5:"HTTPS";s:2:"on";s:11:"SSL_TLS_SNI";s:21:"blogs.law.harvard.edu";s:9:"HTTP_HOST";s:21:"blogs.law.harvard.edu";s:15:"HTTP_CONNECTION";s:10:"keep-alive";s:14:"CONTENT_LENGTH";s:3:"649";s:18:"HTTP_CACHE_CONTROL";s:9:"max-age=0";s:11:"HTTP_ACCEPT";s:74:"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";s:11:"HTTP_ORIGIN";s:29:"https://blogs.law.harvard.edu";s:15:"HTTP_USER_AGENT";s:109:"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/537.36";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:12:"HTTP_REFERER";s:85:"https://blogs.law.harvard.edu/internetmonitor/2013/06/14/social-network-alternatives/";s:20:"HTTP_ACCEPT_ENCODING";s:17:"gzip,deflate,sdch";s:20:"HTTP_ACCEPT_LANGUAGE";s:14:"en-US,en;q=0.8";s:11:"HTTP_COOKIE";s:0:"";s:4:"PATH";s:75:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:21:"blogs.law.harvard.edu";s:11:"SERVER_ADDR";s:14:"128.103.64.114";s:11:"SERVER_PORT";s:3:"443";s:11:"REMOTE_ADDR";s:15:"121.214.213.202";s:13:"DOCUMENT_ROOT";s:30:"/web/ethan/wpmu/docs/wpmu-prod";s:12:"SERVER_ADMIN";s:31:"webmaster@cyber.law.harvard.edu";s:15:"SCRIPT_FILENAME";s:51:"/web/ethan/wpmu/docs/wpmu-prod/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"64147";s:12:"REDIRECT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.1";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1400341216";s:4:"argv";s:0:"";s:4:"argc";s:1:"0";s:25:"comment_post_modified_gmt";s:19:"2013-06-14 16:26:02";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
+		<wp:comment>
 			<wp:comment_id>1980</wp:comment_id>
 			<wp:comment_author><![CDATA[Social Network Alternatives | Political Query]]></wp:comment_author>
 			<wp:comment_author_email></wp:comment_author_email>
@@ -504,10 +529,10 @@ For those not ready to completely abandon Facebook, Twitter, or Google+ there ar
 		</wp:comment>
 	</item>
 	<item>
-		<title>Government “Bird Dogs” on the Loose in Saudi Arabia</title>
+				<title>Government “Bird Dogs” on the Loose in Saudi Arabia</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/06/13/government-bird-dogs-on-the-loose-in-saudi-arabia/</link>
 		<pubDate>Thu, 13 Jun 2013 14:07:40 +0000</pubDate>
-		<dc:creator>lgraham</dc:creator>
+		<dc:creator><![CDATA[lgraham]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=180</guid>
 		<description></description>
 		<content:encoded><![CDATA[In clashes between Saudi citizens and the state over ideology and technology, Twitter has become a highly contested space. Internet monitoring and censorship in the Kingdom is not new though. According to a 2009 report from <a href="https://opennet.net/studies/saudiarabia2007">the Open Net Initiative</a>, “Saudi Arabia filters sites related to opposition political groups, human rights issues, and religious content deemed offensive to Muslims.” <a href="http://www.freedomhouse.org/sites/default/files/Saudi%20Arabia%202012.pdf">Freedom House</a> published a report in 2012 putting Internet penetration in Saudi’s population of 29 million at 49%. It also stated that 51% of Saudis are active Twitter users, one of the highest usage rates in the world. In recent months, religious and political leaders as well as everyday Twitter users have taken to the ethereal skies of Twitter to express their views on how and by whom the social networking site should be used.
@@ -539,32 +564,6 @@ It is easy to adopt <a href="http://en.wikipedia.org/wiki/Ornithology">ornitholo
 			<wp:meta_key>_edit_last</wp:meta_key>
 			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
 		</wp:postmeta>
-		<wp:comment>
-			<wp:comment_id>506</wp:comment_id>
-			<wp:comment_author><![CDATA[Lou Cristillo]]></wp:comment_author>
-			<wp:comment_author_email>musnyc@gmail.com</wp:comment_author_email>
-			<wp:comment_author_url></wp:comment_author_url>
-			<wp:comment_author_IP>192.168.10.114</wp:comment_author_IP>
-			<wp:comment_date>2013-06-13 17:35:33</wp:comment_date>
-			<wp:comment_date_gmt>2013-06-13 21:35:33</wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[Thanks for sharing the link to your blog post, and congratulations on the first of what will be many more postings.  Liked the extended ornithological metaphor.   There is a certain irony, however, in our preoccupation with the crude efforts of the Saudi conservative establishment to limit freedoms of expression in light of the revelations about the massive scale of the NSA's surveillance of internet communications of American citizens.  If Saudi clerics are behaving like "bird dogs", a pack of wolves seems like the right metaphor to describe how the US government is behaving!]]></wp:comment_content>
-			<wp:comment_approved>1</wp:comment_approved>
-			<wp:comment_type></wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_result</wp:meta_key>
-				<wp:meta_value><![CDATA[false]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1371159333.64";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1371209880.23";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
-			</wp:commentmeta>
-		</wp:comment>
 		<wp:comment>
 			<wp:comment_id>503</wp:comment_id>
 			<wp:comment_author><![CDATA[Kimberly Deatherage Mominah]]></wp:comment_author>
@@ -624,6 +623,32 @@ Wouldn't it be cool if there was a "ReTweet" don't "Retreat" movement?! With t-s
 			</wp:commentmeta>
 		</wp:comment>
 		<wp:comment>
+			<wp:comment_id>506</wp:comment_id>
+			<wp:comment_author><![CDATA[Lou Cristillo]]></wp:comment_author>
+			<wp:comment_author_email>musnyc@gmail.com</wp:comment_author_email>
+			<wp:comment_author_url></wp:comment_author_url>
+			<wp:comment_author_IP>192.168.10.114</wp:comment_author_IP>
+			<wp:comment_date>2013-06-13 17:35:33</wp:comment_date>
+			<wp:comment_date_gmt>2013-06-13 21:35:33</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Thanks for sharing the link to your blog post, and congratulations on the first of what will be many more postings.  Liked the extended ornithological metaphor.   There is a certain irony, however, in our preoccupation with the crude efforts of the Saudi conservative establishment to limit freedoms of expression in light of the revelations about the massive scale of the NSA's surveillance of internet communications of American citizens.  If Saudi clerics are behaving like "bird dogs", a pack of wolves seems like the right metaphor to describe how the US government is behaving!]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_result</wp:meta_key>
+				<wp:meta_value><![CDATA[false]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1371159333.64";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1371209880.23";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
+		<wp:comment>
 			<wp:comment_id>1972</wp:comment_id>
 			<wp:comment_author><![CDATA[Flying Past Filters and Firewalls: Pigeons as Circumvention Tools | Political Query]]></wp:comment_author>
 			<wp:comment_author_email></wp:comment_author_email>
@@ -651,10 +676,10 @@ Wouldn't it be cool if there was a "ReTweet" don't "Retreat" movement?! With t-s
 		</wp:comment>
 	</item>
 	<item>
-		<title>Twitter&#039;s Geography: Visualized and Explained</title>
+				<title>Twitter&#039;s Geography: Visualized and Explained</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/06/17/twitters-geography-visualized-and-explained/</link>
 		<pubDate>Mon, 17 Jun 2013 19:47:36 +0000</pubDate>
-		<dc:creator>pkumar</dc:creator>
+		<dc:creator><![CDATA[pkumar]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=247</guid>
 		<description></description>
 		<content:encoded><![CDATA[Twitter’s CEO Dick Costolo has called the popular microblogging service “<a href="http://gigaom.com/2012/11/27/dick-costolo-says-twitter-is-a-reinvention-of-the-town-square-but-with-tv/">the pulse of the planet</a>.” With a little less than <a href="http://blogs.smithsonianmag.com/science/2013/05/the-world-according-to-twitter-in-maps/">eight percent</a> of the world’s population on Twitter, that pulse has room to grow. Nevertheless, recent big data research into the geography of the Twittersphere sheds light on where users tweet, with whom they tweet, and what information they share. The findings illustrate that Twitter helps people transcend geographic boundaries that restricted communication in a pre-digital age.
@@ -907,32 +932,6 @@ Want to see more Twitter visualizations? The company crunches its own data and p
 			</wp:commentmeta>
 		</wp:comment>
 		<wp:comment>
-			<wp:comment_id>2174</wp:comment_id>
-			<wp:comment_author><![CDATA[Taking the pulse of the planet: How Twitter erases geography | BaciNews]]></wp:comment_author>
-			<wp:comment_author_email></wp:comment_author_email>
-			<wp:comment_author_url>http://www.bacinews.com/?p=23948</wp:comment_author_url>
-			<wp:comment_author_IP>192.168.10.114</wp:comment_author_IP>
-			<wp:comment_date>2013-12-28 22:32:38</wp:comment_date>
-			<wp:comment_date_gmt>2013-12-29 02:32:38</wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[[...] ever get to see those connections represented visually. That&#8217;s why research projects like a recent study from a team of scientists at the University of Illinois are so valuable &#8212; they allow us to see how these [...]]]></wp:comment_content>
-			<wp:comment_approved>1</wp:comment_approved>
-			<wp:comment_type>pingback</wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_result</wp:meta_key>
-				<wp:meta_value><![CDATA[false]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1388284358.68";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1390588655.61";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
-			</wp:commentmeta>
-		</wp:comment>
-		<wp:comment>
 			<wp:comment_id>602</wp:comment_id>
 			<wp:comment_author><![CDATA[Taking the pulse of the planet: How Twitter erases geography &laquo; Tony Rocha Official Blog]]></wp:comment_author>
 			<wp:comment_author_email></wp:comment_author_email>
@@ -958,12 +957,38 @@ Want to see more Twitter visualizations? The company crunches its own data and p
 				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1371892892.98";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
 			</wp:commentmeta>
 		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>2174</wp:comment_id>
+			<wp:comment_author><![CDATA[Taking the pulse of the planet: How Twitter erases geography | BaciNews]]></wp:comment_author>
+			<wp:comment_author_email></wp:comment_author_email>
+			<wp:comment_author_url>http://www.bacinews.com/?p=23948</wp:comment_author_url>
+			<wp:comment_author_IP>192.168.10.114</wp:comment_author_IP>
+			<wp:comment_date>2013-12-28 22:32:38</wp:comment_date>
+			<wp:comment_date_gmt>2013-12-29 02:32:38</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[[...] ever get to see those connections represented visually. That&#8217;s why research projects like a recent study from a team of scientists at the University of Illinois are so valuable &#8212; they allow us to see how these [...]]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type>pingback</wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_result</wp:meta_key>
+				<wp:meta_value><![CDATA[false]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1388284358.68";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1390588655.61";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
 	</item>
 	<item>
-		<title>#imweekly: June 17, 2013</title>
+				<title>#imweekly: June 17, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/06/17/imweekly-june-17-2013/</link>
 		<pubDate>Tue, 18 Jun 2013 00:17:26 +0000</pubDate>
-		<dc:creator>internetmonitor</dc:creator>
+		<dc:creator><![CDATA[internetmonitor]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=288</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>United States</strong>
@@ -1000,10 +1025,10 @@ Iranian Gmail users were <a href="http://www.wired.com/threatlevel/2013/06/iran-
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Cloud Computing, Cloud Polluting?</title>
+				<title>Cloud Computing, Cloud Polluting?</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/06/24/cloud-computing-cloud-polluting/</link>
 		<pubDate>Mon, 24 Jun 2013 23:15:00 +0000</pubDate>
-		<dc:creator>rtroumbley</dc:creator>
+		<dc:creator><![CDATA[rtroumbley]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=293</guid>
 		<description></description>
 		<content:encoded><![CDATA[[caption id="attachment_302" align="alignright" width="231"]<img class=" wp-image-302" style="margin: 0px;border: 0px" src="http://blogs.law.harvard.edu/internetmonitor/files/2013/06/Bitcoin-Mining-300x166.png" alt="" width="231" height="128" /> courtesy of PayBit.pl[/caption]
@@ -1095,13 +1120,13 @@ While Adobe’s new cloud services might use less energy than what individual co
 			<wp:comment_date>2014-03-17 10:00:19</wp:comment_date>
 			<wp:comment_date_gmt>2014-03-17 14:00:19</wp:comment_date_gmt>
 			<wp:comment_content><![CDATA[-How do you view the role of the Bitcoin Foundation for organizing activities and initiatives around Bitcoin?]]></wp:comment_content>
-			<wp:comment_approved>0</wp:comment_approved>
+			<wp:comment_approved>1</wp:comment_approved>
 			<wp:comment_type></wp:comment_type>
 			<wp:comment_parent>0</wp:comment_parent>
 			<wp:comment_user_id>0</wp:comment_user_id>
 			<wp:commentmeta>
-				<wp:meta_key>akismet_as_submitted</wp:meta_key>
-				<wp:meta_value><![CDATA[a:65:{s:15:"comment_post_ID";s:3:"293";s:14:"comment_author";s:3:"CEX";s:20:"comment_author_email";s:10:"web@cex.io";s:18:"comment_author_url";s:15:"https://cex.io/";s:15:"comment_content";s:109:"-How do you view the role of the Bitcoin Foundation for organizing activities and initiatives around Bitcoin?";s:12:"comment_type";s:0:"";s:14:"comment_parent";s:1:"0";s:7:"user_ID";s:1:"0";s:7:"user_ip";s:14:"193.239.73.222";s:10:"user_agent";s:109:"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.146 Safari/537.36";s:8:"referrer";s:89:"https://blogs.law.harvard.edu/internetmonitor/2013/06/24/cloud-computing-cloud-polluting/";s:4:"blog";s:44:"http://blogs.law.harvard.edu/internetmonitor";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:89:"https://blogs.law.harvard.edu/internetmonitor/2013/06/24/cloud-computing-cloud-polluting/";s:21:"akismet_comment_nonce";s:6:"passed";s:11:"POST_author";s:3:"CEX";s:10:"POST_email";s:10:"web@cex.io";s:8:"POST_url";s:15:"https://cex.io/";s:12:"POST_comment";s:111:" -How do you view the role of the Bitcoin Foundation for organizing activities and initiatives around Bitcoin? ";s:11:"POST_submit";s:12:"Post Comment";s:20:"POST_comment_post_ID";s:3:"293";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"f6f4698641";s:18:"POST_bb2_screener_";s:25:"1395064724 193.239.73.222";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:37:"/internetmonitor/wp-comments-post.php";s:14:"REDIRECT_HTTPS";s:2:"on";s:20:"REDIRECT_SSL_TLS_SNI";s:21:"blogs.law.harvard.edu";s:15:"REDIRECT_STATUS";s:3:"200";s:5:"HTTPS";s:2:"on";s:11:"SSL_TLS_SNI";s:21:"blogs.law.harvard.edu";s:9:"HTTP_HOST";s:21:"blogs.law.harvard.edu";s:15:"HTTP_CONNECTION";s:10:"keep-alive";s:14:"CONTENT_LENGTH";s:3:"309";s:18:"HTTP_CACHE_CONTROL";s:9:"max-age=0";s:11:"HTTP_ACCEPT";s:74:"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";s:11:"HTTP_ORIGIN";s:29:"https://blogs.law.harvard.edu";s:15:"HTTP_USER_AGENT";s:109:"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.146 Safari/537.36";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:12:"HTTP_REFERER";s:89:"https://blogs.law.harvard.edu/internetmonitor/2013/06/24/cloud-computing-cloud-polluting/";s:20:"HTTP_ACCEPT_ENCODING";s:17:"gzip,deflate,sdch";s:20:"HTTP_ACCEPT_LANGUAGE";s:35:"ru-RU,ru;q=0.8,en-US;q=0.6,en;q=0.4";s:11:"HTTP_COOKIE";s:0:"";s:4:"PATH";s:75:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:21:"blogs.law.harvard.edu";s:11:"SERVER_ADDR";s:14:"128.103.64.114";s:11:"SERVER_PORT";s:3:"443";s:11:"REMOTE_ADDR";s:14:"193.239.73.222";s:13:"DOCUMENT_ROOT";s:30:"/web/ethan/wpmu/docs/wpmu-prod";s:12:"SERVER_ADMIN";s:31:"webmaster@cyber.law.harvard.edu";s:15:"SCRIPT_FILENAME";s:51:"/web/ethan/wpmu/docs/wpmu-prod/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"59402";s:12:"REDIRECT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.1";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1395064819";s:4:"argv";s:0:"";s:4:"argc";s:1:"0";s:25:"comment_post_modified_gmt";s:19:"2013-06-24 23:15:00";}]]></wp:meta_value>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1398716499.87";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
 			</wp:commentmeta>
 			<wp:commentmeta>
 				<wp:meta_key>akismet_history</wp:meta_key>
@@ -1114,10 +1139,10 @@ While Adobe’s new cloud services might use less energy than what individual co
 		</wp:comment>
 	</item>
 	<item>
-		<title>Syrian Citizens Launch Memes and Throw Shoes in Viral Internet Campaign</title>
+				<title>Syrian Citizens Launch Memes and Throw Shoes in Viral Internet Campaign</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/06/21/syrian-citizens-launch-memes-and-throw-shoes-in-viral-internet-campaign/</link>
 		<pubDate>Fri, 21 Jun 2013 16:17:10 +0000</pubDate>
-		<dc:creator>lgraham</dc:creator>
+		<dc:creator><![CDATA[lgraham]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=328</guid>
 		<description></description>
 		<content:encoded><![CDATA[Syria’s tech-savvy and socially engaged citizens are resisting the state in creative ways. Conflict is never black and white, and in today’s ever-more-connected world, attempts to address conflict are often quite colorful. This was evident earlier this month when <a href="http://blogs.law.harvard.edu/internetmonitor/2013/06/11/culture-memes-as-creative-resistance-on-tiananmen-square-anniversary/">Chinese bloggers morphed a classic photo</a> of citizen resistance from Tiananmen Square, changing a line of government tanks into a parade of big yellow ducks. The image was powerful and provocative; thus <a href="http://anxiaostudio.com/2011/12/28/social-media-street-art-censorship-chinas-political-memes-and-the-cute-cat-theory/">the role of the meme in Chinese social media</a>.<span style="text-align: center"> </span>
@@ -1162,10 +1187,10 @@ Citizen-generated versions of the posters showed up on the streets and were wide
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#imweekly: June 24, 2013</title>
+				<title>#imweekly: June 24, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/06/24/imweekly-june-24-2013/</link>
 		<pubDate>Mon, 24 Jun 2013 19:55:00 +0000</pubDate>
-		<dc:creator>rtroumbley</dc:creator>
+		<dc:creator><![CDATA[rtroumbley]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=350</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Tunisia</strong>
@@ -1205,10 +1230,10 @@ Facebook announced it has fixed a <a href="https://www.facebook.com/notes/facebo
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Automating Slanderous Search</title>
+				<title>Automating Slanderous Search</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/06/27/autocompleteslander/</link>
 		<pubDate>Thu, 27 Jun 2013 14:50:04 +0000</pubDate>
-		<dc:creator>rtroumbley</dc:creator>
+		<dc:creator><![CDATA[rtroumbley]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=356</guid>
 		<description></description>
 		<content:encoded><![CDATA[[caption id="attachment_415" align="alignright" width="173"]<img class=" wp-image-415     " src="http://blogs.law.harvard.edu/internetmonitor/files/2013/06/16c_dr_frankensteins_lab-217x300.jpg" alt="" width="173" height="240" /> Bill Froberg/Flickr[/caption]
@@ -1249,32 +1274,6 @@ Payne’s manipulation of Google’s autocomplete and Google’s own reaction sh
 			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:comment>
-			<wp:comment_id>1978</wp:comment_id>
-			<wp:comment_author><![CDATA[Automating Slanderous Search | Political Query]]></wp:comment_author>
-			<wp:comment_author_email></wp:comment_author_email>
-			<wp:comment_author_url>http://politicalquery.com/automating-slanderous-search/</wp:comment_author_url>
-			<wp:comment_author_IP>192.168.10.114</wp:comment_author_IP>
-			<wp:comment_date>2013-11-27 22:15:41</wp:comment_date>
-			<wp:comment_date_gmt>2013-11-28 02:15:41</wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[[...] [Read the rest of this article at Internet Monitor]          &laquo; Cloud Computing, Cloud Polluting? &raquo; Is the Internet for Porn? [...]]]></wp:comment_content>
-			<wp:comment_approved>1</wp:comment_approved>
-			<wp:comment_type>pingback</wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:12:"1386017643.6";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1385604941.02";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_result</wp:meta_key>
-				<wp:meta_value><![CDATA[false]]></wp:meta_value>
-			</wp:commentmeta>
-		</wp:comment>
-		<wp:comment>
 			<wp:comment_id>850</wp:comment_id>
 			<wp:comment_author><![CDATA[Steering Through Spellcheck: When Apple Doesn&#8217;t Like Abortion and Google Hates Fuscia | Political Query]]></wp:comment_author>
 			<wp:comment_author_email></wp:comment_author_email>
@@ -1300,12 +1299,38 @@ Payne’s manipulation of Google’s autocomplete and Google’s own reaction sh
 				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1374069608.06";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
 			</wp:commentmeta>
 		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>1978</wp:comment_id>
+			<wp:comment_author><![CDATA[Automating Slanderous Search | Political Query]]></wp:comment_author>
+			<wp:comment_author_email></wp:comment_author_email>
+			<wp:comment_author_url>http://politicalquery.com/automating-slanderous-search/</wp:comment_author_url>
+			<wp:comment_author_IP>192.168.10.114</wp:comment_author_IP>
+			<wp:comment_date>2013-11-27 22:15:41</wp:comment_date>
+			<wp:comment_date_gmt>2013-11-28 02:15:41</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[[...] [Read the rest of this article at Internet Monitor]          &laquo; Cloud Computing, Cloud Polluting? &raquo; Is the Internet for Porn? [...]]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type>pingback</wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:12:"1386017643.6";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1385604941.02";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_result</wp:meta_key>
+				<wp:meta_value><![CDATA[false]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
 	</item>
 	<item>
-		<title>Greek Citizen Journalists Play Prominent Role in Response to Media Blackout</title>
+				<title>Greek Citizen Journalists Play Prominent Role in Response to Media Blackout</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/06/27/greek-citizen-journalists-play-prominent-role-in-response-to-media-blackout/</link>
 		<pubDate>Thu, 27 Jun 2013 17:56:06 +0000</pubDate>
-		<dc:creator>lgraham</dc:creator>
+		<dc:creator><![CDATA[lgraham]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=436</guid>
 		<description></description>
 		<content:encoded><![CDATA[<a href="http://international.radiobubble.gr/2013/06/greece-government-wants-to-shut-down.html">On June 11,</a> signals for the Hellenic Broadcasting Corporation, known as ERT, went silent. Immediately after the government-ordered blackout, Greek journalists, many of whom had just lost their jobs, staged a 24-hour strike, refused to leave ERT headquarters, and continued to report the news on the Internet through the European Broadcasting Union, which is maintaining ERT's radio and television frequencies via live stream on the <a href="http://www3.ebu.ch/cms/en/sites/ebu/contents/news/2013/06/monitor-ert-online.html">EUB website</a>.
@@ -1345,10 +1370,10 @@ In addition to galvanizing local citizens and members of the Greek diaspora, onl
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Law Enforcement and Mining Social Media: Where&#039;s the Oversight?</title>
+				<title>Law Enforcement and Mining Social Media: Where&#039;s the Oversight?</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/07/01/law-enforcement-and-mining-social-media-wheres-the-oversight/</link>
 		<pubDate>Mon, 01 Jul 2013 15:16:41 +0000</pubDate>
-		<dc:creator>pkumar</dc:creator>
+		<dc:creator><![CDATA[pkumar]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=453</guid>
 		<description></description>
 		<content:encoded><![CDATA[A Pennsylvania detective had a nickname of a suspect, but no real name. He turned to Facebook, found a picture, and eventually apprehended the person. This anecdote from a <a href="http://www.washingtonpost.com/business/technology/state-photo-id-databases-become-troves-for-police/2013/06/16/6f014bd4-ced5-11e2-8845-d970ccb04497_story.html"><em>Washington Post</em> investigation</a> into law enforcement use of facial recognition software illustrates how social media can be a boon for catching criminals.
@@ -1397,10 +1422,10 @@ Predictive policing has <a href="http://www.fbi.gov/stats-services/publications/
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#imweekly: July 1, 2013</title>
+				<title>#imweekly: July 1, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/07/01/imweekly-july-1-2013/</link>
 		<pubDate>Mon, 01 Jul 2013 18:50:37 +0000</pubDate>
-		<dc:creator>pkumar</dc:creator>
+		<dc:creator><![CDATA[pkumar]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=488</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>North &amp; South Korea</strong>
@@ -1445,10 +1470,10 @@ Several provisions in a communication law that Ecuador’s National Assembly pas
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Is the Internet for Porn?</title>
+				<title>Is the Internet for Porn?</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/07/02/is-the-internet-for-porn/</link>
 		<pubDate>Tue, 02 Jul 2013 13:31:01 +0000</pubDate>
-		<dc:creator>rtroumbley</dc:creator>
+		<dc:creator><![CDATA[rtroumbley]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=427</guid>
 		<description></description>
 		<content:encoded><![CDATA[[caption id="attachment_512" align="alignright" width="233"]<img class=" wp-image-512       " src="http://blogs.law.harvard.edu/internetmonitor/files/2013/07/2139214660_14269f79e2_b-300x225.jpg" alt="" width="233" height="175" /> Warning posted at Indian Cybercafe: credit Kaustav Bhattacharya/Flickr[/caption]
@@ -1522,10 +1547,10 @@ Online pornography has also influenced the development of electronic censorship 
 		</wp:comment>
 	</item>
 	<item>
-		<title>Flying Past Filters and Firewalls: Pigeons as Circumvention Tools</title>
+				<title>Flying Past Filters and Firewalls: Pigeons as Circumvention Tools</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/07/08/flying-past-filters-and-firewalls-pigeons-as-circumvention-tools/</link>
 		<pubDate>Mon, 08 Jul 2013 19:51:40 +0000</pubDate>
-		<dc:creator>rtroumbley</dc:creator>
+		<dc:creator><![CDATA[rtroumbley]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=517</guid>
 		<description></description>
 		<content:encoded><![CDATA[[caption id="attachment_533" align="alignright" width="126"]<img class="wp-image-533 " src="http://blogs.law.harvard.edu/internetmonitor/files/2013/07/8473467620_511e30e321_c-197x300.jpg" alt="" width="126" height="192" /> credit: zeevveez/Flickr[/caption]
@@ -1576,16 +1601,17 @@ Even if the increasing gap between storage and mobility doesn't become a problem
 			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:comment>
-			<wp:comment_id>2173</wp:comment_id>
-			<wp:comment_author><![CDATA[Pigeonet: are pigeons faster and safer than the internet | STALIN&#039;S MOUSTACHE]]></wp:comment_author>
-			<wp:comment_author_email></wp:comment_author_email>
-			<wp:comment_author_url>http://stalinsmoustache.wordpress.com/2013/12/28/pigeonet-are-pigeons-faster-and-safer-than-the-internet/</wp:comment_author_url>
-			<wp:comment_author_IP>192.168.10.114</wp:comment_author_IP>
-			<wp:comment_date>2013-12-28 08:07:39</wp:comment_date>
-			<wp:comment_date_gmt>2013-12-28 12:07:39</wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[[...] pigeons the answer to internet speed and safety from spying? An intriguing suggestion from the Internet Monitor suggests so. A snippet: In 2009, a South African marketing company targeted South Africa’s [...]]]></wp:comment_content>
+			<wp:comment_id>785</wp:comment_id>
+			<wp:comment_author><![CDATA[Tjebbe van Tijen]]></wp:comment_author>
+			<wp:comment_author_email>tjebbe@imaginarymuseum.org</wp:comment_author_email>
+			<wp:comment_author_url>http://imaginarymuseum.org/</wp:comment_author_url>
+			<wp:comment_author_IP>92.109.98.9</wp:comment_author_IP>
+			<wp:comment_date>2013-07-09 05:44:36</wp:comment_date>
+			<wp:comment_date_gmt>2013-07-09 09:44:36</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Thank you for the article and using my image on the USB-pigeon carrier, though please it is good habit to include a direct link to the original image (which is http://flic.kr/p/eTrqcD) You may also like to check my article of january 2012: "AIRLIFT YOUR DATA: alternatives for a blockaded internet" at the following URL
+http://limpingmessenger.wordpress.com/2012/01/26/airlift-your-data-alternatives-for-a-blockaded-internet/]]></wp:comment_content>
 			<wp:comment_approved>1</wp:comment_approved>
-			<wp:comment_type>pingback</wp:comment_type>
+			<wp:comment_type></wp:comment_type>
 			<wp:comment_parent>0</wp:comment_parent>
 			<wp:comment_user_id>0</wp:comment_user_id>
 			<wp:commentmeta>
@@ -1594,11 +1620,11 @@ Even if the increasing gap between storage and mobility doesn't become a problem
 			</wp:commentmeta>
 			<wp:commentmeta>
 				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1388232459.26";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1373363076.02";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
 			</wp:commentmeta>
 			<wp:commentmeta>
 				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1390588657.66";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1373465968.44";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
 			</wp:commentmeta>
 		</wp:comment>
 		<wp:comment>
@@ -1628,55 +1654,16 @@ Even if the increasing gap between storage and mobility doesn't become a problem
 			</wp:commentmeta>
 		</wp:comment>
 		<wp:comment>
-			<wp:comment_id>2259</wp:comment_id>
-			<wp:comment_author><![CDATA[flappy bird for android]]></wp:comment_author>
-			<wp:comment_author_email>pauletteclyne@gmx.de</wp:comment_author_email>
-			<wp:comment_author_url>https://youtube.com/watch?v=AQaitx_3jGE</wp:comment_author_url>
-			<wp:comment_author_IP>198.23.248.32</wp:comment_author_IP>
-			<wp:comment_date>2014-03-21 17:55:07</wp:comment_date>
-			<wp:comment_date_gmt>2014-03-21 21:55:07</wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[get the awesome flappy bird game flappy 
-bird for android
-Freeee download of flappy bird game flappy bird for android
-i found this source of the famous flappy bird game free flappy bird for android
-Omg flappy bird game isfree on this link flappy bird for android]]></wp:comment_content>
-			<wp:comment_approved>0</wp:comment_approved>
-			<wp:comment_type></wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_as_submitted</wp:meta_key>
-				<wp:meta_value><![CDATA[a:63:{s:15:"comment_post_ID";s:3:"517";s:14:"comment_author";s:23:"flappy bird for android";s:20:"comment_author_email";s:20:"pauletteclyne@gmx.de";s:18:"comment_author_url";s:39:"https://youtube.com/watch?v=AQaitx_3jGE";s:15:"comment_content";s:266:"get the awesome flappy bird game flappy 
-bird for android
-Freeee download of flappy bird game flappy bird for android
-i found this source of the famous flappy bird game free flappy bird for android
-Omg flappy bird game isfree on this link flappy bird for android";s:12:"comment_type";s:0:"";s:14:"comment_parent";s:1:"0";s:7:"user_ID";s:1:"0";s:7:"user_ip";s:13:"198.23.248.32";s:10:"user_agent";s:64:"Mozilla/5.0 (Windows NT 6.1; rv:5.0) Gecko/20100101 Firefox/5.02";s:8:"referrer";s:122:"https://blogs.law.harvard.edu/internetmonitor/2013/07/08/flying-past-filters-and-firewalls-pigeons-as-circumvention-tools/";s:4:"blog";s:44:"http://blogs.law.harvard.edu/internetmonitor";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:122:"https://blogs.law.harvard.edu/internetmonitor/2013/07/08/flying-past-filters-and-firewalls-pigeons-as-circumvention-tools/";s:21:"akismet_comment_nonce";s:6:"passed";s:18:"POST_bb2_screener_";s:26:"1395438890 192.236.132.182";s:11:"POST_author";s:23:"flappy bird for android";s:10:"POST_email";s:20:"pauletteclyne@gmx.de";s:8:"POST_url";s:39:"https://youtube.com/watch?v=AQaitx_3jGE";s:12:"POST_comment";s:266:"get the awesome flappy bird game flappy 
-bird for android
-Freeee download of flappy bird game flappy bird for android
-i found this source of the famous flappy bird game free flappy bird for android
-Omg flappy bird game isfree on this link flappy bird for android";s:11:"POST_submit";s:12:"Post Comment";s:20:"POST_comment_post_ID";s:3:"517";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"d2d1f6cdd3";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:37:"/internetmonitor/wp-comments-post.php";s:14:"REDIRECT_HTTPS";s:2:"on";s:20:"REDIRECT_SSL_TLS_SNI";s:21:"blogs.law.harvard.edu";s:15:"REDIRECT_STATUS";s:3:"200";s:5:"HTTPS";s:2:"on";s:11:"SSL_TLS_SNI";s:21:"blogs.law.harvard.edu";s:9:"HTTP_HOST";s:21:"blogs.law.harvard.edu";s:11:"HTTP_COOKIE";s:0:"";s:15:"HTTP_CONNECTION";s:10:"Keep-Alive";s:15:"HTTP_USER_AGENT";s:64:"Mozilla/5.0 (Windows NT 6.1; rv:5.0) Gecko/20100101 Firefox/5.02";s:11:"HTTP_ACCEPT";s:129:"text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1";s:20:"HTTP_ACCEPT_LANGUAGE";s:2:"en";s:20:"HTTP_ACCEPT_ENCODING";s:13:"gzip, deflate";s:12:"HTTP_REFERER";s:122:"https://blogs.law.harvard.edu/internetmonitor/2013/07/08/flying-past-filters-and-firewalls-pigeons-as-circumvention-tools/";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:14:"CONTENT_LENGTH";s:3:"537";s:4:"PATH";s:75:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:21:"blogs.law.harvard.edu";s:11:"SERVER_ADDR";s:14:"128.103.64.114";s:11:"SERVER_PORT";s:3:"443";s:11:"REMOTE_ADDR";s:13:"198.23.248.32";s:13:"DOCUMENT_ROOT";s:30:"/web/ethan/wpmu/docs/wpmu-prod";s:12:"SERVER_ADMIN";s:31:"webmaster@cyber.law.harvard.edu";s:15:"SCRIPT_FILENAME";s:51:"/web/ethan/wpmu/docs/wpmu-prod/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"48707";s:12:"REDIRECT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.0";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1395438907";s:4:"argv";s:0:"";s:4:"argc";s:1:"0";s:25:"comment_post_modified_gmt";s:19:"2013-07-09 15:09:53";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1395438907.86";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_result</wp:meta_key>
-				<wp:meta_value><![CDATA[false]]></wp:meta_value>
-			</wp:commentmeta>
-		</wp:comment>
-		<wp:comment>
-			<wp:comment_id>785</wp:comment_id>
-			<wp:comment_author><![CDATA[Tjebbe van Tijen]]></wp:comment_author>
-			<wp:comment_author_email>tjebbe@imaginarymuseum.org</wp:comment_author_email>
-			<wp:comment_author_url>http://imaginarymuseum.org/</wp:comment_author_url>
-			<wp:comment_author_IP>92.109.98.9</wp:comment_author_IP>
-			<wp:comment_date>2013-07-09 05:44:36</wp:comment_date>
-			<wp:comment_date_gmt>2013-07-09 09:44:36</wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[Thank you for the article and using my image on the USB-pigeon carrier, though please it is good habit to include a direct link to the original image (which is http://flic.kr/p/eTrqcD) You may also like to check my article of january 2012: "AIRLIFT YOUR DATA: alternatives for a blockaded internet" at the following URL
-http://limpingmessenger.wordpress.com/2012/01/26/airlift-your-data-alternatives-for-a-blockaded-internet/]]></wp:comment_content>
+			<wp:comment_id>2173</wp:comment_id>
+			<wp:comment_author><![CDATA[Pigeonet: are pigeons faster and safer than the internet | STALIN&#039;S MOUSTACHE]]></wp:comment_author>
+			<wp:comment_author_email></wp:comment_author_email>
+			<wp:comment_author_url>http://stalinsmoustache.wordpress.com/2013/12/28/pigeonet-are-pigeons-faster-and-safer-than-the-internet/</wp:comment_author_url>
+			<wp:comment_author_IP>192.168.10.114</wp:comment_author_IP>
+			<wp:comment_date>2013-12-28 08:07:39</wp:comment_date>
+			<wp:comment_date_gmt>2013-12-28 12:07:39</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[[...] pigeons the answer to internet speed and safety from spying? An intriguing suggestion from the Internet Monitor suggests so. A snippet: In 2009, a South African marketing company targeted South Africa’s [...]]]></wp:comment_content>
 			<wp:comment_approved>1</wp:comment_approved>
-			<wp:comment_type></wp:comment_type>
+			<wp:comment_type>pingback</wp:comment_type>
 			<wp:comment_parent>0</wp:comment_parent>
 			<wp:comment_user_id>0</wp:comment_user_id>
 			<wp:commentmeta>
@@ -1685,19 +1672,19 @@ http://limpingmessenger.wordpress.com/2012/01/26/airlift-your-data-alternatives-
 			</wp:commentmeta>
 			<wp:commentmeta>
 				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1373363076.02";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1388232459.26";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
 			</wp:commentmeta>
 			<wp:commentmeta>
 				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1373465968.44";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1390588657.66";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
 			</wp:commentmeta>
 		</wp:comment>
 	</item>
 	<item>
-		<title>&#039;Restore the Fourth&#039; Rallies Aim to Curb Digital Surveillance</title>
+				<title>&#039;Restore the Fourth&#039; Rallies Aim to Curb Digital Surveillance</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/07/10/restore-the-fourth-rallies-aim-to-curb-digital-surveillance/</link>
 		<pubDate>Wed, 10 Jul 2013 15:15:04 +0000</pubDate>
-		<dc:creator>myoungman</dc:creator>
+		<dc:creator><![CDATA[myoungman]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=538</guid>
 		<description></description>
 		<content:encoded><![CDATA[Hundreds of protesters gathered in cities across the United States and Europe last week as part of the "Restore the Fourth" rallies aimed to call attention to government surveillance. The non-partisan organization <a href="http://www.restorethefourth.net/">Restore the Fourth</a> coordinated protests online and in person against what they deem to be unconstitutional digital surveillance in the United States, including the NSA's PRISM program.
@@ -1733,10 +1720,10 @@ Now that the fourth of July is over, what comes next for the movement? MacArthur
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#imweekly: July 8, 2013</title>
+				<title>#imweekly: July 8, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/07/08/imweekly-july-8-2013/</link>
 		<pubDate>Mon, 08 Jul 2013 17:30:49 +0000</pubDate>
-		<dc:creator>lgraham</dc:creator>
+		<dc:creator><![CDATA[lgraham]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=560</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Egypt</strong>
@@ -1778,10 +1765,10 @@ A Lahore High Court has <a href="http://articles.timesofindia.indiatimes.com/201
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>&quot;Surveillance Camera Man&quot; Draws Ire, Provokes Questions About Recording in Public</title>
+				<title>&quot;Surveillance Camera Man&quot; Draws Ire, Provokes Questions About Recording in Public</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/07/10/surveillance-camera-man-draws-ire-provokes-questions-about-recording-in-public/</link>
 		<pubDate>Wed, 10 Jul 2013 14:39:24 +0000</pubDate>
-		<dc:creator>pkumar</dc:creator>
+		<dc:creator><![CDATA[pkumar]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=613</guid>
 		<description></description>
 		<content:encoded><![CDATA[[caption id="attachment_615" align="alignright" width="216"]<a href="http://blogs.law.harvard.edu/internetmonitor/files/2013/07/5923473836_4f9503fe81.jpg"><img class=" wp-image-615   " src="http://blogs.law.harvard.edu/internetmonitor/files/2013/07/5923473836_4f9503fe81.jpg" alt="" width="216" height="122" /></a> <a href="https://secure.flickr.com/photos/davidberkowitz/5923473836/">David Berkowitz/Flickr, CC BY 2.0</a>[/caption]
@@ -1822,12 +1809,47 @@ This comment from Spence, who calls himself the <a href="http://www.eyeborgblog.
 			<wp:meta_key>_edit_last</wp:meta_key>
 			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:comment>
+			<wp:comment_id>7742</wp:comment_id>
+			<wp:comment_author><![CDATA[youtube.com]]></wp:comment_author>
+			<wp:comment_author_email>syreetadittmer@gmail.com</wp:comment_author_email>
+			<wp:comment_author_url>https://www.youtube.com/watch?v=ALXNW5XUUlY</wp:comment_author_url>
+			<wp:comment_author_IP>192.3.55.234</wp:comment_author_IP>
+			<wp:comment_date>2014-05-22 05:43:51</wp:comment_date>
+			<wp:comment_date_gmt>2014-05-22 09:43:51</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Egypt would most likely use papyrus while Rome would use leather to 
+create sturdy flip flips that military generals could 
+wear. I deal with matters related to business-appropriate apparel on a daily basis.
+Every day, it ships about eight hundred pairs of flip flops (<a href="https://www.youtube.com/watch?v=ALXNW5XUUlY" rel="nofollow">youtube.com</a>) to almost every spot around the globe.]]></wp:comment_content>
+			<wp:comment_approved>0</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_result</wp:meta_key>
+				<wp:meta_value><![CDATA[false]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1400751831.900230884552001953125;s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_as_submitted</wp:meta_key>
+				<wp:meta_value><![CDATA[a:63:{s:15:"comment_post_ID";i:613;s:14:"comment_author";s:11:"youtube.com";s:20:"comment_author_email";s:24:"syreetadittmer@gmail.com";s:18:"comment_author_url";s:43:"https://www.youtube.com/watch?v=ALXNW5XUUlY";s:15:"comment_content";s:381:"Egypt would most likely use papyrus while Rome would use leather to 
+create sturdy flip flips that military generals could 
+wear. I deal with matters related to business-appropriate apparel on a daily basis.
+Every day, it ships about eight hundred pairs of flip flops (<a href="https://www.youtube.com/watch?v=ALXNW5XUUlY">youtube.com</a>) to almost every spot around the globe.";s:12:"comment_type";s:0:"";s:14:"comment_parent";i:0;s:7:"user_ID";i:0;s:7:"user_ip";s:12:"192.3.55.234";s:10:"user_agent";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.71 Safari/537.36";s:8:"referrer";s:136:"https://blogs.law.harvard.edu/internetmonitor/2013/07/10/surveillance-camera-man-draws-ire-provokes-questions-about-recording-in-public/";s:4:"blog";s:44:"http://blogs.law.harvard.edu/internetmonitor";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:136:"https://blogs.law.harvard.edu/internetmonitor/2013/07/10/surveillance-camera-man-draws-ire-provokes-questions-about-recording-in-public/";s:21:"akismet_comment_nonce";s:6:"passed";s:18:"POST_bb2_screener_";s:23:"1400751774 192.3.55.234";s:11:"POST_author";s:11:"youtube.com";s:10:"POST_email";s:24:"syreetadittmer@gmail.com";s:8:"POST_url";s:43:"https://www.youtube.com/watch?v=ALXNW5XUUlY";s:12:"POST_comment";s:381:"Egypt would most likely use papyrus while Rome would use leather to 
+create sturdy flip flips that military generals could 
+wear. I deal with matters related to business-appropriate apparel on a daily basis.
+Every day, it ships about eight hundred pairs of flip flops (<a href="https://www.youtube.com/watch?v=ALXNW5XUUlY">youtube.com</a>) to almost every spot around the globe.";s:11:"POST_submit";s:12:"Post Comment";s:20:"POST_comment_post_ID";s:3:"613";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"90afe0f132";s:10:"POST_ak_js";s:3:"137";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:37:"/internetmonitor/wp-comments-post.php";s:14:"REDIRECT_HTTPS";s:2:"on";s:15:"REDIRECT_STATUS";s:3:"200";s:5:"HTTPS";s:2:"on";s:9:"HTTP_HOST";s:21:"blogs.law.harvard.edu";s:11:"HTTP_COOKIE";s:0:"";s:15:"HTTP_USER_AGENT";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.71 Safari/537.36";s:11:"HTTP_ACCEPT";s:129:"text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1";s:20:"HTTP_ACCEPT_LANGUAGE";s:2:"en";s:20:"HTTP_ACCEPT_ENCODING";s:13:"gzip, deflate";s:12:"HTTP_REFERER";s:136:"https://blogs.law.harvard.edu/internetmonitor/2013/07/10/surveillance-camera-man-draws-ire-provokes-questions-about-recording-in-public/";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:14:"CONTENT_LENGTH";s:3:"685";s:18:"HTTP_CACHE_CONTROL";s:14:"max-age=259200";s:15:"HTTP_CONNECTION";s:10:"keep-alive";s:4:"PATH";s:75:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:21:"blogs.law.harvard.edu";s:11:"SERVER_ADDR";s:14:"128.103.64.114";s:11:"SERVER_PORT";s:3:"443";s:11:"REMOTE_ADDR";s:12:"192.3.55.234";s:13:"DOCUMENT_ROOT";s:30:"/web/ethan/wpmu/docs/wpmu-prod";s:12:"SERVER_ADMIN";s:31:"webmaster@cyber.law.harvard.edu";s:15:"SCRIPT_FILENAME";s:51:"/web/ethan/wpmu/docs/wpmu-prod/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"49574";s:12:"REDIRECT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.1";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1400751831";s:4:"argv";s:0:"";s:4:"argc";s:1:"0";s:25:"comment_post_modified_gmt";s:19:"2013-07-10 14:39:24";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
 	</item>
 	<item>
-		<title>New Internet Monitor report: &quot;Rationing the Digital: The Policy and Politics of Internet Use in Cuba Today&quot;</title>
+				<title>New Internet Monitor report: &quot;Rationing the Digital: The Policy and Politics of Internet Use in Cuba Today&quot;</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/07/16/rationing-the-digital/</link>
 		<pubDate>Tue, 16 Jul 2013 14:00:01 +0000</pubDate>
-		<dc:creator>rebekah</dc:creator>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=648</guid>
 		<description></description>
 		<content:encoded><![CDATA[<a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2291721"><img src="http://blogs.law.harvard.edu/internetmonitor/files/2013/07/IM_rationingthedigital-229x300.png" alt="" title="IM_rationingthedigital" width="153" height="200" class="alignright size-medium wp-image-649" /></a><a href="http://thenetmonitor.org">Internet Monitor</a> is delighted to announce the publication of "<a href="http://blogs.law.harvard.edu/internetmonitor/files/2013/07/IM_RationingtheDigital.pdf">Rationing the Digital: The Policy and Politics of Internet Use in Cuba</a>," the first in a <a href="http://blogs.law.harvard.edu/internetmonitor/research/">series</a> of special reports that will focus on key events and new developments in Internet freedom, incorporating technical, legal, social, and political analyses.
@@ -1886,10 +1908,10 @@ While the precise number of Internet users in the country is difficult to calcul
 		</wp:comment>
 	</item>
 	<item>
-		<title>#imweekly: July 15, 2013</title>
+				<title>#imweekly: July 15, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/07/15/imweekly-july-15-2013/</link>
 		<pubDate>Mon, 15 Jul 2013 19:58:00 +0000</pubDate>
-		<dc:creator>myoungman</dc:creator>
+		<dc:creator><![CDATA[myoungman]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=684</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>China</strong>
@@ -1931,10 +1953,10 @@ While the precise number of Internet users in the country is difficult to calcul
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Neuland or Nowhere Land? Reflecting on Evanescence, Immortality, and Internet Memes</title>
+				<title>Neuland or Nowhere Land? Reflecting on Evanescence, Immortality, and Internet Memes</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/07/17/neuland-or-nowhere-land-reflecting-on-evanescence-immortality-and-internet-memes/</link>
 		<pubDate>Wed, 17 Jul 2013 14:40:31 +0000</pubDate>
-		<dc:creator>lgraham</dc:creator>
+		<dc:creator><![CDATA[lgraham]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=693</guid>
 		<description></description>
 		<content:encoded><![CDATA[In a joint press conference with President Obama last month, German Chancellor Angela Merkel referred to the Internet as “<a href="http://knowyourmeme.com/memes/events/neuland">Neuland</a>”—literally, an “uncharted territory”—in response to a question about <a href="http://www.guardian.co.uk/world/2013/jun/06/us-tech-giants-nsa-data">initial reports</a> of the US National Security Agency’s <a href="http://chillingeffects.org/weather.cgi?WeatherID=774">PRISM program</a>. Specifically, she said the Internet was “new or uncharted territory for all of us.” Merkel’s words immediately became the target of a widespread meme. According to <em>Der Spiegel, </em>#Neuland <a href="http://www.spiegel.de/international/germany/merkel-neuland-gaff-elicits-ridicule-and-goes-viral-on-twitter-a-906859.html">began trending</a> on Twitter within minutes, and images and gifs that poke fun at Merkel from different angles began circulating shortly thereafter. Some images cast Merkel as a luddite or “Internet granny,” while others depicted her as a futuristic imperialist with designs on the new world.
@@ -1974,10 +1996,10 @@ In his Just for Hits Talk, Dawkins argued that a meme one creates “may live on
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>How Facebook Can Prompt Real-Life Action</title>
+				<title>How Facebook Can Prompt Real-Life Action</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/07/16/how-facebook-can-prompt-real-life-action/</link>
 		<pubDate>Tue, 16 Jul 2013 18:24:12 +0000</pubDate>
-		<dc:creator>internetmonitor</dc:creator>
+		<dc:creator><![CDATA[internetmonitor]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=718</guid>
 		<description></description>
 		<content:encoded><![CDATA[<em>This is a guest post.</em>
@@ -2019,10 +2041,10 @@ While debates continue about the affect of social media on events in Egypt, Turk
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Citizen Sensing and Crisis Informatics: Twitter and Disaster Response</title>
+				<title>Citizen Sensing and Crisis Informatics: Twitter and Disaster Response</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/07/18/citizen-sensing-and-crisis-informatics-twitter-and-disaster-response/</link>
 		<pubDate>Thu, 18 Jul 2013 13:26:43 +0000</pubDate>
-		<dc:creator>lgraham</dc:creator>
+		<dc:creator><![CDATA[lgraham]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=759</guid>
 		<description></description>
 		<content:encoded><![CDATA[In a piece published in May in <em>Smithsonian</em>, “<a href="http://blogs.smithsonianmag.com/science/2013/05/the-world-according-to-twitter-in-maps/">The World According to Twitter, in Maps</a>,” Twitter use in the Western hemisphere was compared to electrification and lighting use. Studies reveal remarkably similar rates, such that a map illuminated by tweets looks very much like a satellite image of artificial light use. It seems ambitious to suggest Twitter will become as ubiquitous as light, but the findings are nonetheless illuminating. Growing global Internet saturation and increasing Twitter usage might tell us a great deal about the relationship of humans and technology, but how might <a href="http://firstmonday.org/ojs/index.php/fm/article/view/4366/3654">Twitter analysis</a> shed light on our relationships with each other and the environment?
@@ -2059,47 +2081,12 @@ Learn more about Twitter analysis in a <a href="http://www.slideshare.net/knoesi
 			<wp:meta_key>_edit_last</wp:meta_key>
 			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
 		</wp:postmeta>
-		<wp:comment>
-			<wp:comment_id>2263</wp:comment_id>
-			<wp:comment_author><![CDATA[water damage repair nyc]]></wp:comment_author>
-			<wp:comment_author_email>mellisaelmer@gmail.com</wp:comment_author_email>
-			<wp:comment_author_url>https://foursquare.com/v/water-damage-miami-247-miami-fl/52d6359a498e7dc4c6942321</wp:comment_author_url>
-			<wp:comment_author_IP>117.239.67.66</wp:comment_author_IP>
-			<wp:comment_date>2014-03-23 15:46:22</wp:comment_date>
-			<wp:comment_date_gmt>2014-03-23 19:46:22</wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[It is appropriate time to make a few plans for the future and it's time 
-to be happy. I've read this put up and if I may just I wish to counsel 
-you few interesting issues or suggestions. Maybe you can write subsequent articles relating to 
-this article. I desire to read more issues approximately it!]]></wp:comment_content>
-			<wp:comment_approved>0</wp:comment_approved>
-			<wp:comment_type></wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_result</wp:meta_key>
-				<wp:meta_value><![CDATA[false]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:12:"1395603982.4";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_as_submitted</wp:meta_key>
-				<wp:meta_value><![CDATA[a:66:{s:15:"comment_post_ID";s:3:"759";s:14:"comment_author";s:23:"water damage repair nyc";s:20:"comment_author_email";s:22:"mellisaelmer@gmail.com";s:18:"comment_author_url";s:81:"https://foursquare.com/v/water-damage-miami-247-miami-fl/52d6359a498e7dc4c6942321";s:15:"comment_content";s:304:"It is appropriate time to make a few plans for the future and it's time 
-to be happy. I've read this put up and if I may just I wish to counsel 
-you few interesting issues or suggestions. Maybe you can write subsequent articles relating to 
-this article. I desire to read more issues approximately it!";s:12:"comment_type";s:0:"";s:14:"comment_parent";s:1:"0";s:7:"user_ID";s:1:"0";s:7:"user_ip";s:13:"117.239.67.66";s:10:"user_agent";s:108:"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31";s:8:"referrer";s:126:"https://blogs.law.harvard.edu/internetmonitor/2013/07/18/citizen-sensing-and-crisis-informatics-twitter-and-disaster-response/";s:4:"blog";s:44:"http://blogs.law.harvard.edu/internetmonitor";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:126:"https://blogs.law.harvard.edu/internetmonitor/2013/07/18/citizen-sensing-and-crisis-informatics-twitter-and-disaster-response/";s:21:"akismet_comment_nonce";s:6:"passed";s:18:"POST_bb2_screener_";s:39:"1395603959 117.239.67.66 79.119.107.110";s:11:"POST_author";s:23:"water damage repair nyc";s:10:"POST_email";s:22:"mellisaelmer@gmail.com";s:8:"POST_url";s:81:"https://foursquare.com/v/water-damage-miami-247-miami-fl/52d6359a498e7dc4c6942321";s:12:"POST_comment";s:304:"It is appropriate time to make a few plans for the future and it's time 
-to be happy. I've read this put up and if I may just I wish to counsel 
-you few interesting issues or suggestions. Maybe you can write subsequent articles relating to 
-this article. I desire to read more issues approximately it!";s:11:"POST_submit";s:12:"Post Comment";s:20:"POST_comment_post_ID";s:3:"759";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"de589dd540";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:37:"/internetmonitor/wp-comments-post.php";s:19:"REDIRECT_from_proxy";s:1:"1";s:14:"REDIRECT_HTTPS";s:2:"on";s:15:"REDIRECT_STATUS";s:3:"200";s:10:"from_proxy";s:1:"1";s:5:"HTTPS";s:2:"on";s:9:"HTTP_HOST";s:21:"blogs.law.harvard.edu";s:11:"HTTP_COOKIE";s:0:"";s:15:"HTTP_USER_AGENT";s:108:"Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.31 (KHTML, like Gecko) Chrome/26.0.1410.64 Safari/537.31";s:11:"HTTP_ACCEPT";s:129:"text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1";s:20:"HTTP_ACCEPT_LANGUAGE";s:2:"en";s:20:"HTTP_ACCEPT_ENCODING";s:13:"gzip, deflate";s:12:"HTTP_REFERER";s:126:"https://blogs.law.harvard.edu/internetmonitor/2013/07/18/citizen-sensing-and-crisis-informatics-twitter-and-disaster-response/";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:14:"CONTENT_LENGTH";s:3:"634";s:8:"HTTP_VIA";s:50:"1.0 localhost.localdomain:3128 (squid/2.6.STABLE6)";s:20:"HTTP_X_FORWARDED_FOR";s:14:"79.119.107.110";s:18:"HTTP_CACHE_CONTROL";s:14:"max-age=259200";s:15:"HTTP_CONNECTION";s:10:"keep-alive";s:4:"PATH";s:75:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:21:"blogs.law.harvard.edu";s:11:"SERVER_ADDR";s:14:"128.103.64.114";s:11:"SERVER_PORT";s:3:"443";s:11:"REMOTE_ADDR";s:13:"117.239.67.66";s:13:"DOCUMENT_ROOT";s:30:"/web/ethan/wpmu/docs/wpmu-prod";s:12:"SERVER_ADMIN";s:31:"webmaster@cyber.law.harvard.edu";s:15:"SCRIPT_FILENAME";s:51:"/web/ethan/wpmu/docs/wpmu-prod/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"43192";s:12:"REDIRECT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.0";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1395603982";s:4:"argv";s:0:"";s:4:"argc";s:1:"0";s:25:"comment_post_modified_gmt";s:19:"2013-07-18 13:27:32";}]]></wp:meta_value>
-			</wp:commentmeta>
-		</wp:comment>
 	</item>
 	<item>
-		<title>Map-Based Data Visualizations Reveal Patterns in Human Behavior</title>
+				<title>Map-Based Data Visualizations Reveal Patterns in Human Behavior</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/07/19/map-based-data-visualizations-reveal-patterns-in-human-behavior/</link>
 		<pubDate>Fri, 19 Jul 2013 12:53:04 +0000</pubDate>
-		<dc:creator>pkumar</dc:creator>
+		<dc:creator><![CDATA[pkumar]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=763</guid>
 		<description></description>
 		<content:encoded><![CDATA[<p dir="ltr">Billions of tweets. Millions of check-ins. How can we make sense out of such staggering amounts of data? One answer: Maps.</p>
@@ -2141,10 +2128,10 @@ As cheap data storage abounds and visualization tools proliferate, maps offer a 
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#imweekly: July 22, 2013</title>
+				<title>#imweekly: July 22, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/07/23/imweekly-july-22-2013/</link>
 		<pubDate>Tue, 23 Jul 2013 15:16:28 +0000</pubDate>
-		<dc:creator>internetmonitor</dc:creator>
+		<dc:creator><![CDATA[internetmonitor]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=838</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Southeast Asia</strong>
@@ -2185,10 +2172,10 @@ Russia has been pushing <a href="http://www.themoscowtimes.com/news/article/russ
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Cloud Computing, Cloud Polluting?: An Update</title>
+				<title>Cloud Computing, Cloud Polluting?: An Update</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/07/24/cloud-computing-cloud-polluting-an-update/</link>
 		<pubDate>Wed, 24 Jul 2013 10:49:21 +0000</pubDate>
-		<dc:creator>rtroumbley</dc:creator>
+		<dc:creator><![CDATA[rtroumbley]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=846</guid>
 		<description></description>
 		<content:encoded><![CDATA[Last month, <a href="http://blogs.law.harvard.edu/internetmonitor/2013/06/24/cloud-computing-cloud-polluting/" target="_blank">we explored</a> the very real environmental costs of Internet services, particularly those raised by the growing trend of moving data processing and storage into "the cloud." Since then, the energy and carbon costs of the Internet and cloud computing have been a hot topic. Some IT companies have been capitalizing on the concern as well. Last month, <a href="http://blogs.windows.com/ie/b/ie/archive/2013/06/05/internet-explorer-10-is-the-most-energy-efficient-browser-on-windows-8.aspx" target="_blank">Microsoft began touting</a> its Internet Explorer 10 browser as the most energy efficient browser available, estimating that if every Google Chrome and Mozilla Firefox user in the US switched to IE 10 for a year, the energy saved could power 10,000 households for a year. EBay has taken things a step further and is publicly disclosing its energy usage with an impressive <a href="http://dse.ebay.com/" target="_blank">online dashboard</a>.
@@ -2226,6 +2213,10 @@ Another problem the study identifies is the tendency of policymakers and environ
 			<wp:meta_key>_oembed_f732d1d62efe38c240e639dfd48cfeab</wp:meta_key>
 			<wp:meta_value><![CDATA[<iframe width="584" height="329" src="http://www.youtube.com/embed/w1grlT7x8xk?feature=oembed" frameborder="0" allowfullscreen></iframe>]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_oembed_26fd6c225f9320c05ce5b7da4f88278f</wp:meta_key>
+			<wp:meta_value><![CDATA[<iframe width="584" height="329" src="http://www.youtube.com/embed/w1grlT7x8xk?feature=oembed" frameborder="0" allowfullscreen></iframe>]]></wp:meta_value>
+		</wp:postmeta>
 		<wp:comment>
 			<wp:comment_id>1975</wp:comment_id>
 			<wp:comment_author><![CDATA[Cloud Computing, Cloud Polluting?: An Update | Political Query]]></wp:comment_author>
@@ -2254,10 +2245,10 @@ Another problem the study identifies is the tendency of policymakers and environ
 		</wp:comment>
 	</item>
 	<item>
-		<title>Human Computing and the Gamification of Surveillance Analysis</title>
+				<title>Human Computing and the Gamification of Surveillance Analysis</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/08/07/human-computing-and-the-gamification-of-surveillance-analysis/</link>
 		<pubDate>Wed, 07 Aug 2013 17:19:25 +0000</pubDate>
-		<dc:creator>rtroumbley</dc:creator>
+		<dc:creator><![CDATA[rtroumbley]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=876</guid>
 		<description></description>
 		<content:encoded><![CDATA[[caption id="attachment_923" align="alignright" width="239"]<a href="http://www.slate.com/blogs/future_tense/2013/08/05/jlens_and_other_surveillance_blimps_may_be_the_new_drones.html"><img class=" wp-image-923  " src="http://blogs.law.harvard.edu/internetmonitor/files/2013/08/rtn11_ids_jlens_img1.jpg.CROP_.rectangle3-large.jpg" alt="" width="239" height="146" /></a> Recently unveiled surveillance blimp; courtesy of <a href="http://www.slate.com/blogs/future_tense/2013/08/05/jlens_and_other_surveillance_blimps_may_be_the_new_drones.html">Raytheon, via Slate</a>[/caption]
@@ -2333,12 +2324,38 @@ Ubisoft's marketing website and eventual game highlights our visibility online (
 				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1385604037.88";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
 			</wp:commentmeta>
 		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>2280</wp:comment_id>
+			<wp:comment_author><![CDATA[Henry Mochida]]></wp:comment_author>
+			<wp:comment_author_email>henrymochida@gmail.com</wp:comment_author_email>
+			<wp:comment_author_url></wp:comment_author_url>
+			<wp:comment_author_IP>76.93.210.158</wp:comment_author_IP>
+			<wp:comment_date>2014-04-14 20:07:28</wp:comment_date>
+			<wp:comment_date_gmt>2014-04-15 00:07:28</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[I find that this relates to Foucault's Discipline and Punish (1975). In the book he speaks to a micro-physics of the modern-soul, where the classical laws of Newtonian physics are found to no longer apply to the micro. The point here is that power itself becomes decentralized - it is not just the sovereign who is disciplining and punishing the body. Instead according to a micro-physics power is distributed amongst all human beings, it is relational, and it is acted out in the dividing up of our days into schedules. Likewise, when applying the micro-physics of power to the panopticon we arrive at the surveillance society on the one hand, as you point out, but perhaps more-so on the other hand we arrive at the inculcation of the subject. This is how Foucault sees the soul being formed. It is the internalization of the acts of punishment on one's own body, the internalization of authority, that we are witnessing here. Therefore, technological surveillance and crowd-sourcing creates the space for getting at the interior. The evaluation is both the punishment and the reward - people carry out their own torture/punishment of themselves. This constant surveillance is perhaps the most efficient form of normalizing behavior in history. But, the point is not that technology is scary, or that we are being watched by Big Brother, rather it is that on the one hand we have total micro division of self through self-discipline; yet on the other we have become masters of ourselves to see power in the everyday. Thus, perhaps there is a means for agency here. Thanks Rex!]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_result</wp:meta_key>
+				<wp:meta_value><![CDATA[false]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1397520448.74";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1398716465.62";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
 	</item>
 	<item>
-		<title>#imweekly: July 29, 2013</title>
+				<title>#imweekly: July 29, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/07/29/imweekly-july-29-2013/</link>
 		<pubDate>Mon, 29 Jul 2013 19:08:50 +0000</pubDate>
-		<dc:creator>rtroumbley</dc:creator>
+		<dc:creator><![CDATA[rtroumbley]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=880</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>United Kingdom</strong>
@@ -2407,10 +2424,10 @@ This week, an anonymous <a href="http://news.cnet.com/8301-13578_3-57595202-38/f
 		</wp:comment>
 	</item>
 	<item>
-		<title>#imweekly: August 5, 2013</title>
+				<title>#imweekly: August 5, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/08/05/imweekly-august-5-2013/</link>
 		<pubDate>Mon, 05 Aug 2013 18:20:38 +0000</pubDate>
-		<dc:creator>pkumar</dc:creator>
+		<dc:creator><![CDATA[pkumar]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=892</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Saudi Arabia</strong>
@@ -2452,10 +2469,10 @@ The Wikimedia Foundation is <a href="http://thenextweb.com/insider/2013/08/01/in
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>China&#039;s Reactions to the Snowden Story</title>
+				<title>China&#039;s Reactions to the Snowden Story</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/08/05/chinas-reactions-to-the-snowden-story/</link>
 		<pubDate>Mon, 05 Aug 2013 19:31:52 +0000</pubDate>
-		<dc:creator>internetmonitor</dc:creator>
+		<dc:creator><![CDATA[internetmonitor]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=901</guid>
 		<description></description>
 		<content:encoded><![CDATA[<em>This is a guest post.</em>
@@ -2530,53 +2547,12 @@ While the mainstream media in China remained silent towards the PRISM scandal, o
 			<wp:meta_key>_edit_last</wp:meta_key>
 			<wp:meta_value><![CDATA[1907]]></wp:meta_value>
 		</wp:postmeta>
-		<wp:comment>
-			<wp:comment_id>2255</wp:comment_id>
-			<wp:comment_author><![CDATA[local dentist for veneers]]></wp:comment_author>
-			<wp:comment_author_email>shayna_smithers@gmail.com</wp:comment_author_email>
-			<wp:comment_author_url>http://tsconverterformac.us/dental-care-tips-you-need-to-take-advantage-of/</wp:comment_author_url>
-			<wp:comment_author_IP>199.255.212.197</wp:comment_author_IP>
-			<wp:comment_date>2014-03-14 19:35:38</wp:comment_date>
-			<wp:comment_date_gmt>2014-03-14 23:35:38</wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[Excellent items from you, man. I have understand your stuff prior to and you are just too great.
-I really like what you have obtained here, really like what you're 
-saying and the best way in which you assert it. You are making 
-it enjoyable and you continue to take care of to keep it smart.
-I can not wait to learn far more from you. That is 
-actually a tremendous website.]]></wp:comment_content>
-			<wp:comment_approved>0</wp:comment_approved>
-			<wp:comment_type></wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_as_submitted</wp:meta_key>
-				<wp:meta_value><![CDATA[a:63:{s:15:"comment_post_ID";s:3:"901";s:14:"comment_author";s:25:"local dentist for veneers";s:20:"comment_author_email";s:25:"shayna_smithers@gmail.com";s:18:"comment_author_url";s:75:"http://tsconverterformac.us/dental-care-tips-you-need-to-take-advantage-of/";s:15:"comment_content";s:380:"Excellent items from you, man. I have understand your stuff prior to and you are just too great.
-I really like what you have obtained here, really like what you're 
-saying and the best way in which you assert it. You are making 
-it enjoyable and you continue to take care of to keep it smart.
-I can not wait to learn far more from you. That is 
-actually a tremendous website.";s:12:"comment_type";s:0:"";s:14:"comment_parent";s:1:"0";s:7:"user_ID";s:1:"0";s:7:"user_ip";s:15:"199.255.212.197";s:10:"user_agent";s:102:"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36";s:8:"referrer";s:95:"https://blogs.law.harvard.edu/internetmonitor/2013/08/05/chinas-reactions-to-the-snowden-story/";s:4:"blog";s:44:"http://blogs.law.harvard.edu/internetmonitor";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:95:"https://blogs.law.harvard.edu/internetmonitor/2013/08/05/chinas-reactions-to-the-snowden-story/";s:21:"akismet_comment_nonce";s:6:"passed";s:18:"POST_bb2_screener_";s:26:"1394840121 199.255.212.197";s:11:"POST_author";s:25:"local dentist for veneers";s:10:"POST_email";s:25:"shayna_smithers@gmail.com";s:8:"POST_url";s:75:"http://tsconverterformac.us/dental-care-tips-you-need-to-take-advantage-of/";s:12:"POST_comment";s:380:"Excellent items from you, man. I have understand your stuff prior to and you are just too great.
-I really like what you have obtained here, really like what you're 
-saying and the best way in which you assert it. You are making 
-it enjoyable and you continue to take care of to keep it smart.
-I can not wait to learn far more from you. That is 
-actually a tremendous website.";s:11:"POST_submit";s:12:"Post Comment";s:20:"POST_comment_post_ID";s:3:"901";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"c44a44755a";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:37:"/internetmonitor/wp-comments-post.php";s:14:"REDIRECT_HTTPS";s:2:"on";s:20:"REDIRECT_SSL_TLS_SNI";s:21:"blogs.law.harvard.edu";s:15:"REDIRECT_STATUS";s:3:"200";s:5:"HTTPS";s:2:"on";s:11:"SSL_TLS_SNI";s:21:"blogs.law.harvard.edu";s:9:"HTTP_HOST";s:21:"blogs.law.harvard.edu";s:11:"HTTP_COOKIE";s:0:"";s:15:"HTTP_CONNECTION";s:10:"Keep-Alive";s:15:"HTTP_USER_AGENT";s:102:"Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36";s:11:"HTTP_ACCEPT";s:129:"text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1";s:20:"HTTP_ACCEPT_LANGUAGE";s:2:"en";s:20:"HTTP_ACCEPT_ENCODING";s:13:"gzip, deflate";s:12:"HTTP_REFERER";s:95:"https://blogs.law.harvard.edu/internetmonitor/2013/08/05/chinas-reactions-to-the-snowden-story/";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:14:"CONTENT_LENGTH";s:3:"702";s:4:"PATH";s:75:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:21:"blogs.law.harvard.edu";s:11:"SERVER_ADDR";s:14:"128.103.64.114";s:11:"SERVER_PORT";s:3:"443";s:11:"REMOTE_ADDR";s:15:"199.255.212.197";s:13:"DOCUMENT_ROOT";s:30:"/web/ethan/wpmu/docs/wpmu-prod";s:12:"SERVER_ADMIN";s:31:"webmaster@cyber.law.harvard.edu";s:15:"SCRIPT_FILENAME";s:51:"/web/ethan/wpmu/docs/wpmu-prod/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"60992";s:12:"REDIRECT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.1";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1394840137";s:4:"argv";s:0:"";s:4:"argc";s:1:"0";s:25:"comment_post_modified_gmt";s:19:"2013-09-18 19:39:56";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_result</wp:meta_key>
-				<wp:meta_value><![CDATA[false]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1394840138.22";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-		</wp:comment>
 	</item>
 	<item>
-		<title>The Pursuit of Open Government</title>
+				<title>The Pursuit of Open Government</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/08/12/the-pursuit-of-open-government/</link>
 		<pubDate>Mon, 12 Aug 2013 14:56:28 +0000</pubDate>
-		<dc:creator>pkumar</dc:creator>
+		<dc:creator><![CDATA[pkumar]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=966</guid>
 		<description></description>
 		<content:encoded><![CDATA[<p dir="ltr">Countries in the Middle East and North Africa historically held statistical data about their populations close. But in recent years, Tunisia, Yemen, Egypt, Morocco, Libya, Djibouti, and Jordan have joined regional open data pioneers Palestine and Iraq in <a href="http://menablog.worldbank.org/silent-data-revolution-arab-world">releasing</a> detailed data sets to the public or directly to organizations.</p>
@@ -2610,10 +2586,10 @@ Democracy draws strength from the participation of an informed citizenry, and th
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#imweekly: August 12, 2013</title>
+				<title>#imweekly: August 12, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/08/12/imweekly-august-12-2013/</link>
 		<pubDate>Mon, 12 Aug 2013 14:51:45 +0000</pubDate>
-		<dc:creator>rebekah</dc:creator>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=973</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>China</strong>
@@ -2651,10 +2627,10 @@ Zimbabwe held presidential elections on July 31; the resulting re-election of Pr
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#imweekly: August 19, 2013</title>
+				<title>#imweekly: August 19, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/08/19/imweekly-august-19-2013/</link>
 		<pubDate>Mon, 19 Aug 2013 14:01:10 +0000</pubDate>
-		<dc:creator>rebekah</dc:creator>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=984</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Cuba</strong>
@@ -2720,10 +2696,10 @@ Decentralized network is best solution to avoid spying.]]></wp:comment_content>
 		</wp:comment>
 	</item>
 	<item>
-		<title>Is Facebook the third most popular news source in the Middle East? It depends on where you are.</title>
+				<title>Is Facebook the third most popular news source in the Middle East? It depends on where you are.</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/08/26/is-facebook-the-third-most-popular-news-source-in-the-middle-east-it-depends-on-where-you-are/</link>
 		<pubDate>Mon, 26 Aug 2013 12:56:53 +0000</pubDate>
-		<dc:creator>myoungman</dc:creator>
+		<dc:creator><![CDATA[myoungman]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=821</guid>
 		<description></description>
 		<content:encoded><![CDATA[How do Internet users use Facebook to gather news and information? It varies widely depending on the country.
@@ -2772,10 +2748,10 @@ Despite various communities lamenting the loss of international news media cover
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#imweekly: August 26, 2013</title>
+				<title>#imweekly: August 26, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/08/26/imweekly-august-26-2013/</link>
 		<pubDate>Mon, 26 Aug 2013 15:53:13 +0000</pubDate>
-		<dc:creator>rebekah</dc:creator>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=987</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>China</strong>
@@ -2818,10 +2794,10 @@ The newest piece of the NSA surveillance scandal: LOVEINT.  Last week the <em>Wa
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>&quot;You look way prettier in person than through your webcam&quot;: #NSAPickupLines</title>
+				<title>&quot;You look way prettier in person than through your webcam&quot;: #NSAPickupLines</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/08/27/you-look-way-prettier-in-person-than-through-your-webcam-nsapickuplines/</link>
 		<pubDate>Tue, 27 Aug 2013 17:34:37 +0000</pubDate>
-		<dc:creator>rebekah</dc:creator>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1003</guid>
 		<description></description>
 		<content:encoded><![CDATA[In this week's <a href="http://blogs.law.harvard.edu/internetmonitor/2013/08/26/imweekly-august-26-2013/">#IMWeekly news roundup</a>, we reported that at least ten NSA officers have used the agency's surveillance power to spy on their romantic partners over the past decade&mdash;a practice deemed "LOVEINT" by the <em>Wall Street Journal</em>, which <a href="http://blogs.wsj.com/washwire/2013/08/23/nsa-officers-sometimes-spy-on-love-interests/">broke the story</a>.
@@ -2859,10 +2835,10 @@ Some of the most amusing tweets we've seen so far:
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#IMweekly: September 3, 2013</title>
+				<title>#IMweekly: September 3, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/09/03/imweekly-september-3-2013/</link>
 		<pubDate>Tue, 03 Sep 2013 15:27:45 +0000</pubDate>
-		<dc:creator>rebekah</dc:creator>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1017</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Azerbaijan</strong>
@@ -2905,12 +2881,41 @@ Last week we <a href="http://blogs.law.harvard.edu/internetmonitor/2013/08/26/im
 			<wp:meta_key>_edit_last</wp:meta_key>
 			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:comment>
+			<wp:comment_id>9377</wp:comment_id>
+			<wp:comment_author><![CDATA[strings]]></wp:comment_author>
+			<wp:comment_author_email>aliceashcraft@gmail.com</wp:comment_author_email>
+			<wp:comment_author_url>http://www.blackplanet.com/your_page/blog/view_posting.html?pid=1759606&amp;profile_id=64709895&amp;profile_name=heartbreakingbe91&amp;user_id=64709895&amp;username=heartbreakingbe91</wp:comment_author_url>
+			<wp:comment_author_IP>192.168.10.114</wp:comment_author_IP>
+			<wp:comment_date>2014-05-28 01:19:09</wp:comment_date>
+			<wp:comment_date_gmt>2014-05-28 05:19:09</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[I am sure this post has touched all the internet visitors, its 
+really really nice post on building up new webpage.]]></wp:comment_content>
+			<wp:comment_approved>0</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_as_submitted</wp:meta_key>
+				<wp:meta_value><![CDATA[a:69:{s:15:"comment_post_ID";i:1017;s:14:"comment_author";s:7:"strings";s:20:"comment_author_email";s:23:"aliceashcraft@gmail.com";s:18:"comment_author_url";s:166:"http://www.blackplanet.com/your_page/blog/view_posting.html?pid=1759606&profile_id=64709895&profile_name=heartbreakingbe91&user_id=64709895&username=heartbreakingbe91";s:15:"comment_content";s:116:"I am sure this post has touched all the internet visitors, its 
+really really nice post on building up new webpage.";s:12:"comment_type";s:0:"";s:14:"comment_parent";i:0;s:7:"user_ID";i:0;s:7:"user_ip";s:14:"192.168.10.114";s:10:"user_agent";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.29.13 (KHTML, like Gecko) Version/6.0.4 Safari/536.29.13";s:8:"referrer";s:83:"https://blogs.law.harvard.edu/internetmonitor/2013/09/03/imweekly-september-3-2013/";s:4:"blog";s:44:"http://blogs.law.harvard.edu/internetmonitor";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:82:"http://blogs.law.harvard.edu/internetmonitor/2013/09/03/imweekly-september-3-2013/";s:21:"akismet_comment_nonce";s:6:"passed";s:18:"POST_bb2_screener_";s:56:"1401254328 192.168.10.114 162.250.189.37, 80.253.132.130";s:11:"POST_author";s:7:"strings";s:10:"POST_email";s:23:"aliceashcraft@gmail.com";s:8:"POST_url";s:166:"http://www.blackplanet.com/your_page/blog/view_posting.html?pid=1759606&profile_id=64709895&profile_name=heartbreakingbe91&user_id=64709895&username=heartbreakingbe91";s:12:"POST_comment";s:116:"I am sure this post has touched all the internet visitors, its 
+really really nice post on building up new webpage.";s:11:"POST_submit";s:12:"Post Comment";s:20:"POST_comment_post_ID";s:4:"1017";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"b5bb92c2e6";s:10:"POST_ak_js";s:3:"101";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:37:"/internetmonitor/wp-comments-post.php";s:19:"REDIRECT_from_proxy";s:1:"1";s:19:"REDIRECT_SCRIPT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:19:"REDIRECT_SCRIPT_URI";s:65:"http://blogs.law.harvard.edu/internetmonitor/wp-comments-post.php";s:15:"REDIRECT_STATUS";s:3:"200";s:10:"from_proxy";s:1:"1";s:10:"SCRIPT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:10:"SCRIPT_URI";s:65:"http://blogs.law.harvard.edu/internetmonitor/wp-comments-post.php";s:14:"HTTP_X_REAL_IP";s:14:"80.253.132.130";s:9:"HTTP_HOST";s:21:"blogs.law.harvard.edu";s:20:"HTTP_X_FORWARDED_FOR";s:30:"162.250.189.37, 80.253.132.130";s:15:"HTTP_CONNECTION";s:5:"close";s:15:"HTTP_USER_AGENT";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.29.13 (KHTML, like Gecko) Version/6.0.4 Safari/536.29.13";s:11:"HTTP_ACCEPT";s:129:"text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1";s:20:"HTTP_ACCEPT_LANGUAGE";s:2:"en";s:20:"HTTP_ACCEPT_ENCODING";s:13:"gzip, deflate";s:12:"HTTP_REFERER";s:83:"https://blogs.law.harvard.edu/internetmonitor/2013/09/03/imweekly-september-3-2013/";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:14:"CONTENT_LENGTH";s:3:"554";s:15:"HTTP_X_PROXY_ID";s:10:"1028648621";s:8:"HTTP_VIA";s:39:"1.1 80.253.132.138 (Mikrotik HttpProxy)";s:4:"PATH";s:75:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:21:"blogs.law.harvard.edu";s:11:"SERVER_ADDR";s:14:"192.168.10.114";s:11:"SERVER_PORT";s:2:"80";s:11:"REMOTE_ADDR";s:14:"192.168.10.114";s:13:"DOCUMENT_ROOT";s:30:"/web/ethan/wpmu/docs/wpmu-prod";s:12:"SERVER_ADMIN";s:31:"webmaster@cyber.law.harvard.edu";s:15:"SCRIPT_FILENAME";s:51:"/web/ethan/wpmu/docs/wpmu-prod/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"44715";s:12:"REDIRECT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.0";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1401254348";s:4:"argv";s:0:"";s:4:"argc";s:1:"0";s:25:"comment_post_modified_gmt";s:19:"2013-09-09 19:15:27";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_result</wp:meta_key>
+				<wp:meta_value><![CDATA[false]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1401254349.151958942413330078125;s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
 	</item>
 	<item>
-		<title>Facebook Transparency Report: US and India lead in data requests</title>
+				<title>Facebook Transparency Report: US and India lead in data requests</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/08/28/facebook-transparency-report-us-and-india-lead-in-data-requests/</link>
 		<pubDate>Wed, 28 Aug 2013 15:39:32 +0000</pubDate>
-		<dc:creator>rebekah</dc:creator>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1019</guid>
 		<description></description>
 		<content:encoded><![CDATA[Earlier this week, Facebook joined <a href="http://www.google.com/transparencyreport/">Google</a>, <a href="https://transparency.twitter.com/">Twitter</a>, and other tech companies in issuing a transparency report: in Facebook's case, <a href="https://www.facebook.com/about/government_requests">aggregated counts of the government data requests</a> it received in the first six months of 2013.  
@@ -2947,10 +2952,10 @@ The current transparency report reveals only numbers&mdash;unlike in the Google 
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#IMWeekly: September 9, 2013</title>
+				<title>#IMWeekly: September 9, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/09/09/imweekly-september-9-2013/</link>
 		<pubDate>Mon, 09 Sep 2013 19:33:41 +0000</pubDate>
-		<dc:creator>rebekah</dc:creator>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1032</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>United States</strong>
@@ -2987,10 +2992,10 @@ Earlier this summer, Vietnam's prime minister <a href="http://blogs.law.harvard.
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#IMWeekly: September 16, 2013</title>
+				<title>#IMWeekly: September 16, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/09/16/imweekly-september-16-2013/</link>
 		<pubDate>Mon, 16 Sep 2013 19:53:08 +0000</pubDate>
-		<dc:creator>rebekah</dc:creator>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1042</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>China</strong>
@@ -3029,10 +3034,10 @@ Activist Ngo Hao has been <a href="http://en.rsf.org/vietnam-cyber-dissident-get
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>Iran Accidentally Allows Access to Facebook, Twitter for 24 Hours</title>
+				<title>Iran Accidentally Allows Access to Facebook, Twitter for 24 Hours</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/09/18/iran-accidentally-allows-access-to-facebook-twitter-for-24-hours/</link>
 		<pubDate>Wed, 18 Sep 2013 20:15:16 +0000</pubDate>
-		<dc:creator>rebekah</dc:creator>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1059</guid>
 		<description></description>
 		<content:encoded><![CDATA[On Monday, Internet users in Iran noticed that they could <a href="http://www.nytimes.com/2013/09/17/world/middleeast/iran-facebook-twitter-access.html?_r=0">access Facebook and Twitter</a>&mdash;the first time the social media sites have been viewable in the country since 2009. Despite the block, Iranians can normally access the sites using a VPN, but Twitter and Facebook users <a href="http://qz.com/124913/iran-opens-up-access-to-twitter-and-facebook-for-the-first-time-since-2009/">reported</a> that the sites were suddenly freely accessible.
@@ -3063,10 +3068,10 @@ For now, Iranians are back to using VPNs&mdash;many of which have been <a href="
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#IMWeekly: September 23, 2013</title>
+				<title>#IMWeekly: September 23, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/09/23/imweekly-september-23-2013/</link>
 		<pubDate>Mon, 23 Sep 2013 20:13:48 +0000</pubDate>
-		<dc:creator>rebekah</dc:creator>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1064</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Bangladesh</strong>
@@ -3105,10 +3110,10 @@ The Chief Minister of Uttar Pradesh, a state in northern India, is <a href="http
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#IMWeekly: September 30, 2013</title>
+				<title>#IMWeekly: September 30, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/09/30/imweekly-september-30-2013/</link>
 		<pubDate>Mon, 30 Sep 2013 15:25:15 +0000</pubDate>
-		<dc:creator>rebekah</dc:creator>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1072</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>China</strong>
@@ -3149,10 +3154,10 @@ News broke last Friday that the NSA has been documenting American citizen's soci
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#IMWeekly: October 7, 2013</title>
+				<title>#IMWeekly: October 7, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/10/07/imweekly-october-7-2013/</link>
 		<pubDate>Mon, 07 Oct 2013 14:48:28 +0000</pubDate>
-		<dc:creator>rebekah</dc:creator>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1074</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Iran</strong>
@@ -3192,10 +3197,10 @@ Dissident blogger Le Quoc Quan was <a href="http://www.ifex.org/vietnam/2013/10/
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#IMWeekly: October 15, 2013</title>
+				<title>#IMWeekly: October 15, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/10/15/imweekly-october-15-2013/</link>
 		<pubDate>Tue, 15 Oct 2013 15:48:46 +0000</pubDate>
-		<dc:creator>adamlewis</dc:creator>
+		<dc:creator><![CDATA[adamlewis]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1081</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Belgium</strong>
@@ -3240,10 +3245,10 @@ Earlier this month, Freedom House <a href="http://www.freedomhouse.org/article/n
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#IMWeekly: October 21, 2013</title>
+				<title>#IMWeekly: October 21, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/10/21/imweekly-october-21-2013/</link>
 		<pubDate>Mon, 21 Oct 2013 16:01:03 +0000</pubDate>
-		<dc:creator>adamlewis</dc:creator>
+		<dc:creator><![CDATA[adamlewis]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1089</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Belgium</strong>
@@ -3294,10 +3299,10 @@ Pakistani activists are using Twitter to <a href="http://globalvoicesonline.org/
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#IMWeekly: October 28, 2013</title>
+				<title>#IMWeekly: October 28, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/10/28/imweekly-october-28-2013/</link>
 		<pubDate>Mon, 28 Oct 2013 18:42:32 +0000</pubDate>
-		<dc:creator>adamlewis</dc:creator>
+		<dc:creator><![CDATA[adamlewis]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1098</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Germany</strong>
@@ -3343,10 +3348,10 @@ A group of nations led by Germany and Brazil <a href="http://thecable.foreignpol
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#IMWeekly: November 4, 2013</title>
+				<title>#IMWeekly: November 4, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/11/04/imweekly-november-4-2013/</link>
 		<pubDate>Mon, 04 Nov 2013 19:23:39 +0000</pubDate>
-		<dc:creator>adamlewis</dc:creator>
+		<dc:creator><![CDATA[adamlewis]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1105</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Brazil</strong>
@@ -3396,12 +3401,38 @@ A major reform bill was <a href="http://www.huffingtonpost.com/2013/10/29/nsa-re
 			<wp:meta_key>_edit_last</wp:meta_key>
 			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:comment>
+			<wp:comment_id>7534</wp:comment_id>
+			<wp:comment_author><![CDATA[proxy]]></wp:comment_author>
+			<wp:comment_author_email>rooseveltreeder@gmx.de</wp:comment_author_email>
+			<wp:comment_author_url>http://www.bayproxy.nl</wp:comment_author_url>
+			<wp:comment_author_IP>213.124.218.243</wp:comment_author_IP>
+			<wp:comment_date>2014-05-21 19:02:06</wp:comment_date>
+			<wp:comment_date_gmt>2014-05-21 23:02:06</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Downloads movies and music for free at http://www.bayproxy.nl]]></wp:comment_content>
+			<wp:comment_approved>0</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_result</wp:meta_key>
+				<wp:meta_value><![CDATA[false]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1400713326.0179069042205810546875;s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_as_submitted</wp:meta_key>
+				<wp:meta_value><![CDATA[a:64:{s:15:"comment_post_ID";i:1105;s:14:"comment_author";s:5:"proxy";s:20:"comment_author_email";s:22:"rooseveltreeder@gmx.de";s:18:"comment_author_url";s:22:"http://www.bayproxy.nl";s:15:"comment_content";s:61:"Downloads movies and music for free at http://www.bayproxy.nl";s:12:"comment_type";s:0:"";s:14:"comment_parent";i:0;s:7:"user_ID";i:0;s:7:"user_ip";s:15:"213.124.218.243";s:10:"user_agent";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.71 Safari/537.36";s:8:"referrer";s:82:"https://blogs.law.harvard.edu/internetmonitor/2013/11/04/imweekly-november-4-2013/";s:4:"blog";s:44:"http://blogs.law.harvard.edu/internetmonitor";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:82:"https://blogs.law.harvard.edu/internetmonitor/2013/11/04/imweekly-november-4-2013/";s:21:"akismet_comment_nonce";s:6:"passed";s:18:"POST_bb2_screener_";s:26:"1400713309 213.124.218.243";s:11:"POST_author";s:5:"proxy";s:10:"POST_email";s:22:"rooseveltreeder@gmx.de";s:8:"POST_url";s:22:"http://www.bayproxy.nl";s:12:"POST_comment";s:61:"Downloads movies and music for free at http://www.bayproxy.nl";s:11:"POST_submit";s:12:"Post Comment";s:20:"POST_comment_post_ID";s:4:"1105";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"3170bb6d23";s:10:"POST_ak_js";s:3:"105";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:37:"/internetmonitor/wp-comments-post.php";s:14:"REDIRECT_HTTPS";s:2:"on";s:20:"REDIRECT_SSL_TLS_SNI";s:21:"blogs.law.harvard.edu";s:15:"REDIRECT_STATUS";s:3:"200";s:5:"HTTPS";s:2:"on";s:11:"SSL_TLS_SNI";s:21:"blogs.law.harvard.edu";s:9:"HTTP_HOST";s:21:"blogs.law.harvard.edu";s:11:"HTTP_COOKIE";s:0:"";s:15:"HTTP_CONNECTION";s:10:"Keep-Alive";s:15:"HTTP_USER_AGENT";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.71 Safari/537.36";s:11:"HTTP_ACCEPT";s:129:"text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1";s:20:"HTTP_ACCEPT_LANGUAGE";s:2:"en";s:20:"HTTP_ACCEPT_ENCODING";s:13:"gzip, deflate";s:12:"HTTP_REFERER";s:82:"https://blogs.law.harvard.edu/internetmonitor/2013/11/04/imweekly-november-4-2013/";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:14:"CONTENT_LENGTH";s:3:"294";s:4:"PATH";s:75:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:21:"blogs.law.harvard.edu";s:11:"SERVER_ADDR";s:14:"128.103.64.114";s:11:"SERVER_PORT";s:3:"443";s:11:"REMOTE_ADDR";s:15:"213.124.218.243";s:13:"DOCUMENT_ROOT";s:30:"/web/ethan/wpmu/docs/wpmu-prod";s:12:"SERVER_ADMIN";s:31:"webmaster@cyber.law.harvard.edu";s:15:"SCRIPT_FILENAME";s:51:"/web/ethan/wpmu/docs/wpmu-prod/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"50162";s:12:"REDIRECT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.1";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1400713325";s:4:"argv";s:0:"";s:4:"argc";s:1:"0";s:25:"comment_post_modified_gmt";s:19:"2013-11-04 19:23:39";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
 	</item>
 	<item>
-		<title>Beautiful and thought-provoking infographics</title>
+				<title>Beautiful and thought-provoking infographics</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/11/07/beautiful-and-thought-provoking-infographics/</link>
 		<pubDate>Thu, 07 Nov 2013 16:10:21 +0000</pubDate>
-		<dc:creator>adamlewis</dc:creator>
+		<dc:creator><![CDATA[adamlewis]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1112</guid>
 		<description></description>
 		<content:encoded><![CDATA[A couple weeks ago we tweeted a <a href="http://www.informationisbeautiful.net/2013/over-300-of-the-best-data-visualization/">list</a> by the KANTAR Information is Beautiful Awards of over 300 of the year’s best infographics and data-visualizations. Since then, we’ve been working our way through the list and thought we’d share a few of our personal favorites. Two of these are directly related to the work we do and one we just had to add because it was so elegant and powerful we couldn't help ourselves.
@@ -3434,10 +3465,10 @@ This one has been pretty well circulated but, if you missed it, it’s definitel
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#IMWeekly: November 12, 2013</title>
+				<title>#IMWeekly: November 12, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/11/12/imweekly-november-12-2013/</link>
 		<pubDate>Tue, 12 Nov 2013 13:37:36 +0000</pubDate>
-		<dc:creator>adamlewis</dc:creator>
+		<dc:creator><![CDATA[adamlewis]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1125</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Australia</strong>
@@ -3483,10 +3514,10 @@ Hackers claiming to be affiliated with Anonymous <a href="http://www.theregister
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>New Internet Monitor report: &quot;Measuring Internet Activity: A (Selective) Review of Methods and Metrics&quot;</title>
+				<title>New Internet Monitor report: &quot;Measuring Internet Activity: A (Selective) Review of Methods and Metrics&quot;</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/11/14/measuring-internet-activity/</link>
 		<pubDate>Thu, 14 Nov 2013 13:47:22 +0000</pubDate>
-		<dc:creator>rebekah</dc:creator>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1131</guid>
 		<description></description>
 		<content:encoded><![CDATA[<a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2353457"><img src="http://blogs.law.harvard.edu/internetmonitor/files/2013/11/IM_MeasuringInternetActivity1-231x300.png" alt="" title="IM_MeasuringInternetActivity" width="231" height="300" class="alignright size-medium wp-image-1136" /></a>Internet Monitor is delighted to announce the publication of <a href="http://cyber.law.harvard.edu/node/8642/">"Measuring Internet Activity: A (Selective) Review of Methods and Metrics,"</a> the second in a series of special reports that focus on key events and new developments in Internet freedom, incorporating technical, legal, social, and political analyses.
@@ -3568,10 +3599,10 @@ Hackers claiming to be affiliated with Anonymous <a href="http://www.theregister
 		</wp:comment>
 	</item>
 	<item>
-		<title>#IMWeekly: November 18, 2013</title>
+				<title>#IMWeekly: November 18, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/11/18/imweekly-november-18-2013/</link>
 		<pubDate>Mon, 18 Nov 2013 14:48:18 +0000</pubDate>
-		<dc:creator>adamlewis</dc:creator>
+		<dc:creator><![CDATA[adamlewis]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1149</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Iran</strong>
@@ -3609,10 +3640,10 @@ The Committee to Protect Journalists (CPJ) <a href="https://www.cpj.org/2013/11/
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#IMWeekly: November 25, 2013</title>
+				<title>#IMWeekly: November 25, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/11/25/imweekly-november-25-2013/</link>
 		<pubDate>Mon, 25 Nov 2013 16:39:41 +0000</pubDate>
-		<dc:creator>adamlewis</dc:creator>
+		<dc:creator><![CDATA[adamlewis]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1157</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Indonesia</strong>
@@ -3650,10 +3681,10 @@ The US Supreme court <a href="http://www.scotusblog.com/2013/11/nsa-spying-chall
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#IMWeekly: December 2, 2013</title>
+				<title>#IMWeekly: December 2, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/12/02/imweekly-december-2-2013/</link>
 		<pubDate>Mon, 02 Dec 2013 20:45:49 +0000</pubDate>
-		<dc:creator>adamlewis</dc:creator>
+		<dc:creator><![CDATA[adamlewis]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1163</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Canada</strong>
@@ -3694,10 +3725,10 @@ The Vietnamese government <a href="http://www.techinasia.com/internet-fines-vie
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#IMWeekly: December 9, 2013</title>
+				<title>#IMWeekly: December 9, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/12/09/imweekly-december-9-2013/</link>
 		<pubDate>Mon, 09 Dec 2013 19:18:50 +0000</pubDate>
-		<dc:creator>adamlewis</dc:creator>
+		<dc:creator><![CDATA[adamlewis]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1170</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>Brazil</strong>
@@ -3742,10 +3773,10 @@ Documents leaked by Edward Snowden <a href="http://www.washingtonpost.com/world/
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>2013 Internet Monitor Annual Report: “Reflections on the Digital World&quot;</title>
+				<title>2013 Internet Monitor Annual Report: “Reflections on the Digital World&quot;</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/12/11/2013-internet-monitor-annual-report-reflections-on-the-digital-world/</link>
 		<pubDate>Wed, 11 Dec 2013 14:23:22 +0000</pubDate>
-		<dc:creator>rebekah</dc:creator>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1185</guid>
 		<description></description>
 		<content:encoded><![CDATA[<a href="http://blogs.law.harvard.edu/internetmonitor/annual-report/"><img src="http://blogs.law.harvard.edu/internetmonitor/files/2013/12/IM2013_ReflectionsontheDigital.png" alt="" title="IM2013_ReflectionsontheDigital" width="136" height="177" class="alignright size-full wp-image-1175" /></a>Internet Monitor is delighted to announce the publication of <a href="http://blogs.law.harvard.edu/internetmonitor/annual-report/"><em>Internet Monitor 2013: Reflections on the Digital World</em></a>, our first-ever annual report.  The report&mdash;a collection of essays from roughly two dozen experts around the world, including Ron Deibert, Malavika Jayaram, Viktor Mayer-Schönberger, Molly Sauter, Bruce Schneier, Ashkan Soltani, and Zeynep Tufekci, among others&mdash;highlights key events and recent trends in the digital space:
@@ -3779,10 +3810,10 @@ Our contributors canvass a broad range of topics and regions—from a critique o
 		</wp:postmeta>
 	</item>
 	<item>
-		<title>#IMWeekly: December 16, 2013</title>
+				<title>#IMWeekly: December 16, 2013</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2013/12/16/imweekly-december-16-2013/</link>
 		<pubDate>Mon, 16 Dec 2013 14:24:31 +0000</pubDate>
-		<dc:creator>adamlewis</dc:creator>
+		<dc:creator><![CDATA[adamlewis]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1253</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>North Korea</strong>
@@ -3818,12 +3849,36 @@ Amnesty International <a href="http://abcnews.go.com/International/wireStory/amn
 			<wp:meta_key>_edit_last</wp:meta_key>
 			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
 		</wp:postmeta>
+		<wp:comment>
+			<wp:comment_id>2359</wp:comment_id>
+			<wp:comment_author><![CDATA[Ruby on Rails Development]]></wp:comment_author>
+			<wp:comment_author_email>robert.smith4521@gmail.com</wp:comment_author_email>
+			<wp:comment_author_url>http://www.allerin.com</wp:comment_author_url>
+			<wp:comment_author_IP>192.168.10.114</wp:comment_author_IP>
+			<wp:comment_date>2014-04-30 00:45:41</wp:comment_date>
+			<wp:comment_date_gmt>2014-04-30 04:45:41</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Never ever thought that the terrorist can even make use of online games to communicate &amp; make attacks.
+Horrible!!!
+Thanks for the share Adam.]]></wp:comment_content>
+			<wp:comment_approved>0</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_result</wp:meta_key>
+				<wp:meta_value><![CDATA[false]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1398833141.69";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
 	</item>
 	<item>
-		<title>#IMWeekly: January 31, 2014</title>
+				<title>#IMWeekly: January 31, 2014</title>
 		<link>http://blogs.law.harvard.edu/internetmonitor/2014/01/31/imweekly-january-31-2014/</link>
 		<pubDate>Fri, 31 Jan 2014 19:18:16 +0000</pubDate>
-		<dc:creator>rebekah</dc:creator>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
 		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1272</guid>
 		<description></description>
 		<content:encoded><![CDATA[<strong>China & Iran</strong>
@@ -3863,38 +3918,47 @@ Mashable <a href="http://mashable.com/2014/01/28/russia-internet-olympics/">repo
 			<wp:meta_key>_edit_last</wp:meta_key>
 			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
 		</wp:postmeta>
-		<wp:comment>
-			<wp:comment_id>2254</wp:comment_id>
-			<wp:comment_author><![CDATA[Kira]]></wp:comment_author>
-			<wp:comment_author_email>kirawilburn@googlemail.com</wp:comment_author_email>
-			<wp:comment_author_url>https://www.youtube.com/watch?v=8xs0FC5Xhms</wp:comment_author_url>
-			<wp:comment_author_IP>192.168.10.114</wp:comment_author_IP>
-			<wp:comment_date>2014-03-13 19:30:53</wp:comment_date>
-			<wp:comment_date_gmt>2014-03-13 23:30:53</wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[Heya i'm for the first time here. I came across this board and I find It truly useful &amp; it 
-helped me out much. I am hoping to provide something again and aiid others 
-like you helped me.]]></wp:comment_content>
-			<wp:comment_approved>0</wp:comment_approved>
-			<wp:comment_type></wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_result</wp:meta_key>
-				<wp:meta_value><![CDATA[false]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1394753453.94";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_as_submitted</wp:meta_key>
-				<wp:meta_value><![CDATA[a:68:{s:15:"comment_post_ID";s:4:"1272";s:14:"comment_author";s:4:"Kira";s:20:"comment_author_email";s:26:"kirawilburn@googlemail.com";s:18:"comment_author_url";s:43:"https://www.youtube.com/watch?v=8xs0FC5Xhms";s:15:"comment_content";s:189:"Heya i'm for the first time here. I came across this board and I find It truly useful & it 
-helped me out much. I am hoping to provide something again and aiid others 
-like you helped me.";s:12:"comment_type";s:0:"";s:14:"comment_parent";s:1:"0";s:7:"user_ID";s:1:"0";s:7:"user_ip";s:14:"192.168.10.114";s:10:"user_agent";s:65:"Mozilla/5.0 (Windows NT 6.0; rv:21.0) Gecko/20100101 Firefox/21.0";s:8:"referrer";s:82:"https://blogs.law.harvard.edu/internetmonitor/2014/01/31/imweekly-january-31-2014/";s:4:"blog";s:44:"http://blogs.law.harvard.edu/internetmonitor";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:81:"http://blogs.law.harvard.edu/internetmonitor/2014/01/31/imweekly-january-31-2014/";s:21:"akismet_comment_nonce";s:6:"passed";s:18:"POST_bb2_screener_";s:53:"1394753434 192.168.10.114 68.71.138.200, 113.9.163.21";s:11:"POST_author";s:4:"Kira";s:10:"POST_email";s:26:"kirawilburn@googlemail.com";s:8:"POST_url";s:43:"https://www.youtube.com/watch?v=8xs0FC5Xhms";s:12:"POST_comment";s:189:"Heya i'm for the first time here. I came across this board and I find It truly useful & it 
-helped me out much. I am hoping to provide something again and aiid others 
-like you helped me.";s:11:"POST_submit";s:12:"Post Comment";s:20:"POST_comment_post_ID";s:4:"1272";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"89cac81207";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:37:"/internetmonitor/wp-comments-post.php";s:19:"REDIRECT_from_proxy";s:1:"1";s:19:"REDIRECT_SCRIPT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:19:"REDIRECT_SCRIPT_URI";s:65:"http://blogs.law.harvard.edu/internetmonitor/wp-comments-post.php";s:15:"REDIRECT_STATUS";s:3:"200";s:10:"from_proxy";s:1:"1";s:10:"SCRIPT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:10:"SCRIPT_URI";s:65:"http://blogs.law.harvard.edu/internetmonitor/wp-comments-post.php";s:14:"HTTP_X_REAL_IP";s:11:"58.252.1.29";s:9:"HTTP_HOST";s:21:"blogs.law.harvard.edu";s:20:"HTTP_X_FORWARDED_FOR";s:26:"68.71.138.200, 58.252.1.29";s:15:"HTTP_CONNECTION";s:5:"close";s:15:"HTTP_USER_AGENT";s:65:"Mozilla/5.0 (Windows NT 6.0; rv:21.0) Gecko/20100101 Firefox/21.0";s:11:"HTTP_ACCEPT";s:129:"text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1";s:20:"HTTP_ACCEPT_LANGUAGE";s:2:"en";s:20:"HTTP_ACCEPT_ENCODING";s:13:"gzip, deflate";s:12:"HTTP_REFERER";s:82:"https://blogs.law.harvard.edu/internetmonitor/2014/01/31/imweekly-january-31-2014/";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:14:"CONTENT_LENGTH";s:3:"477";s:15:"HTTP_X_PROXY_ID";s:9:"597672633";s:8:"HTTP_VIA";s:36:"1.1 58.252.1.29 (Mikrotik HttpProxy)";s:4:"PATH";s:75:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:21:"blogs.law.harvard.edu";s:11:"SERVER_ADDR";s:14:"192.168.10.114";s:11:"SERVER_PORT";s:2:"80";s:11:"REMOTE_ADDR";s:14:"192.168.10.114";s:13:"DOCUMENT_ROOT";s:30:"/web/ethan/wpmu/docs/wpmu-prod";s:12:"SERVER_ADMIN";s:31:"webmaster@cyber.law.harvard.edu";s:15:"SCRIPT_FILENAME";s:51:"/web/ethan/wpmu/docs/wpmu-prod/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"43864";s:12:"REDIRECT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.0";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1394753453";s:4:"argv";s:0:"";s:4:"argc";s:1:"0";s:25:"comment_post_modified_gmt";s:19:"2014-01-31 19:18:16";}]]></wp:meta_value>
-			</wp:commentmeta>
-		</wp:comment>
+	</item>
+	<item>
+				<title>New Internet Monitor report: &quot;Blogs as an Alternative Public Sphere: The Role of Blogs, Mainstream Media, and TV in Russia’s Media Ecology&quot;</title>
+		<link>http://blogs.law.harvard.edu/internetmonitor/2014/04/29/new-internet-monitor-report-blogs-as-an-alternative-public-sphere-the-role-of-blogs-mainstream-media-and-tv-in-russias-media-ecology/</link>
+		<pubDate>Tue, 29 Apr 2014 13:49:23 +0000</pubDate>
+		<dc:creator><![CDATA[rebekah]]></dc:creator>
+		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1278</guid>
+		<description></description>
+		<content:encoded><![CDATA[<a href="http://blogs.law.harvard.edu/internetmonitor/research#sr3"><img src="http://blogs.law.harvard.edu/internetmonitor/files/2014/04/blogsaltpublicsphere.png" alt="" title="blogsaltpublicsphere" width="198" height="255" class="alignright size-full wp-image-1287" /></a><a href="http://thenetmonitor.org">Internet Monitor</a> is delighted to announce the publication of <a href="http://blogs.law.harvard.edu/internetmonitor/research#sr3">"Blogs as an Alternative Public Sphere: The Role of Blogs, Mainstream Media, and TV in Russia’s Media Ecology,"</a> the third in a <a href="http://blogs.law.harvard.edu/internetmonitor/research/">series</a> of special reports that focus on key events and new developments in Internet controls and online activity.
+
+"Blogs as an Alternative Public Sphere," authored by Bruce Etling, Hal Roberts, and Robert Faris, uses data collected from thousands of blogs, mainstream media, and TV sources to examine the role of Russian blogs within Russia's media ecosystem:
+
+<blockquote>Applying a combination of quantitative and qualitative methods, we investigate whether Russian blogs represent an alternative public sphere distinct from web-based Russian government information sources and the mainstream media. Based on data collected over a one-year period (December 2010 through December 2011) from thousands of Russian political blogs and other media sources, we compare the cosine similarity of the text from blogs, mainstream media, major TV channels, and official government websites. We find that, when discussing a selected set of major political and news topics popular during the year, blogs are consistently the least similar to government sources compared to TV and the mainstream media. We also find that the text of mainstream media outlets in Russia (primarily traditional and web-native newspapers) are more similar to government sources than one would expect given the greater editorial and financial independence of those media outlets, at least compared to largely state-controlled national TV stations. We conclude that blogs provide an alternative public sphere: a space for civic discussion and organization that differs significantly from that provided by the mainstream media, TV, and government.</blockquote>
+
+<strong>The full paper is available for download at SSRN: <a href="http://papers.ssrn.com/sol3/papers.cfm?abstract_id=2427932">Blogs as an Alternative Public Sphere: The Role of Blogs, Mainstream Media, and TV in Russia’s Media Ecology</a></strong>
+
+<strong>About Internet Monitor</strong><br />
+Internet Monitor is a research project to evaluate, describe, and summarize the means, mechanisms, and extent of Internet content controls and Internet activity around the world. The project will compile and curate data from multiple sources, including primary data collected by the Berkman Center and our partners, as well as relevant secondary data. Internet Monitor will create a freely available online fact base that will give policy makers, digital activists, and user communities an authoritative, independent, and multi-faceted set of quantitative data on the state of the global Internet. The project will also produce annual reports that compile this information and provide expert analysis on the state of the global Internet. The Internet Monitor is a project of the Berkman Center for Internet & Society. It is funded by the US Department of State and the MacArthur Foundation.]]></content:encoded>
+		<excerpt:encoded><![CDATA[Internet Monitor is delighted to announce the publication of “Blogs as an Alternative Public Sphere: The Role of Blogs, Mainstream Media, and TV in Russia’s Media Ecology,” the third in a series of special reports that focus on key events and new developments in Internet controls and online activity.]]></excerpt:encoded>
+		<wp:post_id>1278</wp:post_id>
+		<wp:post_date>2014-04-29 09:49:23</wp:post_date>
+		<wp:post_date_gmt>2014-04-29 13:49:23</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>new-internet-monitor-report-blogs-as-an-alternative-public-sphere-the-role-of-blogs-mainstream-media-and-tv-in-russias-media-ecology</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>post</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="im-research-publications"><![CDATA[IM Research &amp; Publications]]></category>
+		<category domain="category" nicename="russia"><![CDATA[Russia]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_thumbnail_id</wp:meta_key>
+			<wp:meta_value><![CDATA[1287]]></wp:meta_value>
+		</wp:postmeta>
 	</item>
 </channel>
 </rss>
