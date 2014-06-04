@@ -16,7 +16,8 @@ describe ( 'refinery/pages/home' ) {
     }
 
     it ( 'should have tagline' ) {
-      should have_css 'p.tagline', text: 'Analyzing'
+      # now in header image
+      should_not have_css 'p.tagline', text: 'Analyzing'
     }
 
     describe ( 'carousel' ) {

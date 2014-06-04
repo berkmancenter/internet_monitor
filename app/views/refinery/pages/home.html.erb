@@ -2,8 +2,6 @@
 
 <%#= render '/refinery/content_page' %>
 
-<p class="tagline">Analyzing online control &amp; activity</p>
-
 <div class="carousel">
   <% home_carousel.each do |item| %>
     <div><a href="<%= item[ :link_url ] %>" class="carousel-item"><%= raw item[ :body ] %></a></div>
