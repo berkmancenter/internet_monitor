@@ -29,7 +29,7 @@ class Retriever
               :affects_score => line['Affects Score?'] == 'y',
               :in_category_page => line['Include in Category Page?'] != 'n', # default to true unless specifically 'n'
               :in_sidebar => line['Include in Sidebar?'] == 'y',
-              :normalized => line['Normalized?'] != 'n', # default to true unless specifically 'n'
+              :normalized => line['Normalized?'] == 'y', # default to false unless specifically 'y' (DatumSource should have 'Normalized Column Name' field set)
               :display_prefix => line['Prefix'],
               :display_suffix => line['Suffix'],
               :precision => line['Precision'] || 0,
@@ -48,6 +48,7 @@ class Retriever
                     :filename => Rails.root.join('db', 'data_files', line['Filename']).to_s,
                     :sheetname => line['Sheet Name'],
                     :column => line['Column Name'],
+                    :normalized_column => line['Normalized Column Name'],
                     :divide_by_gdp => line['Divide by GDP/cap?'] == 'y',
                     :append => line['Append'] == 'y'
                 }

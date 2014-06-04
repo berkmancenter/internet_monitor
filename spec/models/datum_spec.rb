@@ -65,8 +65,8 @@ describe ( 'Datum model' ) {
     }
   }
 
-  context ( 'with non-normalized DatumSource' ) {
-    # non-normalized datum values equal their original_value
+  context ( 'with pre-normalized DatumSource' ) {
+    # pre-normalized datum values equal their original_value
     # unrelated to other countries
 
     it {

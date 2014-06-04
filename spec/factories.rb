@@ -191,7 +191,7 @@ FactoryGirl.define do
       #category control
       #group control
       default_weight 1
-      normalized false
+      normalized true
       retriever_class 'ONIParser'
       is_api false
       in_category_page true
@@ -209,7 +209,7 @@ FactoryGirl.define do
       #category control
       #group filtering_mo
       default_weight 1
-      normalized false
+      normalized true
       retriever_class 'ONIParser'
       is_api false
       in_category_page true
@@ -395,6 +395,7 @@ FactoryGirl.define do
       #country iran
       #language nil
       original_value 4.0
+      value 4.0
       type 'Indicator'
     end
 
@@ -404,6 +405,7 @@ FactoryGirl.define do
       #country iran
       #language nil
       original_value 1.0
+      value 1.0
       type 'Indicator'
     end
 
@@ -486,6 +488,7 @@ FactoryGirl.define do
       #country china
       #language nil
       original_value 3.0
+      value 3.0
       type 'Indicator'
     end
 
@@ -495,6 +498,7 @@ FactoryGirl.define do
       #country china
       #language nil
       original_value 2.0
+      value 2.0
       type 'Indicator'
     end
 

@@ -97,14 +97,14 @@ describe ( 'DatumSource model' ) {
 
     describe ( 'normalized' ) {
       it {
-        # most values are normalized
-        ds_pct_inet.normalized.should be_true
+        # most values are not pre-normalized
+        ds_pct_inet.normalized.should be_false
       }
 
       it {
-        # some filtering ones are not
-        ds_social.normalized.should be_false
-        ds_consistency.normalized.should be_false
+        # some filtering ones are
+        ds_social.normalized.should be_true
+        ds_consistency.normalized.should be_true
       }
     }
   }
