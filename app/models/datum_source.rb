@@ -4,7 +4,7 @@ class DatumSource < ActiveRecord::Base
     belongs_to :category
     belongs_to :group
 
-    has_many :data, :autosave => true
+    has_many :data, :autosave => true, :dependent => :delete_all
     has_one :ingester
     delegate :ingest_data!, :to => :ingester
 

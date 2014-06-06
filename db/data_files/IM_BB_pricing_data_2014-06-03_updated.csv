@@ -1,4 +1,4 @@
-Country, Tier 1 (label),Tier 2 (label),Tier 3 (label),Tier 4 (label),Tier 5 (label), Tier 1 (norm),Tier 2 (norm),Tier 3 (norm),Tier 4 (norm),Tier 5 (norm),Aggregate index
+Country,Tier 1 (label),Tier 2 (label),Tier 3 (label),Tier 4 (label),Tier 5 (label),Tier 1 (norm),Tier 2 (norm),Tier 3 (norm),Tier 4 (norm),Tier 5 (norm),Aggregate index
 Afghanistan,0.67,4.5,6.79,,,0.57,0.92,1,,,0.83
 Algeria,0.05,0.13,0.29,,,0.27,0.4,0.56,,,0.41
 Angola,0.22,0.17,,,,0.44,0.45,,,,0.45
@@ -100,3 +100,4 @@ Vietnam,,0.04,0.14,,0.57,,0.22,0.45,,0.69,0.45
 Yemen,0.51,0.9,,,,0.53,0.69,,,,0.61
 Zambia,0.86,,,,,0.59,,,,,0.59
 Zimbabwe,,,,,,,,,,,
+,,,,,,,,,,,
