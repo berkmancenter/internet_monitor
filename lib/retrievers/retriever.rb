@@ -45,6 +45,7 @@ class Retriever
             options = {}
             if line['Filename']
                 options = {
+                    :years => line['Year(s)'],
                     :filename => Rails.root.join('db', 'data_files', line['Filename']).to_s,
                     :sheetname => line['Sheet Name'],
                     :column => line['Column Name'],
