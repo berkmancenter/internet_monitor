@@ -100,10 +100,11 @@ FactoryGirl.define do
       default_weight 1
       retriever_class 'ITUParser'
       is_api false
+      display_original false
       in_category_page true
       in_sidebar false
       affects_score true
-      source_name 'ITU'
+      source_name 'ITU. Due to ITU policies on data use, we are unable to display the original values for this indicator. For more information, see our FAQ.'
       source_link 'ITU database'
     end
 
@@ -294,6 +295,7 @@ FactoryGirl.define do
     # access
     #   adoption
     #     ds_pct_inet
+    #     ds_mob_scr
     #   speed
     #     ds_download
     #   price
@@ -341,6 +343,15 @@ FactoryGirl.define do
       #country iran
       #language nil
       original_value 21.0
+      type 'Indicator'
+    end
+
+    factory :d_mob_scr_iran do
+      #source ds_mob_scr
+      start_date '2011-01-01'
+      #country iran
+      #language nil
+      original_value 48.37482
       type 'Indicator'
     end
 

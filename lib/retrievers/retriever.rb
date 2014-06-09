@@ -27,9 +27,10 @@ class Retriever
               :source_link => line['URL/source'],
               :retriever_class => line['Retriever Class'],
               :affects_score => line['Affects Score?'] == 'y',
-              :in_category_page => line['Include in Category Page?'] != 'n', # default to true unless specifically 'n'
+              :display_original => line['Display Original Value?'] != 'n', # default to true unless explicitly 'n'
+              :in_category_page => line['Include in Category Page?'] != 'n', # default to true unless explicitly 'n'
               :in_sidebar => line['Include in Sidebar?'] == 'y',
-              :normalized => line['Normalized?'] == 'y', # default to false unless specifically 'y' (DatumSource should have 'Normalized Column Name' field set)
+              :normalized => line['Normalized?'] == 'y', # default to false unless explicitly 'y' (DatumSource should have 'Normalized Column Name' field set)
               :display_prefix => line['Prefix'],
               :display_suffix => line['Suffix'],
               :precision => line['Precision'] || 0,

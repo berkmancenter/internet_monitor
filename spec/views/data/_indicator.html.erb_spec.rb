@@ -44,31 +44,43 @@ describe ( 'data/_indicator' ) {
     }
   }
 
-  context ( 'access indicators' ) {
-    let ( :category ) { Category.find_by_slug( 'access' ) }
-
-    context ( 'Fixed monthly' ) {
+  context ( 'indicators' ) {
+    context ( 'with prefix' ) {
       let ( :ds ) { DatumSource.find_by_admin_name( 'ds_fixed_monthly' ) }
       let ( :indicator ) { country.indicators.where( { datum_source_id: ds.id } ).first }
 
       before {
-        assign( :category, category )
+        assign( :category, ds.category )
         render 'data/indicator', indicator: indicator
       }
       
       it_should_behave_like 'indicator'
     }
 
-    context ( 'Literacy rate' ) {
+    context ( 'with suffix' ) {
       let ( :ds ) { DatumSource.find_by_admin_name( 'ds_lit_rate' ) }
       let ( :indicator ) { country.indicators.where( { datum_source_id: ds.id } ).first }
 
       before {
-        assign( :category, category )
+        assign( :category, ds.category )
         render 'data/indicator', indicator: indicator
       }
       
       it_should_behave_like 'indicator'
+    }
+
+    context ( 'with hidden original_value' ) {
+      let ( :ds ) { DatumSource.find_by_admin_name( 'ds_mob_scr' ) }
+      let ( :indicator ) { country.indicators.where( { datum_source_id: ds.id } ).first }
+
+      before {
+        assign( :category, ds.category )
+        render 'data/indicator', indicator: indicator
+      }
+
+      it {
+        should_not have_css 'dd span.indicator-bar-outer span.original-value'
+      }
     }
   }
 }

@@ -85,6 +85,11 @@ namespace :db do
       d_pct_inet_iran.country = iran
       d_pct_inet_iran.save!
 
+      d_mob_scr_iran = FactoryGirl.create :d_mob_scr_iran
+      d_mob_scr_iran.source = ds_mob_scr
+      d_mob_scr_iran.country = iran
+      d_mob_scr_iran.save!
+
       d_fixed_monthly_iran = FactoryGirl.create :d_fixed_monthly_iran
       d_fixed_monthly_iran.source = ds_fixed_monthly
       d_fixed_monthly_iran.country = iran
