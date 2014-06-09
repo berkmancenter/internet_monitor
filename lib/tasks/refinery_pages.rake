@@ -96,6 +96,7 @@ namespace :refinery_pages do
       page_rec.show_in_menu = page[ 'show_in_menu' ]
       page_rec.deletable = page[ 'deletable' ]
       page_rec.draft = page[ 'draft' ]
+      page_rec.link_url = page[ 'link_url' ]
       page_rec.save
 
       puts "  #{page_rec.slug} is a new page (id: #{page_rec.id}, prev_id: #{page[ 'id' ]})"
