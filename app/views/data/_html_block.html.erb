@@ -6,7 +6,7 @@
     <div class="body"><%= raw rp.first.content_for( :body ) %></div>
   <% end %>
   
-  <%= raw datum.value %>
+  <%= raw datum.value.to_s.force_encoding('UTF-8') %>
 
   <% if rp.any? %>
     <div class="side_body"><%= raw rp.first.content_for( :side_body ) %></div>
