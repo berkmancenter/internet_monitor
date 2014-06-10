@@ -35,7 +35,7 @@ class MorningsideFetcher
                     :clusterMapId => id
                 },
                 :headers => {'Cookie' => SESSION_COOKIE},
-                :timeout => 120
+                :timeout => 240
             }
         ).body
     end
