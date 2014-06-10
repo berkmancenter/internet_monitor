@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/3.9.1" created="2014-05-29 16:18" -->
+<!-- generator="WordPress/3.9.1" created="2014-06-10 15:43" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>Internet Monitor</title>
 	<link>http://blogs.law.harvard.edu/internetmonitor</link>
 	<description></description>
-	<pubDate>Thu, 29 May 2014 16:18:18 +0000</pubDate>
+	<pubDate>Tue, 10 Jun 2014 15:43:43 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://blogs.law.harvard.edu/</wp:base_site_url>
@@ -496,10 +496,6 @@ For those not ready to completely abandon Facebook, Twitter, or Google+ there ar
 				<wp:meta_key>akismet_history</wp:meta_key>
 				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1400341217.1696679592132568359375;s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
 			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_as_submitted</wp:meta_key>
-				<wp:meta_value><![CDATA[a:66:{s:15:"comment_post_ID";i:167;s:14:"comment_author";s:6:"Jottar";s:20:"comment_author_email";s:19:"jottarweb@gmail.com";s:18:"comment_author_url";s:21:"http://www.jottar.com";s:15:"comment_content";s:400:"Facebook has really lost its appeal to me now, these days you can't choose what you want to see on your newsfeed 'Facebook decides for you', even if you like pages and want to see their content it depends now how much the page owners pay Facebook to reach a percentage of their fans. Another social networking alternative I have found with a bit of a difference is http://www.jottar.com check it out.";s:12:"comment_type";s:0:"";s:14:"comment_parent";i:0;s:7:"user_ID";i:0;s:7:"user_ip";s:15:"121.214.213.202";s:10:"user_agent";s:109:"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/537.36";s:8:"referrer";s:85:"https://blogs.law.harvard.edu/internetmonitor/2013/06/14/social-network-alternatives/";s:4:"blog";s:44:"http://blogs.law.harvard.edu/internetmonitor";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:85:"https://blogs.law.harvard.edu/internetmonitor/2013/06/14/social-network-alternatives/";s:21:"akismet_comment_nonce";s:6:"passed";s:11:"POST_author";s:6:"Jottar";s:10:"POST_email";s:19:"jottarweb@gmail.com";s:8:"POST_url";s:21:"http://www.jottar.com";s:12:"POST_comment";s:400:"Facebook has really lost its appeal to me now, these days you can't choose what you want to see on your newsfeed 'Facebook decides for you', even if you like pages and want to see their content it depends now how much the page owners pay Facebook to reach a percentage of their fans. Another social networking alternative I have found with a bit of a difference is http://www.jottar.com check it out.";s:11:"POST_submit";s:12:"Post Comment";s:20:"POST_comment_post_ID";s:3:"167";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"4d2bfc7e10";s:10:"POST_ak_js";s:13:"1400341177947";s:18:"POST_bb2_screener_";s:26:"1400341175 121.214.213.202";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:37:"/internetmonitor/wp-comments-post.php";s:14:"REDIRECT_HTTPS";s:2:"on";s:20:"REDIRECT_SSL_TLS_SNI";s:21:"blogs.law.harvard.edu";s:15:"REDIRECT_STATUS";s:3:"200";s:5:"HTTPS";s:2:"on";s:11:"SSL_TLS_SNI";s:21:"blogs.law.harvard.edu";s:9:"HTTP_HOST";s:21:"blogs.law.harvard.edu";s:15:"HTTP_CONNECTION";s:10:"keep-alive";s:14:"CONTENT_LENGTH";s:3:"649";s:18:"HTTP_CACHE_CONTROL";s:9:"max-age=0";s:11:"HTTP_ACCEPT";s:74:"text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8";s:11:"HTTP_ORIGIN";s:29:"https://blogs.law.harvard.edu";s:15:"HTTP_USER_AGENT";s:109:"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/34.0.1847.137 Safari/537.36";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:12:"HTTP_REFERER";s:85:"https://blogs.law.harvard.edu/internetmonitor/2013/06/14/social-network-alternatives/";s:20:"HTTP_ACCEPT_ENCODING";s:17:"gzip,deflate,sdch";s:20:"HTTP_ACCEPT_LANGUAGE";s:14:"en-US,en;q=0.8";s:11:"HTTP_COOKIE";s:0:"";s:4:"PATH";s:75:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:21:"blogs.law.harvard.edu";s:11:"SERVER_ADDR";s:14:"128.103.64.114";s:11:"SERVER_PORT";s:3:"443";s:11:"REMOTE_ADDR";s:15:"121.214.213.202";s:13:"DOCUMENT_ROOT";s:30:"/web/ethan/wpmu/docs/wpmu-prod";s:12:"SERVER_ADMIN";s:31:"webmaster@cyber.law.harvard.edu";s:15:"SCRIPT_FILENAME";s:51:"/web/ethan/wpmu/docs/wpmu-prod/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"64147";s:12:"REDIRECT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.1";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1400341216";s:4:"argv";s:0:"";s:4:"argc";s:1:"0";s:25:"comment_post_modified_gmt";s:19:"2013-06-14 16:26:02";}]]></wp:meta_value>
-			</wp:commentmeta>
 		</wp:comment>
 		<wp:comment>
 			<wp:comment_id>1980</wp:comment_id>
@@ -565,6 +561,32 @@ It is easy to adopt <a href="http://en.wikipedia.org/wiki/Ornithology">ornitholo
 			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:comment>
+			<wp:comment_id>506</wp:comment_id>
+			<wp:comment_author><![CDATA[Lou Cristillo]]></wp:comment_author>
+			<wp:comment_author_email>musnyc@gmail.com</wp:comment_author_email>
+			<wp:comment_author_url></wp:comment_author_url>
+			<wp:comment_author_IP>192.168.10.114</wp:comment_author_IP>
+			<wp:comment_date>2013-06-13 17:35:33</wp:comment_date>
+			<wp:comment_date_gmt>2013-06-13 21:35:33</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Thanks for sharing the link to your blog post, and congratulations on the first of what will be many more postings.  Liked the extended ornithological metaphor.   There is a certain irony, however, in our preoccupation with the crude efforts of the Saudi conservative establishment to limit freedoms of expression in light of the revelations about the massive scale of the NSA's surveillance of internet communications of American citizens.  If Saudi clerics are behaving like "bird dogs", a pack of wolves seems like the right metaphor to describe how the US government is behaving!]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_result</wp:meta_key>
+				<wp:meta_value><![CDATA[false]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1371159333.64";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1371209880.23";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
+		<wp:comment>
 			<wp:comment_id>503</wp:comment_id>
 			<wp:comment_author><![CDATA[Kimberly Deatherage Mominah]]></wp:comment_author>
 			<wp:comment_author_email>hatimskuku@aol.com</wp:comment_author_email>
@@ -620,32 +642,6 @@ Wouldn't it be cool if there was a "ReTweet" don't "Retreat" movement?! With t-s
 			<wp:commentmeta>
 				<wp:meta_key>akismet_history</wp:meta_key>
 				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:12:"1371209892.6";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
-			</wp:commentmeta>
-		</wp:comment>
-		<wp:comment>
-			<wp:comment_id>506</wp:comment_id>
-			<wp:comment_author><![CDATA[Lou Cristillo]]></wp:comment_author>
-			<wp:comment_author_email>musnyc@gmail.com</wp:comment_author_email>
-			<wp:comment_author_url></wp:comment_author_url>
-			<wp:comment_author_IP>192.168.10.114</wp:comment_author_IP>
-			<wp:comment_date>2013-06-13 17:35:33</wp:comment_date>
-			<wp:comment_date_gmt>2013-06-13 21:35:33</wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[Thanks for sharing the link to your blog post, and congratulations on the first of what will be many more postings.  Liked the extended ornithological metaphor.   There is a certain irony, however, in our preoccupation with the crude efforts of the Saudi conservative establishment to limit freedoms of expression in light of the revelations about the massive scale of the NSA's surveillance of internet communications of American citizens.  If Saudi clerics are behaving like "bird dogs", a pack of wolves seems like the right metaphor to describe how the US government is behaving!]]></wp:comment_content>
-			<wp:comment_approved>1</wp:comment_approved>
-			<wp:comment_type></wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_result</wp:meta_key>
-				<wp:meta_value><![CDATA[false]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1371159333.64";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1371209880.23";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
 			</wp:commentmeta>
 		</wp:comment>
 		<wp:comment>
@@ -932,32 +928,6 @@ Want to see more Twitter visualizations? The company crunches its own data and p
 			</wp:commentmeta>
 		</wp:comment>
 		<wp:comment>
-			<wp:comment_id>602</wp:comment_id>
-			<wp:comment_author><![CDATA[Taking the pulse of the planet: How Twitter erases geography &laquo; Tony Rocha Official Blog]]></wp:comment_author>
-			<wp:comment_author_email></wp:comment_author_email>
-			<wp:comment_author_url>http://www.tonyrocha.com/taking-the-pulse-of-the-planet-how-twitter-erases-geography/</wp:comment_author_url>
-			<wp:comment_author_IP>192.168.10.114</wp:comment_author_IP>
-			<wp:comment_date>2013-06-22 05:21:32</wp:comment_date>
-			<wp:comment_date_gmt>2013-06-22 09:21:32</wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[[...] hardly ever get to see those connections represented visually. That’s why research projects like a recent study from a team of scientists at the University of Illinois are so valuable — they allow us to see how these [...]]]></wp:comment_content>
-			<wp:comment_approved>1</wp:comment_approved>
-			<wp:comment_type>pingback</wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1372102464.01";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_result</wp:meta_key>
-				<wp:meta_value><![CDATA[false]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1371892892.98";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-		</wp:comment>
-		<wp:comment>
 			<wp:comment_id>2174</wp:comment_id>
 			<wp:comment_author><![CDATA[Taking the pulse of the planet: How Twitter erases geography | BaciNews]]></wp:comment_author>
 			<wp:comment_author_email></wp:comment_author_email>
@@ -981,6 +951,32 @@ Want to see more Twitter visualizations? The company crunches its own data and p
 			<wp:commentmeta>
 				<wp:meta_key>akismet_history</wp:meta_key>
 				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1390588655.61";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
+		<wp:comment>
+			<wp:comment_id>602</wp:comment_id>
+			<wp:comment_author><![CDATA[Taking the pulse of the planet: How Twitter erases geography &laquo; Tony Rocha Official Blog]]></wp:comment_author>
+			<wp:comment_author_email></wp:comment_author_email>
+			<wp:comment_author_url>http://www.tonyrocha.com/taking-the-pulse-of-the-planet-how-twitter-erases-geography/</wp:comment_author_url>
+			<wp:comment_author_IP>192.168.10.114</wp:comment_author_IP>
+			<wp:comment_date>2013-06-22 05:21:32</wp:comment_date>
+			<wp:comment_date_gmt>2013-06-22 09:21:32</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[[...] hardly ever get to see those connections represented visually. That’s why research projects like a recent study from a team of scientists at the University of Illinois are so valuable — they allow us to see how these [...]]]></wp:comment_content>
+			<wp:comment_approved>1</wp:comment_approved>
+			<wp:comment_type>pingback</wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1372102464.01";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_result</wp:meta_key>
+				<wp:meta_value><![CDATA[false]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1371892892.98";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
 			</wp:commentmeta>
 		</wp:comment>
 	</item>
@@ -1601,17 +1597,16 @@ Even if the increasing gap between storage and mobility doesn't become a problem
 			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:comment>
-			<wp:comment_id>785</wp:comment_id>
-			<wp:comment_author><![CDATA[Tjebbe van Tijen]]></wp:comment_author>
-			<wp:comment_author_email>tjebbe@imaginarymuseum.org</wp:comment_author_email>
-			<wp:comment_author_url>http://imaginarymuseum.org/</wp:comment_author_url>
-			<wp:comment_author_IP>92.109.98.9</wp:comment_author_IP>
-			<wp:comment_date>2013-07-09 05:44:36</wp:comment_date>
-			<wp:comment_date_gmt>2013-07-09 09:44:36</wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[Thank you for the article and using my image on the USB-pigeon carrier, though please it is good habit to include a direct link to the original image (which is http://flic.kr/p/eTrqcD) You may also like to check my article of january 2012: "AIRLIFT YOUR DATA: alternatives for a blockaded internet" at the following URL
-http://limpingmessenger.wordpress.com/2012/01/26/airlift-your-data-alternatives-for-a-blockaded-internet/]]></wp:comment_content>
+			<wp:comment_id>2173</wp:comment_id>
+			<wp:comment_author><![CDATA[Pigeonet: are pigeons faster and safer than the internet | STALIN&#039;S MOUSTACHE]]></wp:comment_author>
+			<wp:comment_author_email></wp:comment_author_email>
+			<wp:comment_author_url>http://stalinsmoustache.wordpress.com/2013/12/28/pigeonet-are-pigeons-faster-and-safer-than-the-internet/</wp:comment_author_url>
+			<wp:comment_author_IP>192.168.10.114</wp:comment_author_IP>
+			<wp:comment_date>2013-12-28 08:07:39</wp:comment_date>
+			<wp:comment_date_gmt>2013-12-28 12:07:39</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[[...] pigeons the answer to internet speed and safety from spying? An intriguing suggestion from the Internet Monitor suggests so. A snippet: In 2009, a South African marketing company targeted South Africa’s [...]]]></wp:comment_content>
 			<wp:comment_approved>1</wp:comment_approved>
-			<wp:comment_type></wp:comment_type>
+			<wp:comment_type>pingback</wp:comment_type>
 			<wp:comment_parent>0</wp:comment_parent>
 			<wp:comment_user_id>0</wp:comment_user_id>
 			<wp:commentmeta>
@@ -1620,11 +1615,11 @@ http://limpingmessenger.wordpress.com/2012/01/26/airlift-your-data-alternatives-
 			</wp:commentmeta>
 			<wp:commentmeta>
 				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1373363076.02";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1388232459.26";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
 			</wp:commentmeta>
 			<wp:commentmeta>
 				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1373465968.44";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1390588657.66";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
 			</wp:commentmeta>
 		</wp:comment>
 		<wp:comment>
@@ -1654,16 +1649,17 @@ http://limpingmessenger.wordpress.com/2012/01/26/airlift-your-data-alternatives-
 			</wp:commentmeta>
 		</wp:comment>
 		<wp:comment>
-			<wp:comment_id>2173</wp:comment_id>
-			<wp:comment_author><![CDATA[Pigeonet: are pigeons faster and safer than the internet | STALIN&#039;S MOUSTACHE]]></wp:comment_author>
-			<wp:comment_author_email></wp:comment_author_email>
-			<wp:comment_author_url>http://stalinsmoustache.wordpress.com/2013/12/28/pigeonet-are-pigeons-faster-and-safer-than-the-internet/</wp:comment_author_url>
-			<wp:comment_author_IP>192.168.10.114</wp:comment_author_IP>
-			<wp:comment_date>2013-12-28 08:07:39</wp:comment_date>
-			<wp:comment_date_gmt>2013-12-28 12:07:39</wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[[...] pigeons the answer to internet speed and safety from spying? An intriguing suggestion from the Internet Monitor suggests so. A snippet: In 2009, a South African marketing company targeted South Africa’s [...]]]></wp:comment_content>
+			<wp:comment_id>785</wp:comment_id>
+			<wp:comment_author><![CDATA[Tjebbe van Tijen]]></wp:comment_author>
+			<wp:comment_author_email>tjebbe@imaginarymuseum.org</wp:comment_author_email>
+			<wp:comment_author_url>http://imaginarymuseum.org/</wp:comment_author_url>
+			<wp:comment_author_IP>92.109.98.9</wp:comment_author_IP>
+			<wp:comment_date>2013-07-09 05:44:36</wp:comment_date>
+			<wp:comment_date_gmt>2013-07-09 09:44:36</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Thank you for the article and using my image on the USB-pigeon carrier, though please it is good habit to include a direct link to the original image (which is http://flic.kr/p/eTrqcD) You may also like to check my article of january 2012: "AIRLIFT YOUR DATA: alternatives for a blockaded internet" at the following URL
+http://limpingmessenger.wordpress.com/2012/01/26/airlift-your-data-alternatives-for-a-blockaded-internet/]]></wp:comment_content>
 			<wp:comment_approved>1</wp:comment_approved>
-			<wp:comment_type>pingback</wp:comment_type>
+			<wp:comment_type></wp:comment_type>
 			<wp:comment_parent>0</wp:comment_parent>
 			<wp:comment_user_id>0</wp:comment_user_id>
 			<wp:commentmeta>
@@ -1672,11 +1668,11 @@ http://limpingmessenger.wordpress.com/2012/01/26/airlift-your-data-alternatives-
 			</wp:commentmeta>
 			<wp:commentmeta>
 				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1388232459.26";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1373363076.02";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
 			</wp:commentmeta>
 			<wp:commentmeta>
 				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1390588657.66";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1373465968.44";s:7:"message";s:46:"rebekah changed the comment status to approved";s:5:"event";s:15:"status-approved";s:4:"user";s:7:"rebekah";}]]></wp:meta_value>
 			</wp:commentmeta>
 		</wp:comment>
 	</item>
@@ -1832,16 +1828,6 @@ Every day, it ships about eight hundred pairs of flip flops (<a href="https://ww
 			<wp:commentmeta>
 				<wp:meta_key>akismet_history</wp:meta_key>
 				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1400751831.900230884552001953125;s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_as_submitted</wp:meta_key>
-				<wp:meta_value><![CDATA[a:63:{s:15:"comment_post_ID";i:613;s:14:"comment_author";s:11:"youtube.com";s:20:"comment_author_email";s:24:"syreetadittmer@gmail.com";s:18:"comment_author_url";s:43:"https://www.youtube.com/watch?v=ALXNW5XUUlY";s:15:"comment_content";s:381:"Egypt would most likely use papyrus while Rome would use leather to 
-create sturdy flip flips that military generals could 
-wear. I deal with matters related to business-appropriate apparel on a daily basis.
-Every day, it ships about eight hundred pairs of flip flops (<a href="https://www.youtube.com/watch?v=ALXNW5XUUlY">youtube.com</a>) to almost every spot around the globe.";s:12:"comment_type";s:0:"";s:14:"comment_parent";i:0;s:7:"user_ID";i:0;s:7:"user_ip";s:12:"192.3.55.234";s:10:"user_agent";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.71 Safari/537.36";s:8:"referrer";s:136:"https://blogs.law.harvard.edu/internetmonitor/2013/07/10/surveillance-camera-man-draws-ire-provokes-questions-about-recording-in-public/";s:4:"blog";s:44:"http://blogs.law.harvard.edu/internetmonitor";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:136:"https://blogs.law.harvard.edu/internetmonitor/2013/07/10/surveillance-camera-man-draws-ire-provokes-questions-about-recording-in-public/";s:21:"akismet_comment_nonce";s:6:"passed";s:18:"POST_bb2_screener_";s:23:"1400751774 192.3.55.234";s:11:"POST_author";s:11:"youtube.com";s:10:"POST_email";s:24:"syreetadittmer@gmail.com";s:8:"POST_url";s:43:"https://www.youtube.com/watch?v=ALXNW5XUUlY";s:12:"POST_comment";s:381:"Egypt would most likely use papyrus while Rome would use leather to 
-create sturdy flip flips that military generals could 
-wear. I deal with matters related to business-appropriate apparel on a daily basis.
-Every day, it ships about eight hundred pairs of flip flops (<a href="https://www.youtube.com/watch?v=ALXNW5XUUlY">youtube.com</a>) to almost every spot around the globe.";s:11:"POST_submit";s:12:"Post Comment";s:20:"POST_comment_post_ID";s:3:"613";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"90afe0f132";s:10:"POST_ak_js";s:3:"137";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:37:"/internetmonitor/wp-comments-post.php";s:14:"REDIRECT_HTTPS";s:2:"on";s:15:"REDIRECT_STATUS";s:3:"200";s:5:"HTTPS";s:2:"on";s:9:"HTTP_HOST";s:21:"blogs.law.harvard.edu";s:11:"HTTP_COOKIE";s:0:"";s:15:"HTTP_USER_AGENT";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.71 Safari/537.36";s:11:"HTTP_ACCEPT";s:129:"text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1";s:20:"HTTP_ACCEPT_LANGUAGE";s:2:"en";s:20:"HTTP_ACCEPT_ENCODING";s:13:"gzip, deflate";s:12:"HTTP_REFERER";s:136:"https://blogs.law.harvard.edu/internetmonitor/2013/07/10/surveillance-camera-man-draws-ire-provokes-questions-about-recording-in-public/";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:14:"CONTENT_LENGTH";s:3:"685";s:18:"HTTP_CACHE_CONTROL";s:14:"max-age=259200";s:15:"HTTP_CONNECTION";s:10:"keep-alive";s:4:"PATH";s:75:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:21:"blogs.law.harvard.edu";s:11:"SERVER_ADDR";s:14:"128.103.64.114";s:11:"SERVER_PORT";s:3:"443";s:11:"REMOTE_ADDR";s:12:"192.3.55.234";s:13:"DOCUMENT_ROOT";s:30:"/web/ethan/wpmu/docs/wpmu-prod";s:12:"SERVER_ADMIN";s:31:"webmaster@cyber.law.harvard.edu";s:15:"SCRIPT_FILENAME";s:51:"/web/ethan/wpmu/docs/wpmu-prod/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"49574";s:12:"REDIRECT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.1";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1400751831";s:4:"argv";s:0:"";s:4:"argc";s:1:"0";s:25:"comment_post_modified_gmt";s:19:"2013-07-10 14:39:24";}]]></wp:meta_value>
 			</wp:commentmeta>
 		</wp:comment>
 	</item>
@@ -3369,7 +3355,7 @@ A hacktivist going by the name “The Messiah” <a href="http://www.theregister
 <strong>United States</strong>
 A major reform bill was <a href="http://www.huffingtonpost.com/2013/10/29/nsa-reform-bill_n_4175846.html">introduced</a>, designed to rein in the NSA’s spying powers. While the bill boasts bipartisan support, critics were quick to argue that the “reform” bill does little more than preserve the <a href="http://arstechnica.com/tech-policy/2013/10/feinstein-shows-off-nsa-reform-bill-thats-really-about-the-status-quo/">status quo</a>. Meanwhile, US Secretary of State John Kerry <a href="http://www.theaustralian.com.au/news/world/john-kerry-admits-us-spying-occasionally-goes-too-far/story-e6frg6so-1226751315967?sv=3862298499283278787e3121d3d9e416#sthash.8ciRweQT.uxfs">acknowledged</a> that there have been cases where US efforts to gather information have “reached too far inappropriately.”
 
-<em>#IMweekly is a regular round-up of news about Internet content controls and activity around the world. To subscribe via RSS, <a href="http://blogs.law.harvard.edu/internetmonitor/category/im-weekly/feed/">click here</a>.]]></content:encoded>
+<em>#IMweekly is a regular round-up of news about Internet content controls and activity around the world. To subscribe via RSS, <a href="http://blogs.law.harvard.edu/internetmonitor/category/im-weekly/feed/">click here</a>.</em>]]></content:encoded>
 		<excerpt:encoded><![CDATA[In this week's #IMWeekly: a new US surveillance reform bill, hacktivism in Singapore, and more.]]></excerpt:encoded>
 		<wp:post_id>1105</wp:post_id>
 		<wp:post_date>2013-11-04 15:23:39</wp:post_date>
@@ -3421,10 +3407,6 @@ A major reform bill was <a href="http://www.huffingtonpost.com/2013/10/29/nsa-re
 			<wp:commentmeta>
 				<wp:meta_key>akismet_history</wp:meta_key>
 				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1400713326.0179069042205810546875;s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_as_submitted</wp:meta_key>
-				<wp:meta_value><![CDATA[a:64:{s:15:"comment_post_ID";i:1105;s:14:"comment_author";s:5:"proxy";s:20:"comment_author_email";s:22:"rooseveltreeder@gmx.de";s:18:"comment_author_url";s:22:"http://www.bayproxy.nl";s:15:"comment_content";s:61:"Downloads movies and music for free at http://www.bayproxy.nl";s:12:"comment_type";s:0:"";s:14:"comment_parent";i:0;s:7:"user_ID";i:0;s:7:"user_ip";s:15:"213.124.218.243";s:10:"user_agent";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.71 Safari/537.36";s:8:"referrer";s:82:"https://blogs.law.harvard.edu/internetmonitor/2013/11/04/imweekly-november-4-2013/";s:4:"blog";s:44:"http://blogs.law.harvard.edu/internetmonitor";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:82:"https://blogs.law.harvard.edu/internetmonitor/2013/11/04/imweekly-november-4-2013/";s:21:"akismet_comment_nonce";s:6:"passed";s:18:"POST_bb2_screener_";s:26:"1400713309 213.124.218.243";s:11:"POST_author";s:5:"proxy";s:10:"POST_email";s:22:"rooseveltreeder@gmx.de";s:8:"POST_url";s:22:"http://www.bayproxy.nl";s:12:"POST_comment";s:61:"Downloads movies and music for free at http://www.bayproxy.nl";s:11:"POST_submit";s:12:"Post Comment";s:20:"POST_comment_post_ID";s:4:"1105";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"3170bb6d23";s:10:"POST_ak_js";s:3:"105";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:37:"/internetmonitor/wp-comments-post.php";s:14:"REDIRECT_HTTPS";s:2:"on";s:20:"REDIRECT_SSL_TLS_SNI";s:21:"blogs.law.harvard.edu";s:15:"REDIRECT_STATUS";s:3:"200";s:5:"HTTPS";s:2:"on";s:11:"SSL_TLS_SNI";s:21:"blogs.law.harvard.edu";s:9:"HTTP_HOST";s:21:"blogs.law.harvard.edu";s:11:"HTTP_COOKIE";s:0:"";s:15:"HTTP_CONNECTION";s:10:"Keep-Alive";s:15:"HTTP_USER_AGENT";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_6_8) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.71 Safari/537.36";s:11:"HTTP_ACCEPT";s:129:"text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1";s:20:"HTTP_ACCEPT_LANGUAGE";s:2:"en";s:20:"HTTP_ACCEPT_ENCODING";s:13:"gzip, deflate";s:12:"HTTP_REFERER";s:82:"https://blogs.law.harvard.edu/internetmonitor/2013/11/04/imweekly-november-4-2013/";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:14:"CONTENT_LENGTH";s:3:"294";s:4:"PATH";s:75:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:21:"blogs.law.harvard.edu";s:11:"SERVER_ADDR";s:14:"128.103.64.114";s:11:"SERVER_PORT";s:3:"443";s:11:"REMOTE_ADDR";s:15:"213.124.218.243";s:13:"DOCUMENT_ROOT";s:30:"/web/ethan/wpmu/docs/wpmu-prod";s:12:"SERVER_ADMIN";s:31:"webmaster@cyber.law.harvard.edu";s:15:"SCRIPT_FILENAME";s:51:"/web/ethan/wpmu/docs/wpmu-prod/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"50162";s:12:"REDIRECT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.1";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1400713325";s:4:"argv";s:0:"";s:4:"argc";s:1:"0";s:25:"comment_post_modified_gmt";s:19:"2013-11-04 19:23:39";}]]></wp:meta_value>
 			</wp:commentmeta>
 		</wp:comment>
 	</item>
