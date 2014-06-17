@@ -7,7 +7,7 @@
   <span class="indicator-bar-outer">
     <span data-value="<%= indicator.percent %>" style="width: <%= indicator.percent * 100 %>%" class="indicator-bar-inner <%= "#{@category.slug}-1-bg" %>"></span>
     <% if indicator.source.display_original %>
-      <span class="original-value <%= 'over' unless under %>" style="<%= under ? "left: #{indicator.percent * 100.0}%" : "right: #{(1.0 - indicator.percent) * 100.0}%" %>;"><%= indicator.source.display_prefix %><%= number_with_precision( indicator.original_value, { precision: 0, delimiter: ',' } ) %><%= indicator.source.display_suffix %></span>
+      <span class="original-value <%= 'over' unless under %>" style="<%= under ? "left: #{indicator.percent * 100.0}%" : "right: #{((1.0 - indicator.percent) * 100.0).round(2)}%" %>;"><%= indicator.source.display_prefix %><%= number_with_precision( indicator.original_value, { precision: 0, delimiter: ',' } ) %><%= indicator.source.display_suffix %></span>
     <% end %>
   </span>
 </dd>
