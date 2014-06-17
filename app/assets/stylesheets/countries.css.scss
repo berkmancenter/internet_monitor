@@ -180,13 +180,13 @@
 /* end */
 
 .countries.map {
-  $sectionTop: 128px;
+  $sectionTop: 144px;
   $sectionBreak: 320px;
 
   min-width: 800px;
   
   header {
-    height: 128px;
+    height: $sectionTop;
     position: relative;
     z-index: 1;
   }
