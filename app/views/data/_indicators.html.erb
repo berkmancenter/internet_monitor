@@ -8,7 +8,7 @@
     <span class="il1">best</span>
     </dd>
 
-    <%= render partial: 'data/indicator', collection: indicators %>
+    <%= render partial: 'data/indicator', collection: indicators.sort_by { |i| i.source.id } %>
 
   </dl>
 </div>
