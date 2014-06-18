@@ -2,7 +2,8 @@
 <%= render partial: "countries/map", locals: { country: @country } %>
 
 <dl>
-  <% @country.data.in_sidebar.most_recent.each do |datum| %>
+  <% sorted = @country.data.in_sidebar.most_recent.sort_by { |i| i.source.id } %>
+  <% sorted.each do |datum| %>
     <dt><%= datum.name %></dt>
     <dd><%= format_sidebar_value( datum ) %></dd>
   <% end %>
