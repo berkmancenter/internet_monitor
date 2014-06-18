@@ -17,7 +17,7 @@ class GooglePriceParser
       datum = row[column].to_f * multiplier unless row[column].nil?
       normalized = row[normalized_column].to_f unless row[normalized_column].nil?
       unless datum.nil?
-        i = Indicator.new(:start_date => start_date, :original_value => datum, :value => normalized)
+        i = Indicator.new( :start_date => start_date, :original_value => datum, :value => (1 - normalized) )
         i.country = country
         data << i
       end
