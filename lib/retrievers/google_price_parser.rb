@@ -10,7 +10,7 @@ class GooglePriceParser
     data = []
     csv = CSV.open(filename, { :headers => true })
     csv.each do |row|
-      country = Country.find_by_name(row['Country'])
+      country = Country.find_by_iso3_code(row['Code'])
       next unless country
 
       start_date = Date.new(years.to_i, 1, 1)
