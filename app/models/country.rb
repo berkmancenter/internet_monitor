@@ -55,13 +55,6 @@ class Country < ActiveRecord::Base
       access_group_count >= Rails.application.config.imon[ 'min_access_groups' ]
     end
 
-    def score(options = {})
-        return read_attribute(:score) unless !options.empty?
-        options.assert_valid_keys(:for)
-        options.delete_if { |key, value| value.nil? }
-        country_categories.where(:category_id => options[:for].id).first.score
-    end
-
     def calculate_score!
       return unless self.enough_data?
       most_recent = indicators.most_recent.affecting_score

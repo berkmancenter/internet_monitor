@@ -3,8 +3,6 @@ access = Category.find_by_name('access')
 activity = Category.find_by_name('activity')
 
 america.score
-america.score :for => access
-america.score :for => activity
 
 #infobox
 

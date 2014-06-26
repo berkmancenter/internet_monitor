@@ -9,17 +9,9 @@ describe ( 'CountryCategory model' ) {
   context ( 'with valid data' ) {
     it { should be_valid }
 
-    it { should respond_to :score }
-  }
+    it { should respond_to :indicators }
 
-  describe ( 'CountryCategory.calculate_scores!' ) {
-    before {
-      CountryCategory.calculate_scores!
-    }
-
-    it ( 'should not rank countries without enough data' ) {
-      country_category.score.should_not eq( nil )
-    }
+    it { should_not respond_to :score }
   }
 }
 

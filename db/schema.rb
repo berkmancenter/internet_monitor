@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140609173745) do
+ActiveRecord::Schema.define(:version => 20140626202922) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -38,7 +38,6 @@ ActiveRecord::Schema.define(:version => 20140609173745) do
   create_table "country_categories", :force => true do |t|
     t.integer  "country_id"
     t.integer  "category_id"
-    t.float    "score"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
   end
