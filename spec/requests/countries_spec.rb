@@ -50,6 +50,7 @@ describe 'countries requests', :js => true do
 
   describe ( 'get /countries index' ) {
     let ( :country ) { Country.find_by_iso3_code( 'CHN' ) }
+    let ( :country2 ) { Country.find_by_iso3_code( 'IRN' ) }
     let ( :country_no_score ) { Country.find_by_iso3_code( 'USA' ) }
 
     before {
@@ -92,6 +93,10 @@ describe 'countries requests', :js => true do
           should have_css ".score-pill[data-country-id='#{country.id}'] .user-score.updated"
           should have_css ".score-pill[data-country-id='#{country.id}'] .user-score", text: '6.25'
           should have_css ".score-pill[data-country-id='#{country.id}'] .user-rank", text: '1'
+        }
+
+        it {
+          should have_css ".score-pill[data-country-id='#{country2.id}'] .user-score", text: '3.13'
         }
 
         it ( 'should not updated score pills for countries without enough data' ) {
