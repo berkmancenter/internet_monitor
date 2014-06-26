@@ -35,7 +35,7 @@ describe ( 'Country model' ) {
 
       it ( 'should have recalculated score & still be valid' ) {
         should be_valid
-        country.score.round( 2 ).should eq( 1.25 ) 
+        country.score.round( 2 ).should eq( 3.75 ) 
       }
     }
   }

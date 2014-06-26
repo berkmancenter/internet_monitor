@@ -57,8 +57,21 @@ class Country < ActiveRecord::Base
 
     def calculate_score!
       return unless self.enough_data?
+
       most_recent = indicators.most_recent.affecting_score
-      ws = Indicator.weighted_score( most_recent )
+
+      # group by datum_source group
+      grouped = most_recent.group_by { |i| i.source.group.admin_name }
+
+      # calculate a weighted_score score for each group
+      ws = 0
+      grouped.each { |g|
+        ws += Indicator.weighted_score( g[1] )
+      }
+
+      # average the group scores & multiply by max_score
+      ws = ws / grouped.count * Rails.application.config.imon['max_score']
+
       self.score = ws unless ws.nan?
       save!
     end

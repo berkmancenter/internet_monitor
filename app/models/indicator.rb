@@ -26,8 +26,10 @@ class Indicator < Datum
     end
 
     # the final sum is the average of indicator values calculated above
-    # times the highest score possible, 10.0
-    sum / indis.count.to_f * Rails.application.config.imon['max_score']
+    sum / indis.count.to_f
+
+    # weighted_score is no longer multiplied by the max_score here,
+    # that is done at the end of calculating scores for each group
   end
 
   def calc_percent
