@@ -38,7 +38,7 @@ def export_most_recent( filename )
   puts "#{countries.count} countries"
   
   CSV.open( filename, 'wb' ) { |csv|
-    csv << [ 'c_iso3_code', 'c_name', 'ds_public_name', 'ds_admin_name', 'ds_affects_score', 'ds_min', 'ds_max', 'ds_default_weight', 'd_start_date', 'd_original_value', 'd_value' ]
+    csv << [ 'c_iso3_code', 'c_name', 'ds_public_name', 'ds_admin_name', 'ds_group', 'ds_affects_score', 'ds_min', 'ds_max', 'ds_default_weight', 'd_start_date', 'd_original_value', 'd_value' ]
 
     count = 0
 
@@ -48,7 +48,7 @@ def export_most_recent( filename )
 
       indicators.each { |d|
         ds = d.source
-        csv << [ c.iso3_code, c.name, ds.public_name, ds.admin_name, ds.affects_score, ds.min, ds.max, ds.default_weight, d.start_date, d.original_value, d.value ]
+        csv << [ c.iso3_code, c.name, ds.public_name, ds.admin_name, ( ds.group.present? ? ds.group.admin_name : nil ), ds.affects_score, ds.min, ds.max, ds.default_weight, d.start_date, d.original_value, d.value ]
 
         count += 1
       }
