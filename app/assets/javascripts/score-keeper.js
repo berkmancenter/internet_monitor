@@ -159,9 +159,8 @@
       }
     },
 
-    calculateScore: function( country ) {
-      var indicators = country.indicators;
-
+    weightedScore: function( indicators ) {
+      // JavaScript version of ruby's Indicator.weighted_score
       var sum = indicators.reduce( function( sum, indi, i ) {
         var indicator = _indicators[ indi.group ];
         var groupWeight = $.bbq.getState( indi.group, true ) || 1.0;
@@ -175,7 +174,37 @@
       }, 0.0);
 
       var average = sum / indicators.length;
-      var score = average * _options.maxScore;
+      return average;
+    },
+
+    groupBy: function( arr, prop ) {
+      var items = {}, base, key;
+      for (var i = 0; i < arr.length; i++) {
+        base = arr[ i ];
+        key = base[ prop ];
+        // if not already present in the map, add a zeroed item in the map
+        if (!items[ key ]) {
+          items[ key ] = [];
+        }
+        // add new item to the map entry
+        items[ key ].push( base );
+      }
+      return items;
+    },
+
+    calculateScore: function( country ) {
+      var indicators = country.indicators;
+      var grouped = this.groupBy( indicators, 'group' );
+
+      var ws = 0, sk = this;
+
+      $.each( grouped, function( ) {
+        ws += sk.weightedScore( this );
+      } );
+
+      //var ws = this.weightedScore( indicators );
+
+      var score = ws / 4 * _options.maxScore;
       return score;
     }
   };
