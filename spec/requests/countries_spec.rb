@@ -96,7 +96,7 @@ describe 'countries requests', :js => true do
         }
 
         it {
-          should have_css ".score-pill[data-country-id='#{country2.id}'] .user-score", text: '3.13'
+          should have_css ".score-pill[data-country-id='#{country2.id}'] .user-score", text: '3.12'
         }
 
         it ( 'should not updated score pills for countries without enough data' ) {
