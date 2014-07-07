@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/3.9.1" created="2014-06-10 15:43" -->
+<!-- generator="WordPress/3.9.1" created="2014-07-07 18:20" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.2/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>Internet Monitor</title>
 	<link>http://blogs.law.harvard.edu/internetmonitor</link>
 	<description></description>
-	<pubDate>Tue, 10 Jun 2014 15:43:43 +0000</pubDate>
+	<pubDate>Mon, 07 Jul 2014 18:20:09 +0000</pubDate>
 	<language>en-US</language>
 	<wp:wxr_version>1.2</wp:wxr_version>
 	<wp:base_site_url>http://blogs.law.harvard.edu/</wp:base_site_url>
@@ -46,6 +46,8 @@
 	<wp:author><wp:author_id>6209</wp:author_id><wp:author_login>adamlewis</wp:author_login><wp:author_email>alewis@cyber.law.harvard.edu</wp:author_email><wp:author_display_name><![CDATA[Adam Lewis]]></wp:author_display_name><wp:author_first_name><![CDATA[Adam]]></wp:author_first_name><wp:author_last_name><![CDATA[Lewis]]></wp:author_last_name></wp:author>
 	<wp:author><wp:author_id>1907</wp:author_id><wp:author_login>epopko</wp:author_login><wp:author_email>epopko@cyber.law.harvard.edu</wp:author_email><wp:author_display_name><![CDATA[Edward]]></wp:author_display_name><wp:author_first_name><![CDATA[Edward]]></wp:author_first_name><wp:author_last_name><![CDATA[Popko]]></wp:author_last_name></wp:author>
 	<wp:author><wp:author_id>2620</wp:author_id><wp:author_login>jdcc</wp:author_login><wp:author_email>jclark@cyber.law.harvard.edu</wp:author_email><wp:author_display_name><![CDATA[jdcc]]></wp:author_display_name><wp:author_first_name><![CDATA[]]></wp:author_first_name><wp:author_last_name><![CDATA[]]></wp:author_last_name></wp:author>
+	<wp:author><wp:author_id>6386</wp:author_id><wp:author_login>msen</wp:author_login><wp:author_email>msen@cyber.law.harvard.edu</wp:author_email><wp:author_display_name><![CDATA[Mayukh Sen]]></wp:author_display_name><wp:author_first_name><![CDATA[Mayukh]]></wp:author_first_name><wp:author_last_name><![CDATA[Sen]]></wp:author_last_name></wp:author>
+	<wp:author><wp:author_id>6389</wp:author_id><wp:author_login>cmcnear</wp:author_login><wp:author_email>cmcnear@cyber.law.harvard.edu</wp:author_email><wp:author_display_name><![CDATA[Claire McNear]]></wp:author_display_name><wp:author_first_name><![CDATA[Claire]]></wp:author_first_name><wp:author_last_name><![CDATA[McNear]]></wp:author_last_name></wp:author>
 
 
 	<generator>http://wordpress.org/?v=3.9.1</generator>
@@ -475,28 +477,6 @@ For those not ready to completely abandon Facebook, Twitter, or Google+ there ar
 			<wp:meta_key>_thumbnail_id</wp:meta_key>
 			<wp:meta_value><![CDATA[240]]></wp:meta_value>
 		</wp:postmeta>
-		<wp:comment>
-			<wp:comment_id>6158</wp:comment_id>
-			<wp:comment_author><![CDATA[Jottar]]></wp:comment_author>
-			<wp:comment_author_email>jottarweb@gmail.com</wp:comment_author_email>
-			<wp:comment_author_url>http://www.jottar.com</wp:comment_author_url>
-			<wp:comment_author_IP>121.214.213.202</wp:comment_author_IP>
-			<wp:comment_date>2014-05-17 11:40:17</wp:comment_date>
-			<wp:comment_date_gmt>2014-05-17 15:40:17</wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[Facebook has really lost its appeal to me now, these days you can't choose what you want to see on your newsfeed 'Facebook decides for you', even if you like pages and want to see their content it depends now how much the page owners pay Facebook to reach a percentage of their fans. Another social networking alternative I have found with a bit of a difference is http://www.jottar.com check it out.]]></wp:comment_content>
-			<wp:comment_approved>0</wp:comment_approved>
-			<wp:comment_type></wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_result</wp:meta_key>
-				<wp:meta_value><![CDATA[false]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1400341217.1696679592132568359375;s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-		</wp:comment>
 		<wp:comment>
 			<wp:comment_id>1980</wp:comment_id>
 			<wp:comment_author><![CDATA[Social Network Alternatives | Political Query]]></wp:comment_author>
@@ -1805,31 +1785,6 @@ This comment from Spence, who calls himself the <a href="http://www.eyeborgblog.
 			<wp:meta_key>_edit_last</wp:meta_key>
 			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
 		</wp:postmeta>
-		<wp:comment>
-			<wp:comment_id>7742</wp:comment_id>
-			<wp:comment_author><![CDATA[youtube.com]]></wp:comment_author>
-			<wp:comment_author_email>syreetadittmer@gmail.com</wp:comment_author_email>
-			<wp:comment_author_url>https://www.youtube.com/watch?v=ALXNW5XUUlY</wp:comment_author_url>
-			<wp:comment_author_IP>192.3.55.234</wp:comment_author_IP>
-			<wp:comment_date>2014-05-22 05:43:51</wp:comment_date>
-			<wp:comment_date_gmt>2014-05-22 09:43:51</wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[Egypt would most likely use papyrus while Rome would use leather to 
-create sturdy flip flips that military generals could 
-wear. I deal with matters related to business-appropriate apparel on a daily basis.
-Every day, it ships about eight hundred pairs of flip flops (<a href="https://www.youtube.com/watch?v=ALXNW5XUUlY" rel="nofollow">youtube.com</a>) to almost every spot around the globe.]]></wp:comment_content>
-			<wp:comment_approved>0</wp:comment_approved>
-			<wp:comment_type></wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_result</wp:meta_key>
-				<wp:meta_value><![CDATA[false]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1400751831.900230884552001953125;s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-		</wp:comment>
 	</item>
 	<item>
 				<title>New Internet Monitor report: &quot;Rationing the Digital: The Policy and Politics of Internet Use in Cuba Today&quot;</title>
@@ -2867,35 +2822,6 @@ Last week we <a href="http://blogs.law.harvard.edu/internetmonitor/2013/08/26/im
 			<wp:meta_key>_edit_last</wp:meta_key>
 			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
 		</wp:postmeta>
-		<wp:comment>
-			<wp:comment_id>9377</wp:comment_id>
-			<wp:comment_author><![CDATA[strings]]></wp:comment_author>
-			<wp:comment_author_email>aliceashcraft@gmail.com</wp:comment_author_email>
-			<wp:comment_author_url>http://www.blackplanet.com/your_page/blog/view_posting.html?pid=1759606&amp;profile_id=64709895&amp;profile_name=heartbreakingbe91&amp;user_id=64709895&amp;username=heartbreakingbe91</wp:comment_author_url>
-			<wp:comment_author_IP>192.168.10.114</wp:comment_author_IP>
-			<wp:comment_date>2014-05-28 01:19:09</wp:comment_date>
-			<wp:comment_date_gmt>2014-05-28 05:19:09</wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[I am sure this post has touched all the internet visitors, its 
-really really nice post on building up new webpage.]]></wp:comment_content>
-			<wp:comment_approved>0</wp:comment_approved>
-			<wp:comment_type></wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_as_submitted</wp:meta_key>
-				<wp:meta_value><![CDATA[a:69:{s:15:"comment_post_ID";i:1017;s:14:"comment_author";s:7:"strings";s:20:"comment_author_email";s:23:"aliceashcraft@gmail.com";s:18:"comment_author_url";s:166:"http://www.blackplanet.com/your_page/blog/view_posting.html?pid=1759606&profile_id=64709895&profile_name=heartbreakingbe91&user_id=64709895&username=heartbreakingbe91";s:15:"comment_content";s:116:"I am sure this post has touched all the internet visitors, its 
-really really nice post on building up new webpage.";s:12:"comment_type";s:0:"";s:14:"comment_parent";i:0;s:7:"user_ID";i:0;s:7:"user_ip";s:14:"192.168.10.114";s:10:"user_agent";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.29.13 (KHTML, like Gecko) Version/6.0.4 Safari/536.29.13";s:8:"referrer";s:83:"https://blogs.law.harvard.edu/internetmonitor/2013/09/03/imweekly-september-3-2013/";s:4:"blog";s:44:"http://blogs.law.harvard.edu/internetmonitor";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:82:"http://blogs.law.harvard.edu/internetmonitor/2013/09/03/imweekly-september-3-2013/";s:21:"akismet_comment_nonce";s:6:"passed";s:18:"POST_bb2_screener_";s:56:"1401254328 192.168.10.114 162.250.189.37, 80.253.132.130";s:11:"POST_author";s:7:"strings";s:10:"POST_email";s:23:"aliceashcraft@gmail.com";s:8:"POST_url";s:166:"http://www.blackplanet.com/your_page/blog/view_posting.html?pid=1759606&profile_id=64709895&profile_name=heartbreakingbe91&user_id=64709895&username=heartbreakingbe91";s:12:"POST_comment";s:116:"I am sure this post has touched all the internet visitors, its 
-really really nice post on building up new webpage.";s:11:"POST_submit";s:12:"Post Comment";s:20:"POST_comment_post_ID";s:4:"1017";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"b5bb92c2e6";s:10:"POST_ak_js";s:3:"101";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:37:"/internetmonitor/wp-comments-post.php";s:19:"REDIRECT_from_proxy";s:1:"1";s:19:"REDIRECT_SCRIPT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:19:"REDIRECT_SCRIPT_URI";s:65:"http://blogs.law.harvard.edu/internetmonitor/wp-comments-post.php";s:15:"REDIRECT_STATUS";s:3:"200";s:10:"from_proxy";s:1:"1";s:10:"SCRIPT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:10:"SCRIPT_URI";s:65:"http://blogs.law.harvard.edu/internetmonitor/wp-comments-post.php";s:14:"HTTP_X_REAL_IP";s:14:"80.253.132.130";s:9:"HTTP_HOST";s:21:"blogs.law.harvard.edu";s:20:"HTTP_X_FORWARDED_FOR";s:30:"162.250.189.37, 80.253.132.130";s:15:"HTTP_CONNECTION";s:5:"close";s:15:"HTTP_USER_AGENT";s:119:"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/536.29.13 (KHTML, like Gecko) Version/6.0.4 Safari/536.29.13";s:11:"HTTP_ACCEPT";s:129:"text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1";s:20:"HTTP_ACCEPT_LANGUAGE";s:2:"en";s:20:"HTTP_ACCEPT_ENCODING";s:13:"gzip, deflate";s:12:"HTTP_REFERER";s:83:"https://blogs.law.harvard.edu/internetmonitor/2013/09/03/imweekly-september-3-2013/";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:14:"CONTENT_LENGTH";s:3:"554";s:15:"HTTP_X_PROXY_ID";s:10:"1028648621";s:8:"HTTP_VIA";s:39:"1.1 80.253.132.138 (Mikrotik HttpProxy)";s:4:"PATH";s:75:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:21:"blogs.law.harvard.edu";s:11:"SERVER_ADDR";s:14:"192.168.10.114";s:11:"SERVER_PORT";s:2:"80";s:11:"REMOTE_ADDR";s:14:"192.168.10.114";s:13:"DOCUMENT_ROOT";s:30:"/web/ethan/wpmu/docs/wpmu-prod";s:12:"SERVER_ADMIN";s:31:"webmaster@cyber.law.harvard.edu";s:15:"SCRIPT_FILENAME";s:51:"/web/ethan/wpmu/docs/wpmu-prod/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"44715";s:12:"REDIRECT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.0";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1401254348";s:4:"argv";s:0:"";s:4:"argc";s:1:"0";s:25:"comment_post_modified_gmt";s:19:"2013-09-09 19:15:27";}]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_result</wp:meta_key>
-				<wp:meta_value><![CDATA[false]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1401254349.151958942413330078125;s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-		</wp:comment>
 	</item>
 	<item>
 				<title>Facebook Transparency Report: US and India lead in data requests</title>
@@ -3387,28 +3313,6 @@ A major reform bill was <a href="http://www.huffingtonpost.com/2013/10/29/nsa-re
 			<wp:meta_key>_edit_last</wp:meta_key>
 			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
 		</wp:postmeta>
-		<wp:comment>
-			<wp:comment_id>7534</wp:comment_id>
-			<wp:comment_author><![CDATA[proxy]]></wp:comment_author>
-			<wp:comment_author_email>rooseveltreeder@gmx.de</wp:comment_author_email>
-			<wp:comment_author_url>http://www.bayproxy.nl</wp:comment_author_url>
-			<wp:comment_author_IP>213.124.218.243</wp:comment_author_IP>
-			<wp:comment_date>2014-05-21 19:02:06</wp:comment_date>
-			<wp:comment_date_gmt>2014-05-21 23:02:06</wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[Downloads movies and music for free at http://www.bayproxy.nl]]></wp:comment_content>
-			<wp:comment_approved>0</wp:comment_approved>
-			<wp:comment_type></wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_result</wp:meta_key>
-				<wp:meta_value><![CDATA[false]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1400713326.0179069042205810546875;s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-		</wp:comment>
 	</item>
 	<item>
 				<title>Beautiful and thought-provoking infographics</title>
@@ -3831,30 +3735,6 @@ Amnesty International <a href="http://abcnews.go.com/International/wireStory/amn
 			<wp:meta_key>_edit_last</wp:meta_key>
 			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
 		</wp:postmeta>
-		<wp:comment>
-			<wp:comment_id>2359</wp:comment_id>
-			<wp:comment_author><![CDATA[Ruby on Rails Development]]></wp:comment_author>
-			<wp:comment_author_email>robert.smith4521@gmail.com</wp:comment_author_email>
-			<wp:comment_author_url>http://www.allerin.com</wp:comment_author_url>
-			<wp:comment_author_IP>192.168.10.114</wp:comment_author_IP>
-			<wp:comment_date>2014-04-30 00:45:41</wp:comment_date>
-			<wp:comment_date_gmt>2014-04-30 04:45:41</wp:comment_date_gmt>
-			<wp:comment_content><![CDATA[Never ever thought that the terrorist can even make use of online games to communicate &amp; make attacks.
-Horrible!!!
-Thanks for the share Adam.]]></wp:comment_content>
-			<wp:comment_approved>0</wp:comment_approved>
-			<wp:comment_type></wp:comment_type>
-			<wp:comment_parent>0</wp:comment_parent>
-			<wp:comment_user_id>0</wp:comment_user_id>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_result</wp:meta_key>
-				<wp:meta_value><![CDATA[false]]></wp:meta_value>
-			</wp:commentmeta>
-			<wp:commentmeta>
-				<wp:meta_key>akismet_history</wp:meta_key>
-				<wp:meta_value><![CDATA[a:4:{s:4:"time";s:13:"1398833141.69";s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
-			</wp:commentmeta>
-		</wp:comment>
 	</item>
 	<item>
 				<title>#IMWeekly: January 31, 2014</title>
@@ -3940,6 +3820,598 @@ Internet Monitor is a research project to evaluate, describe, and summarize the 
 		<wp:postmeta>
 			<wp:meta_key>_thumbnail_id</wp:meta_key>
 			<wp:meta_value><![CDATA[1287]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+				<title>Iraqi government shuts down Internet access in five provinces</title>
+		<link>http://blogs.law.harvard.edu/internetmonitor/2014/06/17/iraqi-government-shuts-down-internet-access-in-five-provinces/</link>
+		<pubDate>Tue, 17 Jun 2014 16:11:39 +0000</pubDate>
+		<dc:creator><![CDATA[cmcnear]]></dc:creator>
+		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1303</guid>
+		<description></description>
+		<content:encoded><![CDATA[As violence spreads across Iraq, the government has moved to curb Internet access around the country.
+
+Iraq’s Ministry of Communication issued orders Sunday for <a href="http://mashable.com/2014/06/16/iraq-regional-internet-shutdown/">a total Internet shutdown in five of the country’s western and central provinces</a>, where violence from a Sunni insurgency led by the Islamic State of Iraq and Syria (ISIS) is particularly intense.
+
+This comes two days after <a href="http://mashable.com/2014/06/13/facebook-youtube-twitter-blocked-iraq/">access to Twitter, Facebook, and Youtube as well as communication platforms like Skype, Whatsapp, and Viber</a> was cut across the nation. The government issued the shutdown order to ISPs, asking providers to “shut down the Internet totally,” according to a leaked copy of the ministry’s memo, which Arab citizen media organization Social Media Exchange <a href="http://www.smex.org/iraq-telecom-ministry-orders-isps-kill-the-internet-in-five-provinces/">printed and translated</a>.
+
+The move mirrors other Internet shutdowns in the region. Days after protests broke out in Tahrir Square in early 2011, then–Egyptian President Hosni Mubarak ordered a shutdown that <a href="http://www.telegraph.co.uk/news/worldnews/africaandindianocean/egypt/8288163/How-Egypt-shut-down-the-internet.html">blocked web access in 88% of the country</a>. In Syria, blocks of media sites like YouTube and Facebook were followed by a total Internet shutdown widely credited to President Bashar al-Assad’s regime.
+
+The shutdown may be difficult for the Maliki government to carry out, as Iraq’s market for ISPs is unusually fragmented. There are hundreds of providers across the country, some of which offer service via satellite, limiting potential government control. By comparison, <a href="http://www.comscore.com/Insights/Press_Releases/2011/11/AT_T_Drives_Most_Internet_Traffic_for_U.S._Businesses_in_September_2011">just 10 ISPs were responsible for 69% of web traffic in the US in 2011</a>, according to digital analytics company comScore.
+
+Still, web traffic originating in Iraq has been markedly reduced since the government ordered the access cuts. Renesys, which tracks Internet connectivity, observed two major, hours-long outages before the regional shutdown, first on <a href="https://twitter.com/renesys/status/476092606439768064">June 9</a> and again on <a href="https://twitter.com/renesys/status/477161076178825218">June 12</a>, both of which were <a href="http://www.renesys.com/2014/06/amid-raging-violence-iraq-orders-internet-shutdowns/">confirmed by sources as government-sponsored</a>.
+
+<img class="aligncenter size-full wp-image-1306" src="http://blogs.law.harvard.edu/internetmonitor/files/2014/06/Renesys-12.06.14.png" alt="Renesys 12.06.14" width="1019" height="537" />
+
+The militant group ISIS may be particularly adept at using social media platforms like Twitter and Facebook to broadcast its message and recruit new followers. The Atlantic’s JM Berger reports that the group has made use of a Twitter app called The Dawn of Glad Tidings, which it uses to <a href="http://www.theatlantic.com/international/archive/2014/06/isis-iraq-twitter-social-media-strategy/372856/">disperse news and spread messaging via posts to users’ accounts on their behalf</a>. ISIS used Twitter over the weekend to share pictures allegedly depicting the mass execution of Iraqi security forces in Tikrit. The Atlantic reports that there has been a dramatic increase in posts on the ISIS app since its introduction in April, reaching 40,000 in a single day as ISIS marched into Mosul last week—a volume that pushed its posts to the top of results for queries like “Baghdad.” Tikrit and Mosul, the nation’s second-largest city, are both located in states whose web access has been cut.
+
+[caption id="attachment_1308" align="aligncenter" width="480"]<img class="size-full wp-image-1308" src="http://blogs.law.harvard.edu/internetmonitor/files/2014/06/MoC-takedown-order.jpg" alt="Shared by @_3lawi, via Social Media Exchange." width="480" height="656" /> Shared by @_3lawi, via Social Media Exchange.[/caption]
+
+[caption id="attachment_1309" align="aligncenter" width="698"]<img class="size-full wp-image-1309" src="http://blogs.law.harvard.edu/internetmonitor/files/2014/06/MoC-order-2.jpg" alt="Shared by @_3lawi, via Social Media Exchange." width="698" height="960" /> Shared by @_3lawi, via Social Media Exchange.[/caption]]]></content:encoded>
+		<excerpt:encoded><![CDATA[Iraq’s Ministry of Communication issued orders Sunday for a total Internet shutdown in five of the country’s western and central provinces, where violence from a Sunni insurgency led by the Islamic State of Iraq and Syria (ISIS) is particularly intense.
+
+This comes two days after access to Twitter, Facebook, and Youtube as well as communication platforms like Skype, Whatsapp, and Viber was cut across the nation.]]></excerpt:encoded>
+		<wp:post_id>1303</wp:post_id>
+		<wp:post_date>2014-06-17 12:11:39</wp:post_date>
+		<wp:post_date_gmt>2014-06-17 16:11:39</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>iraqi-government-shuts-down-internet-access-in-five-provinces</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>post</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="internet-blackout"><![CDATA[Internet Blackout]]></category>
+		<category domain="category" nicename="iraq"><![CDATA[Iraq]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[6389]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+				<title>#IMWeekly: June 20, 2014</title>
+		<link>http://blogs.law.harvard.edu/internetmonitor/2014/06/20/imweekly-june-20-2014/</link>
+		<pubDate>Fri, 20 Jun 2014 19:09:56 +0000</pubDate>
+		<dc:creator><![CDATA[cmcnear]]></dc:creator>
+		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1311</guid>
+		<description></description>
+		<content:encoded><![CDATA[<strong>Hong Kong</strong>
+On the eve of a referendum about voting rights this week, Hong Kong's digital voting platform was hit by <a href="http://advocacy.globalvoicesonline.org/2014/06/17/hong-kong-voting-site-suffers-massive-ddos-attack-before-civil-referendum/">a massive DDoS attack</a>. Today is the first of three days of voting for Hong Kong citizens, who will decide whether to offer universal suffrage, seen as a move that would weaken the influence of Beijing-sponsored candidates. Now in its fourth day, the DDoS attack is being called "one of the largest and most persistent DDoS attacks in the history of the Internet" by the company <a href="https://www.cloudflare.com/">CloudFlare</a>, which has been contracted to defend the voting platform and said that the attack <a href="http://globalvoicesonline.org/2014/06/20/476538/">reached a scale of 300Gb per second today</a>. The attack is widely suspected to be the work of pro-Beijing groups, who oppose the referendum. The vote is unofficial, meaning that its results will have "<a href="http://www.news.gov.hk/en/categories/admin/html/2014/06/20140620_111918.shtml">no legal effect</a>," according to a statement by the Hong Kong government. <a href="http://www.reuters.com/article/2014/06/20/us-hongkong-vote-idUSKBN0EV0E520140620">More than 200,000 ballots</a> have already been cast. For more information, see <a href="http://blogs.law.harvard.edu/internetmonitor/2014/06/20/ddos-attacks-in-hong-kong-attack-silence-pro-democracy-websites/">our earlier post on the attacks</a>.
+
+<strong>Iraq</strong>
+The spiraling violence as the Islamic State of Iraq and Syria (ISIS) sweeps across Iraq prompted the Maliki government to cut Internet access in the country. Last Friday, sites including Twitter, Facebook, and YouTube <a href="http://mashable.com/2014/06/13/facebook-youtube-twitter-blocked-iraq/">were blocked across the nation</a>. Two days later, the government issued orders to ISPs to <a href="http://mashable.com/2014/06/16/iraq-regional-internet-shutdown/">shut down all Internet access in five of the country's 19 provinces</a>. <em>The Atlantic</em> reported this week that ISIS is particularly effective at using "<a href="http://www.theatlantic.com/international/archive/2014/06/isis-iraq-twitter-social-media-strategy/372856/">gaming Twitter</a>" to push its message and recruit new followers. More information can be found in <a href="http://blogs.law.harvard.edu/internetmonitor/2014/06/17/iraqi-government-shuts-down-internet-access-in-five-provinces/">our blog post about the shutdown</a>.
+
+<strong>Pakistan</strong>
+Twitter announced that it would <a href="http://news.blogs.nytimes.com/2014/06/18/twitter-restores-access-to-blasphemous-tweets-in-pakistan/">no longer censor tweets deemed "blasphemous" by the government</a>. In a statement, the company said that it had "re-examined the requests and, in the absence of additional clarifying information from Pakistani authorities, [had] determined that restoration of the previously withheld content is warranted." Though hailed as a victory for freedom of expression in Pakistan, the decision drew attention to Twitter's murky takedown policy, which it has declined to make public.
+
+<strong>Tajikistan</strong>
+Reporters Without Borders reported that <a href="http://en.rsf.org/tajikistan-youtube-blocked-google-partly-13-06-2014,46438.html">YouTube has been blocked and Google is only partly accessible in Tajikistan since June 12</a>. Blocking has surged in the country over the last two years, usually around times of political tension like last November's presidential election. On Monday, a Global Voices contributor and the publication's former Central Asia Editor, Tajik-born Alex Sodiqov, was detained while conducting academic research in the eastern part of the country. The government has allegedly shown him on national television "<a href="http://www.theguardian.com/world/2014/jun/19/fears-grow-for-canadian-researcher-arrested-in-tajikistan">in an apparent attempt to discredit both him and an opposition politician</a>." More information can be found in our <a href="http://blogs.law.harvard.edu/internetmonitor/2014/06/19/a-scholar-not-a-spy-the-detainment-of-alexander-sodiqov/">earlier blog post on Sodiqov's detainment</a>.
+
+<strong>United Kingdom</strong>
+Revelations emerged this week that the British government has been using a legal loophole to scrutinize its citizens' social media communications. Charles Farr, director general of the Office for Security and Counter Terrorism, revealed that posts and other communications made on platforms like Facebook and Twitter <a href="http://www.theregister.co.uk/2014/06/17/charles_farr_uk_mass_surveillance_policy/">are considered "external communications" because they're routed through foreign companies</a>. This means that even missives traded by British nationals in the UK, who are usually afforded significant privacy protections, are fair game for government interception—without a warrant—because the data leaves British shores before reentering.
+
+<em>#imweekly is a weekly round-up of news about Internet content controls and activity around the world. To subscribe via RSS, <a href="http://blogs.law.harvard.edu/internetmonitor/category/im-weekly/feed/">click here</a>.</em>]]></content:encoded>
+		<excerpt:encoded><![CDATA[In this week's #IMWeekly: Twitter frees up "blasphemous" tweets in Pakistan, an Internet shutdown in Iraq, and one of the largest DDoS attacks ever in Hong Kong.]]></excerpt:encoded>
+		<wp:post_id>1311</wp:post_id>
+		<wp:post_date>2014-06-20 15:09:56</wp:post_date>
+		<wp:post_date_gmt>2014-06-20 19:09:56</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>imweekly-june-20-2014</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>post</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="arrests-and-imprisonment"><![CDATA[Arrests and Imprisonment]]></category>
+		<category domain="category" nicename="censorship"><![CDATA[Censorship]]></category>
+		<category domain="category" nicename="hong-kong"><![CDATA[Hong Kong]]></category>
+		<category domain="category" nicename="im-weekly"><![CDATA[IM Weekly]]></category>
+		<category domain="category" nicename="iraq"><![CDATA[Iraq]]></category>
+		<category domain="category" nicename="pakistan"><![CDATA[Pakistan]]></category>
+		<category domain="category" nicename="social-media"><![CDATA[Social Media]]></category>
+		<category domain="category" nicename="surveillance"><![CDATA[Surveillance]]></category>
+		<category domain="category" nicename="tajikistan"><![CDATA[Tajikistan]]></category>
+		<category domain="category" nicename="twitter"><![CDATA[Twitter]]></category>
+		<category domain="category" nicename="united-kingdom"><![CDATA[United Kingdom]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[6389]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+				<title>DDoS Attacks in Hong Kong Target Pro-Democracy Websites</title>
+		<link>http://blogs.law.harvard.edu/internetmonitor/2014/06/20/ddos-attacks-in-hong-kong-attack-silence-pro-democracy-websites/</link>
+		<pubDate>Fri, 20 Jun 2014 12:04:30 +0000</pubDate>
+		<dc:creator><![CDATA[msen]]></dc:creator>
+		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1322</guid>
+		<description></description>
+		<content:encoded><![CDATA[Between Friday, June 13, and Wednesday, June 18, Hong Kong suffered two DDoS attacks aimed at pro-democracy sites.
+
+The targets—one, the site of civil society group <a href="http://en.wikipedia.org/wiki/Occupy_Central_(2014)">“Occupy Central with Love and Peace”</a>, the other newspaper <a href="http://en.wikipedia.org/wiki/Apple_Daily"><i>Apple Daily</i></a>—both seek to advocate for universal suffrage in Hong Kong.
+
+Since 1997, when Hong Kong’s period under British control ended and the city-state came under Chinese rule, many of its top officials have been elected by a small group of Beijing loyalists. Occupy Central advocates for a civil referendum that would shift voting power away from these Beijing loyalists and to Hong Kong’s citizenry, allowing them the right to vote in elections that determine who will be Hong Kong’s Chief Executive. Recently, Occupy Central, with the help of Hong Kong University’s Public Opinion Programme (<a href="https://twitter.com/hkupop">HKUPOP</a>), planned to run an online public opinion poll between June 20 and 22 to vote on a referendum on constitutional reforms.
+
+[caption id="" align="alignnone" width="800"]<img src="http://advocacy.globalvoicesonline.org/wp-content/uploads/2014/06/june-10-800x454.jpg" alt="" width="800" height="454" /> Google's Digital Attack Map, June 10, via <a href="http://advocacy.globalvoicesonline.org/2014/06/17/hong-kong-voting-site-suffers-massive-ddos-attack-before-civil-referendum/">Global Voices Advocacy</a>.[/caption]
+
+Occupy Central’s three web hosting services suffered violent DDoS attacks; due to the fallout of the incident, only one of these services, Cloudflare, <a href="http://thenextweb.com/asia/2014/06/20/cloudflare-hong-kong-democracy-movement-battling-one-largest-ddos-attacks-history/">still supports the voting system</a>. As a proposed workaround to the voting system’s susceptibility to attacks, Hong Kong University’s Public Opinion Program is now considering using <a href="http://advocacy.globalvoicesonline.org/2014/06/17/hong-kong-voting-site-suffers-massive-ddos-attack-before-civil-referendum/">telephone lines</a> instead, a weak alternative to the online platform.
+
+[caption id="" align="alignnone" width="800"]<img src="http://advocacy.globalvoicesonline.org/wp-content/uploads/2014/06/june-14-800x482.jpg" alt="" width="800" height="482" /> Google's Digital Attack Map, June 14, via <a href="http://advocacy.globalvoicesonline.org/2014/06/17/hong-kong-voting-site-suffers-massive-ddos-attack-before-civil-referendum/">Global Voices Advocacy</a>.[/caption]
+
+The second target of the attacks, Next Media’s <i>Apple Daily, </i>is an independent Hong Kong newspaper often critical of Beijing. Its founder, Jimmy Lai, is a <a href="http://sinosphere.blogs.nytimes.com/2014/06/18/pro-democracy-media-companys-websites-attacked/">vocal supporter</a> of Occupy Central. <i>Apple Daily </i>has encouraged its readers to vote on Occupy Central’s referendum.
+
+The attacks were separately orchestrated. That said, Next Media chairman Jimmy Lai <a href="http://www.rfa.org/english/news/china/attack-06182014182526.html">suspects</a> that mainland Chinese hackers, eager to suppress Hong Kong’s emerging democratic impulses, wanted to silence two of the city’s most audibly pro-democracy voices through these attacks.
+
+The attacks aren’t limited to Apple Daily and Occupy; they come in a long line of incidents in which pro-Beijing forces, working online, have tried to suppress groups within Hong Kong that are working toward greater democracy. In anticipation of the June 4 anniversary of the Tiananmen Square protest in 1989—an anniversary that sparked <a href="//arstechnica.com/tech-policy/2014/06/china-ramps-up-google-blocking-ahead-of-tiananmen-square-anniversary/">wide</a> <a href="http://www.foreignpolicy.com/articles/2014/06/02/im_scared_to_discuss_tiananmen_and_internet_partly_to_blame">censorship</a> <a href="http://globalvoicesonline.org/2014/05/29/china-puts-squeeze-on-wechat-and-other-messaging-apps/">across</a> mainland China—the website of the Hong Kong Alliance in Support of Patriotic Democratic movements was also <a href="http://sinosphere.blogs.nytimes.com/2014/06/18/pro-democracy-media-companys-websites-attacked/">taken offline</a> by sustained DDoS attacks.  In October 2013, Global Voices Advocacy <a href="http://advocacy.globalvoicesonline.org/2013/10/26/hong-kong-activists-organize-prepare-for-online-attacks/">anticipated</a> that malicious hacking of civic groups and activist communications like those of Occupy Central would surge approaching July. A similar DDoS attack occurred on HKUPOP’s servers in <a href="http://hkupop.hku.hk/english/columns/columns153.html">March 2012</a>, shortly after HKUPOP held mock elections for the city’s Chief Executive.
+
+Occupy Central and <i>Apple Daily</i>’s founders both feel that Beijing loyalists are undoubtedly behind the attacks, given the subversive, pro-democratic nature of both sites in the wake of increasing tensions between Hong Kong’s pro-democracy supporters and the mainland Chinese government. That said, no particular hacking forces have come forward and taken responsibility for the attacks.]]></content:encoded>
+		<excerpt:encoded><![CDATA[Between Friday, June 13, and Wednesday, June 18, Hong Kong suffered two DDoS attacks aimed at pro-democracy sites. The targets—one, the site of civil society group “Occupy Central with Love and Peace”, the other newspaper Apple Daily—both seek to advocate for universal suffrage in Hong Kong.]]></excerpt:encoded>
+		<wp:post_id>1322</wp:post_id>
+		<wp:post_date>2014-06-20 08:04:30</wp:post_date>
+		<wp:post_date_gmt>2014-06-20 12:04:30</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>ddos-attacks-in-hong-kong-attack-silence-pro-democracy-websites</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>post</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="china"><![CDATA[China]]></category>
+		<category domain="category" nicename="ddos"><![CDATA[DDoS]]></category>
+		<category domain="category" nicename="hong-kong"><![CDATA[Hong Kong]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_wpas_skip_7759418</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+				<title>A Scholar, not a Spy: The Detainment of Alexander Sodiqov</title>
+		<link>http://blogs.law.harvard.edu/internetmonitor/2014/06/19/a-scholar-not-a-spy-the-detainment-of-alexander-sodiqov/</link>
+		<pubDate>Thu, 19 Jun 2014 16:05:46 +0000</pubDate>
+		<dc:creator><![CDATA[msen]]></dc:creator>
+		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1324</guid>
+		<description></description>
+		<content:encoded><![CDATA[<a href="http://en.wikipedia.org/wiki/Khorog">Khorog</a> is a remote and mountainous Tajik town. It’s situated in the country’s volatile <a href="http://en.wikipedia.org/wiki/Gorno-Badakhshan_Autonomous_Province">Gorno-Badakhshan Autonomous Province</a> (GBAO), geographical and political worlds away from Dushanbe, the country’s capital and political epicenter. Khorog has, in recent years, been regarded as as a hotspot for the festering of anti-Dushanbe sentiment. Since July 2012, it has been a site of deadly clashes between the government and opposition forces. Alexander Sodiqov, a Tajik-born PhD candidate in Political Science at the University of Toronto, traveled to Khorog to conduct fieldwork for a project on the role of international actors, states, and civil society in Central Asian conflict management. While there, he met with <a href="http://en.wikipedia.org/wiki/Alim_Sherzamonov">Alim Sherzamonov</a>, an opposition leader based in GBAO, for the purposes of this research. His research would meet an abrupt end on June 16, when Tajikistan’s State Committee for National Security (GKNB) detained Sodiqov, who is also the<a href="//globalvoicesonline.org/author/alexander-sodiqov/"> former Central Asia Editor</a> for <i>Global Voices</i>.
+
+[caption id="" align="alignnone" width="800"]<img src="http://advocacy.globalvoicesonline.org/wp-content/uploads/2014/06/Sodiqovandfamily.00-800x228.jpg" alt="" width="800" height="228" /> Sodiqov and his family, via <a href="http://advocacy.globalvoicesonline.org/2014/06/19/statement-global-voices-demands-release-of-tajik-scholar-alexander-sodiqov/">Global Voices Advocacy</a>.[/caption]
+
+Though the reasons for his detainment were initially vague, the GKNB soon claimed that Sodiqov was acting on “subversion and espionage.” Sodiqov’s arrest comes amid claims by GKNB officials that foreign spies are enacting <a href="http://www.eurasianet.org/node/68671">“a big geopolitical-ideological game”</a> to destablize the country. Two days after his detainment, Sodiqov appeared on Khorog local state television reading a forced statement subtly disparaging Sherzamanov. Viewers described him as <a href="http://www.eurasianet.org/node/68671">pale and confused-looking</a> in the video. Sodiqov's arrest coincides with the partial <a href="http://www.slate.com/blogs/future_tense/2014/06/18/netizen_report_tajikistan_arrests_alex_sodiqov_partially_blocks_youtube.html">blockage of both YouTube and Twitter in Tajikistan since June 12</a>, a move many activists fear is a reaction to public discourse that is critical of President Emomalii Rahmon. The past few years have seen blockages of this nature in spades, from such widely-used social networks as YouTube, Twitter, and VKontakte to independent news agencies and websites. Months ago, in the run-up to the presidential elections, YouTube was <a href="http://www.bbc.co.uk/blogs/bbcmediaaction/posts/Social-media-in-Tajikistan-a-battlefield-">blocked after a video of Rakhmon drunkenly dancing at his son’s wedding surfaced online</a>.
+<blockquote class="twitter-tweet" lang="en">"Alexander is an outstanding young Tajik scholar and not any kind of agent of a foreign government" <a href="https://twitter.com/search?q=%23FreeAlexSodiqov&amp;src=hash">#FreeAlexSodiqov</a> <a href="http://t.co/61wMcWB66l">http://t.co/61wMcWB66l</a> — Advox (@Advox) <a href="https://twitter.com/Advox/statuses/479882336889499649">June 20, 2014</a></blockquote>
+Many activist organizations have mobilized to advocate for Alex’s release. Some media freedom advocates have launched the <a href="https://twitter.com/hashtag/FreeAlexSodiqov?src=hash">#FreeAlexSodiqov Twitter campaign</a> to raise awareness of his arrest, while such organizations as Freedom House, Human Rights Watch, and Avaaz have begun petitions and released official statements <a href="http://www.slate.com/blogs/future_tense/2014/06/18/netizen_report_tajikistan_arrests_alex_sodiqov_partially_blocks_youtube.html">condemning</a> the detainment. Fellow academics have banded together to form <a href="//scholarsforsodiqov.blogspot.com/">Scholars for Sodiqov</a>, insisting that his academic work was anything but politically-motivated espionage. A <a href="http://www.freesodiqov.org/">website</a> has also been launched to advocate for his release.]]></content:encoded>
+		<excerpt:encoded><![CDATA[Alexander Sodiqov, a Tajik-born PhD candidate in Political Science at the University of Toronto, was recently detained by Tajikistan's State Committee for National Security (GKNB) when he traveled to Khorog, a remote town in a politically unstable region of the country. Sodiqov, the former Central Asia Editor for Global Voices, was in Khorog to conduct fieldwork for a project on the role of international actors, states, and civil society in Central Asian conflict management. ]]></excerpt:encoded>
+		<wp:post_id>1324</wp:post_id>
+		<wp:post_date>2014-06-19 12:05:46</wp:post_date>
+		<wp:post_date_gmt>2014-06-19 16:05:46</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>a-scholar-not-a-spy-the-detainment-of-alexander-sodiqov</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>post</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="arrests-and-imprisonment"><![CDATA[Arrests and Imprisonment]]></category>
+		<category domain="category" nicename="tajikistan"><![CDATA[Tajikistan]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+				<title>Anonymous sets its sights on the World Cup</title>
+		<link>http://blogs.law.harvard.edu/internetmonitor/2014/06/24/anonymous-sets-its-sights-on-the-world-cup/</link>
+		<pubDate>Tue, 24 Jun 2014 15:38:29 +0000</pubDate>
+		<dc:creator><![CDATA[cmcnear]]></dc:creator>
+		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1343</guid>
+		<description></description>
+		<content:encoded><![CDATA[The hacker collective Anonymous has launched a series of attacks on World Cup sponsors and other affiliates, stealing data and taking over websites.
+
+On Thursday, Anonymous took credit for taking down sponsor <a href="http://twitter.com/AnonBRNews/status/479740049052139520">Yingli Solar</a>, a Chinese solar power company, as well as breaching the network of <a href="http://www.ehackingnews.com/2012/04/opglobo-brazilian-tv-network-and-other.html">Globo TV Brasil</a>, Brazil’s largest television network, and <a href="http://pastebin.com/2uQ6aRTq">publishing employee details online</a>.
+
+The group has also targeted <a href="http://hackread.com/anonymous-hackers-brazil-worldcup-hacks/">a number of Brazilian governmental bodies</a>, including the <a href="http://operationgreenrights.blogspot.com/2014/06/the-ministry-of-brazilian-environment.html">Ministry of the Environment</a> and the <a href="https://twitter.com/OpGreenRights/status/479817628169822208">Military Police of Sao Paulo State</a>.
+
+On Friday, Anonymous used a DDoS attack to <a href="http://bits.blogs.nytimes.com/2014/06/20/hackers-take-down-world-cup-site-in-brazil/">bring down the 2014 World Cup site for several hours</a>. Later that day, the group bragged about its alleged conquests: “<a href="https://twitter.com/AnonBRNews/status/479907302926209024">Anonymous 145 x 0 FIFA</a>.”
+<blockquote class="twitter-tweet" lang="en"><a href="https://twitter.com/search?q=%23OpHackingCup&amp;src=hash">#OpHackingCup</a> <a href="https://twitter.com/search?q=%23OpWorldCup&amp;src=hash">#OpWorldCup</a> partial score: Anonymous 145 x 0 FIFA. The game continues. Expect us <a href="http://t.co/sPiUQxeAHO">http://t.co/sPiUQxeAHO</a> <a href="http://t.co/HOYAz1jwRy">pic.twitter.com/HOYAz1jwRy</a>
+
+— Anonymous Brasil (@AnonBRNews) <a href="https://twitter.com/AnonBRNews/statuses/479907302926209024">June 20, 2014</a></blockquote>
+The hacks have been publicized under hashtags including <a href="https://twitter.com/search?q=%23OpMundial2014&amp;src=typd">#OpMundial2014</a>, <a href="https://twitter.com/search?q=%23OpWorldCup&amp;src=typd">#OpWorldCup</a>, and <a href="https://twitter.com/search?q=%23OpHackingCup&amp;src=typd">#OpHackingCup</a>.
+
+The cyber security company Symantec, which tracks cyber attacks, <a href="http://www.symantec.com/connect/blogs/emerging-threat-anonymous-operation-world-cuphacking-cup">issued a notice</a> on the eve of the World Cup warning potential targets of likely ploys, “including ‘run-of-the-mill’ distributed denial of service (DDoS) attacks, phishing/spear-phishing emails, intrusion and data-theft attempts, vulnerable software exploration, web application exploits, and possibly website defacement.”
+
+Anonymous has been vocal about its plans to disrupt the World Cup. In February, several alleged Anonymous members told Reuters that they <a href="http://www.reuters.com/article/2014/02/26/us-worldcup-brazil-hackers-idUSBREA1P1DE20140226">planned to go after sponsors as well as the Brazilian government</a> during the tournament, noting that the massive audience would serve as a useful stage to protest the expense of the World Cup games—estimated at $14 billion—in a country where many citizens still lack access to basic services.
+
+In May, Anonymous hackers broke into the Brazilian Foreign Ministry’s computers and leaked confidential emails. Stating that the group had “a plan of attack,” one hacker told Reuters that World Cup sponsors would be <a href="http://in.reuters.com/article/2014/05/30/us-brazil-worldcup-hackers-idINKBN0EA29M20140530">Anonymous’s prime targets</a>, naming Coca Cola, Budweiser, and Adidas.
+
+Despite the longstanding threats, Brazil was widely seen as a sitting duck for hackers, in large part because of its aging telecommunications infrastructure. “I don’t think there is much they can do to stop us,” one hacker told Reuters.
+<blockquote class="twitter-tweet" lang="en"><a href="https://twitter.com/search?q=%23FIFA&amp;src=hash">#FIFA</a> <a href="https://twitter.com/search?q=%23WorldCup&amp;src=hash">#WorldCup</a> Brazil 2014 "<a href="http://t.co/zifMy1At60">http://t.co/zifMy1At60</a> " HACKED AGAIN! <a href="http://t.co/aW0vjxc02C">pic.twitter.com/aW0vjxc02C</a>
+
+— Anonymous (@OpGreenRights) <a href="https://twitter.com/OpGreenRights/statuses/479754072413970432">June 19, 2014</a></blockquote>
+Last June, hackers <a href="http://www.ibtimes.com/brazil-world-cup-website-hacked-activists-replace-2014-fifa-world-cup-website-protest-footage-video">replaced the FIFA World Cup homepage</a> with a <a href="https://www.youtube.com/watch?v=xsBff36o-Nk">video</a> showing protesters marching against public transit fare increases, which spurred mass protests around the country. In the video, the protesters, who chant “<em>sem violencia</em>” or “without violence” throughout, eventually encounter a line of police officers, who respond with rubber bullets and tear gas. That month, the UN High Commissioner for Human Rights called on Brazilian authorities to <a href="http://www.unmultimedia.org/radio/english/2013/06/un-human-rights-chief-calls-for-restrain-in-brazilian-protests/">rein in their use of force against peaceful demonstrators</a>. In March of this year, officials in Rio de Janeiro and Sao Paulo <a href="http://www.aljazeera.com/news/americas/2013/06/201361821494340354.html">announced the rollback of the cities’ respective fare increases</a>.]]></content:encoded>
+		<excerpt:encoded><![CDATA[Anonymous has been vocal about its plans to disrupt the World Cup, pledging to target sponsors and the Brazilian government during the tournament. The group has stated that the massive audience provides a useful stage to protest the expense of the World Cup games—estimated at $14 billion—in a country where many citizens still lack access to basic services.]]></excerpt:encoded>
+		<wp:post_id>1343</wp:post_id>
+		<wp:post_date>2014-06-24 11:38:29</wp:post_date>
+		<wp:post_date_gmt>2014-06-24 15:38:29</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>anonymous-sets-its-sights-on-the-world-cup</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>post</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="brazil"><![CDATA[Brazil]]></category>
+		<category domain="category" nicename="ddos"><![CDATA[DDoS]]></category>
+		<category domain="category" nicename="hacking"><![CDATA[Hacking]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[6389]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_wpas_mess</wp:meta_key>
+			<wp:meta_value><![CDATA[Anonymous sets its sights on the World Cup http://wp.me/p4L9BV-lF]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_wpas_done_all</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:comment>
+			<wp:comment_id>18382</wp:comment_id>
+			<wp:comment_author><![CDATA[Tiny Heroes Hack for Android]]></wp:comment_author>
+			<wp:comment_author_email>lenamusquito@freenet.de</wp:comment_author_email>
+			<wp:comment_author_url>http://www.dailymotion.com/video/x1z0c2b_tiny-heroes-hack-coins-gems-tiny-heroes-cheats_videogames</wp:comment_author_url>
+			<wp:comment_author_IP>192.168.10.114</wp:comment_author_IP>
+			<wp:comment_date>2014-07-05 09:33:52</wp:comment_date>
+			<wp:comment_date_gmt>2014-07-05 13:33:52</wp:comment_date_gmt>
+			<wp:comment_content><![CDATA[Right now it looks like Drupal is the preferred 
+blogging platform out there right now. (from what I've read) Is that what you are 
+using on your blog?]]></wp:comment_content>
+			<wp:comment_approved>0</wp:comment_approved>
+			<wp:comment_type></wp:comment_type>
+			<wp:comment_parent>0</wp:comment_parent>
+			<wp:comment_user_id>0</wp:comment_user_id>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_result</wp:meta_key>
+				<wp:meta_value><![CDATA[false]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_history</wp:meta_key>
+				<wp:meta_value><![CDATA[a:4:{s:4:"time";d:1404567232.79685306549072265625;s:7:"message";s:28:"Akismet cleared this comment";s:5:"event";s:9:"check-ham";s:4:"user";s:0:"";}]]></wp:meta_value>
+			</wp:commentmeta>
+			<wp:commentmeta>
+				<wp:meta_key>akismet_as_submitted</wp:meta_key>
+				<wp:meta_value><![CDATA[a:69:{s:15:"comment_post_ID";i:1343;s:14:"comment_author";s:28:"Tiny Heroes Hack for Android";s:20:"comment_author_email";s:23:"lenamusquito@freenet.de";s:18:"comment_author_url";s:98:"http://www.dailymotion.com/video/x1z0c2b_tiny-heroes-hack-coins-gems-tiny-heroes-cheats_videogames";s:15:"comment_content";s:153:"Right now it looks like Drupal is the preferred 
+blogging platform out there right now. (from what I've read) Is that what you are 
+using on your blog?";s:12:"comment_type";s:0:"";s:14:"comment_parent";i:0;s:7:"user_ID";i:0;s:7:"user_ip";s:14:"192.168.10.114";s:10:"user_agent";s:108:"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.71 Safari/537.36";s:8:"referrer";s:99:"http://blogs.law.harvard.edu/internetmonitor/2014/06/24/anonymous-sets-its-sights-on-the-world-cup/";s:4:"blog";s:44:"http://blogs.law.harvard.edu/internetmonitor";s:9:"blog_lang";s:5:"en_US";s:12:"blog_charset";s:5:"UTF-8";s:9:"permalink";s:99:"http://blogs.law.harvard.edu/internetmonitor/2014/06/24/anonymous-sets-its-sights-on-the-world-cup/";s:21:"akismet_comment_nonce";s:6:"passed";s:18:"POST_bb2_screener_";s:40:"1404567215 192.168.10.114 198.50.227.128";s:11:"POST_author";s:28:"Tiny Heroes Hack for Android";s:10:"POST_email";s:23:"lenamusquito@freenet.de";s:8:"POST_url";s:98:"http://www.dailymotion.com/video/x1z0c2b_tiny-heroes-hack-coins-gems-tiny-heroes-cheats_videogames";s:12:"POST_comment";s:153:"Right now it looks like Drupal is the preferred 
+blogging platform out there right now. (from what I've read) Is that what you are 
+using on your blog?";s:11:"POST_submit";s:12:"Post Comment";s:20:"POST_comment_post_ID";s:4:"1343";s:19:"POST_comment_parent";s:1:"0";s:26:"POST_akismet_comment_nonce";s:10:"f020f8ebee";s:10:"POST_ak_js";s:3:"198";s:15:"SERVER_SOFTWARE";s:6:"Apache";s:11:"REQUEST_URI";s:37:"/internetmonitor/wp-comments-post.php";s:19:"REDIRECT_from_proxy";s:1:"1";s:19:"REDIRECT_SCRIPT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:19:"REDIRECT_SCRIPT_URI";s:65:"http://blogs.law.harvard.edu/internetmonitor/wp-comments-post.php";s:15:"REDIRECT_STATUS";s:3:"200";s:10:"from_proxy";s:1:"1";s:10:"SCRIPT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:10:"SCRIPT_URI";s:65:"http://blogs.law.harvard.edu/internetmonitor/wp-comments-post.php";s:14:"HTTP_X_REAL_IP";s:14:"195.251.148.66";s:9:"HTTP_HOST";s:21:"blogs.law.harvard.edu";s:20:"HTTP_X_FORWARDED_FOR";s:30:"198.50.227.128, 195.251.148.66";s:15:"HTTP_CONNECTION";s:5:"close";s:15:"HTTP_USER_AGENT";s:108:"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.71 Safari/537.36";s:11:"HTTP_ACCEPT";s:129:"text/html, application/xml;q=0.9, application/xhtml+xml, image/png, image/webp, image/jpeg, image/gif, image/x-xbitmap, */*;q=0.1";s:20:"HTTP_ACCEPT_LANGUAGE";s:2:"en";s:20:"HTTP_ACCEPT_ENCODING";s:13:"gzip, deflate";s:12:"HTTP_REFERER";s:99:"http://blogs.law.harvard.edu/internetmonitor/2014/06/24/anonymous-sets-its-sights-on-the-world-cup/";s:12:"CONTENT_TYPE";s:33:"application/x-www-form-urlencoded";s:14:"CONTENT_LENGTH";s:3:"514";s:8:"HTTP_VIA";s:24:"1.1 donis (squid/3.1.19)";s:18:"HTTP_CACHE_CONTROL";s:14:"max-age=259200";s:4:"PATH";s:75:"/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/X11R6/bin";s:16:"SERVER_SIGNATURE";s:0:"";s:11:"SERVER_NAME";s:21:"blogs.law.harvard.edu";s:11:"SERVER_ADDR";s:14:"192.168.10.114";s:11:"SERVER_PORT";s:2:"80";s:11:"REMOTE_ADDR";s:14:"192.168.10.114";s:13:"DOCUMENT_ROOT";s:30:"/web/ethan/wpmu/docs/wpmu-prod";s:12:"SERVER_ADMIN";s:31:"webmaster@cyber.law.harvard.edu";s:15:"SCRIPT_FILENAME";s:51:"/web/ethan/wpmu/docs/wpmu-prod/wp-comments-post.php";s:11:"REMOTE_PORT";s:5:"50089";s:12:"REDIRECT_URL";s:37:"/internetmonitor/wp-comments-post.php";s:17:"GATEWAY_INTERFACE";s:7:"CGI/1.1";s:15:"SERVER_PROTOCOL";s:8:"HTTP/1.0";s:14:"REQUEST_METHOD";s:4:"POST";s:12:"QUERY_STRING";s:0:"";s:11:"SCRIPT_NAME";s:21:"/wp-comments-post.php";s:8:"PHP_SELF";s:21:"/wp-comments-post.php";s:12:"REQUEST_TIME";s:10:"1404567232";s:4:"argv";s:0:"";s:4:"argc";s:1:"0";s:25:"comment_post_modified_gmt";s:19:"2014-06-24 15:38:29";}]]></wp:meta_value>
+			</wp:commentmeta>
+		</wp:comment>
+	</item>
+	<item>
+				<title>New Citizen Lab report: &quot;Monitoring Information Controls in Iraq in Reaction to ISIS Insurgency&quot;</title>
+		<link>http://blogs.law.harvard.edu/internetmonitor/2014/06/25/new-citizen-lab-report-monitoring-information-controls-in-iraq-in-reaction-to-isis-insurgency/</link>
+		<pubDate>Wed, 25 Jun 2014 13:55:24 +0000</pubDate>
+		<dc:creator><![CDATA[cmcnear]]></dc:creator>
+		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1345</guid>
+		<description></description>
+		<content:encoded><![CDATA[A <a href="https://citizenlab.org/2014/06/monitoring-information-controls-in-iraq/">new report from the Citizen Lab at the University of Toronto</a> takes a look at Internet monitoring in Iraq. Since violence led by the Islamic State of Iraq and Syria (ISIS) broke out in the country several weeks ago, the government has responded by <a href="http://blogs.law.harvard.edu/internetmonitor/2014/06/17/iraqi-government-shuts-down-internet-access-in-five-provinces/">cutting Internet access</a>, first by blocking websites including Twitter and Facebook and then, on June 15, issuing orders for a total Internet shutdown in five of the nation's 19 provinces.
+
+Among the report's key findings:
+<ul>
+	<li>A total of 20 unique URLs were found to be blocked on three major Internet service providers (ISPs): Earthlink Telecommunications, IQ Net, and Newroz Telecom. The blocked sites include Twitter, Facebook, Instagram, Skype, YouTube, WhatsApp, and WeChat, as well as popular VPN services including OpenVPN and StrongVPN.</li>
+	<li>The majority of the websites found to be unavailable corresponded with the list of that the Ministry of Communications ordered to be blocked on June 13. The ISP Newroz Telecom showed no signs of filtering, which "was expected, because this ISP serves the Kurdistan area, and reports have indicated that the shutdown and social media blocking orders did not include Kurdistan."</li>
+</ul>
+[caption id="attachment_1348" align="aligncenter" width="960"]<img class="size-full wp-image-1348" src="http://blogs.law.harvard.edu/internetmonitor/files/2014/06/akamai-iraq-disruption.png" alt="Traffic from Akamai, a content delivery network, to Iraq, showing a sharp drop in traffic since the filtering orders from the Iraqi Ministry of Communications. Via the Citizen Lab." width="960" height="720" /> Traffic from <a href="https://twitter.com/akamai_soti/status/478517658326167552/photo/1">Akamai</a>, a content delivery network, to Iraq, showing a sharp drop in traffic since the filtering orders from the Iraqi Ministry of Communications. Via the <a href="https://citizenlab.org/2014/06/monitoring-information-controls-in-iraq/">Citizen Lab</a>.[/caption]
+<ul>
+	<li>The Citizen Lab also looked at seven websites "affiliated with or supportive of" ISIS. None were blocked. "Given that the insurgency was cited as the rationale for the shutdown and filtering," wrote the authors, "this finding is curious." This could suggest that the Maliki government is using the present crisis as an excuse to rein in broader social media around the country—whether or not it is related to ISIS violence.</li>
+	<li>Usage of Psiphon and Tor, which allow users to circumvent filtering, has soared in Iraq in recent days (though Tor use <a href="https://twitter.com/Herdict/status/481470132628115456">has since fallen slightly</a>).</li>
+</ul>
+[caption id="attachment_1346" align="aligncenter" width="768"]<img class="size-full wp-image-1346" src="http://blogs.law.harvard.edu/internetmonitor/files/2014/06/TorUsers.png" alt="Directly connecting users of Tor in Iraq, via the Citizen Lab." width="768" height="480" /> Directly connecting users of Tor in Iraq, via the <a href="https://citizenlab.org/2014/06/monitoring-information-controls-in-iraq/">Citizen Lab</a>.[/caption]
+
+[caption id="attachment_1347" align="aligncenter" width="856"]<img class="size-full wp-image-1347" src="http://blogs.law.harvard.edu/internetmonitor/files/2014/06/PsiphonUsers.jpg" alt="Daily users of Psiphon in Iraq, via the Citizen Lab." width="856" height="552" /> Daily users of Psiphon in Iraq, via the <a href="https://citizenlab.org/2014/06/monitoring-information-controls-in-iraq/">Citizen Lab</a>.[/caption]
+
+More information about the Citizen Lab's analysis can be found in its report, <a href="https://citizenlab.org/2014/06/monitoring-information-controls-in-iraq/"><em>Monitoring Information Controls in Iraq in Reaction to ISIS Insurgency</em></a>.]]></content:encoded>
+		<excerpt:encoded><![CDATA[A new report from the Citizen Lab at the University of Toronto takes a look at Internet monitoring in Iraq. Since violence led by the Islamic State of Iraq and Syria (ISIS) broke out in the country several weeks ago, the government has responded by cutting Internet access, first by blocking websites including Twitter and Facebook and then, on June 15, issuing orders for a total Internet shutdown in five of the nation's 19 provinces. The Citizen Lab tests the filtering methods, finding that blockage lines up with the Ministry of Communications' decree, but does not block sites affiliated with ISIS.]]></excerpt:encoded>
+		<wp:post_id>1345</wp:post_id>
+		<wp:post_date>2014-06-25 09:55:24</wp:post_date>
+		<wp:post_date_gmt>2014-06-25 13:55:24</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>new-citizen-lab-report-monitoring-information-controls-in-iraq-in-reaction-to-isis-insurgency</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>post</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="iraq"><![CDATA[Iraq]]></category>
+		<category domain="category" nicename="technical-filtering"><![CDATA[Technical Filtering]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[6389]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_wpas_mess</wp:meta_key>
+			<wp:meta_value><![CDATA[New @citizenlab report takes a look at how Iraqi govt is filtering the net to fight ISIS insurgency http://wp.me/p4L9BV-lH]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_wpas_done_all</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+				<title>This is Zone Nine: The Continued Imprisonment of Six Ethiopian Bloggers</title>
+		<link>http://blogs.law.harvard.edu/internetmonitor/2014/06/26/this-is-zone-nine-the-continued-imprisonment-of-six-ethiopian-bloggers/</link>
+		<pubDate>Thu, 26 Jun 2014 15:42:28 +0000</pubDate>
+		<dc:creator><![CDATA[msen]]></dc:creator>
+		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1358</guid>
+		<description></description>
+		<content:encoded><![CDATA[There’s a prison, hidden in the suburbs of Addis Ababa, named <a href="http://advocacy.globalvoicesonline.org/2014/04/26/six-members-of-blogging-collective-arrested-in-ethiopia/">Kality</a>. Home to many of Ethiopia’s political prisoners, the prison is divided into eight zones. The last of these zones, Zone Eight, is <a href="//ethioforum.org/letter-to-my-son-by-eskinder-nega-from-kaliti-prison/)">home</a> to detained journalists, human rights activists, and dissidents.
+
+[caption id="" align="aligncenter" width="400"]<img src="http://advocacy.globalvoicesonline.org/wp-content/uploads/2014/05/Screen-shot-2014-05-03-at-8.40.02-AM.png" alt="" width="400" height="409" /> Free Zone 9 bloggers campaign image. Created by Hugh D'Andrade, remixed by Hisham Almiraat; via <a href="http://advocacy.globalvoicesonline.org/2014/05/03/advocates-ask-african-commission-un-experts-to-intervene-in-zone-9-bloggers-case/">Global Voices Advocacy</a>.[/caption]
+
+To some Ethiopian netizens, there is a Ninth Zone – a Zone dedicated to the <a href="http://advocacy.globalvoicesonline.org/2014/04/26/six-members-of-blogging-collective-arrested-in-ethiopia/">“proverbial prison in which all Ethiopians live”</a>. In 2012, a group of passionate Ethiopian bloggers launched <a href="http://zone9ethio.blogspot.com/">Zone Nine</a>, a blogging collective that, in its <a href="https://www.facebook.com/Zone9ers/info">own words</a>, “blogs because it cares”. Zone Nine <a href="http://advocacy.globalvoicesonline.org/2014/05/03/advocates-ask-african-commission-un-experts-to-intervene-in-zone-9-bloggers-case/">prides itself</a> on providing a counter to the opinions, voices, and attitudes that dominate Ethiopia’s press.
+
+[caption id="" align="aligncenter" width="800"]<img src="http://advocacy.globalvoicesonline.org/wp-content/uploads/2014/04/zonenine-800x296.jpg" alt="" width="800" height="296" /> The six arrested Zone Nine bloggers; via <a href="http://advocacy.globalvoicesonline.org/2014/05/12/join-the-freezone9bloggers-tweetathon-on-may-14/">Global Voices Advocacy</a>.[/caption]
+
+In April 2014, six of Zone Nine’s bloggers – along with three print journalists suspected of associating with the group – were arrested on the grounds that they were <a href="http://www.thereporterethiopia.com/index.php/news-headlines/item/1931-detained-journalists-bloggers-appear-before-court">covertly receiving money from foreign human rights organizations to incite violence through social media</a>.
+
+63 days have passed since their detention. The bloggers have appeared in court continually over the past few months while being <a href="http://globalvoicesonline.org/2014/06/16/54-days-in-prison-and-counting-for-ethiopias-zone-9-bloggers/">detained</a> in Addis Ababa’s Maekelawi detention center. No formal charges have been leveled against them as of yet. That said, activists fear that these bloggers and journalists will suffer the same fate that befell <a href="http://globalvoicesonline.org/2014/06/16/54-days-in-prison-and-counting-for-ethiopias-zone-9-bloggers/">Eskinder Nega and Reeyot Alemu</a>, two journalists imprisoned and charged with terrorism (a crime that carries heavy fines and a lengthy prison term) in 2011.
+
+The collective has blogged about numerous political issues affecting the Ethiopian populace, hoping to bolster civic discourse in service of social change. In the wake of Prime Minister Meles Zenawi’s death, for example, Zone Nine <a href="http://advocacy.globalvoicesonline.org/2014/04/26/six-members-of-blogging-collective-arrested-in-ethiopia/">penned scathing critiques</a> of Zenawi’s proclaimed economic development achievements, casting doubt on his legacies. They also partnered with Global Voices to launch <a href="http://am.globalvoicesonline.org/">Global Voices in Amharic</a> in 2012, hoping to make international news accessible to local readers.
+
+Since its inception, Zone Nine has amassed a passionate readership within the country. According to its own bloggers, Zone Nine’s stories have occasionally been <a href="http://advocacy.globalvoicesonline.org/2014/04/26/six-members-of-blogging-collective-arrested-in-ethiopia/">picked up by wider-known publications</a> within the country, signaling wider support for the messages it has broadcasted. Outside of Ethiopia, the detention of the Zone Nine bloggers has ignited public furor. Global Voices launched a <a href="http://advocacy.globalvoicesonline.org/2014/05/03/4-ways-you-can-join-the-freezone9bloggers-campaign/">#FreeZone9Bloggers hashtagging campaign</a> and organized a FreeZone9Bloggers <a href="http://globalvoicesonline.org/2014/05/12/join-the-freezone9bloggers-tweetathon-on-may-14/">Tweetathon</a> on May 14, while UN High Commissioner Navi Pillay <a href="http://www.ohchr.org/EN/NewsEvents/Pages/DisplayNews.aspx?NewsID=14555&amp;LangID=E">criticized</a> Ethiopia’s increasing frequency of charges against journalists on the grounds of terrorism.
+
+&nbsp;
+<blockquote class="twitter-tweet" lang="en"><a href="https://twitter.com/gerardvanmourik">@gerardvanmourik</a> <a href="https://twitter.com/endalk2006">@endalk2006</a> <a href="https://twitter.com/Eshete">@Eshete</a> <a href="https://twitter.com/hashtag/zone9bloggers?src=hash">#zone9bloggers</a> will overcome someday! <a href="https://twitter.com/hashtag/change?src=hash">#change</a> will visit <a href="https://twitter.com/hashtag/ethiopia?src=hash">#ethiopia</a> and no one will be able to stop her
+
+— twsgy™ (@twsgy) <a href="https://twitter.com/twsgy/statuses/476389290067632128">June 10, 2014</a></blockquote>
+<blockquote class="twitter-tweet" lang="en"><a href="https://twitter.com/natnaelteklu">@natnaelteklu</a> this sums up why <a href="https://twitter.com/hashtag/Zone9Bloggers?src=hash">#Zone9Bloggers</a> or any concerned citizen is jailed in <a href="https://twitter.com/hashtag/Ethiopia?src=hash">#Ethiopia</a>, <a href="https://twitter.com/hashtag/FreeZone9Bloggers?src=hash">#FreeZone9Bloggers</a> <a href="http://t.co/wO11vcRtzd">pic.twitter.com/wO11vcRtzd</a>
+
+— Fitsum Tilahun (@fitse_t) <a href="https://twitter.com/fitse_t/statuses/476338375985618944">June 10, 2014</a></blockquote>
+<blockquote class="twitter-tweet" lang="en">Slowly losing track of # of days <a href="https://twitter.com/hashtag/Zone9Bloggers?src=hash">#Zone9Bloggers</a> jailed, but not losing track of them. 1 is a numerical issue, the other is a human issue.
+
+— Maaza Mengiste (@MaazaMengiste) <a href="https://twitter.com/MaazaMengiste/statuses/475293282453692416">June 7, 2014</a></blockquote>
+&nbsp;
+
+The arrests arrive in the context of what some activists fear is a growingly repressive media milieu in Ethiopia. For years, journalists – on and offline – have been susceptible to governmental terrorism charges. The Committee to Protect Journalists has <a href="http://www.cpj.org/blog/2012/01/standing-with-ethiopias-tenacious-blogger-eskinder.php">claimed</a> that more journalists have fled Ethiopia since May 2013 than in anywhere else in the world. An ambiguously-worded anti-terrorism law, mobilized in 2009, gave the Ethiopian government the power to act against any form of political dissent so long as it is deemed “<a href="http://www.hrw.org/news/2009/06/30/analysis-ethiopia-s-draft-anti-terrorism-law">supportive of armed opposition activity</a>”. The passage of this law has led to the <a href="http://advocacy.globalvoicesonline.org/2014/05/11/why-blogging-is-a-threat-to-the-ethiopian-government/">arrest and detention</a> of scores of journalists.
+
+Recently, this fight against journalists has moved online, with Ethiopian governmental officials moving to counteract online criticism of their efforts by<a href="http://ecadforum.com/2014/06/07/ethiopia-trains-bloggers-to-attack-its-opposition/"> training blogging recruits</a> to attack any online criticism of the administration (a practice known as <a href="http://en.wikipedia.org/wiki/Astroturfing">astroturfing</a>). The government has trained over 230 bloggers since May, teaching them how to post comments that sing the praises of the regime on social media—a particularly interesting move, given that <a href="http://advocacy.globalvoicesonline.org/2014/05/11/why-blogging-is-a-threat-to-the-ethiopian-government/">less than 2% of Ethiopia’s population has Internet access</a>.]]></content:encoded>
+		<excerpt:encoded><![CDATA[Six members of the Ethiopian blogging collective Zone Nine have been imprisoned for 63 days.]]></excerpt:encoded>
+		<wp:post_id>1358</wp:post_id>
+		<wp:post_date>2014-06-26 11:42:28</wp:post_date>
+		<wp:post_date_gmt>2014-06-26 15:42:28</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>this-is-zone-nine-the-continued-imprisonment-of-six-ethiopian-bloggers</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>post</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="arrests-and-imprisonment"><![CDATA[Arrests and Imprisonment]]></category>
+		<category domain="category" nicename="censorship"><![CDATA[Censorship]]></category>
+		<category domain="category" nicename="ethiopia"><![CDATA[Ethiopia]]></category>
+		<category domain="category" nicename="protests"><![CDATA[Protests]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_wpas_done_all</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_wpas_mess</wp:meta_key>
+			<wp:meta_value><![CDATA[This is Zone Nine: The Continued Imprisonment of Six Ethiopian Bloggers http://wp.me/p4L9BV-lU]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_wpas_skip_7759418</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+				<title>“Blasphemy” and Social Media in Pakistan</title>
+		<link>http://blogs.law.harvard.edu/internetmonitor/2014/06/27/blasphemy-and-social-media-in-pakistan/</link>
+		<pubDate>Fri, 27 Jun 2014 12:43:49 +0000</pubDate>
+		<dc:creator><![CDATA[msen]]></dc:creator>
+		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1360</guid>
+		<description></description>
+		<content:encoded><![CDATA[<a href="http://en.wikipedia.org/wiki/Laal_(band)">Laal</a> is one of Pakistan’s most popular bands. To the ire of the Pakistani government, it’s known for being vocally, unapologetically secular—so much that the Pakistan Telecommunications Authority (PTA), the country’s governing board for telecommunications, <a href="http://globalvoicesonline.org/2014/06/15/revolutionary-band-laals-facebook-page-is-now-accessible-in-pakistan-hooray-not-really/">decided to block access</a> to its Facebook page earlier this month. After invoking protest and anger from many netizens, the government lifted the block on Laal’s page.
+
+Similar controversy arose last month arose when the PTA asked Twitter to block access to a number of tweets they cast as <a href="http://www.nytimes.com/2014/05/22/world/asia/twitter-agrees-to-block-blasphemous-tweets-in-pakistan.html">unethical and obscene</a>. To the PTA, these tweets defied the country’s <a href="http://en.wikipedia.org/wiki/Blasphemy_law_in_Pakistan">blasphemy laws</a>. These ranged from individual tweets, such as ones containing visualizations of Muhammad, to whole Twitter feeds, like that of Duke University pornstar Belle Knox (Knox herself <a href="http://www.forbes.com/sites/kashmirhill/2014/05/27/pakistan-orders-twitter-to-take-down-duke-porn-star/">spoke out against</a> the blocks). Twitter complied with these requests.
+
+The company, which reviews censorship requests on a country-by-country basis, justified the blocks by claiming it was more acceptable <a href="https://www.eff.org/deeplinks/2014/05/twitter-steps-down-free-speech-party">to block specific tweets</a> than it was to block access to the site as a whole. This past week, after <a href="http://stream.aljazeera.com/story/201406111324-0023825">encountering civic resistance</a> at home and abroad, Twitter decided to <a href="https://www.eff.org/deeplinks/2014/06/twitter-reverses-decision-censor-content-pakistan">restore access</a> to the tweets within the country.
+
+[caption id="" align="aligncenter" width="720"]<img src="http://upload.wikimedia.org/wikipedia/commons/b/b8/Laal_Performing.jpg" alt="" width="720" height="480" /> Laal performing in Karachi in 2011; via <a href="http://en.wikipedia.org/wiki/Laal_(band)">Wikimedia Commons</a>.[/caption]
+
+Both cases recall a debate that has frightened media activists in Pakistan in the wake of the Snowden revelations. How do Pakistan’s blasphemy laws, which date back as far as the 1860s, extend to the Internet? To what extent are these laws, steeped in Pakistan’s history, being used to justify censorship?
+
+The answers to these questions have escaped Pakistani netizens for years now. Pakistan’s Penal Code<a href="http://en.wikipedia.org/wiki/Blasphemy_law_in_Pakistan"> defines blasphemy in broad terms</a>, and the laws have gone through many iterations dating as far back as the 1860s. For decades, though, civic opposition to the laws has remained strong, <a href="http://www.bbc.com/news/world-south-asia-12621225">especially beginning in the 1980s</a>. As Pakistan’s citizens have moved online, these blasphemy laws have been used as <a href="http://www.nytimes.com/2014/05/21/opinion/pakistans-tyranny-of-blasphemy.html?_r=0">justification</a> for restricting access to tweets, <a href="http://www.independent.co.uk/news/world/asia/christian-couple-sentenced-to-death-for-sending-blasphemous-text-message-9246340.html">Facebook posts</a>, and YouTube videos. They’ve also been used to justify <a href="//www.nytimes.com/2014/05/14/world/asia/68-pakistani-lawyers-are-charged-with-blasphemy-after-protesting-the-police.html">arrests</a>, <a href="http://www.nytimes.com/2014/05/08/world/asia/pakistani-activist-shot-dead-aided-blasphemy-suspects.html?gwh=3809386083E78180EA51D9B7270B77C1&amp;gwt=pay">assassination attempts</a>, and <a href="http://thelede.blogs.nytimes.com/2014/03/28/attack-on-pakistani-journalist-kills-his-driver/?gwh=87A665A2B67FD8EF13B088900D6350F8&amp;gwt=pay">murders</a>.
+
+The initial decisions to block social media content ignited furor and criticism from civic groups both within and outside of Pakistan. Press freedom NGO Bolo Bhi <a href="http://bolobhi.org/pakistan-the-chilling-effects-twitter-country-withheld-pakistan/">questioned</a> the legitimacy of giving the PTA power to call for restrictions of content. Activists both within and outside of Pakistan launched a hashtag campaign, <a href="http://stream.aljazeera.com/story/201406111324-0023825?utm_source=DMM%20-%206/13/14&amp;utm_campaign=DMM%205-30&amp;utm_medium=email">#TwitterTheocracy</a>, to mobilize against this censorship. Some netizens <a href="https://twitter.com/Im_Atheist/statuses/476694180191039489">criticized</a> Twitter for abandoning its fundamental ethos of protecting free speech, while others, like<a href="https://twitter.com/RichardDawkins/statuses/476483706648289280"> Richard Dawkins</a>, found it curious that Twitter would side with the country’s age-old blasphemy laws.
+<blockquote class="twitter-tweet" lang="en">The main reason to be on twitter is the freedom of speech. Take that away and it's just another useless application. <a href="https://twitter.com/hashtag/TwitterTheocracy?src=hash">#TwitterTheocracy</a>
+
+— Anakim (@Im_Atheist) <a href="https://twitter.com/Im_Atheist/statuses/476694180191039489">June 11, 2014</a></blockquote>
+
+
+<blockquote class="twitter-tweet" lang="en">
+Is Pakistan really a failed state? Debatable but anyway its absurd blasphemy laws don't deserve support from Twitter <a href="https://twitter.com/hashtag/TwitterTheocracy?src=hash">#TwitterTheocracy</a>
+
+— Richard Dawkins (@RichardDawkins) <a href="https://twitter.com/RichardDawkins/statuses/476483706648289280">June 10, 2014</a>
+</blockquote>
+
+
+
+&nbsp;
+
+The campaign worked.  In a statement <a href="https://www.chillingeffects.org/weather.cgi?WeatherID=830">reposted</a> on Chilling Effects, Twitter explained that a re-examination of requests prompted the restoration of access on June 17.
+
+To media freedom activists at home and abroad, Twitter’s explanation wasn’t enough. The decision to reverse the restrictions has been hailed, by Bolo Bhi, as something of a <a href="http://bolobhi.org/press-releases/twitter-reverses-blocking-decision-amid-criticism/">minor victory</a>—minor if only because of the ambiguous terms under which Twitter blocked access to the content in the first place.
+
+Media practitioners within Pakistan fear that restrictions of this kind may be due to a new cultural stigma engendered by the Snowden revelations. Snowden’s leaks have led many Pakistani conservatives to cast freedom of expression as a sort of <a href="http://cpj.org/blog/2013/01/pakistans-problematic-record-on-internet-restricti.php">undesirable, neo-colonialist Western conceit</a>. In a letter published by the Committee to Protect Journalists, Sana Saleem of Bolo Bhi explained the damning effects Snowden’s revelations have had on netizens in Pakistan, where the government is trying in earnest to replicate NSA’s model of censorship and surveillance. Pakistan’s government has drafted provisions for an allegedly draconian Cybercrime Law, while the country’s Supreme Court has suggested merging the PTA with Pakistan’s Electronic Media Regulatory Authority (PEMRA), meaning that social media now be understood as broadcast media. This would subject social media to the same monitoring restrictions as those governing broadcast media. This is the precise <a href="http://advocacy.globalvoicesonline.org/2012/12/14/pakistans-fight-for-net-freedom/">justification</a> the PTA used in 2012 when it blocked YouTube, after the controversially Islamophobic <i>Innocence of Muslims </i>made its way onto the sharing site.
+
+To activists and media freedom advocates like Saleem, the Snowden revelations have had the opposite desired effect upon freedom of expression in Pakistan. The state and its actors are now more inclined to monitor what its citizens do online, particularly on social media outlets headquartered in the Western world. If Twitter is the least of many evils—some activists<a href="https://www.eff.org/deeplinks/2014/05/twitter-steps-down-free-speech-party"> point out</a> that Facebook and YouTube regularly comply with more pervasive government censorship calls – its country-by-country censorship process is still cause for alarm for many of Pakistan’s media freedom activists.]]></content:encoded>
+		<excerpt:encoded><![CDATA[Recent social media censorship in Pakistan has sparked renewed attention to the country's blasphemy laws and how they're applied online.]]></excerpt:encoded>
+		<wp:post_id>1360</wp:post_id>
+		<wp:post_date>2014-06-27 08:43:49</wp:post_date>
+		<wp:post_date_gmt>2014-06-27 12:43:49</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>blasphemy-and-social-media-in-pakistan</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>post</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="censorship"><![CDATA[Censorship]]></category>
+		<category domain="category" nicename="facebook"><![CDATA[Facebook]]></category>
+		<category domain="category" nicename="pakistan"><![CDATA[Pakistan]]></category>
+		<category domain="category" nicename="social-media"><![CDATA[Social Media]]></category>
+		<category domain="category" nicename="twitter"><![CDATA[Twitter]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_wpas_mess</wp:meta_key>
+			<wp:meta_value><![CDATA[“Blasphemy” and Social Media in Pakistan http://wp.me/p4L9BV-lW]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_wpas_done_all</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+				<title>#IMWeekly: June 27, 2014</title>
+		<link>http://blogs.law.harvard.edu/internetmonitor/2014/06/27/imweekly-june-27-2014/</link>
+		<pubDate>Fri, 27 Jun 2014 16:33:45 +0000</pubDate>
+		<dc:creator><![CDATA[msen]]></dc:creator>
+		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1373</guid>
+		<description></description>
+		<content:encoded><![CDATA[<strong>Australia</strong>
+A potentially invasive surveillance bill due to be introduced to Australia’s parliament in July is inspiring <a href="http://en.ria.ru/world/20140623/190673077/Potential-Surveillance-Reforms-Spark-Unease-in-Australia.html">resistance</a> within the country. The bill aims to target potential jihadists and other terrorists who may be spreading violent rhetoric in their online networks. Prime Minister Tony Abbott <a href="http://www.theguardian.com/world/2014/jun/23/australian-spy-agencies-in-line-for-new-digital-surveillance-powers">claimed</a> that jihadists who have been radicalized by their experiences with al-Qaeda and its offshoots may threaten national security, spreading their hateful rhetoric online. As such, this bill would give the Australian government power to store public metadata.
+
+<strong>Egypt</strong>
+In a <a href="http://www.aljazeera.com/indepth/features/2013/10/blast-from-past-for-egyptian-dissidents-2013107113914374587.html">climate of political uncertainty</a>, the Egyptian government has sought to extend its hold over its citizenry by creating a <a href="http://mashable.com/2014/06/21/egyptian-social-media-monitoring-first/">media monitoring software</a> that will understand multiple forms of written Arabic. The system, built to read both colloquial and Romanized Arabic, would allow the government to access the digital footprints of various citizens who may be harboring oppositional thoughts online. Human Rights Watch’ Cynthia Wong <a href="http://mashable.com/2014/06/21/egyptian-social-media-monitoring-first/">warns</a> that such a move would restrict Egyptian’s netizens from expressing themselves fully and totally online, noting that the Internet has played a significant role in empowering independent voices of reform in Egypt.
+
+<strong>Iraq</strong>
+As the reality of stifled internet connectivity <a href="http://online.wsj.com/articles/iraq-clamps-down-on-internet-1403632792">intensifies</a> in Iraq, netizens are finding cunning ways around these blockages. <a href="https://play.google.com/store/apps/details?id=com.opengarden.firechat&amp;hl=en">FireChat</a>, a smartphone app that doesn’t require an internet connection, has seen an <a href="http://www.bloomberg.com/news/2014-06-24/iraq-internet-shutdown-is-good-news-for-one-app-firechat.html">unprecedented surge</a> in downloads and consumption since June 14. Iraq, <a href="http://www.bloomberg.com/news/2014-06-24/iraq-internet-shutdown-is-good-news-for-one-app-firechat.html">Bloomberg reports</a>, ranks just behind the United States in terms of daily smartphone usage, making FireChat a widely-used form of communication in the country.  A Citizen Lab <a href="https://citizenlab.org/2014/06/monitoring-information-controls-in-iraq/">report</a> released earlier this month also concluded that ISIS filters placed upon websites in Iraq have been largely ineffective, while the use of <a href="http://en.wikipedia.org/wiki/Psiphon">Psiphon</a> and <a href="http://en.wikipedia.org/wiki/Tor_(anonymity_network)">Tor</a> has increased significantly in the wake of the internet shutdown.
+
+<strong>Russia</strong>
+This week, Russia’s Interior Ministry drafted a ten-year strategy to fight extremism – a strategy that could lead to online surveillance of netizens. Extremism is <a href="http://globalvoicesonline.org/2014/06/21/russia-says-the-internet-spreads-extremism/">broadly defined</a> under Russian federal law, ranging from hate crimes to armed revolution. The strategy aims to counter politically radical movements from the bottom up, targeting <a href="http://globalvoicesonline.org/2014/06/21/russia-says-the-internet-spreads-extremism/">information sources</a> and netizens spreading extremist rhetoric online. News of this plan emerges during a week when Colin Cromwell, Twitter’s head of global public policy, <a href="http://globalvoicesonline.org/2014/06/21/russia-claims-to-have-forced-twitter-into-submission-ahead-of-crowells-moscow-visit/">visited</a> Russia and agreed to block “extremist accounts” under the <a href="http://globalvoicesonline.org/2014/06/23/twitter-russia-censorship-kremlin-roscomnadzor-facebook/">demands</a> of Russia’s Alexander Zharov, the chief of Russian federal communications agency <a href="http://en.wikipedia.org/wiki/Federal_Service_for_Supervision_of_Communications,_Information_Technology_and_Mass_Media">Roskomnadzor</a>.
+
+<strong>Thailand</strong>
+Since last month’s coup, Thailand’s junta has increasingly clamped down on pro-democracy movements online. For weeks, the <a href="https://www.eff.org/deeplinks/2014/06/thailands-junta-flexes-its-muscles-online">"liking" of Facebook pages dedicated to anti-coup groups has been outlawed, while numerous pro-democracy websites have been blocked</a>. IFEX reported that the junta is now deceiving netizens into unveiling their personal details through a deceptive Facebook phishing app, through which users are <a href="http://www.ifex.org/thailand/2014/06/25/junta_used_facebook_app_to_harvest_email_addresses/">encouraged</a> to "log in" with their personal information that is stored in their Facebook profiles. This faulty, fake app is in violation of Facebook's own policies, and it was <a href="http://qz.com/226673/the-thai-juntas-latest-crackdown-on-dissent-is-a-bogus-facebook-login-button/">suspended</a> twice by Facebook as a result. Access also reports that the junta has <a href="https://www.accessnow.org/blog/2014/06/26/onlline-crackdown-continues-thai-junta-sets-up-five-panels-to-monitor-media#When:17:49:50Z">recently set up five media monitoring panels</a> that intend to surveil social media for any dissenting opinions.
+
+<i>#imweekly is a weekly round-up of news about Internet content controls and activity around the world. To subscribe via RSS, </i><i><a href="http://blogs.law.harvard.edu/internetmonitor/category/im-weekly/feed/">click here.</a></i>]]></content:encoded>
+		<excerpt:encoded><![CDATA[In this week's #IMWeekly: Australia announces a controversial surveillance bill, Iraqi netizens find a way around internet blockages, and Russia targets extremism on Twitter. ]]></excerpt:encoded>
+		<wp:post_id>1373</wp:post_id>
+		<wp:post_date>2014-06-27 12:33:45</wp:post_date>
+		<wp:post_date_gmt>2014-06-27 16:33:45</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>imweekly-june-27-2014</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>post</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="arrests-and-imprisonment"><![CDATA[Arrests and Imprisonment]]></category>
+		<category domain="category" nicename="australia"><![CDATA[Australia]]></category>
+		<category domain="category" nicename="censorship"><![CDATA[Censorship]]></category>
+		<category domain="category" nicename="egypt"><![CDATA[Egypt]]></category>
+		<category domain="category" nicename="facebook"><![CDATA[Facebook]]></category>
+		<category domain="category" nicename="im-weekly"><![CDATA[IM Weekly]]></category>
+		<category domain="category" nicename="internet-blackout"><![CDATA[Internet Blackout]]></category>
+		<category domain="category" nicename="iraq"><![CDATA[Iraq]]></category>
+		<category domain="category" nicename="legislation"><![CDATA[Legislation]]></category>
+		<category domain="category" nicename="russia"><![CDATA[Russia]]></category>
+		<category domain="category" nicename="sms"><![CDATA[SMS]]></category>
+		<category domain="category" nicename="social-media"><![CDATA[Social Media]]></category>
+		<category domain="category" nicename="surveillance"><![CDATA[Surveillance]]></category>
+		<category domain="category" nicename="thailand"><![CDATA[Thailand]]></category>
+		<category domain="category" nicename="twitter"><![CDATA[Twitter]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_wpas_done_all</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_wpas_mess</wp:meta_key>
+			<wp:meta_value><![CDATA[#IMWeekly: this week in freedom of expression news http://wp.me/p4L9BV-m9]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+				<title>“Total Censorship in the Air”: How the Thai Junta Has Policed Online Media</title>
+		<link>http://blogs.law.harvard.edu/internetmonitor/2014/07/02/total-censorship-in-the-air-how-the-thai-junta-has-policed-online-media/</link>
+		<pubDate>Wed, 02 Jul 2014 13:54:25 +0000</pubDate>
+		<dc:creator><![CDATA[msen]]></dc:creator>
+		<guid isPermaLink="false">http://blogs.law.harvard.edu/internetmonitor/?p=1377</guid>
+		<description></description>
+		<content:encoded><![CDATA[It has been over a month since Thailand’s military junta, the <a href="http://en.wikipedia.org/wiki/National_Council_for_Peace_and_Order">National Council for Peace and Order (NCPO)</a>, overtook the country’s government during a <a href="http://en.wikipedia.org/wiki/2014_Thai_coup_d'%C3%A9tat">May 22 coup</a>. Since then, the NCPO has aimed to consolidate political control of the country, an impulse that has filtered down to controlling nearly every minute facet of citizens’ public and private life. Citizens in Thailand <a href="http://www.theguardian.com/world/2014/jun/03/hunger-games-salute-banned-thailand?_ga=1.173000608.2082720676.1403881989">can’t gesture with <i>Hunger Games</i>-like salutes</a>, nor can they read such texts as <a href="http://www.scmp.com/news/asia/article/1538616/protesting-thai-reader-orwells-1984-dragged-police-bangkok?_ga=1.173000608.2082720676.1403881989">Orwell’s <i>1984 </i>and Filipino revolutionary Jose Rizel’s <i>Noli Me Tangere </i>in public spaces.</a> Those acts, the junta claims, are expressions of radicalism.
+
+[caption id="" align="aligncenter" width="541"]<img src="http://upload.wikimedia.org/wikipedia/commons/6/69/2014_0527_Thailand_coup_Thaphae_Gate.jpg" alt="" width="541" height="393" /> 2014 Thai Coup, via <a href="http://commons.wikimedia.org/wiki/File:2014_0527_Thailand_coup_Thaphae_Gate.jpg">Wikimedia Commons</a>.[/caption]
+
+The NCPO has increasingly moved this strategic policing online. They have ordered Thai ISPs to shut down over <a href="http://www.malaysiandigest.com/technology/502962-thailand-s-coup-spreads-from-streets-to-the-web-219-sites-blocked-so-far.html">200 sites</a>. Some casualties of this call for censorship include <a href="http://prachatai.com/">Prachatai</a>, an independent online newspaper; the Asia and Thailand subpages of the <a href="http://www.pbs.org/idealab/2014/06/amid-a-coup-thailands-online-crackdown-gains-momentum/">Human Rights Watch</a>, which published an incriminating <a href="http://www.hrw.org/sites/default/files/reports/thailand0511webwcover_0.pdf">report</a> detailing the country’s <a href="http://en.wikipedia.org/wiki/2010_Thai_political_protests">2010 Red Shirt protests</a>; and Facebook, which was blocked for a <a href="http://www.abc.net.au/news/2014-05-28/thai-military-denies-facebook-block/5485118">day</a> on May 28 before the NCPO swiftly unblocked it, citing a “glitch” that <a href="http://www.pbs.org/idealab/2014/06/amid-a-coup-thailands-online-crackdown-gains-momentum/">activists</a> have chalked up to a social media <a href="http://en.wikipedia.org/wiki/Kill_switch">“kill switch.”</a> When the government tried to set up a meeting with Facebook and Twitter to discuss tactics for censoring anti-junta impulses on social media, the companies in question <a href="http://www.nasdaq.com/article/socialmedia-companies-skip-meeting-with-thai-junta-20140529-00684?_ga=1.135138098.2082720676.1403881989">didn’t show</a>.
+
+Police forces have <a href="http://prachatai.com/english/node/4110?_ga=1.139914416.2082720676.1403881989">warned</a> citizens against “liking” any anti-government posts on social media. Last week, news emerged of a <a href="https://www.eff.org/deeplinks/2014/06/thai-junta-used-facebook-app-harvest-email-addresses?_ga=1.139914416.2082720676.1403881989">Facebook phishing ploy</a> orchestrated by the government – one in which Thai netizens were tricked into giving their personal information, contained in their Facebook accounts, by being asked to “log in via Facebook.”
+
+<i>Access Now </i>recently reported that the junta is now organizing governmental panels that will surveil all facets of national media, <a href="https://www.accessnow.org/blog/2014/06/26/onlline-crackdown-continues-thai-junta-sets-up-five-panels-to-monitor-media#When:17:49:50Z">extending to online media platforms</a>. The junta is offering monetary incentive to those citizens who turn in photos, videos, or other incriminating evidence of people criticizing the junta.
+
+Lisa Gardner of <i>PBS MediaShift </i><a href="http://www.pbs.org/idealab/2014/06/amid-a-coup-thailands-online-crackdown-gains-momentum/">attributes</a> this censorship to the junta’s desire to foster a sense of allegiance towards its regime. For many citizens, the Internet is <a href="http://www.pbs.org/idealab/2014/06/amid-a-coup-thailands-online-crackdown-gains-momentum/">largely losing its function</a> as a forum through which netizens can access information, share opinions, and fight against the climate of fear engendered by the junta, whom Gardner claims is trying, in earnest, to convince Thailand’s citizenry of its good intentions.
+
+[caption id="" align="aligncenter" width="541"]<img src="http://upload.wikimedia.org/wikipedia/commons/2/2b/2010_09_19_red_shirt_protest_bkk_09.JPG" alt="" width="541" height="315" /> 2010 Red Shirt Protests, via <a href="http://en.wikipedia.org/wiki/2010_Thai_political_protests#mediaviewer/File:2010_09_19_red_shirt_protest_bkk_09.JPG">Wikimedia Commons</a>.[/caption]
+
+Writing in <i>Global Voices Bridge, </i>an anonymous Thai journalist <a href="http://globalvoicesonline.org/2014/05/31/i-can-feel-total-censorship-in-the-air-internet-freedom-evaporates-in-thailand/">described</a> firsthand the current situation as one in which citizens can “feel total censorship in the air.” The journalist notes that Thailand’s history of military takeovers, such as 2010’s aforementioned Red Shirt protests, saw a similar shutdown of media outlets. This created a political climate in which lack of informational access, coupled with an online media milieu that is curated excessively by Thailand’s junta, led to citizen <a href="http://globalvoicesonline.org/2014/05/31/i-can-feel-total-censorship-in-the-air-internet-freedom-evaporates-in-thailand/">compliance</a> with human rights atrocities – a risk the anonymous journalist feels may be presented by the NCPO’s current hold over online communication outlets.
+<b></b>]]></content:encoded>
+		<excerpt:encoded><![CDATA[It has been over a month since Thailand’s military junta, the National Council for Peace and Order (NCPO), overtook the country’s government during a May 22 coup. Since then, the NCPO has aimed to consolidate political control of the country, moving online to restrict access to information. ]]></excerpt:encoded>
+		<wp:post_id>1377</wp:post_id>
+		<wp:post_date>2014-07-02 09:54:25</wp:post_date>
+		<wp:post_date_gmt>2014-07-02 13:54:25</wp:post_date_gmt>
+		<wp:comment_status>open</wp:comment_status>
+		<wp:ping_status>open</wp:ping_status>
+		<wp:post_name>total-censorship-in-the-air-how-the-thai-junta-has-policed-online-media</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>post</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:is_sticky>0</wp:is_sticky>
+		<category domain="category" nicename="arrests-and-imprisonment"><![CDATA[Arrests and Imprisonment]]></category>
+		<category domain="category" nicename="censorship"><![CDATA[Censorship]]></category>
+		<category domain="category" nicename="facebook"><![CDATA[Facebook]]></category>
+		<category domain="category" nicename="protests"><![CDATA[Protests]]></category>
+		<category domain="category" nicename="social-media"><![CDATA[Social Media]]></category>
+		<category domain="category" nicename="thailand"><![CDATA[Thailand]]></category>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[2444]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_wpas_done_all</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>_wpas_mess</wp:meta_key>
+			<wp:meta_value><![CDATA[“Total Censorship in the Air”: How the Thai Junta Has Policed Online Media http://wp.me/p4L9BV-md]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 </channel>
