@@ -39,4 +39,10 @@ Imon::Application.configure do
   config.after_initialize do |app|
       app.config.assets.debug = true
   end
+
+  config.action_mailer.default_url_options = { :host => 'www.thenetmonitor.org' }
+  Rails.application.routes.default_url_options[:host] = 'www.thenetmonitor.org'
+
+  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.perform_deliveries = true
 end
