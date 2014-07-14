@@ -1,7 +1,7 @@
 require 'csv'
 
 namespace :imon do
-  desc 'Ingest data from individual source, recalculate all'
+  desc 'Ingest data from individual source, do not recalculate all'
   task :ingest, [:row_number] => [:environment] do |task, args|
     Retriever.retrieve!(args[:row_number])
 
@@ -23,6 +23,11 @@ namespace :imon do
   desc 'Import country bboxes'
   task :import_country_bboxes, [:filename] => [:environment] do |task, args|
     import_country_bboxes args[:filename]
+  end
+
+  desc 'Replace most recent static (HTML/JSON) source for country'
+  task :replace_static_source, [:row_number, :iso3_code] => [:environment] do |task, args|
+    replace_static_source args[ :row_number ], args[ :iso3_code ]
   end
 end
 
@@ -91,6 +96,36 @@ def import_country_bboxes( filename )
       country.save
     end
   }
+end
 
+def replace_static_source( row_number, iso3_code )
+  line = CSV.read(Rails.root.join('db', 'sources.csv'), :headers => true)[row_number.to_i - 1]
+  if line.nil?
+    puts "cannot find source line #{row_number}"
+    return
+  end
 
+  ds = DatumSource.find_by_admin_name line[ 'Short name' ]
+  if ds.nil?
+    puts "cannot find DatumSource #{line[ 'Short name' ]}"
+    return
+  end
+
+  country = Country.find_by_iso3_code iso3_code
+  if country.nil?
+    puts "cannot find Country #{iso3_code}"
+    return
+  end
+
+  datum = Datum.where( { datum_source_id: ds.id, country_id: country.id } ).order( 'start_date desc' ).limit( 1 )
+  if datum.count == 0
+    puts "cannot find existing datum"
+    return
+  end
+
+  datum = datum.first
+
+  puts "Replacing #{ds.public_name} for #{country.name} (datum.id #{datum.id})"
+
+  Retriever.retrieve!( row_number, datum )
 end

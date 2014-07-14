@@ -24,17 +24,24 @@ class HerdictFetcher
     end
   end
 
-  def data(options = {})
-    data = []
-    Country.all.each { |country|
-      sites = quickstats_by_country(country.iso_code, 2013)
-      sites = sites + top_sites_by_country(country.iso_code, 2013)
+  def data(options = {}, c = nil)
+    if c.present?
+      puts '.'
+      country_data c
+    else
+      data = []
+      Country.all.each { |country|
+        value = country_data country
+        d = HtmlBlock.new start_date: '2013-01-01', value: value, value_id: country.iso3_code
+        d.country = country
+        data << d
+      }
+      data
+    end
+  end
 
-      d = HtmlBlock.new start_date: '2013-01-01', value: sites, value_id: country.iso3_code
-      d.country = country
-      data << d
-    }
-
-    data
+  def country_data( country )
+    sites = quickstats_by_country(country.iso_code, 2013)
+    sites = sites + top_sites_by_country(country.iso_code, 2013)
   end
 end

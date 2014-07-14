@@ -40,6 +40,8 @@ class DatumSource < ActiveRecord::Base
     end
 
     def retreiver_class=(klass)
+      # TODO: this function name is spelled wrong
+      # but I don't dare chagnge it now because the site works
         write_attribute(:retriever_class, klass.name)
     end
 
@@ -61,17 +63,23 @@ class DatumSource < ActiveRecord::Base
         }
     end
 
-    def ingest_data!(options = {})
-      if options[ :append ]
-        self.data << retriever_class( options[ :retriever_class ] ).data(options)
+    def ingest_data!(options = {}, datum = nil)
+      if datum.present?
+        datum.value = retriever_class( options[ :retriever_class ] ).data(options, datum.country)
+        datum.save
       else
-        self.data = retriever_class( options[ :retriever_class ] ).data(options)
-      end
+        if options[ :append ]
+          self.data << retriever_class( options[ :retriever_class ] ).data(options)
+        else
+          self.data = retriever_class( options[ :retriever_class ] ).data(options)
+        end
+
         save!
         unless data.empty?
             self.datum_type = data.first.type
-            logger.info %Q|Ingested #{data.count} data from "#{public_name}"|
+            logger.info %Q|Ingested #{data.count} data from "#{options[ :retriever_class ]}"|
             save!
         end
+      end
     end
 end

@@ -10,7 +10,7 @@ class Retriever
         'JSON' => 'JsonObject'
     }
 
-    def self.retrieve!(row_number)
+    def self.retrieve!(row_number, datum = nil)
         line = CSV.read(Rails.root.join('db', 'sources.csv'), :headers => true)[row_number.to_i - 1]
         puts "Retrieving #{line['Public name']}"
 
@@ -60,7 +60,7 @@ class Retriever
               options[ :multiplier ] = line['Multiplier'].to_f
             end
             options[ :retriever_class ] = line['Retriever Class']
-            ds.ingest_data!(options)
+            ds.ingest_data!(options, datum)
         end
 
         GC.start
