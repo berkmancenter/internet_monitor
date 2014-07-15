@@ -64,7 +64,7 @@ $( function( ) {
 
         var countries = map.geomap( 'find', geo, 1 );
         if ( countries.length > 0 ) {
-          if ( countries[ 0 ].properties.country_id ) {
+          if ( countries[ 0 ].properties.country_iso ) {
             popup = geo;
             map.geomap( 'append', geo, popupTmpl.render( countries[ 0 ].properties ) );
           }
@@ -146,6 +146,7 @@ $( function( ) {
           if ( mapCountries.length === 1 ) {
             r = colorClasses[ colorClasses.length - 1 ].color;
           } else {
+            this.properties.country_iso = this.properties.iso_a3.toLowerCase();
             this.properties.country_id = mapCountries[ this.properties.iso_a3 ].id;
             this.properties.score = mapCountries[ this.properties.iso_a3 ].score;
 

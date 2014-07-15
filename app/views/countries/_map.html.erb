@@ -3,7 +3,7 @@
 
   <script id="popup-tmpl" type="text/x-jsrender">
     <div class="score-pill">
-      <a href="<%= Imon::Application.routes.url_helpers.countries_path %>/{{:country_id}}" class="country-name">{{:name}}</a>
+      <a href="<%= Imon::Application.routes.url_helpers.countries_path %>/{{:country_iso}}/access" class="country-name">{{:name}}</a>
       <span class="imon-score">{{:score.toFixed(2)}}</span>
     </div>
   </script>
