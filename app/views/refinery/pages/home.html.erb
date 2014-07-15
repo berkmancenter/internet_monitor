@@ -38,6 +38,7 @@
 
 <% cache( 'thenetmonitor-tweets', expires_in: 5.minutes ) { %>
 <section class="twitter">
+  <!--<%= DateTime.now %>-->
   <h1>Latest Tweets from @thenetmonitor</h1>
   <ul class="tweets">
     <% imon_tweets.each do |tweet| %>
