@@ -36,6 +36,7 @@
   </ul>
 </div>
 
+<% cache( 'thenetmonitor-tweets', expires_in: 5.minutes ) { %>
 <section class="twitter">
   <h1>Latest Tweets from @thenetmonitor</h1>
   <ul class="tweets">
@@ -45,3 +46,4 @@
   </ul>
   <div class="follow"><span>Follow</span> <a href="https://twitter.com/thenetmonitor">@thenetmonitor</a><br><span>on Twitter</span></div>
 </section>
+<% } %>
