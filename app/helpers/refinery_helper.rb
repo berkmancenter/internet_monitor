@@ -18,8 +18,8 @@ module RefineryHelper
       silence_warnings do
         client.user_timeline 'thenetmonitor', count: 3
       end
-    rescue Twitter::Error::InternalServerError => e
-      [ Twitter::Tweet.new( { id: 1, text: 'Error getting tweets from Twitter' } ) ]
+    rescue Twitter::Error => e
+      [ Twitter::Tweet.new( { id: 1, text: '' } ) ]
     end
   end
 
