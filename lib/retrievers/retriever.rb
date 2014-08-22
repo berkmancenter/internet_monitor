@@ -11,7 +11,9 @@ class Retriever
     }
 
     def self.retrieve!(row_number, datum = nil)
-        line = CSV.read(Rails.root.join('db', 'sources.csv'), :headers => true)[row_number.to_i - 1]
+      sources = Roo::Excelx.new Rails.root.join('db', 'sources.xlsx').to_s
+
+        line = CSV.parse( sources.sheet( sources.default_sheet ).to_csv, { :headers => true } )[row_number.to_i - 1]
         puts "Retrieving #{line['Public name']}"
 
         ds = DatumSource.find_by_admin_name line['Short name']

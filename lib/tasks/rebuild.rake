@@ -6,7 +6,9 @@ require 'csv'
 namespace :imon do
   desc 'Import Herdict Quick Stats data'
   task :herdictqs => [:environment] do |task|
-    CSV.open(Rails.root.join('db', 'sources.csv'), :headers => true).each_with_index do |row, i|
+    sources = Roo::Excelx.new Rails.root.join('db', 'sources.xlsx').to_s
+
+    CSV.parse( sources.sheet( sources.default_sheet ).to_csv, { :headers => true } ).each_with_index do |row, i|
         next unless row['Indicator'] == 'Herdict Quick Stats'
         Retriever.retrieve!(i + 1)
     end
@@ -14,7 +16,9 @@ namespace :imon do
 
   desc 'Import Herdict data'
   task :herdict => [:environment] do |task|
-    CSV.open(Rails.root.join('db', 'sources.csv'), :headers => true).each_with_index do |row, i|
+    sources = Roo::Excelx.new Rails.root.join('db', 'sources.xlsx').to_s
+
+    CSV.parse( sources.sheet( sources.default_sheet ).to_csv, { :headers => true } ).each_with_index do |row, i|
         next unless row['Indicator'] == 'Herdict'
         Retriever.retrieve!(i + 1)
     end
@@ -30,7 +34,9 @@ namespace :imon do
     Group.find_or_create_by_admin_name_and_public_name 'filtering_mo', 'Internet Filtering MO'
 
     # Import all the data
-    CSV.open(Rails.root.join('db', 'sources.csv'), :headers => true).each_with_index do |row, i|
+    sources = Roo::Excelx.new Rails.root.join('db', 'sources.xlsx').to_s
+
+    CSV.parse( sources.sheet( sources.default_sheet ).to_csv, { :headers => true } ).each_with_index do |row, i|
         next unless row['Include in Internet Monitor?'] == 'y'
         Retriever.retrieve!(i + 1)
     end
