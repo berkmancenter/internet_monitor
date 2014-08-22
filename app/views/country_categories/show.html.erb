@@ -46,6 +46,12 @@
         <% end %>
       <% end %>
 
+      <%# api-indicators for this category %>
+      <% @category.datum_sources.are_api.each { |datum_source| %>
+          <% showing_data = true %>
+          <%= render partial: 'datum_sources/api_block', object: datum_source %>
+      <% } %>
+
       <% if !showing_data %>
         <div class="block no-data" %><%= t 'country_categories.show.no_data', category: @category.slug, country: @country.name %></div>
       <% end %>

@@ -212,6 +212,10 @@ namespace :db do
       ds_morningside.category = categories[ 2 ]
       ds_morningside.save!
 
+      ds_aktv = FactoryGirl.create :ds_aktv
+      ds_aktv.category = categories[ 2 ]
+      ds_aktv.save!
+
       # access datum
       d_morningside = FactoryGirl.create :d_morningside
       d_morningside.source = ds_morningside

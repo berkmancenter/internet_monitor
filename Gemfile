@@ -10,10 +10,8 @@ gem 'pg'
 
 group :development, :test do
   gem 'rspec-rails'
-end
 
-group :test do
-  gem 'capybara'
+  gem 'capybara', '2.3.0'
   gem 'poltergeist'
   gem 'factory_girl_rails'
 end

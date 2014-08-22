@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140626202922) do
+ActiveRecord::Schema.define(:version => 20140822192851) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -97,6 +97,7 @@ ActiveRecord::Schema.define(:version => 20140626202922) do
     t.integer  "group_id"
     t.boolean  "normalized",       :default => false
     t.boolean  "display_original", :default => true
+    t.string   "api_endpoint"
   end
 
   add_index "datum_sources", ["category_id"], :name => "index_datum_sources_on_category_id"

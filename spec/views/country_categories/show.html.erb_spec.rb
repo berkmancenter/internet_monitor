@@ -234,30 +234,40 @@ describe ( 'country_categories/show' ) {
         should_not have_css 'section.indicators'
       }
 
-      it ( 'should have a morningside widget' ) {
-        # activity sample has one
-        should have_css 'section.morningside-fetcher.json-object'
-        should have_css '.morningside-fetcher .render'
+      describe ( 'morningside' ) {
+        it ( 'should have a morningside widget' ) {
+          # activity sample has one
+          should have_css 'section.morningside-fetcher.json-object'
+          should have_css '.morningside-fetcher .render'
+        }
+
+        it ( 'should only have *one* morningside widget' ) {
+          # because the second one does not have a page in refinery & is ignored
+          should have_css 'section.morningside-fetcher.json-object', count: 2
+        }
+
+        it ( 'should have morningside header' ) {
+          # headers come from cms page title
+          should have_css 'section.morningside-fetcher h1', text: 'ds_morningside_1'
+        }
+
+        it ( 'should have morningside description' ) {
+          # description comes from cms page body
+          should have_css 'section.morningside-fetcher .body', text: 'Researchers at Berkman are currently working to analyze this data.'
+        }
+
+        it ( 'should have a note under the blogosphere' ) {
+          # description comes from cms page side_body
+          should have_css 'section.morningside-fetcher .side_body', text: 'For an earlier report on the Arabic blogosphere using similar research methods, see "Mapping the Arabic Blogosphere: Politics, Culture and Dissent" (2009).'
+        }
       }
 
-      it ( 'should only have *one* morningside widget' ) {
-        # because the second one does not have a page in refinery & is ignored
-        should have_css 'section.morningside-fetcher.json-object', count: 2
-      }
+      describe ( 'api widget' ) {
+        let ( :ds_aktv ) { DatumSource.find_by_admin_name 'ds_aktv' }
 
-      it ( 'should have morningside header' ) {
-        # headers come from cms page title
-        should have_css 'section.morningside-fetcher h1', text: 'ds_morningside_1'
-      }
-
-      it ( 'should have morningside description' ) {
-        # description comes from cms page body
-        should have_css 'section.morningside-fetcher .body', text: 'Researchers at Berkman are currently working to analyze this data.'
-      }
-
-      it ( 'should have a note under the blogosphere' ) {
-        # description comes from cms page side_body
-        should have_css 'section.morningside-fetcher .side_body', text: 'For an earlier report on the Arabic blogosphere using similar research methods, see "Mapping the Arabic Blogosphere: Politics, Culture and Dissent" (2009).'
+        it {
+          should have_css %*.block[data-datum-source-id="#{ds_aktv.id}"]*
+        }
       }
 
       it {
