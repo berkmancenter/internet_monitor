@@ -13,9 +13,13 @@ class DatumSourcesController < ApplicationController
 
   def show
     @datum_source = DatumSource.find(params[:id])
-    respond_to do |format|
-      format.json
+
+    if @datum_source.is_api?
+      respond_to do |format|
+        format.json
+      end
+    else
+      not_found
     end
   end
-
 end
