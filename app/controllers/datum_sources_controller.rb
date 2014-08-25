@@ -10,4 +10,12 @@ class DatumSourcesController < ApplicationController
       format.any(:json, :xml)
     end
   end
+
+  def show
+    @datum_source = DatumSource.find(params[:id])
+    respond_to do |format|
+      format.json
+    end
+  end
+
 end

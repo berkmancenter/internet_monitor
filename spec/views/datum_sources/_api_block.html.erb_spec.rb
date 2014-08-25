@@ -16,7 +16,11 @@ describe ( 'datum_sources/_api_block' ) {
   }
 
   it {
-    should have_css %*.block[data-datum-source-id="#{ds_aktv.id}"]*
+    should have_css %*.block[data-ds-id="#{ds_aktv.id}"]*
+  }
+
+  it {
+    should have_css %*.block[data-ds-name="#{ds_aktv.admin_name}"]*
   }
 
   it {
