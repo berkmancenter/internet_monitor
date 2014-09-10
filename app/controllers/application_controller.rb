@@ -10,7 +10,7 @@ class ApplicationController < ActionController::Base
   end
 
   def load_map_countries
-    @map_countries = Country.with_enough_data.select( 'id,iso3_code,score' )
+    @map_countries = Country.with_enough_data.select( 'id,iso3_code,score,bbox' )
   end
 
   def not_found

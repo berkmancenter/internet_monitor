@@ -11,6 +11,10 @@ class CountriesController < ApplicationController
     end
   end
 
+  def cache_thumbs
+    render
+  end
+
   def show
     @country = Country.find(params[:id])
 

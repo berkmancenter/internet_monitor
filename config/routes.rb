@@ -8,6 +8,10 @@ Imon::Application.routes.draw do
       member do
           match ':category_slug' => 'countries#show', :as => :category
       end
+
+      collection do
+          get 'cache_thumbs'
+      end
   end
 
   match '/map' => 'countries#map', :as => :map
