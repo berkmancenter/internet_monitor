@@ -15,6 +15,18 @@ class CountriesController < ApplicationController
     render
   end
 
+  def update
+    id = params[:id]
+    @country = Country.find(id)
+
+    puts '***'
+    puts params
+    puts params[ :thumb ]
+    puts '***'
+
+    render text: 'ok'
+  end
+
   def show
     @country = Country.find(params[:id])
 

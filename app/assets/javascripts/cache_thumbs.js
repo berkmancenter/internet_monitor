@@ -109,10 +109,12 @@ $( function () {
     });
 
     var cacheIdx = 0;
+    var feature = null;
+    var country = null;
 
     function cacheThumb( ) {
-      var feature = features[ cacheIdx ];
-      var country = mapCountries[ feature.properties.iso_a3 ];
+      feature = features[ cacheIdx ];
+      country = mapCountries[ feature.properties.iso_a3 ];
 
       if ( country ) {
         map.geomap( 'option', 'bbox', $.geo.scaleBy( JSON.parse( country.bbox ), 1.5 ) );
@@ -131,6 +133,14 @@ $( function () {
       var dataUrl = $( '#map-countries-service img' ).prop( 'src' );
       $( '#thumb' ).prop( 'src', dataUrl );
       $( '#imgSrc' ).text( dataUrl );
+
+      $.ajax( {
+        url: '/countries/' + country.id,
+        type: 'PUT',
+        data: {
+          "country[thumb]": dataUrl
+        }
+      } );
 
       cacheIdx++;
       $( 'progress' ).prop( 'value', cacheIdx );
