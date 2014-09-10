@@ -2,23 +2,19 @@ require 'spec_helper'
 
 describe ( 'datum_sources.json requests' ) {
   describe ( 'get /datum_sources/:id.json' ) {
-    context ( 'with valid api datum_source' ) {
+    context ( 'with xml datum_source' ) {
       let ( :ds ) { DatumSource.find_by_admin_name 'ds_aktv' }
 
       before {
-        visit datum_source_path ds, format: :json
+        visit datum_source_path ds, format: :xml
       }
 
       it {
         page.status_code.should eq( 200 )
       }
 
-      describe ( 'json' ) {
-        let ( :json ) { JSON.parse( page.source ) }
-
-        it {
-          json.should_not eq( nil )
-        }
+      it {
+        Hash.from_xml( source )[ 'locations' ].should_not eq( nil )
       }
     }
   }

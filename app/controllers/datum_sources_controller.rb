@@ -1,3 +1,5 @@
+require 'open-uri'
+
 class DatumSourcesController < ApplicationController
   def index
     if params[:type]
@@ -16,7 +18,13 @@ class DatumSourcesController < ApplicationController
 
     if @datum_source.is_api?
       respond_to do |format|
-        format.json
+        endpoint = open @datum_source.api_endpoint
+        format.xml {
+          render xml: endpoint.read
+        }
+        format.json {
+          render json: endpoint.read
+        }
       end
     else
       not_found
