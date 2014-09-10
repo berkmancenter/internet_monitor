@@ -52,14 +52,5 @@ gem 'bcrypt-ruby', '3.1.2'
 # tweet parsing
 gem 'twitter-text'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
+# exception notifications via email
+gem 'exception_notification'
