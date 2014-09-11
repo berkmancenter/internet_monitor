@@ -9,7 +9,7 @@
 </div>
 
 <div class="what-we-do">
-  <div class="trending" data-min-score="<%= @map_countries.any? ? @map_countries.order('score').first.score : 0 %>" data-max-score="<%= @map_countries.any? ? @map_countries.order('score desc').first.score : 0 %>" data-map-countries="<%= @map_countries.to_json %>">
+  <div class="trending">
     <h2>Featured Countries</h2>
     <ul>
     <% Nokogiri::HTML( part_content( 'trending', :body ) ).xpath( '//li' ).each_with_index do |li, i| %>

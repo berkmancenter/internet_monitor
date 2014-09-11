@@ -92,15 +92,20 @@ describe ( 'refinery/pages/home' ) {
         should_not have_css '.trending li .score-pill .user-rank'
       }
 
-      it ( 'should have map data at top level' ) {
-        should have_css '.trending[data-map-countries]'
-        should have_css '.trending[data-min-score]'
-        should have_css '.trending[data-max-score]'
+      it ( 'should no longer have map data at top level' ) {
+        should_not have_css '.trending[data-map-countries]'
+        should_not have_css '.trending[data-min-score]'
+        should_not have_css '.trending[data-max-score]'
       }
 
-      it ( 'should have static map of country' ) {
+      it ( 'should map of country' ) {
         should have_css '.trending li a .trending-map'
-        should have_css '.trending li a .trending-map[data-country-iso3="IRN"]'
+        should_not have_css '.trending li a .trending-map[data-country-iso3="IRN"]'
+      }
+
+      it ( 'should have png thumb of country' ) {
+        should have_css '.trending li a .trending-map img'
+        should have_css ".trending li a .trending-map img[src*='#{thumb_country_path country}']"
       }
 
       it ( 'map should show country name' ) {

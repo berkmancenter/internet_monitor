@@ -134,11 +134,21 @@ body.home {
       background: $light-blue;
       display: inline-block;
       height: 14em;
+      position: relative;
       width: 14em;
 
+      img {
+        height: 100%;
+        position: absolute;
+        top: 0;
+        width: 100%;
+      }
+
       .country-label {
-        margin-top: 40%;
+        position: absolute;
         text-align: center;
+        top: 40%;
+        width: 100%;
 
         span {
           background: $white;
