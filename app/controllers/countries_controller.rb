@@ -16,15 +16,18 @@ class CountriesController < ApplicationController
   end
 
   def update
-    id = params[:id]
-    @country = Country.find(id)
+    if params[ :country ][ :thumb ].present?
+      id = params[:id]
+      @country = Country.find(id)
 
-    puts '***'
-    puts params
-    puts params[ :thumb ]
-    puts '***'
+      File.open( Rails.root.join( 'app', 'assets', 'images', 'countries', "#{@country.iso3_code}.png" ), 'wb') do |f|
+        f.write(params[:country][:thumb].read)
+      end
 
-    render text: 'ok'
+      render text: 'ok'
+    else
+      render text: 'error'
+    end
   end
 
   def show
@@ -41,6 +44,11 @@ class CountriesController < ApplicationController
         format.any(:xml, :json)
       end
     end
+  end
+
+  def thumb
+    @country = Country.find(params[:id])
+    send_data File.open( Rails.root.join( 'app', 'assets', 'images', 'countries', "#{@country.iso3_code}.png" ), 'rb' ).read, type: 'image/png', disposition: 'inline'
   end
 
   def map

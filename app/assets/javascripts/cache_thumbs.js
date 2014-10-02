@@ -131,15 +131,22 @@ $( function () {
 
     function storeImage() {
       var dataUrl = $( '#map-countries-service img' ).prop( 'src' );
+
       $( '#thumb' ).prop( 'src', dataUrl );
       $( '#imgSrc' ).text( dataUrl );
+
+      var file = dataURLtoBlob( dataUrl );
+
+      var fd = new FormData();
+
+      fd.append( 'country[thumb]', file );
 
       $.ajax( {
         url: '/countries/' + country.id,
         type: 'PUT',
-        data: {
-          "country[thumb]": dataUrl
-        }
+        data: fd,
+        processData: false,
+        contentType: false
       } );
 
       cacheIdx++;
@@ -149,6 +156,22 @@ $( function () {
         cacheThumb();
       }
     }
+
+    // Convert dataURL to Blob object
+    function dataURLtoBlob(dataURL) {
+      // Decode the dataURL
+      var binary = atob(dataURL.split(',')[1]);
+
+      // Create 8-bit unsigned array
+      var array = [];
+      for(var i = 0; i < binary.length; i++) {
+        array.push(binary.charCodeAt(i));
+      }
+
+      // Return our Blob object
+      return new Blob([new Uint8Array(array)], {type: 'image/png'});
+    }
+
   }
 
 } );
