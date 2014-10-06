@@ -20,9 +20,8 @@ describe ( 'pages requests' ) {
         should have_css '.trending li a .trending-map'
       }
 
-      it ( 'map should be static' ) {
-        mode = page.evaluate_script( %q[$('.trending li a .trending-map').geomap('option', 'mode')] )
-        mode.should eq( 'static' )
+      it ( 'map should be a simple static img' ) {
+        should have_css '.trending-map img[src*="irn"]'
       }
     }
   end

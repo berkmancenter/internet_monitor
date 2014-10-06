@@ -13,8 +13,8 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ba-bbq
-//= require jquery.nouislider
 //= require jquery.magnific-popup
+//= require d3.v3.min
 //= require_tree .
 
 (function() {
