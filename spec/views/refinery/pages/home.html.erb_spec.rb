@@ -99,17 +99,17 @@ describe ( 'refinery/pages/home' ) {
       }
 
       it ( 'should map of country' ) {
-        should have_css '.trending li a .trending-map'
-        should_not have_css '.trending li a .trending-map[data-country-iso3="IRN"]'
+        should have_css '.trending li a .static-map'
+        should_not have_css '.trending li a .static-map[data-country-iso3="IRN"]'
       }
 
       it ( 'should have png thumb of country' ) {
-        should have_css '.trending li a .trending-map img'
-        should have_css ".trending li a .trending-map img[src*='#{thumb_country_path country}']"
+        should have_css '.trending li a .static-map img'
+        should have_css ".trending li a .static-map img[src*='#{thumb_country_path country}']"
       }
 
       it ( 'map should show country name' ) {
-        should have_css '.trending li a .trending-map span', text: country.name
+        should have_css '.trending li a .static-map span', text: country.name
       }
     }
   }

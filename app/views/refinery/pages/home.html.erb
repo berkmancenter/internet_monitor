@@ -14,7 +14,7 @@
     <ul>
     <% Nokogiri::HTML( part_content( 'trending', :body ) ).xpath( '//li' ).each_with_index do |li, i| %>
       <% country = Country.find_by_iso3_code( li.text.upcase ) %>
-      <li><%= link_to( raw( render( partial: 'countries/trending_map', locals: { country: country } ) ), Imon::Application.routes.url_helpers.category_country_path( country, category_slug: 'access' ), :data => { :'country-id' => country.id } ) unless country.nil? %></li>
+      <li><%= link_to( raw( render( partial: 'countries/static_map', object: country ) ), Imon::Application.routes.url_helpers.category_country_path( country, category_slug: 'access' ), :data => { :'country-id' => country.id } ) unless country.nil? %></li>
     <% end %>
     </ul>
   </div>

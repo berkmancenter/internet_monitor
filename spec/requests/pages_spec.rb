@@ -17,11 +17,11 @@ describe ( 'pages requests' ) {
 
     describe ( 'trending' ) {
       it ( 'should have a map' ) {
-        should have_css '.trending li a .trending-map'
+        should have_css '.trending li a .static-map'
       }
 
       it ( 'map should be a simple static img' ) {
-        should have_css '.trending-map img[src*="irn"]'
+        should have_css '.static-map img[src*="irn"]'
       }
     }
   end
