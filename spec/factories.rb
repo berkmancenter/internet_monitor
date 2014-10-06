@@ -326,6 +326,9 @@ FactoryGirl.define do
     #   ds_social
     #   ds_consistency
     #   ds_herdict
+    # activity
+    #   ds_morningside (via persian)
+    #   ds_aktv
     # (no category)
     #   ds_population
     #   ds_gdp
@@ -345,6 +348,8 @@ FactoryGirl.define do
     #   ds_ippoc
     #   ds_social
     #   ds_consistency
+    # activity
+    #   ds_aktv
     # (no category)
     #   ds_population
     #   
