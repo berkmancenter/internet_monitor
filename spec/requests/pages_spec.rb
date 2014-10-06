@@ -24,6 +24,10 @@ describe ( 'pages requests' ) {
         should have_css '.static-map img[src*="irn"]'
       }
     }
+
+    it ( 'should not include jQuery Geo on every page' ) {
+      should_not have_css 'script[src*="jquery.geo"]', visible: false
+    }
   end
 
   describe ( 'get /about' ) {
