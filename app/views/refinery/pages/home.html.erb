@@ -1,5 +1,10 @@
 <% provide :title, 'Home' %>
 
+<% content_for :javascripts do %>
+  <%= javascript_include_tag( 'jquery.film_roll.min.js' ) %>
+  <%= javascript_include_tag( 'home.js' ) %>
+<% end %>
+
 <%#= render '/refinery/content_page' %>
 
 <div class="carousel">

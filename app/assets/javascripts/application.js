@@ -13,9 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.ba-bbq.min
-//= require jquery.magnific-popup.min
-//= require d3.v3.min
-//= require_tree .
+//= require_tree ./sitewide
 
 (function() {
   function hideAllBut( s ) {

@@ -6,7 +6,6 @@
  * based on a set of indicators & weights.
  *
  * Current dependencies:
- * jquery.magnific-popup
  * jquery.ba-bbq
  *
  * Implementation notes:
@@ -90,7 +89,6 @@
               }
             } );
 
-            $.magnificPopup.close( );
             if ( window.location.hash ) {
               $( window ).trigger( "hashchange" );
             }
@@ -98,11 +96,6 @@
           error: function( xhr ) {
           }
         } );
-
-        timeoutPopup = setTimeout( function( ) {
-          timeoutPopup = null;
-          mfp = $.magnificPopup.open( { items: { src: _options.loaderCss, modal: true }, showCloseBtn: false } );
-        }, 1000 );
       }
 
       $( window ).on( 'hashchange', _hashchange ); 

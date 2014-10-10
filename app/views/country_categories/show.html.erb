@@ -1,5 +1,11 @@
 <% provide :title, "#{@country.name} #{@category.name}" %>
 
+<% content_for :javascripts do %>
+  <%= javascript_include_tag( 'd3.v3.min.js' ) %>
+  <%= javascript_include_tag( 'widgets/morningside.js' ) %>
+<% end if @category.slug == 'activity' %>
+
+
 <article class="view country-data-view">
   <h1 class="<%= "#{@category.slug}-1-bg" %> head-banner">
     <span class="category-name"><%= @category.name %></span> in <%= @country.name %>
