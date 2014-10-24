@@ -20,29 +20,29 @@ describe ( 'countries.json requests' ) {
       }
 
       describe ( 'country hash' ) {
-        let ( :country ) { countries[ 0 ][ 'country' ] }
+        let ( :country ) { countries[ 0 ][ 'c' ] }
 
         it {
           country[ 'id' ].should_not eq( nil )
-          country[ 'name' ].should_not eq( nil )
-          country[ 'score' ].should_not eq( nil )
+          country[ 'n' ].should_not eq( nil ) # name
+          country[ 's' ].should_not eq( nil ) # score
         }
 
         it {
-          country[ 'indicators' ].should_not eq( nil )
-          country[ 'indicators' ].class.should eq( Array )
+          country[ 'is' ].should_not eq( nil ) # indicators
+          country[ 'is' ].class.should eq( Array )
         }
 
         describe ( 'indicator hash' ) {
-          let ( :indicator ) { country[ 'indicators' ][ 0 ] }
+          let ( :indicator ) { country[ 'is' ][ 0 ] }
 
           it {
-            indicator[ 'value' ].should_not eq( nil )
-            indicator[ 'normalized_value' ].should_not eq( nil )
-            indicator[ 'source_id' ].should_not eq( nil )
-            indicator[ 'default_weight' ].should_not eq( nil )
-            indicator[ 'category' ].should eq( 'Access' )
-            indicator[ 'group' ].should_not eq( nil )
+            indicator[ 'v' ].should_not eq( nil ) # value
+            indicator[ 'nv' ].should_not eq( nil ) # normalized_value
+            indicator[ 'sid' ].should_not eq( nil ) # source_id
+            indicator[ 'dw' ].should_not eq( nil ) # default_weight
+            indicator[ 'c' ].should eq( 'Access' ) # category
+            indicator[ 'g' ].should_not eq( nil ) # group
           }
         }
       }
