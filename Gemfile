@@ -34,7 +34,7 @@ gem 'rubyzip', '< 1.0.0'
 gem 'roo'
 gem 'httparty'
 gem 'nokogiri'
-gem "rabl", "~> 0.8.6"
+gem "rabl", "~> 0.9.3"
 gem 'oj'
 gem 'amatch'
 gem 'friendly_id', '~> 4.0.1'

@@ -80,12 +80,12 @@
               timeoutPopup = null;
             }
 
-            _countryData = result;
+            _countryData = result.cs;
 
             // build an indexed list of countries
             $.each( _countryData, function( ) {
-              if ( this.country && $.isNumeric( this.country.id ) ) {
-                _countries[ this.country.id ] = this.country;
+              if ( this.c && $.isNumeric( this.c.id ) ) {
+                _countries[ this.c.id ] = this.c;
               }
             } );
 
@@ -155,11 +155,11 @@
     weightedScore: function( indicators ) {
       // JavaScript version of ruby's Indicator.weighted_score
       var sum = indicators.reduce( function( sum, indi, i ) {
-        var indicator = _indicators[ indi.group ];
-        var groupWeight = $.bbq.getState( indi.group, true ) || 1.0;
+        var indicator = _indicators[ indi.g ];
+        var groupWeight = $.bbq.getState( indi.g, true ) || 1.0;
 
-        var direction = indi.default_weight;
-        var output = sum + indi.normalized_value * Math.abs(indi.default_weight) * direction * groupWeight;
+        var direction = indi.dw;
+        var output = sum + indi.nv * Math.abs(indi.dw) * direction * groupWeight;
         if ( direction < 0 ) {
           output += 1;
         }
@@ -186,8 +186,8 @@
     },
 
     calculateScore: function( country ) {
-      var indicators = country.indicators;
-      var grouped = this.groupBy( indicators, 'group' );
+      var indicators = country.data;
+      var grouped = this.groupBy( indicators, 'g' );
 
       var ws = 0, sk = this;
 
@@ -210,14 +210,14 @@
         var country = _countries[ countryId ];
 
         if ( country ) {
-          country.score = $.scoreKeeper.calculateScore( country );
-          scorePill.find( '.user-score' ).html( country.score.toFixed( 2 ) ).addClass( 'updated' );
+          country.s = $.scoreKeeper.calculateScore( country );
+          scorePill.find( '.user-score' ).html( country.s.toFixed( 2 ) ).addClass( 'updated' );
         }
       }
     } );
 
     var countriesSorted = _countries.slice().sort( function( a, b ) {
-      return a.score < b.score ? 1 : -1;
+      return a.s < b.s ? 1 : -1;
     } );
 
     $.each( countriesSorted, function( i ) {
