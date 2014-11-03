@@ -7,7 +7,7 @@ child :indicators_affecting_score, :object_root => false do
         attributes :id => :sid
         attributes :default_weight => :dw
         glue :group do
-            attributes :admin_name => :g
+            attributes :id => :g
         end
     end
     attributes :original_value => :v, :value => :nv

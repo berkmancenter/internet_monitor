@@ -29,6 +29,8 @@
 
   var _indicators = []; //< by sourceId
 
+  var groups = [ 'none', 'adoption', 'speed', 'price', 'human' ];
+
   function _hashchange( e ) {
     $( '.score-pill' ).updateScore( );
   }
@@ -155,8 +157,9 @@
     weightedScore: function( indicators ) {
       // JavaScript version of ruby's Indicator.weighted_score
       var sum = indicators.reduce( function( sum, indi, i ) {
-        var indicator = _indicators[ indi.g ];
-        var groupWeight = $.bbq.getState( indi.g, true ) || 1.0;
+        var adminName = groups[ indi.g ];
+        var indicator = _indicators[ adminName ];
+        var groupWeight = $.bbq.getState( adminName, true ) || 1.0;
 
         var direction = indi.dw;
         var output = sum + indi.nv * Math.abs(indi.dw) * direction * groupWeight;
