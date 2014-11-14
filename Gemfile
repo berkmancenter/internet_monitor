@@ -29,7 +29,7 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails', '~> 2.0.0'
+gem 'jquery-rails', '~> 2.3.0'
 gem 'rubyzip', '< 1.0.0'
 gem 'roo'
 gem 'httparty'
@@ -42,9 +42,9 @@ gem 'twitter'
 
 gem 'globalize3', '0.3.0'
 
-gem 'refinerycms', '~> 2.0.10'
-gem 'refinerycms-blog', '~> 2.0.5'
-gem 'refinerycms-wordpress-import', :git => 'git://github.com/ryanttb/refinerycms-wordpress-import.git'
+gem 'refinerycms', '2.1.5'
+gem 'refinerycms-blog', '2.1.0'
+#gem 'refinerycms-wordpress-import', :git => 'git://github.com/ryanttb/refinerycms-wordpress-import.git'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.2'
