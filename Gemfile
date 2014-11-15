@@ -9,13 +9,12 @@ gem 'rails', '3.2.13'
 gem 'pg'
 
 group :development, :test do
-  gem 'rspec-rails'
-
+  gem 'rspec-rails', '2.14.2'
   gem 'capybara', '2.3.0'
-  gem 'poltergeist'
-  gem 'factory_girl_rails'
+  gem 'poltergeist', '1.5.1'
 end
 
+gem 'factory_girl_rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
