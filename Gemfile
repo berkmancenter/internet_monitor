@@ -39,8 +39,6 @@ gem 'amatch'
 gem 'friendly_id', '~> 4.0.1'
 gem 'twitter'
 
-gem 'globalize3', '0.3.0'
-
 gem 'refinerycms', '2.1.5'
 gem 'refinerycms-blog', '2.1.0'
 #gem 'refinerycms-wordpress-import', :git => 'git://github.com/ryanttb/refinerycms-wordpress-import.git'
