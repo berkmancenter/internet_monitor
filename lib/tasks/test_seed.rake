@@ -396,9 +396,9 @@ namespace :db do
       ds_morningside_3_page_side_body.save
 
       # Blog
-      blog_post = FactoryGirl.create :blog_post
-      blog_post.user_id = u.id
-      blog_post.save
+      blog_post_attr = FactoryGirl.attributes_for :blog_post
+      blog_post_attr[ :user_id ] = u.id
+      Refinery::Blog::Post.create blog_post_attr
     end
   end
 end

@@ -848,7 +848,6 @@ FactoryGirl.define do
     body '<p>This is a blog post.</p>'
     draft false
     published_at '2014-03-23'
-    slug 'imweekly-march-23-2014'
   end
 end
 
