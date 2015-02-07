@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
-  before_filter :load_groups
+  before_filter :load_groups, :set_default_cache_header
   
   rescue_from ActionController::RoutingError, with: :render_not_found
 
@@ -14,6 +14,10 @@ class ApplicationController < ActionController::Base
   end
 
   protected
+
+  def set_default_cache_header
+    expires_in 1.day, public: true
+  end
 
   def render_not_found
     render json: '{ "status": "error", "message": "Not Found" }', status: 404
