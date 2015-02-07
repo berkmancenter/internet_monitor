@@ -1,0 +1,26 @@
+<% provide :title, 'Country Thumb Cacher' %>
+<style type="text/css">
+  #cacheThumbs {
+    display: inline-block;
+    height: 256px;
+    width: 256px;
+  }
+</style>
+
+<h1>Country Thumb Cacher</h1>
+
+<article class="view">
+  <div id="cacheThumbs" data-min-score="<%= @map_countries.order('score').first.score %>" data-max-score="<%= @map_countries.order('score desc').first.score %>" data-map-countries="<%= @map_countries.to_json %>">
+  </div>
+
+  <img id="thumb" src="" />
+
+  <div>
+    <progress max="<%= @map_countries.count - 1 %>" value="0"><span></span></progress>
+
+    <div id="imgSrc"></div>
+  </div>
+
+</article>
+
+<script src="/cache_thumbs.js"></script>

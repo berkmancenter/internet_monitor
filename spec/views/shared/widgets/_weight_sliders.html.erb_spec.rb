@@ -26,7 +26,11 @@ describe ( 'shared/widgets/_weight_sliders' ) {
     }
 
     it {
-      should have_css "input[id='range-#{adoption.admin_name}'][name='#{adoption.admin_name}']"
+      should have_css "input[id='range-#{adoption.admin_name}']"
+    }
+
+    it {
+      should have_css "input[name='#{adoption.admin_name}']"
     }
 
     it {

@@ -12,10 +12,8 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.ba-bbq
-//= require jquery.nouislider
-//= require jquery.magnific-popup
-//= require_tree .
+//= require_tree ./sitewide
+//= require jquery.ba-bbq.min
 
 (function() {
   function hideAllBut( s ) {

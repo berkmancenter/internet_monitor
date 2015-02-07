@@ -41,8 +41,8 @@ describe ( 'layouts/application' ) {
       should_not have_css '.data-nav-categories'
     }
 
-    it ( 'should have country data loading screen' ) {
-      should have_css '.score-keeper-loader', visible: false
+    it ( 'should no longer have country data loading screen (dev env, only)' ) {
+      should_not have_css '.score-keeper-loader', visible: false
     }
 
     it ( 'should have footer links' ) {

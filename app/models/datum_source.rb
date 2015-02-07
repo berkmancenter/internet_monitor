@@ -8,6 +8,10 @@ class DatumSource < ActiveRecord::Base
     has_one :ingester
     delegate :ingest_data!, :to => :ingester
 
+    scope :are_api, -> {
+      where( is_api: true )
+    }
+
     def self.recalc_ds!( id )
       ds = find id
       puts "Recalculating #{ ds.admin_name }"

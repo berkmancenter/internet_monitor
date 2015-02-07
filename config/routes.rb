@@ -6,7 +6,12 @@ Imon::Application.routes.draw do
 
   resources :countries do
       member do
+          get 'thumb'
           match ':category_slug' => 'countries#show', :as => :category
+      end
+
+      collection do
+          get 'cache_thumbs'
       end
   end
 

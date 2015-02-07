@@ -99,7 +99,10 @@ def import_country_bboxes( filename )
 end
 
 def replace_static_source( row_number, iso3_code )
-  line = CSV.read(Rails.root.join('db', 'sources.csv'), :headers => true)[row_number.to_i - 1]
+  sources = Roo::Excelx.new Rails.root.join('db', 'sources.xlsx').to_s
+
+  line = CSV.parse( sources.sheet( sources.default_sheet ).to_csv, { :headers => true } )[row_number.to_i - 1]
+
   if line.nil?
     puts "cannot find source line #{row_number}"
     return

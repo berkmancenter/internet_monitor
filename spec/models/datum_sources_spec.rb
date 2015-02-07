@@ -11,6 +11,14 @@ describe ( 'DatumSource model' ) {
     let ( :ds_population ) { DatumSource.find_by_admin_name( 'ds_population' ) }
     let ( :ds_gdp ) { DatumSource.find_by_admin_name( 'ds_gdp' ) }
 
+    describe ( 'api scope' ) {
+      let ( :are_api ) { DatumSource.are_api }
+
+      it {
+        are_api.count.should eq( 1 )
+      }
+    }
+
     describe ( 'attributes' ) {
       subject { ds_pct_inet }
 
@@ -34,6 +42,11 @@ describe ( 'DatumSource model' ) {
       it {
         should respond_to :in_category_page
         should respond_to :in_sidebar
+      }
+
+      it {
+        should respond_to :is_api
+        should respond_to :api_endpoint
       }
     }
 

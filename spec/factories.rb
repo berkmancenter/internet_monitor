@@ -229,7 +229,7 @@ FactoryGirl.define do
       #category nil
       default_weight 0
       retriever_class 'WorldBankParser'
-      is_api true
+      is_api false
       in_category_page true
       in_sidebar true
       affects_score false
@@ -246,7 +246,7 @@ FactoryGirl.define do
       #category nil
       default_weight 0.0
       retriever_class 'WorldBankParser'
-      is_api true
+      is_api false
       in_category_page true
       in_sidebar true
       affects_score false
@@ -263,7 +263,7 @@ FactoryGirl.define do
       #category activity
       default_weight 0
       retriever_class 'MorningsideFetcher'
-      is_api true
+      is_api false
       in_category_page false
       in_sidebar false
       requires_page true
@@ -280,13 +280,31 @@ FactoryGirl.define do
       #category control
       default_weight 0
       retriever_class 'HerdictFetcher'
-      is_api true
+      is_api false
       in_category_page true
       in_sidebar false
       requires_page false
       affects_score false
       source_name 'Herdict'
       source_link 'http://www.herdict.org'
+    end
+
+    factory :ds_aktv do
+      admin_name 'ds_aktv'
+      public_name 'Akamai Traffic View'
+      description nil
+      datum_type 'JsonObject'
+      #category activity
+      default_weight 0
+      retriever_class nil
+      is_api true
+      api_endpoint 'http://wwwnui.akamai.com/gnet/gnet_public.xml'
+      in_category_page true
+      in_sidebar false
+      requires_page false
+      affects_score false
+      source_name 'Akamai'
+      source_link 'http://www.akamai.com'
     end
   end
 
@@ -308,6 +326,9 @@ FactoryGirl.define do
     #   ds_social
     #   ds_consistency
     #   ds_herdict
+    # activity
+    #   ds_morningside (via persian)
+    #   ds_aktv
     # (no category)
     #   ds_population
     #   ds_gdp
@@ -327,6 +348,8 @@ FactoryGirl.define do
     #   ds_ippoc
     #   ds_social
     #   ds_consistency
+    # activity
+    #   ds_aktv
     # (no category)
     #   ds_population
     #   
@@ -825,7 +848,6 @@ FactoryGirl.define do
     body '<p>This is a blog post.</p>'
     draft false
     published_at '2014-03-23'
-    slug 'imweekly-march-23-2014'
   end
 end
 

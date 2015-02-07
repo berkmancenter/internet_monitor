@@ -17,13 +17,16 @@ describe ( 'pages requests' ) {
 
     describe ( 'trending' ) {
       it ( 'should have a map' ) {
-        should have_css '.trending li a .trending-map'
+        should have_css '.trending li a .static-map'
       }
 
-      it ( 'map should be static' ) {
-        mode = page.evaluate_script( %q[$('.trending li a .trending-map').geomap('option', 'mode')] )
-        mode.should eq( 'static' )
+      it ( 'map should be a simple static img' ) {
+        should have_css '.static-map img[src*="irn"]'
       }
+    }
+
+    it ( 'should not include jQuery Geo on every page' ) {
+      should_not have_css 'script[src*="jquery.geo"]', visible: false
     }
   end
 

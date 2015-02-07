@@ -1,5 +1,11 @@
 <% provide :title, "#{@country.name} #{@category.name}" %>
 
+<% content_for :javascripts do %>
+  <%= javascript_include_tag( 'd3.v3.min.js' ) %>
+  <%= javascript_include_tag( 'widgets/morningside.js' ) %>
+<% end if @category.slug == 'activity' %>
+
+
 <article class="view country-data-view">
   <h1 class="<%= "#{@category.slug}-1-bg" %> head-banner">
     <span class="category-name"><%= @category.name %></span> in <%= @country.name %>
@@ -45,6 +51,12 @@
           <% end %>
         <% end %>
       <% end %>
+
+      <%# api-indicators for this category %>
+      <% @category.datum_sources.are_api.each { |datum_source| %>
+          <% showing_data = true %>
+          <%= render partial: 'datum_sources/api_block', object: datum_source %>
+      <% } %>
 
       <% if !showing_data %>
         <div class="block no-data" %><%= t 'country_categories.show.no_data', category: @category.slug, country: @country.name %></div>

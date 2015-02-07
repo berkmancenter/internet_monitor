@@ -9,15 +9,12 @@ gem 'rails', '3.2.13'
 gem 'pg'
 
 group :development, :test do
-  gem 'rspec-rails'
+  gem 'rspec-rails', '2.14.2'
+  gem 'capybara', '2.3.0'
+  gem 'poltergeist', '1.5.1'
 end
 
-group :test do
-  gem 'capybara'
-  gem 'poltergeist'
-  gem 'factory_girl_rails'
-end
-
+gem 'factory_girl_rails'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -31,22 +28,20 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
-gem 'jquery-rails', '~> 2.0.0'
+gem 'jquery-rails', '~> 2.3.0'
 gem 'rubyzip', '< 1.0.0'
 gem 'roo'
 gem 'httparty'
 gem 'nokogiri'
-gem "rabl", "~> 0.8.6"
+gem "rabl", "~> 0.9.3"
 gem 'oj'
 gem 'amatch'
 gem 'friendly_id', '~> 4.0.1'
 gem 'twitter'
 
-gem 'globalize3', '0.3.0'
-
-gem 'refinerycms', '~> 2.0.10'
-gem 'refinerycms-blog', '~> 2.0.5'
-gem 'refinerycms-wordpress-import', :git => 'git://github.com/ryanttb/refinerycms-wordpress-import.git'
+gem 'refinerycms', '2.1.5'
+gem 'refinerycms-blog', '2.1.0'
+#gem 'refinerycms-wordpress-import', :git => 'git://github.com/ryanttb/refinerycms-wordpress-import.git'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '3.1.2'
@@ -54,14 +49,5 @@ gem 'bcrypt-ruby', '3.1.2'
 # tweet parsing
 gem 'twitter-text'
 
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
+# exception notifications via email
+gem 'exception_notification'

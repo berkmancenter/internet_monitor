@@ -212,6 +212,10 @@ namespace :db do
       ds_morningside.category = categories[ 2 ]
       ds_morningside.save!
 
+      ds_aktv = FactoryGirl.create :ds_aktv
+      ds_aktv.category = categories[ 2 ]
+      ds_aktv.save!
+
       # access datum
       d_morningside = FactoryGirl.create :d_morningside
       d_morningside.source = ds_morningside
@@ -392,9 +396,9 @@ namespace :db do
       ds_morningside_3_page_side_body.save
 
       # Blog
-      blog_post = FactoryGirl.create :blog_post
-      blog_post.user_id = u.id
-      blog_post.save
+      blog_post_attr = FactoryGirl.attributes_for :blog_post
+      blog_post_attr[ :user_id ] = u.id
+      Refinery::Blog::Post.create blog_post_attr
     end
   end
 end

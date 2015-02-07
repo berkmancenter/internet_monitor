@@ -1,12 +1,13 @@
 <div class="sidebar block">
-<%= render partial: "countries/map", locals: { country: @country } %>
 
-<dl>
-  <% sorted = @country.data.in_sidebar.most_recent.sort_by { |i| i.source.id } %>
-  <% sorted.each do |datum| %>
-    <dt><%= datum.name %></dt>
-    <dd><%= format_sidebar_value( datum ) %></dd>
-  <% end %>
-</dl>
+  <%= render partial: 'countries/static_map', object: @country %>
+
+  <dl>
+    <% sorted = @country.data.in_sidebar.most_recent.sort_by { |i| i.source.id } %>
+    <% sorted.each do |datum| %>
+      <dt><%= datum.name %></dt>
+      <dd><%= format_sidebar_value( datum ) %></dd>
+    <% end %>
+  </dl>
 
 </div>

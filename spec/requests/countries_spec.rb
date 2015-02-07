@@ -225,19 +225,13 @@ describe 'countries requests', :js => true do
         should_not have_selector '.country .indicators,.country .url-lists,.country .html-blocks,.country .images'
       }
 
-      it ( 'should have a map' ) {
-        should have_css '.sidebar .geomap'
+      it ( 'map should no longer be geomap' ) {
+        should_not have_css '.sidebar .geomap'
       }
 
-      it ( 'map should be static' ) {
-        mode = page.evaluate_script( %q[$('.sidebar .geomap').geomap('option', 'mode')] )
-        mode.should eq( 'static' )
-      }
-
-      it ( 'should color all known countries' ) {
+      it ( 'should no-longer color all known countries' ) {
         # this is a side-effect of #7241 & may need to be undone
-        map_countries_count = page.evaluate_script( %q[$('.sidebar .geomap').data('mapCountries').length] )
-        map_countries_count.should eq( 2 )
+        should_not have_css '.sidebar .geomap'
       }
     }
   }

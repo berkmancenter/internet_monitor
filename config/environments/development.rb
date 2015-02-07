@@ -46,3 +46,11 @@ Imon::Application.configure do
   config.action_mailer.delivery_method = :sendmail
   config.action_mailer.perform_deliveries = true
 end
+
+if !( Rails.const_defined?( 'Server' ) || Rails.const_defined?( 'Console' ) )
+  Imon::Application.config.middleware.use ExceptionNotification::Rack, :email => {
+    :email_prefix => "[IM] ",
+    :sender_address => %{"Internet Monitor" <info@thenetmonitor.org>},
+    :exception_recipients => %w{rwestphal@cyber.law.harvard.edu}
+  }
+end

@@ -8,7 +8,6 @@ describe ( 'countries/show' ) {
     let ( :update ) { Refinery::Page.by_slug( country.iso3_code.downcase ).first.content_for( :body ) }
 
     before {
-      assign( :map_countries, Country.with_enough_data.where( { id: country.id } ).select( 'iso3_code,score' ) )
       assign( :country, country )
       render
     }
@@ -61,11 +60,24 @@ describe ( 'countries/show' ) {
         should have_css '.update', text: strip_tags( update )
       }
 
-      it ( 'should have a map' ) { should have_css '.sidebar .map' }
-      it { should have_css '.sidebar .geomap' }
-      it { should have_css '.sidebar .geomap[data-max-score]' }
-      it { should have_css '.sidebar .geomap[data-country-iso3="IRN"]' }
-      it { should have_css '.sidebar .geomap[data-bbox]' }
+      describe ( 'map' ) {
+        it ( 'should no longer have an interactive map' ) {
+          should_not have_css '.sidebar .geomap'
+        }
+
+        it ( 'should map of country' ) {
+          should have_css '.sidebar .static-map'
+        }
+
+        it ( 'should have png thumb of country' ) {
+          should have_css '.sidebar .static-map img'
+          should have_css ".sidebar .static-map img[src*='#{thumb_country_path country}']"
+        }
+
+        it ( 'map should show country name' ) {
+          should have_css '.sidebar .static-map span', text: country.name
+        }
+      }
 
       it ( 'no more country dropdown in sidebar' ) {
         should_not have_css '.sub-content .country-data'

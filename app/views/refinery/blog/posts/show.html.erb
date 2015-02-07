@@ -1,6 +1,8 @@
 <% content_for :body do %>
   <div id="show_blog_post">
-    <%= render 'post' %>
+    <% cache( @post ) do %>
+      <%= render 'post' %>
+    <% end %>
   </div>
 
   <% if Refinery::Blog::Post.comments_allowed? %>

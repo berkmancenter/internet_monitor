@@ -146,9 +146,9 @@
   .sidebar {
     padding: 1em .5em;
 
-    .geomap {
-      height: 16em;
-      position: relative;
+    .static-map img {
+      display: block;
+      margin: 0 auto;
     }
 
     dl {

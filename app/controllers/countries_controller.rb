@@ -11,6 +11,25 @@ class CountriesController < ApplicationController
     end
   end
 
+  def cache_thumbs
+    render
+  end
+
+  def update
+    if params[ :country ][ :thumb ].present?
+      id = params[:id]
+      @country = Country.find(id)
+
+      File.open( Rails.root.join( 'app', 'assets', 'images', 'countries', "#{@country.iso3_code}.png" ), 'wb') do |f|
+        f.write(params[:country][:thumb].read)
+      end
+
+      render text: 'ok'
+    else
+      render text: 'error'
+    end
+  end
+
   def show
     @country = Country.find(params[:id])
 
@@ -27,8 +46,15 @@ class CountriesController < ApplicationController
     end
   end
 
+  def thumb
+    @country = Country.find(params[:id])
+    send_data File.open( Rails.root.join( 'app', 'assets', 'images', 'countries', "#{@country.iso3_code}.png" ), 'rb' ).read, type: 'image/png', disposition: 'inline'
+  end
+
   def map
     @scored_countries = Country.order( 'score desc' ).with_enough_data
     @unscored_countries = Country.without_enough_data
+
+    @map_countries = Country.with_enough_data.select( 'id,iso3_code,score,bbox' )
   end
 end

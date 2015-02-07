@@ -8,9 +8,7 @@
   <link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,400,700' rel='stylesheet' type='text/css'>
   <link href='//fonts.googleapis.com/css?family=Roboto+Condensed:400,700' rel='stylesheet' type='text/css'>
   
-
   <%= stylesheet_link_tag    "application", :media => "all" %>
-  <%= stylesheet_link_tag    "magnific-popup", :media => "all" %>
 
   <%= csrf_meta_tags %>
 </head>
@@ -48,10 +46,6 @@
   <section class="main-content">
     <%= render partial: 'countries/nav_list' %>
     <%= yield %>
-
-    <div class="score-keeper-loader mfp-hide">
-      <%= image_tag 'ajax-loader.gif', alt: '' %> <span>Welcome to Internet Monitor! Please wait while our database loads.</span>
-    </div>
   </section>
 
   <footer>
@@ -76,8 +70,8 @@
 %>
 
   <%= javascript_include_tag "application" %>
-  <%= javascript_include_tag( 'jquery.film_roll.min.js' ) %>
-  <%= javascript_include_tag( 'jquery.geo-1.0.0-b2.min.js' ) %>
+
+  <%= yield :javascripts if content_for?( :javascripts ) %>
 
   <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

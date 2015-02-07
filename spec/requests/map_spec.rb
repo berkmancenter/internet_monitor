@@ -23,5 +23,9 @@ describe ( 'map requests' ) {
       should have_css '#map-countries-service.geo-service'
       should have_css '#map-highlight-service.geo-service'
     }
+
+    it ( 'should include jQuery Geo' ) {
+      should have_css 'script[src*="jquery.geo"]', visible: false
+    }
   end
 }

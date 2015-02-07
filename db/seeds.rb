@@ -6,6 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'csv'
+require 'roo'
 
 # Create categories
 categories = ['Access', 'Control', 'Activity'].map{|n| Category.find_or_create_by_name(n)}
@@ -42,7 +43,9 @@ end
 import_country_bboxes 'db/data_files/country_bbox.json'
 
 # Import all the data
-CSV.open(Rails.root.join('db', 'sources.csv'), :headers => true).each_with_index do |row, i|
+sources = Roo::Excelx.new Rails.root.join('db', 'sources.xlsx').to_s
+
+CSV.parse( sources.sheet( sources.default_sheet ).to_csv, { :headers => true } ).each_with_index do |row, i|
     next unless row['Include in Internet Monitor?'] == 'y'
     Retriever.retrieve!(i + 1)
 end
