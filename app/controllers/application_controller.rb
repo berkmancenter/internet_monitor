@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def set_default_cache_header
-    expires_in 1.day, public: true
+    expires_in 1.day, public: true if request.get?
   end
 
   def render_not_found
