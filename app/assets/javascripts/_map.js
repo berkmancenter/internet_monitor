@@ -4,6 +4,7 @@ $( function( ) {
     var popup = null;
     var popupTmpl = $.templates( '#popup-tmpl' );
     var defaultMapMode = $( 'body.map' ).length > 0 ? 'pan' : 'static';
+    var mode = 'pan';
 
 
     var map = $( '.geomap' ).geomap( {
@@ -36,7 +37,9 @@ $( function( ) {
       move: function( e, geo ) {
         var countries = map.geomap( 'find', geo, 1 );
         if ( countries.length > 0 ) {
-          map.geomap( 'option', 'mode', 'click' );
+          if ( mode !== 'click' ) {
+            map.geomap( 'option', 'mode', 'click' );
+          }
 
           if ( countries[ 0 ] !== hover ) {
             if ( hover ) {
@@ -48,7 +51,9 @@ $( function( ) {
           }
 
         } else {
-          map.geomap( 'option', 'mode', 'pan' );
+          if ( mode !== 'pan' ) {
+            map.geomap( 'option', 'mode', 'pan' );
+          }
 
           if ( hover ) {
             mapHighlightService.geomap( 'remove', hover );
