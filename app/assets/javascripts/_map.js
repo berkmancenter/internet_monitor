@@ -35,8 +35,13 @@ $( function( ) {
         width: 0
       },
       move: function( e, geo ) {
-        var countries = map.geomap( 'find', geo, 1 );
+        var countries = mapCountriesService.geomap( 'find', geo, 1 );
         if ( countries.length > 0 ) {
+          console.log( 'move' );
+          for ( var c = 0; c < countries.length; c++ ) {
+            console.log( countries[ c ].properties.iso_a3 );
+          }
+
           if ( mode !== 'click' ) {
             map.geomap( 'option', 'mode', 'click' );
           }
@@ -67,7 +72,7 @@ $( function( ) {
           popup = null;
         }
 
-        var countries = map.geomap( 'find', geo, 1 );
+        var countries = mapCountriesService.geomap( 'find', geo, 1 );
         if ( countries.length > 0 ) {
           if ( countries[ 0 ].properties.country_iso ) {
             popup = geo;
