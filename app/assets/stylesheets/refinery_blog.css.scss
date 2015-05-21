@@ -22,6 +22,20 @@
       display: none;
     }
 
+    .caption {
+      max-width: 100%;
+    }
+
+    .alignright, [data-align="alignright"] {
+      display: inline;
+      float: right;
+      margin-left: 1.625em;
+    }
+
+    img {
+      max-width: 100%;
+    }
+
     #comments {
       .avatar {
         float: left;
@@ -50,3 +64,4 @@
     }
   }
 }
+
