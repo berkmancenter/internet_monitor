@@ -32,6 +32,10 @@
       margin-left: 1.625em;
     }
 
+    .aligncenter, [data-align="aligncenter"] {
+      margin: 0 auto;
+    }
+
     img {
       max-width: 100%;
     }
