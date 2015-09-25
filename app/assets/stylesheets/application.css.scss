@@ -118,7 +118,7 @@ header {
       border-radius: .25em 0 0 .25em;
     }
 
-    .map-link, .toggle-weight-sliders {
+    .map-link, .dashboard-link, .toggle-weight-sliders {
       width: 42px;
     }
 
@@ -127,6 +127,14 @@ header {
 
       &:hover {
         background: $light-blue url('world-icon.png') no-repeat -42px 0;
+      }
+    }
+
+    .dashboard-link {
+      background: $violet url('world-icon.png') no-repeat 0 -34px;
+
+      &:hover {
+        background: $light-blue url('world-icon.png') no-repeat -42px -34px;
       }
     }
 
