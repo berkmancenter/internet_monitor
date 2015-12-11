@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
+ruby '2.1.6'
 
 gem 'rails', '3.2.13'
 
@@ -44,7 +44,7 @@ gem 'refinerycms-blog', '2.1.0'
 #gem 'refinerycms-wordpress-import', :git => 'git://github.com/ryanttb/refinerycms-wordpress-import.git'
 
 # To use ActiveModel has_secure_password
-gem 'bcrypt-ruby', '3.1.2'
+gem 'bcrypt'
 
 # tweet parsing
 gem 'twitter-text'
