@@ -57,7 +57,7 @@ The result is the country data and related indicator data.
       ]
     }
     
-Each indicator contains the original value recorded for a country in a specific source of data (datum_source), e.g., Net Index average download speeds. The indicator also contains a weighted, calculated value which compairs the given country with orthers and takes into account factors such as populations & GDPs. For more information on how our index values are calculated, see: [A Hackable Access Index](https://thenetmonitor.org/faq/a-hackable-access-index).
+Each indicator contains the original value recorded for a country in a specific source of data (datum_source), e.g., Net Index average download speeds. The indicator also contains a weighted, calculated value which compares the given country with others and takes into account factors such as populations & GDPs. For more information on how our index values are calculated, see: [A Hackable Access Index](https://thenetmonitor.org/faq/a-hackable-access-index).
 
 A country's score is a value between zero and ten. It the average of the groups of weighted scores of all the country's indicators in the **Access** category. It can be used to rank countries. The next section further describes which indicators are used to calculate the score.
 
@@ -67,9 +67,9 @@ The Internet Monitor aggregates data from various external sources (**datum_sour
 
 Indicators in the Access category measure four **groups**: Internet adoption, speed & quality, price, and literacy & gender equality. Only indicators in the Access category are used to score countries. This is why the scores and ranking are often referred to as the **Access Index**.
 
-Indicators in the Control category measure three **groups**: Internet control, filtering, and filtering style. How and what a country's government filters is useful to research censorship but not quantitave or verifiable enough to include in the index scores.
+Indicators in the Control category measure three **groups**: Internet control, filtering, and filtering style. How and what a country's government filters is useful to research censorship but not quantitative or verifiable enough to include in the index scores.
 
-Indicators in the Activity category are not currently grouped. They are data the social activity, topics, and interaction of the people in a country or communication in a specific language. These do not affect the Access index but can be used for further reasearch in the social, political, and community aspects of Internet users.
+Indicators in the Activity category are not currently grouped. They are data the social activity, topics, and interaction of the people in a country or communication in a specific language. These do not affect the Access index but can be used for further research in the social, political, and community aspects of Internet users.
 
 For the full list an explanation of the sources, see: [Internet Monitor Access Index](https://thenetmonitor.org/sources/platform-data).
 
