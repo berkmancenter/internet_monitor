@@ -28,7 +28,7 @@ The result is the country data and related indicator data.
           },
           "links": {
             "self": "https://thenetmonitor.org/countries/96"
-          }
+          },
           "relationships": {
             "indicators": {
               "data": [
@@ -77,4 +77,51 @@ You can access the current list of datum_sources by using the /datum_sources end
 
     GET https://thenetmonitor.org/datum_sources HTTP/1.1
     Accept: application/vnd.api+json
+
+The result is an array of datum_sources currently in the index as well as related category and group information.
+
+    {
+      "data": [
+        {
+          "type": "datum_sources",
+          "id": "7",
+          "attributes": {
+            "name": "Wired Internet subscription rate",
+            "description": null,
+            "min": 0.0065407023,
+            "max": 42.6118409977,
+            "default_weight": 1
+          },
+          "relationships": {
+            "category": {
+              "data": { "type": "categories", "id": "1" }
+            },
+            "group": {
+              "data": { "type": "groups", "id": "1" }
+            }
+          }
+        }
+      ],
+      "included": [
+        {
+          "type": "categories",
+          "id": "1",
+          "attributes": {
+            "name": "Access",
+            "slug": "access"
+          }
+        },
+        {
+          "type": "groups",
+          "id": "1",
+          "attributes": {
+            "admin_name": "adoption",
+            "public_name": "Adoption",
+            "default_weight": 1
+          }
+        }
+      ]
+    }
+
+
 
