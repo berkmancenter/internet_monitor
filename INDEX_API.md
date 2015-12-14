@@ -86,11 +86,17 @@ The result is an array of datum_sources currently in the index as well as relate
           "type": "datum_sources",
           "id": "7",
           "attributes": {
-            "name": "Wired Internet subscription rate",
+            "admin_name": "wisr",
+            "public_name": "Wired Internet subscription rate",
             "description": null,
             "min": 0.0065407023,
             "max": 42.6118409977,
-            "default_weight": 1
+            "default_weight": 1,
+            "affects_score": true,
+            "source_name": "ITU",
+            "display_prefix": null,
+            "display_suffix": "%",
+            "precision": 0
           },
           "relationships": {
             "category": {
