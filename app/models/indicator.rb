@@ -42,4 +42,24 @@ class Indicator < Datum
       end
     end
   end
+
+  def as_jsonapi
+    {
+      type: 'indicators',
+      id: id.to_s,
+      attributes: {
+        original_value: original_value,
+        value: value
+      },
+      relationships: {
+        datum_source: {
+          data: {
+            type: 'datum_sources',
+            id: source.id.to_s
+          }
+        }
+      }
+    }
+        
+  end
 end

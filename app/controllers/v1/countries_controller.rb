@@ -1,60 +1,30 @@
 class V1::CountriesController < ApplicationController
   def index
-    @scored_countries = Country.with_enough_data.desc_score
+    @countries = Country.with_enough_data.desc_score
 
+    indicators = []
+    @countries.each { |c|
+      indicators |= c.indicators
+    }
     render json: {
-      data: @scored_countries.limit(1).map { |sc|
-        {
-          type: 'countries',
-          id: sc.id.to_s,
-          attributes: {
-            name: sc.name,
-            iso_code: sc.iso_code,
-            iso3_code: sc.iso3_code,
-            score: sc.score
-          },
-          links: {
-            self: country_url( sc )
-          },
-          relationships: {
-            indicators: {
-              data: sc.indicators.map { |i|
-                {
-                  type: 'indicators',
-                  id: i.id.to_s
-                }
-              }
-            }
-          }
-        }
+      data: @countries.map { |c|
+        json = c.as_jsonapi
+        json[ :links ][ :self ] = v1_url( c )
+
+        json
       },
-      included: @scored_countries.first.indicators.map { |i|
-        {
-          type: 'indicators',
-          id: i.id.to_s,
-          attributes: {
-            original_value: i.original_value,
-            value: i.value
-          },
-          relationships: {
-            datum_source: {
-              data: {
-                type: 'datum_sources',
-                id: i.source.id.to_s
-              }
-            }
-          }
-        }
-      }
+      included: indicators.map( &:as_jsonapi )
     }
   end
 
   def show
-    @country = Country.find(params[:id])
-
-    respond_to do |format|
-      format.any(:json)
-    end
+    @country = Country.with_enough_data.find(params[:id])
+    json = @country.as_jsonapi
+    json[ :links ][ :self ] = v1_url( @country )
+    render json: {
+      data: json,
+      included: @country.indicators.map( &:as_jsonapi )
+    }
   end
 
 end

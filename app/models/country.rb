@@ -76,6 +76,32 @@ class Country < ActiveRecord::Base
       save!
     end
 
+    def as_jsonapi
+      {
+        type: 'countries',
+        id: id.to_s,
+        attributes: {
+          name: name,
+          iso_code: iso_code,
+          iso3_code: iso3_code,
+          score: score
+        },
+        links: {
+          self: ''
+        },
+        relationships: {
+          indicators: {
+            data: indicators.map { |i|
+              {
+                type: 'indicators',
+                id: i.id.to_s
+              }
+            }
+          }
+        }
+      }
+    end
+
     private
 
     def indicators_affecting_score
