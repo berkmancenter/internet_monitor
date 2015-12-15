@@ -1,7 +1,14 @@
 source 'https://rubygems.org'
-ruby '2.1.6'
 
-gem 'rails', '3.2.13'
+gem 'rails', '4.2.3'
+
+# hack to upgrade to rails 4 from 3
+# need to switch to strong parameters
+# see Upgrading RoR#3-2-to-4-0-acive-record
+gem 'protected_attributes'
+
+# tzinfo required for rails 4
+gem 'tzinfo-data'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -16,17 +23,12 @@ end
 
 gem 'factory_girl_rails'
 
-# Gems used only for assets and not required
-# in production environments by default.
-group :assets do
-  gem 'sass-rails',   '~> 3.2.3'
-  gem 'coffee-rails', '~> 3.2.1'
+gem 'sass-rails'
 
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', :platforms => :ruby
+# See https://github.com/sstephenson/execjs#readme for more supported runtimes
+# gem 'therubyracer', :platforms => :ruby
 
-  gem 'uglifier', '>= 1.0.3'
-end
+gem 'uglifier', '>= 1.0.3'
 
 gem 'jquery-rails', '~> 2.3.0'
 gem 'rubyzip', '< 1.0.0'
@@ -36,11 +38,11 @@ gem 'nokogiri'
 gem "rabl", "~> 0.9.3"
 gem 'oj'
 gem 'amatch'
-gem 'friendly_id', '~> 4.0.1'
+gem 'friendly_id'
 gem 'twitter'
 
-gem 'refinerycms', '2.1.5'
-gem 'refinerycms-blog', '2.1.0'
+gem 'refinerycms', '3.0.0'
+gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
 #gem 'refinerycms-wordpress-import', :git => 'git://github.com/ryanttb/refinerycms-wordpress-import.git'
 
 # To use ActiveModel has_secure_password
