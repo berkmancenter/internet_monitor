@@ -86,4 +86,38 @@ class DatumSource < ActiveRecord::Base
         end
       end
     end
+
+    def as_jsonapi
+      {
+        type: 'datum_sources',
+        id: id.to_s,
+        attributes: {
+          admin_name: admin_name,
+          public_name: public_name,
+          description: description,
+          min: min,
+          max: max,
+          default_weight: default_weight,
+          affects_score: affects_score,
+          source_name: source_name,
+          display_prefix: display_prefix,
+          display_suffix: display_suffix,
+          precision: precision
+        },
+        relationships: {
+          category: {
+            data: ( category.present? ? {
+              type: 'categories',
+              id: category.id.to_s
+            } : nil )
+          },
+          group: {
+            data: ( group.present? ? {
+              type: 'groups',
+              id: group.id.to_s
+            } : nil )
+          }
+        }
+      }
+    end
 end

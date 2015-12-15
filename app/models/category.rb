@@ -6,4 +6,15 @@ class Category < ActiveRecord::Base
 
     extend FriendlyId
     friendly_id :name, :use => :slugged
+
+    def as_jsonapi
+      {
+        type: 'categories',
+        id: id.to_s,
+        attrributes: {
+          name: name,
+          slug: slug
+        }
+      }
+    end
 end
