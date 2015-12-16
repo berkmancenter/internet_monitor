@@ -92,7 +92,7 @@ class Country < ActiveRecord::Base
         },
         relationships: {
           indicators: {
-            data: indicators.map { |i|
+            data: indicators.most_recent.map { |i|
               {
                 type: 'indicators',
                 id: i.id.to_s
