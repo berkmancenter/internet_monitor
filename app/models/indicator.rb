@@ -48,7 +48,7 @@ class Indicator < Datum
       type: 'indicators',
       id: id.to_s,
       attributes: {
-        start_date: start_date,
+        start_date: start_date.to_date.to_s,
         original_value: original_value,
         value: value
       },
