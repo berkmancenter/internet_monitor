@@ -1,0 +1,28 @@
+body.datum_sources {
+  .view {
+    margin: 2em;
+  }
+
+  &.index {
+    .datum-sources-list {
+      list-style: none;
+    }
+
+    .datum-source {
+      dt {
+        float: left;
+        overflow: hidden;
+        width: 160px;
+      }
+
+      dd {
+        margin-left: 180px;
+
+        &:before {
+          content: ' ';
+          display: inline-block;
+        }
+      }
+    }
+  }
+}

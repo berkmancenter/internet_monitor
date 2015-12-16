@@ -1,0 +1,20 @@
+<div class="datum-source">
+  <b><%= datum_source.admin_name %></b>
+  <%= link_to 'Edit', edit_datum_source_path( datum_source ) %>
+  <dl>
+    <dt>id</dt><dd><%= datum_source.id %></dd>
+    <dt>public_name</dt><dd><%= datum_source.public_name %></dd>
+    <dt>description</dt><dd><%= datum_source.description %></dd>
+    <dt>min</dt><dd><%= datum_source.min %></dd>
+    <dt>max</dt><dd><%= datum_source.max %></dd>
+    <dt>default_weight</dt><dd><%= datum_source.default_weight %></dd>
+    <dt>affects_score</dt><dd><%= datum_source.affects_score %></dd>
+    <dt>source_name</dt><dd><%= datum_source.source_name %></dd>
+    <dt>display_prefix</dt><dd><%= datum_source.display_prefix %></dd>
+    <dt>display_suffix</dt><dd><%= datum_source.display_suffix %></dd>
+    <dt>precision</dt><dd><%= datum_source.precision %></dd>
+    <dt>normalized</dt><dd><%= datum_source.normalized %></dd>
+    <dt>category</dt><dd><%= datum_source.category.name unless datum_source.category.nil? %></dd>
+    <dt>group</dt><dd><%= datum_source.group.public_name unless datum_source.group.nil? %></dd>
+  </dl>
+</div>

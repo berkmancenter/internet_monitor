@@ -33,6 +33,7 @@ gem 'rubyzip', '< 1.0.0'
 gem 'roo'
 gem 'httparty'
 gem 'nokogiri'
+gem 'formtastic'
 gem "rabl"
 gem 'oj'
 gem 'amatch'

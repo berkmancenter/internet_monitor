@@ -1,0 +1,9 @@
+<section class="view">
+  <h1>Datum Sources</h1>
+
+  <ul class="datum-sources-list">
+    <% @datum_sources.each { |ds| %>
+      <li><%= render ds %></li>
+    <% } %>
+  </ul>
+</section>
