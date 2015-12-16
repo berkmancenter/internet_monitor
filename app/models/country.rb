@@ -84,7 +84,8 @@ class Country < ActiveRecord::Base
           name: name,
           iso_code: iso_code,
           iso3_code: iso3_code,
-          score: score
+          score: score,
+          rank: rank
         },
         links: {
           self: ''

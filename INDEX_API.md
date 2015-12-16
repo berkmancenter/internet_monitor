@@ -24,7 +24,8 @@ The result is the country data and related indicator data.
             "name": "South Korea",
             "iso_code": "KR",
             "iso3_code": "KOR",
-            "score": 9.06027840425504
+            "score": 9.06027840425504,
+            "rank": 1
           },
           "links": {
             "self": "https://thenetmonitor.org/countries/96"
@@ -45,6 +46,7 @@ The result is the country data and related indicator data.
           "type": "indicators",
           "id": "10588",
           "attributes": {
+            "start_date": "2008-01-01"
             "original_value": 32.4173437895,
             "value": 0.7607223247455746
           },

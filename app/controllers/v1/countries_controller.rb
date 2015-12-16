@@ -4,7 +4,7 @@ class V1::CountriesController < ApplicationController
 
     indicators = []
     @countries.each { |c|
-      indicators |= c.indicators
+      indicators |= c.indicators.most_recent
     }
     render json: {
       data: @countries.map { |c|
