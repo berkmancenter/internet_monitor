@@ -23,7 +23,7 @@ class V1::CountriesController < ApplicationController
     json[ :links ][ :self ] = v1_url( @country )
     render json: {
       data: json,
-      included: @country.indicators.map( &:as_jsonapi )
+      included: @country.indicators.most_recent.map( &:as_jsonapi )
     }
   end
 
