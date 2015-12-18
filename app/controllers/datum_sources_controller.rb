@@ -4,14 +4,11 @@ class DatumSourcesController < ApplicationController
   before_filter :set_datum_source, only: [:show, :edit, :update, :destroy]
 
   def index
+    @datum_sources = DatumSource.order( :admin_name )
     if params[:type]
-      @datum_sources = DatumSource.where(:datum_type => params[:type])
+      @datum_sources = @datum_sources.where(:datum_type => params[:type])
     else
-      @datum_sources = DatumSource.all
-    end
-    respond_to do |format|
-      format.html
-      format.any(:json, :xml)
+      @datum_sources = @datum_sources.all
     end
   end
 
