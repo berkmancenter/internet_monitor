@@ -5,11 +5,14 @@ class DatumSourcesController < ApplicationController
 
   def index
     @datum_sources = DatumSource.order( :admin_name )
-    if params[:type]
-      @datum_sources = @datum_sources.where(:datum_type => params[:type])
-    else
-      @datum_sources = @datum_sources.all
+    
+    if params[:affects_score]
+      @datum_sources = @datum_sources.where affects_score: true
     end
+      
+    if params[:type]
+      @datum_sources = @datum_sources.where datum_type: params[:type]
+    end    
   end
 
   # GET /datum_sources/1
