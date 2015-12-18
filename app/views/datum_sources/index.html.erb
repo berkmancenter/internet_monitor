@@ -1,6 +1,8 @@
 <section class="view">
   <h1>Datum Sources</h1>
 
+  <%= link_to 'New Datum Source', new_datum_source_path %>
+
   <ul class="datum-sources-list">
     <% @datum_sources.each { |ds| %>
       <li><%= render ds %></li>

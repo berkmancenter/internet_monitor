@@ -32,27 +32,44 @@ class DatumSourcesController < ApplicationController
     end
   end
 
+  # GET /datum_sources/new
+  def new
+    @datum_source = DatumSource.new
+  end
+  
   # GET /datum_sources/1/edit
   def edit
   end
 
+  # POST /datum_sources
+  def create
+    @datum_source = DatumSource.new(params[:datum_source])
+
+    if @datum_source.save
+      redirect_to datum_sources_path, notice: 'Datum Source was successfully created.'
+    else
+      render action: 'new'
+    end
+  end
+
   # PATCH/PUT /datum_sources/1
   def update
-    if @datum_source.update(datum_source_params)
-      redirect_to datum_sources_path
+    if @datum_source.update_attributes(params[:datum_source])
+      redirect_to datum_sources_path, notice: 'Datum Source was successfully updated.'
     else
       render action: 'edit'
     end
   end
 
+  # DELETE /datum_sources/1
+  def destroy
+    @datum_source.destroy
+    redirect_to datum_sources_path
+  end
 
   private
 
   def set_datum_source
     @datum_source = DatumSource.find(params[:id])
-  end
-
-  def datum_source_params
-    params.require(:datum_source).permit(:admin_name, :public_name, :description, :min, :max, :default_weight, :affects_score, :source_name, :display_prefix, :display_suffix, :precision, :normalized)
   end
 end
