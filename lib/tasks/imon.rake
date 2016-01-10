@@ -29,6 +29,14 @@ namespace :imon do
   task :replace_static_source, [:row_number, :iso3_code] => [:environment] do |task, args|
     replace_static_source args[ :row_number ], args[ :iso3_code ]
   end
+
+  desc 'Setup original 2014 index'
+  task :setup_old_index => [:environment] do |task|
+    DatumSource.where( affects_score: true ).update_all( in_index: true )
+    Indicator.update_all( index_name: 'ARCHIVE' )
+    Indicator.most_recent.affecting_score.update_all( index_name: '2014' )
+
+  end
 end
 
 def export_most_recent( filename )
