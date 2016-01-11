@@ -99,7 +99,6 @@ ActiveRecord::Schema.define(:version => 20160110215440) do
     t.boolean  "normalized",       :default => false
     t.boolean  "display_original", :default => true
     t.string   "api_endpoint"
-    t.boolean  "in_index",         :default => false
   end
 
   add_index "datum_sources", ["category_id"], :name => "index_datum_sources_on_category_id"

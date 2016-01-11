@@ -32,10 +32,8 @@ namespace :imon do
 
   desc 'Setup original 2014 index'
   task :setup_old_index => [:environment] do |task|
-    DatumSource.where( affects_score: true ).update_all( in_index: true )
     Indicator.update_all( index_name: 'ARCHIVE' )
-    Indicator.most_recent.affecting_score.update_all( index_name: '2014' )
-
+    Indicator.most_recent.update_all( index_name: '2014' )
   end
 end
 

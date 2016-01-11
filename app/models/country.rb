@@ -25,12 +25,12 @@ class Country < ActiveRecord::Base
       # moved from calculate_score because
       # we now need it beforehand to calc indicator min/max
       all.each { |country|
-        most_recent = country.indicators.most_recent.affecting_score
-        country.indicator_count = most_recent.size
+        current_indicators = country.indicators.in_current_index.affecting_score
+        country.indicator_count = current_indicators.size
 
         country.access_group_count = 0
         groups = []
-        most_recent.each { |i|
+        current_indicators.each { |i|
           if groups.index( i.source.group ).nil?
             country.access_group_count += 1
             groups << i.source.group
@@ -58,10 +58,10 @@ class Country < ActiveRecord::Base
     def calculate_score!
       return unless self.enough_data?
 
-      most_recent = indicators.most_recent.affecting_score
+      current_indicators = indicators.in_current_index.affecting_score
 
       # group by datum_source group
-      grouped = most_recent.group_by { |i| i.source.group.admin_name }
+      grouped = current_indicators.group_by { |i| i.source.group.admin_name }
 
       # calculate a weighted_score score for each group
       ws = 0
@@ -92,7 +92,7 @@ class Country < ActiveRecord::Base
         },
         relationships: {
           indicators: {
-            data: indicators.most_recent.map { |i|
+            data: indicators.in_current_index.map { |i|
               {
                 type: 'indicators',
                 id: i.id.to_s
@@ -106,7 +106,7 @@ class Country < ActiveRecord::Base
     private
 
     def indicators_affecting_score
-        indicators.most_recent.affecting_score.order(:start_date)
+        indicators.in_current_index.affecting_score.order(:start_date)
     end
 
     def cache_key

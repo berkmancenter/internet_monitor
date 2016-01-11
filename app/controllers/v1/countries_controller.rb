@@ -4,7 +4,7 @@ class V1::CountriesController < ApplicationController
 
     indicators = []
     @countries.each { |c|
-      indicators |= c.indicators.most_recent
+      indicators |= c.indicators.in_current_index
     }
     render json: {
       data: @countries.map { |c|
@@ -23,7 +23,7 @@ class V1::CountriesController < ApplicationController
     json[ :links ][ :self ] = v1_url( @country )
     render json: {
       data: json,
-      included: @country.indicators.most_recent.map( &:as_jsonapi )
+      included: @country.indicators.in_current_index.map( &:as_jsonapi )
     }
   end
 

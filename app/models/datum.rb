@@ -18,6 +18,9 @@ class Datum < ActiveRecord::Base
     scope :non_indicators, joins( :source ).where( "not datum_sources.datum_type = 'Indicator'" )
 
     scope :affecting_score, joins(:source).where(datum_sources: {affects_score: true})
+
+    scope :in_current_index, where( index_name: Rails.application.config.imon[ 'current_index' ] )
+
     scope :most_recent, joins(
       # select * from data
       "INNER JOIN (

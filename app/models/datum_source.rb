@@ -12,9 +12,13 @@ class DatumSource < ActiveRecord::Base
       where( is_api: true )
     }
 
+    scope :only_indicators, -> {
+      where( datum_type: 'Indicator' )
+    }
+
     def self.recalc_ds!( id )
       ds = find id
-      puts "Recalculating #{ ds.admin_name }"
+      Rails.logger.info "Recalculating #{ ds.admin_name }"
 
       ds.recalc_min_max
       ds.save!
@@ -29,7 +33,6 @@ class DatumSource < ActiveRecord::Base
         t.join
 
         GC.start
-        #puts "heap: #{GC.stat[ :heap_live_num ]}"
       }
     end
 
@@ -53,8 +56,8 @@ class DatumSource < ActiveRecord::Base
         # I should use duck-typing here
         return unless datum_type == 'Indicator'
         country_ids = Country.with_enough_data.map { |c| c.id }
-        most_recent = data.most_recent.where( { country_id: country_ids } )
-        temp_data = most_recent.map{|d| d.original_value } 
+        current_indicators = data.in_current_index.where( { country_id: country_ids } )
+        temp_data = current_indicators.map{|d| d.original_value } 
         self.min, self.max = temp_data.min, temp_data.max
     end
 

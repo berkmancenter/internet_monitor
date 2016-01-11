@@ -1,4 +1,5 @@
 defaults: &DEFAULTS
+  current_index: '2014'
   max_score: 10.0
   min_access_groups: 4
   gdp_data_file: "GDPcap_2013.csv"
