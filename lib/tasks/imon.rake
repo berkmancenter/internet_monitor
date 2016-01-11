@@ -32,8 +32,10 @@ namespace :imon do
 
   desc 'Setup original 2014 index and migrate indicator admin_names'
   task :migrate_indicators_2015 => [:environment] do |task|
-    Indicator.update_all( index_name: 'ARCHIVE' )
-    Indicator.most_recent.update_all( index_name: '2014' )
+    if Indicator.in_index( '2014' ).count == 0
+      Indicator.update_all( index_name: 'ARCHIVE' )
+      Indicator.most_recent.update_all( index_name: '2014' )
+    end
 
     admin_names = {
       'inet' => 'ipr',
@@ -56,13 +58,21 @@ namespace :imon do
       'psef' => 'edf',
       'psem' => 'edm',
       'GDPcap' => 'gdpcapus',
-      'pop' => 'pop'
+      'pop' => 'pop',
+      'rf' => 'rfactor'
     }
 
     admin_names.each { |k, v|
       DatumSource.find_by_admin_name( k ).update_attributes( admin_name: v ) if DatumSource.exists?( admin_name: k )
     }
 
+    Indicator.in_index( '2015' ).delete_all
+
+    Indicator.in_index( '2014' ).each { |i|
+      i2015 = i.dup
+      i2015.index_name = '2015'
+      i2015.save
+    }
   end
 
   desc 'Read all data from IM spreadsheet and store as indicator data in a named access index'
@@ -179,8 +189,8 @@ def update_access_index( index_name, data_file )
   Rails.logger.info "update_access_index #{index_name}, #{data_file}"
 
   index_indicators = {
-    '2014' => %w[ipr_2013 hh_2013 bbsub_2013 mobilebb_2013 bbrate_2014 highbbrate_2014 speedkbps_2014 peakspeedkbps_2014 downloadkbps_2014 uploadkbps_2014 bbcost1_2014 bbcost2_2014 bbcost3_2014 bbcost4_2014 bbcost5_2014 bbcostindex_2014 litrate_2014 edf_2014 edm_2014 gdpcapus_2013 pop_2013],
-    '2015' => %w[ipr_2014 hh_2014 bbsub_2014 mobilebb_2014 bbrate_2015 highbbrate_2015 speedkbps_2015 peakspeedkbps_2015 downloadkbps_2015 uploadkbps_2015 bbcost1_2015 bbcost2_2015 bbcost3_2015 bbcost4_2015 bbcost5_2015 bbcostindex_2015 litrate_2015 edf_2015 edm_2015 gdpcapus_2014 pop_2014]
+    '2014' => %w[ipr_2013 hh_2013 bbsub_2013 mobilebb_2013 bbrate_2014 highbbrate_2014 speedkbps_2014 peakspeedkbps_2014 downloadkbps_2014 uploadkbps_2014 bbcost1_2014 bbcost2_2014 bbcost3_2014 bbcost4_2014 bbcost5_2014 bbcostindex_2014 litrate_2014 edf_2014 edm_2014 gdpcapus_2013 pop_2013 rfactor_2014],
+    '2015' => %w[ipr_2014 hh_2014 bbsub_2014 mobilebb_2014 bbrate_2015 highbbrate_2015 speedkbps_2015 peakspeedkbps_2015 downloadkbps_2015 uploadkbps_2015 bbcost1_2015 bbcost2_2015 bbcost3_2015 bbcost4_2015 bbcost5_2015 bbcostindex_2015 litrate_2015 edf_2015 edm_2015 gdpcapus_2014 pop_2014 rfactor_2015]
   }
 
   if index_name.nil? || index_indicators[ index_name ].nil?
@@ -194,7 +204,6 @@ def update_access_index( index_name, data_file )
   end
 
   ds_cols = index_indicators[ index_name ]
-  indicator_sources = DatumSource.only_indicators
 
   data_text = IO.read( data_file ).encode( invalid: :replace, undef: :replace, replace: '?' )
 
@@ -208,34 +217,41 @@ def update_access_index( index_name, data_file )
       end
 
       ds_cols.each { |ds_col| 
-        next if row[ds_col].nil?
-
         ds_parts = ds_col.split('_')
 
-        ds = indicator_sources.find_by_admin_name ds_parts[0]
+        ds = DatumSource.find_by_admin_name ds_parts[0]
         datum_date = "#{ds_parts[1]}-12-31".to_date
 
         is = Indicator.where datum_source_id: ds.id, index_name: index_name, country_id: c.id
+        indicator = nil
 
         if is.any?
-          Rails.logger.info "update_access_index: indicator.update_attributes original_value: #{row[ds_col].to_f}"
-          indicator = is.first
-          indicator.original_value = row[ds_col].to_f * ds.multiplier
+          if row[ds_col].blank?
+            is.delete_all
+          else
+            Rails.logger.info "update_access_index: indicator.update_attributes original_value: #{row[ds_col].to_f}"
+            indicator = is.first
+            indicator.original_value = row[ds_col].to_f * ds.multiplier
+          end
         else
-          Rails.logger.info "update_access_index: Indicator.create datum_source: #{ds.admin_name}, start_date: #{datum_date}, country: #{c.iso3_code}, original_value: #{row[ds_col].to_f}"
-          indicator = Indicator.new datum_source_id: ds.id, index_name: index_name, start_date: datum_date, country_id: c.id, original_value: ( row[ds_col].to_f * ds.multiplier )
+          if !row[ds_col].blank?
+            Rails.logger.info "update_access_index: Indicator.create datum_source: #{ds.admin_name}, start_date: #{datum_date}, country: #{c.iso3_code}, original_value: #{row[ds_col].to_f}"
+            indicator = Indicator.new datum_source_id: ds.id, index_name: index_name, start_date: datum_date, country_id: c.id, original_value: ( row[ds_col].to_f * ds.multiplier )
+          end
         end
 
-        if ds.normalized
-          if ds.normalized_name.present?
-            normalized_col = "#{ds.normalized_name}_#{ds_parts[1]}"
-            indicator.value = row[normalized_col].to_f
-          else
-            indicator.value = indicator.original_value
+        if !indicator.nil?
+          if ds.normalized
+            if ds.normalized_name.present?
+              normalized_col = "#{ds.normalized_name}_#{ds_parts[1]}"
+              indicator.value = row[normalized_col].to_f
+            else
+              indicator.value = indicator.original_value
+            end
+            indicator.value = 1 - indicator.value if ds.default_weight < 0
           end
-          indicator.value = 1 - indicator.value if ds.default_weight < 0
+          indicator.save!
         end
-        indicator.save!
       }
     rescue Exception => e
       Rails.logger.error "update_access_index: error importing index data: #{row}"
