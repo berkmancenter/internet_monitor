@@ -226,9 +226,14 @@ def update_access_index( index_name, data_file )
           indicator = Indicator.new datum_source_id: ds.id, index_name: index_name, start_date: datum_date, country_id: c.id, original_value: ( row[ds_col].to_f * ds.multiplier )
         end
 
-        if ds.normalized && ds.normalized_name.present?
-          normalized_col = "#{ds.normalized_name}_#{ds_parts[1]}"
-          indicator.value = row[normalized_col].to_f
+        if ds.normalized
+          if ds.normalized_name.present?
+            normalized_col = "#{ds.normalized_name}_#{ds_parts[1]}"
+            indicator.value = row[normalized_col].to_f
+          else
+            indicator.value = indicator.original_value
+          end
+          indicator.value = 1 - indicator.value if ds.default_weight < 0
         end
         indicator.save!
       }
