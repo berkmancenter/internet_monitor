@@ -2,7 +2,7 @@ class Datum < ActiveRecord::Base
     belongs_to :source, :class_name => 'DatumSource', :foreign_key => 'datum_source_id'
     belongs_to :country
     belongs_to :language
-    attr_accessible :start_date, :value_id, :value, :original_value
+    attr_accessible :datum_source_id, :index_name, :country_id, :start_date, :value_id, :value, :original_value
 
     serialize :value
     serialize :original_value

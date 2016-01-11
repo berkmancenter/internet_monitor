@@ -63,7 +63,13 @@ namespace :imon do
       DatumSource.find_by_admin_name( k ).update_attributes( admin_name: v ) if DatumSource.exists?( admin_name: k )
     }
   end
+
+  desc 'Read all data from IM spreadsheet and store as indicator data in a named access index'
+  task :update_access_index, [:index_name, :data_file] => [:environment] do |task, args|
+    update_access_index args[ :index_name ], args[ :data_file ]
+  end
 end
+
 
 def export_most_recent( filename )
   if filename.to_s == ''
@@ -165,4 +171,70 @@ def replace_static_source( row_number, iso3_code )
   puts "Replacing #{ds.public_name} for #{country.name} (datum.id #{datum.id})"
 
   Retriever.retrieve!( row_number, datum )
+end
+
+
+def update_access_index( index_name, data_file )
+  Rails.logger.info "update_access_index #{index_name}, #{data_file}"
+
+  index_indicators = {
+    '2015' => %w[ipr_2014 hh_2014 bbsub_2014 mobilebb_2014 bbrate_2015 highbbrate_2015 speedkbps_2015  peakspeedkbps_2015 downloadkbps_2015 uploadkbps_2015 bbcost1n_2015 bbcost2n_2015 bbcost3n_2015 bbcost4n_2015 bbcost5n_2015 bbcostindex_2015 litrate_2015 edf_2015 edm_2015 gdpcapus_2014 pop_2014]
+  }
+
+  if index_name.nil? || index_indicators[ index_name ].nil?
+    Rails.logger.error 'update_access_index: invalid index_name'
+    return
+  end
+
+  if data_file.nil? || !File.exists?( data_file )
+    Rails.logger.error "update_access_index: cannot open data_file: #{data_file}"
+    return
+  end
+
+  ds_cols = index_indicators[ index_name ]
+  indicator_sources = DatumSource.only_indicators
+
+  data_text = IO.read( data_file ).encode( invalid: :replace, undef: :replace, replace: '?' )
+
+  CSV.parse( data_text, { :headers => true } ).each do |row|
+    #begin
+      c = Country.find_by_iso3_code row['cc3'].upcase
+
+      if c.nil?
+        Rails.logger.error "update_access_index: cannot find country #{row['cc3']}"
+        next
+      end
+
+      ds_cols.each { |ds_col| 
+        next if row[ds_col].nil?
+
+        ds_parts = ds_col.split('_')
+
+        ds = indicator_sources.find_by_admin_name ds_parts[0]
+        datum_date = "#{ds_parts[1]}-12-31".to_date
+
+        is = Indicator.where datum_source_id: ds.id, index_name: index_name, country_id: c.id
+
+        if is.any?
+          Rails.logger.info "update_access_index: indicator.update_attributes original_value: #{row[ds_col].to_f}"
+          is.first.update_attributes original_value: row[ds_col].to_f
+        else
+          Rails.logger.info "update_access_index: Indicator.create datum_source: #{ds.admin_name}, start_date: #{datum_date}, country: #{c.iso3_code}, original_value: #{row[ds_col].to_f}"
+          Indicator.create datum_source_id: ds.id, index_name: index_name, start_date: datum_date, country_id: c.id, original_value: row[ds_col].to_f
+        end
+      }
+    #rescue
+      #Rails.logger.error "update_access_index: error importing index data: #{row}"
+    #end
+
+  end
+
+  puts 'Country.count_indicators'
+  #Country.count_indicators!
+
+  puts 'DatumSource.recalc_min_max_and_values!'
+  #DatumSource.recalc_min_max_and_values!
+
+  puts 'Country.calculate_scores_and_rank!'
+  #Country.calculate_scores_and_rank!
 end
