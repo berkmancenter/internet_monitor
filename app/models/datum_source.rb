@@ -1,5 +1,5 @@
 class DatumSource < ActiveRecord::Base
-    attr_accessible :admin_name, :default_weight, :description, :display_original, :in_category_page, :in_sidebar, :requires_page, :normalized, :is_api, :source_name, :source_link, :max, :min, :public_name, :retriever_class, :datum_type, :affects_score, :display_prefix, :display_suffix, :precision
+    attr_accessible :admin_name, :default_weight, :description, :display_original, :in_category_page, :in_sidebar, :requires_page, :normalized, :is_api, :source_name, :source_link, :max, :min, :public_name, :retriever_class, :datum_type, :affects_score, :display_prefix, :display_suffix, :precision, :multiplier, :normalized_name
 
     belongs_to :category
     belongs_to :group
@@ -16,20 +16,20 @@ class DatumSource < ActiveRecord::Base
       where( datum_type: 'Indicator' )
     }
 
-    def self.recalc_ds!( id )
+    def self.recalc_ds!( id, index_name )
       ds = find id
       Rails.logger.info "Recalculating #{ ds.admin_name }"
 
-      ds.recalc_min_max
+      ds.recalc_min_max index_name
       ds.save!
       ds.recalc_all_values
     end
 
-    def self.recalc_min_max_and_values!
+    def self.recalc_min_max_and_values!( index_name = Rails.application.config.imon[ 'current_index' ] )
       ds_ids = select :id
 
       ds_ids.each { |ds|
-        t = Thread.new { recalc_ds! ds.id }
+        t = Thread.new { recalc_ds! ds.id, index_name }
         t.join
 
         GC.start
@@ -52,11 +52,11 @@ class DatumSource < ActiveRecord::Base
         write_attribute(:retriever_class, klass.name)
     end
 
-    def recalc_min_max
+    def recalc_min_max( index_name )
         # I should use duck-typing here
         return unless datum_type == 'Indicator'
         country_ids = Country.with_enough_data.map { |c| c.id }
-        current_indicators = data.in_current_index.where( { country_id: country_ids } )
+        current_indicators = data.in_index( index_name ).where( { country_id: country_ids } )
         temp_data = current_indicators.map{|d| d.original_value } 
         self.min, self.max = temp_data.min, temp_data.max
     end

@@ -367,6 +367,7 @@ FactoryGirl.define do
       #language nil
       original_value 21.0
       type 'Indicator'
+      index_name 'TEST'
     end
 
     factory :d_mob_scr_iran do
@@ -376,6 +377,7 @@ FactoryGirl.define do
       #language nil
       original_value 48.37482
       type 'Indicator'
+      index_name 'TEST'
     end
 
     factory :d_fixed_monthly_iran do
@@ -385,6 +387,7 @@ FactoryGirl.define do
       #language nil
       original_value 16.5671546612
       type 'Indicator'
+      index_name 'TEST'
     end
 
     factory :d_fixed_monthly_gdp_iran do
@@ -394,6 +397,7 @@ FactoryGirl.define do
       #language nil
       original_value 0.00366048227586886
       type 'Indicator'
+      index_name 'TEST'
     end
 
     factory :d_download_iran do
@@ -403,6 +407,7 @@ FactoryGirl.define do
       #language nil
       original_value 1800.1006666666667
       type 'Indicator'
+      index_name 'TEST'
     end
 
     factory :d_lit_rate_iran do
@@ -412,6 +417,7 @@ FactoryGirl.define do
       #language nil
       original_value 36.51840027
       type 'Indicator'
+      index_name 'TEST'
     end
 
     factory :d_ippoc_iran do
@@ -421,6 +427,7 @@ FactoryGirl.define do
       #language nil
       original_value 4073728.0
       type 'Indicator'
+      index_name 'TEST'
     end
 
     factory :d_social_iran do
@@ -431,6 +438,7 @@ FactoryGirl.define do
       original_value 4.0
       value 4.0
       type 'Indicator'
+      index_name 'TEST'
     end
 
     factory :d_consistency_iran do
@@ -441,6 +449,7 @@ FactoryGirl.define do
       original_value 1.0
       value 1.0
       type 'Indicator'
+      index_name 'TEST'
     end
 
     factory :d_population_iran do
@@ -450,6 +459,7 @@ FactoryGirl.define do
       #language nil
       original_value 74798599
       type 'Indicator'
+      index_name 'TEST'
     end
 
     factory :d_gdp_iran do
@@ -459,6 +469,7 @@ FactoryGirl.define do
       #language nil
       original_value 4525.9486080335
       type 'Indicator'
+      index_name 'TEST'
     end
 
     # china
@@ -469,6 +480,7 @@ FactoryGirl.define do
       #language nil
       original_value 30.8539009094
       type 'Indicator'
+      index_name 'TEST'
     end
 
     factory :d_fixed_monthly_china do
@@ -478,6 +490,7 @@ FactoryGirl.define do
       #language nil
       original_value 18.5729763195
       type 'Indicator'
+      index_name 'TEST'
     end
 
     factory :d_fixed_monthly_gdp_china do
@@ -487,6 +500,7 @@ FactoryGirl.define do
       #language nil
       original_value 0.00341114943653143
       type 'Indicator'
+      index_name 'TEST'
     end
 
     factory :d_download_china do
@@ -496,6 +510,7 @@ FactoryGirl.define do
       #language nil
       original_value 8802.511333333334
       type 'Indicator'
+      index_name 'TEST'
     end
 
     factory :d_lit_rate_china do
@@ -505,6 +520,7 @@ FactoryGirl.define do
       #language nil
       original_value 94.2722
       type 'Indicator'
+      index_name 'TEST'
     end
 
     factory :d_ippoc_china do
@@ -514,6 +530,7 @@ FactoryGirl.define do
       #language nil
       original_value 80186035.0
       type 'Indicator'
+      index_name 'TEST'
     end
 
     factory :d_social_china do
@@ -524,6 +541,7 @@ FactoryGirl.define do
       original_value 3.0
       value 3.0
       type 'Indicator'
+      index_name 'TEST'
     end
 
     factory :d_consistency_china do
@@ -534,6 +552,7 @@ FactoryGirl.define do
       original_value 2.0
       value 2.0
       type 'Indicator'
+      index_name 'TEST'
     end
 
     factory :d_population_china do
@@ -543,6 +562,7 @@ FactoryGirl.define do
       #language nil
       original_value 1344130000
       type 'Indicator'
+      index_name 'TEST'
     end
 
     # usa
@@ -553,6 +573,7 @@ FactoryGirl.define do
       #language nil
       original_value 77.863
       type 'Indicator'
+      index_name 'TEST'
     end
 
     factory :d_mob_scr_usa do
@@ -562,6 +583,7 @@ FactoryGirl.define do
       #language nil
       original_value 65.4773467864
       type 'Indicator'
+      index_name 'TEST'
     end
   end
 

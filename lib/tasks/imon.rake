@@ -46,11 +46,11 @@ namespace :imon do
       'apcsp' => 'peakspeedkbps',
       'adsp' => 'downloadkbps',
       'ausp' => 'uploadkbps',
-      'bbpt1' => 'bbcost1n',
-      'bbpt2' => 'bbcost2n',
-      'bbpt3' => 'bbcost3n',
-      'bbpt4' => 'bbcost4n',
-      'bbpt5' => 'bbcost5n',
+      'bbpt1' => 'bbcost1',
+      'bbpt2' => 'bbcost2',
+      'bbpt3' => 'bbcost3',
+      'bbpt4' => 'bbcost4',
+      'bbpt5' => 'bbcost5',
       'bbpai' => 'bbcostindex',
       'lit' => 'litrate',
       'psef' => 'edf',
@@ -62,6 +62,7 @@ namespace :imon do
     admin_names.each { |k, v|
       DatumSource.find_by_admin_name( k ).update_attributes( admin_name: v ) if DatumSource.exists?( admin_name: k )
     }
+
   end
 
   desc 'Read all data from IM spreadsheet and store as indicator data in a named access index'
@@ -178,7 +179,8 @@ def update_access_index( index_name, data_file )
   Rails.logger.info "update_access_index #{index_name}, #{data_file}"
 
   index_indicators = {
-    '2015' => %w[ipr_2014 hh_2014 bbsub_2014 mobilebb_2014 bbrate_2015 highbbrate_2015 speedkbps_2015  peakspeedkbps_2015 downloadkbps_2015 uploadkbps_2015 bbcost1n_2015 bbcost2n_2015 bbcost3n_2015 bbcost4n_2015 bbcost5n_2015 bbcostindex_2015 litrate_2015 edf_2015 edm_2015 gdpcapus_2014 pop_2014]
+    '2014' => %w[ipr_2013 hh_2013 bbsub_2013 mobilebb_2013 bbrate_2014 highbbrate_2014 speedkbps_2014 peakspeedkbps_2014 downloadkbps_2014 uploadkbps_2014 bbcost1_2014 bbcost2_2014 bbcost3_2014 bbcost4_2014 bbcost5_2014 bbcostindex_2014 litrate_2014 edf_2014 edm_2014 gdpcapus_2013 pop_2013],
+    '2015' => %w[ipr_2014 hh_2014 bbsub_2014 mobilebb_2014 bbrate_2015 highbbrate_2015 speedkbps_2015 peakspeedkbps_2015 downloadkbps_2015 uploadkbps_2015 bbcost1_2015 bbcost2_2015 bbcost3_2015 bbcost4_2015 bbcost5_2015 bbcostindex_2015 litrate_2015 edf_2015 edm_2015 gdpcapus_2014 pop_2014]
   }
 
   if index_name.nil? || index_indicators[ index_name ].nil?
@@ -197,7 +199,7 @@ def update_access_index( index_name, data_file )
   data_text = IO.read( data_file ).encode( invalid: :replace, undef: :replace, replace: '?' )
 
   CSV.parse( data_text, { :headers => true } ).each do |row|
-    #begin
+    begin
       c = Country.find_by_iso3_code row['cc3'].upcase
 
       if c.nil?
@@ -217,24 +219,29 @@ def update_access_index( index_name, data_file )
 
         if is.any?
           Rails.logger.info "update_access_index: indicator.update_attributes original_value: #{row[ds_col].to_f}"
-          is.first.update_attributes original_value: row[ds_col].to_f
+          indicator = is.first
+          indicator.original_value = row[ds_col].to_f * ds.multiplier
         else
           Rails.logger.info "update_access_index: Indicator.create datum_source: #{ds.admin_name}, start_date: #{datum_date}, country: #{c.iso3_code}, original_value: #{row[ds_col].to_f}"
-          Indicator.create datum_source_id: ds.id, index_name: index_name, start_date: datum_date, country_id: c.id, original_value: row[ds_col].to_f
+          indicator = Indicator.new datum_source_id: ds.id, index_name: index_name, start_date: datum_date, country_id: c.id, original_value: ( row[ds_col].to_f * ds.multiplier )
         end
+
+        if ds.normalized && ds.normalized_name.present?
+          normalized_col = "#{ds.normalized_name}_#{ds_parts[1]}"
+          indicator.value = row[normalized_col].to_f
+        end
+        indicator.save!
       }
-    #rescue
-      #Rails.logger.error "update_access_index: error importing index data: #{row}"
-    #end
+    rescue Exception => e
+      Rails.logger.error "update_access_index: error importing index data: #{row}"
+      Rails.logger.error e.inspect
+    end
 
   end
 
-  puts 'Country.count_indicators'
-  #Country.count_indicators!
+  Country.count_indicators!( index_name )
 
-  puts 'DatumSource.recalc_min_max_and_values!'
-  #DatumSource.recalc_min_max_and_values!
+  DatumSource.recalc_min_max_and_values!( index_name )
 
-  puts 'Country.calculate_scores_and_rank!'
-  #Country.calculate_scores_and_rank!
+  Country.calculate_scores_and_rank!( index_name )
 end

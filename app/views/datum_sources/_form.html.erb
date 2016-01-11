@@ -32,6 +32,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :multiplier %><br>
+    <%= f.text_field :multiplier %>
+  </div>
+
+  <div class="field">
     <%= f.check_box :affects_score %>
     <%= f.label :affects_score %>
   </div>
@@ -59,6 +64,11 @@
   <div class="field">
     <%= f.check_box :normalized %>
     <%= f.label :normalized %>
+  </div>
+
+  <div class="field">
+    <%= f.label :normalized_name %><br>
+    <%= f.text_field :normalized_name %>
   </div>
 
   <div class="actions">

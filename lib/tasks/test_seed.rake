@@ -260,15 +260,15 @@ namespace :db do
 
       # count all valid indicators
       puts 'Country.count_indicators'
-      Country.count_indicators!
+      Country.count_indicators!( 'TEST' )
 
       # recalc indicator min_max & values
       puts 'DatumSource.recalc_min_max_and_values!'
-      DatumSource.recalc_min_max_and_values!
+      DatumSource.recalc_min_max_and_values!( 'TEST' )
 
       # calculate all scores
       puts 'Country.calculate_scores_and_rank!'
-      Country.calculate_scores_and_rank!
+      Country.calculate_scores_and_rank!( 'TEST' )
 
       # refinery
       Refinery::Pages::Engine.load_seed

@@ -40,6 +40,10 @@ class Datum < ActiveRecord::Base
     scope :in_sidebar, joins(:source).where(datum_sources: {in_sidebar: true})
     delegate :description, :to => :source
 
+    def self.in_index( idx_name = Rails.application.config.imon[ 'current_index' ] )
+      where index_name: idx_name
+    end
+
     def name
         source.public_name
     end

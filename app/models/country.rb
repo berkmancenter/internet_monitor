@@ -21,16 +21,16 @@ class Country < ActiveRecord::Base
               {:min_access_groups => Rails.application.config.imon['min_access_groups']})
     scope :desc_score, order('score DESC')
 
-    def self.count_indicators!
+    def self.count_indicators!( index_name = Rails.application.config.imon[ 'current_index' ] )
       # moved from calculate_score because
       # we now need it beforehand to calc indicator min/max
       all.each { |country|
-        current_indicators = country.indicators.in_current_index.affecting_score
-        country.indicator_count = current_indicators.size
+        current_indicators = country.indicators.in_index( index_name ).affecting_score
+        country.indicator_count = current_indicators.count
 
         country.access_group_count = 0
         groups = []
-        current_indicators.each { |i|
+        current_indicators.affecting_score.each { |i|
           if groups.index( i.source.group ).nil?
             country.access_group_count += 1
             groups << i.source.group
@@ -40,9 +40,9 @@ class Country < ActiveRecord::Base
       }
     end
 
-    def self.calculate_scores_and_rank!
+    def self.calculate_scores_and_rank!( index_name = Rails.application.config.imon[ 'current_index' ] )
       all.each { |country|
-        country.calculate_score!
+        country.calculate_score!( index_name )
       }
 
       with_enough_data.desc_score.each_with_index { | country, i |
@@ -55,10 +55,10 @@ class Country < ActiveRecord::Base
       access_group_count >= Rails.application.config.imon[ 'min_access_groups' ]
     end
 
-    def calculate_score!
+    def calculate_score!( index_name )
       return unless self.enough_data?
 
-      current_indicators = indicators.in_current_index.affecting_score
+      current_indicators = indicators.in_index( index_name ).affecting_score
 
       # group by datum_source group
       grouped = current_indicators.group_by { |i| i.source.group.admin_name }
