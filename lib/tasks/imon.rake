@@ -30,10 +30,38 @@ namespace :imon do
     replace_static_source args[ :row_number ], args[ :iso3_code ]
   end
 
-  desc 'Setup original 2014 index'
-  task :setup_old_index => [:environment] do |task|
+  desc 'Setup original 2014 index and migrate indicator admin_names'
+  task :migrate_indicators_2015 => [:environment] do |task|
     Indicator.update_all( index_name: 'ARCHIVE' )
     Indicator.most_recent.update_all( index_name: '2014' )
+
+    admin_names = {
+      'inet' => 'ipr',
+      'net' => 'hh',
+      'wisr' => 'bbsub',
+      'mbsr' => 'mobilebb',
+      'bbar' => 'bbrate',
+      'hbbar' => 'highbbrate',
+      'acsp' => 'speedkbps',
+      'apcsp' => 'peakspeedkbps',
+      'adsp' => 'downloadkbps',
+      'ausp' => 'uploadkbps',
+      'bbpt1' => 'bbcost1n',
+      'bbpt2' => 'bbcost2n',
+      'bbpt3' => 'bbcost3n',
+      'bbpt4' => 'bbcost4n',
+      'bbpt5' => 'bbcost5n',
+      'bbpai' => 'bbcostindex',
+      'lit' => 'litrate',
+      'psef' => 'edf',
+      'psem' => 'edm',
+      'GDPcap' => 'gdpcapus',
+      'pop' => 'pop'
+    }
+
+    admin_names.each { |k, v|
+      DatumSource.find_by_admin_name( k ).update_attributes( admin_name: v ) if DatumSource.exists?( admin_name: k )
+    }
   end
 end
 
