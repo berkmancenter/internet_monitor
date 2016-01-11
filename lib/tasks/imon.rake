@@ -232,6 +232,7 @@ def update_access_index( index_name, data_file )
             Rails.logger.info "update_access_index: indicator.update_attributes original_value: #{row[ds_col].to_f}"
             indicator = is.first
             indicator.original_value = row[ds_col].to_f * ds.multiplier
+            indicator.start_date = datum_date
           end
         else
           if !row[ds_col].blank?
