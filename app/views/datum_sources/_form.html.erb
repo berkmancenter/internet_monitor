@@ -71,6 +71,12 @@
     <%= f.text_field :normalized_name %>
   </div>
 
+  <div class="field">
+    <p>Check invert to subtract a normalized value from 1. Only used when normalized is also checked.</p>
+    <%= f.check_box :invert %>
+    <%= f.label :invert %>
+  </div>
+
   <div class="actions">
     <%= f.submit class: 'button' %>
   </div>

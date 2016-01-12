@@ -249,7 +249,7 @@ def update_access_index( index_name, data_file )
             else
               indicator.value = indicator.original_value
             end
-            indicator.value = 1 - indicator.value if ds.default_weight < 0
+            indicator.value = 1 - indicator.value if ds.invert
           end
           indicator.save!
         end
