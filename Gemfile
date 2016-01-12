@@ -34,7 +34,7 @@ gem 'roo'
 gem 'httparty'
 gem 'nokogiri'
 gem 'formtastic'
-gem "rabl"
+gem "rabl", "~> 0.9.3"
 gem 'oj'
 gem 'amatch'
 gem 'friendly_id', '~> 4.0.1'

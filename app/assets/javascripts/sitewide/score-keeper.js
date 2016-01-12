@@ -86,8 +86,8 @@
 
             // build an indexed list of countries
             $.each( _countryData, function( ) {
-              if ( this.c && $.isNumeric( this.c.id ) ) {
-                _countries[ this.c.id ] = this.c;
+              if ( $.isNumeric( this.id ) ) {
+                _countries[ this.id ] = this;
               }
             } );
 
