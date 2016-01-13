@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160112020719) do
+ActiveRecord::Schema.define(:version => 20160113210300) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -27,12 +27,13 @@ ActiveRecord::Schema.define(:version => 20160112020719) do
     t.float    "score"
     t.text     "description"
     t.integer  "indicator_count"
-    t.datetime "created_at",         :null => false
-    t.datetime "updated_at",         :null => false
+    t.datetime "created_at",                            :null => false
+    t.datetime "updated_at",                            :null => false
     t.integer  "rank"
     t.integer  "access_group_count"
     t.string   "bbox"
     t.string   "slug"
+    t.boolean  "region",             :default => false
   end
 
   create_table "country_categories", :force => true do |t|

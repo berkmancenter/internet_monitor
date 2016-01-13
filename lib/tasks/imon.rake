@@ -75,6 +75,16 @@ namespace :imon do
     }
   end
 
+  desc 'Create regions'
+  task :create_regions => [:environment] do |task, args|
+    categories = Category.all
+    CSV.open(Rails.root.join('db', 'regions.csv'), {:headers => true}).each do |line|
+      region = Country.find_or_initialize_by_iso3_code iso3_code: line['cc3'], name: line['region'], region: true
+      region.categories = categories
+      region.save!
+    end
+  end
+
   desc 'Read all data from IM spreadsheet and store as indicator data in a named access index'
   task :update_access_index, [:index_name, :data_file] => [:environment] do |task, args|
     update_access_index args[ :index_name ], args[ :data_file ]
@@ -209,7 +219,8 @@ def update_access_index( index_name, data_file )
 
   CSV.parse( data_text, { :headers => true } ).each do |row|
     begin
-      c = Country.find_by_iso3_code row['cc3'].upcase
+      # unscoped to include regions
+      c = Country.unscoped.find_by_iso3_code row['cc3'].upcase
 
       if c.nil?
         Rails.logger.error "update_access_index: cannot find country #{row['cc3']}"

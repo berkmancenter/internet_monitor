@@ -2,7 +2,7 @@ class Country < ActiveRecord::Base
     extend FriendlyId
     friendly_id :iso3_code, :use => :slugged
 
-    attr_accessible :description, :iso3_code, :iso_code, :name, :indicator_count, :score, :rank
+    attr_accessible :description, :iso3_code, :iso_code, :name, :indicator_count, :score, :rank, :region
     has_many :country_categories
     has_many :country_languages
     has_many :categories, :through => :country_categories
@@ -12,6 +12,8 @@ class Country < ActiveRecord::Base
     has_many :url_lists
     has_many :html_blocks
     has_many :images
+
+    default_scope where(:region => false)
 
     scope :with_enough_data,
         where("access_group_count >= :min_access_groups",

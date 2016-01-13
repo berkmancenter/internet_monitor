@@ -38,6 +38,13 @@ CSV.open(Rails.root.join('db', 'countryInfo.txt'), {:headers => true, :col_sep =
     country.save!
 end
 
+# Create regions
+CSV.open(Rails.root.join('db', 'regions.csv'), {:headers => true}).each do |line|
+  region = Country.find_or_initialize_by_iso3_code(:iso3_code => line['cc3'], :name => line['region'])
+  region.categories = categories
+  region.save!
+end
+
 # Import country bboxen
 
 import_country_bboxes 'db/data_files/country_bbox.json'
