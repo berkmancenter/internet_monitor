@@ -18,8 +18,11 @@ Imon::Application.routes.draw do
   match '/map' => 'countries#map', :as => :map
 
   namespace :v1 do
-    match 'countries' => 'countries#index'
-    match 'countries/:id' => 'countries#show'
+    match 'countries' => 'countries#index', as: :countries
+    match 'countries/:id' => 'countries#show', as: :country
+
+    match 'regions' => 'regions#index', as: :regions
+    match 'regions/:id' => 'regions#show', as: :region
 
     match 'datum_sources' => 'datum_sources#index'
   end
