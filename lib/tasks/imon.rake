@@ -273,8 +273,9 @@ def update_access_index( index_name, data_file )
   end
 
   Country.count_indicators!( index_name )
-
   DatumSource.recalc_min_max_and_values!( index_name )
-
   Country.calculate_scores_and_rank!( index_name )
+
+  Region.count_indicators!( index_name )
+  Region.calculate_scores_and_rank!( index_name )
 end

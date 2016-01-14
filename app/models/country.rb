@@ -58,7 +58,10 @@ class Country < ActiveRecord::Base
     end
 
     def calculate_score!( index_name )
-      return unless self.enough_data?
+      if !self.enough_data?
+        self.update_attributes( score: nil )
+        return
+      end
 
       current_indicators = indicators.in_index( index_name ).affecting_score
 

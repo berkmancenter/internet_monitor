@@ -1,6 +1,6 @@
 class V1::RegionsController < ApplicationController
   def index
-    @regions = Region.all
+    @regions = Region.with_enough_data.desc_score
 
     indicators = []
     @regions.each { |c|
