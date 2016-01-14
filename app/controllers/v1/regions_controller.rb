@@ -1,6 +1,6 @@
 class V1::RegionsController < ApplicationController
   def index
-    @regions = Region.with_enough_data.desc_score
+    @regions = Region.order( 'iso3_code asc' )
 
     indicators = []
     @regions.each { |c|
