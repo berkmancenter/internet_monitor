@@ -108,7 +108,7 @@ def export_most_recent( filename )
     count = 0
 
     countries.each { |c|
-      indicators = c.indicators.in_current_index.order { |i| i.source.admin_name }
+      indicators = c.indicators.in_current_index.order { |i| i.source.public_name }
       puts "#{c.name} has #{indicators.count} data values"
 
       indicators.each { |d|
