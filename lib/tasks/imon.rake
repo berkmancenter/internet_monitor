@@ -91,7 +91,6 @@ namespace :imon do
   end
 end
 
-
 def export_most_recent( filename )
   if filename.to_s == ''
     puts "Usage: rake imon:export_most_recent['output_filename.csv']"
@@ -109,7 +108,7 @@ def export_most_recent( filename )
     count = 0
 
     countries.each { |c|
-      indicators = c.indicators.most_recent
+      indicators = c.indicators.in_current_index.order { |i| i.source.admin_name }
       puts "#{c.name} has #{indicators.count} data values"
 
       indicators.each { |d|
@@ -199,8 +198,8 @@ def update_access_index( index_name, data_file )
   Rails.logger.info "update_access_index #{index_name}, #{data_file}"
 
   index_indicators = {
-    '2014' => %w[ipr_2013 hhnet_2013 bbsub_2013 mobilebb_2013 bbrate_2014 highbbrate_2014 speedkbps_2014 peakspeedkbps_2014 downloadkbps_2014 uploadkbps_2014 bbcost1_2014 bbcost2_2014 bbcost3_2014 bbcost4_2014 bbcost5_2014 bbcostindex_2014 litrate_2014 edf_2014 edm_2014 gdpcapus_2013 pop_2013 rfactor_2014],
-    '2015' => %w[ipr_2014 hhnet_2014 bbsub_2014 mobilebb_2014 bbrate_2015 highbbrate_2015 speedkbps_2015 peakspeedkbps_2015 downloadkbps_2015 uploadkbps_2015 bbcost1_2015 bbcost2_2015 bbcost3_2015 bbcost4_2015 bbcost5_2015 bbcostindex_2015 litrate_2015 edf_2015 edm_2015 gdpcapus_2014 pop_2014 rfactor_2015]
+    '2014' => %w[ipr_2013 hhnet_2013 bbsub_2013 mobilebb_2013 rfactor_2014 bbrate_2014 highbbrate_2014 speedkbps_2014 peakspeedkbps_2014 downloadkbps_2014 uploadkbps_2014 bbcost1_2014 bbcost2_2014 bbcost3_2014 bbcost4_2014 bbcost5_2014 bbcostindex_2014 litrate_2014 edf_2014 edm_2014 gdpcapus_2013 pop_2013],
+    '2015' => %w[ipr_2014 hhnet_2014 bbsub_2014 mobilebb_2014 rfactor_2015 bbrate_2015 highbbrate_2015 speedkbps_2015 peakspeedkbps_2015 downloadkbps_2015 uploadkbps_2015 bbcost1_2015 bbcost2_2015 bbcost3_2015 bbcost4_2015 bbcost5_2015 bbcostindex_2015 litrate_2015 edf_2015 edm_2015 gdpcapus_2014 pop_2014]
   }
 
   if index_name.nil? || index_indicators[ index_name ].nil?
