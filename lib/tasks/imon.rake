@@ -123,7 +123,7 @@ def export_most_recent( filename )
 
   puts "Exporting to #{filename}"
 
-  countries = Country.order( :iso3_code )
+  countries = Country.with_enough_data.order( :iso3_code )
   puts "#{countries.count} countries"
   
   CSV.open( filename, 'wb' ) { |csv|
@@ -132,7 +132,7 @@ def export_most_recent( filename )
     count = 0
 
     countries.each { |c|
-      indicators = c.indicators.in_current_index.order { |i| i.source.public_name }
+      indicators = c.indicators.affecting_score.in_current_index.order { |i| i.source.public_name }
       puts "#{c.name} has #{indicators.count} data values"
 
       indicators.each { |d|
