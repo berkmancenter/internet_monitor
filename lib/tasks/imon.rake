@@ -75,6 +75,30 @@ namespace :imon do
     }
   end
 
+  desc 'Seed datum_source attributes: short_name & display_class after 20160420 migration'
+  task :seed_short_name_and_display_class => [ :environment ] do |task|
+    affixes = [ '%', 'kbps', '$' ]
+
+    DatumSource.all.each { |ds|
+      ds.short_name = ds.public_name
+
+      case "#{ds.display_prefix}#{ds.display_suffix}"
+      when '%'
+        ds.display_class = 'percentage'
+
+      when 'kbps'
+        ds.display_class = 'speed'
+
+      when '$'
+        ds.display_class = 'currency'
+
+      end
+
+      ds.save
+      Rails.logger.info "#{ds.short_name} is a #{ds.display_class}"
+    }
+  end
+
   desc 'Create regions'
   task :create_regions => [:environment] do |task, args|
     categories = Category.all

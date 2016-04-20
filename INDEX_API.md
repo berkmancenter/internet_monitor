@@ -90,12 +90,15 @@ The result is an array of datum_sources currently in the index as well as relate
           "attributes": {
             "admin_name": "wisr",
             "public_name": "Wired Internet subscription rate",
-            "description": null,
+            "short_name": "Wired rate",
+            "description": "Also listed as \"Fixed (wired) Internet subscriptions per 100 inhabitants\"; measures both the number of active fixed (wired) Internet subscriptions at speeds less than 256 kbps (kilobits per second), such as dial-up and other fixed non-broadband subscriptions, and total fixed (wired) broadband subscriptions.",
             "min": 0.0065407023,
             "max": 42.6118409977,
             "default_weight": 1,
             "affects_score": true,
             "source_name": "ITU",
+            "source_link": "http://www.itu.int",
+            "display_class": "people",
             "display_prefix": null,
             "display_suffix": "%",
             "precision": 0

@@ -97,12 +97,15 @@ class DatumSource < ActiveRecord::Base
         attributes: {
           admin_name: admin_name,
           public_name: public_name,
+          short_name: short_name,
           description: description,
           min: min,
           max: max,
           default_weight: default_weight,
           affects_score: affects_score,
           source_name: source_name,
+          source_link: source_link,
+          display_class: display_class,
           display_prefix: display_prefix,
           display_suffix: display_suffix,
           precision: precision
