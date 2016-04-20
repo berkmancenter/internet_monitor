@@ -8,6 +8,8 @@ defaults: &DEFAULTS
   twitter_access_token: "7661012-gEe5gFhF9M9GkPFf1zH7tGpYSac8kzXsMjxpzKSPkQ"
   twitter_access_token_secret: "NBOqdlsnXPNg1eR5iLe7ZMzgnEn174Jx4JtRfy2yY72gM"
   dashboard_url: 'http://dashboard.thenetmonitor.org'
+  ds_user: 'ds_user'
+  ds_passwd: 'ds_passwd'
 
 development:
   <<: *DEFAULTS

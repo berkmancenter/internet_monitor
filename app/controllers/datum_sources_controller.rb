@@ -1,6 +1,8 @@
 require 'open-uri'
 
 class DatumSourcesController < ApplicationController
+  http_basic_authenticate_with name: Rails.application.config.imon[ 'ds_user' ], password: Rails.application.config.imon[ 'ds_passwd' ]
+
   before_filter :set_datum_source, only: [:show, :edit, :update, :destroy]
 
   def index
