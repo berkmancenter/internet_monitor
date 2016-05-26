@@ -18,7 +18,6 @@ capybara-*.html
 rerun.txt
 pickle-email-*.html
 .project
-Gemfile.lock
 *.swp
 *.swo
 # Rails
