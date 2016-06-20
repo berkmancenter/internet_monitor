@@ -81,6 +81,26 @@ class Country < ActiveRecord::Base
       save!
     end
 
+    def as_jsonapi_v2
+      {
+        type: 'countries',
+        id: id.to_s,
+        attributes: {
+          name: name,
+          iso_code: iso_code,
+          iso3_code: iso3_code
+        },
+        links: {
+          self: ''
+        },
+        relationships: {
+          data_points: {
+            data: indicators.map( &:as_jsonapi_v2 )
+          }
+        }
+      }
+    end
+
     def as_jsonapi
       {
         type: 'countries',

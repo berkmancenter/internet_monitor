@@ -43,6 +43,18 @@ class Indicator < Datum
     end
   end
 
+  def as_jsonapi_v2
+    {
+      type: 'data_points',
+      id: id.to_s,
+      attributes: {
+        indicator: source.admin_name,
+        date: start_date.to_date.to_s,
+        value: original_value,
+      }
+    }
+  end
+
   def as_jsonapi
     {
       type: 'indicators',
