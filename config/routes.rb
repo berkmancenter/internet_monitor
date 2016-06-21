@@ -31,10 +31,7 @@ Imon::Application.routes.draw do
     match 'countries' => 'countries#index', as: :countries
     match 'countries/:id' => 'countries#show', as: :country
 
-    match 'regions' => 'regions#index', as: :regions
-    match 'regions/:id' => 'regions#show', as: :region
-
-    match 'datum_sources' => 'datum_sources#index'
+    match 'indicators' => 'datum_sources#index'
   end
 
   # This line mounts Refinery's routes at the root of your application.

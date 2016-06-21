@@ -90,6 +90,29 @@ class DatumSource < ActiveRecord::Base
       end
     end
 
+    def as_jsonapi_v2
+      {
+        type: 'indicators',
+        id: id.to_s,
+        attributes: {
+          admin_name: admin_name,
+          name: public_name,
+          short_name: short_name,
+          description: description,
+          provider_data_url: source_link,
+          display_class: display_class,
+          precision: precision,
+          inverted: invert
+        },
+        relationships: {
+          provider: {
+            data: {
+            }
+          }
+        }
+      }
+    end
+
     def as_jsonapi
       {
         type: 'datum_sources',
