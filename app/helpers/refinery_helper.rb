@@ -23,6 +23,7 @@ module RefineryHelper
     end
   end
 
+  #Unused function to pull carousel data from Refinery
   def home_carousel
     carousel = Refinery::Page.by_slug 'carousel'
     if carousel.any?

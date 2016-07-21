@@ -7,10 +7,16 @@
 
 <%#= render '/refinery/content_page' %>
 
-<div class="carousel">
-  <% home_carousel.each do |item| %>
-    <div><a href="<%= item[ :link_url ] %>" class="carousel-item"><%= raw item[ :body ] %></a></div>
-  <% end %>
+<!-- 
+    -<div class="carousel">
+    -  <% home_carousel.each do |item| %>
+    -    <div><a href="<%= item[ :link_url ] %>" class="carousel-item"><%= raw item[ :body ] %></a></div>
+    -  <% end %>
+   -</div>
+-->
+
+<div class="block-links">
+Holder for block-links
 </div>
 
 <div class="what-we-do">
