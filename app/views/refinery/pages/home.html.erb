@@ -7,44 +7,12 @@
 
 <%#= render '/refinery/content_page' %>
 
-<!-- 
-    -<div class="carousel">
-    -  <% home_carousel.each do |item| %>
-    -    <div><a href="<%= item[ :link_url ] %>" class="carousel-item"><%= raw item[ :body ] %></a></div>
-    -  <% end %>
-   -</div>
--->
-
 <div class="block-links">
 Holder for block-links
 </div>
 
-<div class="what-we-do">
-  <div class="trending">
-    <h2>Featured Countries</h2>
-    <ul>
-    <% Nokogiri::HTML( part_content( 'trending', :body ) ).xpath( '//li' ).each_with_index do |li, i| %>
-      <% country = Country.find_by_iso3_code( li.text.upcase ) %>
-      <li><%= link_to( raw( render( partial: 'countries/static_map', object: country ) ), Imon::Application.routes.url_helpers.category_country_path( country, category_slug: 'access' ), :data => { :'country-id' => country.id } ) unless country.nil? %></li>
-    <% end %>
-    </ul>
-  </div>
-
-  <h2>We monitor and report on...</h2>
-
-  <ul>
-    <li class="category-block">
-      <a href="/access"><h3 class="access-4-bg">access</h3><span class="access-1-bg"><%= raw part_content( 'home', 'Access' ) %></span></a>
-    </li>
-
-    <li class="category-block">
-    <a href="/control"><h3 class="control-4-bg">control</h3><span class="control-1-bg"><%= raw part_content( 'home', 'Control' ) %></span></a>
-    </li>
-
-    <li class="category-block">
-    <a href="/activity"><h3 class="activity-4-bg">activity</h3><span class="activity-1-bg"><%= raw part_content( 'home', 'Activity' ) %></span></a>
-    </li>
-  </ul>
+<div class="blog">
+    Holder for blog posts
 </div>
 
 <% cache( 'thenetmonitor-tweets', expires_in: 5.minutes ) { %>
