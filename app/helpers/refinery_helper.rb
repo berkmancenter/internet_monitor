@@ -22,19 +22,5 @@ module RefineryHelper
       [ Twitter::Tweet.new( { id: 1, text: '' } ) ]
     end
   end
-
-  #Unused function to pull carousel data from Refinery
-  def home_carousel
-    carousel = Refinery::Page.by_slug 'carousel'
-    if carousel.any?
-      carousel.first.children.map { |page|
-        {
-          link_url: page.link_url,
-          body: page.content_for( :body )
-        }
-      }
-    else
-      [ ]
-    end
-  end
+  
 end
