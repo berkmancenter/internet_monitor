@@ -28,7 +28,8 @@
     <div class="map-pills-container" style="height: <%= @scored_countries.count * 36 %>px;">
       <ol class="scored-countries">
         <% @scored_countries.each do |country| %>
-          <li style="top: <%= (country.rank - 1) * 36 %>px;"><%= render partial: 'countries/score_pill', locals: { country: country } %></li>
+          <%#Replaced country.rank with country.id because rank was nil and kept giving errors%>
+          <li style="top: <%= (country.id - 1) * 36 %>px;"><%= render partial: 'countries/score_pill', locals: { country: country } %></li>
         <% end %>
       </ol>
     </div>

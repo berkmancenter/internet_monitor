@@ -49,9 +49,6 @@
     <%= yield %>
   </section>
 
-  <%# uncomment for parameter debug %>
-  <%= debug(params) if Rails.env.development? %> 
-
   <footer>
     <%= image_tag 'imon_logo_small.png', alt: '', class: 'footer-logo' %>
     <a href="http://cyber.law.harvard.edu" title="Berkman Klein Center For Internet and Society" class="berkman-link"><%= image_tag 'BKC_Mark_White.svg', alt: '', height: '32px' %></a>
@@ -65,8 +62,6 @@
     </nav>
     <span class="cc">Unless otherwise noted, this site and its contents are licensed under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported</a> license.</span>
   </footer>
-    
-    
 
   <%= javascript_include_tag "application" %>
 
@@ -81,5 +76,8 @@
     ga('create', 'UA-223559-17', 'auto');
     ga('send', 'pageview');
   </script>
+  <%# uncomment for parameter debug %>
+  <%= debug(params) if Rails.env.development? %> 
+
 </body>
 </html>
