@@ -62,13 +62,6 @@
     </nav>
     <span class="cc">Unless otherwise noted, this site and its contents are licensed under a <a href="http://creativecommons.org/licenses/by/3.0/">Creative Commons Attribution 3.0 Unported</a> license.</span>
   </footer>
-    
-    
-<%=
-#  if ( Rails.env.development? )
-#      debug( params )
-#  end
-%>
 
   <%= javascript_include_tag "application" %>
 
@@ -83,5 +76,8 @@
     ga('create', 'UA-223559-17', 'auto');
     ga('send', 'pageview');
   </script>
+  <%# uncomment for parameter debug %>
+  <%= debug(params) if Rails.env.development? %> 
+
 </body>
 </html>

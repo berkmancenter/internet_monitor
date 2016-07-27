@@ -2,8 +2,8 @@ class CountriesController < ApplicationController
   def index
     last_indicator = Indicator.last
     if stale?( etag: last_indicator, last_modified: last_indicator.updated_at )
-      @scored_countries = Country.with_enough_data.desc_score
-      @unscored_countries = Country.without_enough_data
+      # Removed with_enough_data scope call
+      @scored_countries = Country.desc_score.all
       respond_to do |format|
         format.html
         format.any(:xml, :json)
@@ -52,7 +52,8 @@ class CountriesController < ApplicationController
   end
 
   def map
-    @scored_countries = Country.order( 'score desc' ).with_enough_data
+    #Removed with_enough_data (all countries have 0 indicator count)
+    @scored_countries = Country.desc_score.all
     @unscored_countries = Country.without_enough_data
 
     @map_countries = Country.with_enough_data.select( 'id,iso3_code,score,bbox' )

@@ -9,6 +9,18 @@ body.home {
     }
   }
 
+  .block-links {
+      background: gray;
+      height: 400px;
+      position: relative;
+      text-align: center;
+      color: white;
+
+      //center text vertically
+      line-height: 400px;
+      vertical-align: center;
+  }
+
   .carousel {
     background: darken( $violet, 10% );
     height: 400px;
@@ -57,6 +69,14 @@ body.home {
     font-size: 1.8em;
     font-style: italic;
     font-weight: normal;
+  }
+
+  .blog{
+      display: inline-block;
+      margin: 0 2em;
+      padding-bottom: 5em;
+      vertical-align: top;
+      width: 15em * 3;
   }
 
   .what-we-do {

@@ -1,8 +1,5 @@
 <% suser = defined?( show_user ) ? show_user : true %>
 <span class="score-pill <%= 'no-user' unless suser %>" data-country-id="<%= country.id %>">
   <%= link_to country.name, Imon::Application.routes.url_helpers.category_country_path( country, category_slug: 'access' ), class: 'country-name', title: country.name %>
-  <% if country.enough_data? %>
-    <span class="header">score</span>
-    <span class="imon-rank">#<%= country.rank %></span><span class="imon-score"><%= number_with_precision( country.score, { precision: 2 } ) %></span><% if suser %><a href="javascript:void(0);" class="user-score"></a><a href="javascript:void(0);" class="user-rank"></a><% end %><span class="help">?<span class="popup">Rank out of <%= Country.with_enough_data.count %> countries. Score out of 10.<br>For more information on the Internet Monitor access index, please see <%= link_to 'the faq', refinery::marketable_page_path('faq') %>.</span></span>
-  <% end %>
+  <%#Removed rank and score portion of the pill%>
 </span>
