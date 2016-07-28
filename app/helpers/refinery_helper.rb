@@ -5,6 +5,11 @@ module RefineryHelper
     content = page.first.content_for( part_name ) unless page.empty?
   end
 
+  # return last 3 blog posts 
+  def recent_posts
+    posts = Refinery::Blog::Post.order("published_at DESC").first(3)
+  end
+
   # return last three tweets
   def imon_tweets
     client = Twitter::REST::Client.new do |config|

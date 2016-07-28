@@ -11,8 +11,10 @@
 Holder for block-links
 </div>
 
-<div class="blog">
-    Holder for blog posts
+<div class="blog-posts">
+  <% recent_posts.each do |p| %>
+    <%= render "/refinery/blog/posts/recent_post", post: p %>
+  <% end %>
 </div>
 
 <% cache( 'thenetmonitor-tweets', expires_in: 5.minutes ) { %>
