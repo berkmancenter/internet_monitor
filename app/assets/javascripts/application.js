@@ -27,6 +27,4 @@
     return false;
   } );
 
-  // initialize score keeper (download data)
-  $.scoreKeeper.init( );
 } ());

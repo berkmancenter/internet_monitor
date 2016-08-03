@@ -1,41 +1,3 @@
-var weightSliders = {
-    SLIDER_SELECTOR  : '.weight-slider',
-
-    sliderObjects    : [],
-
-    init : function() {
-        var countryId = $('.country').first().data('country-id');
-
-        $('.toggle-weight-sliders').click( function() {
-          $('#configure-panel').toggleClass('hidden');
-          return false;
-        } );
-
-        this.sliderObjects = $(this.SLIDER_SELECTOR);
-
-        this.sliderObjects.on( 'input change', function() {
-          var weightSlider = $( this );
-          if ( weightSlider.data( 'slideTimeout' ) ) {
-            clearTimeout( weightSlider.data( 'slideTimeout' ) );
-          }
-          var slideTimeout = setTimeout( function( ) {
-            $.scoreKeeper.setWeight( weightSlider.attr( 'name' ), weightSlider.val( ) );
-          }, 60 );
-          weightSlider.data( 'slideTimeout', slideTimeout );
-        } ).each(function() { 
-          var weightSlider = $( this );
-          var weight = $.scoreKeeper.getWeight( weightSlider.attr( 'name' ) );
-          weightSlider.val( weight || Math.abs( weightSlider.data( 'defaultWeight' ) ) );
-          setGradient( this );
-        });
-
-        $( '#weight-sliders button' ).click( function( ) {
-          setTimeout( function() {
-            $.scoreKeeper.reset();
-          }, 30 );
-        } );
-    }
-};
 
 
 
@@ -93,23 +55,3 @@ function setGradient( input ) {
 
 //$( 'input[type="range"]' ).trigger( 'input' );
 
-$(function() {
-  // weight_sliders are available on all pages via the menu
-  weightSliders.init();
-
-  $( document ).on( 'click keyup', hideWeightSlidersOnEvent );
-
-  function hideWeightSlidersOnEvent( e ) {
-    // hide weight-sliders if:
-    // keyup ESC or
-    // click from outside slider panel
-    // make it to document
-    if ( ( e.type === 'keyup' && e.keyCode === 27 ) ||
-        (e.type === 'click' && $(e.target).closest('#configure-panel').length === 0)) {
-      var configurePanel = $('#configure-panel');
-      if ( !configurePanel.hasClass( 'hidden' ) ) {
-        configurePanel.addClass( 'hidden' );
-      }
-    }
-  }
-});

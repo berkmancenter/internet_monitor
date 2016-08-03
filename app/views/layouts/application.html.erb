@@ -28,7 +28,6 @@
 
     <div class="data-nav">
       <%= link_to raw('countries &#9654;'), 'javascript:void(0);', { class: 'data-nav-countries' } %>
-      <%= link_to raw( '&nbsp;' ), Imon::Application.routes.url_helpers.map_path, class: 'map-link', title: 'INDEX MAP' %>
       <%= link_to raw( '&nbsp;' ), Imon::Application.config.imon['dashboard_url'], class: 'dashboard-link', title: 'DASHBOARD' %>
       <a href="javascript:void(0);" class="toggle-weight-sliders" title="MY SCORE">&nbsp;</a>
     </div>

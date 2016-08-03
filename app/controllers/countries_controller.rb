@@ -50,12 +50,5 @@ class CountriesController < ApplicationController
     @country = Country.find(params[:id])
     send_data File.open( Rails.root.join( 'app', 'assets', 'images', 'countries', "#{@country.iso3_code}.png" ), 'rb' ).read, type: 'image/png', disposition: 'inline'
   end
-
-  def map
-    #Removed with_enough_data (all countries have 0 indicator count)
-    @scored_countries = Country.desc_score.all
-    @unscored_countries = Country.without_enough_data
-
-    @map_countries = Country.with_enough_data.select( 'id,iso3_code,score,bbox' )
-  end
+  
 end

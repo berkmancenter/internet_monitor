@@ -15,8 +15,6 @@ Imon::Application.routes.draw do
       end
   end
 
-  match '/map' => 'countries#map', :as => :map
-
   namespace :v1 do
     match 'countries' => 'countries#index', as: :countries
     match 'countries/:id' => 'countries#show', as: :country

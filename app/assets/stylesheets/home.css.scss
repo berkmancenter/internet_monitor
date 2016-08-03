@@ -71,113 +71,16 @@ body.home {
     font-weight: normal;
   }
 
-  .blog{
+  .blog-posts{
       display: inline-block;
       margin: 0 2em;
       padding-bottom: 5em;
       vertical-align: top;
       width: 15em * 3;
-  }
 
-  .what-we-do {
-    display: inline-block;
-    margin: 0 2em;
-    padding-bottom: 5em;
-    vertical-align: top;
-    width: 15em * 3;
+      .recent_post{
 
-    ul {
-      margin: 0;
-      padding: 0;
-    }
-
-    li {
-      display: inline-block;
-      margin: 0;
-      padding: 0;
-      vertical-align: top;
-      width: 14em;
-    }
-
-    a {
-      text-decoration: none;
-    }
-
-    a > span {
-      display: block;
-    }
-
-    h3 {
-      color: darken( $gray, 20% );
-      font-weight: normal;
-      height: 2em;
-      margin: 0;
-      padding: .6em;
-      text-transform: uppercase;
-    }
-
-    p {
-      color: darken( $gray, 20% );
-      font-size: .8em;
-      height: 7em;
-      margin: 0;
-      padding: .6em;
-    }
-  }
-
-  .trending {
-    margin-top: 2em;
-
-    ul {
-      margin: 0;
-      padding: 0;
-    }
-
-    li {
-      display: inline-block;
-      list-style-type: none;
-      margin: 0;
-      width: auto;
-
-      a, a:visited {
-        color: $violet;
-        font-weight: bold;
-        text-decoration: none;
-
-        &:hover {
-          color: $orange;
-        }
       }
-    }
-
-    .static-map {
-      background: $light-blue;
-      display: inline-block;
-      height: 14em;
-      position: relative;
-      width: 14em;
-
-      img {
-        height: 100%;
-        position: absolute;
-        top: 0;
-        width: 100%;
-      }
-
-      .country-label {
-        position: absolute;
-        text-align: center;
-        top: 40%;
-        width: 100%;
-
-        span {
-          background: $white;
-          border-radius: .5em;
-          display: inline-block;
-          padding: .2em .5em;
-        }
-      }
-    }
   }
 
   section.twitter {
