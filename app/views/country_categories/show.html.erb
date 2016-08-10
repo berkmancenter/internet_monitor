@@ -15,63 +15,7 @@
 
   <div class="sub-content country-6-bg">
     <div class="main-column">
-      <% showing_data = false %>
-
-      <% if part_content( @country.iso3_code.downcase, @category.slug ).present? %>
-        <% showing_data = true %>
-        <div class="update block <%= @category.slug %>"><%= raw part_content( @country.iso3_code.downcase, @category.slug ) %></div>
-      <% end %>
-
-      <% sorted = @category.data.indicators.in_category_page.in_current_index.for( @country ).sort_by { |i| i.source.group.id } %>
-      <% grouped = sorted.group_by { |i| i.source.group } %>
-
-      <% if grouped.count > 0 %>
-        <% showing_data = true %>
-        <section class="block">
-        <% grouped.each { |g| %>
-          <%= render partial: indicators_partial( g[ 0 ] ), object: g[ 1 ], locals: { group: g[ 0 ] } %>
-        <% } %>
-        </section>
-      <% end %>
-
-      <%# country-based non-indicators for this category %>
-      <% @category.data.non_indicators.for( @country ).each do |datum| %>
-        <% if !datum.source.requires_page || refinery_page( datum ).any? %>
-          <% showing_data = true %>
-          <%= render partial: "data/#{datum.type.underscore}", locals: { datum: datum } %>
-        <% end %>
-      <% end %>
-
-      <%# language-based non-indicators for this category %>
-      <% @country.languages.each do |language| %>
-        <% @category.data.non_indicators.for( language ).each do |datum| %>
-          <% if !datum.source.requires_page || refinery_page( datum ).any? %>
-            <% showing_data = true %>
-            <%= render partial: "data/#{datum.type.underscore}", locals: { datum: datum } %>
-          <% end %>
-        <% end %>
-      <% end %>
-
-      <%# api-indicators for this category %>
-      <%# @category.datum_sources.are_api.each { |datum_source| %>
-          <%# showing_data = true %>
-          <%#= render partial: 'datum_sources/api_block', object: datum_source %>
-      <%# } %>
-
-      <% if !showing_data %>
-        <div class="block no-data" %><%= t 'country_categories.show.no_data', category: @category.slug, country: @country.name %></div>
-      <% end %>
-
-    </div>
-
-    <div class="sidebar-column">
-      <%= render partial: "countries/sidebar" %>
-
-      <% if @category.name == 'Control' %>
-        <section class="block">
-          <script src="//herdict.org/widgets/country.load.js"></script>
-        </section>
-      <% end %>
+        <div class="block no-data" %>Placeholder for white div</div>
     </div>
   </div>
 </article>
