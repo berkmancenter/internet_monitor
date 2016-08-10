@@ -1,4 +1,7 @@
 <div class="recent_post">
-  <h4><%= post.title %></h4>
-  <%= (post.body[0..140]+"...").delete "<p>" %>
+  <h1><%= link_to post.title, refinery.blog_post_path(post) %></h1>
+  <time datetime="<%=l post.published_at.to_date, :format => :default %>" class='posted_at'>
+    <%= t('created_at', :scope => 'refinery.blog.shared.posts', :when => l(post.published_at.to_date, :format => :long)) %>
+  </time>
+  <%= raw post.custom_teaser %>
 </div>
