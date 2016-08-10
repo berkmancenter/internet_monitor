@@ -77,9 +77,17 @@ body.home {
       padding-bottom: 5em;
       vertical-align: top;
       width: 15em * 3;
+      h4{
+        margin: 0px;
+      }
 
       .recent_post{
-
+        margin-bottom: 1em;
+      }
+      a {
+        color: #617085;
+        font-weight: bold;
+        text-decoration: none;
       }
   }
 
