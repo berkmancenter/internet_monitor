@@ -92,6 +92,9 @@ body.home {
     padding: 1em 1em 2em 1em;
     vertical-align: bottom;
     width: 15em * 2;
+    position: relative;
+    bottom: 6em;
+    left: 6em;
 
     h1 {
       color: $gray;

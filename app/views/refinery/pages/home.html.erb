@@ -12,9 +12,11 @@ Holder for block-links
 </div>
 
 <div class="blog-posts">
+  <h3> Recent Blog Posts </h3>
   <% recent_posts.each do |p| %>
     <%= render "/refinery/blog/posts/recent_post", post: p %>
   <% end %>
+  <%= link_to "See all blog posts", blog_root_path %>  
 </div>
 
 <% cache( 'thenetmonitor-tweets', expires_in: 5.minutes ) { %>
