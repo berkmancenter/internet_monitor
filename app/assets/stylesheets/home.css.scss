@@ -10,15 +10,15 @@ body.home {
   }
 
   .block-links {
-      background: gray;
-      height: 400px;
-      position: relative;
-      text-align: center;
-      color: white;
+    background: gray;
+    height: 400px;
+    position: relative;
+    text-align: center;
+    color: white;
 
-      //center text vertically
-      line-height: 400px;
-      vertical-align: center;
+    //center text vertically
+    line-height: 400px;
+    vertical-align: center;
   }
 
   .carousel {
@@ -72,15 +72,29 @@ body.home {
   }
 
   .blog-posts{
-      display: inline-block;
-      margin: 0 2em;
-      padding-bottom: 5em;
-      vertical-align: top;
-      width: 15em * 3;
+    display: inline-block;
+    margin: 0 2em;
+    padding-bottom: 5em;
+    vertical-align: top;
+    width: 15em * 3;
+    h4{
+      margin: 0px;
+    }
 
-      .recent_post{
-
+    .recent_post{
+      margin-bottom: 1em;
+      h1{
+        margin-bottom: 0px;
       }
+      time {
+        font-size: 0.8em;
+      }
+    }
+    a {
+      color: #617085;
+      font-weight: bold;
+      text-decoration: none;
+    }
   }
 
   section.twitter {
@@ -92,6 +106,8 @@ body.home {
     padding: 1em 1em 2em 1em;
     vertical-align: bottom;
     width: 15em * 2;
+    position: absolute;
+    right: .5em;
 
     h1 {
       color: $gray;

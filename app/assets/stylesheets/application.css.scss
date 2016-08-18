@@ -103,7 +103,6 @@ header {
     margin: 1em $data-nav-right 0 0;
     position: absolute;
     right:0; 
-    top: 32px;
 
     a, a:visited {
       background: $violet;
@@ -244,7 +243,6 @@ footer {
   height: 40px;
   margin: 0;
   position: relative;
-
   .footer-logo {
     bottom: 0;
     left: 8px;

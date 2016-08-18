@@ -8,9 +8,9 @@
   height: 0;
   overflow: hidden;
   position: absolute;
-  right: 32px + 42px + 42px + 128px - 16px + 7px - 134px;
+  right: 32px;
   text-align: right;
-  top: 82px;
+  top: 50px;
   @include transition-height;
   width: 256px + 22px;
   z-index: 1;
@@ -24,6 +24,9 @@
     list-style: none;
     margin: 0;
     padding: 0;
+    li{
+      height: 48px;
+    }
   }
 
   a, a:visited {
@@ -33,7 +36,7 @@
     font-size: .8em;
     height: 34px;
     margin: 0;
-    padding: .6em .8em;
+    padding-top: 7px;
     text-align: right;
     text-decoration: none;
     text-transform: uppercase;

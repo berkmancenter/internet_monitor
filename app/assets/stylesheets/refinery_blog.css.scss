@@ -1,5 +1,12 @@
 @import "colors";
 
+.read_more{
+  bottom: 15px;
+}
+.blog_post{
+  margin-bottom: 15px;
+  border-bottom: 1px solid rgba(0,0,0,0.1);
+}
 .refinery-blog-posts, .refinery-blog-categories {
   .main-content {
     strong {

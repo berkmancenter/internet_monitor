@@ -28,9 +28,9 @@
         <%= post.body.html_safe %>
       <% end %>
     </section>
-    <footer>
+    <footer class="read_more">
       <p>
-        <%= link_to t('read_more', :scope => 'refinery.blog.shared.posts'), refinery.blog_post_path(post) if blog_post_teaser_enabled? %>
+        <%= link_to 'Read More »', refinery.blog_post_path(post) if blog_post_teaser_enabled? %>
       </p>
     </footer>
   </article>
