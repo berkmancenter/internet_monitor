@@ -1,0 +1,27 @@
+<h1>Listing providers</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Short name</th>
+    <th>Url</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @providers.each do |provider| %>
+  <tr>
+    <td><%= provider.name %></td>
+    <td><%= provider.short_name %></td>
+    <td><%= provider.url %></td>
+    <td><%= link_to 'Show', provider %></td>
+    <td><%= link_to 'Edit', edit_provider_path(provider) %></td>
+    <td><%= link_to 'Destroy', provider, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Provider', new_provider_path %>

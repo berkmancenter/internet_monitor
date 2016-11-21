@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @provider.name %>
+</p>
+
+<p>
+  <b>Short name:</b>
+  <%= @provider.short_name %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @provider.url %>
+</p>
+
+
+<%= link_to 'Edit', edit_provider_path(@provider) %> |
+<%= link_to 'Back', providers_path %>

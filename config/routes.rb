@@ -1,4 +1,7 @@
 Imon::Application.routes.draw do
+  resources :providers
+
+
   resources :groups
 
 
