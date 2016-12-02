@@ -1,8 +1,9 @@
 class DatumSource < ActiveRecord::Base
-    attr_accessible :admin_name, :default_weight, :description, :display_original, :in_category_page, :in_sidebar, :requires_page, :normalized, :is_api, :source_name, :source_link, :max, :min, :public_name, :short_name, :retriever_class, :datum_type, :affects_score, :display_class, :display_prefix, :display_suffix, :precision, :multiplier, :normalized_name, :invert
+    attr_accessible :admin_name, :default_weight, :description, :display_original, :in_category_page, :in_sidebar, :requires_page, :normalized, :is_api, :source_name, :source_link, :max, :min, :public_name, :short_name, :retriever_class, :datum_type, :affects_score, :display_class, :display_prefix, :display_suffix, :precision, :multiplier, :normalized_name, :invert, :provider_id
 
     belongs_to :category
     belongs_to :group
+    belongs_to :provider
 
     has_many :data, :autosave => true, :dependent => :delete_all
     has_one :ingester
@@ -107,6 +108,8 @@ class DatumSource < ActiveRecord::Base
         relationships: {
           provider: {
             data: {
+              type: 'providers',
+              id: provider_id
             }
           }
         }

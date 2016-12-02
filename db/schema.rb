@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20161121184619) do
+ActiveRecord::Schema.define(:version => 20161202194508) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -105,6 +105,7 @@ ActiveRecord::Schema.define(:version => 20161121184619) do
     t.boolean  "invert",           :default => false
     t.string   "short_name"
     t.string   "display_class"
+    t.integer  "provider_id"
   end
 
   add_index "datum_sources", ["category_id"], :name => "index_datum_sources_on_category_id"

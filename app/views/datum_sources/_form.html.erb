@@ -47,8 +47,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :source_name %><br>
-    <%= f.text_field :source_name %>
+    <%= f.input :provider_id, as: :select, collection: Provider.order( :name ) %>
   </div>
 
   <div class="field">

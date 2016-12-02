@@ -13,6 +13,9 @@ Imon::Application.configure do
   config.consider_all_requests_local       = true
   config.action_controller.perform_caching = false
 
+  # See everything in the log (default is :info)
+  config.log_level = :debug
+
   # Don't care if the mailer can't send
   config.action_mailer.raise_delivery_errors = false
 
