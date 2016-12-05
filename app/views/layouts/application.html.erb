@@ -14,12 +14,36 @@
 </head>
 <body class="<%= "#{ params[ :controller ].gsub( '/', '-' ) unless params[ :controller ].nil? } #{ params[ :action ] } #{ ('show-' + params[ :path ]) if params[ :controller ] == 'refinery/pages' && params[ :action ] == 'show'}" %>">
 
+  <nav class="navbar navbar-inverse navbar-static-top im-nav">
+    <div class="container">
+      <ul class="im-nav-links">
+        <li class="active"><a href="/">Internet Monitor</a></li>
+        <li><a href="https://dashboard.thenetmonitor.org">Dashboard</a></li>
+        <li><a href="https://accesscheck.thenetmonitor.org">AccessCheck</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav class="navbar navbar-default ac-nav">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/"><span class="logo-image" title="Internet Monitor &ndash; Access Check"></span></a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to 'about', refinery::marketable_page_path('about') %></li>
+          <li><%= link_to 'research', refinery::marketable_page_path('research') %></li>
+          <li><%= link_to 'blog', refinery::blog_root_path %></li>
+          <li><%= link_to raw('countries &#9654;'), 'javascript:void(0);', { class: 'data-nav-countries' } %></li>
+        </ul>
+      </div><!--/.nav-collapse -->
+    </div>
+  </nav>
+
+
   <header>
     <div class="data-nav">
-      <%= link_to 'about', refinery::marketable_page_path('about') %>
-      <%= link_to 'research', refinery::marketable_page_path('research') %>
-      <%= link_to 'blog', refinery::blog_root_path %>
-      <%= link_to raw('countries &#9654;'), 'javascript:void(0);', { class: 'data-nav-countries' } %>
     </div>
 
     <h1><span style="display:none;">Internet Monitor</span> <%= link_to( raw( '<span class="logo-image"></span>' ), "/" ) %> </h1>

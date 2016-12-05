@@ -41,6 +41,8 @@ summary {
 
 @import "colors";
 
+@import url(https://fonts.googleapis.com/css?family=Lato:400,300,700|Oswald);
+
 html {
   color: $black;
   font-family: 'Open Sans', sans-serif;
@@ -63,6 +65,64 @@ body {
   margin: 0;
   padding: 0;
 }
+
+/* since we don't have bootstrap on this site yet */
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.im-nav {
+  background-color: #444;
+  height: 40px;
+  margin-bottom: 0px;
+  min-height: 40px;
+
+  .im-nav-links {
+    margin: 0;
+    padding: 0;
+    white-space: nowrap;
+
+    li {
+      display: inline-block;
+      list-style: none;
+      margin: 0;
+      overflow: hidden;
+      text-align: center;
+      width: 33%;
+
+      &.active {
+        background: #555;
+      }
+
+      &:nth-child(1):hover {
+        background: #f15c23;
+      }
+
+      &:nth-child(2):hover {
+        background: #5ec1a5;
+      }
+
+      &:nth-child(3):hover {
+        background: #aaa04e;
+      }
+
+      a {
+        color: white;
+        display: block;
+        font-family: "Oswald";
+        font-size: 1.3em;
+        height: 40px;
+        padding-top: 0.3em;
+        text-decoration: none;
+        width: 100%;
+      }
+    }
+  }
+}
+
 
 header {
   background: $white;
