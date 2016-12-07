@@ -24,38 +24,22 @@
     </div>
   </nav>
 
-  <nav class="navbar navbar-default ac-nav">
+  <nav class="navbar navbar-default im-home-nav">
     <div class="container">
       <div class="navbar-header">
-        <a class="navbar-brand" href="/"><span class="logo-image" title="Internet Monitor &ndash; Access Check"></span></a>
+        <a class="navbar-brand sm-hidden" href="/"><span class="logo-image" title="Internet Monitor"></span></a>
       </div>
       <div id="navbar" class="collapse navbar-collapse">
 
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to 'about', refinery::marketable_page_path('about') %></li>
-          <li><%= link_to 'research', refinery::marketable_page_path('research') %></li>
-          <li><%= link_to 'blog', refinery::blog_root_path %></li>
-          <li><%= link_to raw('countries &#9654;'), 'javascript:void(0);', { class: 'data-nav-countries' } %></li>
+          <li><%= link_to 'About', refinery::marketable_page_path('about') %></li>
+          <li><%= link_to 'Research', refinery::marketable_page_path('research') %></li>
+          <li><%= link_to 'Blog', refinery::blog_root_path %></li>
+          <li><%= link_to raw('Countries &#9654;'), 'javascript:void(0);', { class: 'data-nav-countries' } %></li>
         </ul>
       </div><!--/.nav-collapse -->
     </div>
   </nav>
-
-
-  <header>
-    <div class="data-nav">
-    </div>
-
-    <h1><span style="display:none;">Internet Monitor</span> <%= link_to( raw( '<span class="logo-image"></span>' ), "/" ) %> </h1>
-
-    <div id="configure-panel" class="hidden">
-        <h3>Configure</h3>
-
-        <p>Internet Monitor's Access Index is calculated based on data within four groups. By default, we weight each of these groups of data equally. You can use the sliders below to adjust the weights of these groups and create your own index. <%= link_to 'Learn more »', refinery::marketable_page_path( 'faq' ), class: 'learn-more' %></p>
-
-        <%= render :partial => 'shared/widgets/weight_sliders', locals: { groups: @groups, background_color: '#f15c23' } %>
-    </div>
-  </header>
 
   <section class="main-content">
     <%= render partial: 'countries/nav_list' %>

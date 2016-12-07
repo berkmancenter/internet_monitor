@@ -45,8 +45,7 @@ summary {
 
 html {
   color: $black;
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1em;
+  font-size: 10px;
 }
 
 // Formats debug_dump box 
@@ -62,7 +61,9 @@ html {
 
 body {
   background: $dark-gray;
+  font-family: Lato, sans-serif;
   font-size: 14px;
+  line-height: 1.42857143;
   margin: 0;
   padding: 0;
 }
@@ -73,6 +74,10 @@ body {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.sm-hidden {
+  display: none;
 }
 
 /* Small devices (tablets, 768px and up) */
@@ -87,6 +92,10 @@ body {
   .container {
     width: 970px;
   }
+
+  .sm-hidden {
+    display: inline-block;
+  }
 }
 
 /* Large devices (large desktops, 1200px and up) */
@@ -96,13 +105,64 @@ body {
   }
 }
 
+.navbar {
+  border: 1px solid transparent;
+  margin-bottom: 20px;
+  min-height: 50px;
+}
+
+.navbar-default {
+  background-color: #f8f8f8;
+  border-color: #e7e7e7;
+}
+
+.navbar-header {
+  display: inline-block;
+}
+
+.navbar-brand {
+  color: #777;
+  font-size: 18px;
+  margin-left: -15px;
+  padding: 7px 15px;
+  height: 50px;
+}
+
+.navbar-collapse {
+  display: inline-block;
+  float: right;
+}
+
+.navbar-right {
+  float: right;
+}
+
+.nav {
+  list-style-image: none;
+  list-style-position: outside;
+  list-style-type: none;
+
+  li {
+    display: block;
+    float: left;
+    position: relative;
+
+    a {
+      color: #777;
+      padding: 15px;
+      position: relative;
+      text-decoration: none;
+    }
+  }
+}
+
 /* IM main navigation */
 
 .im-nav {
   background-color: #444;
-  height: 40px;
+  height: 41px;
   margin-bottom: 0px;
-  min-height: 40px;
+  min-height: 41px;
 
   .im-nav-links {
     margin: 0;
@@ -149,153 +209,38 @@ body {
 
 /* IM Home navigation */
 
-header {
-  background: $white;
-  margin: 0;
+.navbar .container {
+  white-space: nowrap;
+}
 
-  nav {
-    background: $black;
+.im-home-nav {
+  min-height: 112px;
+  height: 112px;
 
-    ul {
-      display: inline-block;
-      margin: 0 0 0 2em;
-      padding: .5em 0;
-
-      li {
-        color: $white;
-        display: inline-block;
-        font-size: .6em;
-        font-weight: bold;
-        list-style-type: none;
-        margin: 0 .6em 0 0;
-        text-transform: uppercase;
-
-        a, a:visited {
-          color: $white;
-          text-decoration: none;
-        }
-
-        a:hover {
-          color: #F15C23;
-        }
-      }
-    }
-  }
-
-  $data-nav-right: 32px;
-
-  .data-nav {
-    margin: 1em $data-nav-right 0 0;
-    position: absolute;
-    right:0; 
-
-    a, a:visited {
-      background: $violet;
-      color: $white;
-      display: block;
-      float: left;
-      font-size: .8em;
-      height: 34px;
-      margin: 0 1px;
-      padding: .6em .8em;
-      position: relative;
-      text-decoration: none;
-      text-transform: uppercase;
-      width: 128px;
-
-      &:hover {
-        background: $light-blue;
-        color: $black;
-      }
-    }
-
-    .data-nav-countries {
-      border-radius: .25em 0 0 .25em;
-    }
-
-    .map-link, .dashboard-link, .toggle-weight-sliders {
-      width: 42px;
-    }
-
-    .map-link {
-      background: $violet url('world-icon.png') no-repeat;
-
-      &:hover {
-        background: $light-blue url('world-icon.png') no-repeat -42px 0;
-      }
-    }
-
-    .dashboard-link {
-      background: $violet url('world-icon.png') no-repeat 0 -34px;
-
-      &:hover {
-        background: $light-blue url('world-icon.png') no-repeat -42px -34px;
-      }
-    }
-
-    .toggle-weight-sliders {
-      background: $bright-gold url('gear.png') no-repeat;
-      border-radius: 0 .25em .25em 0;
-
-      &:hover {
-        background: $light-blue url('gear.png') no-repeat -42px 0;
-      }
-    }
-  }
-
-  h1 { 
+  .logo-image {
+    background: url("im_site_logo_hover.png");
     display: inline-block;
-    margin: 0 0 0 1em;
-    margin-bottom: 0;
-    margin-top: 0;
-
-    .logo-image {
-      background: url("im_site_logo_hover.png");
-      display: inline-block;
-      height: 100px;
-      width: 439px;
-    }
-
-    .logo-image:hover {
-      background-position: 0 -100px;
-    }
+    height: 100px;
+    width: 439px;
   }
 
-  .hidden {
-      display: none;
+  .logo-image:hover {
+    background-position: 0 -100px;
   }
+}
 
-  #configure-panel {
-    background: $light-blue;
-    border-radius: 0px 0px 8px 8px;
-    box-shadow: 3px 3px 10px #888;
-    font-size: .8em;
-    max-height: 600px;
-    overflow-x: hidden;
-    overflow-y: auto;
-    padding: 1em 2em;
-    position: absolute;
-    right: $data-nav-right + 1;
-    top: 82px;
-    width: 36em;
-    z-index: 2;
+.nav {
+  margin-top: 40px;
 
-    a, a:visited {
-      color: $violet;
-      font-weight: bold;
-      text-decoration: none;
+  li {
+    a {
+      font-size: 1.3em;
 
-      &:hover {
-        color: $orange;
-      }
-    }
-
-    .learn-more {
-      position: relative;
-      margin-left: 1em;
     }
   }
 }
+
+/* Other content */
 
 h1 {
   font-family: 'Roboto Condensed', sans-serif;
