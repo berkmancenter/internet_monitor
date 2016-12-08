@@ -1,5 +1,30 @@
 @import "colors";
 
+@media (min-width: 992px) {
+  body.home {
+    .im-home-nav {
+      min-height: 112px;
+      height: 112px;
+
+      .logo-image {
+        background: url("im_site_logo_hover.png");
+        display: inline-block;
+        height: 100px;
+        width: 439px;
+      }
+
+      .logo-image:hover {
+        background-position: 0 -100px;
+      }
+
+      .nav {
+        margin-top: 40px;
+      }
+    }
+
+  }
+}
+
 body.home {
   .main-content {
     white-space: nowrap;

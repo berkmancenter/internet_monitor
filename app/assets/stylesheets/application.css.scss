@@ -214,31 +214,30 @@ body {
 }
 
 .im-home-nav {
-  min-height: 112px;
-  height: 112px;
-
   .logo-image {
-    background: url("im_site_logo_hover.png");
+    background: url("imon_site_logo_small.png");
     display: inline-block;
-    height: 100px;
-    width: 439px;
+    height: 36px;
+    margin-top: 8px;
+    width: 232px;
   }
 
   .logo-image:hover {
-    background-position: 0 -100px;
+    background-position: 0 -36px;
   }
-}
+  
+  .nav {
+    margin-top: 12px;
 
-.nav {
-  margin-top: 40px;
+    li {
+      a {
+        font-size: 1.2em;
 
-  li {
-    a {
-      font-size: 1.3em;
-
+      }
     }
   }
 }
+
 
 /* Other content */
 
