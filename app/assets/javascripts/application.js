@@ -23,7 +23,7 @@
   $( '.data-nav-countries' ).click( function( e ) {
     e.preventDefault( );
     hideAllBut( '.countries-nav-list' );
-    $( '.countries-nav-list' ).toggleClass( 'expanded' );
+    $( '.countries-nav-list,.data-nav-countries' ).toggleClass( 'expanded' );
     return false;
   } );
 

@@ -1,23 +1,35 @@
 @import "colors";
 @import "mixins";
 
+@media (min-width: 992px) {
+  body.home {
+    .countries-nav-list {
+      top: 64px;
+    }
+  }
+
+}
+
+$cnl-width: 192px;
+
 .countries-nav-list {
   background: $violet;
-  border: solid 2px $white;
+  border: solid 2px $vlight-gray;
   border-top: none;
   height: 0;
   overflow: hidden;
   position: absolute;
-  right: 32px;
+  right: 0;
   text-align: right;
-  top: 50px;
-  @include transition-height;
-  width: 256px + 22px;
+  top: 38px;
+  width: $cnl-width + 22px;
   z-index: 1;
+
+  @include transition-height;
 
   &.expanded {
     overflow: auto;
-    height: 60%;
+    height: 600px;
   }
 
   ul {
@@ -25,22 +37,24 @@
     margin: 0;
     padding: 0;
     li{
-      height: 48px;
+      height: 32px;
     }
   }
 
   a, a:visited {
-    border-top: solid 2px $white;
+    border-top: solid 2px $vlight-gray;
     color: $white;
     display: block;
     font-size: .8em;
     height: 34px;
     margin: 0;
+    overflow: hidden;
+    padding-right: 4px;
     padding-top: 7px;
     text-align: right;
     text-decoration: none;
     text-transform: uppercase;
-    width: 256px;
+    width: $cnl-width;
 
     &:hover {
       background: $light-blue;

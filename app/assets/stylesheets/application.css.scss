@@ -40,6 +40,7 @@ summary {
 }
 
 @import "colors";
+@import "mixins";
 
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,700|Oswald);
 
@@ -112,7 +113,7 @@ body {
 }
 
 .navbar-default {
-  background-color: #f8f8f8;
+  background-color: $vlight-gray;
   border-color: #e7e7e7;
 }
 
@@ -121,7 +122,7 @@ body {
 }
 
 .navbar-brand {
-  color: #777;
+  color: $gray;
   font-size: 18px;
   margin-left: -15px;
   padding: 7px 15px;
@@ -194,7 +195,7 @@ body {
       }
 
       a {
-        color: white;
+        color: $white;
         display: block;
         font-family: "Oswald";
         font-size: 1.3em;
@@ -210,6 +211,7 @@ body {
 /* IM Home navigation */
 
 .navbar .container {
+  position: relative;
   white-space: nowrap;
 }
 
@@ -235,6 +237,19 @@ body {
 
       }
     }
+  }
+
+  .data-nav-countries:after {
+    content: "►";
+    display: inline-block;
+    margin-left: 2px;
+
+    @include transition-transform;
+  }
+
+    /*content: "▼";*/
+  .data-nav-countries.expanded:after {
+    transform: rotate(90deg);
   }
 }
 
