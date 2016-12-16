@@ -8,65 +8,17 @@
 <%#= render '/refinery/content_page' %>
 
 <div class="container block-links">
-  <div class="block-link">
-    <div class="block-link-icon">
-      <div class="block-link-icon-bg"></div>
-    </div>
-    <div class="block-link-body">
-      <h4 class="block-link-header">Dashboard</h4>
-      The Dashboard helps you explore, create, and share data visualizations about the Internet.
-    </div>
-  </div>
+  <%= render partial: 'block_link', locals: { block_name: 'dashboard' } %>
 
-  <div class="block-link">
-    <div class="block-link-icon">
-      <div class="block-link-icon-bg"></div>
-    </div>
-    <div class="block-link-body">
-      <h4 class="block-link-header">AccessCheck</h4>
-      AccessCheck lets users test websites in different countries to see whether they're available. 
-    </div>
-  </div>
+  <%= render partial: 'block_link', locals: { block_name: 'accesscheck' } %>
 
-  <div class="block-link">
-    <div class="block-link-icon">
-      <div class="block-link-icon-bg"></div>
-    </div>
-    <div class="block-link-body">
-      <h4 class="block-link-header">Country Views</h4>
-      Country Views provide collections of currated data and widgets relevant to each country.
-    </div>
-  </div>
+  <%= render partial: 'block_link', locals: { block_name: 'countryviews' } %>
 
-  <div class="block-link">
-    <div class="block-link-icon">
-      <div class="block-link-icon-bg"></div>
-    </div>
-    <div class="block-link-body">
-      <h4 class="block-link-header">Research</h4>
-      Research publications high-lighting some of the more fascinating developments and debates in the networked world.
-    </div>
-  </div>
+  <%= render partial: 'block_link', locals: { block_name: 'research' } %>
 
-  <div class="block-link">
-    <div class="block-link-icon">
-      <div class="block-link-icon-bg"></div>
-    </div>
-    <div class="block-link-body">
-      <h4 class="block-link-header">Data</h4>
-      Documentation of all of Internet Monitor's data streams, filtering data offerings, and APIs
-    </div>
-  </div>
+  <%= render partial: 'block_link', locals: { block_name: 'data' } %>
 
-  <div class="block-link">
-    <div class="block-link-icon">
-      <div class="block-link-icon-bg"></div>
-    </div>
-    <div class="block-link-body">
-      <h4 class="block-link-header">About</h4>
-      More information on Internet Monitor's efforts, organization, and offerings.
-    </div>
-  </div>
+  <%= render partial: 'block_link', locals: { block_name: 'about' } %>
 </div>
 
 <div class="container">
