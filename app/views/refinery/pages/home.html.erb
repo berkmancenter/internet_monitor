@@ -7,27 +7,87 @@
 
 <%#= render '/refinery/content_page' %>
 
-<div class="block-links">
-  Holder for block-links
+<div class="container block-links">
+  <div class="block-link">
+    <div class="block-link-icon">
+      <div class="block-link-icon-bg"></div>
+    </div>
+    <div class="block-link-body">
+      <h4 class="block-link-header">Dashboard</h4>
+      The Dashboard helps you explore, create, and share data visualizations about the Internet.
+    </div>
+  </div>
+
+  <div class="block-link">
+    <div class="block-link-icon">
+      <div class="block-link-icon-bg"></div>
+    </div>
+    <div class="block-link-body">
+      <h4 class="block-link-header">AccessCheck</h4>
+      AccessCheck lets users test websites in different countries to see whether they're available. 
+    </div>
+  </div>
+
+  <div class="block-link">
+    <div class="block-link-icon">
+      <div class="block-link-icon-bg"></div>
+    </div>
+    <div class="block-link-body">
+      <h4 class="block-link-header">Country Views</h4>
+      Country Views provide collections of currated data and widgets relevant to each country.
+    </div>
+  </div>
+
+  <div class="block-link">
+    <div class="block-link-icon">
+      <div class="block-link-icon-bg"></div>
+    </div>
+    <div class="block-link-body">
+      <h4 class="block-link-header">Research</h4>
+      Research publications high-lighting some of the more fascinating developments and debates in the networked world.
+    </div>
+  </div>
+
+  <div class="block-link">
+    <div class="block-link-icon">
+      <div class="block-link-icon-bg"></div>
+    </div>
+    <div class="block-link-body">
+      <h4 class="block-link-header">Data</h4>
+      Documentation of all of Internet Monitor's data streams, filtering data offerings, and APIs
+    </div>
+  </div>
+
+  <div class="block-link">
+    <div class="block-link-icon">
+      <div class="block-link-icon-bg"></div>
+    </div>
+    <div class="block-link-body">
+      <h4 class="block-link-header">About</h4>
+      More information on Internet Monitor's efforts, organization, and offerings.
+    </div>
+  </div>
 </div>
 
-<div class="blog-posts">
-  <h2> Recent Blog Posts </h2>
-  <% recent_posts.each do |p| %>
-    <%= render "/refinery/blog/posts/recent_post", post: p %>
-  <% end %>
-  <%= link_to "See all blog posts »", blog_root_path %>
-</div>
+<div class="container">
+  <div class="blog-posts">
+    <h2> Recent Blog Posts </h2>
+    <% recent_posts.each do |p| %>
+      <%= render "/refinery/blog/posts/recent_post", post: p %>
+    <% end %>
+    <%= link_to "See all blog posts »", blog_root_path %>
+  </div>
 
-<% cache( 'thenetmonitor-tweets', expires_in: 5.minutes ) { %>
-  <section class="twitter">
-    <!--<%= DateTime.now %>-->
-    <h1>Latest Tweets from @thenetmonitor</h1>
-    <ul class="tweets">
-      <% imon_tweets.each do |tweet| %>
-        <li><%= raw auto_link( tweet.text ) %></li>
-      <% end %>
-    </ul>
-    <div class="follow"><span>Follow</span> <a href="https://twitter.com/thenetmonitor">@thenetmonitor</a><br><span>on Twitter</span></div>
-  </section>
-<% } %>
+  <% cache( 'thenetmonitor-tweets', expires_in: 5.minutes ) { %>
+    <section class="twitter">
+      <!--<%= DateTime.now %>-->
+      <h1>Latest Tweets from @thenetmonitor</h1>
+      <ul class="tweets">
+        <% imon_tweets.each do |tweet| %>
+          <li><%= raw auto_link( tweet.text ) %></li>
+        <% end %>
+      </ul>
+      <div class="follow"><span>Follow</span> <a href="https://twitter.com/thenetmonitor">@thenetmonitor</a><br><span>on Twitter</span></div>
+    </section>
+  <% } %>
+</div>

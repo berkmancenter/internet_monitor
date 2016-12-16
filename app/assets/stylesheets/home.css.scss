@@ -25,6 +25,10 @@
   }
 }
 
+$block-link-width: 356px;
+$block-link-icon-size: 128px;
+$block-link-padding: 12px;
+
 body.home {
   .main-content {
     white-space: nowrap;
@@ -35,57 +39,46 @@ body.home {
   }
 
   .block-links {
-    background: gray;
-    height: 400px;
-    position: relative;
-    text-align: center;
-    color: white;
-
-    //center text vertically
-    line-height: 400px;
-    vertical-align: center;
-  }
-
-  .carousel {
-    background: darken( $violet, 10% );
-    height: 400px;
-    overflow: hidden;
-    position: relative;
-
-    a.carousel-item {
+    .block-link {
+      background: $gray;
+      color: $white;
       display: inline-block;
-      height: 400px;
+      height: $block-link-icon-size;
+      margin: $block-link-padding / 2;
       overflow: hidden;
-      width: 800px;
+      position: relative;
+      width: $block-link-width;
 
-      .font-size-large {
-        font-size: large;
+      .block-link-icon {
+        background: $light-gray;
+        display: block;
+        float: left;
+        height: $block-link-icon-size;
+        padding: $block-link-padding;
+        width: $block-link-icon-size;
+
+        .block-link-icon-bg {
+          background: $white;
+          display: block;
+          height: $block-link-icon-size - ( $block-link-padding * 2 );
+          width: $block-link-icon-size - ( $block-link-padding * 2 );
+        }
       }
 
-      .font-size-small {
-        font-size: small;
+      .block-link-body {
+        display: block;
+        float: left;
+        height: $block-link-icon-size;
+        overflow: hidden;
+        padding: $block-link-padding;
+        width: $block-link-width - $block-link-icon-size - 2px;
+
+        .block-link-header {
+          margin: 0;
+          padding: 0;
+          text-transform: uppercase;
+        }
       }
-
-      .text-align-center {
-        text-align: center;
-      }
-
-      .text-align-right {
-        text-align: right;
-      }
-    }
-
-    a.carousel-item, a.carousel-item:visited {
-      color: $light-gray;
-    }
-
-    a, a:visited {
-      text-decoration: none;
-    }
-
-    .film_roll_prev, .film_roll_next {
-      font-size: 50px !important;
-      line-height: 28px !important;
     }
   }
 
@@ -131,7 +124,6 @@ body.home {
     padding: 1em 1em 2em 1em;
     vertical-align: bottom;
     width: 15em * 2;
-    position: absolute;
     right: .5em;
 
     h1 {
