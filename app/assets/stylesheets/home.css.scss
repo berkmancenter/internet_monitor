@@ -1,4 +1,5 @@
 @import "colors";
+@import "mixins";
 
 @media (min-width: 992px) {
   body.home {
@@ -41,6 +42,7 @@ body.home {
   .block-links {
     .block-link {
       background: $gray;
+      border-radius: 6px;
       color: $white;
       display: inline-block;
       height: $block-link-icon-size;
@@ -50,7 +52,9 @@ body.home {
       width: $block-link-width;
 
       .block-link-icon {
-        background: $light-gray;
+        background: $dark-gray;
+        @include transition-bg;
+
         display: block;
         float: left;
         height: $block-link-icon-size;
@@ -58,10 +62,35 @@ body.home {
         width: $block-link-icon-size;
 
         .block-link-icon-bg {
-          background: $white;
+          background-image: url("block_links.png");
+          
           display: block;
           height: $block-link-icon-size - ( $block-link-padding * 2 );
           width: $block-link-icon-size - ( $block-link-padding * 2 );
+
+          &.countryviews {
+            background-position: 0 0;
+          }
+
+          &.dashboard {
+            background-position: -104px 0;
+          }
+
+          &.accesscheck {
+            background-position: -208px 0;
+          }
+          
+          &.research {
+            background-position: 0 -104px;
+          }
+
+          &.data {
+            background-position: -104px -104px;
+          }
+
+          &.about {
+            background-position: -208px -104px;
+          }
         }
       }
 
@@ -77,6 +106,34 @@ body.home {
           margin: 0;
           padding: 0;
           text-transform: uppercase;
+        }
+      }
+    }
+
+    a:hover .block-link {
+      .block-link-icon {
+        background-color: $violet;
+
+        &.countryviews {
+          background-color: $orange;
+        }
+
+        &.dashboard {
+          background-color: $cyan;
+        }
+
+        &.accesscheck {
+          background-color: $gold;
+        }
+
+        &.data {
+          background-color: $violet;
+        }
+      }
+
+      .block-link-body {
+        .block-link-header {
+          text-decoration: underline;
         }
       }
     }

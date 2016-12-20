@@ -14,3 +14,11 @@
   transition: transform .5s;
 }
 
+@mixin transition-bg {
+  -moz-transition: background .5s;
+  -webkit-transition: background .5s;
+  -o-transition: background .5s;
+  -ms-transition: background .5s;
+  transition: background .5s;
+}
+

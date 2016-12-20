@@ -8,17 +8,17 @@
 <%#= render '/refinery/content_page' %>
 
 <div class="container block-links">
-  <%= render partial: 'block_link', locals: { block_name: 'dashboard' } %>
+  <%= link_to render( partial: 'block_link', locals: { block_name: 'countryviews' } ), Imon::Application.routes.url_helpers.countries_path %>
 
-  <%= render partial: 'block_link', locals: { block_name: 'accesscheck' } %>
+  <%= link_to render( partial: 'block_link', locals: { block_name: 'dashboard' } ), 'https://dashboard.thenetmonitor.org' %>
 
-  <%= render partial: 'block_link', locals: { block_name: 'countryviews' } %>
+  <%= link_to render( partial: 'block_link', locals: { block_name: 'accesscheck' } ), 'https://accesscheck.thenetmonitor.org' %>
 
-  <%= render partial: 'block_link', locals: { block_name: 'research' } %>
+  <%= link_to render( partial: 'block_link', locals: { block_name: 'research' } ), refinery::marketable_page_path( 'research' ) %>
 
-  <%= render partial: 'block_link', locals: { block_name: 'data' } %>
+  <%= link_to render( partial: 'block_link', locals: { block_name: 'data' } ), 'https://data.thenetmonitor.org' %>
 
-  <%= render partial: 'block_link', locals: { block_name: 'about' } %>
+  <%= link_to render( partial: 'block_link', locals: { block_name: 'about' } ), refinery::marketable_page_path( 'about' ) %>
 </div>
 
 <div class="container">
