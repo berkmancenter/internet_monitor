@@ -5,11 +5,12 @@
   <h1 class="country-1-bg head-banner">
     <%= @country.name %>
   </h1>
-  <%= render partial: 'shared/widgets/category_selector' %>
 
   <div class="sub-content country-6-bg">
-    <div class="main-column">
-      <div class="update block">Placeholder for white div</div>
+    <div class="main-column container">
+      <div class="update block">
+        <%= raw update_content( @country.iso3_code.downcase ) %>
+      </div>
     </div>
 
   </div>

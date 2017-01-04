@@ -94,9 +94,6 @@
   }
 
   .main-column {
-    display: inline-block;
-    vertical-align: top;
-    width: 65%;
   }
 
   .sidebar-column {
@@ -112,7 +109,6 @@
     margin: .5em 0;
     min-height: 12em;
     padding: .5em;
-
 
     h1, h2, h3, h4 {
       text-transform: uppercase;
@@ -138,6 +134,12 @@
       color: $light-gray;
       font-size: .7em;
       margin-bottom: 0;
+    }
+
+    iframe {
+      border: 0 none;
+      display: inline-block;
+      overflow: hidden;
     }
   }
 

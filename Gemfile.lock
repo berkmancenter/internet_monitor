@@ -39,8 +39,10 @@ GEM
       activerecord (>= 3.0.0)
     babosa (1.0.2)
     bcrypt (3.1.11)
+    bcrypt (3.1.11-x64-mingw32)
     bcrypt (3.1.11-x86-mingw32)
     bcrypt-ruby (3.1.2)
+    bcrypt-ruby (3.1.2-x64-mingw32)
     bcrypt-ruby (3.1.2-x86-mingw32)
     buftok (0.2.0)
     builder (3.0.4)
@@ -116,11 +118,14 @@ GEM
     naught (1.0.0)
     nokogiri (1.6.7.2)
       mini_portile2 (~> 2.0.0.rc2)
+    nokogiri (1.6.7.2-x64-mingw32)
+      mini_portile2 (~> 2.0.0.rc2)
     nokogiri (1.6.7.2-x86-mingw32)
       mini_portile2 (~> 2.0.0.rc2)
     oj (2.7.3)
     orm_adapter (0.5.0)
     pg (0.18.4)
+    pg (0.18.4-x64-mingw32)
     pg (0.18.4-x86-mingw32)
     poltergeist (1.5.1)
       capybara (~> 2.1)
@@ -289,6 +294,7 @@ GEM
 
 PLATFORMS
   ruby
+  x64-mingw32
   x86-mingw32
 
 DEPENDENCIES
@@ -320,7 +326,7 @@ DEPENDENCIES
   uglifier (>= 1.0.3)
 
 RUBY VERSION
-   ruby 2.2.4p230
+   ruby 2.2.6p396
 
 BUNDLED WITH
-   1.12.5
+   1.13.7
