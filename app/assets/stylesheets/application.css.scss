@@ -288,15 +288,18 @@ h2 {
 }
 
 footer {
-  clear: both;
-  height: 40px;
+  background: $dark-gray;
   margin: 0;
+  padding-bottom: 4px;
   position: relative;
+
   .footer-logo {
     bottom: 0;
+    height: 32px;
     left: 8px;
     margin-top: 4px;
     position: absolute;
+    top: 0;
   }
 
   a.berkman-link {
@@ -306,6 +309,7 @@ footer {
     height: 32px;
     margin-top: 4px;
     position: absolute;
+    top: 0;
   }
 
   nav {
@@ -313,7 +317,7 @@ footer {
 
     ul {
       display: inline-block;
-      margin: .5em 0;
+      margin: 4px 0;
 
       li {
         color: #fefefe;
@@ -340,7 +344,7 @@ footer {
     color: $white;
     display: block;
     font-size: .7em;
-    padding: .25em 0;
+    padding: 0;
     text-align: center;
 
     a, a:visited {
