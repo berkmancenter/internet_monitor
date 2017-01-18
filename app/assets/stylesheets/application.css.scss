@@ -294,22 +294,18 @@ footer {
   position: relative;
 
   .footer-logo {
-    bottom: 0;
     height: 32px;
     left: 8px;
-    margin-top: 4px;
+    top: 4px;
     position: absolute;
-    top: 0;
   }
 
   a.berkman-link {
-    bottom: 0;
     display: inline-block;
     left: 56px;
     height: 32px;
-    margin-top: 4px;
+    top: 4px;
     position: absolute;
-    top: 0;
   }
 
   nav {
@@ -317,7 +313,7 @@ footer {
 
     ul {
       display: inline-block;
-      margin: 4px 0;
+      margin: 0;
 
       li {
         color: #fefefe;
