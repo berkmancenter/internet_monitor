@@ -18,6 +18,8 @@ Imon::Application.routes.draw do
       end
   end
 
+  get '/map', to: redirect( '/' )
+
   namespace :v1 do
     match 'countries' => 'countries#index', as: :countries
     match 'countries/:id' => 'countries#show', as: :country
