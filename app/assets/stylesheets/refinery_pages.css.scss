@@ -71,20 +71,34 @@
   background: $gold;
 }
 
-.refinery-pages.show.layout-report .main-content {
-
-  .body-margin {
-    width: 65%;
-    margin-left: auto;
-    margin-right: auto;
-
-    #body {
-      width: 100%;
-      margin: auto;
-      margin-top: .5em;
-      margin-bottom: .5em;
-    }
+.refinery-pages.show.layout-report {
+  .data-nav-countries {
+    color: $white;
+    display: inline-block;
+    font-size: 16pt;
+    position: absolute;
+    right: 20%;
+    top: 3.25em;
   }
 
+  .countries-nav-list {
+    right: 20%;
+    top: 8em;
+  }
+
+  .main-content {
+    .body-margin {
+      width: 65%;
+      margin-left: auto;
+      margin-right: auto;
+
+      #body {
+        width: 100%;
+        margin: auto;
+        margin-top: .5em;
+        margin-bottom: .5em;
+      }
+    }
+  }
 }
 

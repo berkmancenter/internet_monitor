@@ -24,6 +24,9 @@
     </div>
   </nav>
 
+  <%= link_to 'Switch Countries', 'javascript:void(0);', { class: 'data-nav-countries' } %>
+  <%= render partial: 'countries/nav_list' %>
+
   <section class="main-content">
     <div class="body-margin">
       <%= yield %>

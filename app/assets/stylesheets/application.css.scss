@@ -244,20 +244,19 @@ a {
     }
   }
 
-  .data-nav-countries:after {
-    content: "►";
-    display: inline-block;
-    margin-left: 2px;
-
-    @include transition-transform;
-  }
-
-    /*content: "▼";*/
-  .data-nav-countries.expanded:after {
-    transform: rotate(90deg);
-  }
 }
 
+.data-nav-countries:after {
+  content: "►";
+  display: inline-block;
+  margin-left: 2px;
+
+  @include transition-transform;
+}
+
+.data-nav-countries.expanded:after {
+  transform: rotate(90deg);
+}
 
 /* Other content */
 
