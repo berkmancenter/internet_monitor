@@ -73,8 +73,17 @@
 
 .refinery-pages.show.layout-report .main-content {
 
-  #body {
-    width: 100%;
+  .body-margin {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+
+    #body {
+      width: 100%;
+      margin: auto;
+      margin-top: .5em;
+      margin-bottom: .5em;
+    }
   }
 
 }

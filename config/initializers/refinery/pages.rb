@@ -6,7 +6,7 @@ Refinery::Pages.configure do |config|
   # end
 
   # Configure global page default parts
-  config.default_parts = ["Body", "Side Body", 'Access', 'Control', 'Activity']
+  config.default_parts = ['Body', 'Side Body']
 
   # Configure whether to allow adding new page parts
   config.new_page_parts = true
@@ -39,9 +39,9 @@ Refinery::Pages.configure do |config|
   # Set this to true to fully expand the page hierarchy in the admin
   # config.auto_expand_admin_tree = true
 
-  config.layout_template_whitelist = ["application", "report"]
+  config.layout_template_whitelist = ['application', 'report', 'report_country']
 
-  # config.view_template_whitelist = ["home", "show"]
+  # config.view_template_whitelist = ['home', 'show']
 
   config.use_layout_templates = true
 
