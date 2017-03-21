@@ -5,6 +5,11 @@ module RefineryHelper
     content = page.first.content_for( part_name ) unless page.empty?
   end
 
+  def sibling_pages
+    # return the slugs of all sibling of the current page in refinery, including this one
+    @page.parent.children.pluck( :slug )
+  end
+
   # return last 3 blog posts 
   def recent_posts
     posts = Refinery::Blog::Post.order("published_at DESC").first(3)

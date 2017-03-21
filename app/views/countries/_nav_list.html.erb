@@ -1,6 +1,6 @@
 <div class="countries-nav-list">
   <ul>
-    <% Country.order(:name).all.each do |c| %>
+    <% nav_list.each do |c| %>
       <li><%= link_to c.name, Imon::Application.routes.url_helpers.country_path( c ) %></li>
     <% end %>
   </ul>

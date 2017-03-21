@@ -24,8 +24,8 @@
     </div>
   </nav>
 
-  <%= link_to 'Switch Countries', 'javascript:void(0);', { class: 'data-nav-countries' } %>
-  <%= render partial: 'countries/nav_list' %>
+  <%= link_to 'Switch Country', 'javascript:void(0);', { class: 'data-nav-countries' } %>
+  <%= render partial: 'refinery/nav_list', object: @page.parent.children %>
 
   <section class="main-content">
     <div class="body-margin">

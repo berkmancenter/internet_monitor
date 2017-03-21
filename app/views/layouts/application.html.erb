@@ -37,7 +37,7 @@
           <li><%= link_to 'Blog', refinery::blog_root_path %></li>
           <li><%= link_to raw('Countries'), 'javascript:void(0);', { class: 'data-nav-countries' } %></li>
         </ul>
-        <%= render partial: 'countries/nav_list' %>
+        <%= render partial: 'countries/nav_list', object: Country.order(:name).all %>
       </div><!--/.nav-collapse -->
     </div>
   </nav>
