@@ -35,14 +35,15 @@ class CountriesController < ApplicationController
 
     slug = @country.iso3_code.downcase
 
-    if params[:category_slug]
-      @category = Category.find(params[:category_slug])
-      render "country_categories/show"
+    page = Refinery::Page.find_by_slug slug
+    cp_page = Refinery::Page.find_by_slug( 'country-profiles' )
+
+    if page.present?
+      redirect_to "/#{page.url[ :path ].join( '/' )}"
+    elsif cp_page.present?
+      redirect_to "/#{cp_page.url[ :path ].join( '/' )}"
     else
-      respond_to do |format|
-        format.html
-        format.any(:xml, :json)
-      end
+      redirect_to root_path
     end
   end
 

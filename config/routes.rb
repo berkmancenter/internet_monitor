@@ -1,4 +1,6 @@
 Imon::Application.routes.draw do
+  resources :countries
+
   get '/map', to: redirect( '/' )
 
   namespace :v1 do
