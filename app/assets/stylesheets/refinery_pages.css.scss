@@ -77,18 +77,18 @@
     display: inline-block;
     font-size: 16pt;
     position: absolute;
-    right: 20%;
+    right: 2em;
     top: 3.25em;
   }
 
   .countries-nav-list {
-    right: 20%;
+    right: 2em;
     top: 8em;
   }
 
   .main-content {
     .body-margin {
-      width: 65%;
+      width: 100%;
       margin-left: auto;
       margin-right: auto;
 
@@ -97,6 +97,26 @@
         margin: auto;
         margin-top: .5em;
         margin-bottom: .5em;
+      }
+    }
+  }
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .refinery-pages.show.layout-report {
+    .data-nav-countries {
+      right: 20%;
+    }
+
+    .countries-nav-list {
+      right: 20%;
+    }
+
+    .main-content {
+      .body-margin {
+        width: 65%;
       }
     }
   }
