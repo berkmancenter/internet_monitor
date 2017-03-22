@@ -70,11 +70,9 @@
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
-  .refinery-pages.show {
-    .main-content {
-      .body-margin {
-        width: 65%;
-      }
+  .refinery-pages.show .main-content, .refinery-blog-posts .main-content, .refinery-blog-categories .main-content {
+    .body-margin {
+      width: 65%;
     }
   }
 }
