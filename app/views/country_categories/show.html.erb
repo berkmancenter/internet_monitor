@@ -1,17 +1,9 @@
 <% provide :title, "#{@country.name} #{@category.name}" %>
 
-<% content_for :javascripts do %>
-  <%= javascript_include_tag( 'd3.v3.min.js' ) %>
-  <%= javascript_include_tag( 'widgets/morningside.js' ) %>
-<% end if @category.slug == 'activity' %>
-
-
 <article class="view country-data-view">
   <h1 class="<%= "#{@category.slug}-1-bg" %> head-banner">
     <span class="category-name"><%= @category.name %></span> in <%= @country.name %>
-    <%= render( partial: 'countries/score_pill', locals: { country: @country } ) if @category.slug == 'access' %>
   </h1>
-  <%= render partial: 'shared/widgets/category_selector' %>
 
   <div class="sub-content country-6-bg">
     <div class="main-column">

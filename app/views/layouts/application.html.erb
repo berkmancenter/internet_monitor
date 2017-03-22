@@ -37,13 +37,15 @@
           <li><%= link_to 'Blog', refinery::blog_root_path %></li>
           <li><%= link_to raw('Countries'), 'javascript:void(0);', { class: 'data-nav-countries' } %></li>
         </ul>
-        <%= render partial: 'countries/nav_list', object: Country.order(:name).all %>
+        <%= render partial: 'refinery/nav_list', object: Refinery::Page.find_by_slug( 'country-profiles' ).children unless Refinery::Page.find_by_slug( 'country-profiles' ).nil? %>
       </div><!--/.nav-collapse -->
     </div>
   </nav>
 
   <section class="main-content">
-    <%= yield %>
+    <div class="body-margin">
+      <%= yield %>
+    </div>
   </section>
 
   <footer>

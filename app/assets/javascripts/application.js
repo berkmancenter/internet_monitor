@@ -13,7 +13,6 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree ./sitewide
-//= require jquery.ba-bbq.min
 
 (function() {
   function hideAllBut( s ) {

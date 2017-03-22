@@ -1,5 +1,0 @@
-<% suser = defined?( show_user ) ? show_user : true %>
-<span class="score-pill <%= 'no-user' unless suser %>" data-country-id="<%= country.id %>">
-  <%= link_to country.name, Imon::Application.routes.url_helpers.category_country_path( country, category_slug: 'access' ), class: 'country-name', title: country.name %>
-  <%#Removed rank and score portion of the pill%>
-</span>

@@ -1,14 +1,7 @@
 <% provide :title, 'Home' %>
 
-<% content_for :javascripts do %>
-  <%= javascript_include_tag( 'jquery.film_roll.min.js' ) %>
-  <%= javascript_include_tag( 'home.js' ) %>
-<% end %>
-
-<%#= render '/refinery/content_page' %>
-
 <div class="container block-links">
-  <%= link_to render( partial: 'block_link', locals: { block_name: 'countryviews' } ), Imon::Application.routes.url_helpers.countries_path %>
+  <%= link_to render( partial: 'block_link', locals: { block_name: 'countryviews' } ), refinery::marketable_page_path( 'country-profiles' ) %>
 
   <%= link_to render( partial: 'block_link', locals: { block_name: 'dashboard' } ), 'https://dashboard.thenetmonitor.org' %>
 

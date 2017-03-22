@@ -1,23 +1,4 @@
 Imon::Application.routes.draw do
-  resources :providers
-
-
-  resources :groups
-
-
-  resources :datum_sources, :country_categories, :categories, :languages, :country_languages, :data
-
-  resources :countries do
-      member do
-          get 'thumb'
-          match ':category_slug' => 'countries#show', :as => :category
-      end
-
-      collection do
-          get 'cache_thumbs'
-      end
-  end
-
   get '/map', to: redirect( '/' )
 
   namespace :v1 do
