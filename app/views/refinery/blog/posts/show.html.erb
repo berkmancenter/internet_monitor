@@ -4,10 +4,6 @@
       <%= render 'post' %>
     <% end %>
   </div>
-
-  <% if Refinery::Blog::Post.comments_allowed? %>
-    <%= render 'comments'%>
-  <% end %>
 <% end %>
 
 <%= render :partial => '/refinery/blog/shared/body_content_right' %>
