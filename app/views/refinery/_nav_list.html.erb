@@ -1,7 +1,7 @@
 <div class="countries-nav-list">
   <ul>
     <% nav_list.each do |p| %>
-      <li><%= link_to p.title, refinery::marketable_page_path( p ) %></li>
+      <li><%= link_to p.title, "/#{p.url[ :path ].join( '/' )}" %></li>
     <% end %>
   </ul>
 </div>
