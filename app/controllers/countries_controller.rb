@@ -43,7 +43,7 @@ class CountriesController < ApplicationController
     elsif cp_page.present?
       redirect_to "/#{cp_page.url[ :path ].join( '/' )}"
     else
-      redirect_to root_path
+      redirect_to refinery_path
     end
   end
 
