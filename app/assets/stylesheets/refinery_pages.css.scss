@@ -73,6 +73,10 @@
   .refinery-pages.show .main-content, .refinery-blog-posts .main-content, .refinery-blog-categories .main-content {
     .body-margin {
       width: 65%;
+
+      #body {
+        padding: 1em 8em;
+      }
     }
   }
 }
@@ -96,6 +100,10 @@
 
 /* Medium devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+  #body {
+    font-size: 16px;
+  }
+
   .refinery-pages.show.layout-report {
     .data-nav-countries {
       right: 20%;
