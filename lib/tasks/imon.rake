@@ -30,6 +30,15 @@ namespace :imon do
     replace_static_source args[ :row_number ], args[ :iso3_code ]
   end
 
+  desc 'Migrate country profile pages in RefineryCMS to be the correct names'
+  task :migrate_country_profiles_081 => [:environment] do |task|
+    Rails.logger.info '[mcp] start migrate_country_profiles_081'
+
+    mcp_081
+
+    Rails.logger.info '[mcp] end migrate_country_profiles_081'
+  end
+
   desc 'Setup original 2014 index and migrate indicator admin_names'
   task :migrate_indicators_2015 => [:environment] do |task|
     if Indicator.in_index( '2014' ).count == 0
@@ -180,6 +189,30 @@ def import_country_bboxes( filename )
       country.save
     end
   }
+end
+
+def mcp_081
+    countries_page = Refinery::Page.find_by_slug( 'zzz-countries' ) || Refinery::Page.find_by_slug( 'country-profiles' )
+
+    if countries_page.nil?
+      Rails.logger.info '[mcp] cannot find zzz-countries or country-profiles page, exiting'
+      return
+    end
+
+    countries_page.update_attributes title: 'Country Profiles'
+
+    countries_page.children.each { |cp|
+      Rails.logger.info "[mcp] page: #{cp.title}"
+      c = Country.find_by_iso3_code( cp.title ) || Country.find_by_iso3_code( cp.custom_slug )
+      if c.present?
+        Rails.logger.info "[mcp] country: #{c.name}"
+        cp.update_attributes title: c.name, menu_title: c.iso3_code.downcase
+      else
+        Rails.logger.info "[mcp] country: nil"
+      end
+    }
+    
+
 end
 
 def replace_static_source( row_number, iso3_code )
