@@ -259,8 +259,16 @@ a {
 
 /* Other content */
 
-h1 {
+h1, h2, h3 {
   font-family: 'Roboto Condensed', sans-serif;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.2em;
 }
 
 h1.head-banner, h1#body_content_title {
@@ -279,10 +287,6 @@ h1.head-banner, h1#body_content_title {
 
 .sub-content {
   padding: .5em 1em;
-}
-
-h2 {
-  font-size: 1.1em;
 }
 
 footer {
