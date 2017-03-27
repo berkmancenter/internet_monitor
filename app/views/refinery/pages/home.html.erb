@@ -15,18 +15,18 @@
 </div>
 
 <div class="container">
-  <div class="blog-posts">
+  <section class="blog-posts">
     <h2> Recent Blog Posts </h2>
     <% recent_posts.each do |p| %>
       <%= render "/refinery/blog/posts/recent_post", post: p %>
     <% end %>
     <%= link_to "See all blog posts »", blog_root_path %>
-  </div>
+  </section>
 
   <% cache( 'thenetmonitor-tweets', expires_in: 5.minutes ) { %>
     <section class="twitter">
       <!--<%= DateTime.now %>-->
-      <h1>Latest Tweets from @thenetmonitor</h1>
+      <h2>Tweets from @thenetmonitor</h2>
       <ul class="tweets">
         <% imon_tweets.each do |tweet| %>
           <li><%= raw auto_link( tweet.text ) %></li>

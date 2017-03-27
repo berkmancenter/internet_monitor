@@ -173,21 +173,12 @@ body.home {
   }
 
   section.twitter {
-    background: darken( $white, 5% );
-    border-radius: 1em;
+    border-left: 2px solid $light-gray;
     display: inline-block;
-    font-size: .8em;
-    margin: 1em;
+    margin: 0;
     padding: 1em 1em 2em 1em;
-    vertical-align: bottom;
+    vertical-align: top;
     width: 15em * 2;
-    right: .5em;
-
-    h1 {
-      color: $gray;
-      margin-top: 0;
-      text-transform: uppercase;
-    }
 
     ul {
       list-style-type: none;
