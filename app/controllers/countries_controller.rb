@@ -31,9 +31,9 @@ class CountriesController < ApplicationController
   end
 
   def show
-    @country = Country.find(params[:id])
+    @country = Country.find(params[:id]) if Country.exists?( params[:id] )
 
-    slug = @country.iso3_code.downcase
+    slug = @country.iso3_code.downcase unless @country.nil?
 
     page = Refinery::Page.find_by_slug slug
     cp_page = Refinery::Page.find_by_slug( 'country-profiles' )
