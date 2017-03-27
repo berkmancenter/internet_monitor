@@ -203,7 +203,7 @@ def mcp_081
 
     countries_page.children.each { |cp|
       Rails.logger.info "[mcp] page: #{cp.title}"
-      c = Country.find_by_iso3_code( cp.title ) || Country.find_by_iso3_code( cp.custom_slug )
+      c = Country.find_by_iso3_code( cp.title.upcase ) || Country.find_by_iso3_code( cp.menu_title.upcase )
       if c.present?
         Rails.logger.info "[mcp] country: #{c.name}"
         cp.update_attributes title: c.name, menu_title: c.iso3_code.downcase
@@ -211,8 +211,6 @@ def mcp_081
         Rails.logger.info "[mcp] country: nil"
       end
     }
-    
-
 end
 
 def replace_static_source( row_number, iso3_code )
