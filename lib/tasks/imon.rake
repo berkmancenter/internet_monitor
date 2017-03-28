@@ -204,9 +204,16 @@ def mcp_081
     countries_page.children.each { |cp|
       Rails.logger.info "[mcp] page: #{cp.title}"
       c = Country.find_by_iso3_code( cp.title.upcase ) || Country.find_by_iso3_code( cp.menu_title.upcase )
+      sections = %w[Body Access Control Activity]
       if c.present?
         Rails.logger.info "[mcp] country: #{c.name}"
         cp.update_attributes title: c.name, menu_title: c.iso3_code.downcase
+        contents = sections.map { |s| "<h2>#{s == 'Body' ? 'Overview' : s}</h2>#{cp.content_for s}" }
+        # reduce Body section to first line
+        contents[0] = contents[0].lines[0].strip
+        new_body = contents.join "\r\n"
+        Rails.logger.info "[mcp] new_body: #{new_body}"
+        cp.part_with_title( 'Body' ).update_attributes body: new_body
       else
         Rails.logger.info "[mcp] country: nil"
       end

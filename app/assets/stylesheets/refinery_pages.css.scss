@@ -19,6 +19,11 @@
     background: $violet;
   }
 
+  /* Hide old category sections for now */
+  section#access, section#control, section#activity {
+    display: none;
+  }
+
   .body-margin {
     width: 100%;
     margin-left: auto;
@@ -114,4 +119,5 @@
     }
   }
 }
+
 
