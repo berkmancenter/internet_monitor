@@ -39,6 +39,37 @@ namespace :imon do
     Rails.logger.info '[mcp] end migrate_country_profiles_081'
   end
 
+  desc 'Extract widget embeds from a dasboard page to a country page in refinery'
+  task :import_country_widgets => [:environment] do |task|
+    Rails.logger.info '[icw] start import_country_widgets'
+
+    countries = [
+      [ 'kaz', '4E6gxFQvoPhZgFHxs', ["S272BfKeDk6rS3do4", "n73BhTf2udHw7ceA3", "jxipjyXFLZafXyBQ8", "Y7L595qCsfBETWLGy", "FZLXnrfkkBkyuugkD", "84vK9RQbv7HeFL8zi", "i9rqYvZmBQYAixyAh", "TQe6YdmaNfcdnzTx2", "fjeuaXZjmpLmK6uiR", "dmfHbkkSEEqSK8SW8"] ]
+    ]
+
+    country_page_parent = Refinery::Page.find_by_slug '2016-annual-report'
+
+    countries.each { |c|
+      Rails.logger.info "[icw] country: #{c[0]}"
+      country_page = country_page_parent.children.find_by_slug c[0]
+
+      if country_page.nil?
+        Rails.logger.info "[icw] creating page for #{c[0]}"
+
+        country = Country.find_by_iso3_code c[0].upcase
+        if country.nil?
+          Rails.logger.error "[icw] cannot find country for #{c[0]}"
+        else
+          country_page = country_page_parent.children.create title: country.name, menu_title: country.iso3_code, layout_template: 'report_country'
+        end
+      end
+
+      import_country_widgets country_page, c[1], c[2]
+    }
+
+    Rails.logger.info '[icw] end import_country_widgets'
+  end
+
   desc 'Setup original 2014 index and migrate indicator admin_names'
   task :migrate_indicators_2015 => [:environment] do |task|
     if Indicator.in_index( '2014' ).count == 0
@@ -218,6 +249,48 @@ def mcp_081
         Rails.logger.info "[mcp] country: nil"
       end
     }
+end
+
+def widget_embed( dashboard_host, widget_id )
+  %{<iframe src="#{dashboard_host}/widgets/#{widget_id}/embed" width="480" height="240" frameborder="0" scrolling="no"></iframe>}
+end
+
+def import_country_widgets( cp, dashboard_id, widget_ids )
+  dashboard_host = 'https://dashboard.thenetmonitor.org'
+  dashboard_root = "#{dashboard_host}/dashboards"
+  dashboard_url = "#{dashboard_root}/#{dashboard_id}"
+
+  if cp.nil?
+    Rails.logger.error "[icw] cp: nil, dashboard_id: #{dashboard_id}"
+    return
+  end
+
+  Rails.logger.info "[icw] cp: #{cp.slug}, dashboard_id: #{dashboard_id}, widget_count: #{widget_ids.count}"
+
+  if !dashboard_id.present?
+    return
+  end
+
+  body = ''
+
+  widget_ids.each { |wid|
+    body += "#{widget_embed dashboard_host, wid}\r\n"
+  }
+
+  Rails.logger.info "[icww] #{body}"
+
+  body_part = cp.part_with_title( 'Body' )
+  
+  if body_part.nil?
+    cp.parts << Refinery::PagePart.new( title: 'Body', body: body )
+
+  else
+    body_part.update_attributes body: body
+  end
+
+  # cp = cps.children.create title: 'Canada', menu_title: 'can', layout_template: 'report_country'
+  # cp.parts << Refinery::PagePart.new( title: 'Side Body', body: '<p>side canada</p>' )
+
 end
 
 def replace_static_source( row_number, iso3_code )
