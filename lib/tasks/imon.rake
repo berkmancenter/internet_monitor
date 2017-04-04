@@ -43,8 +43,12 @@ namespace :imon do
   task :import_country_widgets => [:environment] do |task|
     Rails.logger.info '[icw] start import_country_widgets'
 
+    #  for later
+    #  JSON.stringify( $( '.widget' ).map( function( ) { let widget = $(this); return { mid: widget.data( 'mid' ), cx: widget.data( 'sizex' ), cy: widget.data( 'sizey' ), row: widget.data( 'row' ), col: widget.data( 'col' ) } } ).toArray() )
+    # 
+
     countries = [
-      [ 'kaz', '4E6gxFQvoPhZgFHxs', ["S272BfKeDk6rS3do4", "n73BhTf2udHw7ceA3", "jxipjyXFLZafXyBQ8", "Y7L595qCsfBETWLGy", "FZLXnrfkkBkyuugkD", "84vK9RQbv7HeFL8zi", "i9rqYvZmBQYAixyAh", "TQe6YdmaNfcdnzTx2", "fjeuaXZjmpLmK6uiR", "dmfHbkkSEEqSK8SW8"] ]
+      [ 'kaz', '4E6gxFQvoPhZgFHxs', %|[{"mid":"S272BfKeDk6rS3do4","cx":2,"cy":1,"row":4,"col":1},{"mid":"jxipjyXFLZafXyBQ8","cx":3,"cy":1,"row":5,"col":1},{"mid":"Y7L595qCsfBETWLGy","cx":2,"cy":1,"row":2,"col":1},{"mid":"FZLXnrfkkBkyuugkD","cx":2,"cy":1,"row":2,"col":3},{"mid":"84vK9RQbv7HeFL8zi","cx":2,"cy":1,"row":1,"col":1},{"mid":"i9rqYvZmBQYAixyAh","cx":2,"cy":1,"row":1,"col":3},{"mid":"TQe6YdmaNfcdnzTx2","cx":2,"cy":2,"row":3,"col":3},{"mid":"fjeuaXZjmpLmK6uiR","cx":2,"cy":1,"row":3,"col":1}]| ]
     ]
 
     country_page_parent = Refinery::Page.find_by_slug '2016-annual-report'
@@ -64,7 +68,7 @@ namespace :imon do
         end
       end
 
-      import_country_widgets country_page, c[1], c[2]
+      import_country_widgets country_page, c[1], JSON.parse( c[2] )
     }
 
     Rails.logger.info '[icw] end import_country_widgets'
@@ -251,11 +255,11 @@ def mcp_081
     }
 end
 
-def widget_embed( dashboard_host, widget_id )
-  %{<iframe src="#{dashboard_host}/widgets/#{widget_id}/embed" width="480" height="240" frameborder="0" scrolling="no"></iframe>}
+def widget_embed( dashboard_host, widget_dsc )
+  %{<iframe src="#{dashboard_host}/widgets/#{widget_dsc[ 'mid' ]}/embed" width="480" height="240" frameborder="0" scrolling="no"></iframe>}
 end
 
-def import_country_widgets( cp, dashboard_id, widget_ids )
+def import_country_widgets( cp, dashboard_id, widget_dscs )
   dashboard_host = 'https://dashboard.thenetmonitor.org'
   dashboard_root = "#{dashboard_host}/dashboards"
   dashboard_url = "#{dashboard_root}/#{dashboard_id}"
@@ -265,7 +269,7 @@ def import_country_widgets( cp, dashboard_id, widget_ids )
     return
   end
 
-  Rails.logger.info "[icw] cp: #{cp.slug}, dashboard_id: #{dashboard_id}, widget_count: #{widget_ids.count}"
+  Rails.logger.info "[icw] cp: #{cp.slug}, dashboard_id: #{dashboard_id}, widget_count: #{widget_dscs.count}"
 
   if !dashboard_id.present?
     return
@@ -273,8 +277,8 @@ def import_country_widgets( cp, dashboard_id, widget_ids )
 
   body = ''
 
-  widget_ids.each { |wid|
-    body += "#{widget_embed dashboard_host, wid}\r\n"
+  widget_dscs.each { |wdsc|
+    body += "#{widget_embed dashboard_host, wdsc}\r\n"
   }
 
   Rails.logger.info "[icww] #{body}"
