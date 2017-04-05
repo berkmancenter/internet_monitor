@@ -1,4 +1,5 @@
 @import "colors";
+@import "mixins";
 
 .refinery-pages.show .main-content, .refinery-blog-posts .main-content, .refinery-blog-categories .main-content {
   background: lighten( $violet, 40% );
@@ -12,6 +13,28 @@
     &:hover {
       color: $orange;
       text-decoration: underline;
+    }
+  }
+
+  #body_content .page-nav {
+    li {
+      display: inline-block;
+      list-style: none;
+    }
+
+    a, a:visited {
+      background: $vlight-gray;
+      border-radius: .5em;
+      margin: .5em 1em;
+      padding: 1em 2em;
+
+      @include transition-bg;
+
+      &:hover {
+        background: $orange;
+        color: $white;
+        text-decoration: none;
+      }
     }
   }
 
@@ -71,6 +94,7 @@
       }
     }
   }
+
 }
 
 /* Medium devices (desktops, 992px and up) */
