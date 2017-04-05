@@ -43,12 +43,12 @@ namespace :imon do
   task :import_country_widgets => [:environment] do |task|
     Rails.logger.info '[icw] start import_country_widgets'
 
-    #  for later
-    #  JSON.stringify( $( '.widget' ).map( function( ) { let widget = $(this); return { mid: widget.data( 'mid' ), cx: widget.data( 'sizex' ), cy: widget.data( 'sizey' ), row: widget.data( 'row' ), col: widget.data( 'col' ) } } ).toArray() )
-    # 
 
+    # On IM Dashboard, run this in Dev Tools to get third parameter
+    # JSON.stringify( $( '.widget' ).map( function( ) { let widget = $(this); return { mid: widget.data( 'mid' ), cx: widget.data( 'sizex' ), cy: widget.data( 'sizey' ), row: widget.data( 'row' ), col: widget.data( 'col' ) } } ).toArray() )
     countries = [
-      [ 'kaz', '4E6gxFQvoPhZgFHxs', %|[{"mid":"S272BfKeDk6rS3do4","cx":2,"cy":1,"row":4,"col":1},{"mid":"jxipjyXFLZafXyBQ8","cx":3,"cy":1,"row":5,"col":1},{"mid":"Y7L595qCsfBETWLGy","cx":2,"cy":1,"row":2,"col":1},{"mid":"FZLXnrfkkBkyuugkD","cx":2,"cy":1,"row":2,"col":3},{"mid":"84vK9RQbv7HeFL8zi","cx":2,"cy":1,"row":1,"col":1},{"mid":"i9rqYvZmBQYAixyAh","cx":2,"cy":1,"row":1,"col":3},{"mid":"TQe6YdmaNfcdnzTx2","cx":2,"cy":2,"row":3,"col":3},{"mid":"fjeuaXZjmpLmK6uiR","cx":2,"cy":1,"row":3,"col":1}]| ]
+      [ 'kaz', 'gZFsACAZfBepxcamb', %|[{"mid":"as3afWnHaREGfZJoi","cx":2,"cy":1,"row":5,"col":1},{"mid":"DwQXyfRWBfDy94T9A","cx":2,"cy":1,"row":4,"col":1},{"mid":"euG9ynkSAs4MNzdtg","cx":2,"cy":1,"row":4,"col":3},{"mid":"Hy5uwhLkXJM4zYpFb","cx":2,"cy":1,"row":5,"col":3},{"mid":"MiZMvP6ESQLhTWHqc","cx":2,"cy":1,"row":2,"col":1},{"mid":"qEunRWcmJ8XFp2c4w","cx":2,"cy":1,"row":2,"col":3},{"mid":"SnSgTBzz723rmnRKz","cx":2,"cy":2,"row":6,"col":1}]| ],
+      [ 'pak', '8B7gFN4sPiPr7ND46', %|[{"mid":"xA9e8NdwNKZsGERr3","cx":3,"cy":1,"row":1,"col":2},{"mid":"f4DgFjPzFXtMdPxk4","cx":3,"cy":1,"row":3,"col":1},{"mid":"o4npp5NaKaQTMPsKg","cx":2,"cy":1,"row":2,"col":1},{"mid":"omGmyNjWmRB5mFGYt","cx":2,"cy":1,"row":2,"col":3},{"mid":"dk47NTgEqwHWDkyKf","cx":2,"cy":2,"row":6,"col":1},{"mid":"DE3wkscwe9fX95tE4","cx":2,"cy":1,"row":4,"col":3},{"mid":"44ShiGEX8HTo4ymGK","cx":2,"cy":1,"row":4,"col":1},{"mid":"z6iPW5KbeGuXprwA8","cx":2,"cy":1,"row":5,"col":1},{"mid":"siwNfrdPhuL2iQ27E","cx":2,"cy":1,"row":5,"col":3}]| ]
     ]
 
     country_page_parent = Refinery::Page.find_by_slug '2016-annual-report'
@@ -68,7 +68,9 @@ namespace :imon do
         end
       end
 
-      import_country_widgets country_page, c[1], JSON.parse( c[2] )
+      widget_dscs = JSON.parse c[2]
+      widget_dscs = widget_dscs.sort_by { |wdsc| [ wdsc[ 'row' ], wdsc[ 'col' ] ] }
+      import_country_widgets country_page, c[1], widget_dscs
     }
 
     Rails.logger.info '[icw] end import_country_widgets'
@@ -256,11 +258,11 @@ def mcp_081
 end
 
 def widget_embed( dashboard_host, widget_dsc )
-  %{<iframe src="#{dashboard_host}/widgets/#{widget_dsc[ 'mid' ]}/embed" width="480" height="240" frameborder="0" scrolling="no"></iframe>}
+  %{<iframe src="#{dashboard_host}/widgets/#{widget_dsc[ 'mid' ]}/embed" width="#{165*widget_dsc[ 'cx' ]}" height="#{165*widget_dsc[ 'cy' ]}" frameborder="0" scrolling="no"></iframe>}
 end
 
 def import_country_widgets( cp, dashboard_id, widget_dscs )
-  dashboard_host = 'https://dashboard.thenetmonitor.org'
+  dashboard_host = 'https://dashboard.dev.berkmancenter.org'
   dashboard_root = "#{dashboard_host}/dashboards"
   dashboard_url = "#{dashboard_root}/#{dashboard_id}"
 
@@ -275,11 +277,17 @@ def import_country_widgets( cp, dashboard_id, widget_dscs )
     return
   end
 
-  body = ''
+  body = '<div class="widget-row">'
+  current_row = 1
 
   widget_dscs.each { |wdsc|
+    if wdsc[ 'row' ] != current_row
+      body += '</div><div class="widget-row">'
+      current_row += 1
+    end
     body += "#{widget_embed dashboard_host, wdsc}\r\n"
   }
+  body += '</div>'
 
   Rails.logger.info "[icww] #{body}"
 
@@ -291,10 +299,6 @@ def import_country_widgets( cp, dashboard_id, widget_dscs )
   else
     body_part.update_attributes body: body
   end
-
-  # cp = cps.children.create title: 'Canada', menu_title: 'can', layout_template: 'report_country'
-  # cp.parts << Refinery::PagePart.new( title: 'Side Body', body: '<p>side canada</p>' )
-
 end
 
 def replace_static_source( row_number, iso3_code )
