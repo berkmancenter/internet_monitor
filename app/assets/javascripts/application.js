@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require jquery.collapse
 //= require_tree ./sitewide
 
 (function() {
@@ -25,5 +26,5 @@
     $( '.countries-nav-list,.data-nav-countries' ).toggleClass( 'expanded' );
     return false;
   } );
-
+  
 } ());
