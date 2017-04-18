@@ -25,7 +25,7 @@
   </nav>
 
   <%= link_to 'Switch Country', 'javascript:void(0);', { class: 'data-nav-countries' } %>
-  <%= render partial: 'refinery/nav_list', object: @page.parent.children %>
+  <%= render partial: 'refinery/nav_list', object: @page.parent.children.sort_by( &:title ) %>
 
   <section class="main-content">
     <div class="body-margin">

@@ -48,7 +48,9 @@ namespace :imon do
     # JSON.stringify( $( '.widget' ).map( function( ) { let widget = $(this); return { mid: widget.data( 'mid' ), cx: widget.data( 'sizex' ), cy: widget.data( 'sizey' ), row: widget.data( 'row' ), col: widget.data( 'col' ) } } ).toArray() )
     countries = [
       [ 'kaz', 'gZFsACAZfBepxcamb', %|[{"mid":"as3afWnHaREGfZJoi","cx":2,"cy":1,"row":5,"col":1},{"mid":"DwQXyfRWBfDy94T9A","cx":2,"cy":1,"row":4,"col":1},{"mid":"euG9ynkSAs4MNzdtg","cx":2,"cy":1,"row":4,"col":3},{"mid":"Hy5uwhLkXJM4zYpFb","cx":2,"cy":1,"row":5,"col":3},{"mid":"MiZMvP6ESQLhTWHqc","cx":2,"cy":1,"row":2,"col":1},{"mid":"qEunRWcmJ8XFp2c4w","cx":2,"cy":1,"row":2,"col":3},{"mid":"SnSgTBzz723rmnRKz","cx":2,"cy":2,"row":6,"col":1}]| ],
-      [ 'pak', '8B7gFN4sPiPr7ND46', %|[{"mid":"xA9e8NdwNKZsGERr3","cx":3,"cy":1,"row":1,"col":2},{"mid":"f4DgFjPzFXtMdPxk4","cx":3,"cy":1,"row":3,"col":1},{"mid":"o4npp5NaKaQTMPsKg","cx":2,"cy":1,"row":2,"col":1},{"mid":"omGmyNjWmRB5mFGYt","cx":2,"cy":1,"row":2,"col":3},{"mid":"dk47NTgEqwHWDkyKf","cx":2,"cy":2,"row":6,"col":1},{"mid":"DE3wkscwe9fX95tE4","cx":2,"cy":1,"row":4,"col":3},{"mid":"44ShiGEX8HTo4ymGK","cx":2,"cy":1,"row":4,"col":1},{"mid":"z6iPW5KbeGuXprwA8","cx":2,"cy":1,"row":5,"col":1},{"mid":"siwNfrdPhuL2iQ27E","cx":2,"cy":1,"row":5,"col":3}]| ]
+      [ 'pak', '8B7gFN4sPiPr7ND46', %|[{"mid":"xA9e8NdwNKZsGERr3","cx":3,"cy":1,"row":1,"col":2},{"mid":"f4DgFjPzFXtMdPxk4","cx":3,"cy":1,"row":3,"col":1},{"mid":"o4npp5NaKaQTMPsKg","cx":2,"cy":1,"row":2,"col":1},{"mid":"omGmyNjWmRB5mFGYt","cx":2,"cy":1,"row":2,"col":3},{"mid":"dk47NTgEqwHWDkyKf","cx":2,"cy":2,"row":6,"col":1},{"mid":"DE3wkscwe9fX95tE4","cx":2,"cy":1,"row":4,"col":3},{"mid":"44ShiGEX8HTo4ymGK","cx":2,"cy":1,"row":4,"col":1},{"mid":"z6iPW5KbeGuXprwA8","cx":2,"cy":1,"row":5,"col":1},{"mid":"siwNfrdPhuL2iQ27E","cx":2,"cy":1,"row":5,"col":3}]| ],
+      [ 'arm', 'dBiFBajZoKS3qzvpZ', %|[{"mid":"RhpeeJzGNDnkAdPSF","cx":2,"cy":1,"row":7,"col":1},{"mid":"iTZbGBRtMCKBKJisx","cx":2,"cy":1,"row":7,"col":3},{"mid":"7dDZAhFxo2aY8YoJS","cx":2,"cy":1,"row":6,"col":3},{"mid":"oGACpJygB2zp5mXXC","cx":2,"cy":1,"row":6,"col":1},{"mid":"SAKb7wXFcuZw4j22g","cx":4,"cy":1,"row":3,"col":1},{"mid":"SCCqrpQ5qrwspS92g","cx":4,"cy":1,"row":5,"col":1},{"mid":"YrXKHTuJLZ2mET6QK","cx":2,"cy":1,"row":4,"col":3},{"mid":"oYSnsYwQQgNXpKm7i","cx":2,"cy":1,"row":4,"col":1},{"mid":"X8DJZnAJsaiPZ4swq","cx":2,"cy":2,"row":8,"col":1},{"mid":"79xR3yEKWhhQr9N3i","cx":4,"cy":2,"row":1,"col":1}]| ],
+      [ 'aze', 'bbvtxnwKxG3wXRPaG', %|[{"mid":"it7B3ftnwbMuRwaBf","cx":2,"cy":1,"row":7,"col":1},{"mid":"tL7nr6dEjaRC4uiRG","cx":2,"cy":1,"row":7,"col":3},{"mid":"vWbH8dM7sCYTvYLuH","cx":2,"cy":1,"row":6,"col":3},{"mid":"6iTzfz36vbZe4Mocd","cx":2,"cy":1,"row":6,"col":1},{"mid":"78krbpebfuyTTyuPJ","cx":4,"cy":1,"row":3,"col":1},{"mid":"Ch3nQSHx9KdEEBgBL","cx":4,"cy":1,"row":5,"col":1},{"mid":"fRqgJTLrSPRNdZrQY","cx":2,"cy":1,"row":4,"col":3},{"mid":"dthDzt7CfJHwscAYR","cx":2,"cy":1,"row":4,"col":1},{"mid":"gRbwkuES4d95MPEge","cx":2,"cy":2,"row":8,"col":1},{"mid":"wJkS6Pb3aK6Krub6y","cx":4,"cy":2,"row":1,"col":1}]| ]
     ]
 
     country_page_parent = Refinery::Page.find_by_slug '2016-annual-report'
@@ -258,7 +260,7 @@ def mcp_081
 end
 
 def widget_embed( dashboard_host, widget_dsc )
-  %{<iframe src="#{dashboard_host}/widgets/#{widget_dsc[ 'mid' ]}/embed" width="#{165*widget_dsc[ 'cx' ]}" height="#{165*widget_dsc[ 'cy' ]}" frameborder="0" scrolling="no"></iframe>}
+  %{<iframe src="#{dashboard_host}/widgets/#{widget_dsc[ 'mid' ]}/embed?unbranded&seamless&noCountry" width="#{165*widget_dsc[ 'cx' ]}" height="#{165*widget_dsc[ 'cy' ]}" frameborder="0" scrolling="no" data-row="#{widget_dsc[ 'row' ]}" data-col="#{widget_dsc[ 'col' ]}"></iframe>}
 end
 
 def import_country_widgets( cp, dashboard_id, widget_dscs )
@@ -282,8 +284,9 @@ def import_country_widgets( cp, dashboard_id, widget_dscs )
 
   widget_dscs.each { |wdsc|
     if wdsc[ 'row' ] != current_row
+      Rails.logger.info "[icw] widget-row wdsc[row]: #{wdsc['row']}, current_row: #{current_row}"
       body += '</div><div class="widget-row">'
-      current_row += 1
+      current_row = wdsc[ 'row' ].to_i
     end
     body += "#{widget_embed dashboard_host, wdsc}\r\n"
   }
