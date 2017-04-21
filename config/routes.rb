@@ -1,5 +1,14 @@
 Imon::Application.routes.draw do
-  resources :countries
+  resources :countries do
+    member do
+      get 'thumb'
+    end
+
+    collection do
+      get 'cache_thumbs'
+    end
+  end
+
 
   get '/map', to: redirect( '/' )
 

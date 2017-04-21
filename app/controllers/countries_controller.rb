@@ -12,6 +12,7 @@ class CountriesController < ApplicationController
   end
 
   def cache_thumbs
+    @map_countries = Country.where( 'not bbox is null' ).select( 'id,iso3_code,score,bbox' ) 
     render
   end
 

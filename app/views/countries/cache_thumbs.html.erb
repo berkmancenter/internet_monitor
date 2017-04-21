@@ -10,7 +10,7 @@
 <h1>Country Thumb Cacher</h1>
 
 <article class="view">
-  <div id="cacheThumbs" data-min-score="<%= @map_countries.order('score').first.score %>" data-max-score="<%= @map_countries.order('score desc').first.score %>" data-map-countries="<%= @map_countries.to_json %>">
+  <div id="cacheThumbs" data-map-countries="<%= @map_countries.to_json %>">
   </div>
 
   <img id="thumb" src="" />
@@ -23,4 +23,8 @@
 
 </article>
 
-<script src="/cache_thumbs.js"></script>
+<% content_for :javascripts do %>
+  <script src="//code.jquerygeo.com/jquery.geo-1.0.0-rc1.min.js"></script>
+  <script src="/cache_thumbs.js"></script>
+<% end %>
+
