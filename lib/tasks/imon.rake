@@ -47,10 +47,77 @@ namespace :imon do
     # On IM Dashboard, run this in Dev Tools to get third parameter
     # JSON.stringify( $( '.widget' ).map( function( ) { let widget = $(this); return { mid: widget.data( 'mid' ), cx: widget.data( 'sizex' ), cy: widget.data( 'sizey' ), row: widget.data( 'row' ), col: widget.data( 'col' ) } } ).toArray() )
     countries = [
-      [ 'kaz', 'gZFsACAZfBepxcamb', %|[{"mid":"as3afWnHaREGfZJoi","cx":2,"cy":1,"row":5,"col":1},{"mid":"DwQXyfRWBfDy94T9A","cx":2,"cy":1,"row":4,"col":1},{"mid":"euG9ynkSAs4MNzdtg","cx":2,"cy":1,"row":4,"col":3},{"mid":"Hy5uwhLkXJM4zYpFb","cx":2,"cy":1,"row":5,"col":3},{"mid":"MiZMvP6ESQLhTWHqc","cx":2,"cy":1,"row":2,"col":1},{"mid":"qEunRWcmJ8XFp2c4w","cx":2,"cy":1,"row":2,"col":3},{"mid":"SnSgTBzz723rmnRKz","cx":2,"cy":2,"row":6,"col":1}]| ],
-      [ 'pak', '8B7gFN4sPiPr7ND46', %|[{"mid":"xA9e8NdwNKZsGERr3","cx":3,"cy":1,"row":1,"col":2},{"mid":"f4DgFjPzFXtMdPxk4","cx":3,"cy":1,"row":3,"col":1},{"mid":"o4npp5NaKaQTMPsKg","cx":2,"cy":1,"row":2,"col":1},{"mid":"omGmyNjWmRB5mFGYt","cx":2,"cy":1,"row":2,"col":3},{"mid":"dk47NTgEqwHWDkyKf","cx":2,"cy":2,"row":6,"col":1},{"mid":"DE3wkscwe9fX95tE4","cx":2,"cy":1,"row":4,"col":3},{"mid":"44ShiGEX8HTo4ymGK","cx":2,"cy":1,"row":4,"col":1},{"mid":"z6iPW5KbeGuXprwA8","cx":2,"cy":1,"row":5,"col":1},{"mid":"siwNfrdPhuL2iQ27E","cx":2,"cy":1,"row":5,"col":3}]| ],
-      [ 'arm', 'dBiFBajZoKS3qzvpZ', %|[{"mid":"RhpeeJzGNDnkAdPSF","cx":2,"cy":1,"row":7,"col":1},{"mid":"iTZbGBRtMCKBKJisx","cx":2,"cy":1,"row":7,"col":3},{"mid":"7dDZAhFxo2aY8YoJS","cx":2,"cy":1,"row":6,"col":3},{"mid":"oGACpJygB2zp5mXXC","cx":2,"cy":1,"row":6,"col":1},{"mid":"SAKb7wXFcuZw4j22g","cx":4,"cy":1,"row":3,"col":1},{"mid":"SCCqrpQ5qrwspS92g","cx":4,"cy":1,"row":5,"col":1},{"mid":"YrXKHTuJLZ2mET6QK","cx":2,"cy":1,"row":4,"col":3},{"mid":"oYSnsYwQQgNXpKm7i","cx":2,"cy":1,"row":4,"col":1},{"mid":"X8DJZnAJsaiPZ4swq","cx":2,"cy":2,"row":8,"col":1},{"mid":"79xR3yEKWhhQr9N3i","cx":4,"cy":2,"row":1,"col":1}]| ],
-      [ 'aze', 'bbvtxnwKxG3wXRPaG', %|[{"mid":"it7B3ftnwbMuRwaBf","cx":2,"cy":1,"row":7,"col":1},{"mid":"tL7nr6dEjaRC4uiRG","cx":2,"cy":1,"row":7,"col":3},{"mid":"vWbH8dM7sCYTvYLuH","cx":2,"cy":1,"row":6,"col":3},{"mid":"6iTzfz36vbZe4Mocd","cx":2,"cy":1,"row":6,"col":1},{"mid":"78krbpebfuyTTyuPJ","cx":4,"cy":1,"row":3,"col":1},{"mid":"Ch3nQSHx9KdEEBgBL","cx":4,"cy":1,"row":5,"col":1},{"mid":"fRqgJTLrSPRNdZrQY","cx":2,"cy":1,"row":4,"col":3},{"mid":"dthDzt7CfJHwscAYR","cx":2,"cy":1,"row":4,"col":1},{"mid":"gRbwkuES4d95MPEge","cx":2,"cy":2,"row":8,"col":1},{"mid":"wJkS6Pb3aK6Krub6y","cx":4,"cy":2,"row":1,"col":1}]| ]
+      [ 'arm', 'dBiFBajZoKS3qzvpZ', %|[{"mid":"RhpeeJzGNDnkAdPSF","cx":2,"cy":1,"row":6,"col":1},{"mid":"iTZbGBRtMCKBKJisx","cx":2,"cy":1,"row":6,"col":3},{"mid":"7dDZAhFxo2aY8YoJS","cx":2,"cy":1,"row":5,"col":3},{"mid":"oGACpJygB2zp5mXXC","cx":2,"cy":1,"row":5,"col":1},{"mid":"SAKb7wXFcuZw4j22g","cx":4,"cy":1,"row":3,"col":1},{"mid":"YrXKHTuJLZ2mET6QK","cx":2,"cy":1,"row":4,"col":3},{"mid":"oYSnsYwQQgNXpKm7i","cx":2,"cy":1,"row":4,"col":1},{"mid":"X8DJZnAJsaiPZ4swq","cx":2,"cy":2,"row":7,"col":1},{"mid":"79xR3yEKWhhQr9N3i","cx":4,"cy":2,"row":1,"col":1}]| ],
+      [ 'aze', 'bbvtxnwKxG3wXRPaG', %|[{"mid":"it7B3ftnwbMuRwaBf","cx":2,"cy":1,"row":7,"col":1},{"mid":"tL7nr6dEjaRC4uiRG","cx":2,"cy":1,"row":7,"col":3},{"mid":"vWbH8dM7sCYTvYLuH","cx":2,"cy":1,"row":6,"col":3},{"mid":"6iTzfz36vbZe4Mocd","cx":2,"cy":1,"row":6,"col":1},{"mid":"78krbpebfuyTTyuPJ","cx":4,"cy":1,"row":3,"col":1},{"mid":"Ch3nQSHx9KdEEBgBL","cx":4,"cy":1,"row":5,"col":1},{"mid":"fRqgJTLrSPRNdZrQY","cx":2,"cy":1,"row":4,"col":3},{"mid":"dthDzt7CfJHwscAYR","cx":2,"cy":1,"row":4,"col":1},{"mid":"gRbwkuES4d95MPEge","cx":2,"cy":2,"row":8,"col":1},{"mid":"wJkS6Pb3aK6Krub6y","cx":4,"cy":2,"row":1,"col":1}]| ],
+      [ 'bhr', 'shFiukpQRs22X8mfN', %|[{"mid":"bGRPAqKvQhsyLPQuZ","cx":4,"cy":1,"row":3,"col":1},{"mid":"D3tZNCwqqqpoa9iHv","cx":2,"cy":2,"row":5,"col":1},{"mid":"YcgJ2kX2tLevPNBdM","cx":4,"cy":2,"row":1,"col":1},{"mid":"7TC3LSCuijcsTCNPg","cx":2,"cy":1,"row":4,"col":3},{"mid":"d7QtXWLGipLApj4Sz","cx":2,"cy":1,"row":4,"col":1}]| ],
+      [ 'bgd', 'b8HXnwp36i7S3ZrYt', %|[{"mid":"NB8FovdRTqBYF95bS","cx":2,"cy":1,"row":6,"col":1},{"mid":"24FdZ4wgsTthm9kMC","cx":2,"cy":1,"row":6,"col":3},{"mid":"tdpT99vE7jZeoR3GP","cx":2,"cy":1,"row":5,"col":3},{"mid":"ojfxXNCHXRo55NDTp","cx":2,"cy":1,"row":5,"col":1},{"mid":"Z3oWWt8acksvi5RrQ","cx":4,"cy":1,"row":3,"col":1},{"mid":"CRQZrF78R3nkxh2eK","cx":4,"cy":1,"row":4,"col":1},{"mid":"HFKoWYTc4BLx2E8g8","cx":2,"cy":1,"row":7,"col":1},{"mid":"fGhdg3X8sypiAsguf","cx":4,"cy":2,"row":1,"col":1}]| ],
+      [ 'blr', 'pgPJr3gXgyTtRwF84', %|[{"mid":"sh4TH593zSFJPXCh9","cx":2,"cy":2,"row":8,"col":1},{"mid":"rojDgp6gSiF4xEmpC","cx":4,"cy":2,"row":1,"col":1},{"mid":"SbjmxydpSKEGqsdxx","cx":2,"cy":1,"row":4,"col":3},{"mid":"nMd8GE4WNwN8xZR8d","cx":2,"cy":1,"row":4,"col":1},{"mid":"iyq4ExwMXCKpL9sim","cx":4,"cy":1,"row":5,"col":1},{"mid":"pgMzZafvXxCtgkoKe","cx":4,"cy":1,"row":3,"col":1},{"mid":"ji2q4TDr6QBsHiMG5","cx":2,"cy":1,"row":6,"col":1},{"mid":"rQh7RfE5iAejc5BYC","cx":2,"cy":1,"row":6,"col":3},{"mid":"WQnzqpigt3DGW42En","cx":2,"cy":1,"row":7,"col":3},{"mid":"rkCMD7KdbyERiA2XN","cx":2,"cy":1,"row":7,"col":1}]| ],
+      [ 'bra', 'rGYY6PQyFZtpyPxbe', %|[{"mid":"vAHw5i5szxCb5hzq7","cx":2,"cy":1,"row":7,"col":1},{"mid":"AbCgH3ZPyaj7oDfeT","cx":2,"cy":1,"row":7,"col":3},{"mid":"qsALnefYg4qGZJELu","cx":2,"cy":1,"row":6,"col":3},{"mid":"wuLwmPnkBHMb2cryJ","cx":2,"cy":1,"row":6,"col":1},{"mid":"xJcCMtQihk7i8bwoy","cx":4,"cy":1,"row":3,"col":1},{"mid":"emfpnDmNqdwSECyTY","cx":2,"cy":1,"row":4,"col":1},{"mid":"kNwzR2Hb79BGCQNvP","cx":2,"cy":1,"row":4,"col":3},{"mid":"q2cFkjmGN4JuEiCfP","cx":4,"cy":1,"row":5,"col":1},{"mid":"aQ28zYqJxh3ti63ie","cx":4,"cy":2,"row":1,"col":1},{"mid":"GjhR3LFRjTXoJYhop","cx":2,"cy":2,"row":8,"col":1}]| ],
+      [ 'bgr', 'APYoTyL48uySN8XRw', %|[{"mid":"5Zwvb9Kz6WaKq4bPf","cx":2,"cy":1,"row":4,"col":1},{"mid":"Gaka5vh2X73pz6k57","cx":2,"cy":1,"row":7,"col":1},{"mid":"y9f8MNkDcrqYbkaCb","cx":2,"cy":1,"row":7,"col":3},{"mid":"Ew7DL4YtuQwqrvm9v","cx":2,"cy":1,"row":6,"col":3},{"mid":"cR5WDGwBdoKsRhRS6","cx":2,"cy":1,"row":6,"col":1},{"mid":"md4wSyYZbBNSp9N6c","cx":4,"cy":1,"row":3,"col":1},{"mid":"cN5JGZSmuZ2EA7oNC","cx":2,"cy":1,"row":4,"col":3},{"mid":"Nyokw7tfKGxc4ThxC","cx":4,"cy":1,"row":5,"col":1},{"mid":"oRvCLmCG6JpTcknNL","cx":4,"cy":2,"row":1,"col":1},{"mid":"rtSFgPseAy3AT2yb7","cx":2,"cy":2,"row":8,"col":1}]| ],
+      [ 'khm', 'atYrurCE9yCjXdcoE', %|[{"mid":"cwn2QYBcWQbmSJd7r","cx":4,"cy":1,"row":4,"col":1},{"mid":"u29mnkSm5JNCwhvv8","cx":2,"cy":1,"row":5,"col":1},{"mid":"8PuzG7dnx5gw8T3JX","cx":4,"cy":1,"row":3,"col":1},{"mid":"Bwsdqb44CmDRsQZGw","cx":4,"cy":2,"row":1,"col":1},{"mid":"s6XNy9uuYaE375Lpy","cx":2,"cy":1,"row":7,"col":1},{"mid":"tcxk2WN3i4rxSiPYB","cx":2,"cy":1,"row":6,"col":1},{"mid":"qn8CJGx6gciWtJs5A","cx":2,"cy":1,"row":6,"col":3},{"mid":"G4iMX7qbSbTcqECx5","cx":2,"cy":1,"row":5,"col":3}]| ],
+      [ 'can', 'zYrJGzBF6iKru3R7S', %|[{"mid":"pxFKHtQi74wjBaeik","cx":2,"cy":1,"row":6,"col":1},{"mid":"372KhvqgmqFqDvB2n","cx":4,"cy":1,"row":3,"col":1},{"mid":"eyGt8LeedHPNBk8YB","cx":2,"cy":1,"row":7,"col":1},{"mid":"dqFhfEPcKrteSsruT","cx":2,"cy":1,"row":7,"col":3},{"mid":"Epui8P4E5AhErjvDW","cx":2,"cy":1,"row":6,"col":3},{"mid":"S49ftNmX7p34eZae5","cx":4,"cy":1,"row":5,"col":1},{"mid":"wReuAZPc8dQbwNRaB","cx":2,"cy":1,"row":4,"col":3},{"mid":"GEuzCKH8f4kcdoHJu","cx":4,"cy":2,"row":1,"col":1},{"mid":"iqHSWNtZRs8osqdEq","cx":2,"cy":1,"row":4,"col":1},{"mid":"dJJyyfvsKptuoySED","cx":2,"cy":2,"row":8,"col":1}]| ],
+      [ 'chn', 'sfz3hzuXbsdLMiYKN', %|[{"mid":"ahm6i6qdQLszZiAiT","cx":2,"cy":1,"row":6,"col":1},{"mid":"HXu2Pbc7oRTL9yQGk","cx":4,"cy":1,"row":3,"col":1},{"mid":"ZFwvm43bHLKzytDn7","cx":2,"cy":1,"row":7,"col":1},{"mid":"NpGh94Jrt6heYYTyW","cx":2,"cy":1,"row":7,"col":3},{"mid":"MkNJRmxwwJzwQdWq2","cx":2,"cy":1,"row":6,"col":3},{"mid":"rhNPSLqFfGJzPxF5P","cx":4,"cy":1,"row":5,"col":1},{"mid":"j3DaSB5XLNX2vB3kw","cx":2,"cy":1,"row":4,"col":3},{"mid":"kH9aYdW2QDS8MoLGx","cx":4,"cy":2,"row":1,"col":1},{"mid":"GLcZusyBkfGiyiyAJ","cx":2,"cy":1,"row":4,"col":1},{"mid":"H6jvHb6NWi2ZzBw2Y","cx":2,"cy":2,"row":8,"col":1}]| ],
+      [ 'cze', 'u62BGSMFLJcwJ4dst', %|[{"mid":"w4DG5AkFdTn2Pk633","cx":2,"cy":1,"row":6,"col":3},{"mid":"3J6wxjzFJ8BKvdsEs","cx":2,"cy":1,"row":6,"col":1},{"mid":"XxjKFuwkQzrs2EHXz","cx":4,"cy":1,"row":3,"col":1},{"mid":"hJzdPqzZMA6T3YWEv","cx":2,"cy":1,"row":7,"col":1},{"mid":"CpPmSRX8FNsKmagYS","cx":2,"cy":1,"row":7,"col":3},{"mid":"BJaSNk58XtwwvEscB","cx":4,"cy":1,"row":5,"col":1},{"mid":"x5Hku64iKDH9hcf8L","cx":2,"cy":1,"row":4,"col":3},{"mid":"kKy37Mk7fBN6YZ4N2","cx":4,"cy":2,"row":1,"col":1},{"mid":"gDELbSwddNyaZYcbX","cx":2,"cy":1,"row":4,"col":1},{"mid":"gTJqbtdYSwEzYWZuT","cx":2,"cy":2,"row":8,"col":1}]| ],
+      [ 'egy', 'smbtoWic9xzFPtXkk', %|[{"mid":"yGxMRtdh3HHvfBHYZ","cx":2,"cy":1,"row":6,"col":3},{"mid":"JFPP69W7sbwob32pY","cx":2,"cy":1,"row":6,"col":1},{"mid":"GhLoKaYWRykCB9GZa","cx":4,"cy":1,"row":3,"col":1},{"mid":"gserETFSzPBpRiKY3","cx":2,"cy":1,"row":7,"col":3},{"mid":"xaiwW5ta3GZwpXCtn","cx":4,"cy":1,"row":5,"col":1},{"mid":"nmkA3rwQxXRyKZaZS","cx":2,"cy":1,"row":4,"col":3},{"mid":"sLc3hSi534v44CrF9","cx":4,"cy":2,"row":1,"col":1},{"mid":"nmxBBAjgAec4cxmuw","cx":2,"cy":1,"row":4,"col":1},{"mid":"8muP6Wd73QbS2sYxj","cx":2,"cy":2,"row":7,"col":1}]| ],
+      [ 'fra', '3hXen297G6wGHpbJc', %|[{"mid":"or7q8XK4qseT5tjB4","cx":4,"cy":1,"row":3,"col":1},{"mid":"H2wdEaoGtAx42JRrj","cx":2,"cy":1,"row":7,"col":1},{"mid":"Y4EiXrJcZN82dutr9","cx":2,"cy":1,"row":7,"col":3},{"mid":"m2xa2NNTb4oCWonKv","cx":2,"cy":1,"row":6,"col":3},{"mid":"wCnBkJj7G9BBKNPZP","cx":2,"cy":1,"row":6,"col":1},{"mid":"uhBHpGjsd7j8nBHyK","cx":4,"cy":1,"row":5,"col":1},{"mid":"Gfn8aoNRYLTvNdEaA","cx":2,"cy":1,"row":4,"col":3},{"mid":"PtfmYT8m3MpvzJx8v","cx":4,"cy":2,"row":1,"col":1},{"mid":"me6bYyjtHeDZG4qL8","cx":2,"cy":1,"row":4,"col":1},{"mid":"bWmXmRYs58RXua4Aq","cx":2,"cy":2,"row":8,"col":1}]| ],
+      [ 'hkg', 'xN4R7KLutDehDLFMS', %|[{"mid":"DAbHygSmCGAb3N2rt","cx":4,"cy":1,"row":3,"col":1},{"mid":"PTyMzDEJnD4durZxg","cx":2,"cy":1,"row":7,"col":1},{"mid":"s2QiA4mSG8k8yWQMj","cx":2,"cy":1,"row":7,"col":3},{"mid":"aWbTtzd6X4mbAYixk","cx":2,"cy":1,"row":6,"col":3},{"mid":"rkni7meSkiqWji6hj","cx":2,"cy":1,"row":6,"col":1},{"mid":"FdJgTKTSmzEYLiyhS","cx":4,"cy":1,"row":5,"col":1},{"mid":"q8PZYhkTJHuxHmAhq","cx":2,"cy":1,"row":4,"col":3},{"mid":"7kBwQnFLRnkKYNMsq","cx":4,"cy":2,"row":1,"col":1},{"mid":"4DTe4zJ8mRWvdWcRZ","cx":2,"cy":1,"row":4,"col":1},{"mid":"KGbRYGcJ3tZXrCcdW","cx":2,"cy":2,"row":8,"col":1}]| ],
+      [ 'hun', 'QLea6W295EWDXDSNP', %|[{"mid":"rJcKJXi7oSoJ4rCGQ","cx":4,"cy":1,"row":3,"col":1},{"mid":"PB55ir5B7bcb9svWR","cx":4,"cy":1,"row":5,"col":1},{"mid":"JkgpMzPWEYbDgrizJ","cx":2,"cy":1,"row":4,"col":3},{"mid":"EZs9as6FXTihJmq2k","cx":4,"cy":2,"row":1,"col":1},{"mid":"DZnhBPcmgKQWYbNBf","cx":2,"cy":1,"row":4,"col":1},{"mid":"G9RydthwLayhsqich","cx":2,"cy":2,"row":6,"col":1}]| ],
+      [ 'ind', 'yu82iqESDHtdGPjcR', %|[{"mid":"K2Y7oQmsJrgRDCWve","cx":2,"cy":1,"row":6,"col":3},{"mid":"ZDfgwNruCbtddnmbg","cx":2,"cy":1,"row":6,"col":1},{"mid":"dAMseNRdrYy3pnXNM","cx":4,"cy":1,"row":3,"col":1},{"mid":"Z2b5mJJEyYPDvmaL9","cx":2,"cy":1,"row":7,"col":1},{"mid":"wBcaxRmTNngs4SoDp","cx":2,"cy":1,"row":7,"col":3},{"mid":"WHnpHtdnGDgh539sv","cx":4,"cy":1,"row":5,"col":1},{"mid":"NuFSndMCHBnLT2udT","cx":2,"cy":1,"row":4,"col":3},{"mid":"Bf89uneFuKgnH494w","cx":4,"cy":2,"row":1,"col":1},{"mid":"p9sqaBYRu4g2yZiTi","cx":2,"cy":1,"row":4,"col":1},{"mid":"6egfryTAFknNmcrLZ","cx":2,"cy":2,"row":8,"col":1}]| ],
+      [ 'idn', 'hkSTGdYZFSbYodFZt', %|[{"mid":"bTqwzYTHKhxsKBziz","cx":2,"cy":1,"row":6,"col":3},{"mid":"4tLhG3pz9SWiPwAPf","cx":2,"cy":1,"row":6,"col":1},{"mid":"sWwJMDiC52BrrW7b3","cx":4,"cy":1,"row":3,"col":1},{"mid":"3bcHrnrCwmaEdgKap","cx":2,"cy":1,"row":7,"col":1},{"mid":"jETRRFWc9ayHSh5j6","cx":2,"cy":1,"row":7,"col":3},{"mid":"pbmnG42cmtPmBkjaE","cx":4,"cy":1,"row":5,"col":1},{"mid":"MwqZiZxvNLqDkWqxm","cx":2,"cy":1,"row":4,"col":3},{"mid":"obRBLa4peXvLyQuSN","cx":4,"cy":2,"row":1,"col":1},{"mid":"2xJHgGSA7YteoRwRc","cx":2,"cy":1,"row":4,"col":1},{"mid":"jvFJGLemfCYDtiz6E","cx":2,"cy":2,"row":8,"col":1}]| ],
+      [ 'irn', 'ASG6AFvY9JyMt4MFZ', %|[{"mid":"dpgTpCgDA6zBwerXs","cx":2,"cy":1,"row":6,"col":3},{"mid":"F2YTxaAu39T87JGts","cx":2,"cy":1,"row":6,"col":1},{"mid":"GqmXvwdEjxeRLkkrY","cx":4,"cy":1,"row":3,"col":1},{"mid":"uPKv5xPKgNy9PZGdw","cx":2,"cy":1,"row":7,"col":1},{"mid":"dp2AAoQCYKY25NWPJ","cx":2,"cy":1,"row":7,"col":3},{"mid":"FaNbXsAJukACcEk6G","cx":4,"cy":1,"row":5,"col":1},{"mid":"ZqfwDoNJk365577CL","cx":2,"cy":1,"row":4,"col":3},{"mid":"DMmTTHpaHE6qEenf4","cx":4,"cy":2,"row":1,"col":1},{"mid":"aTu3W4RLSQL45eNB8","cx":2,"cy":1,"row":4,"col":1},{"mid":"9AF6jYF99a5e2Jcgq","cx":2,"cy":2,"row":8,"col":1}]| ],
+      [ 'irq', 'noFKDZxcgKh6m34Wj', %|[{"mid":"hNvxW5muJpEKibm83","cx":2,"cy":1,"row":4,"col":3},{"mid":"XyRN7Tf8pXvFFRZnJ","cx":2,"cy":1,"row":4,"col":1},{"mid":"aDcGo4qQzvnP2yPAQ","cx":4,"cy":1,"row":3,"col":1},{"mid":"urSN8n9HhKjPkLPuo","cx":2,"cy":1,"row":5,"col":1},{"mid":"bXxJNqGp924YjNmRh","cx":2,"cy":1,"row":5,"col":3},{"mid":"cpbuTfMFdTwPihMst","cx":4,"cy":2,"row":1,"col":1},{"mid":"rsXRMEMB3YFCrBEZM","cx":2,"cy":1,"row":6,"col":1}]| ],
+      [ 'isr', 'oAMcGfHBzavgzXciz', %|[{"mid":"Kbe6qvTCFjDGDN83X","cx":2,"cy":1,"row":6,"col":3},{"mid":"2ML8BPEKh3kHejeom","cx":2,"cy":1,"row":6,"col":1},{"mid":"PNN3LAPGqLBSQbtWW","cx":4,"cy":1,"row":3,"col":1},{"mid":"tMsMepGZCsq5quxYd","cx":2,"cy":1,"row":7,"col":1},{"mid":"8bLNpWBrYo6AyD2cK","cx":2,"cy":1,"row":7,"col":3},{"mid":"jHWCcY8gJqeTX2LjG","cx":4,"cy":1,"row":5,"col":1},{"mid":"jJXS7epi5GPuQtPQC","cx":2,"cy":1,"row":4,"col":3},{"mid":"cohkia8MWRRbpvhjP","cx":4,"cy":2,"row":1,"col":1},{"mid":"N4z6KFEwRZLPNu58A","cx":2,"cy":1,"row":4,"col":1},{"mid":"Q3xXTWGCuxCqqd32q","cx":2,"cy":2,"row":8,"col":1}]| ],
+      [ 'ita', 'io5BibfHbuaC5yQxe', %|[{"mid":"L44D9rzbspALWgonw","cx":2,"cy":1,"row":6,"col":3},{"mid":"PHjpLo7SKCEguGboN","cx":2,"cy":1,"row":6,"col":1},{"mid":"sdW3ZN7S47fHzbjSy","cx":4,"cy":1,"row":3,"col":1},{"mid":"wgL36LaZGwSSJNDZr","cx":2,"cy":1,"row":7,"col":1},{"mid":"ehGHnfsNYFb3M98HS","cx":2,"cy":1,"row":7,"col":3},{"mid":"mHskwsLf6XGwmnyEY","cx":4,"cy":1,"row":5,"col":1},{"mid":"WrYKBACLn5LotELWK","cx":2,"cy":1,"row":4,"col":3},{"mid":"CB6mFXHbJ25cwXkvQ","cx":4,"cy":2,"row":1,"col":1},{"mid":"BhiGHEeR3jZ2aweTr","cx":2,"cy":1,"row":4,"col":1},{"mid":"xjsdsAdKmLnzASAy7","cx":2,"cy":2,"row":8,"col":1}]| ],
+      [ 'jor', 'tGYDtF8qKZLBPxkwP', %|
+        | ],
+      [ 'kaz', 'beuaBkuGaw3mzrh4t', %|
+        | ],
+      [ 'kwt', 'RFubRfEmQJT7AxAqh', %|
+        | ],
+      [ 'kgz', 'AkZhCJNMgx2bYcwc7', %|
+        | ],
+      [ 'lbn', 'e4An8qe2tHf6nSxie', %|
+        | ],
+      [ 'lby', 'MFnLebwaDPXR9xqsz', %|
+        | ],
+      [ 'mys', 'SYgPtyxgJ8AeQaS9W', %|
+        | ],
+      [ 'mda', 'ytRybDfst6mwRJvr7', %|
+        | ],
+      [ 'mar', 'rZndyhyZh36gQRqwf', %|
+        | ],
+      [ 'nld', 'WMHbpWcPBQYPZyXLC', %|
+        | ],
+      [ 'pak', 'nyQpZNzryT6mshjo3', %|
+        | ],
+      [ 'pse', 'ra7iRqBi5AbBSkA9r', %|
+        | ],
+      [ 'rus', 'kGYSud7XQGGvj2rZd', %|
+        | ],
+      [ 'sau', 'gdgo52LtCPH6FRxCm', %|
+        | ],
+      [ 'kor', 'sYdGByvAaGuEt8FPr', %|
+        | ],
+      [ 'esp', 'RthxHpsioTTx58bxT', %|
+        | ],
+      [ 'lka', 'gsoxMtXNzAjySNimK', %|
+        | ],
+      [ 'tha', 'ibfgSsnb5kJvDrj4Y', %|
+        | ],
+      [ 'tun', '2gzof3RLrm5daWwnz', %|
+        | ],
+      [ 'tur', '8BWLaTAmNeS2NAsBx', %|
+        | ],
+      [ 'ure', 'ZntsmcQjxSQNNuLQD', %|
+        | ],
+      [ 'ukr', 'vv25F5iJ9Yuz3PjiB', %|
+        | ],
+      [ 'uzb', 'BeNzwixf2csRrKSZ2', %|
+        | ],
+      [ 'vnm', 'Mbf4dPawhXxkSeZh7', %|
+        | ],
+      [ 'yem', '6Ne2wqtcfpaqf5SGa', %|
+        | ]
     ]
 
     country_page_parent = Refinery::Page.find_by_slug '2016-annual-report'
@@ -282,7 +349,13 @@ def import_country_widgets( cp, dashboard_id, widget_dscs )
   body = '<div class="widget-row">'
   current_row = 1
 
-  widget_dscs.each { |wdsc|
+  widget_dscs.each_with_index { |wdsc, i|
+    if i == 1
+      body += '</div><h2>Internet Access</h2><div class="widget-row">'
+    elsif i == 2
+      body += '</div><h2>Internet Connectivity</h2><div class="widget-row">'
+    end
+
     if wdsc[ 'row' ] != current_row
       Rails.logger.info "[icw] widget-row wdsc[row]: #{wdsc['row']}, current_row: #{current_row}"
       body += '</div><div class="widget-row">'
