@@ -157,6 +157,18 @@
     right: 2em;
     top: 8em;
   }
+
+  div > a[href*="core.thenetmonitor.org"] {
+    border: solid 1px $light-gray;
+    border-radius: 4px;
+    display: inline-block;
+    overflow: hidden;
+    width: 49%;
+
+    img {
+      width: 98%;
+    }
+  }
 }
 
 
