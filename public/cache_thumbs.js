@@ -16,20 +16,16 @@ $( function () {
       mode: 'static',
       shapeStyle: {
         height: 0,
-        width: 0,
-        color: '#addfe6',
-        fillOpacity: 1,
-        stroke: '#36484a',
-        strokeWidth: '1px'
+        width: 0
       }
     } );
 
 
     var mapCountriesService = $( '#map-countries-service' ).geomap( 'option', 'shapeStyle', {
-      color: '#addfe6',
+      color: '#ccc',
       fillOpacity: 1,
-      stroke: '#36484a',
-      strokeWidth: '1px'
+      stroke: '#fefefe',
+      strokeWidth: '2px'
     } );
     /*
       color: '#366936',
@@ -75,9 +71,10 @@ $( function () {
 
       if ( country ) {
         mapCountriesService.geomap('append', feature, {
-          color: '#366936',
+          color: '#5ec1a5',
           fillOpacity: 1,
-          strokeOpacity: 0
+          stroke: '#fefefe',
+          strokeWidth: '2px'
         }, false);
         map.geomap( 'option', 'bbox', $.geo.scaleBy( JSON.parse( country.bbox ), 1.5 ) );
         setTimeout( storeImage, 1000 );
