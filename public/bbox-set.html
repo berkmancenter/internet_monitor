@@ -19,11 +19,10 @@
     }
 
     #map {
-      position: absolute;
-      top: 108px;
-      right: 0;
-      bottom: 0;
-      left: 0;
+      height: 256px;
+      margin: 256px;
+      border: solid 2px #222;
+      width: 256px;
     }
 
     #info {
@@ -65,7 +64,6 @@
 
   <script>
     $(function() {
-      $.geo.proj = null;
 
       var allCountries = null;
       var bboxen = null;
@@ -82,6 +80,12 @@
           type: 'shingled',
           src: ''
         } ],
+        shapeStyle: {
+          color: '#ccc',
+          fillOpacity: 1,
+          stroke: '#fefefe',
+          strokeWidth: '2px'
+        },
         zoom: 1,
         click: function( e, geo ) {
           if ( !currentCountry ) {
@@ -122,7 +126,7 @@
 
       function findBy( nameOrIso ) {
         for ( var i = 0; i < allCountries.features.length; i++ ) {
-          if (allCountries.features[i].properties.iso_a3.toUpperCase() === nameOrIso.toUpperCase() ||
+          if (allCountries.features[i].id.toUpperCase() === nameOrIso.toUpperCase() ||
               allCountries.features[i].properties.name.toUpperCase() === nameOrIso.toUpperCase()) {
             return allCountries.features[i];
           }
@@ -137,12 +141,12 @@
         map.geomap('option', 'mode', 'click');
 
         if (currentCountry) {
-          map.geomap('option', 'bbox', bboxen[ currentCountry.properties.iso_a3 ] );
-          $('#current').text(currentCountry.properties.name + ' (' + currentCountry.properties.iso_a3 + ')');
+          map.geomap('option', 'bbox', bboxen[ currentCountry.id ] );
+          $('#current').text(currentCountry.properties.name + ' (' + currentCountry.id + ')');
           $('#save,#cancel').removeAttr('disabled');
           map.geomap('option', 'mode', 'pan');
 
-          //if ( currentCountry.properties.iso_a3 === 'BHR' ) {
+          //if ( currentCountry.id === 'BHR' ) {
             //$('#output').val(JSON.stringify($.geo.proj.fromGeodetic(currentCountry.geometry.coordinates)));
           //}
         }
@@ -150,7 +154,7 @@
 
       $('#save').click(function() {
         var bbox = map.geomap('option', 'bbox');
-        bboxen[currentCountry.properties.iso_a3] = bbox;
+        bboxen[currentCountry.id] = bbox;
         $('#output').val(JSON.stringify(bboxen));
         setCurrent( null );
       });

@@ -39,6 +39,7 @@ $( function () {
     };
 
     var features = null;
+    var bboxen = null
 
     $.each( map.data( 'mapCountries' ), function( ) {
       mapCountries[ this.iso3_code ] = this;
@@ -58,7 +59,11 @@ $( function () {
 
       map.geomap('refresh');
 
-      cacheThumb();
+
+      $.getJSON( '/country_bbox.json', function( result ) {
+        bboxen = result;
+        cacheThumb();
+      } );
     });
 
     var cacheIdx = 0;
@@ -67,7 +72,7 @@ $( function () {
 
     function cacheThumb( ) {
       feature = $.extend( {}, features[ cacheIdx ] );
-      country = mapCountries[ feature.properties.iso_a3 ];
+      country = mapCountries[ feature.id ];
 
       if ( country ) {
         mapCountriesService.geomap('append', feature, {
@@ -76,9 +81,10 @@ $( function () {
           stroke: '#fefefe',
           strokeWidth: '2px'
         }, false);
-        map.geomap( 'option', 'bbox', $.geo.scaleBy( JSON.parse( country.bbox ), 1.5 ) );
-        setTimeout( storeImage, 1000 );
+        map.geomap( 'option', 'bbox', bboxen[ feature.id ] );
+        setTimeout( storeImage, 2000 );
       } else {
+        console.log( 'missing country for ' + feature.id );
         cacheIdx++;
         $( 'progress' ).prop( 'value', cacheIdx );
 
@@ -91,22 +97,28 @@ $( function () {
     function storeImage() {
       var dataUrl = $( '#map-countries-service img' ).prop( 'src' );
 
-      $( '#thumb' ).prop( 'src', dataUrl );
-      $( '#imgSrc' ).text( dataUrl );
+      if ( dataUrl ) {
+        $( '#thumb' ).prop( 'src', dataUrl );
+        $( '#imgSrc' ).text( dataUrl );
 
-      var file = dataURLtoBlob( dataUrl );
+        var file = dataURLtoBlob( dataUrl );
 
-      var fd = new FormData();
+        if ( file !== null ) {
+          var fd = new FormData();
 
-      fd.append( 'country[thumb]', file );
+          fd.append( 'country[thumb]', file );
 
-      $.ajax( {
-        url: '/countries/' + country.id,
-        type: 'PUT',
-        data: fd,
-        processData: false,
-        contentType: false
-      } );
+          $.ajax( {
+            url: '/countries/' + country.id,
+            type: 'PUT',
+            data: fd,
+            processData: false,
+            contentType: false
+          } );
+        }
+      } else {
+        console.log( 'cannot create dataURL for ' + feature.id );
+      }
 
       mapCountriesService.geomap('remove', feature);
 
@@ -120,17 +132,22 @@ $( function () {
 
     // Convert dataURL to Blob object
     function dataURLtoBlob(dataURL) {
-      // Decode the dataURL
-      var binary = atob(dataURL.split(',')[1]);
+      try {
+        // Decode the dataURL
+        var binary = atob(dataURL.split(',')[1]);
 
-      // Create 8-bit unsigned array
-      var array = [];
-      for(var i = 0; i < binary.length; i++) {
-        array.push(binary.charCodeAt(i));
+        // Create 8-bit unsigned array
+        var array = [];
+        for(var i = 0; i < binary.length; i++) {
+          array.push(binary.charCodeAt(i));
+        }
+
+        // Return our Blob object
+        return new Blob([new Uint8Array(array)], {type: 'image/png'});
+      } catch ( ex ) {
+        console.log( 'error creating image for '  + feature.id );
       }
-
-      // Return our Blob object
-      return new Blob([new Uint8Array(array)], {type: 'image/png'});
+      return null;
     }
 
   }
