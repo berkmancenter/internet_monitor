@@ -2,6 +2,10 @@ Imon::Application.routes.draw do
   resources :countries do
     member do
       get 'thumb'
+
+      get 'access', to: 'countries#show', redirect: true
+      get 'control', to: 'countries#show', redirect: true
+      get 'activity', to: 'countries#show', redirect: true
     end
 
     collection do
