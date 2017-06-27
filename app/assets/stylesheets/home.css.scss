@@ -40,6 +40,8 @@ body.home {
   }
 
   .block-links {
+    text-align: center;
+
     .block-link {
       background: $gray;
       border-radius: 6px;
@@ -151,7 +153,7 @@ body.home {
     margin: 0 2em;
     padding-bottom: 5em;
     vertical-align: top;
-    width: 15em * 3;
+    width: 55%;
     h4{
       margin: 0px;
     }
@@ -176,9 +178,9 @@ body.home {
     border-left: 2px solid $light-gray;
     display: inline-block;
     margin: 0;
-    padding: 1em 1em 2em 1em;
+    padding: 0 0 5em 2em;
     vertical-align: top;
-    width: 15em * 2;
+    width: 35%;
 
     ul {
       list-style-type: none;
