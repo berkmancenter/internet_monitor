@@ -20,13 +20,18 @@
     li {
       display: inline-block;
       list-style: none;
+      margin: 0 1em;
+      width: 40%;
     }
 
     a, a:visited {
       background: $vlight-gray;
       border-radius: .5em;
+      display: inline-block;
       margin: .5em 1em;
       padding: 1em 2em;
+      text-align: center;
+      width: 100%;
 
       @include transition-bg;
 
