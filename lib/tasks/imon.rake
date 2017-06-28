@@ -103,7 +103,7 @@ namespace :imon do
       [ 'yem', '6Ne2wqtcfpaqf5SGa', %|[{"mid":"iYFusYXFkZ4og9gbh","cx":2,"cy":1,"row":5,"col":3},{"mid":"ojrorfeQEZK3idht2","cx":2,"cy":1,"row":5,"col":1},{"mid":"uqEAx2ekm4KEs7wht","cx":4,"cy":1,"row":3,"col":1},{"mid":"kHooMxcwQvXko3oTy","cx":2,"cy":1,"row":6,"col":1},{"mid":"9RRToWeZYCPqaLJZ9","cx":2,"cy":1,"row":6,"col":3},{"mid":"6hF7twXPxJGZX9vbb","cx":4,"cy":1,"row":4,"col":1},{"mid":"4seXfj92HrdWpCkYT","cx":4,"cy":2,"row":1,"col":1}]| ]
     ]
 
-    country_page_parent = Refinery::Page.find_by_slug '2016-annual-report'
+    country_page_parent = Refinery::Page.find_by_slug '2017-global-internet-censorship'
 
     countries.each { |c|
       next if iso3_code.present? && c[0] != iso3_code
@@ -316,7 +316,7 @@ def widget_embed( dashboard_host, widget_dsc )
 end
 
 def import_country_widgets( cp, dashboard_id, widget_dscs )
-  dashboard_host = 'https://dashboard.dev.berkmancenter.org'
+  dashboard_host = 'https://dashboard.thenetmonitor.org'
   dashboard_root = "#{dashboard_host}/dashboards"
   dashboard_url = "#{dashboard_root}/#{dashboard_id}"
 
