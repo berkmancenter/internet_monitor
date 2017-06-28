@@ -316,7 +316,7 @@ def widget_embed( dashboard_host, widget_dsc )
 end
 
 def import_country_widgets( cp, dashboard_id, widget_dscs )
-  dashboard_host = 'https://dashboard.dev.berkmancenter.org'
+  dashboard_host = 'https://dashboard.thenetmonitor.org'
   dashboard_root = "#{dashboard_host}/dashboards"
   dashboard_url = "#{dashboard_root}/#{dashboard_id}"
 
