@@ -47,6 +47,14 @@
     background: $violet;
   }
 
+  .subtitle {
+    font-size: 1.6em;
+    font-style: italic;
+    margin-left: 2em;
+    margin-right: 2em;
+    text-align: center;
+  }
+
   /* Hide old category sections for now */
   section#access, section#control, section#activity {
     display: none;
