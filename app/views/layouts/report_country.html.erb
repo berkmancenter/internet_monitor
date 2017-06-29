@@ -24,7 +24,7 @@
     </div>
   </nav>
 
-  <%= link_to 'Switch Country', 'javascript:void(0);', { class: 'data-nav-countries' } %>
+  <%= link_to raw('<div class="country-pro-icon"></div>Switch Country'), 'javascript:void(0);', { class: 'data-nav-countries' } %>
   <%= render partial: 'refinery/nav_list', object: @page.parent.children.sort_by( &:title ) %>
 
   <section class="main-content">

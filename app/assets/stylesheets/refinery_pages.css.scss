@@ -158,6 +158,19 @@
       padding: 0 0 1em 0;
     }
   }
+
+  #body_content .references a, #body_content .references a:visited {
+    font-weight: normal;
+  }
+
+  .references {
+    font-size: .8em;
+
+    li {
+      margin: .5em 0;
+      padding-left: .25em;
+    }
+  }
 }
 
 .refinery-pages.layout-embed .main-content {
@@ -232,6 +245,21 @@
       width: 98%;
     }
   }
+}
+
+.country-pro-icon {
+  background-image: url(/assets/block_links.png);
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background-position: -48px -90px;
+  background-size: 128px;
+  vertical-align: middle;
+  margin-right: .5em;
+}
+
+.data-nav-countries .country-pro-icon {
+  background-position: -48px -8px;
 }
 
 
