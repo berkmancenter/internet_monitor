@@ -145,6 +145,19 @@
     }
   }
 
+  dl {
+    dt {
+      clear: left;
+      float: left;
+      font-weight: bold;
+      width: 8em;
+    }
+
+    dd {
+      margin: 0 0 0 9em;
+      padding: 0 0 1em 0;
+    }
+  }
 }
 
 .refinery-pages.layout-embed .main-content {
