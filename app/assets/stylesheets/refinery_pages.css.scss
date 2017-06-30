@@ -245,21 +245,54 @@
       width: 98%;
     }
   }
-}
 
-.country-pro-icon {
-  background-image: url(/assets/block_links.png);
-  display: inline-block;
-  width: 32px;
-  height: 32px;
-  background-position: -48px -90px;
-  background-size: 128px;
-  vertical-align: middle;
-  margin-right: .5em;
-}
+  .report-ex-links a {
+    margin-right: 3em;
+  }
 
-.data-nav-countries .country-pro-icon {
-  background-position: -48px -8px;
+  .report-ex-icon {
+    background-image: url(/assets/2107_report_icons.png);
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    vertical-align: middle;
+    margin-right: .5em;
+  }
+
+  a .report-ex-icon-dashboard {
+    background-position: -32px -64px;
+  }
+
+  a:hover .report-ex-icon-dashboard {
+    background-position: -32px 0px;
+  }
+
+  a .report-ex-icon-download {
+    background-position: 0px -64px;
+  }
+
+  a:hover .report-ex-icon-download {
+    background-position: 0px 0px;
+  }
+
+  .country-pro-icon {
+    background-image: url(/assets/block_links.png);
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-position: -48px -90px;
+    background-size: 128px;
+    vertical-align: middle;
+    margin-right: .5em;
+  }
+
+  .data-nav-countries .country-pro-icon {
+    background-position: -48px -8px;
+  }
+
+
+
+
 }
 
 
