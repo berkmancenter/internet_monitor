@@ -8,9 +8,9 @@ gem 'rails', '3.2.22.2'
 gem 'pg'
 
 group :development, :test do
-  gem 'rspec-rails', '2.14.2'
-  gem 'capybara', '2.3.0'
-  gem 'poltergeist', '1.5.1'
+  gem 'rspec-rails'
+  gem 'capybara'
+  gem 'poltergeist'
 end
 
 gem 'factory_girl_rails'
