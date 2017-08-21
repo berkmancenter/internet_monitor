@@ -3,9 +3,9 @@ class Region < Country
 
   default_scope where(:region => true)
 
-  scope :with_enough_data, where('indicator_count > 0')
-  scope :without_enough_data, where('indicator_count = 0')
-  scope :desc_score, order('score DESC')
+  scope :with_enough_data, -> { where('indicator_count > 0') }
+  scope :without_enough_data, -> { where('indicator_count = 0') }
+  scope :desc_score, -> { order('score DESC') }
 
   def enough_data?
     indicator_count > 0
