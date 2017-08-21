@@ -339,7 +339,7 @@ PLATFORMS
 
 DEPENDENCIES
   amatch
-  bcrypt
+  bcrypt (= 3.1.11)
   capybara
   coffee-rails (~> 3.2.1)
   exception_notification
