@@ -4,6 +4,9 @@
 .refinery-pages.show .main-content, .refinery-blog-posts .main-content, .refinery-blog-categories .main-content {
   background: lighten( $violet, 40% );
 
+  #body_content {
+    min-height: 480px;
+  }
 
   #body_content a, #body_content a:visited {
     color: $violet;

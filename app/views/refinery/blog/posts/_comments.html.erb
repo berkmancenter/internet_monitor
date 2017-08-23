@@ -16,19 +16,19 @@
                  :object => f.object,
                  :include_object_name => true
                } %>
-    <div class='field'>
+    <div class="field">
       <%= f.label :name %>
       <%= f.text_field :name %>
     </div>
-    <div class='field'>
+    <div class="field">
       <%= f.label :email %>
       <%= f.email_field :email %>
     </div>
-    <div class='field message_field'>
+    <div class="field message_field">
       <%= f.label :message, t('message', :scope => 'refinery.blog.posts.show.comments') %>
       <%= f.text_area :message, :rows => 6 %>
     </div>
-    <div class='field form-actions'>
+    <div class="field form-actions">
       <%= f.submit t('submit', :scope => 'refinery.blog.posts.show.comments') %>
     </div>
   <% end %>
