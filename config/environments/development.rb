@@ -19,40 +19,35 @@ Imon::Application.configure do
   config.log_level = :info
 
   # Don't care if the mailer can't send
-  config.action_mailer.raise_delivery_errors = false
+  if config.respond_to?(:action_mailer)
+    config.action_mailer.raise_delivery_errors = false
 
-  # Print deprecation notices to the Rails logger
-  config.active_support.deprecation = :log
+    # Print deprecation notices to the Rails logger
+    config.active_support.deprecation = :log
 
-  # Only use best-standards-support built into browsers
-  config.action_dispatch.best_standards_support = :builtin
+    # Do not compress assets
+    config.assets.js_compress = nil
 
-  # Log the query plan for queries taking more than this (works
-  # with SQLite, MySQL, and PostgreSQL)
-  config.active_record.auto_explain_threshold_in_seconds = 0.5
+    # Expands the lines which load the assets
+    config.assets.debug = true
 
-  # Do not compress assets
-  config.assets.compress = false
+    # Keep Refinery from overriding defaults
+    config.after_initialize do |app|
+        app.config.assets.debug = true
+    end
 
-  # Expands the lines which load the assets
-  config.assets.debug = true
+    config.action_mailer.default_url_options = { :host => 'www.thenetmonitor.org' }
+    Rails.application.routes.default_url_options[:host] = 'www.thenetmonitor.org'
 
-  # Keep Refinery from overriding defaults
-  config.after_initialize do |app|
-      app.config.assets.debug = true
-  end
-
-  config.action_mailer.default_url_options = { :host => 'www.thenetmonitor.org' }
-  Rails.application.routes.default_url_options[:host] = 'www.thenetmonitor.org'
-
-  config.action_mailer.delivery_method = :sendmail
-  config.action_mailer.perform_deliveries = true
+    config.action_mailer.delivery_method = :sendmail
+    config.action_mailer.perform_deliveries = true
 end
 
 if !( Rails.const_defined?( 'Server' ) || Rails.const_defined?( 'Console' ) )
-  Imon::Application.config.middleware.use ExceptionNotification::Rack, :email => {
-    :email_prefix => "[IM] ",
-    :sender_address => %{"Internet Monitor" <info@thenetmonitor.org>},
-    :exception_recipients => %w{rwestphal@cyber.law.harvard.edu}
-  }
+    Imon::Application.config.middleware.use ExceptionNotification::Rack, :email => {
+      :email_prefix => "[IM] ",
+      :sender_address => %{"Internet Monitor" <info@thenetmonitor.org>},
+      :exception_recipients => %w{rwestphal@cyber.law.harvard.edu}
+    }
+  end
 end

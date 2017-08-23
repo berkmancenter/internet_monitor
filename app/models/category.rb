@@ -3,7 +3,7 @@ class Category < ActiveRecord::Base
     has_many :data, through: :datum_sources
 
     extend FriendlyId
-    friendly_id :name, :use => :slugged
+    friendly_id :name, use: [:slugged, :finders]
 
     def as_jsonapi
       {

@@ -1,6 +1,6 @@
 class Country < ActiveRecord::Base
     extend FriendlyId
-    friendly_id :iso3_code, :use => :slugged
+    friendly_id :iso3_code, use: [:slugged, :finders]
 
     has_many :country_categories
     has_many :country_languages
@@ -12,7 +12,7 @@ class Country < ActiveRecord::Base
     has_many :html_blocks
     has_many :images
 
-    default_scope where(:region => false)
+    default_scope { where(:region => false) }
 
     scope :with_enough_data, -> {
         where("access_group_count >= :min_access_groups",

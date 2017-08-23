@@ -636,12 +636,6 @@ FactoryGirl.define do
   end
 
   # refinery
-  factory :tadmin, class: Refinery::User do |u|
-    u.username 'tadmin'
-    u.email 'tadmin@cyber.law.harvard.edu'
-    u.password 'tp4ssw0rd'
-  end
-
   factory :carousel_page, class: Refinery::Page do |p|
     p.title 'carousel'
     p.slug 'carousel'

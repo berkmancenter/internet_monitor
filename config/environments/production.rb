@@ -14,7 +14,7 @@ Imon::Application.configure do
   config.serve_static_files = false
 
   # Compress JavaScripts and CSS
-  config.assets.compress = true
+  config.assets.js_compress = :uglifier
 
   # Don't fallback to assets pipeline if a precompiled asset is missed
   config.assets.compile = true
@@ -51,29 +51,31 @@ Imon::Application.configure do
   # config.assets.precompile += %w( search.js )
 
   # Disable delivery errors, bad email addresses will be ignored
-  # config.action_mailer.raise_delivery_errors = false
+  if config.respond_to?(:action_mailer)
+    # config.action_mailer.raise_delivery_errors = false
 
-  # Enable threaded mode
-  # config.threadsafe!
+    # Enable threaded mode
+    # config.threadsafe!
 
-  # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
-  # the I18n.default_locale when a translation can not be found)
-  config.i18n.fallbacks = true
+    # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
+    # the I18n.default_locale when a translation can not be found)
+    config.i18n.fallbacks = true
 
-  # Send deprecation notices to registered listeners
-  config.active_support.deprecation = :notify
+    # Send deprecation notices to registered listeners
+    config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = { :host => 'thenetmonitor.org' }
-  Rails.application.routes.default_url_options[:host] = 'thenetmonitor.org'
+    config.action_mailer.default_url_options = { :host => 'thenetmonitor.org' }
+    Rails.application.routes.default_url_options[:host] = 'thenetmonitor.org'
 
-  config.action_mailer.delivery_method = :sendmail
-  config.action_mailer.perform_deliveries = true
+    config.action_mailer.delivery_method = :sendmail
+    config.action_mailer.perform_deliveries = true
 end
 
 
 Imon::Application.config.middleware.use ExceptionNotification::Rack, :email => {
-  :email_prefix => "[IM] ",
-  :sender_address => %{"Internet Monitor" <info@thenetmonitor.org>},
-  :exception_recipients => %w{rwestphal@cyber.law.harvard.edu}
+    :email_prefix => "[IM] ",
+    :sender_address => %{"Internet Monitor" <info@thenetmonitor.org>},
+    :exception_recipients => %w{rwestphal@cyber.law.harvard.edu}
 }
+  end
 

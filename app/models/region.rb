@@ -1,7 +1,7 @@
 class Region < Country
   self.table_name = 'countries'
 
-  default_scope where(:region => true)
+  default_scope { where(:region => true) }
 
   scope :with_enough_data, -> { where('indicator_count > 0') }
   scope :without_enough_data, -> { where('indicator_count = 0') }

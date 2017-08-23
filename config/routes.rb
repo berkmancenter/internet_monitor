@@ -17,20 +17,20 @@ Imon::Application.routes.draw do
   get '/map', to: redirect( '/' )
 
   namespace :v1 do
-    match 'countries' => 'countries#index', as: :countries
-    match 'countries/:id' => 'countries#show', as: :country
+    get 'countries' => 'countries#index', as: :countries
+    get 'countries/:id' => 'countries#show', as: :country
 
-    match 'regions' => 'regions#index', as: :regions
-    match 'regions/:id' => 'regions#show', as: :region
+    get 'regions' => 'regions#index', as: :regions
+    get 'regions/:id' => 'regions#show', as: :region
 
-    match 'datum_sources' => 'datum_sources#index'
+    get 'datum_sources' => 'datum_sources#index'
   end
 
   namespace :v2 do
-    match 'countries' => 'countries#index', as: :countries
-    match 'countries/:id' => 'countries#show', as: :country
+    get 'countries' => 'countries#index', as: :countries
+    get 'countries/:id' => 'countries#show', as: :country
 
-    match 'indicators' => 'datum_sources#index'
+    get 'indicators' => 'datum_sources#index'
   end
 
   # This line mounts Refinery's routes at the root of your application.

@@ -5,7 +5,7 @@ gem 'rails', '4.2.3'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+gem 'pg', '0.19.0'
 
 group :development, :test do
   gem 'rspec-rails'
@@ -37,10 +37,14 @@ gem 'friendly_id'
 gem 'twitter'
 
 gem 'refinerycms', '3.0.5'
+gem 'refinerycms-authentication-devise'
 gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt', '3.1.11', :require => 'bcrypt'
+
+# timezone database
+gem 'tzinfo-data'
 
 # tweet parsing
 gem 'twitter-text'

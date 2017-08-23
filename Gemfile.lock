@@ -87,6 +87,13 @@ GEM
     concurrent-ruby (1.0.5)
     decorators (2.0.3)
       railties (>= 4.0.0, < 5.2)
+    devise (3.5.10)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 3.2.6, < 5)
+      responders
+      thread_safe (~> 0.1)
+      warden (~> 1.2.3)
     diff-lcs (1.3)
     diffy (3.1.0)
     domain_name (0.5.20170404)
@@ -168,9 +175,10 @@ GEM
     nokogiri (1.8.0-x86-mingw32)
       mini_portile2 (~> 2.2.0)
     oj (3.3.5)
-    pg (0.21.0)
-    pg (0.21.0-x64-mingw32)
-    pg (0.21.0-x86-mingw32)
+    orm_adapter (0.5.0)
+    pg (0.19.0)
+    pg (0.19.0-x64-mingw32)
+    pg (0.19.0-x86-mingw32)
     poltergeist (1.16.0)
       capybara (~> 2.1)
       cliver (~> 0.3.1)
@@ -223,6 +231,11 @@ GEM
       refinerycms-images (= 3.0.5)
       refinerycms-pages (= 3.0.5)
       refinerycms-resources (= 3.0.5)
+    refinerycms-authentication-devise (1.0.4)
+      actionmailer (~> 4.2, >= 4.2.0)
+      devise (~> 3.0, >= 3.2.4)
+      friendly_id (~> 5.1.0)
+      refinerycms-core (~> 3.0, >= 3.0.0)
     refinerycms-core (3.0.5)
       actionpack (>= 4.2.3, < 5.0)
       activerecord (>= 4.2.3, < 5.0)
@@ -262,6 +275,9 @@ GEM
     refinerycms-settings (3.0.0)
       friendly_id (~> 5.0, >= 5.0.1)
       refinerycms-core (~> 3.0, >= 3.0.0)
+    responders (2.4.0)
+      actionpack (>= 4.2.0, < 5.3)
+      railties (>= 4.2.0, < 5.3)
     roo (1.13.2)
       nokogiri
       rubyzip
@@ -340,6 +356,8 @@ GEM
       unf (~> 0.1.0)
     tzinfo (1.2.3)
       thread_safe (~> 0.1)
+    tzinfo-data (1.2017.2)
+      tzinfo (>= 1.0.0)
     uglifier (3.2.0)
       execjs (>= 0.3.0, < 3)
     unf (0.1.4)
@@ -347,6 +365,8 @@ GEM
     unf_ext (0.0.7.4)
     unf_ext (0.0.7.4-x64-mingw32)
     unf_ext (0.0.7.4-x86-mingw32)
+    warden (1.2.7)
+      rack (>= 1.0)
     websocket-driver (0.6.5)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
@@ -373,11 +393,12 @@ DEPENDENCIES
   jquery-rails
   nokogiri
   oj
-  pg
+  pg (= 0.19.0)
   poltergeist
   rabl (~> 0.9.3)
   rails (= 4.2.3)
   refinerycms (= 3.0.5)
+  refinerycms-authentication-devise
   refinerycms-blog!
   roo
   rspec-rails
@@ -387,6 +408,7 @@ DEPENDENCIES
   therubyracer
   twitter
   twitter-text
+  tzinfo-data
   uglifier
 
 BUNDLED WITH
