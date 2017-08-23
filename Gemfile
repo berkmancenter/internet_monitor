@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.13'
+gem 'rails', '4.2.3'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -16,16 +16,16 @@ end
 gem 'factory_girl_rails'
 gem 'test-unit'
 
-gem 'sass-rails',   '~> 3.2.3'
-gem 'coffee-rails', '~> 3.2.1'
+gem 'sass-rails'
+gem 'coffee-rails'
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 gem 'therubyracer', :platforms => :ruby
 
-gem 'uglifier', '>= 1.0.3'
+gem 'uglifier'
 
-gem 'jquery-rails', '~> 2.3.0'
-gem 'rubyzip', '< 1.0.0'
+gem 'jquery-rails'
+gem 'rubyzip'
 gem 'roo'
 gem 'httparty'
 gem 'nokogiri'
@@ -33,12 +33,11 @@ gem 'formtastic'
 gem "rabl", "~> 0.9.3"
 gem 'oj'
 gem 'amatch'
-gem 'friendly_id', '~> 4.0.1'
+gem 'friendly_id'
 gem 'twitter'
 
-gem 'refinerycms', '2.1.5'
-gem 'refinerycms-blog', '2.1.0'
-#gem 'refinerycms-wordpress-import', :git => 'git://github.com/ryanttb/refinerycms-wordpress-import.git'
+gem 'refinerycms', '3.0.5'
+gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt', '3.1.11', :require => 'bcrypt'
