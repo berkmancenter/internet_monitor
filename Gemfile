@@ -37,6 +37,7 @@ gem 'friendly_id'
 gem 'twitter'
 
 gem 'refinerycms', '3.0.5'
+gem 'refinerycms-wymeditor', '~> 1.0.0'
 gem 'refinerycms-authentication-devise'
 gem 'refinerycms-blog', git: 'https://github.com/refinery/refinerycms-blog', branch: 'master'
 

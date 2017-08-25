@@ -275,6 +275,8 @@ GEM
     refinerycms-settings (3.0.0)
       friendly_id (~> 5.0, >= 5.0.1)
       refinerycms-core (~> 3.0, >= 3.0.0)
+    refinerycms-wymeditor (1.0.7)
+      refinerycms-core (>= 3.0.0, < 5.0)
     responders (2.4.0)
       actionpack (>= 4.2.0, < 5.3)
       railties (>= 4.2.0, < 5.3)
@@ -400,6 +402,7 @@ DEPENDENCIES
   refinerycms (= 3.0.5)
   refinerycms-authentication-devise
   refinerycms-blog!
+  refinerycms-wymeditor (~> 1.0.0)
   roo
   rspec-rails
   rubyzip
