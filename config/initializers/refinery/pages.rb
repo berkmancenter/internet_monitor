@@ -30,6 +30,9 @@ Refinery::Pages.configure do |config|
   # when you create a page
   config.use_custom_slugs = true
 
+  config.add_whitelist_elements = %w( iframe )
+  config.add_whitelist_attributes = %w( frameborder scrolling data-row data-col )
+  
   # Set this to true if you want backend pages to be cached
   # config.cache_pages_backend = false
 
