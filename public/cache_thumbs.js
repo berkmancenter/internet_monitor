@@ -12,7 +12,7 @@ $( function () {
       ],
       center: [ 0, 20 ],
       zoom: 2,
-      zoomMin: 2,
+      zoomMin: 0,
       mode: 'static',
       shapeStyle: {
         height: 0,

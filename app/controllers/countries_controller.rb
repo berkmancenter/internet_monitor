@@ -13,6 +13,7 @@ class CountriesController < ApplicationController
 
   def cache_thumbs
     @map_countries = Country.select( 'id,iso3_code' ) 
+    @map_countries_count = Country.count
     render
   end
 
