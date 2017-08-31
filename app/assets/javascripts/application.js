@@ -26,5 +26,16 @@
     $( '.countries-nav-list,.data-nav-countries' ).toggleClass( 'expanded' );
     return false;
   } );
+
+  $( 'h2.expandable' ).each( function( e ) {
+    var show = $( this ).hasClass( 'expanded' );
+    $( this ).nextUntil( 'h2' ).toggle( show );
+  } );
   
+  $( 'h2.expandable' ).click( function( e ) {
+    e.preventDefault( );
+    var show = !$( this ).hasClass( 'expanded' );
+    $( this ).toggleClass( 'expanded', show ).nextUntil( 'h2' ).toggle( show );
+    return false;
+  } );
 } ());

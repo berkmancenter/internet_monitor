@@ -245,7 +245,12 @@ a {
 
 }
 
-.data-nav-countries:after {
+h2.expandable {
+  cursor: pointer;
+  user-select: none;
+}
+
+h2.expandable:after, .data-nav-countries:after {
   content: "►";
   display: inline-block;
   margin-left: 2px;
@@ -253,7 +258,7 @@ a {
   @include transition-transform;
 }
 
-.data-nav-countries.expanded:after {
+h2.expandable.expanded:after, .data-nav-countries.expanded:after {
   transform: rotate(90deg);
 }
 
