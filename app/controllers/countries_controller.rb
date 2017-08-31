@@ -1,14 +1,6 @@
 class CountriesController < ApplicationController
   def index
-    last_indicator = Indicator.last
-    if stale?( etag: last_indicator, last_modified: last_indicator.updated_at )
-      # Removed with_enough_data scope call
-      @scored_countries = Country.desc_score.all
-      respond_to do |format|
-        format.html
-        format.any(:xml, :json)
-      end
-    end
+    redirect_to '/country-profiles'
   end
 
   def cache_thumbs
