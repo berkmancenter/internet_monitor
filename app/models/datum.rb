@@ -5,7 +5,7 @@ class Datum < ActiveRecord::Base
 
     serialize :value
     serialize :original_value
-    scope :for, -> { |country_or_language|
+    scope :for, -> (country_or_language) {
         if country_or_language.is_a?(Country)
             where(:country_id => country_or_language.id)
         else
