@@ -41,5 +41,6 @@ Refinery::Images.configure do |config|
   # config.dragonfly_url_format = "/system/images/:job/:basename.:ext"
   # config.datastore_root_path = "K:/internet_monitor/public/system/refinery/images"
   # config.trust_file_extensions = false
+  config.dragonfly_verify_urls = false
 
 end
