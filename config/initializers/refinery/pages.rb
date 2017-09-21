@@ -6,7 +6,12 @@ Refinery::Pages.configure do |config|
   # end
 
   # Configure global page default parts
-  config.default_parts = [ 'Body', 'Side Body' ]
+  config.default_parts = [
+    { title: 'Body', slug: 'body' },
+    { title: 'Side Body', slug: 'side_body' },
+    { title: 'Graph', slug: 'graph' },
+    { title: 'Table', slug: 'table' }
+  ]
 
   # Configure whether to allow adding new page parts
   config.new_page_parts = true
