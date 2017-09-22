@@ -1,12 +1,20 @@
 @import "colors";
 @import "mixins";
 
-.refinery-pages.show .main-content, .refinery-blog-posts .main-content, .refinery-blog-categories .main-content {
-  background: lighten( $violet, 40% );
-
+.refinery-pages.show .main-content {
   #body_content {
     min-height: 480px;
   }
+}
+
+.refinery-blog-posts .main-content, .refinery-blog-categories .main-content {
+  #body_content {
+    min-height: 1088px;
+  }
+}
+
+.refinery-pages.show .main-content, .refinery-blog-posts .main-content, .refinery-blog-categories .main-content {
+  background: lighten( $violet, 40% );
 
   #body_content a, #body_content a:visited {
     color: $violet;
@@ -48,6 +56,7 @@
 
   h1#body_content_title {
     background: $violet;
+    white-space: nowrap;
   }
 
   .subtitle {

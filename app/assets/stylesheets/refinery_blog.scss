@@ -100,7 +100,7 @@
   .refinery-blog-posts, .refinery-blog-categories {
     #side_body, #sidebar {
       display: block !important;
-      position: fixed;
+      position: absolute;
       top: 6.5em;
       left: .5em;
       width: 16.75% !important;
