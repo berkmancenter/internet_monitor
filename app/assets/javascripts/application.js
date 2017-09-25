@@ -13,6 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require jquery.collapse
+//= require lightbox
 //= require_tree ./sitewide
 
 (function() {

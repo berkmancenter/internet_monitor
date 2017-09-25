@@ -35,6 +35,7 @@ gem 'oj'
 gem 'amatch'
 gem 'friendly_id'
 gem 'twitter'
+gem 'lightbox2-rails'
 
 gem 'refinerycms', '3.0.5'
 gem 'refinerycms-wymeditor', '~> 1.0.0'
