@@ -1,4 +1,10 @@
 (function() {
+  $( '.graph img' ).each( function( i ) {
+    var $img = $( this );
+
+    $img.wrap( '<a href="' + $img.attr( 'src' ) + '" data-lightbox="' + $img.attr( 'title' ) + '"></a>' );
+  } );
+ 
   $( '.reference' ).each( function ( i ) {
     $( this ).find( 'a' ).attr( 'href', '#cite-note-' + ( i + 1 ) ).text( '[' + ( i + 1 ) + ']' );
   } );
