@@ -1,1 +1,13 @@
-<%= render '/refinery/content_page' %>
+<%#= render '/refinery/content_page' %>
+
+<section id="body_content" class="bulletin">
+  <h1 id="body_content_title"><%= @page.title %></h1>
+
+  <section id="body">
+    <div class="inner">
+      <div class="graph"><%= raw( @page.content_for 'graph' ) %></div>
+      <div class="table"><%= raw( @page.content_for 'table' ) %></div>
+      <%= raw( @page.content_for 'body' ) %>
+    </div>
+  </section>
+</section>
