@@ -6,8 +6,13 @@
   <section id="body">
     <div class="inner">
       <div class="graph"><%= raw( @page.content_for 'graph' ) %></div>
-      <div class="table"><%= raw( @page.content_for 'table' ) %></div>
       <%= raw( @page.content_for 'body' ) %>
+    </div>
+  </section>
+
+  <section id="table">
+    <div class="inner">
+      <div class="table"><%= raw( @page.content_for 'table' ) %></div>
     </div>
   </section>
 </section>
