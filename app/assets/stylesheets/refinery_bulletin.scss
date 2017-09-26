@@ -6,7 +6,7 @@
     .graph {
       float: right;
       margin-top: 2em;
-      width: 25%;
+      width: 40%;
 
       img {
         width: 100%;
@@ -16,7 +16,7 @@
   }
 
   #table {
-    display: inline-block;
+    display: block;
     background: $white;
     border-radius: .5em;
     margin: .5em 0;
