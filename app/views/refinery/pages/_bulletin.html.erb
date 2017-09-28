@@ -5,14 +5,14 @@
 
   <section id="body">
     <div class="inner">
-      <div class="graph"><%= raw( @page.content_for 'graph' ) %></div>
+      <div class="aside"><%= raw( @page.content_for 'aside' ) %></div>
       <%= raw( @page.content_for 'body' ) %>
     </div>
   </section>
 
-  <section id="table">
+  <section id="appendix">
     <div class="inner">
-      <div class="table"><%= raw( @page.content_for 'table' ) %></div>
+      <div class="appendix"><%= raw( @page.content_for 'appendix' ) %></div>
     </div>
   </section>
 </section>

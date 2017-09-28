@@ -3,7 +3,7 @@
 
 .bulletin {
   #body {
-    .graph {
+    .aside {
       float: right;
       margin-top: 2em;
       width: 40%;
@@ -13,9 +13,14 @@
         height: auto;
       }
     }
+
+    img.image-align-left, img.image-align-right {
+        width: 50%;
+        height: auto;
+    }
   }
 
-  #table {
+  #appendix {
     display: block;
     background: $white;
     border-radius: .5em;
