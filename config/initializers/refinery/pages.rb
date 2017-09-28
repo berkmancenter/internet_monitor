@@ -8,9 +8,8 @@ Refinery::Pages.configure do |config|
   # Configure global page default parts
   config.default_parts = [
     { title: 'Body', slug: 'body' },
-    { title: 'Side Body', slug: 'side_body' },
-    { title: 'Graph', slug: 'graph' },
-    { title: 'Table', slug: 'table' }
+    { title: 'Aside', slug: 'aside' },
+    { title: 'Appendix', slug: 'appendix' }
   ]
 
   # Configure whether to allow adding new page parts
