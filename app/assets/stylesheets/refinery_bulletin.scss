@@ -28,5 +28,9 @@
     min-height: 12em;
     padding: .5em;
     vertical-align: top;
+
+    iframe {
+      width: 100% !important;
+    }
   }
 }
