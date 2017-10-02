@@ -5,14 +5,18 @@
 
   <section id="body">
     <div class="inner">
-      <div class="aside"><%= raw( @page.content_for 'aside' ) %></div>
+      <% unless @page.content_for( 'aside' ).blank? %>
+        <div class="aside"><%= raw( @page.content_for 'aside' ) %></div>
+      <% end %>
       <%= raw( @page.content_for 'body' ) %>
     </div>
   </section>
 
-  <section id="appendix">
-    <div class="inner">
-      <div class="appendix"><%= raw( @page.content_for 'appendix' ) %></div>
-    </div>
-  </section>
+  <% unless @page.content_for( 'appendix' ).blank? %>
+    <section id="appendix">
+      <div class="inner">
+        <div class="appendix"><%= raw( @page.content_for 'appendix' ) %></div>
+      </div>
+    </section>
+  <% end %>
 </section>
