@@ -7,20 +7,25 @@
   }
 
   #body {
+    img {
+      width: 100%;
+      height: auto;
+    }
+
     .aside {
       float: right;
       margin-top: 2em;
       width: 40%;
 
-      img {
-        width: 100%;
-        height: auto;
-      }
     }
 
     img.image-align-left, img.image-align-right {
         width: 50%;
         height: auto;
+    }
+
+    time {
+      font-style: italic;
     }
   }
 
@@ -50,6 +55,10 @@
     padding: .5em 1em;
     vertical-align: top;
     width: 100% !important;
+
+    h2 {
+      color: $cyan;
+    }
 
     ul {
       list-style: none;

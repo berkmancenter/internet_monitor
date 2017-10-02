@@ -6,6 +6,7 @@
       <% unless @page.content_for( 'aside' ).blank? %>
         <div class="aside"><%= raw( @page.content_for 'aside' ) %></div>
       <% end %>
+      <time><%= @page.created_at.to_s :publication %></time>
       <%= raw( @page.content_for 'body' ) %>
     </div>
   </section>
