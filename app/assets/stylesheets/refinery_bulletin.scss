@@ -2,6 +2,10 @@
 @import "mixins";
 
 .bulletin {
+  h1#body_content_title {
+    background: $cyan !important;
+  }
+
   #body {
     .aside {
       float: right;
@@ -31,6 +35,64 @@
 
     iframe {
       width: 100% !important;
+    }
+  }
+
+}
+
+.bulletin {
+  #bulletin_list {
+    background: $white;
+    border-radius: .5em;
+    display: inline-block !important;
+    margin: .5em 0;
+    min-height: 12em;
+    padding: .5em 1em;
+    vertical-align: top;
+    width: 100% !important;
+
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      li {
+        padding: .5em 0;
+      }
+
+
+      a, a:visited {
+        color: $violet;
+        font-weight: bold;
+        text-decoration: none;
+
+        &:hover {
+          color: $orange;
+          text-decoration: underline;
+        }
+      }
+
+      time {
+        display: block;
+      }
+    }
+  }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .bulletin {
+    #bulletin_list {
+      display: block !important;
+      padding: .5em .5em;
+      position: absolute;
+      top: 6.5em;
+      left: .5em;
+      width: 16.75% !important;
+
+      ul {
+        font-size: .8em;
+      }
     }
   }
 }

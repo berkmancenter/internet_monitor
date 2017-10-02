@@ -43,10 +43,22 @@
     </div>
   </nav>
 
-  <section class="main-content">
+  <section class="main-content bulletin">
     <div class="body-margin">
       <%= yield %>
-    </div>
+
+      <section id="bulletin_list">
+        <div class="inner">
+          <h2>GICMC Research Bulletins</h2>
+
+          <ul>
+            <% @page.parent.children.each { |p| %>
+              <li><%= link_to p.title, p %> <time><%= p.created_at.to_s :publication %></time></li>
+            <% } %>
+          </ul>
+        </div>
+      </section>
+        </div>
   </section>
 
   <footer>
