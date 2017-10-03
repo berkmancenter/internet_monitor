@@ -128,12 +128,19 @@ a {
 
 .navbar-brand {
   color: $gray;
+  display: none;
   font-size: 18px;
   margin-left: -15px;
   padding: 7px 15px;
   height: 50px;
 }
 
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .navbar-brand {
+    display: inline;
+  }
+}
 .navbar-collapse {
   display: inline-block;
   float: right;
