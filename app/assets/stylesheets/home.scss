@@ -90,7 +90,7 @@ body.home {
             background-position: -104px -104px;
           }
 
-          &.about {
+          &.bulletins {
             background-position: -208px -104px;
           }
         }
@@ -130,6 +130,10 @@ body.home {
 
         &.data {
           background-color: $violet;
+        }
+
+        &.bulletins {
+          background-color: $cyan;
         }
       }
 
