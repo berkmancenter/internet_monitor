@@ -4,6 +4,12 @@
 .bulletin {
   h1#body_content_title {
     background: $cyan !important;
+
+    img {
+      height: auto;
+      vertical-align: middle;
+      width: 48px;
+    }
   }
 
   #body {
