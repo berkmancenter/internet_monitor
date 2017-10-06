@@ -8,6 +8,11 @@ Setup
 
 This is a Ruby on Rails website running RefineryCMS.
 
+Install dependencies:
+
+* `apt-get install ruby-dev rubygems`
+* `gem install bundler`
+
 To get it up and running:
 
 1. clone this repository
