@@ -7,6 +7,10 @@
       min-height: 112px;
       height: 112px;
 
+      .bkc {
+        display: none;
+      }
+
       .logo-image {
         background: url("im_site_logo_hover.png");
         display: inline-block;
@@ -23,6 +27,20 @@
       }
     }
 
+  }
+}
+
+@media (min-width: 1400px) {
+  body.home {
+    .im-home-nav {
+      .bkc {
+        display: block;
+        height: 100px;
+        left: -128px;
+        position: absolute;
+        top: 12px;
+      }
+    }
   }
 }
 

@@ -2,11 +2,18 @@
 @import "mixins";
 
 .bulletin {
+  #body_content {
+    padding-top: 2em !important;
+  }
+
   h1#body_content_title {
     background: $cyan !important;
+    border-top-right-radius: 1em;
+    border-top-left-radius: 1em;
 
     img {
       height: auto;
+      margin-bottom: .2em;
       vertical-align: middle;
       width: 48px;
     }
@@ -101,7 +108,7 @@
       display: block !important;
       padding: .5em .5em;
       position: absolute;
-      top: 6.5em;
+      top: 8.2em;
       left: .5em;
       width: 16.75% !important;
 

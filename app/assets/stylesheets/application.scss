@@ -90,7 +90,7 @@ a {
 /* Small devices (tablets, 768px and up) */
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 100%;
   }
 }
 
@@ -115,6 +115,10 @@ a {
 .navbar {
   border: 1px solid transparent;
   min-height: 50px;
+
+  .navbar-container {
+    margin-left: 1em;
+  }
 }
 
 .navbar-default {
@@ -128,11 +132,15 @@ a {
 
 .navbar-brand {
   color: $gray;
-  display: none;
   font-size: 18px;
   margin-left: -15px;
   padding: 7px 15px;
   height: 50px;
+
+  .bkc {
+    height: 36px;
+    margin-right: 1em;
+  }
 }
 
 /* Large devices (large desktops, 1200px and up) */
@@ -228,6 +236,7 @@ a {
 }
 
 .im-home-nav {
+  margin: 0;
   .logo-image {
     background: url("imon_site_logo_small.png");
     display: inline-block;
