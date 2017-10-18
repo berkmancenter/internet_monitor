@@ -18,27 +18,27 @@ en:
         block_links:
           dashboard:
             header: Dashboard
-            body: The Dashboard helps you explore, create, and share data visualizations about the Internet.
+            body: The Dashboard helps you explore, create, and share data visualizations about the Internet
 
           accesscheck:
             header: AccessCheck
-            body: AccessCheck lets users test websites in different countries to see whether they are available.
+            body: AccessCheck lets users test websites in different countries to see whether they are available
 
           countryviews:
             header: Country Views
-            body: Country Views provide collections of currated data and widgets relevant to each country.
+            body: Country Views provide collections of currated data and widgets relevant to each country
 
           research:
             header: Research
-            body: Research publications high-lighting some of the more fascinating developments and debates in the networked world.
+            body: Research publications high-lighting some of the more fascinating developments and debates in the networked world
 
           data:
             header: Data
-            body: Documentation of all Internet Monitor data streams, filtering data offerings, and APIs.
+            body: Documentation of all Internet Monitor data streams, filtering data offerings, and APIs
 
           bulletins:
             header: Bulletins
-            body: GICMC Research Bulletins
+            body: Internet Monitor research bulletins provide data and analysis on recent events and trends in the networked world
 
     blog:
       posts:
