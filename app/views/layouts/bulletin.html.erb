@@ -53,7 +53,7 @@
           <h2>Research Bulletins</h2>
 
           <ul>
-            <% @page.parent.children.each { |p| %>
+            <% @page.parent.children.where( draft: false ).each { |p| %>
               <li><%= link_to p.title, p %> <time><%= p.created_at.to_s :publication %></time></li>
             <% } %>
           </ul>
