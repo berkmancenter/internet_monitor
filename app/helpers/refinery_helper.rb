@@ -17,7 +17,7 @@ module RefineryHelper
 
   def post_author( post )
     if post.present? && post.author.present?
-      post.author.full_name.empty? ? post.author.username : post.author.full_name
+      (post.author.full_name.nil? || post.author.full_name.empty?) ? post.author.username : post.author.full_name
     else
       'Unknown'
     end
