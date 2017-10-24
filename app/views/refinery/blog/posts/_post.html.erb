@@ -10,8 +10,8 @@
       <time datetime="<%=l @post.published_at.to_date, :format => :default %>" class="posted_at">
         <%= t('created_at', :scope => 'refinery.blog.shared.posts', :when => l(@post.published_at.to_date, :format => :long)) %>
       </time>
-      <%= "#{t('by', :scope => 'refinery.blog.posts.show')} #{@post.author.full_name}" if @post.author.present? %>
-      <%#= content_tag(:div, "#{t('by', :scope => 'refinery.blog.posts.show')} #{@post.author.full_name}", :class => "blog_author") if @post.author.present? %>
+      <%= "#{t('by', :scope => 'refinery.blog.posts.show')} #{post_author @post}" %>
+      <%#= content_tag(:div, "#{t('by', :scope => 'refinery.blog.posts.show')} #{post_author @post}", :class => "blog_author") %>
       <% if @post.source_url.present? %>
         <div class="blog_source">
           <%= "#{t('source', :scope => 'refinery.blog.posts.show')}: " %>

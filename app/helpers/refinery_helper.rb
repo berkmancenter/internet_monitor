@@ -15,6 +15,14 @@ module RefineryHelper
     posts = Refinery::Blog::Post.order("published_at DESC").first(3)
   end
 
+  def post_author( post )
+    if post.present? && post.author.present?
+      post.author.full_name.empty? ? post.author.username : post.author.full_name
+    else
+      'Unknown'
+    end
+  end
+
   # return last three tweets
   def imon_tweets
     client = Twitter::REST::Client.new do |config|
