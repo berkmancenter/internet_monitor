@@ -149,9 +149,19 @@ a {
     display: inline;
   }
 }
+
 .navbar-collapse {
   display: inline-block;
   float: right;
+}
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .navbar-collapse {
+    float: none;
+    position: absolute;
+    right: 0;
+  }
 }
 
 .navbar-right {
