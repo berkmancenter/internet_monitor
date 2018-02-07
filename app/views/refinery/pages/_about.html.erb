@@ -1,0 +1,12 @@
+<section id="body_content">
+  <h1 id="body_content_title"><%= image_tag 'imon_logo_small' %> <%= @page.title %></h1>
+
+  <section id="body">
+    <div class="inner">
+      <%= raw( @page.content_for 'pre-signup' ) %>
+
+      <%= render partial: 'shared/mc' %>
+
+      <%= raw( @page.content_for 'post-signup' ) %>
+    </div>
+</section>
