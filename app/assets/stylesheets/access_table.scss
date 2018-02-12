@@ -1,0 +1,48 @@
+table.accessibility {
+  font-size: .8em;
+
+  th {
+    border-right: solid 1px #222;
+    border-bottom: solid 1px #222;
+    padding: .5em;
+    border-top: solid 1px #222;
+    
+    &:first-child {
+      border-left: solid 1px #222;
+     
+    }
+  }
+  
+  tr.secondary th {
+    border-left: none;
+    border-top: none;
+  }
+  
+  td {
+    border-right: solid 1px #222;
+    border-bottom: solid 1px #222;
+    padding: .25em 1em;
+    
+    &:first-child {
+    border-left: solid 1px #222;
+      
+    }
+    &:not(:first-child) {
+      text-align: center;
+    }
+  }
+  
+  caption {
+    caption-side: bottom;
+  }
+  
+  .blocked {
+    background: #f15c23;
+  }
+
+  .accessible {
+    background: #5ec1a5;
+  }
+}
+
+
