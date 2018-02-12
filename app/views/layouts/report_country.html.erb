@@ -13,7 +13,7 @@
 
   <%= csrf_meta_tags %>
 </head>
-<body class="<%= "#{ params[ :controller ].gsub( '/', '-' ) unless params[ :controller ].nil? } #{ params[ :action ] } #{ ('show-' + params[ :path ].gsub( '/', ' ' )) if params[ :controller ] == 'refinery/pages' && params[ :action ] == 'show'}" %> layout-report">
+<body class="<%= "#{ params[ :controller ].gsub( '/', '-' ) unless params[ :controller ].nil? } #{ params[ :action ] } #{ ('show-' + params[ :path ].gsub( '/', ' ' )) if params[ :controller ] == 'refinery/pages' && params[ :action ] == 'show'}" %> layout-report layout-report-country">
 
   <nav class="navbar navbar-inverse navbar-static-top im-nav">
     <div class="container">

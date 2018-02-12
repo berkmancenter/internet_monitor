@@ -1,0 +1,11 @@
+<section id="body_content" class="country_profile">
+  <h1 id="body_content_title"><%= image_tag 'imon_logo_small' %> <%= @page.title %></h1>
+
+  <section id="body">
+    <div class="inner">
+      <%= raw( @page.content_for 'body' ) %>
+    </div>
+
+    <p><i>Last updated: <%= @page.updated_at.strftime '%e %B %Y' %></i></p>
+  </section>
+</section>
