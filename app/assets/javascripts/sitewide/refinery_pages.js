@@ -18,7 +18,7 @@
     if ( $this.hasClass( 'reference' ) ) {
       $( this ).find( 'a' ).attr( 'href', '#cite-note-' + ( i + 1 ) ).text( '[' + ( i + 1 ) + ']' );
     } else {
-      $( this ).html( '<sup><a href="#cite-note-' + ( i + 1 ) + '">[' + ( i + 1 ) + ']</a></sup>' );
+      $( this ).html( '<sup class="reference"><a href="#cite-note-' + ( i + 1 ) + '">[' + ( i + 1 ) + ']</a></sup>' );
     }
 
   } );
