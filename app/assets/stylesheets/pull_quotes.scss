@@ -1,0 +1,23 @@
+@import "colors";
+
+p.pull-right {
+  float: right;
+  width: 40%;
+  position: relative;
+  right: -2em;
+  border-top: solid .5em $cyan;
+  border-bottom: solid 1px $light-gray;
+  padding: 1em 0;
+  font-size: 1.2em;
+}
+
+p.pull-left {
+  float: left;
+  width: 40%;
+  position: relative;
+  left: -2em;
+  border-top: solid .5em $cyan;
+  border-bottom: solid 1px $light-gray;
+  padding: 1em 0;
+  font-size: 1.2em;
+}
