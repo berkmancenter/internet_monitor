@@ -13,8 +13,14 @@
   } );
   */
  
-  $( '.reference' ).each( function ( i ) {
-    $( this ).find( 'a' ).attr( 'href', '#cite-note-' + ( i + 1 ) ).text( '[' + ( i + 1 ) + ']' );
+  $( '.reference,b:contains([0]),strong:contains([0])' ).each( function ( i ) {
+    var $this = $( this );
+    if ( $this.hasClass( 'reference' ) ) {
+      $( this ).find( 'a' ).attr( 'href', '#cite-note-' + ( i + 1 ) ).text( '[' + ( i + 1 ) + ']' );
+    } else {
+      $( this ).html( '<sup><a href="#cite-note-' + ( i + 1 ) + '">[' + ( i + 1 ) + ']</a></sup>' );
+    }
+
   } );
 
   $( '.references > li' ).each( function ( i ) {
