@@ -241,33 +241,7 @@
   }
 }
 
-.refinery-pages.show.layout-report {
-  .data-nav-countries {
-    color: $white;
-    display: inline-block;
-    font-size: 16pt;
-    position: absolute;
-    right: 2em;
-    top: 3.25em;
-  }
-
-  .countries-nav-list {
-    right: 2em;
-    top: 8em;
-  }
-
-  div > a[href*="core.thenetmonitor.org"] {
-    border: solid 1px $light-gray;
-    border-radius: 4px;
-    display: inline-block;
-    overflow: hidden;
-    width: 49%;
-
-    img {
-      width: 98%;
-    }
-  }
-
+.refinery-pages.show {
   .report-ex-links a {
     margin-right: 3em;
   }
@@ -297,6 +271,35 @@
     background-position: 0px 0px;
   }
 
+}
+
+.refinery-pages.show.layout-report {
+  .data-nav-countries {
+    color: $white;
+    display: inline-block;
+    font-size: 16pt;
+    position: absolute;
+    right: 2em;
+    top: 3.25em;
+  }
+
+  .countries-nav-list {
+    right: 2em;
+    top: 8em;
+  }
+
+  div > a[href*="core.thenetmonitor.org"] {
+    border: solid 1px $light-gray;
+    border-radius: 4px;
+    display: inline-block;
+    overflow: hidden;
+    width: 49%;
+
+    img {
+      width: 98%;
+    }
+  }
+
   .country-pro-icon {
     background-image: url(/assets/block_links.png);
     display: inline-block;
@@ -311,10 +314,6 @@
   .data-nav-countries .country-pro-icon {
     background-position: -48px -8px;
   }
-
-
-
-
 }
 
 
