@@ -10,8 +10,16 @@
     background: $cyan !important;
     border-top-right-radius: 1em;
     border-top-left-radius: 1em;
+    font-size: 2.2em;
+    text-align: center;
+    white-space: normal !important;
+
+    span {
+      display: inline-block;
+    }
 
     img {
+      display: inline-block;
       height: auto;
       margin-bottom: .2em;
       vertical-align: middle;
