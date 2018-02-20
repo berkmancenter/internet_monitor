@@ -29,11 +29,14 @@
 
   #body {
     img {
+      height: auto;
+      width: 100%;
+    }
+
+    img.image-align-center {
       display: block;
       margin: 0 auto;
       max-width: 480px;
-      height: auto;
-      width: 100%;
     }
 
     .aside {
