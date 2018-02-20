@@ -1,5 +1,5 @@
 table.accessibility {
-  font-size: .8em;
+  font-size: .7em;
 
   th {
     border-right: solid 1px #222;
@@ -42,6 +42,23 @@ table.accessibility {
 
   .accessible {
     background: #5ec1a5;
+  }
+}
+
+
+/* Medium devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  table.accessibility {
+    font-size: .6em;
+    margin-left: -4em;
+  }
+}
+
+
+/* Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  table.accessibility {
+    font-size: .7em;
   }
 }
 
