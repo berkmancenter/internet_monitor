@@ -13,7 +13,7 @@
   } );
   */
  
-  $( '.reference,b:contains([0]),strong:contains([0])' ).each( function ( i ) {
+  $( 'sup.reference,b:contains([0]),strong:contains([0])' ).each( function ( i ) {
     var $this = $( this );
     if ( $this.hasClass( 'reference' ) ) {
       $( this ).find( 'a' ).attr( 'href', '#cite-note-' + ( i + 1 ) ).text( '[' + ( i + 1 ) + ']' );
@@ -21,6 +21,15 @@
       $( this ).html( '<sup class="reference"><a href="#cite-note-' + ( i + 1 ) + '">[' + ( i + 1 ) + ']</a></sup>' );
     }
 
+  } );
+
+  $( 'b.refdup,strong.refdup' ).each( function ( i ) {
+    try {
+      var i = JSON.parse( $(this).text() )[ 0 ];
+      $( this ).html( '<sup class="reference"><a href="#cite-note-' + ( i ) + '">[' + ( i ) + ']</a></sup>' );
+    } catch ( e ) {
+      // bad format, ignore
+    }
   } );
 
   $( '.references > li' ).each( function ( i ) {
